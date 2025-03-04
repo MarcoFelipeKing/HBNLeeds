@@ -1,0 +1,140 @@
+/* Importing fonts if needed (or use the <link> in HTML head) */
+
+/* Basic Resets */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+  background-color: #fff;
+}
+
+/* Subheading (handwritten) style example */
+h2.section-title {
+  font-family: 'Shadows Into Light', cursive; 
+  font-size: 2rem;
+  color: #4e9317; /* or whichever brand color you prefer */
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+/* Header */
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffca29;
+  padding: 1rem 2rem;
+}
+
+.logo {
+  max-height: 60px; /* Adjust as needed */
+}
+
+/* Navigation */
+.site-nav ul {
+  display: flex;
+  list-style: none;
+}
+
+.site-nav a {
+  color: #000;
+  text-decoration: none;
+  margin-left: 1.5rem;
+  font-weight: 500;
+}
+
+.site-nav a.active,
+.site-nav a:hover {
+  text-decoration: underline;
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(
+    rgba(0,0,0,0.4), 
+    rgba(0,0,0,0.4)
+  ), url('../images/healthy-buildings-bg.jpg') center/cover no-repeat;
+  color: #fff;
+  text-align: center;
+  padding: 4rem 2rem;
+}
+
+.hero-text h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+.hero-text h2 {
+  font-family: 'Shadows Into Light', cursive;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.hero-text p {
+  max-width: 600px;
+  margin: 0 auto 2rem auto;
+}
+
+/* Call to Action Button */
+.cta-button {
+  background-color: #4e9317;
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.cta-button:hover {
+  background-color: #3a7513;
+}
+
+/* Intro Section */
+.intro {
+  padding: 3rem 1rem;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.intro p {
+  margin-top: 1rem;
+  line-height: 1.6;
+}
+
+/* Partners Section */
+.partners {
+  padding: 3rem 1rem;
+  background-color: #f9f9f9;
+}
+
+.partner-logos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.partner-logos img {
+  max-height: 80px;
+  object-fit: contain;
+}
+
+/* Footer */
+.site-footer {
+  background-color: #808184;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+}
+
+.site-footer a {
+  color: #fff;
+  text-decoration: underline;
+}
+
