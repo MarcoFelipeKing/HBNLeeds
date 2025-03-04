@@ -27,7 +27,7 @@ h2.section-title {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #ffca29;
+  background-color: #F8B42C;
   padding: 1rem 2rem;
 }
 
@@ -95,6 +95,14 @@ h2.section-title {
   margin: 0 auto 2rem auto;
 }
 
+
+.hero-text {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+
+
 /* Call to Action Button */
 .cta-button {
   background-color: #4e9317;
@@ -103,6 +111,7 @@ h2.section-title {
   border-radius: 4px;
   text-decoration: none;
   font-weight: bold;
+  transition: background-color 0.3s ease;
 }
 
 .cta-button:hover {
@@ -348,3 +357,37 @@ h2.section-title {
     margin: 1rem 0;
   }
 }
+
+.blob-bg {
+  background-image: url('assets/images/purple_blob.svg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.section-divider {
+  display: block;
+  margin: 2rem auto;
+  width: 80%;
+  max-width: 600px;
+  opacity: 0.5;
+}
+
+.illustration {
+  max-width: 100%;
+  height: auto;
+  margin: 2rem auto;
+  display: block;
+}
+.card, .btn {
+  border-radius: 15px; /* soft and friendly */
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+  animation: fadeIn 1s ease-out;
+}
+
