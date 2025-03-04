@@ -35,11 +35,19 @@ h2.section-title {
   max-height: 60px; /* Adjust as needed */
 }
 
-/* Navigation */
+/* Navigation 
 .site-nav ul {
   display: flex;
   list-style: none;
+}*/
+.site-nav ul {
+  display: none; /* hidden by default on mobile */
 }
+
+.site-nav ul.nav-open {
+  display: block; /* or use flex, grid, etc. */
+}
+
 
 .site-nav a {
   color: #000;
@@ -51,6 +59,13 @@ h2.section-title {
 .site-nav a.active,
 .site-nav a:hover {
   text-decoration: underline;
+}
+.scroll-to-top {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  display: none;
+  /* styling, background, etc. */
 }
 
 /* Hero Section */
@@ -244,3 +259,92 @@ h2.section-title {
   color: #4e9317; /* brand color */
 }
 
+.dark-mode {
+  background-color: #222;
+  color: #eee;
+}
+
+.dark-mode .site-header {
+  background-color: #333;
+}
+
+/* Mobile Menu Button */
+.menu-btn {
+  display: none;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.hamburger, .hamburger::before, .hamburger::after {
+  content: '';
+  display: block;
+  width: 30px;
+  height: 3px;
+  background-color: #333;
+  margin: 5px 0;
+  transition: 0.3s ease;
+}
+
+.site-nav ul {
+  display: flex; /* default desktop view */
+  list-style: none;
+}
+
+.site-nav ul.nav-open {
+  display: block; /* for mobile view toggling */
+}
+
+.site-nav a {
+  color: #000;
+  text-decoration: none;
+  margin-left: 1.5rem;
+  font-weight: 500;
+}
+
+.site-nav a.active,
+.site-nav a:hover {
+  text-decoration: underline;
+}
+
+/* Scroll-to-top button styling */
+.scroll-to-top {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  background-color: #4e9317;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  font-size: 2rem;
+  cursor: pointer;
+  display: none; /* initially hidden */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .menu-btn {
+    display: block;
+  }
+
+  .site-nav ul {
+    display: none;
+    position: absolute;
+    top: 80px;
+    right: 0;
+    background-color: #ffca29;
+    width: 100%;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .site-nav ul.nav-open {
+    display: flex;
+  }
+
+  .site-nav ul li {
+    margin: 1rem 0;
+  }
+}

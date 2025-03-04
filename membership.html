@@ -1,5 +1,12 @@
-<a href="https://forms.office.com/Pages/ResponsePage.aspx?id=qO3qvR3IzkWGPlIypTW3y85tfjWzrVpCiHHCV7XeHnVURUJJRVRWSkhSS0pRMzk5QUhXUUM5RlVDUSQlQCN0PWcu" 
-   target="_blank" class="cta-button">
-  Membership Sign-Up
-</a>
+<form id="contact-form" action="https://forms.office.com/Pages/ResponsePage.aspx?id=qO3qvR3IzkWGPlIypTW3y85tfjWzrVpCiHHCV7XeHnVURUJJRVRWSkhSS0pRMzk5QUhXUUM5RlVDUSQlQCN0PWcu" method="POST">
+  <label for="name">Name:</label>
+  <input type="text" id="name" name="name" required />
 
+  <label for="email">Email:</label>
+  <input type="email" id="email" name="_replyto" required />
+
+  <label for="message">Message:</label>
+  <textarea id="message" name="message" required></textarea>
+
+  <button type="submit">Send</button>
+</form>
