@@ -73,7 +73,7 @@ h2.section-title {
   background: linear-gradient(
     rgba(0,0,0,0.4), 
     rgba(0,0,0,0.4)
-  ), url('../images/healthy-buildings-bg.jpg') center/cover no-repeat;
+  ), url('../images/building_health_sciences.jpg') center/cover no-repeat;
   color: #fff;
   text-align: center;
   padding: 4rem 2rem;
@@ -116,6 +116,16 @@ h2.section-title {
 
 .cta-button:hover {
   background-color: #3a7513;
+}
+
+.collaborate {
+  padding: 3rem 1rem;
+  text-align: center;
+}
+
+.collaborate .cta-button {
+  margin-top: 1.5rem; /* provides space from content above */
+  display: inline-block;
 }
 
 /* Intro Section */
