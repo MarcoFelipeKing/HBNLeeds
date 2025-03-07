@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <script src="https://cdn.tailwindcss.com"></script>
+  
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Healthy Buildings Network Leeds</title>
@@ -91,9 +93,10 @@
   </section>
   <!--<img src="assets/images/thin-swirl.svg" alt="" class="section-divider">-->
 
+  
   <!-- "What Are Healthy Buildings?" Section -->
   <section class="healthy-buildings">
-    <h2 class="section-title">What Our Members Say Are Healthy Buildings?</h2>
+    <h2 class="section-title">What Are Healthy Buildings?</h2>
   
     <div class="cards-container">
   
@@ -190,42 +193,117 @@
   </section>
       -->
 
-  <!-- Modernized Three-Column Footer -->
-<footer class="site-footer">
-  <div class="footer-container">
+<!-- Latest News Section -->
+<section class="latest-news py-12 bg-gray-100">
+  <div class="container mx-auto max-w-6xl px-4">
+    <h2 class="section-title mb-8 text-center">Latest News & Updates</h2>
 
-    <div class="footer-contact">
-      <h4>Contact</h4>
-      <p><a href="mailto:healthy_buildings_network@leeds.ac.uk">healthy_buildings_network@leeds.ac.uk</a></p>
-      <p>
-        Follow us on 
-        <a href="https://www.linkedin.com/company/healthy-buildings-network/" target="_blank">LinkedIn</a>
-      </p>
+    <div class="news-grid grid grid-cols-1 md:grid-cols-3 gap-8">
+
+      <!-- News Item 1 -->
+      <article class="news-card shadow-md bg-white rounded-lg overflow-hidden fade-in">
+        <img src="assets/images/news_image1.jpg" alt="News headline" class="w-full h-48 object-cover">
+        <div class="p-6">
+          <h3 class="text-lg font-semibold mb-2">Successful Launch Seminar</h3>
+          <p class="text-sm text-gray-600 mb-4">May 15, 2025</p>
+          <p class="text-gray-700">
+            Our recent seminar on indoor air quality and health was a great success with insights from industry leaders.
+          </p>
+          <a href="seminars.html" class="text-hbnGreen mt-4 inline-block">Read more →</a>
+        </div>
+      </article>
+
+      <!-- News Item 2 -->
+      <article class="news-card shadow-md bg-white rounded-lg overflow-hidden fade-in">
+        <img src="assets/images/news_image2.jpg" alt="News headline" class="w-full h-48 object-cover">
+        <div class="p-6">
+          <h3 class="text-lg font-semibold mb-2">Funding for New Projects Announced</h3>
+          <p class="text-sm text-gray-600 mb-4">April 22, 2025</p>
+          <p class="text-gray-700">
+            Four innovative projects have received funding through our pump-priming initiative.
+          </p>
+          <a href="projects.html" class="text-hbnGreen mt-4 inline-block">Read more →</a>
+        </div>
+      </article>
+
+      <!-- News Item 3 -->
+      <article class="news-card shadow-md bg-white rounded-lg overflow-hidden fade-in">
+        <img src="assets/images/news_image3.jpg" alt="News headline" class="w-full h-48 object-cover">
+        <div class="p-6">
+          <h3 class="text-lg font-semibold mb-2">UKIEG2025 Conference Announced</h3>
+          <p class="text-sm text-gray-600 mb-4">March 30, 2025</p>
+          <p class="text-gray-700">
+            We are hosting the prestigious UKIEG2025 conference, focusing on indoor environments and health.
+          </p>
+          <a href="https://www.ukieg2025leeds.co.uk" class="text-hbnGreen mt-4 inline-block">Visit site →</a>
+        </div>
+      </article>
+
     </div>
-
-    <div class="footer-nav">
-      <h4>Quick Links</h4>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About Us</a></li>
-        <li><a href="blog.html">Blog</a></li>
-        <li><a href="seminars.html">Events</a></li>
-        <li><a href="membership.html">Membership</a></li>
-      </ul>
-    </div>
-
-    <div class="footer-logos">
-      <img src="assets/images/hbn_landscape.png" alt="Healthy Buildings Network Leeds Logo" class="footer-logo">
-      <img src="assets/images/leeds_logo_white_transparent.png" alt="University of Leeds" class="footer-logo-uni">
-      <img src="assets/images/horizons_logo.jpg" alt="Horizons" class="footer-logo-uni">
-    </div>
-
   </div>
+</section>
 
-  <p class="footer-copyright">
-    &copy; 2025 Healthy Buildings Network Leeds. All Rights Reserved.
-  </p>
-</footer>
+  <!-- HBN Adapted NCAS-style Footer -->
+  <footer class="bg-gray-800 text-white py-8 md:py-16">
+    <div class="container mx-auto max-w-6xl px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <!-- Bio / Logo section -->
+      <div class="mb-8">
+        <img src="assets/images/hbn_landscape.png" class="w-56 mb-4" alt="Healthy Buildings Network Leeds Logo"/>
+        <p class="text-sm tracking-wide text-gray-300">
+          Healthy Buildings Network Leeds is a cross-disciplinary research and collaboration hub at the University of Leeds, focused on healthier, more sustainable built environments.
+        </p>
+  
+        <!-- Social Links -->
+        <ul class="social-links flex mt-4">
+          <li class="mr-4 flex items-center">
+            <img src="assets/images/linkedin.svg" alt="LinkedIn" class="h-5 w-5 mr-1">
+            <a href="https://www.linkedin.com/company/healthy-buildings-network/" target="_blank" class="hover:text-hbnGreen">
+              LinkedIn
+            </a>
+          </li>
+          <li class="mr-4 flex items-center">
+            <img src="assets/images/mail.svg" alt="Email" class="h-5 w-5 mr-1">
+            <a href="mailto:healthy_buildings_network@leeds.ac.uk" class="hover:text-hbnGreen">
+              Email Us
+            </a>
+          </li>
+        </ul>
+      </div>
+  
+      <!-- Quick Links -->
+      <div>
+        <h4 class="text-xl font-bold mb-4">Quick Links</h4>
+        <ul class="space-y-2">
+          <li><a href="index.html" class="hover:text-hbnGreen">Home</a></li>
+          <li><a href="about.html" class="hover:text-hbnGreen">About</a></li>
+          <li><a href="projects.html" class="hover:text-hbnGreen">Projects</a></li>
+          <li><a href="seminars.html" class="hover:text-hbnGreen">Seminars</a></li>
+          <li><a href="membership.html" class="hover:text-hbnGreen">Membership</a></li>
+          <li><a href="contact.html" class="hover:text-hbnGreen">Contact</a></li>
+        </ul>
+      </div>
+  
+      <!-- Affiliations -->
+      <div>
+        <h4 class="text-xl font-bold mb-4">Affiliations</h4>
+        <ul class="space-y-2">
+          <li><a href="https://fluids.leeds.ac.uk" target="_blank" class="hover:text-hbnGreen">Leeds Institute for Fluid Dynamics</a></li>
+          <li><a href="https://lssi.leeds.ac.uk" target="_blank" class="hover:text-hbnGreen">Leeds Social Sciences Institute</a></li>
+          <li><a href="https://lahri.leeds.ac.uk" target="_blank" class="hover:text-hbnGreen">Leeds Arts & Humanities Research Institute (LAHRI)</a></li>
+          <li><a href="https://icas.leeds.ac.uk" target="_blank" class="hover:text-hbnGreen">ICAS</a></li>
+        </ul>
+      </div>
+  
+    </div>
+  
+    <div class="container mx-auto max-w-6xl text-sm text-center pt-8 border-t border-gray-700">
+      <p>© 2025 Healthy Buildings Network Leeds. All rights reserved.</p>
+      <p class="mt-2">University of Leeds, Leeds LS2 9JT, United Kingdom</p>
+    </div>
+  
+    <!-- Scroll-to-top button -->
+    <button id="scrollToTopBtn" class="fixed bottom-5 right-5 bg-hbnGreen text-white p-3 rounded-full shadow-md hidden">↑</button>
+  </footer>
 
 
 

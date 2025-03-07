@@ -512,3 +512,17 @@ h2.section-title {
 .custom-shape-divider-top-1741302920 .shape-fill {
   fill: #F8B42C;
 }
+
+.footer-logo {
+  filter: brightness(0) invert(1); /* makes logo white if it's dark */
+  opacity: 0.9;
+}
+
+.fade-in {
+  animation: fadeIn 1s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
