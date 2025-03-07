@@ -1,22 +1,44 @@
 // script.js
 
-// Mobile menu functionality
+// Tailwind CSS custom colors
+if (typeof tailwind !== 'undefined') {
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          hbnGreen: '#4e9317',
+          hbnPurple: '#8360a9',
+          hbnGray: '#808184',
+          hbnYellow: '#ffca29',
+          hbnBlue: '#3e95dd',
+        }
+      }
+    }
+  };
+}
+
+// Mobile menu toggle functionality
 const menuBtn = document.querySelector('.menu-btn');
 const navList = document.querySelector('.site-nav ul');
 
-menuBtn.addEventListener('click', () => {
-  navList.classList.toggle('nav-open');
-});
+if (menuBtn && navList) {
+  menuBtn.addEventListener('click', () => {
+    navList.classList.toggle('nav-open');
+  });
+}
 
 // Smooth scrolling for internal links
 document.querySelectorAll('a[href^="#"]').forEach(link => {
   link.addEventListener('click', e => {
     e.preventDefault();
-    document.querySelector(link.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+    const targetSection = document.querySelector(link.getAttribute('href'));
+    if (targetSection) {
+      targetSection.scrollIntoView({ behavior: 'smooth' });
+    }
   });
 });
 
-// Form validation (only if form exists)
+// Form validation (only if contact form exists)
 const contactForm = document.getElementById('contact-form');
 
 if (contactForm) {
@@ -41,22 +63,25 @@ function validateEmail(email) {
 }
 
 // Scroll-to-top button functionality
-const scrollTopBtn = document.querySelector('.scroll-to-top');
+const scrollTopBtn = document.getElementById('scrollToTopBtn');
 
-window.addEventListener('scroll', () => {
-  if (window.pageYOffset > 300) {
-    scrollTopBtn.style.display = 'block';
-  } else {
-    scrollTopBtn.style.display = 'none';
-  }
-});
+if (scrollTopBtn) {
+  window.addEventListener('scroll', () => {
+    if (window.pageYOffset > 300) {
+      scrollTopBtn.classList.remove('hidden');
+    } else {
+      scrollTopBtn.classList.add('hidden');
+    }
+  });
 
-scrollTopBtn.addEventListener('click', () => {
-  window.scrollTo({ top: 0, behavior: 'smooth' });
-});
+  scrollTopBtn.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+}
 
-// Dark mode toggle (if implemented, include button in HTML)
+// Dark mode toggle (only if implemented)
 const toggleBtn = document.getElementById('theme-toggle');
+
 if (toggleBtn) {
   toggleBtn.addEventListener('click', () => {
     document.body.classList.toggle('dark-mode');
