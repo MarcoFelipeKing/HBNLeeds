@@ -13,153 +13,244 @@
 </head>
 <body>
 
-<header class="site-header">
-  <div class="logo-container">
-    <a href="index.html">
-      <img src="assets/images/hbn_landscape.png" alt="Healthy Buildings Network Leeds Logo" class="logo">
-    </a>
-  </div>
-  <nav class="site-nav">
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html" class="active">About Us</a></li>
-      <li><a href="blog.html">Blog</a></li>
-      <li><a href="seminars.html">Events</a></li>
-      <li><a href="membership.html">Membership</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
-</header>
+  <!-- Header / Navbar -->
+  <header class="bg-white shadow-md fixed w-full z-50"></header>
+    <div class="container mx-auto px-6 flex justify-between items-center h-20">
+      <!-- Logo -->
+      <div class="flex-shrink-0">
+        <a href="index.html">
+          <img src="assets/images/hbn_landscape.png" alt="Healthy Buildings Network Leeds Logo" class="h-12">
+        </a>
+      </div>
 
-<section class="page-banner">
-  <div class="banner-content">
-    <h1>About Healthy Buildings Network Leeds</h1>
-    <p>Building bridges across disciplines, councils, and industries.</p>
+      <!-- Mobile Menu Button -->
+      <button class="md:hidden text-gray-600 hover:text-emerald-600 focus:outline-none" aria-label="Open Menu">
+        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+
+      <!-- Navigation -->
+      <nav class="hidden md:flex space-x-8">
+        <a href="index.html" class="text-gray-600 hover:text-emerald-600 font-medium transition-colors">Home</a>
+        <a href="about.html" class="text-gray-600 hover:text-emerald-600 font-medium transition-colors">About Us</a>
+        <a href="blog.html" class="text-gray-600 hover:text-emerald-600 font-medium transition-colors">Blog</a>
+        <a href="seminars.html" class="text-gray-600 hover:text-emerald-600 font-medium transition-colors">Events</a>
+        <a href="membership.html" class="text-gray-600 hover:text-emerald-600 font-medium transition-colors">Membership</a>
+        <a href="contact.html" class="text-gray-600 hover:text-emerald-600 font-medium transition-colors">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+<!-- Hero Section with Parallax Effect -->
+<section class="relative h-[60vh] bg-gradient-to-r from-emerald-700 to-emerald-900 flex items-center justify-center overflow-hidden mt-20">
+  <div class="absolute inset-0 opacity-20 bg-pattern"></div>
+  <div class="container mx-auto px-6 text-center text-white z-10"></div>
+    <h1 class="text-4xl md:text-6xl font-bold mb-4">About Healthy Buildings Network Leeds</h1>
+    <p class="text-xl md:text-2xl font-light">Building bridges across disciplines, councils, and industries.</p>
   </div>
 </section>
 
-<main class="main-content">
-
-  <section class="our-story">
-    <h2 class="section-title">Our Story & Mission</h2>
-    <p>
-      Healthy Buildings Network Leeds emerged from a cross-disciplinary vision at the University of Leeds to foster meaningful collaboration on how buildings impact health, well-being, and sustainability. We actively engage across campuses, councils, industries, and communities—locally and globally.
-    </p>
-    <p>
-      Through seminars, workshops, funded projects, and dynamic partnerships, HBN drives innovative research and actionable insights for healthier indoor environments.
-    </p>
-  </section>
-
-  <section class="leadership">
-    <h2 class="section-title">Meet the Founders</h2>
-    <div class="director-cards">
-
-      <div class="director-card">
-        <img src="assets/images/profile_Martin.png" alt="Martín López-García" class="director-photo" />
-        <h3>Martín López-García</h3>
-        <p class="director-role">Co-Founder & Director</p>
-        <p>Martín is an associate professor in the School of Mathematics at the University of Leeds and focuses on stochastic models for evaluating the spread of bacteria in hospital settings, analysing the role played by environmental contamination and hand-surface contact transmission.</p>
-        <a href="https://matml.github.io" class="inline-block mt-4 bg-green-600 text-white px-4 py-2 rounded">Visit Website</a>
-      </div>
-
-      <div class="director-card">
-        <img src="assets/images/profile_irene.png" alt="Irene Mussio" class="director-photo" />
-        <h3>Irene Mussio</h3>
-        <p class="director-role">Co-Founder & Director</p>
-        <p>Irene is a lecturer in the Leeds University Business School and specialises in behavioural economics and risk-risk trade-offs, translating her research into policy and practice.</p>
-        <a href="http://www.ukieg2025leeds.co.uk" class="inline-block mt-4 bg-green-600 text-white px-4 py-2 rounded">Visit Website</a>
-      </div>
-
-      <div class="director-card">
-        <img src="assets/images/profile_marco-felipe_king.png" alt="Marco-Felipe King" class="director-photo" />
-        <h3>Marco-Felipe King</h3>
-        <p class="director-role">Co-Founder & Director</p>
-        <p>Marco-Felipe is a lecturer in the School of Civil Engineering at the University of Leeds whose expertise includes modelling human behaviour in the built environment, focusing on infection transmission and how buildings promote or mitigate disease spread.</p>
-        <a href="http://www.ukieg2025leeds.co.uk" class="inline-block mt-4 bg-green-600 text-white px-4 py-2 rounded">Visit Website</a>
-      </div>
-
-    </div>
-  </section>
-
-  <section class="collaborate">
-    <h2 class="section-title">Collaborate With Us</h2>
-    <p>
-      HBN thrives through diverse partnerships. We're actively seeking collaborators from academia, local government, industry, and the wider community. Whether you're interested in research projects, joint events, or influencing policy, we invite you to reach out and explore possibilities together.
-    </p>
-    <p>
-    How can you collaborate with us?
-    </p>
-    <a href="contact.html" class="cta-button">Get Involved</a>
-  </section>
-
-  <section class="affiliations">
-    <h2 class="section-title">Our Partners & Affiliations</h2>
-    <div class="affiliation-logos">
-      <img src="assets/images/leeds_logo_black_on_white_bk.jpg" alt="University of Leeds Logo" />
-      <img src="assets/images/horizons_logo.jpg" alt="Horizons Logo" />
-    </div>
-  </section>
-
-</main>
-
-  <!-- Modernized Three-Column Footer -->
-  <!-- HBN Adapted NCAS-style Footer -->
-<footer class="bg-gray-800 text-white py-8 md:py-16">
-  <div class="container mx-auto max-w-6xl px-6 flex flex-wrap justify-between">
-
-    <!-- Bio / Logo section -->
-    <div class="mb-8 w-full lg:w-1/3 lg:mb-0">
-      <img src="assets/images/hbn_landscape.png" alt="Healthy Buildings Network Leeds Logo" class="footer-logo">
-      <p class="text-sm tracking-wide text-gray-300">
-        Healthy Buildings Network Leeds is a cross-disciplinary research and collaboration hub at the University of Leeds, focused on healthier, more sustainable built environments.
+<main class="container mx-auto px-6 py-16">
+  <!-- Mission Section -->
+  <section class="max-w-4xl mx-auto mb-20">
+    <h2 class="section-title mb-8">Our Story and Our Mission</h2>
+    <div class="bg-white rounded-lg shadow-lg p-8">
+      <p class="text-lg text-gray-600 mb-6 leading-relaxed">
+        Healthy Buildings Network Leeds emerged from a cross-disciplinary vision at the University of Leeds to foster meaningful collaboration on how buildings impact health, well-being, and sustainability. We actively engage across campuses, councils, industries, and communities—locally and globally.
       </p>
+      <p class="text-lg text-gray-600 leading-relaxed">
+        Through seminars, workshops, funded projects, and dynamic partnerships, HBN drives innovative research and actionable insights for healthier indoor environments.
+      </p>
+    </div>
+  </section>
 
-      <!-- Social Links -->
-      <ul class="social-links flex mt-4">
-        <li class="mr-4">
-          <a href="https://www.linkedin.com/company/healthy-buildings-network/" target="_blank" class="hover:text-green-400">
-            LinkedIn
-          </a>
-        </li>
-        <!-- Add more social links if you have -->
-      </ul>
+  <!-- Leadership Section -->
+  <section class="mb-20"></section>
+  <h2 class="section-title mb-8">Meet the Founders</h2>
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div class="bg-white rounded-lg shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105">
+        <img src="assets/images/profile_Martin.png" alt="Martín López-García" class="w-full h-64 object-cover"/>
+        <div class="p-6">
+          <h3 class="text-xl font-bold text-gray-800 mb-2">Martín López-García</h3>
+          <p class="text-emerald-600 font-medium mb-4">Co-Founder & Director</p>
+          <p class="text-gray-600 mb-4">Martín is an associate professor in the School of Mathematics at the University of Leeds and focuses on stochastic models for evaluating the spread of bacteria in hospital settings.</p>
+          <a href="https://matml.github.io" class="inline-block bg-emerald-600 text-white px-6 py-2 rounded-full hover:bg-emerald-700 transition-colors">Visit Website</a>
+        </div>
+      </div>
+
+      <!-- Repeat similar card structure for Irene and Marco-Felipe -->
+      <div class="bg-white rounded-lg shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105">
+        <img src="assets/images/profile_irene.png" alt="Irene Mussio" class="w-full h-64 object-cover"/>
+        <div class="p-6">
+          <h3 class="text-xl font-bold text-gray-800 mb-2">Irene Mussio</h3>
+          <p class="text-emerald-600 font-medium mb-4">Co-Founder & Director</p>
+          <p class="text-gray-600 mb-4">Irene is a lecturer in the Leeds University Business School and specialises in behavioural economics and risk-risk trade-offs, translating her research into policy and practice.</p>
+          <a href="http://www.ukieg2025leeds.co.uk" class="inline-block bg-emerald-600 text-white px-6 py-2 rounded-full hover:bg-emerald-700 transition-colors">Visit Website</a>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-lg shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105">
+        <img src="assets/images/profile_marco-felipe_king.png" alt="Marco-Felipe King" class="w-full h-64 object-cover"/>
+        <div class="p-6">
+          <h3 class="text-xl font-bold text-gray-800 mb-2">Marco-Felipe King</h3>
+          <p class="text-emerald-600 font-medium mb-4">Co-Founder & Director</p>
+          <p class="text-gray-600 mb-4">Marco-Felipe is a lecturer in the School of Civil Engineering at the University of Leeds whose expertise includes modelling human behaviour in the built environment.</p>
+          <a href="http://www.ukieg2025leeds.co.uk" class="inline-block bg-emerald-600 text-white px-6 py-2 rounded-full hover:bg-emerald-700 transition-colors">Visit Website</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Collaboration Call-to-Action -->
+  <section class="bg-gray-50 rounded-xl p-12 mb-20">
+    <h2 class="section-title mb-8">Our Key Focus AREAS</h2>
+    <p class="text-lg text-gray-600 text-center max-w-3xl mx-auto mb-8"></p>
+      HBN thrives through diverse partnerships. We're actively seeking collaborators from academia, local government, industry, and the wider community.
+    </p>
+    <div class="text-center">
+      <a href="contact.html" class="inline-block bg-emerald-600 text-white px-8 py-3 rounded-full text-lg font-medium hover:bg-emerald-700 transition-colors">Get Involved</a>
+    </div>
+  </section> 
+
+  <!-- Key Focus Areas Section -->
+ <!-- Enhanced Key Focus Areas Section -->
+<section class="mb-20">
+  <h2 class="section-title mb-8">What We Do</h2>
+  <h2 class="text-4xl font-bold mb-12 text-center" style="color:#8360a9;">Our Key Focus Areas</h2>
+
+  <!-- Animated Focus Areas Grid -->
+  <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+
+    <!-- Health & Ergonomics -->
+    <div class="p-6 rounded-xl text-center bg-[#f0f8ff] hover:shadow-xl transition-transform hover:-translate-y-1">
+      <img src="https://img.icons8.com/color/48/000000/heart-health.png" class="w-12 h-12 mx-auto mb-3" />
+      <h3 class="font-semibold" style="color:#4e9317;">Health & Ergonomics</h3>
     </div>
 
-    <!-- Quick Links -->
-    <div class="w-full sm:w-1/2 md:w-1/3 lg:w-1/5">
-      <h4 class="text-xl font-bold mb-4">Quick Links</h4>
-      <ul class="space-y-2">
-        <li><a href="index.html" class="hover:text-green-400">Home</a></li>
-        <li><a href="about.html" class="hover:text-green-400">About</a></li>
-        <li><a href="projects.html" class="hover:text-green-400">Projects</a></li>
-        <li><a href="seminars.html" class="hover:text-green-400">Seminars</a></li>
-        <li><a href="membership.html" class="hover:text-green-400">Membership</a></li>
-        <li><a href="contact.html" class="hover:text-green-400">Contact</a></li>
-      </ul>
+    <!-- Indoor Air Quality -->
+    <div class="p-6 rounded-xl text-center bg-[#f0f8ff] hover:shadow-xl transition-transform hover:-translate-y-1">
+      <img src="https://img.icons8.com/color/48/000000/air-quality.png" class="w-12 h-12 mx-auto mb-3" />
+      <h3 class="font-semibold" style="color:#3e95dd;">Indoor Air Quality</h3>
     </div>
 
-    <!-- Affiliations -->
-    <div class="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 mt-8 sm:mt-0">
-      <h4 class="text-xl font-bold mb-4">Affiliations</h4>
-      <ul class="space-y-2">
-        <li><a href="https://fluids.leeds.ac.uk" target="_blank" class="hover:text-green-400">Leeds Institute for Fluid Dynamics</a></li>
-        <li><a href="https://lssi.leeds.ac.uk" target="_blank" class="hover:text-green-400">Leeds Social Sciences Institute</a></li>
-        <li><a href="#" target="_blank" class="hover:text-green-400">Leeds Arts & Humanities Research Institute (LAHRI)</a></li>
-        <li><a href="#" target="_blank" class="hover:text-green-400">ICAS</a></li>
-      </ul>
+    <!-- Thermal Comfort -->
+    <div class="p-6 rounded-xl text-center bg-[#f0f8ff] hover:shadow-xl transition-transform hover:-translate-y-1">
+      <img src="https://img.icons8.com/color/48/000000/temperature--v1.png" class="w-12 h-12 mx-auto mb-3" />
+      <h3 class="font-semibold" style="color:#ffca29;">Thermal Comfort</h3>
+    </div>
+
+    <!-- Lighting -->
+    <div class="p-6 rounded-xl text-center bg-[#f0f8ff] hover:shadow-xl transition-transform hover:-translate-y-1">
+      <img src="https://img.icons8.com/color/48/000000/light-on--v1.png" class="w-12 h-12 mx-auto mb-3" />
+      <h3 class="font-semibold" style="color:#8360a9;">Lighting</h3>
+    </div>
+
+    <!-- Water Quality -->
+    <div class="p-6 rounded-xl text-center bg-[#f0f8ff] hover:shadow-xl transition-transform hover:-translate-y-1">
+      <img src="https://img.icons8.com/color/48/000000/water.png" class="w-12 h-12 mx-auto mb-3" />
+      <h3 class="font-semibold" style="color:#3e95dd;">Water Quality</h3>
+    </div>
+
+    <!-- Infection Control -->
+    <div class="p-6 rounded-xl text-center bg-[#f0f8ff] hover:shadow-xl transition-transform hover:-translate-y-1">
+      <img src="https://img.icons8.com/color/48/000000/protection-mask.png" class="w-12 h-12 mx-auto mb-3" />
+      <h3 class="font-semibold" style="color:#4e9317;">Infection Control</h3>
+    </div>
+
+    <!-- Sustainable Materials -->
+    <div class="p-6 rounded-xl text-center bg-[#f0f8ff] hover:shadow-xl transition-transform hover:-translate-y-1">
+      <img src="https://img.icons8.com/color/48/000000/recycle-sign.png" class="w-12 h-12 mx-auto mb-3" />
+      <h3 class="font-semibold" style="color:#ffca29;">Sustainable Materials</h3>
+    </div>
+
+    <!-- Energy Efficiency -->
+    <div class="p-6 rounded-xl text-center bg-[#f0f8ff] hover:shadow-xl transition-transform hover:-translate-y-1">
+      <img src="https://img.icons8.com/color/48/000000/energy-saver.png" class="w-12 h-12 mx-auto mb-3" />
+      <h3 class="font-semibold" style="color:#8360a9;">Energy Efficiency</h3>
+    </div>
+
+    <!-- Equity & Access -->
+    <div class="p-6 rounded-xl text-center bg-[#f0f8ff] hover:shadow-xl transition-transform hover:-translate-y-1">
+      <img src="https://img.icons8.com/color/48/000000/group-background-selected.png" class="w-12 h-12 mx-auto mb-3" />
+      <h3 class="font-semibold" style="color:#4e9317;">Equity & Access</h3>
+    </div>
+
+    <!-- Environmental Resilience -->
+    <div class="p-6 rounded-xl text-center bg-[#f0f8ff] hover:shadow-xl transition-transform hover:-translate-y-1">
+      <img src="https://img.icons8.com/color/48/000000/earth-planet--v2.png" class="w-12 h-12 mx-auto mb-3" />
+      <h3 class="font-semibold" style="color:#3e95dd;">Environmental Resilience</h3>
     </div>
 
   </div>
 
-  <div class="container mx-auto max-w-6xl text-sm text-center pt-8 border-t border-gray-700">
-    <p>© 2025 Healthy Buildings Network Leeds. All rights reserved.</p>
-    <p class="mt-2">University of Leeds, Leeds LS2 9JT, United Kingdom</p>
+  <div class="text-center max-w-3xl mx-auto mt-10">
+    <p class="text-gray-600">Our interconnected focus areas create a holistic approach to designing, managing, and operating buildings, ensuring sustainable, inclusive, and healthy environments for all.</p>
   </div>
+</section>
 
-  <!-- Scroll-to-top button -->
-  <button id="scrollToTopBtn" class="fixed bottom-5 right-5 bg-green-600 text-white p-3 rounded-full shadow-md hidden">
-  </button>
-</footer>
+
+   <!-- HBN Adapted NCAS-style Footer -->
+   <footer class="bg-gray-800 text-white py-8 md:py-16">
+    <div class="container mx-auto max-w-6xl px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <!-- Bio / Logo section -->
+      <div class="mb-8">
+        <img src="assets/images/hbn_landscape.png"  alt="Healthy Buildings Network Leeds Logo" class="footer-logo"/>
+        <p class="text-sm tracking-wide text-gray-300">
+          Healthy Buildings Network Leeds is a cross-disciplinary research and collaboration hub at the University of Leeds, focused on healthier, more sustainable built environments.
+        </p>
+  
+        <!-- Social Links -->
+        <ul class="social-links flex mt-4">
+          <li class="mr-4 flex items-center">
+            <img src="assets/images/linkedin.svg" alt="LinkedIn" class="h-5 w-5 mr-1">
+            <a href="https://www.linkedin.com/company/healthy-buildings-network/" target="_blank" class="hover:text-hbnGreen">
+              LinkedIn
+            </a>
+          </li>
+          <li class="mr-4 flex items-center">
+            <img src="assets/images/mail.svg" alt="Email" class="h-5 w-5 mr-1">
+            <a href="mailto:healthy_buildings_network@leeds.ac.uk" class="hover:text-hbnGreen">
+              Email Us
+            </a>
+          </li>
+        </ul>
+      </div>
+  
+      <!-- Quick Links -->
+      <div>
+        <h4 class="text-xl font-bold mb-4">Quick Links</h4>
+        <ul class="space-y-2">
+          <li><a href="index.html" class="hover:text-hbnGreen">Home</a></li>
+          <li><a href="about.html" class="hover:text-hbnGreen">About</a></li>
+          <li><a href="projects.html" class="hover:text-hbnGreen">Projects</a></li>
+          <li><a href="seminars.html" class="hover:text-hbnGreen">Seminars</a></li>
+          <li><a href="membership.html" class="hover:text-hbnGreen">Membership</a></li>
+          <li><a href="contact.html" class="hover:text-hbnGreen">Contact</a></li>
+        </ul>
+      </div>
+  
+      <!-- Affiliations -->
+      <div>
+        <h4 class="text-xl font-bold mb-4">Affiliations</h4>
+        <ul class="space-y-2">
+          <li><a href="https://fluids.leeds.ac.uk" target="_blank" class="hover:text-hbnGreen">Leeds Institute for Fluid Dynamics</a></li>
+          <li><a href="https://lssi.leeds.ac.uk" target="_blank" class="hover:text-hbnGreen">Leeds Social Sciences Institute</a></li>
+          <li><a href="https://lahri.leeds.ac.uk" target="_blank" class="hover:text-hbnGreen">Leeds Arts & Humanities Research Institute (LAHRI)</a></li>
+          <li><a href="https://icas.leeds.ac.uk" target="_blank" class="hover:text-hbnGreen">ICAS</a></li>
+        </ul>
+      </div>
+  
+    </div>
+  
+    <div class="container mx-auto max-w-6xl text-sm text-center pt-8 border-t border-gray-700">
+      <p>© 2025 Healthy Buildings Network Leeds. All rights reserved.</p>
+      <p class="mt-2">University of Leeds, Leeds LS2 9JT, United Kingdom</p>
+    </div>
+  
+    <!-- Scroll-to-top button -->
+    <button id="scrollToTopBtn" class="fixed bottom-5 right-5 bg-hbnGreen text-white p-3 rounded-full shadow-md hidden">↑</button>
+  </footer>
 
 </body>
 </html>
