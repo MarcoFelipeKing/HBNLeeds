@@ -27,7 +27,7 @@ h2.section-title {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #F8B42C;
+  background-color: #f5f7fa;/*#F8B42C;*/
   padding: 1rem 2rem;
 }
 
@@ -213,7 +213,7 @@ h2.section-title {
 
 .director-role {
   font-weight: 600;
-  color: #4e9317;
+  color: #8360a9;/*#4e9317*/
   margin: 0.5rem 0;
 }
 
