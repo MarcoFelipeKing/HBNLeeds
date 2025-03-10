@@ -22,48 +22,81 @@
 <body>
 
   <!-- Header / Navbar -->
- <!-- index.html -->
-<header class="site-header">
-  <div class="logo-container">
-    <a href="index.html">
-      <img src="assets/images/hbn_landscape.png" alt="Healthy Buildings Network Leeds Logo" class="logo">
-    </a>
-  </div>
+  <header class="bg-white shadow-md fixed w-full z-50"></header>
+    <div class="container mx-auto px-6 flex justify-between items-center h-20">
+      <!-- Logo -->
+      <div class="flex-shrink-0">
+        <a href="index.html">
+          <img src="assets/images/hbn_landscape.png" alt="Healthy Buildings Network Leeds Logo" class="h-12">
+        </a>
+      </div>
 
-  <!-- Mobile Menu Button -->
-  <button class="menu-btn" aria-label="Open Menu">
-    <span class="hamburger"></span>
-  </button>
+      <!-- Mobile Menu Button -->
+      <button class="md:hidden text-gray-600 hover:text-emerald-600 focus:outline-none" aria-label="Open Menu">
+        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
 
-  <nav class="site-nav">
-    <ul>
-      <li><a href="index.html" class="active">Home</a></li>
-      <li><a href="about.html">About Us</a></li>
-      <li><a href="blog.html">Blog</a></li>
-      <li><a href="seminars.html">Events</a></li>
-      <li><a href="membership.html">Membership</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
-</header>
+      <!-- Navigation -->
+      <nav class="hidden md:flex space-x-8">
+        <a href="index.html" class="text-gray-600 hover:text-emerald-600 font-medium transition-colors">Home</a>
+        <a href="about.html" class="text-gray-600 hover:text-emerald-600 font-medium transition-colors">About Us</a>
+        <a href="blog.html" class="text-gray-600 hover:text-emerald-600 font-medium transition-colors">Blog</a>
+        <a href="seminars.html" class="text-gray-600 hover:text-emerald-600 font-medium transition-colors">Events</a>
+        <a href="membership.html" class="text-gray-600 hover:text-emerald-600 font-medium transition-colors">Membership</a>
+        <a href="contact.html" class="text-gray-600 hover:text-emerald-600 font-medium transition-colors">Contact</a>
+      </nav>
+    </div>
+  </header>
 
 <!-- Scroll-to-top button -->
 <button class="scroll-to-top" aria-label="Scroll to top">↑</button>
 
 
   <!-- Hero Section -->
-  <section class="hero">
-    <div class="hero-text">
-      <h1>Healthy Buildings Network Leeds</h1>
-      <h2>Hyper-local to global</h2>
-      <p>
-        Welcome to the Healthy Buildings Network Leeds, where we collaborate on 
-        research, innovation, and education for healthier, more sustainable 
-        buildings and their environments. 
-        Born out of a Horizons Challenge Network at the University of Leeds 
-        we empower collaborations both amongst disciplines that didn't previously talk to each other, and between academia, industry, and the public.
-      </p>
-      <a href="membership.html" class="cta-button">Join Us</a>
+  <section class="relative min-h-screen flex items-center">
+    <!-- Background Image -->
+    <div class="absolute inset-0 z-0">
+      <img src="assets/images/building_roger.jpg" 
+           alt="Healthy Buildings" 
+           class="w-full h-full object-cover opacity-20">
+    </div>
+
+    <div class="container mx-auto px-6 py-32 relative z-10">
+      <!-- Main Content -->
+      <div class="max-w-4xl mx-auto space-y-8 animate-fadeIn text-center">
+        <h1 class="text-5xl md:text-6xl font-bold text-gray-600 leading-tight font-poppins">
+          Healthy Buildings Network Leeds
+        </h1>
+        
+        <!-- <h2  class="text-2xl md:text-3xl text-emerald-600 font-shadows-into-light"> -->
+        <h2 class="section-title">
+          Hyper-local to global
+        </h2>
+        
+        <p class="text-lg md:text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto font-poppins">
+          Welcome to the Healthy Buildings Network Leeds, where we collaborate on 
+          research, innovation, and education for healthier, more sustainable 
+          buildings and their environments.
+          <span class="block mt-4">
+            Born out of a Horizons Challenge Network at the University of Leeds, 
+            we empower collaborations across disciplines and between academia, industry, and the public.
+          </span>
+        </p>
+
+        <a href="membership.html" 
+           class="inline-block px-8 py-4 text-lg font-semibold text-white 
+                  bg-emerald-600 rounded-full hover:bg-emerald-700 
+                  transition-colors duration-300 transform hover:scale-105 font-poppins">
+          Join Us
+        </a>
+      </div>
+    </div>
+
+    <!-- Gradient Overlay -->
+    <div class="absolute bottom-0 left-0 right-0 h-32 
+                bg-gradient-to-t from-white to-transparent">
     </div>
   </section>
 
@@ -81,167 +114,128 @@
   </section>
   -->
 
-  <!-- Intro Section / Highlights -->
-  <section class="intro">
-    <h2 class="section-title">What We Do</h2>
-    <p>
-      We connect experts, practitioners, and community members to explore 
-      how buildings impact health and well-being. Our activities include 
-      seminars, funded research projects, and collaborative initiatives 
-      to make indoor environments better for everyone.
-    </p>
-  </section>
-  <!--<img src="assets/images/thin-swirl.svg" alt="" class="section-divider">-->
-
-  
-  <!-- "What Are Healthy Buildings?" Section -->
-  <section class="healthy-buildings">
-    <h2 class="section-title">What Are Healthy Buildings?</h2>
-  
-    <div class="cards-container">
-  
-      <!-- Mental & Physical Health -->
-      <div class="feature-card">
-        <img src="assets/images/card_health.png" alt="Mental & Physical Health" class="card-img">
-        <h3>Mental & Physical Health</h3>
-        <p>
-          Healthy buildings enhance physical and mental well-being by fostering supportive social, economic, emotional, and environmental indoor climates.
-        </p>
-      </div>
-  
-      <!-- Sustainability Card -->
-      <div class="feature-card">
-        <img src="assets/images/card_sustainable.png" alt="Sustainability Illustration" class="card-img">
-        <h3>Sustainability</h3>
-        <p>
-          We prioritise sustainability throughout a building's lifecycle, from design to operation, focusing on resource usage, climate impact, energy efficiency, and responsible practices.
-        </p>
-      </div>
-
-      <!-- People -->
-      <div class="feature-card">
-        <img src="assets/images/card_people.png" alt="Economic & Environmental Illustration" class="card-img">
-        <h3>People</h3>
-        <p>
-          Empowering people with knowledge and means to act around healthy buildings through education and communication, promoting economic and environmental benefits.
-        </p>
-      </div>
-  
-      <!-- Inclusive Design Card -->
-      <div class="feature-card">
-        <img src="assets/images/card_design.png" alt="Inclusive Design Illustration" class="card-img">
-        <h3>Inclusive & Collaborative Design</h3>
-        <p>
-          Our approach ensures buildings are accessible, inclusive, and collaborative spaces, designed for diverse needs and community involvement.
-        </p>
-      </div>
-  
-  
-      <!-- Community Health & Resilience Card -->
-      <div class="feature-card">
-        <img src="assets/images/card_adaptive.png" alt="Community Health Illustration" class="card-img">
-        <h3>Community Adaptation & Resilience</h3>
-        <p>
-          Healthy buildings support community resilience, emphasizing adaptive designs that enhance social cohesion, health, and long-term resilience.
-        </p>
-      </div>
-  
+  <!-- Intro Section -->
+  <section class="py-20 bg-white">
+    <div class="container mx-auto max-w-4xl px-6 text-center">
+      <h2 class="section-title mb-8">What We Do</h2>
+      <p class="text-lg text-gray-600 leading-relaxed">
+        We connect experts, practitioners, and community members to explore 
+        how buildings impact health and well-being. Our activities include 
+        seminars, funded research projects, and collaborative initiatives 
+        to make indoor environments better for everyone.
+      </p>
     </div>
   </section>
 
-  
-  
-  <section class="affiliations">
-    <h2 class="section-title">Our Affiliations & Collaborations</h2>
-    <div class="affiliation-logos">
-      <a href="https://www.leeds.ac.uk" target="_blank">
-        <img src="assets/images/leeds_logo_black_on_white_bk.jpg" alt="University of Leeds">
-      </a>
-      <a href="https://www.linkedin.com/company/leeds-institute-for-fluid-dynamics/" target="_blank">
-        <img src="assets/images/logo_LIFD.png" alt="Leeds Institute for Fluid Dynamics">
-      </a>
-      <a href="https://lssi.leeds.ac.uk" target="_blank">
-        <img src="assets/images/logo_leeds_social_sciences_institute_logo.jpeg" alt="Leeds Social Sciences Institute (LSSI)">
-      </a>
-      <a href="https://lida.leeds.ac.uk/" target="_blank">
-        <img src="assets/images/logo_lida.jpeg" alt="Leeds Institute for Data Analytics">
-      </a>
-      <a href="https://www.leeds.ac.uk/horizons-institute" target="_blank">
-        <img src="assets/images/horizons_logo.jpg" alt="Horizons Institute">
-      </a>
-      <a href="ukieg.org" target="_blank">
-        <img src="assets/images/UKIEG.png" alt="UKIEG">
-      </a>
-      <a href="https://lahri.leeds.ac.uk/" target="_blank">
-        <img src="assets/images/logo_lahri.jpg" alt="LAHRI">
-      </a>
-      <!-- Add more as needed -->
+  <!-- What Are Healthy Buildings Section -->
+  <section class="py-20 bg-gray-50">
+    <div class="container mx-auto max-w-6xl px-6">
+      <h2 class="section-title text-center mb-16">What Are Healthy Buildings?</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+        
+        <a href="health.html" class="block"></a>
+          <div class="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+            <img src="assets/images/card_health.png" alt="Mental & Physical Health" class="w-full h-48 object-cover rounded-lg mb-6">
+            <h3 class="text-xl font-semibold mb-4">Mental & Physical Health</h3>
+            <p class="text-gray-600">Healthy buildings enhance physical and mental well-being by fostering supportive social, economic, emotional, and environmental indoor climates.</p>
+          </div>
+        </a>
+
+        <a href="sustainability.html" class="block">
+          <div class="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+            <img src="assets/images/card_sustainability.png" alt="Sustainability" class="w-full h-48 object-cover rounded-lg mb-6">
+            <h3 class="text-xl font-semibold mb-4">Sustainability</h3>
+            <p class="text-gray-600">Buildings that minimize environmental impact while maximizing occupant comfort through efficient resource use and smart design.</p>
+          </div>
+        </a>
+
+        <a href="innovation.html" class="block">
+          <div class="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+            <img src="assets/images/card_innovation.png" alt="Innovation" class="w-full h-48 object-cover rounded-lg mb-6">
+            <h3 class="text-xl font-semibold mb-4">Innovation</h3>
+            <p class="text-gray-600">Embracing new technologies and approaches to create spaces that actively contribute to occupant health and environmental stewardship.</p>
+          </div>
+        </a>
+
+      </div>
     </div>
   </section>
-  
 
-  <!-- Logos / Partnerships Section 
-  <section class="partners">
-    <h2 class="section-title">Our Partners</h2>
-    <div class="partner-logos">
-      <img src="assets/images/leeds_logo_black_on_white_bk.jpg" alt="University of Leeds Logo" />
-      <img src="assets/images/horizons_logo.jpg" alt="Horizons Logo" />
-      <img src="assets/images/UKIEG.png" alt="Horizons Logo" />
-      
-      <button class="scroll-to-top" aria-label="Scroll to top">↑</button>
+  <!-- Affiliations Section -->
+  <section class="py-20 bg-white">
+    <div class="container mx-auto max-w-6xl px-6">
+      <h2 class="section-title text-center mb-16">Our Affiliations & Collaborations</h2>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-12 items-center">
+        <a href="https://www.leeds.ac.uk" target="_blank" class="hover:opacity-75 transition-opacity">
+          <img src="assets/images/leeds_logo_black_on_white_bk.jpg" alt="University of Leeds" class="max-h-20 mx-auto">
+        </a>
+        <a href="https://lifd.leeds.ac.uk" target="_blank" class="hover:opacity-75 transition-opacity">
+          <img src="assets/images/logo_lifd.jpeg" alt="Leeds Institute for Fluid Dynamics" class="max-h-20 mx-auto">
+        </a>
+        <a href="https://lssi.leeds.ac.uk" target="_blank" class="hover:opacity-75 transition-opacity">
+          <img src="assets/images/logo_leeds_social_sciences_institute_logo.jpeg" alt="Leeds Social Sciences Institute" class="max-h-20 mx-auto">
+        </a>
+        <a href="https://lahri.leeds.ac.uk" target="_blank" class="hover:opacity-75 transition-opacity">
+          <img src="assets/images/logo_lahri.jpg" alt="Leeds Arts & Humanities Research Institute" class="max-h-20 mx-auto">
+        </a>
+        <a href="ukieg.org" target="_blank" class="hover:opacity-75 transition-opacity">
+          <img src="assets/images/UKIEG.png" alt="UKIEG" class="max-h-20 mx-auto">
+        </a>
+        <a href="ukieg.org" target="_blank" class="hover:opacity-75 transition-opacity">
+          <img src="assets/images/logo_ncas.jpg" alt="NCAS" class="max-h-20 mx-auto">
+        </a>
+        <a href="ukieg.org" target="_blank" class="hover:opacity-75 transition-opacity">
+          <img src="assets/images/logo_water_at_leeds.jpeg" alt="Water@Leeds" class="max-h-20 mx-auto">
+        </a>
+        <a href="https://lida.leeds.ac.uk" target="_blank" class="hover:opacity-75 transition-opacity">
+          <img src="assets/images/logo_lida.jpeg" alt="LIDA" class="max-h-20 mx-auto">
+        </a>
+      </div>
     </div>
   </section>
-      -->
 
-<!-- Latest News Section -->
-<section class="latest-news py-12 bg-gray-100">
-  <div class="container mx-auto max-w-6xl px-4">
-    <h2 class="section-title mb-8 text-center">Latest News & Updates</h2>
+  <!-- Latest News Section -->
+  <section class="py-20 bg-gray-50">
+    <div class="container mx-auto max-w-6xl px-6">
+      <h2 class="section-title text-center mb-16">Latest News & Updates</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+        
+        <a href="news/launch-event.html" class="block">
+          <article class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+            <img src="assets/images/news_launch.jpg" alt="Network Launch" class="w-full h-48 object-cover">
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2">Network Launch Success</h3>
+              <p class="text-gray-600 mb-4">Celebrating the successful launch of our network with industry partners and academics.</p>
+              <span class="text-sm text-gray-500">March 15, 2024</span>
+            </div>
+          </article>
+        </a>
 
-    <div class="news-grid grid grid-cols-1 md:grid-cols-3 gap-8">
+        <a href="news/funding-success.html" class="block">
+          <article class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+            <img src="assets/images/news_funding.jpg" alt="Funding Award" class="w-full h-48 object-cover">
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2">Major Funding Award</h3>
+              <p class="text-gray-600 mb-4">Secured significant funding for innovative healthy buildings research project.</p>
+              <span class="text-sm text-gray-500">March 1, 2024</span>
+            </div>
+          </article>
+        </a>
 
-      <!-- News Item 1 -->
-      <article class="news-card shadow-md bg-white rounded-lg overflow-hidden fade-in">
-        <img src="assets/images/news_image1.jpg" alt="News headline" class="w-full h-48 object-cover">
-        <div class="p-6">
-          <h3 class="text-lg font-semibold mb-2">Successful Launch Seminar</h3>
-          <p class="text-sm text-gray-600 mb-4">May 15, 2025</p>
-          <p class="text-gray-700">
-            Our recent seminar on indoor air quality and health was a great success with insights from industry leaders.
-          </p>
-          <a href="seminars.html" class="text-hbnGreen mt-4 inline-block">Read more →</a>
-        </div>
-      </article>
+        <a href="news/collaboration.html" class="block">
+          <article class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+            <img src="assets/images/news_collaboration.jpg" alt="New Partnership" class="w-full h-48 object-cover">
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2">New Industry Partnership</h3>
+              <p class="text-gray-600 mb-4">Exciting collaboration announced with leading sustainable building firm.</p>
+              <span class="text-sm text-gray-500">February 15, 2024</span>
+            </div>
+          </article>
+        </a>
 
-      <!-- News Item 2 -->
-      <article class="news-card shadow-md bg-white rounded-lg overflow-hidden fade-in">
-        <img src="assets/images/news_image2.jpg" alt="News headline" class="w-full h-48 object-cover">
-        <div class="p-6">
-          <h3 class="text-lg font-semibold mb-2">Funding for New Projects Announced</h3>
-          <p class="text-sm text-gray-600 mb-4">April 22, 2025</p>
-          <p class="text-gray-700">
-            Four innovative projects have received funding through our pump-priming initiative.
-          </p>
-          <a href="projects.html" class="text-hbnGreen mt-4 inline-block">Read more →</a>
-        </div>
-      </article>
-
-      <!-- News Item 3 -->
-      <article class="news-card shadow-md bg-white rounded-lg overflow-hidden fade-in">
-        <img src="assets/images/news_image3.jpg" alt="News headline" class="w-full h-48 object-cover">
-        <div class="p-6">
-          <h3 class="text-lg font-semibold mb-2">UKIEG2025 Conference Announced</h3>
-          <p class="text-sm text-gray-600 mb-4">March 30, 2025</p>
-          <p class="text-gray-700">
-            We are hosting the prestigious UKIEG2025 conference, focusing on indoor environments and health.
-          </p>
-          <a href="https://www.ukieg2025leeds.co.uk" class="text-hbnGreen mt-4 inline-block">Visit site →</a>
-        </div>
-      </article>
-
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
   <!-- HBN Adapted NCAS-style Footer -->
   <footer class="bg-gray-800 text-white py-8 md:py-16">
