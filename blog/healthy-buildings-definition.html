@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            hbnGreen: '#4e9317',
+            hbnPurple: '#8360a9',
+            hbnGray: '#808184',
+            hbnYellow: '#ffca29',
+            hbnBlue: '#3e95dd',
+          }
+        }
+      }
+    };
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Explore diverse perspectives on what makes a building 'healthy' from our network launch event participants. From sustainability to well-being, discover the multifaceted nature of healthy building environments.">
+  <title>What Makes a Building "Healthy"? Perspectives from Our Launch Event | Healthy Buildings Network Leeds</title>
+  
+  <link rel="icon" href="../assets/images/hbn_fav.ico" type="image/x-icon"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.css" />
+</head>
+<body class="font-poppins bg-gray-50">
+
+  <!-- Header / Navbar -->
+  <header class="bg-white shadow-md fixed w-full z-50">
+    <div class="container mx-auto px-6 flex justify-between items-center h-20">
+      <!-- Logo -->
+      <div class="flex-shrink-0">
+        <a href="../index.html">
+          <img src="../assets/images/hbn_landscape.png" alt="Healthy Buildings Network Leeds Logo" class="h-12">
+        </a>
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <button class="md:hidden text-gray-600 hover:text-hbnGreen focus:outline-none" id="mobile-menu-button" aria-label="Open Menu">
+        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+
+      <!-- Navigation -->
+      <nav class="hidden md:flex space-x-8" id="main-nav">
+        <a href="../index.html" class="text-gray-600 hover:text-hbnGreen font-medium transition-colors">Home</a>
+        <a href="../about.html" class="text-gray-600 hover:text-hbnGreen font-medium transition-colors">About Us</a>
+        <a href="../blog.html" class="text-hbnGreen font-medium transition-colors">Blog</a>
+        <a href="../events.html" class="text-gray-600 hover:text-hbnGreen font-medium transition-colors">Events</a>
+        <a href="../projects.html" class="text-gray-600 hover:text-hbnGreen font-medium transition-colors">Projects</a>
+        <a href="../membership.html" class="text-gray-600 hover:text-hbnGreen font-medium transition-colors">Membership</a>
+        <a href="../contact.html" class="text-gray-600 hover:text-hbnGreen font-medium transition-colors">Contact</a>
+      </nav>
+    </div>
+    
+    <!-- Mobile Navigation (Hidden by default) -->
+    <div class="md:hidden hidden bg-white w-full shadow-md" id="mobile-menu">
+      <div class="px-6 py-4 space-y-4">
+        <a href="../index.html" class="block text-gray-600 hover:text-hbnGreen font-medium">Home</a>
+        <a href="../about.html" class="block text-gray-600 hover:text-hbnGreen font-medium">About Us</a>
+        <a href="../blog.html" class="block text-hbnGreen font-medium">Blog</a>
+        <a href="../events.html" class="block text-gray-600 hover:text-hbnGreen font-medium">Events</a>
+        <a href="../projects.html" class="block text-gray-600 hover:text-hbnGreen font-medium">Projects</a>
+        <a href="../membership.html" class="block text-gray-600 hover:text-hbnGreen font-medium">Membership</a>
+        <a href="../contact.html" class="block text-gray-600 hover:text-hbnGreen font-medium">Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Scroll-to-top button -->
+  <button id="scrollToTopBtn" class="fixed bottom-5 right-5 bg-hbnGreen text-white p-3 rounded-full shadow-md hidden z-50" aria-label="Scroll to top">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18" />
+    </svg>
+  </button>
+
+  <!-- Blog Post Header -->
+  <section class="pt-32 pb-8">
+    <div class="container mx-auto px-6 max-w-4xl">
+      <div class="flex flex-wrap items-center gap-4 mb-6">
+        <a href="../blog.html" class="flex items-center text-hbnGreen hover:underline">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+          </svg>
+          Back to Blog
+        </a>
+        <span class="text-gray-400">|</span>
+        <span class="bg-hbnPurple bg-opacity-10 text-hbnPurple px-3 py-1 rounded-full text-sm font-medium">Research</span>
+        <span class="text-gray-500 text-sm">November 8, 2024</span>
+      </div>
+      
+      <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 mb-6">What Makes a Building "Healthy"? Perspectives from Our Launch Event</h1>
+      
+      <div class="flex items-center mb-8">
+        <img src="../assets/images/profile_irene.png" alt="Irene Mussio" class="w-12 h-12 rounded-full mr-4">
+        <div>
+          <p class="font-medium">Irene Mussio</p>
+          <p class="text-sm text-gray-500">Co-Founder & Director, Healthy Buildings Network Leeds</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Image -->
+  <section class="pb-12">
+    <div class="container mx-auto px-6 max-w-5xl">
+      <div class="relative rounded-xl overflow-hidden shadow-xl">
+        <img src="../assets/images/events/launch/paul.JPEG" alt="Participants at our launch event discussing what makes a healthy building" class="w-full h-[400px] object-cover">
+        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent p-6">
+          <p class="text-white text-lg">Participants at our launch event discussing what makes a healthy building</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Blog Post Content -->
+  <section class="py-12 bg-white">
+    <div class="container mx-auto px-6 max-w-3xl">
+      <article class="prose lg:prose-xl mx-auto">
+        <p class="text-xl leading-relaxed">
+          When we first envisioned the Healthy Buildings Network, our understanding of what constitutes a healthy building revolved around core principles of sustainability, air quality, comfort, and safety. We focused on measurable factors: ventilation efficiency, pollutant-free environments, energy efficiency, thermal comfort, and the physical and mental health benefits these elements offer to occupants.
+        </p>
+        
+        <p>
+          However, we knew our vision could only be complete by incorporating the voices of the people who live, work, and thrive in these environments. At our recent launch event, we asked participants: <strong>"What does a healthy building mean to you?"</strong>
+        </p>
+        
+        <div class="bg-gray-50 p-6 rounded-xl my-8">
+          <h2 class="text-2xl font-bold text-hbnGreen mb-4">Our Initial Framework</h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="flex items-start">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2 text-hbnGreen flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+              </svg>
+              <span>Health-enhancing environments</span>
+            </div>
+            <div class="flex items-start">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2 text-hbnGreen flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z" />
+              </svg>
+              <span>Optimal air quality</span>
+            </div>
+            <div class="flex items-start">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2 text-hbnGreen flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+              </svg>
+              <span>Energy efficiency</span>
+            </div>
+            <div class="flex items-start">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2 text-hbnGreen flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+              </svg>
+              <span>Thermal comfort</span>
+            </div>
+            <div class="flex items-start">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2 text-hbnGreen flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z" />
+              </svg>
+              <span>Functional design</span>
+            </div>
+            <div class="flex items-start">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2 text-hbnGreen flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+              </svg>
+              <span>Physical safety</span>
+            </div>
+          </div>
+        </div>
+        
+        <p>
+          Their responses, beautifully captured in a collaborative word cloud, expanded our vision significantly. Participants emphasized aspects beyond just physical health—highlighting <strong>happiness</strong>, <strong>equity</strong>, <strong>holistic well-being</strong>, and <strong>accessibility</strong>. They spoke passionately about buildings as places that should have near-zero risks to health, be infection-free, softly lit, and aesthetically pleasing. Sustainability became more nuanced, with emphasis on buildings being "good for people and planet" and "carbon zero."
+        </p>
+        
+        <!-- Word Cloud Image -->
+        <figure class="my-10">
+          <img src="../assets/images/events/launch/healthy_buildings_after.png" alt="Word Cloud: What does a healthy building mean to you?" class="rounded-lg shadow-md mx-auto">
+          <figcaption class="text-center text-gray-600 mt-2">Word Cloud: What does a healthy building mean to you?</figcaption>
+        </figure>
+        
+        <p>
+          One particularly inspiring theme was the participants' desire for spaces akin to nature—environments that feel "similar to Eden," integrating natural elements, fresh air, and clean ventilation to nurture both body and mind.
+        </p>
+        
+        <h2 class="text-2xl font-bold text-hbnPurple mt-10 mb-6">Expanding Our Understanding</h2>
+        
+        <p>
+          The launch event's insights taught us that healthy buildings are not just about technical specifications but deeply about human experiences and interconnectedness with our surroundings. Let's explore some of the key themes that emerged:
+        </p>
+        
+        <h3 class="text-xl font-semibold mt-8 mb-4">1. Holistic Well-being</h3>
+        <p>
+          Participants stressed that a truly healthy building must support both physical and mental well-being. This means creating spaces that reduce stress, promote positive emotions, and foster social connections—not just spaces that meet technical air quality or thermal comfort standards.
+        </p>
+        
+        <h3 class="text-xl font-semibold mt-8 mb-4">2. Biophilic Elements</h3>
+        <p>
+          The connection to nature emerged as a powerful theme. Participants described healthy buildings as those that incorporate natural elements, from materials and textures to views and greenery. This reflects growing research on biophilic design and its significant impact on occupant wellness.
+        </p>
+        
+        <h3 class="text-xl font-semibold mt-8 mb-4">3. Equity and Accessibility</h3>
+        <p>
+          A healthy building must be accessible to all, regardless of ability, age, or background. This inclusive approach challenges us to think beyond standard compliance toward genuinely equitable design that serves diverse communities and needs.
+        </p>
+        
+        <h3 class="text-xl font-semibold mt-8 mb-4">4. Beyond Carbon Zero</h3>
+        <p>
+          While sustainability remains crucial, participants expanded this concept to include buildings that actively contribute to both environmental and social welfare—buildings that give back to communities and ecosystems rather than merely reducing harm.
+        </p>
+        
+        <blockquote class="bg-hbnGreen bg-opacity-10 p-6 border-l-4 border-hbnGreen italic rounded-r-lg my-8">
+          <p class="text-gray-700">
+            "The most striking insight from our launch event was how participants envisioned healthy buildings not just as physical structures but as living environments that nurture the whole person—spaces that feel 'similar to Eden,' where people can truly thrive."
+          </p>
+        </blockquote>
+        
+        <p>
+          We are excited to integrate these invaluable insights into our ongoing mission. The diverse perspectives shared at our launch event will help shape our research priorities, event topics, and collaborative projects moving forward.
+        </p>
+        
+        <h2 class="text-2xl font-bold text-hbnPurple mt-10 mb-6">Join the Conversation</h2>
+        
+        <p>
+          We invite you to explore the word cloud and see how your voice resonates with others in shaping healthier, happier, and more holistic building environments. What does a healthy building mean to you? How does your perspective align with or differ from those captured at our launch event?
+        </p>
+        
+        <p>
+          Share your thoughts with us on <a href="https://www.linkedin.com/company/healthy-buildings-network/" target="_blank" class="text-hbnGreen hover:underline">LinkedIn</a> or by <a href="../contact.html" class="text-hbnGreen hover:underline">contacting us directly</a>. Your insights will help continue to shape and expand our understanding of what truly makes a building healthy.
+        </p>
+      </article>
+    </div>
+  </section>
+
+  <!-- Author Bio -->
+  <section class="py-12 bg-gray-50">
+    <div class="container mx-auto px-6 max-w-3xl">
+      <div class="bg-white rounded-xl shadow-md p-8">
+        <div class="flex flex-col md:flex-row items-center md:items-start gap-6">
+          <img src="../assets/images/profile_irene.png" alt="Irene Mussio" class="w-24 h-24 rounded-full object-cover">
+          <div>
+            <h3 class="text-xl font-bold mb-2">About the Author</h3>
+            <h4 class="text-lg font-semibold text-hbnPurple mb-3">Irene Mussio</h4>
+            <p class="text-gray-600 mb-4">
+              Irene is a lecturer in the Leeds University Business School and specialises in behavioural economics and risk-risk trade-offs, translating her research into policy and practice. As a co-founder of the Healthy Buildings Network Leeds, she is passionate about creating environments that prioritize both human wellbeing and sustainability.
+            </p>
+            <div class="flex items-center">
+              <a href="https://www.linkedin.com/in/irene-mussio/" target="_blank" class="text-hbnGreen hover:underline flex items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+              </svg>
+            </a>
+            <a href="#" class="text-gray-600 hover:text-hbnGreen transition-colors">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+        <a href="../contact.html" class="bg-hbnGreen text-white px-6 py-3 rounded-full hover:bg-green-700 transition-colors">
+          Contact Us
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white py-12 md:py-16">
+    <div class="container mx-auto max-w-6xl px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <!-- Bio / Logo section -->
+      <div class="mb-8">
+        <img src="../assets/images/hbn_landscape.png" alt="Healthy Buildings Network Leeds Logo" class="h-12 mb-4 filter brightness-0 invert opacity-90">
+        <p class="text-sm tracking-wide text-gray-300">
+          Healthy Buildings Network Leeds is a cross-disciplinary research and collaboration hub at the University of Leeds, focused on healthier, more sustainable built environments.
+        </p>
+  
+        <!-- Social Links -->
+        <ul class="flex mt-4">
+          <li class="mr-4 flex items-center">
+            <a href="https://www.linkedin.com/company/healthy-buildings-network/" target="_blank" class="text-gray-300 hover:text-hbnGreen transition-colors flex items-center">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+              </svg>
+              LinkedIn
+            </a>
+          </li>
+          <li class="mr-4 flex items-center">
+            <a href="mailto:healthy_buildings_network@leeds.ac.uk" class="text-gray-300 hover:text-hbnGreen transition-colors flex items-center">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+              </svg>
+              Email Us
+            </a>
+          </li>
+        </ul>
+      </div>
+  
+      <!-- Quick Links -->
+      <div>
+        <h4 class="text-xl font-bold mb-4">Quick Links</h4>
+        <ul class="space-y-2">
+          <li><a href="../index.html" class="text-gray-300 hover:text-hbnGreen transition-colors">Home</a></li>
+          <li><a href="../about.html" class="text-gray-300 hover:text-hbnGreen transition-colors">About</a></li>
+          <li><a href="../projects.html" class="text-gray-300 hover:text-hbnGreen transition-colors">Projects</a></li>
+          <li><a href="../events.html" class="text-gray-300 hover:text-hbnGreen transition-colors">Events</a></li>
+          <li><a href="../membership.html" class="text-gray-300 hover:text-hbnGreen transition-colors">Membership</a></li>
+          <li><a href="../contact.html" class="text-gray-300 hover:text-hbnGreen transition-colors">Contact</a></li>
+        </ul>
+      </div>
+  
+      <!-- Affiliations -->
+      <div>
+        <h4 class="text-xl font-bold mb-4">Affiliations</h4>
+        <ul class="space-y-2">
+          <li><a href="https://fluids.leeds.ac.uk" target="_blank" class="text-gray-300 hover:text-hbnGreen transition-colors">Leeds Institute for Fluid Dynamics</a></li>
+          <li><a href="https://lssi.leeds.ac.uk" target="_blank" class="text-gray-300 hover:text-hbnGreen transition-colors">Leeds Social Sciences Institute</a></li>
+          <li><a href="https://lahri.leeds.ac.uk" target="_blank" class="text-gray-300 hover:text-hbnGreen transition-colors">Leeds Arts & Humanities Research Institute</a></li>
+          <li><a href="https://icas.leeds.ac.uk" target="_blank" class="text-gray-300 hover:text-hbnGreen transition-colors">ICAS</a></li>
+        </ul>
+      </div>
+    </div>
+  
+    <div class="container mx-auto max-w-6xl px-6 text-sm text-center pt-8 mt-8 border-t border-gray-700">
+      <p>© 2025 Healthy Buildings Network Leeds. All rights reserved.</p>
+      <p class="mt-2">University of Leeds, Leeds LS2 9JT, United Kingdom</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="../assets/js/script.js"></script>
+  <!-- Add this additional script for the mobile menu toggle -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const menuButton = document.getElementById('mobile-menu-button');
+      const mobileMenu = document.getElementById('mobile-menu');
+      
+      if (menuButton && mobileMenu) {
+        menuButton.addEventListener('click', function() {
+          mobileMenu.classList.toggle('hidden');
+        });
+      }
+      
+      // Scroll to top button functionality
+      const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+      if (scrollToTopBtn) {
+        window.addEventListener('scroll', function() {
+          if (window.pageYOffset > 300) {
+            scrollToTopBtn.classList.remove('hidden');
+          } else {
+            scrollToTopBtn.classList.add('hidden');
+          }
+        });
+        
+        scrollToTopBtn.addEventListener('click', function() {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+      }
+    });
+  </script>
+</body>
+
+    
+      <!-- Scripts -->
+      <script src="assets/js/script.js"></script>
+      <!-- Add this additional script for the mobile menu toggle -->
+      <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          const menuButton = document.getElementById('mobile-menu-button');
+          const mobileMenu = document.getElementById('mobile-menu');
+          
+          if (menuButton && mobileMenu) {
+            menuButton.addEventListener('click', function() {
+              mobileMenu.classList.toggle('hidden');
+            });
+          }
+          
+          // Scroll to top button functionality
+          const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+          if (scrollToTopBtn) {
+            window.addEventListener('scroll', function() {
+              if (window.pageYOffset > 300) {
+                scrollToTopBtn.classList.remove('hidden');
+              } else {
+                scrollToTopBtn.classList.add('hidden');
+              }
+            });
+            
+            scrollToTopBtn.addEventListener('click', function() {
+              window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+          }
+        });
+      </script>
+    </body>
+    </html>

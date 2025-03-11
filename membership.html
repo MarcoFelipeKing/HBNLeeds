@@ -1,12 +1,643 @@
-<form id="contact-form" action="https://forms.office.com/Pages/ResponsePage.aspx?id=qO3qvR3IzkWGPlIypTW3y85tfjWzrVpCiHHCV7XeHnVURUJJRVRWSkhSS0pRMzk5QUhXUUM5RlVDUSQlQCN0PWcu" method="POST">
-  <label for="name">Name:</label>
-  <input type="text" id="name" name="name" required />
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            hbnGreen: '#4e9317',
+            hbnPurple: '#8360a9',
+            hbnGray: '#808184',
+            hbnYellow: '#ffca29',
+            hbnBlue: '#3e95dd',
+          }
+        }
+      }
+    };
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Join the Healthy Buildings Network Leeds to collaborate on research, innovation, and education for healthier, more sustainable built environments.">
+  <title>Membership | Healthy Buildings Network Leeds</title>
+  
+  <link rel="icon" href="assets/images/hbn_fav.ico" type="image/x-icon"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body class="font-poppins">
 
-  <label for="email">Email:</label>
-  <input type="email" id="email" name="_replyto" required />
+  <!-- Header / Navbar -->
+  <header class="bg-white shadow-md fixed w-full z-50">
+    <div class="container mx-auto px-6 flex justify-between items-center h-20">
+      <!-- Logo -->
+      <div class="flex-shrink-0">
+        <a href="index.html">
+          <img src="assets/images/hbn_landscape.png" alt="Healthy Buildings Network Leeds Logo" class="h-12">
+        </a>
+      </div>
 
-  <label for="message">Message:</label>
-  <textarea id="message" name="message" required></textarea>
+      <!-- Mobile Menu Button -->
+      <button class="md:hidden text-gray-600 hover:text-hbnGreen focus:outline-none" id="mobile-menu-button" aria-label="Open Menu">
+        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
 
-  <button type="submit">Send</button>
-</form>
+      <!-- Navigation -->
+      <nav class="hidden md:flex space-x-8" id="main-nav">
+        <a href="index.html" class="text-gray-600 hover:text-hbnGreen font-medium transition-colors">Home</a>
+        <a href="about.html" class="text-gray-600 hover:text-hbnGreen font-medium transition-colors">About Us</a>
+        <a href="blog.html" class="text-gray-600 hover:text-hbnGreen font-medium transition-colors">Blog</a>
+        <a href="events.html" class="text-gray-600 hover:text-hbnGreen font-medium transition-colors">Events</a>
+        <a href="projects.html" class="text-gray-600 hover:text-hbnGreen font-medium transition-colors">Projects</a>
+        <a href="membership.html" class="text-hbnGreen font-medium transition-colors">Membership</a>
+        <a href="contact.html" class="text-gray-600 hover:text-hbnGreen font-medium transition-colors">Contact</a>
+      </nav>
+    </div>
+    
+    <!-- Mobile Navigation (Hidden by default) -->
+    <div class="md:hidden hidden bg-white w-full" id="mobile-menu">
+      <div class="px-6 py-4 space-y-4">
+        <a href="index.html" class="block text-gray-600 hover:text-hbnGreen font-medium">Home</a>
+        <a href="about.html" class="block text-gray-600 hover:text-hbnGreen font-medium">About Us</a>
+        <a href="blog.html" class="block text-gray-600 hover:text-hbnGreen font-medium">Blog</a>
+        <a href="events.html" class="block text-gray-600 hover:text-hbnGreen font-medium">Events</a>
+        <a href="projects.html" class="block text-gray-600 hover:text-hbnGreen font-medium">Projects</a>
+        <a href="membership.html" class="block text-hbnGreen font-medium">Membership</a>
+        <a href="contact.html" class="block text-gray-600 hover:text-hbnGreen font-medium">Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Scroll-to-top button -->
+  <button id="scrollToTopBtn" class="fixed bottom-5 right-5 bg-hbnGreen text-white p-3 rounded-full shadow-md hidden z-50" aria-label="Scroll to top">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18" />
+    </svg>
+  </button>
+
+  <!-- Hero Section -->
+  <section class="pt-32 pb-16 bg-gradient-to-r from-hbnGreen to-hbnPurple text-white">
+    <div class="container mx-auto px-6 max-w-5xl">
+      <div class="md:flex items-center">
+        <div class="md:w-3/5 md:pr-12 mb-10 md:mb-0">
+          <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">Join Our Network</h1>
+          <p class="text-xl opacity-90 mb-8 max-w-2xl">
+            Become part of a dynamic community working together to create healthier, more sustainable building environments through research, innovation, and collaboration.
+          </p>
+          <div class="flex flex-wrap gap-4">
+            <a href="#join-now" class="px-8 py-4 bg-white text-hbnGreen rounded-full hover:bg-gray-100 transition-colors shadow-md font-semibold">
+              Join Now
+            </a>
+            <a href="#benefits" class="px-8 py-4 border-2 border-white text-white rounded-full hover:bg-white hover:bg-opacity-10 transition-colors font-semibold">
+              Membership Benefits
+            </a>
+          </div>
+        </div>
+        <div class="md:w-2/5">
+          <div class="relative">
+            <div class="absolute inset-0 bg-black rounded-lg opacity-20 transform rotate-3"></div>
+            <img src="assets/images/events/launch/alison.JPEG" alt="Collaboration at Healthy Buildings Network" class="relative rounded-lg shadow-2xl">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Membership Benefits Section -->
+  <section id="benefits" class="py-20 bg-white">
+    <div class="container mx-auto px-6 max-w-6xl">
+      <h2 class="section-title mb-16 text-center">Membership Benefits</h2>
+      
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12">
+        <!-- Benefit 1 -->
+        <div class="flex flex-col items-center">
+          <div class="w-20 h-20 rounded-full bg-hbnGreen bg-opacity-10 flex items-center justify-center mb-6">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-hbnGreen" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-gray-800 mb-3 text-center">Connect with Experts</h3>
+          <p class="text-gray-600 text-center">
+            Network with academics, industry professionals, and policymakers working on healthy buildings research and implementation.
+          </p>
+        </div>
+        
+        <!-- Benefit 2 -->
+        <div class="flex flex-col items-center">
+          <div class="w-20 h-20 rounded-full bg-hbnPurple bg-opacity-10 flex items-center justify-center mb-6">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-hbnPurple" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-gray-800 mb-3 text-center">Early Access to Research</h3>
+          <p class="text-gray-600 text-center">
+            Get first-hand insights and access to our research findings, publications, and case studies before they're widely available.
+          </p>
+        </div>
+        
+        <!-- Benefit 3 -->
+        <div class="flex flex-col items-center">
+          <div class="w-20 h-20 rounded-full bg-hbnBlue bg-opacity-10 flex items-center justify-center mb-6">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-hbnBlue" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-gray-800 mb-3 text-center">Priority Event Registration</h3>
+          <p class="text-gray-600 text-center">
+            Receive early invitations and priority registration for our seminars, workshops, and the annual UKIEG conference.
+          </p>
+        </div>
+        
+        <!-- Benefit 4 -->
+        <div class="flex flex-col items-center">
+          <div class="w-20 h-20 rounded-full bg-hbnYellow bg-opacity-10 flex items-center justify-center mb-6">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-yellow-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-gray-800 mb-3 text-center">Collaboration Opportunities</h3>
+          <p class="text-gray-600 text-center">
+            Discover opportunities for collaborative research, funding applications, and interdisciplinary projects.
+          </p>
+        </div>
+        
+        <!-- Benefit 5 -->
+        <div class="flex flex-col items-center">
+          <div class="w-20 h-20 rounded-full bg-hbnGreen bg-opacity-10 flex items-center justify-center mb-6">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-hbnGreen" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-gray-800 mb-3 text-center">Share Your Expertise</h3>
+          <p class="text-gray-600 text-center">
+            Contribute to our blog, speak at our events, and share your knowledge and insights with our diverse network.
+          </p>
+        </div>
+        
+        <!-- Benefit 6 -->
+        <div class="flex flex-col items-center">
+          <div class="w-20 h-20 rounded-full bg-hbnPurple bg-opacity-10 flex items-center justify-center mb-6">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-hbnPurple" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-gray-800 mb-3 text-center">Access to Resources</h3>
+          <p class="text-gray-600 text-center">
+            Get access to our knowledge base, research tools, datasets, and educational materials on healthy buildings.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Who Should Join Section -->
+  <section class="py-20 bg-gray-50">
+    <div class="container mx-auto px-6 max-w-6xl">
+      <h2 class="section-title mb-12 text-center">Who Should Join?</h2>
+      
+      <div class="grid md:grid-cols-2 gap-8">
+        <div class="bg-white rounded-xl shadow-md p-8 flex flex-col md:flex-row gap-6 items-start">
+          <div class="md:w-1/4 flex justify-center">
+            <div class="w-24 h-24 rounded-full bg-hbnBlue bg-opacity-10 flex items-center justify-center">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-hbnBlue" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 14v3m4-3v3m4-3v3M3 21h18M3 10h18M3 7l9-4 9 4M4 10h16v11H4V10z" />
+              </svg>
+            </div>
+          </div>
+          <div class="md:w-3/4">
+            <h3 class="text-xl font-bold text-gray-800 mb-3">Academic Researchers</h3>
+            <ul class="space-y-2 text-gray-600">
+              <li class="flex items-start">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-hbnGreen flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span>Faculty and researchers from diverse disciplines</span>
+              </li>
+              <li class="flex items-start">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-hbnGreen flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span>PhD and postgraduate students</span>
+              </li>
+              <li class="flex items-start">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-hbnGreen flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span>Research institutes and centers</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="bg-white rounded-xl shadow-md p-8 flex flex-col md:flex-row gap-6 items-start">
+          <div class="md:w-1/4 flex justify-center">
+            <div class="w-24 h-24 rounded-full bg-hbnPurple bg-opacity-10 flex items-center justify-center">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-hbnPurple" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+              </svg>
+            </div>
+          </div>
+          <div class="md:w-3/4">
+            <h3 class="text-xl font-bold text-gray-800 mb-3">Industry Professionals</h3>
+            <ul class="space-y-2 text-gray-600">
+              <li class="flex items-start">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-hbnGreen flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span>Architects and building designers</span>
+              </li>
+              <li class="flex items-start">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-hbnGreen flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span>Engineers and construction professionals</span>
+              </li>
+              <li class="flex items-start">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-hbnGreen flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span>Building technology and material providers</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="bg-white rounded-xl shadow-md p-8 flex flex-col md:flex-row gap-6 items-start">
+          <div class="md:w-1/4 flex justify-center">
+            <div class="w-24 h-24 rounded-full bg-hbnGreen bg-opacity-10 flex items-center justify-center">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-hbnGreen" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />
+              </svg>
+            </div>
+          </div>
+          <div class="md:w-3/4">
+            <h3 class="text-xl font-bold text-gray-800 mb-3">Public Sector</h3>
+            <ul class="space-y-2 text-gray-600">
+              <li class="flex items-start">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-hbnGreen flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span>Local government officials</span>
+              </li>
+              <li class="flex items-start">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-hbnGreen flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span>Public health professionals</span>
+              </li>
+              <li class="flex items-start">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-hbnGreen flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span>Urban planners and policy makers</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="bg-white rounded-xl shadow-md p-8 flex flex-col md:flex-row gap-6 items-start">
+          <div class="md:w-1/4 flex justify-center">
+            <div class="w-24 h-24 rounded-full bg-hbnYellow bg-opacity-10 flex items-center justify-center">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-yellow-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
+              </svg>
+            </div>
+          </div>
+          <div class="md:w-3/4">
+            <h3 class="text-xl font-bold text-gray-800 mb-3">Community Members</h3>
+            <ul class="space-y-2 text-gray-600">
+              <li class="flex items-start">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-hbnGreen flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span>Community organizations and NGOs</span>
+              </li>
+              <li class="flex items-start">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-hbnGreen flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span>Building users and occupants</span>
+              </li>
+              <li class="flex items-start">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-hbnGreen flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span>Anyone interested in healthy building environments</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="py-20 bg-white">
+    <div class="container mx-auto px-6 max-w-4xl">
+      <h2 class="section-title mb-12 text-center">What Our Members Say</h2>
+      
+      <div class="grid md:grid-cols-2 gap-8">
+        <!-- Testimonial 1 -->
+        <div class="bg-gray-50 rounded-xl p-8 relative">
+          <div class="absolute -top-5 left-8 w-10 h-10 bg-hbnGreen rounded-full flex items-center justify-center">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
+            </svg>
+          </div>
+          <div class="pt-6">
+            <p class="text-gray-600 italic mb-6">
+              "Being part of the Healthy Buildings Network has connected me with researchers from disciplines I would never have intersected with otherwise. The collaborative atmosphere has been invaluable for my work on sustainable materials."
+            </p>
+            <div class="flex items-center">
+              <div class="mr-4">
+                <img src="assets/images/testimonial_prof.jpg" alt="Professor of Architecture" class="w-12 h-12 rounded-full object-cover">
+              </div>
+              <div>
+                <h4 class="font-semibold">Dr. Sarah Williams</h4>
+                <p class="text-sm text-gray-500">Professor of Architecture, University of York</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Testimonial 2 -->
+        <div class="bg-gray-50 rounded-xl p-8 relative">
+          <div class="absolute -top-5 left-8 w-10 h-10 bg-hbnPurple rounded-full flex items-center justify-center">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
+            </svg>
+          </div>
+          <div class="pt-6">
+            <p class="text-gray-600 italic mb-6">
+              "The seminars and workshops organized by the Healthy Buildings Network have provided my team with practical insights that we've directly applied to our building projects. It's a bridge between research and practice that's often missing."
+            </p>
+            <div class="flex items-center">
+              <div class="mr-4">
+                <img src="assets/images/testimonial_engineer.jpg" alt="Building Services Engineer" class="w-12 h-12 rounded-full object-cover">
+              </div>
+              <div>
+                <h4 class="font-semibold">James Peterson</h4>
+                <p class="text-sm text-gray-500">Building Services Engineer, Arup</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Join Now Section -->
+  <section id="join-now" class="py-20 bg-gray-50">
+    <div class="container mx-auto px-6 max-w-5xl">
+      <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+        <div class="md:flex">
+          <div class="md:w-1/2 bg-gradient-to-br from-hbnPurple to-hbnBlue p-12 text-white flex items-center">
+            <div>
+              <h2 class="text-3xl font-bold mb-6">Become a Member Today</h2>
+              <p class="text-lg opacity-90 mb-6">
+                Membership in the Healthy Buildings Network Leeds is free and open to anyone interested in creating healthier, more sustainable building environments.
+              </p>
+              <ul class="space-y-4">
+                <li class="flex items-start">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2 text-hbnYellow flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span>Complete the simple membership form</span>
+                </li>
+                <li class="flex items-start">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2 text-hbnYellow flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span>Receive a welcome email with network information</span>
+                </li>
+                <li class="flex items-start">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2 text-hbnYellow flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span>Start connecting with our community</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="md:w-1/2 p-12">
+            <h3 class="text-2xl font-bold text-gray-800 mb-6">Membership Form</h3>
+            <p class="text-gray-600 mb-8">
+              Please fill out our membership form to join the Healthy Buildings Network Leeds. All fields marked with an asterisk (*) are required.
+            </p>
+            <div class="bg-hbnGreen/5 border border-hbnGreen/20 rounded-lg p-6 mb-8">
+              <p class="text-gray-700">
+                <span class="font-semibold">Note:</span> You will be redirected to our Microsoft Form to complete your membership registration.
+              </p>
+            </div>
+            <a href="https://forms.office.com/e/NwjU4x0pkJ" target="_blank" class="block w-full bg-hbnGreen text-white text-center py-4 rounded-lg hover:bg-green-700 transition-colors font-semibold text-lg shadow-md">
+              Register Now
+            </a>
+            <p class="text-sm text-gray-500 text-center mt-4">
+              By joining, you agree to receive email communications from the Healthy Buildings Network Leeds. You can unsubscribe at any time.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="py-20 bg-white">
+    <div class="container mx-auto px-6 max-w-4xl">
+      <h2 class="section-title mb-12 text-center">Frequently Asked Questions</h2>
+      
+      <div class="space-y-6">
+        <!-- FAQ Item 1 -->
+        <div class="bg-gray-50 rounded-lg p-6">
+          <button class="flex justify-between items-center w-full text-left focus:outline-none">
+            <h3 class="text-lg font-semibold text-gray-800">Is there a fee to join the network?</h3>
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-hbnGreen" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+          <div class="mt-3">
+            <p class="text-gray-600">
+              No, membership in the Healthy Buildings Network Leeds is completely free. We believe in open collaboration and making our resources accessible to all interested parties.
+            </p>
+          </div>
+        </div>
+        
+        <!-- FAQ Item 2 -->
+        <div class="bg-gray-50 rounded-lg p-6">
+          <button class="flex justify-between items-center w-full text-left focus:outline-none">
+            <h3 class="text-lg font-semibold text-gray-800">What is the time commitment for members?</h3>
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-hbnGreen" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+          <div class="mt-3">
+            <p class="text-gray-600">
+              There is no specific time commitment required. Members can participate as much or as little as they wish. You can attend events, contribute to projects, or simply stay informed through our newsletters.
+            </p>
+          </div>
+        </div>
+        
+        <!-- FAQ Item 3 -->
+        <div class="bg-gray-50 rounded-lg p-6">
+          <button class="flex justify-between items-center w-full text-left focus:outline-none">
+            <h3 class="text-lg font-semibold text-gray-800">I'm not affiliated with an institution. Can I still join?</h3>
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-hbnGreen" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+          <div class="mt-3">
+            <p class="text-gray-600">
+              Absolutely! We welcome independent researchers, professionals, and community members who share our interest in healthy building environments. The diversity of our membership is one of our greatest strengths.
+            </p>
+          </div>
+        </div>
+        
+        <!-- FAQ Item 4 -->
+        <div class="bg-gray-50 rounded-lg p-6">
+          <button class="flex justify-between items-center w-full text-left focus:outline-none">
+            <h3 class="text-lg font-semibold text-gray-800">How can I get involved beyond just membership?</h3>
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-hbnGreen" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+          <div class="mt-3">
+            <p class="text-gray-600">
+              There are many ways to get involved! You can propose or participate in research projects, present at our seminars, contribute to our blog, help organize events, or join our committees. Reach out to us via email to discuss opportunities that match your interests and expertise.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to Action -->
+  <section class="py-16 bg-hbnGreen text-white">
+    <div class="container mx-auto px-6 text-center max-w-3xl">
+      <h2 class="text-3xl font-bold mb-6">Ready to Join Our Community?</h2>
+      <p class="text-xl mb-10 opacity-90">
+        Join the Healthy Buildings Network Leeds today and be part of a growing community dedicated to creating healthier, more sustainable built environments.
+      </p>
+      <a href="https://forms.office.com/e/NwjU4x0pkJ" target="_blank" class="inline-block px-8 py-4 bg-white text-hbnGreen rounded-full hover:bg-gray-100 transition-colors shadow-lg font-semibold text-lg">
+        Register Now
+      </a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white py-12 md:py-16">
+    <div class="container mx-auto max-w-6xl px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <!-- Bio / Logo section -->
+      <div class="mb-8">
+        <img src="assets/images/hbn_landscape.png" alt="Healthy Buildings Network Leeds Logo" class="h-12 mb-4 filter brightness-0 invert opacity-90">
+        <p class="text-sm tracking-wide text-gray-300">
+          Healthy Buildings Network Leeds is a cross-disciplinary research and collaboration hub at the University of Leeds, focused on healthier, more sustainable built environments.
+        </p>
+  
+        <!-- Social Links -->
+        <ul class="flex mt-4">
+          <li class="mr-4 flex items-center">
+            <a href="https://www.linkedin.com/company/healthy-buildings-network/" target="_blank" class="text-gray-300 hover:text-hbnGreen transition-colors flex items-center">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+              </svg>
+              LinkedIn
+            </a>
+          </li>
+          <li class="mr-4 flex items-center">
+            <a href="mailto:healthy_buildings_network@leeds.ac.uk" class="text-gray-300 hover:text-hbnGreen transition-colors flex items-center">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+              </svg>
+              Email Us
+            </a>
+          </li>
+        </ul>
+      </div>
+  
+      <!-- Quick Links -->
+      <div>
+        <h4 class="text-xl font-bold mb-4">Quick Links</h4>
+        <ul class="space-y-2">
+          <li><a href="index.html" class="text-gray-300 hover:text-hbnGreen transition-colors">Home</a></li>
+          <li><a href="about.html" class="text-gray-300 hover:text-hbnGreen transition-colors">About</a></li>
+          <li><a href="projects.html" class="text-gray-300 hover:text-hbnGreen transition-colors">Projects</a></li>
+          <li><a href="events.html" class="text-gray-300 hover:text-hbnGreen transition-colors">Events</a></li>
+          <li><a href="membership.html" class="text-gray-300 hover:text-hbnGreen transition-colors">Membership</a></li>
+          <li><a href="contact.html" class="text-gray-300 hover:text-hbnGreen transition-colors">Contact</a></li>
+        </ul>
+      </div>
+  
+      <!-- Affiliations -->
+      <div>
+        <h4 class="text-xl font-bold mb-4">Affiliations</h4>
+        <ul class="space-y-2">
+          <li><a href="https://fluids.leeds.ac.uk" target="_blank" class="text-gray-300 hover:text-hbnGreen transition-colors">Leeds Institute for Fluid Dynamics</a></li>
+          <li><a href="https://lssi.leeds.ac.uk" target="_blank" class="text-gray-300 hover:text-hbnGreen transition-colors">Leeds Social Sciences Institute</a></li>
+          <li><a href="https://lahri.leeds.ac.uk" target="_blank" class="text-gray-300 hover:text-hbnGreen transition-colors">Leeds Arts & Humanities Research Institute</a></li>
+          <li><a href="https://icas.leeds.ac.uk" target="_blank" class="text-gray-300 hover:text-hbnGreen transition-colors">ICAS</a></li>
+        </ul>
+      </div>
+    </div>
+  
+    <div class="container mx-auto max-w-6xl px-6 text-sm text-center pt-8 mt-8 border-t border-gray-700">
+      <p>© 2025 Healthy Buildings Network Leeds. All rights reserved.</p>
+      <p class="mt-2">University of Leeds, Leeds LS2 9JT, United Kingdom</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="assets/js/script.js"></script>
+  <!-- Add this additional script for the mobile menu toggle and FAQ interaction -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Mobile menu toggle
+      const menuButton = document.getElementById('mobile-menu-button');
+      const mobileMenu = document.getElementById('mobile-menu');
+      
+      if (menuButton && mobileMenu) {
+        menuButton.addEventListener('click', function() {
+          mobileMenu.classList.toggle('hidden');
+        });
+      }
+      
+      // FAQ toggles
+      const faqButtons = document.querySelectorAll('.bg-gray-50.rounded-lg button');
+      
+      faqButtons.forEach(button => {
+        button.addEventListener('click', function() {
+          const content = this.nextElementSibling;
+          content.classList.toggle('hidden');
+          
+          // Toggle icon
+          const icon = this.querySelector('svg');
+          if (content.classList.contains('hidden')) {
+            icon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />';
+          } else {
+            icon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />';
+          }
+        });
+      });
+      
+      // Scroll to top button functionality
+      const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+      if (scrollToTopBtn) {
+        window.addEventListener('scroll', function() {
+          if (window.pageYOffset > 300) {
+            scrollToTopBtn.classList.remove('hidden');
+          } else {
+            scrollToTopBtn.classList.add('hidden');
+          }
+        });
+        
+        scrollToTopBtn.addEventListener('click', function() {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+      }
+    });
+  </script>
+</body>
+</html>2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996

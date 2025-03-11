@@ -1,0 +1,958 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            hbnGreen: '#4e9317',
+            hbnPurple: '#8360a9',
+            hbnGray: '#808184',
+            hbnYellow: '#ffca29',
+            hbnBlue: '#3e95dd',
+          }
+        }
+      }
+    };
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Explore the innovative pump-priming research projects funded by the Healthy Buildings Network Leeds, aimed at advancing knowledge in healthy and sustainable built environments.">
+  <title>Research Projects | Healthy Buildings Network Leeds</title>
+  
+  <link rel="icon" href="assets/images/hbn_fav.ico" type="image/x-icon"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body class="font-poppins">
+
+  <!-- Header / Navbar -->
+  <header class="bg-white shadow-md fixed w-full z-50">
+    <div class="container mx-auto px-6 flex justify-between items-center h-20">
+      <!-- Logo -->
+      <div class="flex-shrink-0">
+        <a href="index.html">
+          <img src="assets/images/hbn_landscape.png" alt="Healthy Buildings Network Leeds Logo" class="h-12">
+        </a>
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <button class="md:hidden text-gray-600 hover:text-hbnGreen focus:outline-none" id="mobile-menu-button" aria-label="Open Menu">
+        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+
+      <!-- Navigation -->
+      <nav class="hidden md:flex space-x-8" id="main-nav">
+        <a href="index.html" class="text-gray-600 hover:text-hbnGreen font-medium transition-colors">Home</a>
+        <a href="about.html" class="text-gray-600 hover:text-hbnGreen font-medium transition-colors">About Us</a>
+        <a href="blog.html" class="text-gray-600 hover:text-hbnGreen font-medium transition-colors">Blog</a>
+        <a href="events.html" class="text-gray-600 hover:text-hbnGreen font-medium transition-colors">Events</a>
+        <a href="projects.html" class="text-hbnGreen font-medium transition-colors">Projects</a>
+        <a href="membership.html" class="text-gray-600 hover:text-hbnGreen font-medium transition-colors">Membership</a>
+        <a href="contact.html" class="text-gray-600 hover:text-hbnGreen font-medium transition-colors">Contact</a>
+      </nav>
+    </div>
+    
+    <!-- Mobile Navigation (Hidden by default) -->
+    <div class="md:hidden hidden bg-white w-full shadow-md" id="mobile-menu">
+      <div class="px-6 py-4 space-y-4">
+        <a href="index.html" class="block text-gray-600 hover:text-hbnGreen font-medium">Home</a>
+        <a href="about.html" class="block text-gray-600 hover:text-hbnGreen font-medium">About Us</a>
+        <a href="blog.html" class="block text-gray-600 hover:text-hbnGreen font-medium">Blog</a>
+        <a href="events.html" class="block text-gray-600 hover:text-hbnGreen font-medium">Events</a>
+        <a href="projects.html" class="block text-hbnGreen font-medium">Projects</a>
+        <a href="membership.html" class="block text-gray-600 hover:text-hbnGreen font-medium">Membership</a>
+        <a href="contact.html" class="block text-gray-600 hover:text-hbnGreen font-medium">Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Scroll-to-top button -->
+  <button id="scrollToTopBtn" class="fixed bottom-5 right-5 bg-hbnGreen text-white p-3 rounded-full shadow-md hidden z-50" aria-label="Scroll to top">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18" />
+    </svg>
+  </button>
+
+  <!-- Hero Section -->
+  <section class="relative pt-20">
+    <div class="bg-gradient-to-r from-hbnGreen to-hbnPurple text-white py-16 md:py-24">
+      <div class="container mx-auto px-6 max-w-6xl">
+        <div class="md:flex items-center">
+          <div class="md:w-3/5 md:pr-12 mb-10 md:mb-0">
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">Funded Research Projects</h1>
+            <p class="text-xl opacity-90 mb-8 max-w-2xl">
+              Exploring innovative solutions for healthier, more sustainable buildings through our pump-priming research projects.
+            </p>
+            <div class="flex flex-wrap gap-4">
+              <a href="#project-overview" class="px-6 py-3 bg-white text-hbnGreen rounded-full hover:bg-gray-100 transition-colors shadow-md">
+                Project Overview
+              </a>
+              <a href="#apply-funding" class="px-6 py-3 border-2 border-white text-white rounded-full hover:bg-white hover:bg-opacity-10 transition-colors">
+                Future Funding Opportunities
+              </a>
+            </div>
+          </div>
+          <div class="md:w-2/5">
+            <img src="assets/images/building_roger.jpg" alt="Healthy Buildings Research" class="rounded-lg shadow-xl">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Project Overview Section -->
+  <section id="project-overview" class="py-20 bg-white">
+    <div class="container mx-auto px-6 max-w-5xl">
+      <h2 class="text-3xl font-bold mb-6 text-center">Pump-Priming Research Projects</h2>
+      <p class="text-lg text-gray-700 text-center mb-12 max-w-3xl mx-auto">
+        In 2025, the Healthy Buildings Network awarded funding to five innovative research projects exploring different aspects of healthy building environments. These projects represent collaborative efforts across multiple disciplines.
+      </p>
+
+      <div class="bg-gray-50 rounded-xl p-8 shadow-md mb-16">
+        <div class="flex flex-col md:flex-row items-start gap-8">
+          <div class="md:w-1/4">
+            <div class="p-4 bg-hbnGreen text-white rounded-full w-16 h-16 flex items-center justify-center text-2xl font-bold">
+              5
+            </div>
+          </div>
+          <div class="md:w-3/4">
+            <h3 class="text-2xl font-bold text-hbnGreen mb-3">Funded Projects</h3>
+            <p class="text-gray-700 mb-6">
+              Each project received £3,000 in funding to conduct exploratory research over a 6-month period. These pump-priming projects were selected for their innovative approaches, cross-disciplinary collaboration, and potential to generate preliminary data for larger funding applications.
+            </p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+              <div class="bg-white p-4 rounded-lg shadow-sm">
+                <div class="text-hbnPurple font-bold mb-1">5</div>
+                <div class="text-sm text-gray-600">Research Teams</div>
+              </div>
+              <div class="bg-white p-4 rounded-lg shadow-sm">
+                <div class="text-hbnBlue font-bold mb-1">8</div>
+                <div class="text-sm text-gray-600">University Departments</div>
+              </div>
+              <div class="bg-white p-4 rounded-lg shadow-sm">
+                <div class="text-hbnGreen font-bold mb-1">12</div>
+                <div class="text-sm text-gray-600">Investigators</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Project Cards Section -->
+  <section class="py-12 bg-gray-50">
+    <div class="container mx-auto px-6 max-w-6xl">
+      <h2 class="text-3xl font-bold mb-12 text-center">Meet Our Projects</h2>
+      
+      <div class="space-y-16">
+        <!-- Project 1: Living in Clover -->
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden" id="living-in-clover">
+          <div class="md:flex">
+            <div class="md:w-1/3 bg-hbnGreen">
+              <div class="h-full flex items-center justify-center p-8">
+                <div class="text-center">
+                  <div class="w-24 h-24 bg-white bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4" />
+                    </svg>
+                  </div>
+                  <h3 class="text-2xl font-bold text-white mb-2">Living in Clover</h3>
+                  <p class="text-white text-opacity-90 mb-4">Natural Building Materials</p>
+                </div>
+              </div>
+            </div>
+            <div class="md:w-2/3 p-8">
+              <div class="mb-6">
+                <h4 class="text-xl font-semibold text-gray-800 mb-4">Project Overview</h4>
+                <p class="text-gray-600 mb-4">
+                  This project explores the properties of natural building materials, particularly those derived from agricultural waste, and their impact on indoor air quality and occupant health. The team is investigating how materials like hempcrete, straw, and mycelium-based composites can create healthier indoor environments while reducing the carbon footprint of buildings.
+                </p>
+              </div>
+              
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                <div>
+                  <h4 class="text-lg font-semibold text-gray-800 mb-3">Research Team</h4>
+                  <ul class="space-y-2">
+                    <li class="flex items-start">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-hbnGreen flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                      </svg>
+                      <div>
+                        <span class="font-medium">Dr. Ailish Graham</span>
+                        <p class="text-sm text-gray-600">School of Civil Engineering (Principal Investigator)</p>
+                      </div>
+                    </li>
+                    <li class="flex items-start">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-hbnGreen flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                      </svg>
+                      <div>
+                        <span class="font-medium">Dr. James Hopson</span>
+                        <p class="text-sm text-gray-600">School of Chemistry</p>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                
+                <div>
+                  <h4 class="text-lg font-semibold text-gray-800 mb-3">Expected Outcomes</h4>
+                  <ul class="space-y-2">
+                    <li class="flex items-start">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-hbnGreen flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                      </svg>
+                      <span>Comparative analysis of VOC emissions from natural vs. conventional materials</span>
+                    </li>
+                    <li class="flex items-start">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-hbnGreen flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                      </svg>
+                      <span>Design guidelines for incorporating natural materials in healthy buildings</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              
+              <div class="flex justify-between items-center border-t border-gray-200 pt-6">
+                <div class="text-sm text-gray-500">
+                  <span class="font-medium">Project Duration:</span> March - August 2025
+                </div>
+                <a href="projects/living-in-clover.html" class="inline-flex items-center text-hbnGreen hover:underline">
+                  <span>Project Details</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Project 2: ThermoAge -->
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden" id="thermoage">
+          <div class="md:flex">
+            <div class="md:w-1/3 bg-hbnPurple">
+              <div class="h-full flex items-center justify-center p-8">
+                <div class="text-center">
+                  <div class="w-24 h-24 bg-white bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                    </svg>
+                  </div>
+                  <h3 class="text-2xl font-bold text-white mb-2">ThermoAge</h3>
+                  <p class="text-white text-opacity-90 mb-4">Thermal Comfort Across Age Groups</p>
+                </div>
+              </div>
+            </div>
+            <div class="md:w-2/3 p-8">
+              <div class="mb-6">
+                <h4 class="text-xl font-semibold text-gray-800 mb-4">Project Overview</h4>
+                <p class="text-gray-600 mb-4">
+                  ThermoAge investigates how thermal comfort needs and perceptions differ across age groups, with a particular focus on older adults and children. The research aims to develop more inclusive approaches to thermal design that accommodate these varying needs while maintaining energy efficiency. The team is conducting surveys, environmental measurements, and focus groups in different residential settings.
+                </p>
+              </div>
+              
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                <div>
+                  <h4 class="text-lg font-semibold text-gray-800 mb-3">Research Team</h4>
+                  <ul class="space-y-2">
+                    <li class="flex items-start">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-hbnPurple flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                      </svg>
+                      <div>
+                        <span class="font-medium">Dr. Hua Zhong</span>
+                        <p class="text-sm text-gray-600">School of Civil Engineering (Principal Investigator)</p>
+                      </div>
+                    </li>
+                    <li class="flex items-start">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-hbnPurple flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                      </svg>
+                      <div>
+                        <span class="font-medium">Dr. Maria Sanchez</span>
+                        <p class="text-sm text-gray-600">School of Medicine</p>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                
+                <div>
+                  <h4 class="text-lg font-semibold text-gray-800 mb-3">Expected Outcomes</h4>
+                  <ul class="space-y-2">
+                    <li class="flex items-start">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-hbnPurple flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                      </svg>
+                      <span>Age-specific thermal comfort guidelines</span>
+                    </li>
+                    <li class="flex items-start">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-hbnPurple flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                      </svg>
+                      <span>Strategies for multi-generational thermal comfort in shared spaces</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              
+              <div class="flex justify-between items-center border-t border-gray-200 pt-6">
+                <div class="text-sm text-gray-500">
+                  <span class="font-medium">Project Duration:</span> March - August 2025
+                </div>
+                <a href="projects/thermoage.html" class="inline-flex items-center text-hbnPurple hover:underline">
+                  <span>Project Details</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Project 3: Human-Centered Housing Design -->
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden" id="human-centered-housing">
+          <div class="md:flex">
+            <div class="md:w-1/3 bg-hbnBlue">
+              <div class="h-full flex items-center justify-center p-8">
+                <div class="text-center">
+                  <div class="w-24 h-24 bg-white bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+                    </svg>
+                  </div>
+                  <h3 class="text-2xl font-bold text-white mb-2">Human-Centered Housing</h3>
+                  <p class="text-white text-opacity-90 mb-4">Evidence-Based Design</p>
+                </div>
+              </div>
+            </div>
+            <div class="md:w-2/3 p-8">
+              <div class="mb-6">
+                <h4 class="text-xl font-semibold text-gray-800 mb-4">Project Overview</h4>
+                <p class="text-gray-600 mb-4">
+                  "We shape buildings and thereafter they shape us": This project examines how housing design impacts human behavior, health, and wellbeing. Using a mixed-methods approach combining interviews, spatial analysis, and health metrics, the team is developing evidence-based design guidelines that prioritize occupant needs. The research focuses particularly on affordable housing contexts.
+                </p>
+              </div>
+              
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                <div>
+                  <h4 class="text-lg font-semibold text-gray-800 mb-3">Research Team</h4>
+                  <ul class="space-y-2">
+                    <li class="flex items-start">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-hbnBlue flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                      </svg>
+                      <div>
+                        <span class="font-medium">Dr. Katy Wright</span>
+                        <p class="text-sm text-gray-600">School of Sociology (Principal Investigator)</p>
+                      </div>
+                    </li>
+                    <li class="flex items-start">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-hbnBlue flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                      </svg>
+                      <div>
+                        <span class="font-medium">Dr. Philip Webb</span>
+                        <p class="text-sm text-gray-600">School of Design</p>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                
+                <div>
+                  <h4 class="text-lg font-semibold text-gray-800 mb-3">Expected Outcomes</h4>
+                  <ul class="space-y-2">
+                    <li class="flex items-start">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-hbnBlue flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                      </svg>
+                      <span>Framework for evaluating housing design impact on wellbeing</span>
+                    </li>
+                    <li class="flex items-start">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-hbnBlue flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944 a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                      </svg>
+                      <span>Design recommendations for affordable housing that promotes health and wellbeing</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              
+              <div class="flex justify-between items-center border-t border-gray-200 pt-6">
+                <div class="text-sm text-gray-500">
+                  <span class="font-medium">Project Duration:</span> March - August 2025
+                </div>
+                <a href="projects/human-centered-housing.html" class="inline-flex items-center text-hbnBlue hover:underline">
+                  <span>Project Details</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Project 4: Indoor-Outdoor Air Quality -->
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden" id="indoor-outdoor-air">
+          <div class="md:flex">
+            <div class="md:w-1/3 bg-hbnYellow">
+              <div class="h-full flex items-center justify-center p-8">
+                <div class="text-center">
+                  <div class="w-24 h-24 bg-white bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z" />
+                    </svg>
+                  </div>
+                  <h3 class="text-2xl font-bold text-white mb-2">Indoor-Outdoor Air</h3>
+                  <p class="text-white text-opacity-90 mb-4">Passive House Study</p>
+                </div>
+              </div>
+            </div>
+            <div class="md:w-2/3 p-8">
+              <div class="mb-6">
+                <h4 class="text-xl font-semibold text-gray-800 mb-4">Project Overview</h4>
+                <p class="text-gray-600 mb-4">
+                  This project explores the relationships between indoor and outdoor air quality in passive houses, examining how highly-sealed building envelopes influence indoor air quality. The team is monitoring air quality parameters in several passive houses in Leeds, while also studying occupant behaviors and ventilation practices. The research aims to identify optimal strategies for maintaining healthy indoor air in energy-efficient buildings.
+                </p>
+              </div>
+              
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                <div>
+                  <h4 class="text-lg font-semibold text-gray-800 mb-3">Research Team</h4>
+                  <ul class="space-y-2">
+                    <li class="flex items-start">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-yellow-700 flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                      </svg>
+                      <div>
+                        <span class="font-medium">Dr. Elizabeth Yang</span>
+                        <p class="text-sm text-gray-600">School of Environmental Science (Principal Investigator)</p>
+                      </div>
+                    </li>
+                    <li class="flex items-start">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-yellow-700 flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                      </svg>
+                      <div>
+                        <span class="font-medium">Dr. Marco-Felipe King</span>
+                        <p class="text-sm text-gray-600">School of Civil Engineering</p>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                
+                <div>
+                  <h4 class="text-lg font-semibold text-gray-800 mb-3">Expected Outcomes</h4>
+                  <ul class="space-y-2">
+                    <li class="flex items-start">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-yellow-700 flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                      </svg>
+                      <span>Data on indoor-outdoor air quality relationships in passive houses</span>
+                    </li>
+                    <li class="flex items-start">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-yellow-700 flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                      </svg>
+                      <span>Ventilation guidelines for maintaining healthy indoor air in airtight buildings</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              
+              <div class="flex justify-between items-center border-t border-gray-200 pt-6">
+                <div class="text-sm text-gray-500">
+                  <span class="font-medium">Project Duration:</span> March - August 2025
+                </div>
+                <a href="projects/indoor-outdoor-air.html" class="inline-flex items-center text-yellow-700 hover:underline">
+                  <span>Project Details</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Project 5: CloverLeaf -->
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden" id="cloverleaf">
+          <div class="md:flex">
+            <div class="md:w-1/3 bg-hbnGray">
+              <div class="h-full flex items-center justify-center p-8">
+                <div class="text-center">
+                  <div class="w-24 h-24 bg-white bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />
+                    </svg>
+                  </div>
+                  <h3 class="text-2xl font-bold text-white mb-2">CloverLeaf</h3>
+                  <p class="text-white text-opacity-90 mb-4">Social Housing Innovation</p>
+                </div>
+              </div>
+            </div>
+            <div class="md:w-2/3 p-8">
+              <div class="mb-6">
+                <h4 class="text-xl font-semibold text-gray-800 mb-4">Project Overview</h4>
+                <p class="text-gray-600 mb-4">
+                  CloverLeaf is developing and testing innovative solutions for retrofitting social housing to improve health outcomes while reducing energy consumption. Working in partnership with a local housing association, the team is implementing low-cost interventions focused on ventilation, thermal comfort, and moisture control. The project includes before-and-after assessments of air quality, energy use, and resident satisfaction.
+                </p>
+              </div>
+              
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                <div>
+                  <h4 class="text-lg font-semibold text-gray-800 mb-3">Research Team</h4>
+                  <ul class="space-y-2">
+                    <li class="flex items-start">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-gray-600 flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                      </svg>
+                      <div>
+                        <span class="font-medium">Dr. Paul Hutchings</span>
+                        <p class="text-sm text-gray-600">School of Earth and Environment (Principal Investigator)</p>
+                      </div>
+                    </li>
+                    <li class="flex items-start">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-gray-600 flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                      </svg>
+                      <div>
+                        <span class="font-medium">Dr. Irene Mussio</span>
+                        <p class="text-sm text-gray-600">Leeds University Business School</p>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                
+                <div>
+                  <h4 class="text-lg font-semibold text-gray-800 mb-3">Expected Outcomes</h4>
+                  <ul class="space-y-2">
+                    <li class="flex items-start">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-gray-600 flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                      </svg>
+                      <span>Cost-effective retrofit solutions for social housing</span>
+                    </li>
+                    <li class="flex items-start">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-gray-600 flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                      </svg>
+                      <span>Policy recommendations for health-focused housing upgrades</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              
+              <div class="flex justify-between items-center border-t border-gray-200 pt-6">
+                <div class="text-sm text-gray-500">
+                  <span class="font-medium">Project Duration:</span> March - August 2025
+                </div>
+                <a href="projects/cloverleaf.html" class="inline-flex items-center text-gray-600 hover:underline">
+                  <span>Project Details</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Research Impact Section -->
+  <section class="py-20 bg-white">
+    <div class="container mx-auto px-6 max-w-5xl">
+      <h2 class="text-3xl font-bold mb-12 text-center">Research Impact</h2>
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+        <div class="bg-gray-50 p-8 rounded-xl shadow-md text-center">
+          <div class="w-16 h-16 bg-hbnGreen rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-gray-800 mb-3">Health Benefits</h3>
+          <p class="text-gray-600">
+            Our research aims to improve indoor environments to reduce respiratory issues, allergies, and stress-related health problems, while enhancing overall wellbeing.
+          </p>
+        </div>
+        
+        <div class="bg-gray-50 p-8 rounded-xl shadow-md text-center">
+          <div class="w-16 h-16 bg-hbnPurple rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-gray-800 mb-3">Environmental Impact</h3>
+          <p class="text-gray-600">
+            By developing more sustainable building practices and technologies, our projects help reduce energy consumption, carbon emissions, and resource use.
+          </p>
+        </div>
+        
+        <div class="bg-gray-50 p-8 rounded-xl shadow-md text-center">
+          <div class="w-16 h-16 bg-hbnBlue rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-gray-800 mb-3">Social Equity</h3>
+          <p class="text-gray-600">
+            Our research emphasizes inclusive approaches that benefit diverse populations, with particular attention to vulnerable groups and underserved communities.
+          </p>
+        </div>
+      </div>
+      
+      <div class="bg-gray-50 p-8 rounded-xl">
+        <h3 class="text-xl font-bold text-center mb-6">Pathway to Impact</h3>
+        <div class="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16">
+          <!-- Stage 1 -->
+          <div class="text-center">
+            <div class="w-16 h-16 rounded-full bg-gray-200 flex items-center justify-center mx-auto mb-3">
+              <span class="text-gray-700 font-bold">1</span>
+            </div>
+            <p class="font-medium text-gray-800">Pilot Research</p>
+            <p class="text-sm text-gray-600">Small-scale studies to test concepts and gather preliminary data</p>
+          </div>
+          
+          <!-- Arrow -->
+          <div class="hidden md:block text-gray-400">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+            </svg>
+          </div>
+          
+          <!-- Down Arrow (Mobile) -->
+          <div class="md:hidden text-gray-400">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+            </svg>
+          </div>
+          
+          <!-- Stage 2 -->
+          <div class="text-center">
+            <div class="w-16 h-16 rounded-full bg-gray-200 flex items-center justify-center mx-auto mb-3">
+              <span class="text-gray-700 font-bold">2</span>
+            </div>
+            <p class="font-medium text-gray-800">Expanded Research</p>
+            <p class="text-sm text-gray-600">Larger studies based on promising pilot results</p>
+          </div>
+          
+          <!-- Arrow -->
+          <div class="hidden md:block text-gray-400">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+            </svg>
+          </div>
+          
+          <!-- Down Arrow (Mobile) -->
+          <div class="md:hidden text-gray-400">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+            </svg>
+          </div>
+          
+          <!-- Stage 3 -->
+          <div class="text-center">
+            <div class="w-16 h-16 rounded-full bg-hbnGreen flex items-center justify-center mx-auto mb-3">
+              <span class="text-white font-bold">3</span>
+            </div>
+            <p class="font-medium text-gray-800">Real-World Impact</p>
+            <p class="text-sm text-gray-600">Implementation of findings in policy and practice</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Future Funding Section -->
+  <section id="apply-funding" class="py-20 bg-gray-50">
+    <div class="container mx-auto px-6 max-w-5xl">
+      <h2 class="text-3xl font-bold mb-12 text-center">Future Funding Opportunities</h2>
+      
+      <div class="bg-white rounded-xl shadow-lg p-8 md:p-12 mb-12">
+        <div class="md:flex items-start gap-8">
+          <div class="md:w-2/3">
+            <h3 class="text-2xl font-bold text-hbnGreen mb-6">Next Funding Round</h3>
+            <p class="text-gray-600 mb-6">
+              We plan to launch our next round of pump-priming research funding in October 2025. Like our initial round, projects will receive £3,000 in funding and should address one or more aspects of healthy buildings research.
+            </p>
+            <p class="text-gray-600 mb-6">
+              We especially encourage:
+            </p>
+            <ul class="space-y-2 mb-8">
+              <li class="flex items-start">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-hbnGreen flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span>Cross-disciplinary collaborations that bridge technical and social perspectives</span>
+              </li>
+              <li class="flex items-start">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-hbnGreen flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span>Projects with potential for scaling up or securing larger external funding</span>
+              </li>
+              <li class="flex items-start">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-hbnGreen flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span>Research addressing health inequalities and climate resilience</span>
+              </li>
+            </ul>
+            <div class="inline-block">
+              <a href="#" class="px-6 py-3 bg-hbnGreen text-white rounded-full hover:bg-green-700 transition-colors shadow-md inline-flex items-center">
+                <span>Sign up for funding alerts</span>
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
+                </svg>
+              </a>
+            </div>
+          </div>
+          <div class="md:w-1/3 mt-8 md:mt-0">
+            <div class="bg-gray-50 p-6 rounded-lg">
+              <h4 class="font-bold text-gray-800 mb-4">Key Dates</h4>
+              <ul class="space-y-4">
+                <li class="flex items-start">
+                  <div class="bg-hbnPurple text-white w-10 h-10 rounded-full flex items-center justify-center flex-shrink-0 mr-3">
+                    <span class="font-bold">1</span>
+                  </div>
+                  <div>
+                    <p class="font-medium">October 2025</p>
+                    <p class="text-sm text-gray-600">Call for proposals opens</p>
+                  </div>
+                </li>
+                <li class="flex items-start">
+                  <div class="bg-hbnPurple text-white w-10 h-10 rounded-full flex items-center justify-center flex-shrink-0 mr-3">
+                    <span class="font-bold">2</span>
+                  </div>
+                  <div>
+                    <p class="font-medium">November 2025</p>
+                    <p class="text-sm text-gray-600">Application deadline</p>
+                  </div>
+                </li>
+                <li class="flex items-start">
+                    <div class="bg-hbnPurple text-white w-10 h-10 rounded-full flex items-center justify-center flex-shrink-0 mr-3">
+                        <span class="font-bold">4</span>
+                      </div>
+                      <div>
+                        <p class="font-medium">January 2026</p>
+                        <p class="text-sm text-gray-600">Projects begin</p>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="bg-hbnBlue bg-opacity-10 rounded-xl p-8 text-center">
+            <h3 class="text-xl font-bold text-gray-800 mb-4">External Funding Opportunities</h3>
+            <p class="text-gray-700 mb-6 max-w-3xl mx-auto">
+              We also help connect our members with external funding opportunities in healthy buildings research. Join our network to receive regular updates on grants from agencies like UKRI, Innovate UK, and the Wellcome Trust.
+            </p>
+            <a href="membership.html" class="px-6 py-3 bg-hbnBlue text-white rounded-full hover:bg-blue-700 transition-colors shadow-md inline-block">
+              Join Our Network
+            </a>
+          </div>
+        </div>
+      </section>
+    
+      <!-- Connect with Researchers Section -->
+      <section class="py-20 bg-white">
+        <div class="container mx-auto px-6 max-w-5xl">
+          <h2 class="text-3xl font-bold mb-12 text-center">Connect With Our Researchers</h2>
+          <p class="text-lg text-gray-700 text-center mb-12 max-w-3xl mx-auto">
+            Interested in learning more about our projects or exploring potential collaborations? Connect with our research teams directly.
+          </p>
+          
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- Contact Card 1 -->
+            <div class="bg-gray-50 rounded-lg p-6 flex items-start shadow-md hover:shadow-lg transition-shadow">
+              <div class="mr-4">
+                <div class="w-16 h-16 bg-hbnGreen rounded-full flex items-center justify-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                  </svg>
+                </div>
+              </div>
+              <div>
+                <h3 class="text-xl font-bold text-gray-800 mb-2">Email Us</h3>
+                <p class="text-gray-600 mb-4">
+                  Reach out to our network directors with questions about projects or funding opportunities.
+                </p>
+                <a href="mailto:healthy_buildings_network@leeds.ac.uk" class="text-hbnGreen hover:underline inline-flex items-center">
+                  <span>healthy_buildings_network@leeds.ac.uk</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+            
+            <!-- Contact Card 2 -->
+            <div class="bg-gray-50 rounded-lg p-6 flex items-start shadow-md hover:shadow-lg transition-shadow">
+              <div class="mr-4">
+                <div class="w-16 h-16 bg-hbnPurple rounded-full flex items-center justify-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                  </svg>
+                </div>
+              </div>
+              <div>
+                <h3 class="text-xl font-bold text-gray-800 mb-2">Join Our Seminars</h3>
+                <p class="text-gray-600 mb-4">
+                  Attend our regular seminars to meet researchers and discuss ongoing projects.
+                </p>
+                <a href="events.html" class="text-hbnPurple hover:underline inline-flex items-center">
+                  <span>View Upcoming Events</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    
+      <!-- Call to Action -->
+      <section class="py-20 bg-gradient-to-r from-hbnGreen to-hbnPurple text-white">
+        <div class="container mx-auto px-6 text-center max-w-3xl">
+          <h2 class="text-3xl font-bold mb-6">Join Our Research Community</h2>
+          <p class="text-xl mb-10 opacity-90">
+            Become part of our growing network of researchers, practitioners, and innovators working together to create healthier, more sustainable built environments.
+          </p>
+          <div class="flex flex-wrap justify-center gap-6">
+            <a href="membership.html" class="px-8 py-4 bg-white text-hbnGreen rounded-full hover:bg-gray-100 transition-colors shadow-lg font-semibold text-lg">
+              Become a Member
+            </a>
+            <a href="contact.html" class="px-8 py-4 border-2 border-white text-white rounded-full hover:bg-white hover:bg-opacity-10 transition-colors font-semibold text-lg">
+              Contact Us
+            </a>
+          </div>
+        </div>
+      </section>
+    
+      <!-- Footer -->
+      <footer class="bg-gray-800 text-white py-12 md:py-16">
+        <div class="container mx-auto max-w-6xl px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Bio / Logo section -->
+          <div class="mb-8">
+            <img src="assets/images/hbn_landscape.png" alt="Healthy Buildings Network Leeds Logo" class="h-12 mb-4 filter brightness-0 invert opacity-90">
+            <p class="text-sm tracking-wide text-gray-300">
+              Healthy Buildings Network Leeds is a cross-disciplinary research and collaboration hub at the University of Leeds, focused on healthier, more sustainable built environments.
+            </p>
+      
+            <!-- Social Links -->
+            <ul class="flex mt-4">
+              <li class="mr-4 flex items-center">
+                <a href="https://www.linkedin.com/company/healthy-buildings-network/" target="_blank" class="text-gray-300 hover:text-hbnGreen transition-colors flex items-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                  </svg>
+                  LinkedIn
+                </a>
+              </li>
+              <li class="mr-4 flex items-center">
+                <a href="mailto:healthy_buildings_network@leeds.ac.uk" class="text-gray-300 hover:text-hbnGreen transition-colors flex items-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                  </svg>
+                  Email Us
+                </a>
+              </li>
+            </ul>
+          </div>
+      
+          <!-- Quick Links -->
+          <div>
+            <h4 class="text-xl font-bold mb-4">Quick Links</h4>
+            <ul class="space-y-2">
+              <li><a href="index.html" class="text-gray-300 hover:text-hbnGreen transition-colors">Home</a></li>
+              <li><a href="about.html" class="text-gray-300 hover:text-hbnGreen transition-colors">About</a></li>
+              <li><a href="projects.html" class="text-gray-300 hover:text-hbnGreen transition-colors">Projects</a></li>
+              <li><a href="events.html" class="text-gray-300 hover:text-hbnGreen transition-colors">Events</a></li>
+              <li><a href="membership.html" class="text-gray-300 hover:text-hbnGreen transition-colors">Membership</a></li>
+              <li><a href="contact.html" class="text-gray-300 hover:text-hbnGreen transition-colors">Contact</a></li>
+            </ul>
+          </div>
+      
+          <!-- Affiliations -->
+          <div>
+            <h4 class="text-xl font-bold mb-4">Affiliations</h4>
+            <ul class="space-y-2">
+              <li><a href="https://fluids.leeds.ac.uk" target="_blank" class="text-gray-300 hover:text-hbnGreen transition-colors">Leeds Institute for Fluid Dynamics</a></li>
+              <li><a href="https://lssi.leeds.ac.uk" target="_blank" class="text-gray-300 hover:text-hbnGreen transition-colors">Leeds Social Sciences Institute</a></li>
+              <li><a href="https://lahri.leeds.ac.uk" target="_blank" class="text-gray-300 hover:text-hbnGreen transition-colors">Leeds Arts & Humanities Research Institute</a></li>
+              <li><a href="https://icas.leeds.ac.uk" target="_blank" class="text-gray-300 hover:text-hbnGreen transition-colors">ICAS</a></li>
+            </ul>
+          </div>
+        </div>
+      
+        <div class="container mx-auto max-w-6xl px-6 text-sm text-center pt-8 mt-8 border-t border-gray-700">
+          <p>© 2025 Healthy Buildings Network Leeds. All rights reserved.</p>
+          <p class="mt-2">University of Leeds, Leeds LS2 9JT, United Kingdom</p>
+        </div>
+      </footer>
+    
+      <!-- Scripts -->
+      <script src="assets/js/script.js"></script>
+      <!-- Mobile menu script -->
+      <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          const menuButton = document.getElementById('mobile-menu-button');
+          const mobileMenu = document.getElementById('mobile-menu');
+          
+          if (menuButton && mobileMenu) {
+            menuButton.addEventListener('click', function() {
+              mobileMenu.classList.toggle('hidden');
+            });
+          }
+          
+          // Scroll to top button functionality
+          const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+          if (scrollToTopBtn) {
+            window.addEventListener('scroll', function() {
+              if (window.pageYOffset > 300) {
+                scrollToTopBtn.classList.remove('hidden');
+              } else {
+                scrollToTopBtn.classList.add('hidden');
+              }
+            });
+            
+            scrollToTopBtn.addEventListener('click', function() {
+              window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+          }
+          
+          // Smooth scrolling for anchor links
+          document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+              e.preventDefault();
+              
+              const targetId = this.getAttribute('href');
+              const targetElement = document.querySelector(targetId);
+              
+              if (targetElement) {
+                window.scrollTo({
+                  top: targetElement.offsetTop - 80, // Offset for fixed header
+                  behavior: 'smooth'
+                });
+              }
+            });
+          });
+        });
+      </script>
+    </body>
+    </html>

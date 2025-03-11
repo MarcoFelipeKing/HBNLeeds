@@ -1,0 +1,979 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            hbnGreen: '#4e9317',
+            hbnPurple: '#8360a9',
+            hbnGray: '#808184',
+            hbnYellow: '#ffca29',
+            hbnBlue: '#3e95dd',
+          }
+        }
+      }
+    };
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Explore the highlights from the Healthy Buildings Network Leeds launch event. Learn about our keynote speakers, discussions, and the beginning of our journey to creating healthier built environments.">
+  <title>Launch Event | Healthy Buildings Network Leeds</title>
+  
+  <link rel="icon" href="../assets/images/hbn_fav.ico" type="image/x-icon"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  
+  <!-- Lightbox CSS for gallery -->
+  <style>
+    .lightbox {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.9);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .lightbox img {
+      max-width: 90%;
+      max-height: 80vh;
+      margin: auto;
+      display: block;
+    }
+    
+    .close-lightbox {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      color: white;
+      font-size: 30px;
+      cursor: pointer;
+    }
+    
+    .prev-image, .next-image {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      color: white;
+      font-size: 30px;
+      cursor: pointer;
+      padding: 10px;
+      background: rgba(0, 0, 0, 0.5);
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .prev-image {
+      left: 20px;
+    }
+    
+    .next-image {
+      right: 20px;
+    }
+  </style>
+</head>
+<body class="font-poppins">
+
+  <!-- Header / Navbar -->
+  <header class="bg-white shadow-md fixed w-full z-50">
+    <div class="container mx-auto px-6 flex justify-between items-center h-20">
+      <!-- Logo -->
+      <div class="flex-shrink-0">
+        <a href="../index.html">
+          <img src="../assets/images/hbn_landscape.png" alt="Healthy Buildings Network Leeds Logo" class="h-12">
+        </a>
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <button class="md:hidden text-gray-600 hover:text-hbnGreen focus:outline-none" id="mobile-menu-button" aria-label="Open Menu">
+        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+
+      <!-- Navigation -->
+      <nav class="hidden md:flex space-x-8" id="main-nav">
+        <a href="../index.html" class="text-gray-600 hover:text-hbnGreen font-medium transition-colors">Home</a>
+        <a href="../about.html" class="text-gray-600 hover:text-hbnGreen font-medium transition-colors">About Us</a>
+        <a href="../blog.html" class="text-gray-600 hover:text-hbnGreen font-medium transition-colors">Blog</a>
+        <a href="../events.html" class="text-hbnGreen font-medium transition-colors">Events</a>
+        <a href="../projects.html" class="text-gray-600 hover:text-hbnGreen font-medium transition-colors">Projects</a>
+        <a href="../membership.html" class="text-gray-600 hover:text-hbnGreen font-medium transition-colors">Membership</a>
+        <a href="../contact.html" class="text-gray-600 hover:text-hbnGreen font-medium transition-colors">Contact</a>
+      </nav>
+    </div>
+    
+    <!-- Mobile Navigation (Hidden by default) -->
+    <div class="md:hidden hidden bg-white w-full shadow-md" id="mobile-menu">
+      <div class="px-6 py-4 space-y-4">
+        <a href="../index.html" class="block text-gray-600 hover:text-hbnGreen font-medium">Home</a>
+        <a href="../about.html" class="block text-gray-600 hover:text-hbnGreen font-medium">About Us</a>
+        <a href="../blog.html" class="block text-gray-600 hover:text-hbnGreen font-medium">Blog</a>
+        <a href="../events.html" class="block text-hbnGreen font-medium">Events</a>
+        <a href="../projects.html" class="block text-gray-600 hover:text-hbnGreen font-medium">Projects</a>
+        <a href="../membership.html" class="block text-gray-600 hover:text-hbnGreen font-medium">Membership</a>
+        <a href="../contact.html" class="block text-gray-600 hover:text-hbnGreen font-medium">Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Scroll-to-top button -->
+  <button id="scrollToTopBtn" class="fixed bottom-5 right-5 bg-hbnGreen text-white p-3 rounded-full shadow-md hidden z-50" aria-label="Scroll to top">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18" />
+    </svg>
+  </button>
+
+  <!-- Hero Section -->
+  <section class="relative h-screen">
+    <!-- Full-width background image -->
+    <div class="absolute inset-0 w-full h-full">
+        <img src="../assets/images/events/launch/jane.JPEG" 
+             alt="HBN Launch Event" 
+             class="w-full h-full object-cover brightness-50">
+    </div>
+
+    <!-- Overlay content -->
+    <div class="relative z-10 h-full flex items-center justify-center text-white text-center px-4 pt-20">
+        <div class="max-w-4xl">
+            <p class="text-xl md:text-2xl mb-4 font-light bg-hbnGreen bg-opacity-70 inline-block px-4 py-1 rounded-full">October 26, 2024</p>
+            <h1 class="text-5xl md:text-6xl font-bold mb-6">
+                HBN Leeds Launch Event
+            </h1>
+            <p class="text-xl md:text-2xl mb-8 font-light max-w-3xl mx-auto">
+                A milestone in building health innovation bringing together experts across disciplines
+            </p>
+            <div class="flex justify-center gap-4 flex-wrap">
+                <a href="#event-highlights" 
+                   class="bg-white text-gray-900 px-8 py-3 rounded-full 
+                          hover:bg-gray-100 transition-colors duration-300 shadow-md">
+                    View Highlights
+                </a>
+                <a href="#gallery" 
+                   class="border-2 border-white text-white px-8 py-3 rounded-full 
+                          hover:bg-white hover:text-gray-900 transition-colors duration-300">
+                    Photo Gallery
+                </a>
+                <a href="#speakers" 
+                   class="bg-hbnPurple text-white px-8 py-3 rounded-full 
+                          hover:bg-purple-700 transition-colors duration-300 shadow-md">
+                    Meet the Speakers
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scroll indicator -->
+    <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
+        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+        </svg>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <main>
+    <!-- Introduction Section -->
+    <section id="event-highlights" class="py-20 bg-white">
+      <div class="container mx-auto max-w-5xl px-6">
+        <div class="flex flex-col md:flex-row md:items-center gap-12">
+          <div class="md:w-1/2">
+            <h2 class="text-3xl font-bold mb-6 text-hbnGreen">Healthy Buildings Network Launch Event</h2>
+            <div class="flex items-center mb-6 text-gray-600">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-hbnGreen" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+              </svg>
+              <span>October 26th, 2024</span>
+              <span class="mx-3">|</span>
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-hbnGreen" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+              </svg>
+              <span>University of Leeds</span>
+            </div>
+            
+            <p class="text-xl italic text-hbnPurple mb-6">"By the time you are 70 you will have spent 63 years indoors..."</p>
+            
+            <p class="text-gray-700 mb-6">A healthy building supports both human health and environmental sustainability. It ensures clean air, comfortable conditions, natural light, and is free from harmful contaminants. The Healthy Buildings Network unites experts across disciplines to develop innovative, practical solutions for healthier built environments.</p>
+          </div>
+          
+          <div class="md:w-1/2">
+            <div class="grid grid-cols-3 gap-2 p-4 bg-gray-100 rounded-xl shadow-inner">
+              <img src="../assets/images/events/launch/marco_breathing_city.JPEG" alt="Dr. Marco-Felipe King" class="rounded-lg shadow-md h-48 object-cover">
+              <img src="../assets/images/events/launch/martin.JPEG" alt="Dr. Martín López-García" class="rounded-lg shadow-md h-48 object-cover">
+              <img src="../assets/images/events/launch/irene.JPEG" alt="Dr. Irene Mussio" class="rounded-lg shadow-md h-48 object-cover">
+            </div>
+            <p class="text-center text-sm text-gray-500 mt-2">HBN Leeds Founders: Dr. Marco-Felipe King, Dr. Martín López-García, and Dr. Irene Mussio</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Event Schedule Section -->
+    <section class="py-20 bg-gray-50">
+      <div class="container mx-auto max-w-5xl px-6">
+        <h2 class="text-3xl font-bold mb-12 text-center">Event Schedule</h2>
+        
+        <div class="relative">
+          <!-- Timeline line -->
+          <div class="absolute h-full w-1 bg-hbnGreen left-0 md:left-1/2 transform md:-translate-x-1/2"></div>
+          
+          <!-- Timeline items -->
+          <div class="space-y-12">
+            <!-- Registration -->
+            <div class="flex flex-col md:flex-row items-center">
+              <div class="md:w-1/2 md:pr-12 md:text-right mb-6 md:mb-0">
+                <h3 class="font-bold text-xl text-hbnGreen">Registration and Coffee</h3>
+              </div>
+              <div class="md:w-0 flex justify-center">
+                <div class="w-10 h-10 rounded-full bg-hbnGreen text-white flex items-center justify-center z-10">
+                  <span class="font-bold">1</span>
+                </div>
+              </div>
+              <div class="md:w-1/2 md:pl-12">
+                <p class="text-gray-600 font-semibold">10:00 AM</p>
+              </div>
+            </div>
+            
+            <!-- Welcome -->
+            <div class="flex flex-col md:flex-row items-center">
+              <div class="md:w-1/2 md:pr-12 md:text-right md:order-1 mb-6 md:mb-0">
+                <p class="text-gray-600 font-semibold">10:30 AM</p>
+              </div>
+              <div class="md:w-0 flex justify-center md:order-2">
+                <div class="w-10 h-10 rounded-full bg-hbnPurple text-white flex items-center justify-center z-10">
+                  <span class="font-bold">2</span>
+                </div>
+              </div>
+              <div class="md:w-1/2 md:pl-12 md:order-3">
+                <h3 class="font-bold text-xl text-hbnPurple">Welcome by Network Directors</h3>
+                <p class="text-gray-600 mt-1">Dr. Marco-Felipe King, Dr. Martín López-García, Dr. Irene Mussio</p>
+              </div>
+            </div>
+            
+            <!-- Keynotes -->
+            <div class="flex flex-col md:flex-row items-center">
+              <div class="md:w-1/2 md:pr-12 md:text-right mb-6 md:mb-0">
+                <h3 class="font-bold text-xl text-hbnGreen">Keynote Addresses</h3>
+                <ul class="list-disc md:list-none md:ml-0 ml-5 mt-2 text-gray-600">
+                  <li class="mb-1">Dr. Henry Burridge</li>
+                  <li>Prof. Cath Noakes</li>
+                </ul>
+              </div>
+              <div class="md:w-0 flex justify-center">
+                <div class="w-10 h-10 rounded-full bg-hbnGreen text-white flex items-center justify-center z-10">
+                  <span class="font-bold">3</span>
+                </div>
+              </div>
+              <div class="md:w-1/2 md:pl-12">
+                <p class="text-gray-600 font-semibold">11:05 AM</p>
+              </div>
+            </div>
+            
+            <!-- Lunch -->
+            <div class="flex flex-col md:flex-row items-center">
+              <div class="md:w-1/2 md:pr-12 md:text-right md:order-1 mb-6 md:mb-0">
+                <p class="text-gray-600 font-semibold">12:00 PM</p>
+              </div>
+              <div class="md:w-0 flex justify-center md:order-2">
+                <div class="w-10 h-10 rounded-full bg-hbnBlue text-white flex items-center justify-center z-10">
+                  <span class="font-bold">4</span>
+                </div>
+              </div>
+              <div class="md:w-1/2 md:pl-12 md:order-3">
+                <h3 class="font-bold text-xl text-hbnBlue">Lunch & Networking</h3>
+              </div>
+            </div>
+            
+            <!-- Lightning talks -->
+            <div class="flex flex-col md:flex-row items-center">
+              <div class="md:w-1/2 md:pr-12 md:text-right mb-6 md:mb-0">
+                <h3 class="font-bold text-xl text-hbnGreen">Lightning Talks</h3>
+                <p class="text-gray-600 mt-1">Seven speakers sharing innovative research and insights</p>
+              </div>
+              <div class="md:w-0 flex justify-center">
+                <div class="w-10 h-10 rounded-full bg-hbnGreen text-white flex items-center justify-center z-10">
+                  <span class="font-bold">5</span>
+                </div>
+              </div>
+              <div class="md:w-1/2 md:pl-12">
+                <p class="text-gray-600 font-semibold">1:00 PM</p>
+              </div>
+            </div>
+            
+            <!-- Coffee -->
+            <div class="flex flex-col md:flex-row items-center">
+              <div class="md:w-1/2 md:pr-12 md:text-right md:order-1 mb-6 md:mb-0">
+                <p class="text-gray-600 font-semibold">2:15 PM</p>
+              </div>
+              <div class="md:w-0 flex justify-center md:order-2">
+                <div class="w-10 h-10 rounded-full bg-hbnBlue text-white flex items-center justify-center z-10">
+                  <span class="font-bold">6</span>
+                </div>
+              </div>
+              <div class="md:w-1/2 md:pl-12 md:order-3">
+                <h3 class="font-bold text-xl text-hbnBlue">Coffee Break</h3>
+              </div>
+            </div>
+            
+            <!-- Panel -->
+            <div class="flex flex-col md:flex-row items-center">
+              <div class="md:w-1/2 md:pr-12 md:text-right mb-6 md:mb-0">
+                <h3 class="font-bold text-xl text-hbnPurple">Panel Discussion</h3>
+                <p class="text-gray-600 mt-1">"Interdisciplinary Approaches to Healthy Building Solutions"</p>
+                <p class="text-gray-600 mt-1">Moderated by Dr. Doug Booker</p>
+              </div>
+              <div class="md:w-0 flex justify-center">
+                <div class="w-10 h-10 rounded-full bg-hbnPurple text-white flex items-center justify-center z-10">
+                  <span class="font-bold">7</span>
+                </div>
+              </div>
+              <div class="md:w-1/2 md:pl-12">
+                <p class="text-gray-600 font-semibold">2:45 PM</p>
+              </div>
+            </div>
+            
+            <!-- Closing -->
+            <div class="flex flex-col md:flex-row items-center">
+              <div class="md:w-1/2 md:pr-12 md:text-right md:order-1 mb-6 md:mb-0">
+                <p class="text-gray-600 font-semibold">3:45 PM</p>
+              </div>
+              <div class="md:w-0 flex justify-center md:order-2">
+                <div class="w-10 h-10 rounded-full bg-hbnGreen text-white flex items-center justify-center z-10">
+                  <span class="font-bold">8</span>
+                </div>
+              </div>
+              <div class="md:w-1/2 md:pl-12 md:order-3">
+                <h3 class="font-bold text-xl text-hbnGreen">Closing Remarks & Next Steps</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Keynote Speakers Section -->
+    <section id="speakers" class="py-20 bg-white">
+      <div class="container mx-auto max-w-5xl px-6">
+        <h2 class="text-3xl font-bold mb-12 text-center">Keynote Speakers</h2>
+        
+        <div class="grid md:grid-cols-2 gap-12">
+          <!-- Dr. Henry Burridge -->
+          <div class="bg-gray-50 rounded-xl shadow-lg overflow-hidden">
+            <div class="md:flex h-full">
+              <div class="md:w-2/5">
+                <img src="../assets/images/events/launch/henry.JPEG" alt="Dr. Henry Burridge" class="w-full h-full object-cover">
+              </div>
+              <div class="md:w-3/5 p-6 flex flex-col">
+                <div>
+                  <h3 class="font-bold text-xl text-hbnGreen mb-1">Dr. Henry Burridge</h3>
+                  <p class="text-gray-600 italic mb-4">Imperial College London</p>
+                  <h4 class="font-semibold text-gray-800 mb-2">The value of research in monitoring and air quality interventions: schools as an exemplar</h4>
+                  <p class="text-gray-600 mb-4">Dr. Burridge shared insights from the SAMHE project, emphasising innovations in school air quality monitoring and implications for public health and building design.</p>
+                </div>
+                <div class="mt-auto">
+                  <a href="https://www.imperial.ac.uk/people/h.burridge" target="_blank" class="text-hbnGreen hover:underline inline-flex items-center">
+                    <span>Learn more</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Prof. Cath Noakes -->
+          <div class="bg-gray-50 rounded-xl shadow-lg overflow-hidden">
+            <div class="md:flex h-full">
+              <div class="md:w-2/5">
+                <img src="../assets/images/events/launch/cath.JPEG" alt="Prof. Cath Noakes" class="w-full h-full object-cover">
+              </div>
+              <div class="md:w-3/5 p-6 flex flex-col">
+                <div>
+                  <h3 class="font-bold text-xl text-hbnGreen mb-1">Prof. Cath Noakes OBE</h3>
+                  <p class="text-gray-600 italic mb-4">University of Leeds</p>
+                  <h4 class="font-semibold text-gray-800 mb-2">Healthy Buildings for Public Health</h4>
+                  <p class="text-gray-600 mb-4">Prof. Noakes discussed how indoor air quality directly impacts public health, highlighting the role of building design in controlling airborne diseases, drawing from her extensive experience during the COVID-19 pandemic.</p>
+                </div>
+                <div class="mt-auto">
+                  <a href="https://eps.leeds.ac.uk/civil-engineering/staff/169/professor-catherine-noakes" target="_blank" class="text-hbnGreen hover:underline inline-flex items-center">
+                    <span>Learn more</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Lightning Talks Section -->
+    <section class="py-20 bg-gray-50">
+      <div class="container mx-auto max-w-5xl px-6">
+        <h2 class="text-3xl font-bold mb-12 text-center">Lightning Talks</h2>
+        
+        <div class="bg-white rounded-xl shadow-lg p-8">
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Speaker 1 -->
+            <div class="p-4 border border-gray-200 rounded-lg hover:shadow-md transition-shadow">
+              <h3 class="font-semibold text-hbnPurple">Dr. Elisabeth Yang</h3>
+              <p class="text-gray-600 text-sm italic mb-2">University of Leeds</p>
+              <p class="text-gray-700">Indoor Air Quality Monitoring Technologies</p>
+            </div>
+            
+            <!-- Speaker 2 -->
+            <div class="p-4 border border-gray-200 rounded-lg hover:shadow-md transition-shadow">
+              <h3 class="font-semibold text-hbnPurple">Dr. Doug Booker</h3>
+              <p class="text-gray-600 text-sm italic mb-2">NAQTS</p>
+              <p class="text-gray-700">Commercial Applications of Air Quality Research</p>
+            </div>
+            
+            <!-- Speaker 3 -->
+            <div class="p-4 border border-gray-200 rounded-lg hover:shadow-md transition-shadow">
+              <h3 class="font-semibold text-hbnPurple">Dr. Hua Zhong</h3>
+              <p class="text-gray-600 text-sm italic mb-2">University of Leeds</p>
+              <p class="text-gray-700">Thermal Comfort in Energy Efficient Buildings</p>
+            </div>
+            
+            <!-- Speaker 4 -->
+            <div class="p-4 border border-gray-200 rounded-lg hover:shadow-md transition-shadow">
+              <h3 class="font-semibold text-hbnPurple">Dr. Philip Webb</h3>
+              <p class="text-gray-600 text-sm italic mb-2">Leeds Beckett University</p>
+              <p class="text-gray-700">Smart Building Management Systems</p>
+            </div>
+            
+            <!-- Speaker 5 -->
+            <div class="p-4 border border-gray-200 rounded-lg hover:shadow-md transition-shadow">
+              <h3 class="font-semibold text-hbnPurple">Dr. Ailish Graham</h3>
+              <p class="text-gray-600 text-sm italic mb-2">University of Leeds</p>
+              <p class="text-gray-700">Sustainable Materials for Healthy Environments</p>
+            </div>
+            
+            <!-- Speaker 6 -->
+            <div class="p-4 border border-gray-200 rounded-lg hover:shadow-md transition-shadow">
+              <h3 class="font-semibold text-hbnPurple">Dr. Irene Mussio</h3>
+              <p class="text-gray-600 text-sm italic mb-2">University of Leeds</p>
+              <p class="text-gray-700">Behavioral Economics in Building Design</p>
+            </div>
+            
+            <!-- Speaker 7 -->
+            <div class="p-4 border border-gray-200 rounded-lg hover:shadow-md transition-shadow">
+              <h3 class="font-semibold text-hbnPurple">Dr. Hilary Potter</h3>
+              <p class="text-gray-600 text-sm italic mb-2">University of Leeds</p>
+              <p class="text-gray-700">Social Dimensions of Healthy Indoor Environments</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Panel Discussion Section -->
+    <section class="py-20 bg-white">
+    <div class="container mx-auto max-w-5xl px-6">
+        <h2 class="text-3xl font-bold mb-12 text-center">Panel Discussion</h2>
+        
+        <div class="bg-gray-50 rounded-xl shadow-lg p-8">
+          <h3 class="text-xl font-bold text-hbnPurple mb-6 text-center">"Interdisciplinary Approaches to Healthy Building Solutions"</h3>
+          
+          <div class="mb-8">
+            <p class="text-gray-700 mb-4">
+              The panel explored how collaboration across disciplines can lead to innovative solutions for healthier buildings. Our distinguished panelists shared insights from their diverse backgrounds, highlighting the importance of considering multiple perspectives when addressing complex challenges in the built environment.
+            </p>
+            <p class="text-gray-700">
+              Key discussion points included the integration of technical solutions with social considerations, balancing sustainability goals with health outcomes, and ensuring that research translates effectively into practical applications for industry.
+            </p>
+          </div>
+          
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="bg-white rounded-lg p-6 shadow-md">
+              <h4 class="font-semibold text-lg mb-4">Panelists</h4>
+              <ul class="space-y-3">
+                <li class="flex items-start">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-hbnGreen flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <div>
+                    <span class="font-medium">Jane Dickinson</span>
+                    <p class="text-sm text-gray-600">Sustainability Services, University of Leeds</p>
+                  </div>
+                </li>
+                <li class="flex items-start">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-hbnGreen flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <div>
+                    <span class="font-medium">Dr. Katy Wright</span>
+                    <p class="text-sm text-gray-600">Sociology & Social Policy, University of Leeds</p>
+                  </div>
+                </li>
+                <li class="flex items-start">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-hbnGreen flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <div>
+                    <span class="font-medium">Dr. Paul Hutchings</span>
+                    <p class="text-sm text-gray-600">School of Civil Engineering, University of Leeds</p>
+                  </div>
+                </li>
+                <li class="flex items-start">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-hbnGreen flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <div>
+                    <span class="font-medium">Prof. Henry Burridge</span>
+                    <p class="text-sm text-gray-600">Imperial College London</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            
+            <div class="bg-white rounded-lg p-6 shadow-md">
+              <h4 class="font-semibold text-lg mb-4">Moderator</h4>
+              <div class="flex items-start">
+                <div class="mr-4">
+                  <img src="../assets/images/events/launch/doug.JPEG" alt="Dr. Doug Booker" class="w-20 h-20 rounded-full object-cover">
+                </div>
+                <div>
+                  <p class="font-medium">Dr. Doug Booker</p>
+                  <p class="text-sm text-gray-600 mb-2">CEO, NAQTS</p>
+                  <p class="text-sm text-gray-700">Dr. Booker expertly guided the discussion, drawing on his background in both academic research and commercial applications in the air quality field.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-20 bg-gray-50">
+      <div class="container mx-auto max-w-6xl px-6">
+        <h2 class="text-3xl font-bold mb-12 text-center">Event Gallery</h2>
+        
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- Gallery Image 1 -->
+          <div class="gallery-item relative group overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-all duration-300">
+            <img src="../assets/images/events/launch/andrew_anushi.JPEG" alt="Welcome Session" class="w-full h-64 object-cover transform group-hover:scale-105 transition-transform duration-300">
+            <div class="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 text-white p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <p class="text-sm">Welcome Session with Network Directors</p>
+            </div>
+          </div>
+          
+          <!-- Gallery Image 2 -->
+          <div class="gallery-item relative group overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-all duration-300">
+            <img src="../assets/images/events/launch/cath.JPEG" alt="Keynote Presentation" class="w-full h-64 object-cover transform group-hover:scale-105 transition-transform duration-300">
+            <div class="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 text-white p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <p class="text-sm">Keynote Presentation by Prof. Cath Noakes</p>
+            </div>
+          </div>
+          
+          <!-- Gallery Image 3 -->
+          <div class="gallery-item relative group overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-all duration-300">
+            <img src="../assets/images/events/launch/paul.JPEG" alt="Panel Discussion" class="w-full h-64 object-cover transform group-hover:scale-105 transition-transform duration-300">
+            <div class="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 text-white p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <p class="text-sm">Panel Discussion in Progress</p>
+            </div>
+          </div>
+          
+          <!-- Gallery Image 4 -->
+          <div class="gallery-item relative group overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-all duration-300">
+            <img src="../assets/images/events/launch/alexa.JPEG" alt="Networking Session" class="w-full h-64 object-cover transform group-hover:scale-105 transition-transform duration-300">
+            <div class="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 text-white p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <p class="text-sm">Networking Session During Lunch</p>
+            </div>
+          </div>
+          
+          <!-- Gallery Image 5 -->
+          <div class="gallery-item relative group overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-all duration-300">
+            <img src="../assets/images/events/launch/elephant.JPEG" alt="Lightning Talk Session" class="w-full h-64 object-cover transform group-hover:scale-105 transition-transform duration-300">
+            <div class="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 text-white p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <p class="text-sm">Lightning Talk Session</p>
+            </div>
+          </div>
+          
+          <!-- Gallery Image 6 -->
+          <div class="gallery-item relative group overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-all duration-300">
+            <img src="../assets/images/events/launch/elisabeth.JPEG" alt="Audience Engagement" class="w-full h-64 object-cover transform group-hover:scale-105 transition-transform duration-300">
+            <div class="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 text-white p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <p class="text-sm">Audience Q&A Session</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="mt-12 text-center">
+          <button id="view-all-photos" class="bg-hbnGreen text-white px-8 py-3 rounded-full hover:bg-green-700 transition-colors shadow-md inline-flex items-center">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+            </svg>
+            View All Photos
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Video Highlights Section (Placeholder)
+    <section class="py-20 bg-white">
+      <div class="container mx-auto max-w-5xl px-6">
+        <h2 class="text-3xl font-bold mb-12 text-center">Video Highlights</h2>
+        
+        <div class="bg-gray-50 p-6 rounded-xl text-center">
+          <div class="aspect-w-16 aspect-h-9 mb-6">
+            <div class="w-full h-0 pb-[56.25%] relative">
+              <div class="absolute inset-0 flex items-center justify-center bg-gray-200 rounded-lg">
+                <div class="text-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 mx-auto text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                  <p class="mt-4 text-gray-600">Video highlights coming soon!</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <p class="text-gray-700 max-w-3xl mx-auto">
+            We're currently processing video highlights from the launch event. Check back soon to watch keynote presentations, panel discussions, and more!
+          </p>
+        </div>
+      </div>
+    </section>
+ -->
+    <!-- Key Takeaways Section -->
+    <section class="py-20 bg-gray-50">
+      <div class="container mx-auto max-w-5xl px-6">
+        <h2 class="text-3xl font-bold mb-12 text-center">Key Takeaways</h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <!-- Takeaway 1 -->
+          <div class="bg-white rounded-xl shadow-lg p-8">
+            <div class="flex items-start">
+              <div class="mr-4">
+                <div class="w-12 h-12 bg-hbnGreen bg-opacity-20 rounded-full flex items-center justify-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-hbnGreen" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                  </svg>
+                </div>
+              </div>
+              <div>
+                <h3 class="text-xl font-bold text-gray-800 mb-3">Interdisciplinary Collaboration is Essential</h3>
+                <p class="text-gray-600">
+                  The complex challenges of creating healthy buildings require expertise from multiple disciplines—engineering, public health, social sciences, and beyond. Breaking down silos between different fields was identified as a critical success factor.
+                </p>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Takeaway 2 -->
+          <div class="bg-white rounded-xl shadow-lg p-8">
+            <div class="flex items-start">
+              <div class="mr-4">
+                <div class="w-12 h-12 bg-hbnPurple bg-opacity-20 rounded-full flex items-center justify-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-hbnPurple" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                  </svg>
+                </div>
+              </div>
+              <div>
+                <h3 class="text-xl font-bold text-gray-800 mb-3">Health and Sustainability Must Work Together</h3>
+                <p class="text-gray-600">
+                  Discussions highlighted the need to integrate health considerations with sustainability goals. Creating buildings that are both environmentally friendly and health-promoting requires careful balance and innovative approaches.
+                </p>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Takeaway 3 -->
+          <div class="bg-white rounded-xl shadow-lg p-8">
+            <div class="flex items-start">
+              <div class="mr-4">
+                <div class="w-12 h-12 bg-hbnBlue bg-opacity-20 rounded-full flex items-center justify-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-hbnBlue" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                  </svg>
+                </div>
+              </div>
+              <div>
+                <h3 class="text-xl font-bold text-gray-800 mb-3">Research Must Translate to Practice</h3>
+                <p class="text-gray-600">
+                  Bridging the gap between academic research and practical implementation emerged as a key challenge. Discussions explored how to ensure that cutting-edge research findings make their way into building design, construction, and management practices.
+                </p>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Takeaway 4 -->
+          <div class="bg-white rounded-xl shadow-lg p-8">
+            <div class="flex items-start">
+              <div class="mr-4">
+                <div class="w-12 h-12 bg-hbnYellow bg-opacity-20 rounded-full flex items-center justify-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-yellow-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+                  </svg>
+                </div>
+              </div>
+              <div>
+                <h3 class="text-xl font-bold text-gray-800 mb-3">Human Perspective is Crucial</h3>
+                <p class="text-gray-600">
+                  Beyond technical solutions, the event emphasised that truly healthy buildings must consider occupant experiences, behaviors, and needs. Engaging with building users and incorporating their perspectives is essential for successful outcomes.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="py-20 bg-gradient-to-r from-hbnGreen to-hbnPurple text-white">
+      <div class="container mx-auto max-w-4xl px-6 text-center">
+        <h2 class="text-3xl font-bold mb-6">Join Our Network</h2>
+        <p class="text-xl mb-10 max-w-3xl mx-auto opacity-90">
+          Be part of our growing community of researchers, practitioners, and innovators working together to create healthier, more sustainable built environments.
+        </p>
+        <div class="flex flex-wrap justify-center gap-6">
+          <a href="../membership.html" class="px-8 py-4 bg-white text-hbnGreen rounded-full hover:bg-gray-100 transition-colors shadow-lg font-semibold text-lg">
+            Become a Member
+          </a>
+          <a href="../events.html" class="px-8 py-4 border-2 border-white text-white rounded-full hover:bg-white hover:bg-opacity-10 transition-colors font-semibold text-lg">
+            Upcoming Events
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+<!-- Lightbox for Gallery -->
+<div id="lightbox" class="lightbox hidden">
+  <span class="close-lightbox">&times;</span>
+  <span class="prev-image">&#10094;</span>
+  <span class="next-image">&#10095;</span>
+  <img id="lightbox-image" src="" alt="Gallery image">
+</div>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white py-12 md:py-16">
+    <div class="container mx-auto max-w-6xl px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <!-- Bio / Logo section -->
+      <div class="mb-8">
+        <img src="../assets/images/hbn_landscape.png" alt="Healthy Buildings Network Leeds Logo" class="h-12 mb-4 filter brightness-0 invert opacity-90">
+        <p class="text-sm tracking-wide text-gray-300">
+          Healthy Buildings Network Leeds is a cross-disciplinary research and collaboration hub at the University of Leeds, focused on healthier, more sustainable built environments.
+        </p>
+  
+        <!-- Social Links -->
+        <ul class="flex mt-4">
+          <li class="mr-4 flex items-center">
+            <a href="https://www.linkedin.com/company/healthy-buildings-network/" target="_blank" class="text-gray-300 hover:text-hbnGreen transition-colors flex items-center">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+              </svg>
+              LinkedIn
+            </a>
+          </li>
+          <li class="mr-4 flex items-center">
+            <a href="mailto:healthy_buildings_network@leeds.ac.uk" class="text-gray-300 hover:text-hbnGreen transition-colors flex items-center">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+              </svg>
+              Email Us
+            </a>
+          </li>
+        </ul>
+      </div>
+  
+      <!-- Quick Links -->
+      <div>
+        <h4 class="text-xl font-bold mb-4">Quick Links</h4>
+        <ul class="space-y-2">
+          <li><a href="../index.html" class="text-gray-300 hover:text-hbnGreen transition-colors">Home</a></li>
+          <li><a href="../about.html" class="text-gray-300 hover:text-hbnGreen transition-colors">About</a></li>
+          <li><a href="../projects.html" class="text-gray-300 hover:text-hbnGreen transition-colors">Projects</a></li>
+          <li><a href="../events.html" class="text-gray-300 hover:text-hbnGreen transition-colors">Events</a></li>
+          <li><a href="../membership.html" class="text-gray-300 hover:text-hbnGreen transition-colors">Membership</a></li>
+          <li><a href="../contact.html" class="text-gray-300 hover:text-hbnGreen transition-colors">Contact</a></li>
+        </ul>
+      </div>
+  
+      <!-- Affiliations -->
+      <div>
+        <h4 class="text-xl font-bold mb-4">Affiliations</h4>
+        <ul class="space-y-2">
+          <li><a href="https://fluids.leeds.ac.uk" target="_blank" class="text-gray-300 hover:text-hbnGreen transition-colors">Leeds Institute for Fluid Dynamics</a></li>
+          <li><a href="https://lssi.leeds.ac.uk" target="_blank" class="text-gray-300 hover:text-hbnGreen transition-colors">Leeds Social Sciences Institute</a></li>
+          <li><a href="https://lahri.leeds.ac.uk" target="_blank" class="text-gray-300 hover:text-hbnGreen transition-colors">Leeds Arts & Humanities Research Institute</a></li>
+          <li><a href="https://icas.leeds.ac.uk" target="_blank" class="text-gray-300 hover:text-hbnGreen transition-colors">ICAS</a></li>
+        </ul>
+      </div>
+    </div>
+  
+    <div class="container mx-auto max-w-6xl px-6 text-sm text-center pt-8 mt-8 border-t border-gray-700">
+      <p>© 2025 Healthy Buildings Network Leeds. All rights reserved.</p>
+      <p class="mt-2">University of Leeds, Leeds LS2 9JT, United Kingdom</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="../assets/js/script.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Mobile menu toggle
+      const menuButton = document.getElementById('mobile-menu-button');
+      const mobileMenu = document.getElementById('mobile-menu');
+      
+      if (menuButton && mobileMenu) {
+        menuButton.addEventListener('click', function() {
+          mobileMenu.classList.toggle('hidden');
+        });
+      }
+      
+      // Gallery lightbox functionality
+      const lightbox = document.getElementById('lightbox');
+      const lightboxImage = document.getElementById('lightbox-image');
+      const closeLightbox = document.querySelector('.close-lightbox');
+      const prevButton = document.querySelector('.prev-image');
+      const nextButton = document.querySelector('.next-image');
+      const viewAllButton = document.getElementById('view-all-photos');
+      const galleryItems = document.querySelectorAll('.gallery-item');
+      
+      // Check if lightbox elements exist before continuing
+      if (lightbox && lightboxImage) {
+        // Force hide the lightbox initially
+        lightbox.classList.add('hidden');
+        
+        let currentImageIndex = 0;
+        const images = [];
+        
+        // Collect all gallery images
+        if (galleryItems.length > 0) {
+          galleryItems.forEach((item, index) => {
+            const img = item.querySelector('img');
+            if (img) {
+              const imgSrc = img.src;
+              const imgAlt = img.alt;
+              
+              images.push({
+                src: imgSrc,
+                alt: imgAlt
+              });
+              
+              item.addEventListener('click', () => {
+                openLightbox(index);
+              });
+            }
+          });
+        }
+        
+        function openLightbox(index) {
+          if (index >= 0 && index < images.length) {
+            currentImageIndex = index;
+            lightboxImage.src = images[index].src;
+            lightboxImage.alt = images[index].alt;
+            lightbox.classList.remove('hidden');
+            document.body.style.overflow = 'hidden'; // Prevent scrolling when lightbox is open
+          }
+        }
+        
+        function closeLightboxFn() {
+          lightbox.classList.add('hidden');
+          document.body.style.overflow = ''; // Re-enable scrolling
+        }
+        
+        function showPrevImage() {
+          currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
+          lightboxImage.src = images[currentImageIndex].src;
+          lightboxImage.alt = images[currentImageIndex].alt;
+        }
+        
+        function showNextImage() {
+          currentImageIndex = (currentImageIndex + 1) % images.length;
+          lightboxImage.src = images[currentImageIndex].src;
+          lightboxImage.alt = images[currentImageIndex].alt;
+        }
+        
+        if (closeLightbox) {
+          closeLightbox.addEventListener('click', closeLightboxFn);
+        }
+        
+        if (prevButton) {
+          prevButton.addEventListener('click', showPrevImage);
+        }
+        
+        if (nextButton) {
+          nextButton.addEventListener('click', showNextImage);
+        }
+        
+        // Allow keyboard navigation
+        document.addEventListener('keydown', (e) => {
+          if (!lightbox.classList.contains('hidden')) {
+            if (e.key === 'Escape') {
+              closeLightboxFn();
+            } else if (e.key === 'ArrowLeft') {
+              showPrevImage();
+            } else if (e.key === 'ArrowRight') {
+              showNextImage();
+            }
+          }
+        });
+        
+        // View all photos button
+        if (viewAllButton) {
+          viewAllButton.addEventListener('click', () => {
+            if (images.length > 0) {
+              openLightbox(0); // Open lightbox with the first image
+            }
+          });
+        }
+      }
+      
+      // Scroll to top button functionality
+      const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+      if (scrollToTopBtn) {
+        window.addEventListener('scroll', function() {
+          if (window.pageYOffset > 300) {
+            scrollToTopBtn.classList.remove('hidden');
+          } else {
+            scrollToTopBtn.classList.add('hidden');
+          }
+        });
+        
+        scrollToTopBtn.addEventListener('click', function() {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+      }
+      
+      // Smooth scrolling for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+          const targetId = this.getAttribute('href');
+          if (targetId === "#") return; // Skip links with just "#"
+          
+          const targetElement = document.querySelector(targetId);
+          
+          if (targetElement) {
+            e.preventDefault();
+            window.scrollTo({
+              top: targetElement.offsetTop - 80, // Offset for fixed header
+              behavior: 'smooth'
+            });
+          }
+        });
+      });
+    });
+  </script>

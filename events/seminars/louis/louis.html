@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            hbnGreen: '#4e9317',
+            hbnPurple: '#8360a9',
+            hbnGray: '#808184',
+            hbnYellow: '#ffca29',
+            hbnBlue: '#3e95dd',
+          }
+        }
+      }
+    };
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Learn about the Healthy Buildings Network Leeds, our mission, founders, and key focus areas for healthier and more sustainable built environments.">
+  <title>About Us | Healthy Buildings Network Leeds</title>
+  
+  <link rel="icon" href="../../../assets/images/hbn_fav.ico" type="image/x-icon"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body class="font-poppins">
+
+  <!-- Header / Navbar -->
+  <header class="bg-white shadow-md fixed w-full z-50">
+    <div class="container mx-auto px-6 flex justify-between items-center h-20">
+      <!-- Logo -->
+      <div class="flex-shrink-0">
+        <a href="../../../index.html">
+          <img src="../../../assets/images/hbn_landscape.png" alt="Healthy Buildings Network Leeds Logo" class="h-12">
+        </a>
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <button class="md:hidden text-gray-600 hover:text-hbnGreen focus:outline-none" id="mobile-menu-button" aria-label="Open Menu">
+        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+
+      <!-- Navigation -->
+      <nav class="hidden md:flex space-x-8" id="main-nav">
+        <a href="../../../index.html" class="text-gray-600 hover:text-hbnGreen font-medium transition-colors">Home</a>
+        <a href="../../../about.html" class="text-hbnGreen font-medium transition-colors">About Us</a>
+        <a href="../../../blog.html" class="text-gray-600 hover:text-hbnGreen font-medium transition-colors">Blog</a>
+        <a href="../../../events.html" class="text-gray-600 hover:text-hbnGreen font-medium transition-colors">Events</a>
+        <a href="../../../projects.html" class="text-gray-600 hover:text-hbnGreen font-medium transition-colors">Projects</a>
+        <a href="../../../membership.html" class="text-gray-600 hover:text-hbnGreen font-medium transition-colors">Membership</a>
+        <a href="../../../contact.html" class="text-gray-600 hover:text-hbnGreen font-medium transition-colors">Contact</a>
+      </nav>
+    </div>
+    
+    <!-- Mobile Navigation (Hidden by default) -->
+    <div class="md:hidden hidden bg-white w-full" id="mobile-menu">
+      <div class="px-6 py-4 space-y-4">
+        <a href="../../../index.html" class="block text-gray-600 hover:text-hbnGreen font-medium">Home</a>
+        <a href="../../../about.html" class="block text-hbnGreen font-medium">About Us</a>
+        <a href="../../../blog.html" class="block text-gray-600 hover:text-hbnGreen font-medium">Blog</a>
+        <a href="../../../events.html" class="block text-gray-600 hover:text-hbnGreen font-medium">Events</a>
+        <a href="../../../projects.html" class="block text-gray-600 hover:text-hbnGreen font-medium">Projects</a>
+        <a href="../../../membership.html" class="block text-gray-600 hover:text-hbnGreen font-medium">Membership</a>
+        <a href="../../../contact.html" class="block text-gray-600 hover:text-hbnGreen font-medium">Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Scroll-to-top button -->
+  <button id="scrollToTopBtn" class="fixed bottom-5 right-5 bg-hbnGreen text-white p-3 rounded-full shadow-md hidden z-50" aria-label="Scroll to top">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18" />
+    </svg>
+  </button>
+  <!-- Main Content -->
+  <main class="container mx-auto px-6 py-28">
+    <section class="bg-white rounded-xl shadow-lg overflow-hidden p-8 max-w-4xl mx-auto">
+      <h1 class="text-4xl font-bold text-gray-800 mb-4">Exploring the Essence of Home</h1>
+      <h2 class="text-xl text-hbnGreen mb-6">An Interactive Seminar with Louis Platman - April 30th 12-2pm, Newlyn TBC, University of Leeds.</h2>
+      
+      <img src="../../../assets/images/events/seminars/louis/3_-_New_gallery_spaces_Hufton_Crow.jpeg" alt="Louis Platman" class="rounded-lg shadow-md mb-6">
+
+      <div class="text-gray-700 space-y-4">
+        <p>Join us for a captivating two-hour interactive seminar led by Louis Platman, curator at London's renowned <strong>Museum of the Home</strong>. Louis specialises in the diverse narratives and evolving interpretations of what home means across different communities and historical periods.</p>
+
+        <h3 class="text-2xl font-semibold text-hbnPurple mt-8">Event Details:</h3>
+        <ul class="list-disc ml-5">
+          <li><strong>Date:</strong> Wednesday, April 30, 2025</li>
+          <li><strong>Time:</strong> 12:00 PM – 2:00 PM</li>
+          <li><strong>Location:</strong> Newlyn Building, TBC, University of Leeds and On Teams</li>
+        </ul>
+
+        <h3 class="text-2xl font-semibold text-hbnBlue mt-8">Seminar Highlights:</h3>
+        <ul class="list-disc ml-5">
+          <li>Understanding how the concept of "home" shapes personal and collective identity.</li>
+          <li>Insights into curating exhibitions that resonate with diverse audiences.</li>
+          <li>Interactive group discussions and activities on the emotional and cultural dimensions of home.</li>
+        </ul>
+
+        <h3 class="text-2xl font-semibold text-hbnYellow mt-8">About Louis Platman:</h3>
+        <p>Louis Platman is a respected curator at the Museum of the Home, dedicated to exploring how domestic spaces influence our lives and well-being. His exhibitions encourage meaningful community dialogue and representation of diverse lived experiences.</p>
+
+        <div class="mt-8 text-center">
+          <a href="https://forms.office.com/e/Z7hXrBvmy6" class="inline-block bg-hbnGreen text-white px-5 py-2 rounded-full shadow hover:bg-green-700 transition">Register Now</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white py-8">
+    <div class="container mx-auto text-center">
+      <p>&copy; 2025 Healthy Buildings Network Leeds. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
