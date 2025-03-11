@@ -87,3 +87,56 @@ if (toggleBtn) {
     document.body.classList.toggle('dark-mode');
   });
 }
+
+document.addEventListener('DOMContentLoaded', function() {
+  const slides = document.querySelectorAll('.gallery-slide');
+  const dots = document.querySelectorAll('[data-slide]');
+  let currentSlide = 0;
+  const slideCount = slides.length;
+  
+  // Function to change slide
+  function showSlide(index) {
+    // Hide all slides
+    slides.forEach(slide => {
+      slide.style.opacity = '0';
+    });
+    
+    // Update dots
+    dots.forEach(dot => {
+      dot.style.opacity = '0.5';
+    });
+    
+    // Show current slide
+    slides[index].style.opacity = '1';
+    dots[index].style.opacity = '1';
+    
+    currentSlide = index;
+  }
+  
+  // Setup click handlers for dots
+  dots.forEach(dot => {
+    dot.addEventListener('click', function() {
+      const slideIndex = parseInt(this.getAttribute('data-slide'));
+      showSlide(slideIndex);
+      
+      // Reset the auto-rotation timer when manually changed
+      clearInterval(rotationTimer);
+      rotationTimer = setInterval(nextSlide, 5000);
+    });
+  });
+  
+  // Auto-rotate slides
+  function nextSlide() {
+    let nextIndex = currentSlide + 1;
+    if (nextIndex >= slideCount) {
+      nextIndex = 0;
+    }
+    showSlide(nextIndex);
+  }
+  
+  // Start auto-rotation
+  let rotationTimer = setInterval(nextSlide, 5000);
+  
+  // Initialize first slide
+  showSlide(0);
+});
