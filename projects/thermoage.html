@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            hbnGreen: '#4e9317',
+            hbnPurple: '#8360a9',
+            hbnGray: '#808184',
+            hbnYellow: '#ffca29',
+            hbnBlue: '#3e95dd',
+          }
+        }
+      }
+    };
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Learn about ThermoAge, a research project investigating how extreme indoor temperatures affect balance, mobility, and fall risk in older adults.">
+  <title>ThermoAge | Healthy Buildings Network Leeds</title>
+  
+  <link rel="icon" href="../assets/images/hbn_fav.ico" type="image/x-icon"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.css" />
+</head>
+<body class="font-poppins">
+
+  <!-- Header / Navbar -->
+  <header class="bg-white shadow-md fixed w-full z-50">
+    <div class="container mx-auto px-6 flex justify-between items-center h-20">
+      <!-- Logo -->
+      <div class="flex-shrink-0">
+        <a href="../index.html">
+          <img src="../assets/images/hbn_landscape.png" alt="Healthy Buildings Network Leeds Logo" class="h-12">
+        </a>
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <button class="md:hidden text-gray-600 hover:text-hbnGreen focus:outline-none" id="mobile-menu-button" aria-label="Open Menu">
+        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+
+      <!-- Navigation -->
+      <nav class="hidden md:flex space-x-8" id="main-nav">
+        <a href="../index.html" class="text-gray-600 hover:text-hbnGreen font-medium transition-colors">Home</a>
+        <a href="../about.html" class="text-gray-600 hover:text-hbnGreen font-medium transition-colors">About Us</a>
+        <a href="../blog.html" class="text-gray-600 hover:text-hbnGreen font-medium transition-colors">Blog</a>
+        <a href="../events.html" class="text-gray-600 hover:text-hbnGreen font-medium transition-colors">Events</a>
+        <a href="../projects.html" class="text-hbnGreen font-medium transition-colors">Projects</a>
+        <a href="../membership.html" class="text-gray-600 hover:text-hbnGreen font-medium transition-colors">Membership</a>
+        <a href="../contact.html" class="text-gray-600 hover:text-hbnGreen font-medium transition-colors">Contact</a>
+      </nav>
+    </div>
+    
+    <!-- Mobile Navigation (Hidden by default) -->
+    <div class="md:hidden hidden bg-white w-full shadow-md" id="mobile-menu">
+      <div class="px-6 py-4 space-y-4">
+        <a href="../index.html" class="block text-gray-600 hover:text-hbnGreen font-medium">Home</a>
+        <a href="../about.html" class="block text-gray-600 hover:text-hbnGreen font-medium">About Us</a>
+        <a href="../blog.html" class="block text-gray-600 hover:text-hbnGreen font-medium">Blog</a>
+        <a href="../events.html" class="block text-gray-600 hover:text-hbnGreen font-medium">Events</a>
+        <a href="../projects.html" class="block text-hbnGreen font-medium">Projects</a>
+        <a href="../membership.html" class="block text-gray-600 hover:text-hbnGreen font-medium">Membership</a>
+        <a href="../contact.html" class="block text-gray-600 hover:text-hbnGreen font-medium">Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Scroll-to-top button -->
+  <button id="scrollToTopBtn" class="fixed bottom-5 right-5 bg-hbnPurple text-white p-3 rounded-full shadow-md hidden z-50" aria-label="Scroll to top">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18" />
+    </svg>
+  </button>
+
+  <!-- Hero Section -->
+  <section class="relative pt-20">
+    <div class="bg-gradient-to-r from-hbnPurple to-hbnPurple text-white py-16 md:py-24">
+      <div class="container mx-auto px-6 max-w-6xl">
+        <div class="md:flex items-center">
+          <div class="md:w-3/5 md:pr-12 mb-10 md:mb-0">
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">ThermoAge</h1>
+            <p class="text-xl opacity-90 mb-8 max-w-2xl">
+              Exploring how extreme indoor temperatures affect balance, mobility, and the risk of falling in older adults.
+            </p>
+            <div class="flex flex-wrap gap-4">
+              <a href="#overview" class="px-6 py-3 bg-white text-hbnPurple rounded-full hover:bg-gray-100 transition-colors shadow-md">
+                Project Overview
+              </a>
+              <a href="#methodology" class="px-6 py-3 border-2 border-white text-white rounded-full hover:bg-white hover:bg-opacity-10 transition-colors">
+                Research Methods
+              </a>
+            </div>
+          </div>
+          <div class="md:w-2/5">
+            <img src="../assets/images/thermal_comfort.jpg" alt="Thermal comfort research" class="rounded-lg shadow-xl">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Breadcrumbs -->
+  <div class="bg-gray-100 py-3">
+    <div class="container mx-auto px-6 max-w-6xl">
+      <div class="flex text-sm">
+        <a href="../index.html" class="text-gray-600 hover:text-hbnPurple">Home</a>
+        <span class="mx-2 text-gray-400">/</span>
+        <a href="../projects.html" class="text-gray-600 hover:text-hbnPurple">Projects</a>
+        <span class="mx-2 text-gray-400">/</span>
+        <span class="text-gray-800">ThermoAge</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Project Overview Section -->
+  <section id="overview" class="py-16 bg-white">
+    <div class="container mx-auto px-6 max-w-5xl">
+      <div class="flex flex-col md:flex-row gap-12">
+        <!-- Main Content -->
+        <div class="md:w-2/3">
+          <h2 class="text-3xl font-bold mb-6 text-hbnPurple">Project Overview</h2>
+          
+          <div class="prose max-w-none text-gray-700">
+            <p class="mb-4 text-lg">
+              THERMOAGE explores how exposure to cold or heat extremes indoors can affect posture, muscle properties, and the risk of falling in older adults. With climate change increasing the frequency of extreme weather events, older people—who often spend 90% of their time indoors—face heightened vulnerability.
+            </p>
+            
+            <p class="mb-8">
+              This pilot study will generate objective data on how indoor temperatures influence balance and mobility, aiming to inform building design, public health strategies, and financial policies to better protect aging populations.
+            </p>
+            
+            <h3 class="text-xl font-semibold mt-8 mb-4 text-gray-800">Why It Matters</h3>
+            
+            <div class="bg-gray-50 p-6 rounded-xl mb-8">
+              <ul class="space-y-4">
+                <li class="flex items-start">
+                  <div class="bg-hbnPurple rounded-full w-8 h-8 flex items-center justify-center text-white mr-3 flex-shrink-0 mt-1">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h4 class="font-semibold text-gray-800">A Growing Concern</h4>
+                    <p class="text-gray-600">Extreme weather events are becoming more common and prolonged, posing a health risk to older adults with reduced capacity to regulate body temperature.</p>
+                  </div>
+                </li>
+                
+                <li class="flex items-start">
+                  <div class="bg-hbnPurple rounded-full w-8 h-8 flex items-center justify-center text-white mr-3 flex-shrink-0 mt-1">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h4 class="font-semibold text-gray-800">Risk of Falls</h4>
+                    <p class="text-gray-600">Falls in later life carry significant personal, clinical, and economic costs. Indoor temperature extremes can exacerbate muscle fatigue, affect balance, and ultimately increase the likelihood of falls.</p>
+                  </div>
+                </li>
+                
+                <li class="flex items-start">
+                  <div class="bg-hbnPurple rounded-full w-8 h-8 flex items-center justify-center text-white mr-3 flex-shrink-0 mt-1">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h4 class="font-semibold text-gray-800">Building & Policy Implications</h4>
+                    <p class="text-gray-600">Current indoor temperature guidelines (e.g. recommended 18–21°C in winter) don't fully account for older adults' specific needs or regional climate variations. This project could help shape future building standards and energy policies that actively protect vulnerable residents.</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            
+            <h3 class="text-xl font-semibold mt-8 mb-4 text-gray-800">Research Objectives</h3>
+            
+            <div class="space-y-4 mb-8">
+              <div class="bg-hbnPurple bg-opacity-5 p-5 rounded-lg border-l-4 border-hbnPurple">
+                <h4 class="font-semibold text-gray-800">1. Quantify the Impact of Temperature on Balance</h4>
+                <p class="text-gray-600">Measure changes in postural sway and muscle properties (e.g., stiffness, tone) at a range of indoor temperatures (14–30°C).</p>
+              </div>
+              
+              <div class="bg-hbnPurple bg-opacity-5 p-5 rounded-lg border-l-4 border-hbnPurple">
+                <h4 class="font-semibold text-gray-800">2. Identify Thresholds</h4>
+                <p class="text-gray-600">Investigate possible critical indoor temperatures where balance and muscle responses become significantly impaired, leading to a higher fall risk.</p>
+              </div>
+              
+              <div class="bg-hbnPurple bg-opacity-5 p-5 rounded-lg border-l-4 border-hbnPurple">
+                <h4 class="font-semibold text-gray-800">3. Inform Stakeholders</h4>
+                <p class="text-gray-600">Engage Leeds City Council and other stakeholders to highlight how building design, retrofitting, and heating/cooling policies could be optimized for older adults' safety.</p>
+              </div>
+            </div>
+            
+            <h3 id="methodology" class="text-xl font-semibold mt-12 mb-4 text-gray-800">Methodology</h3>
+            
+            <div class="mb-6">
+              <h4 class="font-semibold text-gray-800 mb-2">Participant Recruitment</h4>
+              <p class="text-gray-600 mb-4">Ten adults aged over 55 (5 female, 5 male) will participate in two experimental trials in a controlled climate chamber.</p>
+            </div>
+            
+            <div class="mb-6">
+              <h4 class="font-semibold text-gray-800 mb-2">Climate Chamber Sessions</h4>
+              <ul class="list-disc pl-6 mb-4 space-y-2 text-gray-600">
+                <li>25-minute acclimatization at a "baseline" 21°C.</li>
+                <li>Gradual ramp (0.17°C/min over 45 mins) to either a COLD condition (14°C) or a HOT condition (30°C).</li>
+              </ul>
+            </div>
+            
+            <div class="mb-6">
+              <h4 class="font-semibold text-gray-800 mb-2">Data Collection</h4>
+              <ul class="list-disc pl-6 mb-4 space-y-2 text-gray-600">
+                <li><strong>Body Temperature:</strong> Skin thermocouples record local temperatures at six body locations.</li>
+                <li><strong>Balance & Postural Sway:</strong> A plantar pressure plate tracks micro-movements while participants are seated or standing.</li>
+                <li><strong>Muscle Properties:</strong> MyotonPRO device measures stiffness and tone of key lower-limb muscles.</li>
+                <li><strong>Thermal Comfort Surveys:</strong> Participants periodically report subjective thermal comfort, sensation, and preference.</li>
+              </ul>
+            </div>
+            
+            <div class="mb-8">
+              <h4 class="font-semibold text-gray-800 mb-2">Data Analysis</h4>
+              <p class="text-gray-600">Changes in postural sway, muscle function, and body temperature will be compared across both temperature extremes. These insights will help identify potential "tipping points" where increased fall risk may occur.</p>
+            </div>
+            
+            <div class="bg-gray-50 p-6 rounded-xl mb-8">
+              <h3 class="text-xl font-semibold mb-4 text-gray-800">Project Timeline</h3>
+              <div class="relative">
+                <!-- Timeline Line -->
+                <div class="absolute left-4 top-1 h-full w-0.5 bg-gray-300"></div>
+                
+                <!-- Timeline Items -->
+                <div class="space-y-6">
+                  <!-- Start -->
+                  <div class="relative pl-12">
+                    <div class="absolute left-0 top-0 w-8 h-8 bg-hbnPurple rounded-full flex items-center justify-center text-white font-bold">1</div>
+                    <div>
+                      <h4 class="font-semibold text-gray-800">May 2025</h4>
+                      <p class="text-gray-600">Project start, preparation of equipment and recruitment</p>
+                    </div>
+                  </div>
+                  
+                  <!-- Data Collection -->
+                  <div class="relative pl-12">
+                    <div class="absolute left-0 top-0 w-8 h-8 bg-hbnPurple rounded-full flex items-center justify-center text-white font-bold">2</div>
+                    <div>
+                      <h4 class="font-semibold text-gray-800">May–September 2025</h4>
+                      <p class="text-gray-600">Data collection in climate chamber</p>
+                    </div>
+                  </div>
+                  
+                  <!-- Analysis -->
+                  <div class="relative pl-12">
+                    <div class="absolute left-0 top-0 w-8 h-8 bg-hbnPurple rounded-full flex items-center justify-center text-white font-bold">3</div>
+                    <div>
+                      <h4 class="font-semibold text-gray-800">July–October 2025</h4>
+                      <p class="text-gray-600">Data analysis & stakeholder feedback sessions</p>
+                    </div>
+                  </div>
+                  
+                  <!-- Completion -->
+                  <div class="relative pl-12">
+                    <div class="absolute left-0 top-0 w-8 h-8 bg-hbnPurple rounded-full flex items-center justify-center text-white font-bold">4</div>
+                    <div>
+                      <h4 class="font-semibold text-gray-800">31 October 2025</h4>
+                      <p class="text-gray-600">Project completion and final report</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <h3 class="text-xl font-semibold mt-8 mb-4 text-gray-800">Collaboration & Impact</h3>
+            
+            <p class="mb-4">
+              By connecting scientific research to local policy (Leeds City Council's core priorities), the project aims to shape proactive building guidelines and reduce hospital admissions due to falls.
+            </p>
+            
+            <p class="mb-8">
+              Findings will inform larger studies (e.g., NERC grants) on healthy aging and indoor environments, potentially influencing national regulations and energy-efficient housing solutions.
+            </p>
+            
+            <div class="bg-gray-50 p-6 rounded-xl">
+              <h4 class="font-semibold text-gray-800 mb-4">Budget & Value for Money</h4>
+              <p class="text-gray-600 mb-4">Total Requested: £3,000</p>
+              <ul class="list-disc pl-6 space-y-2 text-gray-600">
+                <li><strong>Research Assistant</strong> – ~50 hours of undergraduate support via JobLink for data collection and analysis (£900).</li>
+                <li><strong>Participant Costs</strong> – Travel and incentives for 10 older adult participants, each attending two sessions (£1,540).</li>
+                <li><strong>Consumables</strong> – Data loggers, thermocouples, and minor equipment upkeep (£560).</li>
+              </ul>
+              <p class="mt-4 text-gray-600">
+                This modest budget delivers substantial returns by leveraging existing climate chamber facilities, in-kind academic expertise, and external partnerships with Leeds City Council. It also promotes EDI by enabling participation from outside the University community, covering travel expenses, and fairly compensating volunteers' time.
+              </p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Sidebar -->
+        <div class="md:w-1/3">
+          <!-- Team Section -->
+          <div id="team" class="bg-gray-50 rounded-xl p-6 mb-8">
+            <h3 class="text-xl font-semibold mb-6 text-gray-800">Research Team</h3>
+            
+            <div class="space-y-6">
+              <!-- Principal Investigator -->
+              <div>
+                <h4 class="font-semibold text-gray-800 border-b border-gray-200 pb-2 mb-3">Principal Investigator</h4>
+                <div class="flex items-start">
+                  <div class="w-12 h-12 bg-hbnPurple rounded-full flex items-center justify-center text-white mr-4 flex-shrink-0">
+                    <span class="font-bold">SC</span>
+                  </div>
+                  <div>
+                    <h5 class="font-semibold text-gray-800">Dr. Silvia Caggiari</h5>
+                    <p class="text-sm text-gray-600 mb-1">Early Career Researcher</p>
+                    <p class="text-sm text-gray-600">School of Biomedical Sciences, University of Leeds</p>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Co-Investigators -->
+              <div>
+                <h4 class="font-semibold text-gray-800 border-b border-gray-200 pb-2 mb-3">Co-Investigators</h4>
+                
+                <!-- Co-Investigator 1 -->
+                <div class="flex items-start mb-4">
+                  <div class="w-10 h-10 bg-hbnPurple bg-opacity-80 rounded-full flex items-center justify-center text-white mr-3 flex-shrink-0">
+                    <span class="font-bold text-sm">SS</span>
+                  </div>
+                  <div>
+                    <h5 class="font-semibold text-gray-800">Dr. Sally Shahzad</h5>
+                    <p class="text-sm text-gray-600">School of Civil Engineering, University of Leeds</p>
+                  </div>
+                </div>
+                
+                <!-- Co-Investigator 2 -->
+                <div class="flex items-start mb-4">
+                  <div class="w-10 h-10 bg-hbnPurple bg-opacity-80 rounded-full flex items-center justify-center text-white mr-3 flex-shrink-0">
+                    <span class="font-bold text-sm">SA</span>
+                  </div>
+                  <div>
+                    <h5 class="font-semibold text-gray-800">Prof. Sarah Astill</h5>
+                    <p class="text-sm text-gray-600">School of Biomedical Sciences, University of Leeds</p>
+                  </div>
+                </div>
+                
+                <!-- Co-Investigator 3 -->
+                <div class="flex items-start mb-4">
+                  <div class="w-10 h-10 bg-hbnPurple bg-opacity-80 rounded-full flex items-center justify-center text-white mr-3 flex-shrink-0">
+                    <span class="font-bold text-sm">DL</span>
+                  </div>
+                  <div>
+                    <h5 class="font-semibold text-gray-800">Dr. David Lunn</h5>
+                    <p class="text-sm text-gray-600">School of Sport, Leeds Beckett University</p>
+                  </div>
+                </div>
+                
+                <!-- Co-Investigator 4 -->
+                <div class="flex items-start mb-4">
+                  <div class="w-10 h-10 bg-hbnPurple bg-opacity-80 rounded-full flex items-center justify-center text-white mr-3 flex-shrink-0">
+                    <span class="font-bold text-sm">HL</span>
+                  </div>
+                  <div>
+                    <h5 class="font-semibold text-gray-800">Helen Laird</h5>
+                    <p class="text-sm text-gray-600">Head of Public Health (Older People), Leeds City Council</p>
+                  </div>
+                </div>
+                
+                <!-- Co-Investigator 5 -->
+                <div class="flex items-start">
+                  <div class="w-10 h-10 bg-hbnPurple bg-opacity-80 rounded-full flex items-center justify-center text-white mr-3 flex-shrink-0">
+                    <span class="font-bold text-sm">CM</span>
+                  </div>
+                  <div>
+                    <h5 class="font-semibold text-gray-800">Colin Moss</h5>
+                    <p class="text-sm text-gray-600">Head of Health and Housing, Leeds City Council</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Key Facts Box -->
+          <div class="bg-gray-50 rounded-xl p-6 mb-8">
+            <h3 class="text-xl font-semibold mb-6 text-gray-800">Key Facts</h3>
+            
+            <div class="space-y-4">
+              <div class="flex items-start">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-hbnPurple flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                </svg>
+                <div>
+                  <span class="font-medium text-gray-800">Project Duration</span>
+                  <p class="text-sm text-gray-600">May - October 2025</p>
+                </div>
+              </div>
+              
+              <div class="flex items-start">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-hbnPurple flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                </svg>
+                <div>
+                  <span class="font-medium text-gray-800">Participants</span>
+                  <p class="text-sm text-gray-600">10 adults aged over 55</p>
+                </div>
+              </div>
+              
+              <div class="flex items-start">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-hbnPurple flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+                </svg>
+                <div>
+                  <span class="font-medium text-gray-800">Temperature Range</span>
+                  <p class="text-sm text-gray-600">14°C to 30°C</p>
+                </div>
+              </div>
+              
+              <div class="flex items-start">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-hbnPurple flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512m0 13.536A8.968 8.968 0 0018 20.25c1.052 0 2.062-.18 3-.512M12 6.042A8.967 8.967 0 0118 3.75c1.052 0 2.062.18 3 .512m-3 13.536A8.968 8.968 0 016 20.25c-1.052 0-2.062-.18-3-.512m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                </svg>
+                <div>
+                  <span class="font-medium text-gray-800">Budget</span>
+                  <p class="text-sm text-gray-600">£3,000</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to Action -->
+  <section class="py-16 bg-gradient-to-r from-hbnGreen to-hbnGreen text-white">
+    <div class="container mx-auto px-6 text-center max-w-3xl">
+      <h2 class="text-3xl font-bold mb-6">Get Involved</h2>
+      <p class="text-xl mb-10 opacity-90">
+        Interested in our work on sustainable building solutions? Join our network to stay updated on our research findings, events, and future funding opportunities.
+      </p>
+      <div class="flex flex-wrap justify-center gap-6">
+        <a href="../membership.html" class="px-8 py-4 bg-white text-hbnGreen rounded-full hover:bg-gray-100 transition-colors shadow-lg font-semibold text-lg">
+          Become a Member
+        </a>
+        <a href="../contact.html" class="px-8 py-4 border-2 border-white text-white rounded-full hover:bg-white hover:bg-opacity-10 transition-colors font-semibold text-lg">
+          Contact Us
+        </a>
+      </div>
+    </div>
+  </section>
+
+<!-- Footer -->
+<footer class="bg-gray-800 text-white py-12 md:py-16">
+    <div class="container mx-auto max-w-6xl px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <!-- Bio / Logo section -->
+      <div class="mb-8">
+        <img src="../assets/images/hbn_landscape.png" alt="Healthy Buildings Network Leeds Logo" class="h-12 mb-4 filter brightness-0 invert opacity-90">
+        <p class="text-sm tracking-wide text-gray-300">
+          Healthy Buildings Network Leeds is a cross-disciplinary research and collaboration hub at the University of Leeds, focused on healthier, more sustainable built environments.
+        </p>
+  
+        <!-- Social Links -->
+        <ul class="flex mt-4">
+          <li class="mr-4 flex items-center">
+            <a href="https://www.linkedin.com/company/healthy-buildings-network/" target="_blank" class="text-gray-300 hover:text-hbnGreen transition-colors flex items-center">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+              </svg>
+              LinkedIn
+            </a>
+          </li>
+          <li class="mr-4 flex items-center">
+            <a href="mailto:healthy_buildings_network@leeds.ac.uk" class="text-gray-300 hover:text-hbnGreen transition-colors flex items-center">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+              </svg>
+              Email Us
+            </a>
+          </li>
+        </ul>
+      </div>
+  
+      <!-- Quick Links -->
+      <div>
+        <h4 class="text-xl font-bold mb-4">Quick Links</h4>
+        <ul class="space-y-2">
+          <li><a href="../index.html" class="text-gray-300 hover:text-hbnGreen transition-colors">Home</a></li>
+          <li><a href="../about.html" class="text-gray-300 hover:text-hbnGreen transition-colors">About</a></li>
+          <li><a href="../projects.html" class="text-gray-300 hover:text-hbnGreen transition-colors">Projects</a></li>
+          <li><a href="../events.html" class="text-gray-300 hover:text-hbnGreen transition-colors">Events</a></li>
+          <li><a href="../membership.html" class="text-gray-300 hover:text-hbnGreen transition-colors">Membership</a></li>
+          <li><a href="../contact.html" class="text-gray-300 hover:text-hbnGreen transition-colors">Contact</a></li>
+        </ul>
+      </div>
+  
+      <!-- Affiliations -->
+      <div>
+        <h4 class="text-xl font-bold mb-4">Affiliations</h4>
+        <ul class="space-y-2">
+          <li><a href="https://fluids.leeds.ac.uk" target="_blank" class="text-gray-300 hover:text-hbnGreen transition-colors">Leeds Institute for Fluid Dynamics</a></li>
+          <li><a href="https://lssi.leeds.ac.uk" target="_blank" class="text-gray-300 hover:text-hbnGreen transition-colors">Leeds Social Sciences Institute</a></li>
+          <li><a href="https://lahri.leeds.ac.uk" target="_blank" class="text-gray-300 hover:text-hbnGreen transition-colors">Leeds Arts & Humanities Research Institute</a></li>
+          <li><a href="https://icas.leeds.ac.uk" target="_blank" class="text-gray-300 hover:text-hbnGreen transition-colors">ICAS</a></li>
+        </ul>
+      </div>
+    </div>
+  
+    <div class="container mx-auto max-w-6xl px-6 text-sm text-center pt-8 mt-8 border-t border-gray-700">
+      <p>© 2025 Healthy Buildings Network Leeds. All rights reserved.</p>
+      <p class="mt-2">University of Leeds, Leeds LS2 9JT, United Kingdom</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="assets/js/script.js"></script>
+  <!-- Mobile menu script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const menuButton = document.getElementById('mobile-menu-button');
+      const mobileMenu = document.getElementById('mobile-menu');
+      
+      if (menuButton && mobileMenu) {
+        menuButton.addEventListener('click', function() {
+          mobileMenu.classList.toggle('hidden');
+        });
+      }
+      
+      // Scroll to top button functionality
+      const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+      if (scrollToTopBtn) {
+        window.addEventListener('scroll', function() {
+          if (window.pageYOffset > 300) {
+            scrollToTopBtn.classList.remove('hidden');
+          } else {
+            scrollToTopBtn.classList.add('hidden');
+          }
+        });
+        
+        scrollToTopBtn.addEventListener('click', function() {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+      }
+      
+      // Smooth scrolling for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+          e.preventDefault();
+          
+          const targetId = this.getAttribute('href');
+          const targetElement = document.querySelector(targetId);
+          
+          if (targetElement) {
+            window.scrollTo({
+              top: targetElement.offsetTop - 80, // Offset for fixed header
+              behavior: 'smooth'
+            });
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>
