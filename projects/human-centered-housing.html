@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            hbnGreen: '#4e9317',
+            hbnPurple: '#8360a9',
+            hbnGray: '#808184',
+            hbnYellow: '#ffca29',
+            hbnBlue: '#3e95dd',
+          }
+        }
+      }
+    };
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta
+    name="description"
+    content="Towards Evidence-Based, Human-Centered Housing Design: exploring how our built environment impacts health, well-being, and policy."
+  />
+  <title>“We Shape Our Buildings…” | Healthy Buildings Network Leeds</title>
+
+  <link rel="icon" href="../assets/images/hbn_fav.ico" type="image/x-icon"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.css" />
+</head>
+<body class="font-poppins">
+
+  <!-- Header / Navbar -->
+  <header class="bg-white shadow-md fixed w-full z-50">
+    <div class="container mx-auto px-6 flex justify-between items-center h-20">
+      <!-- Logo -->
+      <div class="flex-shrink-0">
+        <a href="../index.html">
+          <img src="../assets/images/hbn_landscape.png" alt="Healthy Buildings Network Leeds Logo" class="h-12">
+        </a>
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <button class="md:hidden text-gray-600 hover:text-hbnGreen focus:outline-none" id="mobile-menu-button" aria-label="Open Menu">
+        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+
+      <!-- Navigation -->
+      <nav class="hidden md:flex space-x-8" id="main-nav">
+        <a href="../index.html" class="text-gray-600 hover:text-hbnGreen font-medium transition-colors">Home</a>
+        <a href="../about.html" class="text-gray-600 hover:text-hbnGreen font-medium transition-colors">About Us</a>
+        <a href="../blog.html" class="text-gray-600 hover:text-hbnGreen font-medium transition-colors">Blog</a>
+        <a href="../events.html" class="text-gray-600 hover:text-hbnGreen font-medium transition-colors">Events</a>
+        <a href="../projects.html" class="text-hbnGreen font-medium transition-colors">Projects</a>
+        <a href="../membership.html" class="text-gray-600 hover:text-hbnGreen font-medium transition-colors">Membership</a>
+        <a href="../contact.html" class="text-gray-600 hover:text-hbnGreen font-medium transition-colors">Contact</a>
+      </nav>
+    </div>
+
+    <!-- Mobile Navigation (Hidden by default) -->
+    <div class="md:hidden hidden bg-white w-full shadow-md" id="mobile-menu">
+      <div class="px-6 py-4 space-y-4">
+        <a href="../index.html" class="block text-gray-600 hover:text-hbnGreen font-medium">Home</a>
+        <a href="../about.html" class="block text-gray-600 hover:text-hbnGreen font-medium">About Us</a>
+        <a href="../blog.html" class="block text-gray-600 hover:text-hbnGreen font-medium">Blog</a>
+        <a href="../events.html" class="block text-gray-600 hover:text-hbnGreen font-medium">Events</a>
+        <a href="../projects.html" class="block text-hbnGreen font-medium">Projects</a>
+        <a href="../membership.html" class="block text-gray-600 hover:text-hbnGreen font-medium">Membership</a>
+        <a href="../contact.html" class="block text-gray-600 hover:text-hbnGreen font-medium">Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Scroll-to-top button -->
+  <button id="scrollToTopBtn" class="fixed bottom-5 right-5 bg-hbnGreen text-white p-3 rounded-full shadow-md hidden z-50" aria-label="Scroll to top">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18" />
+    </svg>
+  </button>
+
+  <!-- Hero Section -->
+  <section class="relative pt-20">
+    <div class="bg-gradient-to-r from-hbnGreen to-hbnGreen text-white py-16 md:py-24">
+      <div class="container mx-auto px-6 max-w-6xl">
+        <div class="md:flex items-center">
+          <div class="md:w-3/5 md:pr-12 mb-10 md:mb-0">
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">“We Shape Our Buildings…”</h1>
+            <p class="text-xl opacity-90 mb-8 max-w-2xl">
+              Towards Evidence-Based, Human-Centered Housing Design
+            </p>
+            <div class="flex flex-wrap gap-4">
+              <a href="#overview" class="px-6 py-3 bg-white text-hbnGreen rounded-full hover:bg-gray-100 transition-colors shadow-md">
+                Project Overview
+              </a>
+              <a href="#objectives" class="px-6 py-3 border-2 border-white text-white rounded-full hover:bg-white hover:bg-opacity-10 transition-colors">
+                Project Objectives
+              </a>
+            </div>
+          </div>
+          <div class="md:w-2/5">
+            <!-- Optional Hero Image (replace with relevant image if desired) -->
+            <img src="../assets/images/house_design.jpg" alt="Human-Centered Housing Design" class="rounded-lg shadow-xl">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Breadcrumbs -->
+  <div class="bg-gray-100 py-3">
+    <div class="container mx-auto px-6 max-w-6xl">
+      <div class="flex text-sm">
+        <a href="../index.html" class="text-gray-600 hover:text-hbnGreen">Home</a>
+        <span class="mx-2 text-gray-400">/</span>
+        <a href="../projects.html" class="text-gray-600 hover:text-hbnGreen">Projects</a>
+        <span class="mx-2 text-gray-400">/</span>
+        <span class="text-gray-800">“We Shape Our Buildings…”</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Project Overview Section -->
+  <section id="overview" class="py-16 bg-white">
+    <div class="container mx-auto px-6 max-w-5xl">
+      <div class="flex flex-col md:flex-row gap-12">
+        <!-- Main Content -->
+        <div class="md:w-2/3">
+          <h2 class="text-3xl font-bold mb-6 text-hbnGreen">Project Overview</h2>
+          
+          <div class="prose max-w-none text-gray-700">
+            <p class="mb-4 text-lg">
+              Winston Churchill famously remarked, “We shape our buildings, thereafter they shape us.” 
+              This project aims to explore how housing design directly affects our health, happiness, and overall well-being. 
+              Despite increased policy focus on delivering new homes, regulations often prioritize compliance over human-centered outcomes, 
+              resulting in spaces that check the right boxes but may fail to truly support the people who live in them.
+            </p>
+
+            <p class="mb-4 text-lg">
+              By integrating technical standards with the perceptual and emotional experiences of occupants, we can design homes that improve both physical and mental health. 
+              Post-Occupancy Evaluation (POE) stands out as a method for gathering meaningful feedback on real-world performance, yet its implementation remains inconsistent. 
+              Through this project, we hope to address core questions around who should fund, conduct, and benefit from POE, and how these insights can be scaled for future developments.
+            </p>
+
+            <p class="mb-4 text-lg">
+              Ultimately, we envision a collaborative approach that brings together developers, architects, policymakers, and residents early in the design process. 
+              With shared insights and human-centered metrics, we can redefine housing design from a purely compliance-driven exercise to one that actively fosters health, well-being, and sustainability.
+            </p>
+          </div>
+
+          <!-- Project Timeline -->
+          <div class="mt-12 bg-gray-50 p-8 rounded-xl">
+            <h3 class="text-xl font-semibold mb-6 text-gray-800">Project Timeline</h3>
+            
+            <div class="relative">
+              <!-- Timeline Line -->
+              <div class="absolute left-4 top-1 h-full w-0.5 bg-gray-300"></div>
+              
+              <!-- Timeline Items -->
+              <div class="space-y-8">
+                <!-- Phase 1 -->
+                <div class="relative pl-12">
+                  <div class="absolute left-0 top-0 w-8 h-8 bg-hbnGreen rounded-full flex items-center justify-center text-white font-bold">1</div>
+                  <div>
+                    <h4 class="font-semibold text-gray-800">Start: Early 2025</h4>
+                    <p class="text-gray-600">Initial stakeholder mapping, 1:1 meetings to foster open dialogue</p>
+                  </div>
+                </div>
+                
+                <!-- Phase 2 -->
+                <div class="relative pl-12">
+                  <div class="absolute left-0 top-0 w-8 h-8 bg-hbnGreen rounded-full flex items-center justify-center text-white font-bold">2</div>
+                  <div>
+                    <h4 class="font-semibold text-gray-800">Mid 2025</h4>
+                    <p class="text-gray-600">Convening event with diverse experts for shared problem-solving</p>
+                  </div>
+                </div>
+                
+                <!-- Phase 3 -->
+                <div class="relative pl-12">
+                  <div class="absolute left-0 top-0 w-8 h-8 bg-hbnGreen rounded-full flex items-center justify-center text-white font-bold">3</div>
+                  <div>
+                    <h4 class="font-semibold text-gray-800">End Date: 31 December 2025</h4>
+                    <p class="text-gray-600">Collaborative report production & distribution, shaping a future research agenda</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Sidebar -->
+        <div class="md:w-1/3">
+          <!-- Objectives Section -->
+          <div id="objectives" class="bg-gray-50 rounded-xl p-6 mb-8">
+            <h3 class="text-xl font-semibold mb-6 text-gray-800">Objectives</h3>
+            
+            <ul class="list-decimal space-y-4 list-inside text-gray-700">
+              <li>
+                <strong>Foster Safe & Honest Conversations</strong><br/>
+                Identify committed local stakeholders and explore their priorities, challenges, and goals, building a strong foundation of trust.
+              </li>
+              <li>
+                <strong>Connect Diverse Experts</strong><br/>
+                Convene stakeholders and academics in a workshop to map out barriers, opportunities, and a shared path forward.
+              </li>
+              <li>
+                <strong>Collaborate on a Future Agenda</strong><br/>
+                Develop a report outlining potential research directions, advocacy tools, and strategies to embed evidence-based, human-centered principles in future housing projects.
+              </li>
+            </ul>
+          </div>
+
+          <!-- Team Section -->
+          <div class="bg-gray-50 rounded-xl p-6 mb-8">
+            <h3 class="text-xl font-semibold mb-6 text-gray-800">Project Lead</h3>
+            
+            <div class="space-y-6">
+              <!-- Single Lead -->
+              <div class="flex items-start">
+                <div class="w-12 h-12 bg-hbnGreen rounded-full flex items-center justify-center text-white mr-4 flex-shrink-0">
+                  <span class="font-bold">AR</span>
+                </div>
+                <div>
+                  <h4 class="font-semibold text-gray-800">Dr. Alexa Ruppertsberg</h4>
+                  <p class="text-sm text-gray-600 mb-1">Head of Public Engagement with Research</p>
+                  <p class="text-sm text-gray-600">Knowledge Exchange & Impact Directorate, University of Leeds</p>
+                  <p class="text-sm text-gray-600 mt-2">
+                    <strong>Email:</strong> 
+                    <a href="mailto:a.c.i.ruppertsberg@leeds.ac.uk" class="text-hbnGreen hover:underline">a.c.i.ruppertsberg@leeds.ac.uk</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Quick Stats / Budget Box -->
+          <div class="bg-gray-50 rounded-xl p-6">
+            <h3 class="text-xl font-semibold mb-6 text-gray-800">Budget & Value</h3>
+            
+            <p class="text-gray-700">
+              <strong>Total Requested:</strong> £2,500
+            </p>
+            <div class="mt-4">
+              <ul class="list-disc list-inside space-y-2 text-gray-600">
+                <li>
+                  <strong>Objective 1 Meetings:</strong> £200
+                </li>
+                <li>
+                  <strong>Convening Event:</strong> £2,000 (Room hire, catering, fair recognition)
+                </li>
+                <li>
+                  <strong>Report & Distribution:</strong> £300
+                </li>
+              </ul>
+            </div>
+            <p class="text-gray-600 mt-4">
+              This lean budget ensures we engage meaningfully with local stakeholders, host a high-impact multi-sector workshop, 
+              and produce a collaboratively authored report to guide future research and advocacy.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Additional Sections -->
+  <section class="py-16 bg-gray-50">
+    <div class="container mx-auto px-6 max-w-5xl">
+      <h2 class="text-3xl font-bold mb-8 text-hbnGreen">How This Project Meets Network Criteria</h2>
+
+      <div class="prose max-w-none text-gray-700">
+        <h3 class="text-2xl font-semibold mt-6 mb-4 text-gray-800">Collaboration</h3>
+        <p>
+          This effort champions cross-sector engagement by including stakeholders from academia, local government, and the broader community. 
+          By starting with a “snowball” approach, we ensure meaningful partnerships that grow organically and foster trust, 
+          setting the stage for long-term commitments.
+        </p>
+
+        <h3 class="text-2xl font-semibold mt-6 mb-4 text-gray-800">Innovation</h3>
+        <p>
+          Rather than focusing on a narrow definition of success, the project integrates perspectives from engineering, architecture, 
+          psychology, and community stakeholders. We address the gap between compliance-driven design and the holistic well-being of occupants, 
+          highlighting real-world data, post-occupancy evaluation, and user-centered metrics.
+        </p>
+
+        <h3 class="text-2xl font-semibold mt-6 mb-4 text-gray-800">Sustainability</h3>
+        <p>
+          Our approach aims to establish a collaborative framework and shared research agenda, ensuring that the project’s impact persists beyond its initial phase. 
+          The final report will offer strategic directions for future research, potential pilot studies, and policy alignment, 
+          creating a foundation for sustained innovation in housing design.
+        </p>
+
+        <h3 class="text-2xl font-semibold mt-6 mb-4 text-gray-800">Equitable, Diverse, Inclusive, and Accessible (EDIA)</h3>
+        <p>
+          We prioritize engaging underrepresented communities by working with trusted local leaders and compensating community participants fairly. 
+          Our event design and outreach strategies aim to capture diverse voices, ensuring that housing solutions are inclusive and better reflect 
+          the varied needs of different demographic and cultural groups.
+        </p>
+
+        <h3 class="text-2xl font-semibold mt-6 mb-4 text-gray-800">Impact</h3>
+        <p>
+          By involving stakeholders from day one, we create shared ownership in future solutions. This heightened buy-in increases the likelihood 
+          of real policy change, design innovation, and practical applications that benefit older adults, families, and the broader public. 
+          The interdisciplinary lens also expands the Healthy Buildings Network’s reach into emerging fields, fueling ongoing collaboration 
+          and knowledge transfer.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Related Projects (Optional) -->
+  <section class="py-16 bg-white">
+    <div class="container mx-auto px-6 max-w-5xl">
+      <h2 class="text-3xl font-bold mb-10 text-center">Related Projects</h2>
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Example of related project cards (replace or remove if desired) -->
+        <div class="bg-gray-50 rounded-xl shadow-md overflow-hidden">
+          <div class="h-3 bg-hbnBlue"></div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold mb-2">ThermoAge</h3>
+            <p class="text-gray-600 mb-4">Exploring the impact of indoor temperature extremes on the risk of falling in older people.</p>
+            <a href="thermoage.html" class="text-hbnBlue hover:underline inline-flex items-center">
+              <span>Learn More</span>
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+              </svg>
+            </a>
+          </div>
+        </div>
+        
+        <div class="bg-gray-50 rounded-xl shadow-md overflow-hidden">
+          <div class="h-3 bg-hbnPurple"></div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold mb-2">Living in Clover</h3>
+            <p class="text-gray-600 mb-4">Investigating clover-based green roofs for biodiversity, circular economy, and enhanced building performance.</p>
+            <a href="clover.html" class="text-hbnPurple hover:underline inline-flex items-center">
+              <span>Learn More</span>
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+              </svg>
+            </a>
+          </div>
+        </div>
+        
+        <div class="bg-gray-50 rounded-xl shadow-md overflow-hidden">
+          <div class="h-3 bg-hbnGray"></div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold mb-2">Indoor/Outdoor Nexus</h3>
+            <p class="text-gray-600 mb-4">Studying how external climate factors interact with indoor environment to shape occupant wellbeing.</p>
+            <a href="#" class="text-gray-600 hover:underline inline-flex items-center">
+              <span>Learn More</span>
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to Action -->
+  <section class="py-16 bg-gradient-to-r from-hbnGreen to-hbnGreen text-white">
+    <div class="container mx-auto px-6 text-center max-w-3xl">
+      <h2 class="text-3xl font-bold mb-6">Get Involved</h2>
+      <p class="text-xl mb-10 opacity-90">
+        Interested in shaping the future of human-centered housing design? Join our network to stay updated on workshops, findings, and funding opportunities.
+      </p>
+      <div class="flex flex-wrap justify-center gap-6">
+        <a href="../membership.html" class="px-8 py-4 bg-white text-hbnGreen rounded-full hover:bg-gray-100 transition-colors shadow-lg font-semibold text-lg">
+          Become a Member
+        </a>
+        <a href="../contact.html" class="px-8 py-4 border-2 border-white text-white rounded-full hover:bg-white hover:bg-opacity-10 transition-colors font-semibold text-lg">
+          Contact Us
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white py-12 md:py-16">
+    <div class="container mx-auto max-w-6xl px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <!-- Bio / Logo section -->
+      <div class="mb-8">
+        <img
+          src="../assets/images/hbn_landscape.png"
+          alt="Healthy Buildings Network Leeds Logo"
+          class="h-12 mb-4 filter brightness-0 invert opacity-90"
+        />
+        <p class="text-sm tracking-wide text-gray-300">
+          Healthy Buildings Network Leeds is a cross-disciplinary research and collaboration hub at the University of Leeds, focused on healthier, more sustainable built environments.
+        </p>
+  
+        <!-- Social Links -->
+        <ul class="flex mt-4">
+          <li class="mr-4 flex items-center">
+            <a
+              href="https://www.linkedin.com/company/healthy-buildings-network/"
+              target="_blank"
+              class="text-gray-300 hover:text-hbnGreen transition-colors flex items-center"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5 mr-1"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"
+                />
+              </svg>
+              LinkedIn
+            </a>
+          </li>
+          <li class="mr-4 flex items-center">
+            <a
+              href="mailto:healthy_buildings_network@leeds.ac.uk"
+              class="text-gray-300 hover:text-hbnGreen transition-colors flex items-center"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5 mr-1"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                />
+              </svg>
+              Email Us
+            </a>
+          </li>
+        </ul>
+      </div>
+  
+      <!-- Quick Links -->
+      <div>
+        <h4 class="text-xl font-bold mb-4">Quick Links</h4>
+        <ul class="space-y-2">
+          <li><a href="../index.html" class="text-gray-300 hover:text-hbnGreen transition-colors">Home</a></li>
+          <li><a href="../about.html" class="text-gray-300 hover:text-hbnGreen transition-colors">About</a></li>
+          <li><a href="../projects.html" class="text-gray-300 hover:text-hbnGreen transition-colors">Projects</a></li>
+          <li><a href="../events.html" class="text-gray-300 hover:text-hbnGreen transition-colors">Events</a></li>
+          <li><a href="../membership.html" class="text-gray-300 hover:text-hbnGreen transition-colors">Membership</a></li>
+          <li><a href="../contact.html" class="text-gray-300 hover:text-hbnGreen transition-colors">Contact</a></li>
+        </ul>
+      </div>
+  
+      <!-- Affiliations -->
+      <div>
+        <h4 class="text-xl font-bold mb-4">Affiliations</h4>
+        <ul class="space-y-2">
+          <li>
+            <a href="https://fluids.leeds.ac.uk" target="_blank" class="text-gray-300 hover:text-hbnGreen transition-colors"
+              >Leeds Institute for Fluid Dynamics</a
+            >
+          </li>
+          <li>
+            <a href="https://lssi.leeds.ac.uk" target="_blank" class="text-gray-300 hover:text-hbnGreen transition-colors"
+              >Leeds Social Sciences Institute</a
+            >
+          </li>
+          <li>
+            <a href="https://lahri.leeds.ac.uk" target="_blank" class="text-gray-300 hover:text-hbnGreen transition-colors"
+              >Leeds Arts & Humanities Research Institute</a
+            >
+          </li>
+          <li>
+            <a href="https://icas.leeds.ac.uk" target="_blank" class="text-gray-300 hover:text-hbnGreen transition-colors"
+              >ICAS</a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+  
+    <div class="container mx-auto max-w-6xl px-6 text-sm text-center pt-8 mt-8 border-t border-gray-700">
+      <p>© 2025 Healthy Buildings Network Leeds. All rights reserved.</p>
+      <p class="mt-2">University of Leeds, Leeds LS2 9JT, United Kingdom</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="../assets/js/script.js"></script>
+  <!-- Mobile menu script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const menuButton = document.getElementById('mobile-menu-button');
+      const mobileMenu = document.getElementById('mobile-menu');
+      
+      if (menuButton && mobileMenu) {
+        menuButton.addEventListener('click', function() {
+          mobileMenu.classList.toggle('hidden');
+        });
+      }
+      
+      // Scroll to top button functionality
+      const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+      if (scrollToTopBtn) {
+        window.addEventListener('scroll', function() {
+          if (window.pageYOffset > 300) {
+            scrollToTopBtn.classList.remove('hidden');
+          } else {
+            scrollToTopBtn.classList.add('hidden');
+          }
+        });
+        
+        scrollToTopBtn.addEventListener('click', function() {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+      }
+      
+      // Smooth scrolling for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+          e.preventDefault();
+          
+          const targetId = this.getAttribute('href');
+          const targetElement = document.querySelector(targetId);
+          
+          if (targetElement) {
+            window.scrollTo({
+              top: targetElement.offsetTop - 80, // Offset for fixed header
+              behavior: 'smooth'
+            });
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>

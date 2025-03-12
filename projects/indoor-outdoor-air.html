@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            hbnGreen: '#4e9317',
+            hbnPurple: '#8360a9',
+            hbnGray: '#808184',
+            hbnYellow: '#ffca29',
+            hbnBlue: '#3e95dd',
+          }
+        }
+      }
+    };
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta 
+    name="description" 
+    content="Exploring how Passive House features and occupant practices affect both indoor and outdoor air quality."
+  />
+  <title>Indoor-Outdoor Air in Passive Houses | Healthy Buildings Network Leeds</title>
+  
+  <link rel="icon" href="../assets/images/hbn_fav.ico" type="image/x-icon"/>
+  <link 
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" 
+    rel="stylesheet"
+  >
+  <link 
+    href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" 
+    rel="stylesheet"
+  >
+  <link rel="stylesheet" href="../assets/css/style.css" />
+</head>
+<body class="font-poppins">
+
+  <!-- Header / Navbar -->
+  <header class="bg-white shadow-md fixed w-full z-50">
+    <div class="container mx-auto px-6 flex justify-between items-center h-20">
+      <!-- Logo -->
+      <div class="flex-shrink-0">
+        <a href="../index.html">
+          <img src="../assets/images/hbn_landscape.png" alt="Healthy Buildings Network Leeds Logo" class="h-12">
+        </a>
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <button 
+        class="md:hidden text-gray-600 hover:text-hbnGreen focus:outline-none" 
+        id="mobile-menu-button" 
+        aria-label="Open Menu"
+      >
+        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path 
+            stroke-linecap="round" 
+            stroke-linejoin="round" 
+            stroke-width="2" 
+            d="M4 6h16M4 12h16M4 18h16"
+          />
+        </svg>
+      </button>
+
+      <!-- Navigation -->
+      <nav class="hidden md:flex space-x-8" id="main-nav">
+        <a href="../index.html" class="text-gray-600 hover:text-hbnGreen font-medium transition-colors">Home</a>
+        <a href="../about.html" class="text-gray-600 hover:text-hbnGreen font-medium transition-colors">About Us</a>
+        <a href="../blog.html" class="text-gray-600 hover:text-hbnGreen font-medium transition-colors">Blog</a>
+        <a href="../events.html" class="text-gray-600 hover:text-hbnGreen font-medium transition-colors">Events</a>
+        <a href="../projects.html" class="text-hbnGreen font-medium transition-colors">Projects</a>
+        <a href="../membership.html" class="text-gray-600 hover:text-hbnGreen font-medium transition-colors">Membership</a>
+        <a href="../contact.html" class="text-gray-600 hover:text-hbnGreen font-medium transition-colors">Contact</a>
+      </nav>
+    </div>
+    
+    <!-- Mobile Navigation (Hidden by default) -->
+    <div class="md:hidden hidden bg-white w-full shadow-md" id="mobile-menu">
+      <div class="px-6 py-4 space-y-4">
+        <a href="../index.html" class="block text-gray-600 hover:text-hbnGreen font-medium">Home</a>
+        <a href="../about.html" class="block text-gray-600 hover:text-hbnGreen font-medium">About Us</a>
+        <a href="../blog.html" class="block text-gray-600 hover:text-hbnGreen font-medium">Blog</a>
+        <a href="../events.html" class="block text-gray-600 hover:text-hbnGreen font-medium">Events</a>
+        <a href="../projects.html" class="block text-hbnGreen font-medium">Projects</a>
+        <a href="../membership.html" class="block text-gray-600 hover:text-hbnGreen font-medium">Membership</a>
+        <a href="../contact.html" class="block text-gray-600 hover:text-hbnGreen font-medium">Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Scroll-to-top button -->
+  <button 
+    id="scrollToTopBtn" 
+    class="fixed bottom-5 right-5 bg-hbnGreen text-white p-3 rounded-full shadow-md hidden z-50" 
+    aria-label="Scroll to top"
+  >
+    <svg 
+      xmlns="http://www.w3.org/2000/svg" 
+      class="h-6 w-6" 
+      fill="none" 
+      viewBox="0 0 24 24" 
+      stroke="currentColor"
+    >
+      <path 
+        stroke-linecap="round" 
+        stroke-linejoin="round" 
+        stroke-width="2" 
+        d="M5 10l7-7m0 0l7 7m-7-7v18" 
+      />
+    </svg>
+  </button>
+
+  <!-- Hero Section -->
+  <section class="relative pt-20">
+    <div class="bg-gradient-to-r from-hbnBlue to-hbnBlue text-white py-16 md:py-24">
+      <div class="container mx-auto px-6 max-w-6xl">
+        <div class="md:flex items-center">
+          <div class="md:w-3/5 md:pr-12 mb-10 md:mb-0">
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">Indoor-Outdoor Air</h1>
+            <p class="text-xl opacity-90 mb-8 max-w-2xl">
+              Exploring relationships between indoor air quality, outdoor air quality, and occupancy practices in Passive Houses.
+            </p>
+            <div class="flex flex-wrap gap-4">
+              <a 
+                href="#overview" 
+                class="px-6 py-3 bg-white text-hbnBlue rounded-full hover:bg-gray-100 transition-colors shadow-md"
+              >
+                Project Overview
+              </a>
+              <a 
+                href="#objectives" 
+                class="px-6 py-3 border-2 border-white text-white rounded-full hover:bg-white hover:bg-opacity-10 transition-colors"
+              >
+                Project Objectives
+              </a>
+            </div>
+          </div>
+          <div class="md:w-2/5">
+            <img 
+              src="../assets/images/indoor_outdoor_air.jpg" 
+              alt="Air Quality Monitoring" 
+              class="rounded-lg shadow-xl"
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Breadcrumbs -->
+  <div class="bg-gray-100 py-3">
+    <div class="container mx-auto px-6 max-w-6xl">
+      <div class="flex text-sm">
+        <a href="../index.html" class="text-gray-600 hover:text-hbnGreen">Home</a>
+        <span class="mx-2 text-gray-400">/</span>
+        <a href="../projects.html" class="text-gray-600 hover:text-hbnGreen">Projects</a>
+        <span class="mx-2 text-gray-400">/</span>
+        <span class="text-gray-800">Indoor-Outdoor Air</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Project Overview Section -->
+  <section id="overview" class="py-16 bg-white">
+    <div class="container mx-auto px-6 max-w-5xl">
+      <div class="flex flex-col md:flex-row gap-12">
+        <!-- Main Content -->
+        <div class="md:w-2/3">
+          <h2 class="text-3xl font-bold mb-6 text-hbnBlue">Project Overview</h2>
+          
+          <div class="prose max-w-none text-gray-700">
+            <p class="mb-4 text-lg">
+              In an effort to reduce carbon footprints, Passive House standards promote airtight construction, robust thermal insulation, and efficient ventilation systems. This approach aims to minimize heat loss while maintaining indoor comfort. However, an ultra-sealed building envelope can make it challenging to balance indoor and outdoor air quality (I-O AQ), potentially trapping pollutants inside if ventilation is insufficient or poorly managed.
+            </p>
+
+            <p class="mb-4 text-lg">
+              To address these concerns, we’re deploying both indoor and outdoor monitors in a Passive House in Leeds, measuring common pollutants such as NO<sub>x</sub>, CO<sub>2</sub>, PM2.5, humidity, and ultrafine particles (UFPs). We will also collect data on occupant practices, like cooking and maintenance of Mechanical Ventilation with Heat Recovery (MVHR) systems. Our goal is to explore how human behavior interacts with advanced building features—particularly filtering, heat recovery, and airtightness—to influence indoor air quality.
+            </p>
+
+            <p class="mb-4 text-lg">
+              This short-term pilot project will create the foundation for a larger study spanning multiple dwelling types and regions. By identifying effective experimental protocols and forging stakeholder relationships (including property developers and residents), we hope to inform best practices that simultaneously improve energy efficiency, thermal comfort, and occupant health.
+            </p>
+          </div>
+
+          <!-- Project Timeline -->
+          <div class="mt-12 bg-gray-50 p-8 rounded-xl">
+            <h3 class="text-xl font-semibold mb-6 text-gray-800">Project Timeline</h3>
+            
+            <div class="relative">
+              <!-- Timeline Line -->
+              <div class="absolute left-4 top-1 h-full w-0.5 bg-gray-300"></div>
+              
+              <!-- Timeline Items -->
+              <div class="space-y-8">
+                <!-- Phase 1 -->
+                <div class="relative pl-12">
+                  <div 
+                    class="absolute left-0 top-0 w-8 h-8 bg-hbnBlue rounded-full flex items-center justify-center text-white font-bold"
+                  >
+                    1
+                  </div>
+                  <div>
+                    <h4 class="font-semibold text-gray-800">April–May 2024</h4>
+                    <p class="text-gray-600">
+                      Initial setup, sensor deployment, occupant diary design
+                    </p>
+                  </div>
+                </div>
+                
+                <!-- Phase 2 -->
+                <div class="relative pl-12">
+                  <div 
+                    class="absolute left-0 top-0 w-8 h-8 bg-hbnBlue rounded-full flex items-center justify-center text-white font-bold"
+                  >
+                    2
+                  </div>
+                  <div>
+                    <h4 class="font-semibold text-gray-800">May–June 2024</h4>
+                    <p class="text-gray-600">
+                      Data collection & occupant activity logging
+                    </p>
+                  </div>
+                </div>
+                
+                <!-- Phase 3 -->
+                <div class="relative pl-12">
+                  <div 
+                    class="absolute left-0 top-0 w-8 h-8 bg-hbnBlue rounded-full flex items-center justify-center text-white font-bold"
+                  >
+                    3
+                  </div>
+                  <div>
+                    <h4 class="font-semibold text-gray-800">June–July 2024</h4>
+                    <p class="text-gray-600">
+                      Data analysis, stakeholder feedback, and next-steps planning
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Sidebar -->
+        <div class="md:w-1/3">
+          <!-- Objectives Section -->
+          <div id="objectives" class="bg-gray-50 rounded-xl p-6 mb-8">
+            <h3 class="text-xl font-semibold mb-6 text-gray-800">Objectives</h3>
+            
+            <ul class="list-decimal space-y-4 list-inside text-gray-700">
+              <li>
+                <strong>Establish Experimental Protocols</strong><br/>
+                Co-locate indoor and outdoor monitors (NO<sub>x</sub>, CO<sub>2</sub>, PM2.5, UFPs, humidity, temp) to track pollution flows.
+              </li>
+              <li>
+                <strong>Occupant Activity Diaries</strong><br/>
+                Design a simple, accessible method for residents to log behaviors that generate indoor pollutants, e.g. cooking or candle use.
+              </li>
+              <li>
+                <strong>Evaluate MVHR Effectiveness</strong><br/>
+                Investigate whether filtered ventilation systems can protect indoor air from both outdoor peaks and occupant-driven spikes.
+              </li>
+              <li>
+                <strong>Build Stakeholder Relationships</strong><br/>
+                Engage with developers (CITU, others) to inform larger-scale studies, bridging energy efficiency, occupant behavior, and air quality research.
+              </li>
+            </ul>
+          </div>
+
+          <!-- Team Section -->
+          <div class="bg-gray-50 rounded-xl p-6 mb-8">
+            <h3 class="text-xl font-semibold mb-6 text-gray-800">Project Team</h3>
+            
+            <div class="space-y-6">
+              <!-- Team Member 1 -->
+              <div class="flex items-start">
+                <div 
+                  class="w-12 h-12 bg-hbnBlue rounded-full flex items-center justify-center text-white mr-4 flex-shrink-0"
+                >
+                  <span class="font-bold">AT</span>
+                </div>
+                <div>
+                  <h4 class="font-semibold text-gray-800">Prof. Alison Tomlin</h4>
+                  <p class="text-sm text-gray-600 mb-1">SCAPE, University of Leeds</p>
+                  <p class="text-sm text-gray-600">Energy Transition & Net Zero Institute</p>
+                </div>
+              </div>
+              
+              <!-- Team Member 2 -->
+              <div class="flex items-start">
+                <div 
+                  class="w-12 h-12 bg-hbnBlue rounded-full flex items-center justify-center text-white mr-4 flex-shrink-0"
+                >
+                  <span class="font-bold">DB</span>
+                </div>
+                <div>
+                  <h4 class="font-semibold text-gray-800">Dr. Douglas Booker</h4>
+                  <p class="text-sm text-gray-600 mb-1">Civil Engineering, University of Leeds</p>
+                  <p class="text-sm text-gray-600">Early Academic Career</p>
+                </div>
+              </div>
+
+              <!-- Additional Partners -->
+              <div class="flex items-start">
+                <div 
+                  class="w-12 h-12 bg-hbnBlue rounded-full flex items-center justify-center text-white mr-4 flex-shrink-0"
+                >
+                  <span class="font-bold">SZ</span>
+                </div>
+                <div>
+                  <h4 class="font-semibold text-gray-800">Pete Zanzoterra</h4>
+                  <p class="text-sm text-gray-600 mb-1">Consultant & Passive House Occupant</p>
+                  <p class="text-sm text-gray-600">Participant/Stakeholder</p>
+                </div>
+              </div>
+
+              <div class="flex items-start">
+                <div 
+                  class="w-12 h-12 bg-hbnBlue rounded-full flex items-center justify-center text-white mr-4 flex-shrink-0"
+                >
+                  <span class="font-bold">DB</span>
+                </div>
+                <div>
+                  <h4 class="font-semibold text-gray-800">Dr. David Booker</h4>
+                  <p class="text-sm text-gray-600 mb-1">NAQTS</p>
+                  <p class="text-sm text-gray-600">Project Partner</p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Budget & Duration Box -->
+          <div class="bg-gray-50 rounded-xl p-6">
+            <h3 class="text-xl font-semibold mb-6 text-gray-800">Budget & Duration</h3>
+            
+            <p class="text-gray-700">
+              <strong>Total Requested:</strong> £2,949
+            </p>
+            <div class="mt-4">
+              <ul class="list-disc list-inside space-y-2 text-gray-600">
+                <li><strong>Low-cost Sensors:</strong> £320</li>
+                <li><strong>Reduced-cost NAQTS Rental:</strong> £1,000</li>
+                <li><strong>Short-term Data Analysis (SS2, 7 days):</strong> £1,629</li>
+              </ul>
+            </div>
+            <p class="text-gray-600 mt-4">
+              This pilot project lays groundwork for co-designed research, bridging occupant practices, air quality, and energy-efficient building standards. 
+              We leverage in-kind contributions from participants and reduced equipment rental to maximize impact at minimal cost.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Additional Info Section -->
+  <section class="py-16 bg-gray-50">
+    <div class="container mx-auto px-6 max-w-5xl">
+      <h2 class="text-3xl font-bold mb-8 text-hbnBlue">How This Project Meets Network Criteria</h2>
+
+      <div class="prose max-w-none text-gray-700">
+        <h3 class="text-2xl font-semibold mt-6 mb-4 text-gray-800">Collaboration</h3>
+        <p>
+          This work unites experts in indoor and outdoor air quality from different academic units, 
+          as well as key industry and community stakeholders (CITU, NAQTS, occupant partners). 
+          The project initiates crucial cross-sector relationships, setting the stage for larger future collaborations.
+        </p>
+
+        <h3 class="text-2xl font-semibold mt-6 mb-4 text-gray-800">Innovation</h3>
+        <p>
+          Few studies have tackled how Passive House features and occupant behavior dynamically influence I-O AQ. 
+          By measuring ultrafine particles and capturing occupant diaries, we generate novel data 
+          that can improve building and ventilation designs, plus associated policy.
+        </p>
+
+        <h3 class="text-2xl font-semibold mt-6 mb-4 text-gray-800">Sustainability</h3>
+        <p>
+          Airtightness and MVHR systems are key to low-carbon housing. 
+          Understanding how these systems perform under real conditions and occupant usage 
+          supports broader transitions to sustainable, high-comfort residences that protect occupant health.
+        </p>
+
+        <h3 class="text-2xl font-semibold mt-6 mb-4 text-gray-800">Equitable, Diverse, Inclusive & Accessible</h3>
+        <p>
+          The project team spans career stages and actively plans to co-design future research protocols with participants. 
+          This ensures minimal burden on residents while capturing inclusive, real-world data. 
+          We will expand to diverse housing types in subsequent phases.
+        </p>
+
+        <h3 class="text-2xl font-semibold mt-6 mb-4 text-gray-800">Impact</h3>
+        <p>
+          Findings can inform building standards and ventilation guidelines, influencing both policy and practice. 
+          Collaboration with developers (CITU) and occupant stakeholders amplifies real-world relevance. 
+          In the longer term, we aim to extend these methods across a wider range of building types and communities, 
+          helping shape healthier, more sustainable living environments.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to Action -->
+  <section class="py-16 bg-gradient-to-r from-hbnBlue to-hbnBlue text-white">
+    <div class="container mx-auto px-6 text-center max-w-3xl">
+      <h2 class="text-3xl font-bold mb-6">Get Involved</h2>
+      <p class="text-xl mb-10 opacity-90">
+        Interested in air quality, occupant behavior, and energy-efficient homes? Join our network to stay updated on this pilot's findings, workshops, and future funding opportunities.
+      </p>
+      <div class="flex flex-wrap justify-center gap-6">
+        <a 
+          href="../membership.html" 
+          class="px-8 py-4 bg-white text-hbnBlue rounded-full hover:bg-gray-100 transition-colors shadow-lg font-semibold text-lg"
+        >
+          Become a Member
+        </a>
+        <a 
+          href="../contact.html" 
+          class="px-8 py-4 border-2 border-white text-white rounded-full hover:bg-white hover:bg-opacity-10 transition-colors font-semibold text-lg"
+        >
+          Contact Us
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white py-12 md:py-16">
+    <div class="container mx-auto max-w-6xl px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <!-- Bio / Logo section -->
+      <div class="mb-8">
+        <img 
+          src="../assets/images/hbn_landscape.png" 
+          alt="Healthy Buildings Network Leeds Logo" 
+          class="h-12 mb-4 filter brightness-0 invert opacity-90"
+        >
+        <p class="text-sm tracking-wide text-gray-300">
+          Healthy Buildings Network Leeds is a cross-disciplinary research and collaboration hub at the University of Leeds, 
+          focused on healthier, more sustainable built environments.
+        </p>
+  
+        <!-- Social Links -->
+        <ul class="flex mt-4">
+          <li class="mr-4 flex items-center">
+            <a 
+              href="https://www.linkedin.com/company/healthy-buildings-network/" 
+              target="_blank" 
+              class="text-gray-300 hover:text-hbnGreen transition-colors flex items-center"
+            >
+              <svg 
+                xmlns="http://www.w3.org/2000/svg" 
+                class="h-5 w-5 mr-1" 
+                fill="currentColor" 
+                viewBox="0 0 24 24"
+              >
+                <path 
+                  d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 
+                    2.239 5 5 5h14c2.762 0 5-2.239 
+                    5-5v-14c0-2.761-2.238-5-5-5zm-11 
+                    19h-3v-11h3v11zm-1.5-12.268c-.966 
+                    0-1.75-.79-1.75-1.764s.784-1.764 
+                    1.75-1.764 1.75.79 1.75 1.764-.783 
+                    1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 
+                    0v5.604h-3v-11h3v1.765c1.396-2.586 
+                    7-2.777 7 2.476v6.759z"
+                />
+              </svg>
+              LinkedIn
+            </a>
+          </li>
+          <li class="mr-4 flex items-center">
+            <a 
+              href="mailto:healthy_buildings_network@leeds.ac.uk" 
+              class="text-gray-300 hover:text-hbnGreen transition-colors flex items-center"
+            >
+              <svg 
+                xmlns="http://www.w3.org/2000/svg" 
+                class="h-5 w-5 mr-1" 
+                fill="none" 
+                viewBox="0 0 24 24" 
+                stroke="currentColor"
+              >
+                <path 
+                  stroke-linecap="round" 
+                  stroke-linejoin="round" 
+                  stroke-width="2" 
+                  d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 
+                    19h14a2 2 0 002-2V7a2 2 0 
+                    00-2-2H5a2 2 0 00-2 2v10a2 
+                    2 0 002 2z"
+                />
+              </svg>
+              Email Us
+            </a>
+          </li>
+        </ul>
+      </div>
+  
+      <!-- Quick Links -->
+      <div>
+        <h4 class="text-xl font-bold mb-4">Quick Links</h4>
+        <ul class="space-y-2">
+          <li><a href="../index.html" class="text-gray-300 hover:text-hbnGreen transition-colors">Home</a></li>
+          <li><a href="../about.html" class="text-gray-300 hover:text-hbnGreen transition-colors">About</a></li>
+          <li><a href="../projects.html" class="text-gray-300 hover:text-hbnGreen transition-colors">Projects</a></li>
+          <li><a href="../events.html" class="text-gray-300 hover:text-hbnGreen transition-colors">Events</a></li>
+          <li><a href="../membership.html" class="text-gray-300 hover:text-hbnGreen transition-colors">Membership</a></li>
+          <li><a href="../contact.html" class="text-gray-300 hover:text-hbnGreen transition-colors">Contact</a></li>
+        </ul>
+      </div>
+  
+      <!-- Affiliations -->
+      <div>
+        <h4 class="text-xl font-bold mb-4">Affiliations</h4>
+        <ul class="space-y-2">
+          <li>
+            <a 
+              href="https://fluids.leeds.ac.uk" 
+              target="_blank" 
+              class="text-gray-300 hover:text-hbnGreen transition-colors"
+            >
+              Leeds Institute for Fluid Dynamics
+            </a>
+          </li>
+          <li>
+            <a 
+              href="https://lssi.leeds.ac.uk" 
+              target="_blank" 
+              class="text-gray-300 hover:text-hbnGreen transition-colors"
+            >
+              Leeds Social Sciences Institute
+            </a>
+          </li>
+          <li>
+            <a 
+              href="https://lahri.leeds.ac.uk" 
+              target="_blank" 
+              class="text-gray-300 hover:text-hbnGreen transition-colors"
+            >
+              Leeds Arts & Humanities Research Institute
+            </a>
+          </li>
+          <li>
+            <a 
+              href="https://icas.leeds.ac.uk" 
+              target="_blank" 
+              class="text-gray-300 hover:text-hbnGreen transition-colors"
+            >
+              ICAS
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  
+    <div class="container mx-auto max-w-6xl px-6 text-sm text-center pt-8 mt-8 border-t border-gray-700">
+      <p>© 2025 Healthy Buildings Network Leeds. All rights reserved.</p>
+      <p class="mt-2">University of Leeds, Leeds LS2 9JT, United Kingdom</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="../assets/js/script.js"></script>
+  <!-- Mobile menu script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const menuButton = document.getElementById('mobile-menu-button');
+      const mobileMenu = document.getElementById('mobile-menu');
+      
+      if (menuButton && mobileMenu) {
+        menuButton.addEventListener('click', function() {
+          mobileMenu.classList.toggle('hidden');
+        });
+      }
+      
+      // Scroll to top button functionality
+      const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+      if (scrollToTopBtn) {
+        window.addEventListener('scroll', function() {
+          if (window.pageYOffset > 300) {
+            scrollToTopBtn.classList.remove('hidden');
+          } else {
+            scrollToTopBtn.classList.add('hidden');
+          }
+        });
+        
+        scrollToTopBtn.addEventListener('click', function() {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+      }
+      
+      // Smooth scrolling for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+          e.preventDefault();
+          
+          const targetId = this.getAttribute('href');
+          const targetElement = document.querySelector(targetId);
+          
+          if (targetElement) {
+            window.scrollTo({
+              top: targetElement.offsetTop - 80, // Offset for fixed header
+              behavior: 'smooth'
+            });
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>
