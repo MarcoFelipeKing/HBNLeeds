@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            hbnGreen: '#4e9317',
+            hbnPurple: '#8360a9',
+            hbnGray: '#808184',
+            hbnYellow: '#ffca29',
+            hbnBlue: '#3e95dd',
+          }
+        }
+      }
+    };
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Progress update on the Healthy Buildings Network Leeds pump-priming research projects exploring the impact of building environments on health and well-being.">
+  <title>Pump-Priming Projects: Spotlight on Progress | Healthy Buildings Network Leeds</title>
+  
+  <link rel="icon" href="../assets/images/hbn_fav.ico" type="image/x-icon"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.css" />
+</head>
+<body class="font-poppins">
+
+  <!-- Header / Navbar -->
+  <header class="bg-white shadow-md fixed w-full z-50">
+    <div class="container mx-auto px-6 flex justify-between items-center h-20">
+      <!-- Logo -->
+      <div class="flex-shrink-0">
+        <a href="../index.html">
+          <img src="../assets/images/hbn_landscape.png" alt="Healthy Buildings Network Leeds Logo" class="h-12">
+        </a>
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <button class="md:hidden text-gray-600 hover:text-hbnGreen focus:outline-none" id="mobile-menu-button" aria-label="Open Menu">
+        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+
+      <!-- Navigation -->
+      <nav class="hidden md:flex space-x-8" id="main-nav">
+        <a href="../index.html" class="text-gray-600 hover:text-hbnGreen font-medium transition-colors">Home</a>
+        <a href="../about.html" class="text-gray-600 hover:text-hbnGreen font-medium transition-colors">About Us</a>
+        <a href="../blog.html" class="text-hbnGreen font-medium transition-colors">Blog</a>
+        <a href="../events.html" class="text-gray-600 hover:text-hbnGreen font-medium transition-colors">Events</a>
+        <a href="../projects.html" class="text-gray-600 hover:text-hbnGreen font-medium transition-colors">Projects</a>
+        <a href="../membership.html" class="text-gray-600 hover:text-hbnGreen font-medium transition-colors">Membership</a>
+        <a href="../contact.html" class="text-gray-600 hover:text-hbnGreen font-medium transition-colors">Contact</a>
+      </nav>
+    </div>
+    
+    <!-- Mobile Navigation (Hidden by default) -->
+    <div class="md:hidden hidden bg-white w-full shadow-md" id="mobile-menu">
+      <div class="px-6 py-4 space-y-4">
+        <a href="../index.html" class="block text-gray-600 hover:text-hbnGreen font-medium">Home</a>
+        <a href="../about.html" class="block text-gray-600 hover:text-hbnGreen font-medium">About Us</a>
+        <a href="../blog.html" class="block text-hbnGreen font-medium">Blog</a>
+        <a href="../events.html" class="block text-gray-600 hover:text-hbnGreen font-medium">Events</a>
+        <a href="../projects.html" class="block text-gray-600 hover:text-hbnGreen font-medium">Projects</a>
+        <a href="../membership.html" class="block text-gray-600 hover:text-hbnGreen font-medium">Membership</a>
+        <a href="../contact.html" class="block text-gray-600 hover:text-hbnGreen font-medium">Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Scroll-to-top button -->
+  <button id="scrollToTopBtn" class="fixed bottom-5 right-5 bg-hbnGreen text-white p-3 rounded-full shadow-md hidden z-50" aria-label="Scroll to top">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18" />
+    </svg>
+  </button>
+
+  <!-- Hero Section -->
+  <section class="relative pt-20">
+    <div class="bg-gradient-to-r from-hbnGreen to-hbnBlue text-white py-16 md:py-24">
+      <div class="container mx-auto px-6 max-w-6xl">
+        <div class="md:flex items-center">
+          <div class="md:w-3/5 md:pr-12 mb-10 md:mb-0">
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">Pump-Priming Projects: Spotlight on Progress</h1>
+            <p class="text-xl opacity-90 mb-4 max-w-2xl">
+              Updates and insights from our innovative research projects focused on healthy building environments.
+            </p>
+            <div class="flex items-center text-sm opacity-75">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+              </svg>
+              <span>June 15, 2025</span>
+            </div>
+          </div>
+          <div class="md:w-2/5">
+            <img src="../assets/images/research_collaboration.jpg" alt="Researchers collaborating on healthy buildings projects" class="rounded-lg shadow-xl">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Breadcrumbs -->
+  <div class="bg-gray-100 py-3">
+    <div class="container mx-auto px-6 max-w-6xl">
+      <div class="flex text-sm">
+        <a href="../index.html" class="text-gray-600 hover:text-hbnGreen">Home</a>
+        <span class="mx-2 text-gray-400">/</span>
+        <a href="../blog.html" class="text-gray-600 hover:text-hbnGreen">Blog</a>
+        <span class="mx-2 text-gray-400">/</span>
+        <span class="text-gray-800">Pump-Priming Projects Progress</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Blog Content -->
+  <section class="py-16 bg-white">
+    <div class="container mx-auto px-6 max-w-4xl">
+      <!-- Introduction -->
+      <div class="prose max-w-none mb-12">
+        <p class="text-xl text-gray-700 leading-relaxed">
+          We're thrilled to share an update on our four funded pump-priming projects, each exploring a unique angle on how building environments impact health and well-being. From air quality monitoring in historical structures to occupant-centric sensor feedback, these projects are already uncovering valuable insights.
+        </p>
+        
+        <p class="text-lg text-gray-700 leading-relaxed mb-8">
+          The principal investigators recently hosted a collaborative "review and reflect" session, comparing lessons learned from each pilot study and identifying opportunities for future research. This cross-disciplinary exchange has been instrumental in creating a holistic picture of healthy buildings research at Leeds.
+        </p>
+
+        <div class="bg-gray-50 p-6 rounded-xl mb-10">
+          <blockquote class="italic text-gray-700 border-l-4 border-hbnGreen pl-4">
+            "The beauty of these diverse projects is how they complement each other. We're building a comprehensive understanding of healthy buildings from multiple angles—technical, social, and practical."
+            <footer class="text-gray-600 mt-2">— Dr. Marco-Felipe King, Healthy Buildings Network Director</footer>
+          </blockquote>
+        </div>
+      </div>
+
+      <!-- Project Updates -->
+      <h2 class="text-3xl font-bold mb-8 text-hbnGreen">Project Updates</h2>
+
+      <!-- Project 1: Living in Clover -->
+      <div class="mb-12 bg-white rounded-xl shadow-lg overflow-hidden">
+        <div class="md:flex">
+          <div class="md:w-1/3 bg-hbnGreen p-6 flex items-center justify-center">
+            <div class="text-center">
+              <div class="w-20 h-20 bg-white bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4" />
+                </svg>
+              </div>
+              <h3 class="text-xl font-bold text-white">Living in Clover</h3>
+            </div>
+          </div>
+          <div class="md:w-2/3 p-6">
+            <h4 class="text-xl font-semibold text-gray-800 mb-3">Key Progress</h4>
+            <p class="text-gray-600 mb-4">
+              The Living in Clover team has successfully established their first test plots featuring three different clover species. Initial thermal imaging results are promising, showing significant heat reduction compared to conventional roof materials. The team has also developed a preliminary lifecycle assessment framework for green roof installations.
+            </p>
+            <h4 class="text-lg font-semibold text-gray-800 mb-2">Next Steps</h4>
+            <ul class="list-disc pl-5 mb-4 text-gray-600 space-y-1">
+              <li>Expand biodiversity monitoring to include pollinator visits</li>
+              <li>Begin nutrient analysis of clover growth in different substrate mixtures</li>
+              <li>Initiate stakeholder workshops with local architects and builders</li>
+            </ul>
+            <div class="flex justify-between items-center border-t border-gray-200 pt-4">
+              <p class="text-sm text-gray-500">
+                <span class="font-medium">Lead:</span> Prof. Gleb Yakubov
+              </p>
+              <a href="../projects/living-in-clover.html" class="inline-flex items-center text-hbnGreen hover:underline">
+                <span>Project Details</span>
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 2: ThermoAge -->
+      <div class="mb-12 bg-white rounded-xl shadow-lg overflow-hidden">
+        <div class="md:flex">
+          <div class="md:w-1/3 bg-hbnPurple p-6 flex items-center justify-center">
+            <div class="text-center">
+              <div class="w-20 h-20 bg-white bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                </svg>
+              </div>
+              <h3 class="text-xl font-bold text-white">ThermoAge</h3>
+            </div>
+          </div>
+          <div class="md:w-2/3 p-6">
+            <h4 class="text-xl font-semibold text-gray-800 mb-3">Key Progress</h4>
+            <p class="text-gray-600 mb-4">
+              The ThermoAge project has completed its first set of climate chamber experiments with participants aged 55+. Early data indicates significant changes in postural stability at both temperature extremes (14°C and 30°C), with particularly notable effects in the cold condition. The team has also established a promising collaboration with Leeds City Council's Age-Friendly Housing initiative.
+            </p>
+            <h4 class="text-lg font-semibold text-gray-800 mb-2">Next Steps</h4>
+            <ul class="list-disc pl-5 mb-4 text-gray-600 space-y-1">
+              <li>Complete the remaining participant trials</li>
+              <li>Analyze comprehensive dataset including muscle stiffness measurements</li>
+              <li>Develop preliminary guidelines for age-adaptive thermal environments</li>
+            </ul>
+            <div class="flex justify-between items-center border-t border-gray-200 pt-4">
+              <p class="text-sm text-gray-500">
+                <span class="font-medium">Lead:</span> Dr. Silvia Caggiari
+              </p>
+              <a href="../projects/thermoage.html" class="inline-flex items-center text-hbnPurple hover:underline">
+                <span>Project Details</span>
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 3: Human-Centered Housing -->
+      <div class="mb-12 bg-white rounded-xl shadow-lg overflow-hidden">
+        <div class="md:flex">
+          <div class="md:w-1/3 bg-hbnBlue p-6 flex items-center justify-center">
+            <div class="text-center">
+              <div class="w-20 h-20 bg-white bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+                </svg>
+              </div>
+              <h3 class="text-xl font-bold text-white">Human-Centered Housing</h3>
+            </div>
+          </div>
+          <div class="md:w-2/3 p-6">
+            <h4 class="text-xl font-semibold text-gray-800 mb-3">Key Progress</h4>
+            <p class="text-gray-600 mb-4">
+              The Human-Centered Housing project has conducted 15 in-depth interviews with residents of affordable housing developments, revealing important patterns in how design features affect daily routines and perceived wellbeing. Their innovative spatial mapping approach has identified several "high impact zones" within homes that disproportionately influence resident satisfaction and health behaviors.
+            </p>
+            <h4 class="text-lg font-semibold text-gray-800 mb-2">Next Steps</h4>
+            <ul class="list-disc pl-5 mb-4 text-gray-600 space-y-1">
+              <li>Complete the remaining 10 interviews</li>
+              <li>Finalize the spatial analysis framework</li>
+              <li>Begin drafting evidence-based design recommendations</li>
+            </ul>
+            <div class="flex justify-between items-center border-t border-gray-200 pt-4">
+              <p class="text-sm text-gray-500">
+                <span class="font-medium">Lead:</span> Dr. Katy Wright
+              </p>
+              <a href="../projects/human-centered-housing.html" class="inline-flex items-center text-hbnBlue hover:underline">
+                <span>Project Details</span>
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 4: Indoor-Outdoor Air -->
+      <div class="mb-12 bg-white rounded-xl shadow-lg overflow-hidden">
+        <div class="md:flex">
+          <div class="md:w-1/3 bg-hbnYellow p-6 flex items-center justify-center">
+            <div class="text-center">
+              <div class="w-20 h-20 bg-white bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z" />
+                </svg>
+              </div>
+              <h3 class="text-xl font-bold text-white">Indoor-Outdoor Air</h3>
+            </div>
+          </div>
+          <div class="md:w-2/3 p-6">
+            <h4 class="text-xl font-semibold text-gray-800 mb-3">Key Progress</h4>
+            <p class="text-gray-600 mb-4">
+              The Indoor-Outdoor Air team has successfully deployed their sensor network in two Passive House dwellings. Initial data shows fascinating patterns in how outdoor pollution events interact with MVHR systems. The team has developed an effective occupant diary system that balances comprehensive data collection with minimal user burden.
+            </p>
+            <h4 class="text-lg font-semibold text-gray-800 mb-2">Next Steps</h4>
+            <ul class="list-disc pl-5 mb-4 text-gray-600 space-y-1">
+              <li>Complete the remaining monitoring period in both dwellings</li>
+              <li>Analyze ultrafine particle infiltration during cooking activities</li>
+              <li>Refine algorithms for identifying key indoor-outdoor relationships</li>
+            </ul>
+            <div class="flex justify-between items-center border-t border-gray-200 pt-4">
+              <p class="text-sm text-gray-500">
+                <span class="font-medium">Lead:</span> Dr. Elizabeth Yang
+              </p>
+              <a href="../projects/indoor-outdoor-air.html" class="inline-flex items-center text-yellow-700 hover:underline">
+                <span>Project Details</span>
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Collaborative Insights -->
+      <h2 class="text-3xl font-bold mb-6 text-hbnGreen">Cross-Project Insights</h2>
+      
+      <div class="bg-gray-50 p-8 rounded-xl mb-10">
+        <h3 class="text-xl font-semibold mb-4 text-gray-800">Emerging Themes</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div class="bg-white p-5 rounded-lg shadow-sm">
+            <h4 class="font-semibold text-hbnBlue mb-2">Occupant Behavior Is Key</h4>
+            <p class="text-gray-600">
+              All projects have highlighted how building occupants adapt to, modify, and interact with their environments in ways that significantly impact building performance and health outcomes.
+            </p>
+          </div>
+          <div class="bg-white p-5 rounded-lg shadow-sm">
+            <h4 class="font-semibold text-hbnBlue mb-2">Ventilation Challenges</h4>
+            <p class="text-gray-600">
+              Multiple projects identified tensions between energy efficiency goals and adequate ventilation practices, pointing to the need for more nuanced approaches to MVHR systems.
+            </p>
+          </div>
+          <div class="bg-white p-5 rounded-lg shadow-sm">
+            <h4 class="font-semibold text-hbnBlue mb-2">Vulnerable Populations</h4>
+            <p class="text-gray-600">
+              A common finding across projects is that vulnerable populations (elderly, children, those with respiratory conditions) have specific needs that are often overlooked in standard building design.
+            </p>
+          </div>
+          <div class="bg-white p-5 rounded-lg shadow-sm">
+            <h4 class="font-semibold text-hbnBlue mb-2">Technology Integration</h4>
+            <p class="text-gray-600">
+              Smart sensors and feedback systems show promise, but must be designed with user experience and accessibility as priorities to ensure adoption and effectiveness.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Future Directions -->
+      <h3 class="text-2xl font-bold mb-5 text-gray-800">Future Research Directions</h3>
+      <p class="text-gray-700 mb-6">
+        Based on the preliminary findings from these pump-priming projects, we've identified several promising avenues for future research:
+      </p>
+
+      <ul class="space-y-4 mb-10">
+        <li class="flex items-start">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2 text-hbnGreen flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+          </svg>
+          <div>
+            <h4 class="font-semibold text-gray-800">Integrated Monitoring Networks</h4>
+            <p class="text-gray-600">
+              Developing comprehensive monitoring systems that simultaneously track environmental conditions, occupant behaviors, and health metrics to establish clear cause-effect relationships.
+            </p>
+          </div>
+        </li>
+        <li class="flex items-start">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2 text-hbnGreen flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+          </svg>
+          <div>
+            <h4 class="font-semibold text-gray-800">Adaptive Building Systems</h4>
+            <p class="text-gray-600">
+              Exploring automated systems that adjust building parameters based on occupant needs, activity patterns, and environmental conditions while maintaining energy efficiency.
+            </p>
+          </div>
+        </li>
+        <li class="flex items-start">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2 text-hbnGreen flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+          </svg>
+          <div>
+            <h4 class="font-semibold text-gray-800">Community-Scale Implementations</h4>
+            <p class="text-gray-600">
+              Scaling up successful interventions to neighborhood and community levels, examining how collective approaches to healthy buildings can amplify benefits and address equity concerns.
+            </p>
+          </div>
+        </li>
+      </ul>
+
+      <!-- Call to Action -->
+      <div class="bg-gradient-to-r from-hbnGreen to-hbnBlue text-white p-8 rounded-xl">
+        <h3 class="text-2xl font-bold mb-4">Get Involved</h3>
+        <p class="mb-6 opacity-90">
+          We're planning a comprehensive showcase event in October 2025 where all project teams will present their final findings. This event will also launch our next round of pump-priming funding. Sign up to our newsletter or join our network to stay informed.
+        </p>
+        <div class="flex flex-wrap gap-4">
+          <a href="../membership.html" class="px-6 py-3 bg-white text-hbnGreen rounded-full hover:bg-gray-100 transition-colors shadow-md">
+            Join Our Network
+          </a>
+          <a href="../contact.html" class="px-6 py-3 border-2 border-white text-white rounded-full hover:bg-white hover:bg-opacity-10 transition-colors">
+            Contact Us
+          </a>
+        </div>
+      </div>
+
+      <!-- Author Box -->
+      <div class="flex items-start mt-16 p-6 bg-gray-50 rounded-xl">
+        <img src="../assets/images/team_king.jpg" alt="Dr. Marco-Felipe King" class="w-20 h-20 rounded-full object-cover mr-4">
+        <div>
+          <h4 class="text-xl font-semibold text-gray-800">Dr. Marco-Felipe King</h4>
+          <p class="text-gray-600 mb-2">Director, Healthy Buildings Network Leeds</p>
+          <p class="text-gray-700">
+            Dr. King leads the Healthy Buildings Network at the University of Leeds, bringing together expertise from engineering, architecture, health sciences, and social sciences to address complex challenges in the built environment.
+          </p>
+        </div>
+      </div>
+
+      <!-- Share and Tags -->
+      <div class="flex flex-wrap justify-between items-center mt-12 pt-6 border-t border-gray-200">
+        <div class="flex items-center space-x-4 mb-4 md:mb-0">
+          <span class="text-gray-700 font-medium">Share:</span>
+          <a href="#" class="text-gray-600 hover:text-hbnGreen">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+            </svg>
+          </a>
+          <a href="#" class="text-gray-600 hover:text-hbnGreen">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
+            </svg>
+          </a>
+          <a href="#" class="text-gray-600 hover:text-hbnGreen">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"/>
+            </svg>
+          </a>
+        </div>
+        <div class="flex flex-wrap gap-2">
+          <span class="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm">Research</span>
+          <span class="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm">Air Quality</span>
+          <span class="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm">Building Design</span>
+          <span class="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm">Sustainability</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Related Posts -->
+  <section class="py-16 bg-gray-50">
+    <div class="container mx-auto px-6 max-w-6xl">
+      <h2 class="text-3xl font-bold mb-10 text-center">Related Posts</h2>
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Related Post 1 -->
+        <a href="#" class="block">
+          <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+            <img src="../assets/images/blog_thermal_comfort.jpg" alt="Thermal comfort in buildings" class="w-full h-48 object-cover">
+            <div class="p-6">
+              <span class="text-sm text-hbnBlue">April 12, 2025</span>
+              <h3 class="text-xl font-bold mb-2 mt-1">Understanding Thermal Comfort in Modern Buildings</h3>
+              <p class="text-gray-600 mb-4">How our perception of comfort impacts building design and energy use</p>
+              <div class="flex items-center text-hbnGreen font-medium">
+                <span>Read More</span>
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </a>
+        
+        <!-- Related Post 2 -->
+        <a href="#" class="block">
+          <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+            <img src="../assets/images/blog_air_purification.jpg" alt="Air purification technologies" class="w-full h-48 object-cover">
+            <div class="p-6">
+              <span class="text-sm text-hbnBlue">May 3, 2025</span>
+              <h3 class="text-xl font-bold mb-2 mt-1">Emerging Air Purification Technologies</h3>
+              <p class="text-gray-600 mb-4">A review of innovative approaches to improving indoor air quality</p>
+              <div class="flex items-center text-hbnGreen font-medium">
+                <span>Read More</span>
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </a>
+        
+        <!-- Related Post 3 -->
+        <a href="#" class="block">
+          <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+            <img src="../assets/images/blog_biophilic_design.jpg" alt="Biophilic design elements" class="w-full h-48 object-cover">
+            <div class="p-6">
+              <span class="text-sm text-hbnBlue">May 18, 2025</span>
+              <h3 class="text-xl font-bold mb-2 mt-1">Biophilic Design and Mental Health</h3>
+              <p class="text-gray-600 mb-4">How natural elements in buildings impact occupant wellbeing</p>
+              <div class="flex items-center text-hbnGreen font-medium">
+                <span>Read More</span>
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white py-12 md:py-16">
+    <div class="container mx-auto max-w-6xl px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <!-- Bio / Logo section -->
+      <div class="mb-8">
+        <img src="../assets/images/hbn_landscape.png" alt="Healthy Buildings Network Leeds Logo" class="h-12 mb-4 filter brightness-0 invert opacity-90">
+        <p class="text-sm tracking-wide text-gray-300">
+          Healthy Buildings Network Leeds is a cross-disciplinary research and collaboration hub at the University of Leeds, focused on healthier, more sustainable built environments.
+        </p>
+  
+        <!-- Social Links -->
+        <ul class="flex mt-4">
+          <li class="mr-4 flex items-center">
+            <a href="https://www.linkedin.com/company/healthy-buildings-network/" target="_blank" class="text-gray-300 hover:text-hbnGreen transition-colors flex items-center">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+              </svg>
+              LinkedIn
+            </a>
+          </li>
+          <li class="mr-4 flex items-center">
+            <a href="mailto:healthy_buildings_network@leeds.ac.uk" class="text-gray-300 hover:text-hbnGreen transition-colors flex items-center">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+              </svg>
+              Email Us
+            </a>
+          </li>
+        </ul>
+      </div>
+  
+      <!-- Quick Links -->
+      <div>
+        <h4 class="text-xl font-bold mb-4">Quick Links</h4>
+        <ul class="space-y-2">
+          <li><a href="../index.html" class="text-gray-300 hover:text-hbnGreen transition-colors">Home</a></li>
+          <li><a href="../about.html" class="text-gray-300 hover:text-hbnGreen transition-colors">About</a></li>
+          <li><a href="../projects.html" class="text-gray-300 hover:text-hbnGreen transition-colors">Projects</a></li>
+          <li><a href="../events.html" class="text-gray-300 hover:text-hbnGreen transition-colors">Events</a></li>
+          <li><a href="../membership.html" class="text-gray-300 hover:text-hbnGreen transition-colors">Membership</a></li>
+          <li><a href="../contact.html" class="text-gray-300 hover:text-hbnGreen transition-colors">Contact</a></li>
+        </ul>
+      </div>
+  
+      <!-- Affiliations -->
+      <div>
+        <h4 class="text-xl font-bold mb-4">Affiliations</h4>
+        <ul class="space-y-2">
+          <li><a href="https://fluids.leeds.ac.uk" target="_blank" class="text-gray-300 hover:text-hbnGreen transition-colors">Leeds Institute for Fluid Dynamics</a></li>
+          <li><a href="https://lssi.leeds.ac.uk" target="_blank" class="text-gray-300 hover:text-hbnGreen transition-colors">Leeds Social Sciences Institute</a></li>
+          <li><a href="https://lahri.leeds.ac.uk" target="_blank" class="text-gray-300 hover:text-hbnGreen transition-colors">Leeds Arts & Humanities Research Institute</a></li>
+          <li><a href="https://environment.leeds.ac.uk/institute-climate-atmospheric-science" target="_blank" class="text-gray-300 hover:text-hbnGreen transition-colors">ICAS</a></li>
+          <li><a href="https://sustainability.leeds.ac.uk/get-involved/leeds-living-lab/" target="_blank" class="text-gray-300 hover:text-hbnGreen transition-colors">Leeds Living Lab</a></li>
+          <li><a href="https://lida.leeds.ac.uk/" target="_blank" class="text-gray-300 hover:text-hbnGreen transition-colors">Leeds Institute for Data Analytics</a></li>
+        </ul>
+      </div>
+    </div>
+  
+    <div class="container mx-auto max-w-6xl px-6 text-sm text-center pt-8 mt-8 border-t border-gray-700">
+      <p>© 2025 Healthy Buildings Network Leeds. All rights reserved.</p>
+      <p class="mt-2">University of Leeds, Leeds LS2 9JT, United Kingdom</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="../assets/js/script.js"></script>
+  <!-- Mobile menu script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const menuButton = document.getElementById('mobile-menu-button');
+      const mobileMenu = document.getElementById('mobile-menu');
+      
+      if (menuButton && mobileMenu) {
+        menuButton.addEventListener('click', function() {
+          mobileMenu.classList.toggle('hidden');
+        });
+      }
+      
+      // Scroll to top button functionality
+      const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+      if (scrollToTopBtn) {
+        window.addEventListener('scroll', function() {
+          if (window.pageYOffset > 300) {
+            scrollToTopBtn.classList.remove('hidden');
+          } else {
+            scrollToTopBtn.classList.add('hidden');
+          }
+        });
+        
+        scrollToTopBtn.addEventListener('click', function() {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+      }
+      
+      // Smooth scrolling for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+          e.preventDefault();
+          
+          const targetId = this.getAttribute('href');
+          const targetElement = document.querySelector(targetId);
+          
+          if (targetElement) {
+            window.scrollTo({
+              top: targetElement.offsetTop - 80, // Offset for fixed header
+              behavior: 'smooth'
+            });
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>
