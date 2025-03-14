@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            hbnGreen: '#4e9317',
+            hbnPurple: '#8360a9',
+            hbnGray: '#808184',
+            hbnYellow: '#ffca29',
+            hbnBlue: '#3e95dd',
+          }
+        }
+      }
+    };
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Exploring the untapped potential of collaboration between engineering and arts & humanities disciplines in creating healthier built environments.">
+  <title>Bridging the Divide: Why Engineering and Arts & Humanities Need Each Other | Healthy Buildings Network Leeds</title>
+  
+  <link rel="icon" href="../assets/images/hbn_fav.ico" type="image/x-icon"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.css" />
+</head>
+<body class="font-poppins">
+
+  <!-- Header / Navbar -->
+  <header class="bg-white shadow-md fixed w-full z-50">
+    <div class="container mx-auto px-6 flex justify-between items-center h-20">
+      <!-- Logo -->
+      <div class="flex-shrink-0">
+        <a href="../index.html">
+          <img src="../assets/images/hbn_landscape.png" alt="Healthy Buildings Network Leeds Logo" class="h-12">
+        </a>
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <button class="md:hidden text-gray-600 hover:text-hbnGreen focus:outline-none" id="mobile-menu-button" aria-label="Open Menu">
+        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+
+      <!-- Navigation -->
+      <nav class="hidden md:flex space-x-8" id="main-nav">
+        <a href="../index.html" class="text-gray-600 hover:text-hbnGreen font-medium transition-colors">Home</a>
+        <a href="../about.html" class="text-gray-600 hover:text-hbnGreen font-medium transition-colors">About Us</a>
+        <a href="../blog.html" class="text-hbnGreen font-medium transition-colors">Blog</a>
+        <a href="../events.html" class="text-gray-600 hover:text-hbnGreen font-medium transition-colors">Events</a>
+        <a href="../projects.html" class="text-gray-600 hover:text-hbnGreen font-medium transition-colors">Projects</a>
+        <a href="../membership.html" class="text-gray-600 hover:text-hbnGreen font-medium transition-colors">Membership</a>
+        <a href="../contact.html" class="text-gray-600 hover:text-hbnGreen font-medium transition-colors">Contact</a>
+      </nav>
+    </div>
+    
+    <!-- Mobile Navigation (Hidden by default) -->
+    <div class="md:hidden hidden bg-white w-full shadow-md" id="mobile-menu">
+      <div class="px-6 py-4 space-y-4">
+        <a href="../index.html" class="block text-gray-600 hover:text-hbnGreen font-medium">Home</a>
+        <a href="../about.html" class="block text-gray-600 hover:text-hbnGreen font-medium">About Us</a>
+        <a href="../blog.html" class="block text-hbnGreen font-medium">Blog</a>
+        <a href="../events.html" class="block text-gray-600 hover:text-hbnGreen font-medium">Events</a>
+        <a href="../projects.html" class="block text-gray-600 hover:text-hbnGreen font-medium">Projects</a>
+        <a href="../membership.html" class="block text-gray-600 hover:text-hbnGreen font-medium">Membership</a>
+        <a href="../contact.html" class="block text-gray-600 hover:text-hbnGreen font-medium">Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Scroll-to-top button -->
+  <button id="scrollToTopBtn" class="fixed bottom-5 right-5 bg-hbnGreen text-white p-3 rounded-full shadow-md hidden z-50" aria-label="Scroll to top">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18" />
+    </svg>
+  </button>
+
+  <!-- Hero Section -->
+  <section class="relative pt-20">
+    <div class="bg-gradient-to-r from-hbnPurple to-hbnBlue text-white py-16 md:py-24">
+      <div class="container mx-auto px-6 max-w-6xl">
+        <div class="md:flex items-center">
+          <div class="md:w-3/5 md:pr-12 mb-10 md:mb-0">
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">Bridging the Divide</h1>
+            <p class="text-xl opacity-90 mb-4 max-w-2xl">
+              Why Engineering and Arts & Humanities Need Each Other for Truly Healthy Buildings
+            </p>
+            <div class="flex items-center text-sm opacity-75">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+              </svg>
+              <span>June 21, 2025</span>
+            </div>
+          </div>
+          <div class="md:w-2/5">
+            <img src="../assets/images/arts_engineering_collaboration.jpg" alt="Arts and Engineering Collaboration" class="rounded-lg shadow-xl">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Breadcrumbs -->
+  <div class="bg-gray-100 py-3">
+    <div class="container mx-auto px-6 max-w-6xl">
+      <div class="flex text-sm">
+        <a href="../index.html" class="text-gray-600 hover:text-hbnGreen">Home</a>
+        <span class="mx-2 text-gray-400">/</span>
+        <a href="../blog.html" class="text-gray-600 hover:text-hbnGreen">Blog</a>
+        <span class="mx-2 text-gray-400">/</span>
+        <span class="text-gray-800">Bridging the Divide</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Blog Content -->
+  <section class="py-16 bg-white">
+    <div class="container mx-auto px-6 max-w-4xl">
+      <!-- Introduction -->
+      <div class="prose max-w-none mb-12">
+        <p class="text-xl text-gray-700 leading-relaxed mb-8">
+          As engineers and scientists working on healthy buildings, we rely on computational fluid dynamics, statistical models, and experimental measurements. But something vital is missing from our approach. Despite our technical sophistication, we continue to struggle with the most fundamental question: how do we create spaces that truly enhance human wellbeing? The answer may lie outside our traditional disciplinary boundaries.
+        </p>
+        
+        <div class="bg-gray-50 p-6 rounded-xl mb-10">
+          <blockquote class="italic text-gray-700 border-l-4 border-hbnPurple pl-4 text-lg">
+            "We shape our buildings; thereafter they shape us."
+            <footer class="text-gray-600 mt-2 not-italic">— Winston Churchill</footer>
+          </blockquote>
+        </div>
+        
+        <h2 class="text-2xl font-bold mb-4 text-gray-800">The Engineering Blind Spot</h2>
+        
+        <p class="mb-6">
+          Engineering approaches to healthy buildings have yielded remarkable innovations—advanced ventilation systems, surface materials that resist pathogen adhesion, smart sensors that monitor air quality in real-time. We can model airflow patterns with stunning precision and track particle dispersion through complex spaces. Yet buildings designed with impeccable technical credentials still often fail to resonate with their occupants.
+        </p>
+        
+        <p class="mb-6">
+          Why? Because buildings aren't merely technical systems—they're cultural artifacts, psychological spaces, and social environments. They embody narratives about who we are and shape how we relate to each other and our surroundings. These dimensions remain largely invisible to conventional engineering methods.
+        </p>
+        
+        <p class="mb-10">
+          Consider hospital design. We can meticulously calculate air changes per hour and optimise layouts to minimise cross-contamination risks. But what about the patient experience of these spaces? How do aesthetic elements influence recovery rates? How might spatial configurations affect staff stress levels and communication patterns? Our computational models can't fully address these questions.
+        </p>
+        
+        <h2 class="text-2xl font-bold mb-4 text-gray-800">The Untapped Reservoir</h2>
+        
+        <p class="mb-6">
+          Meanwhile, across campus, scholars in arts and humanities possess analytical frameworks and insights directly relevant to these challenges:
+        </p>
+        
+        <ul class="list-disc pl-6 mb-6 space-y-3">
+          <li><strong>Historians</strong> trace how architectural forms reflect changing social values and health concepts across periods and cultures.</li>
+          <li><strong>Literary scholars</strong> analyse how spaces are represented in texts and how these representations shape our expectations and experiences.</li>
+          <li><strong>Philosophers</strong> explore the phenomenology of architecture—how buildings are experienced through embodied perception.</li>
+          <li><strong>Anthropologists</strong> document how different communities interact with and interpret built environments.</li>
+          <li><strong>Media scholars</strong> examine how digital technologies transform our relationship with physical space.</li>
+        </ul>
+        
+        <p class="mb-10">
+          These disciplines have developed sophisticated methods for interpreting cultural meanings, analysing human experiences, and understanding social dynamics—precisely the dimensions our engineering approaches struggle to address.
+        </p>
+        
+        <div class="bg-hbnPurple bg-opacity-5 p-6 rounded-xl mb-10">
+          <h3 class="font-bold text-xl mb-4 text-hbnPurple">Real-World Example: The Historical Hospital</h3>
+          <p class="text-gray-700 mb-4">
+            During a recent project evaluating ventilation systems in a 19th-century hospital building being repurposed for contemporary healthcare, our engineering assessments identified multiple deficiencies requiring substantial retrofitting. The proposed modifications would have destroyed many heritage features.
+          </p>
+          <p class="text-gray-700">
+            When we consulted with architectural historians, they revealed how the original designers had incorporated sophisticated passive ventilation principles specific to that era. By understanding the historical design intent through archival research, we were able to restore and enhance these systems rather than replace them—achieving comparable performance with less disruption and at lower cost while preserving cultural heritage.
+          </p>
+        </div>
+        
+        <h2 class="text-2xl font-bold mb-4 text-gray-800">Barriers to Collaboration</h2>
+        
+        <p class="mb-6">
+          If these complementary perspectives offer such value, why don't we see more collaboration between engineering and arts & humanities in building research? Several barriers stand in our way:
+        </p>
+        
+        <h3 class="text-xl font-semibold mb-3 text-gray-800">1. Different Epistemologies</h3>
+        
+        <p class="mb-6">
+          Engineering prioritises quantitative data, replicable experiments, and generalizable principles. Arts and humanities often employ interpretive methods that embrace subjectivity, context-specificity, and ambiguity. These approaches aren't inherently incompatible, but they require mutual respect and translation work to integrate effectively.
+        </p>
+        
+        <h3 class="text-xl font-semibold mb-3 text-gray-800">2. Language Barriers</h3>
+        
+        <p class="mb-6">
+          The specialised terminologies of our fields create communication challenges. What an engineer means by "resilience" or "efficiency" may differ substantially from how these terms function in cultural theory. Building shared vocabularies takes time and patience.
+        </p>
+        
+        <h3 class="text-xl font-semibold mb-3 text-gray-800">3. Institutional Structures</h3>
+        
+        <p class="mb-6">
+          Universities organise research and teaching by discipline. Funding mechanisms, performance metrics, and publication venues reinforce these boundaries. Cross-disciplinary work often struggles to find institutional homes or recognition pathways.
+        </p>
+        
+        <h3 class="text-xl font-semibold mb-3 text-gray-800">4. Mutual Misconceptions</h3>
+        
+        <p class="mb-10">
+          Engineers may view arts and humanities as interesting but ultimately impractical; humanities scholars may see engineering as technically impressive but insufficiently critical or reflective. These stereotypes persist partly because we rarely engage seriously with each other's methods and contributions.
+        </p>
+        
+        <h2 class="text-2xl font-bold mb-4 text-gray-800">Pathways Forward</h2>
+        
+        <p class="mb-6">
+          Despite these challenges, pioneering work at the interface between engineering and arts & humanities demonstrates the potential of genuine collaboration. Based on these examples and our own experience at the Healthy Buildings Network, we propose several strategies:
+        </p>
+        
+        <h3 class="text-xl font-semibold mb-3 text-gray-800">1. Begin with Concrete Problems</h3>
+        
+        <p class="mb-6">
+          Rather than attempting to reconcile entire disciplinary paradigms, focus on specific research questions that clearly require multiple perspectives. For example: "How do hospital soundscapes affect patient recovery?" This naturally invites collaboration between acoustic engineers, musicologists, and medical humanities scholars.
+        </p>
+        
+        <div class="bg-hbnBlue bg-opacity-5 p-6 rounded-xl mb-6">
+          <h4 class="font-bold mb-2 text-hbnBlue">Case Study: The Sound of Healing</h4>
+          <p class="text-gray-700">
+            A collaborative project between our engineering team and Leeds' School of Music is examining how surgical recovery environments could be optimised through acoustic design. Engineers are measuring sound transmission and reverberation characteristics, while musicologists contribute expertise on harmonics, rhythm perception, and cultural associations of different sound patterns. Together, we're developing evidence-based design guidelines that consider both physical acoustics and subjective experience.
+          </p>
+        </div>
+        
+        <h3 class="text-xl font-semibold mb-3 text-gray-800">2. Create Shared Spaces and Experiences</h3>
+        
+        <p class="mb-6">
+          Cross-disciplinary understanding develops through sustained interaction. Establish regular forums where engineers and humanities scholars can share their approaches to common challenges. Workshop formats where participants experience different methodologies firsthand are particularly effective.
+        </p>
+        
+        <h3 class="text-xl font-semibold mb-3 text-gray-800">3. Develop Hybrid Methodologies</h3>
+        
+        <p class="mb-6">
+          Rather than simply juxtaposing different approaches, work toward integrated methods that combine technical and humanistic elements. Example: pair computational models of indoor air movement with ethnographic studies of how occupants perceive and interact with ventilation systems.
+        </p>
+        
+        <h3 class="text-xl font-semibold mb-3 text-gray-800">4. Engage with Public Narratives</h3>
+        
+        <p class="mb-10">
+          Buildings exist within cultural narratives about health, technology, and sustainability. Humanities scholars can help engineers understand how their work relates to these broader stories—and how technical innovations might reshape cultural narratives in return.
+        </p>
+        
+        <h2 class="text-2xl font-bold mb-4 text-gray-800">Starting the Conversation</h2>
+        
+        <p class="mb-6">
+          At the Healthy Buildings Network Leeds, we're committed to fostering these collaborations. We're launching several initiatives:
+        </p>
+        
+        <ul class="list-disc pl-6 mb-6 space-y-3">
+          <li>A monthly interdisciplinary reading group exploring texts from multiple perspectives</li>
+          <li>A seed funding program specifically for projects that bridge engineering and arts & humanities</li>
+          <li>A visiting fellow program bringing humanities scholars into engineering labs (and vice versa)</li>
+          <li>Collaborative PhD opportunities supervised across disciplinary boundaries</li>
+        </ul>
+        
+        <p class="mb-6">
+          We invite researchers from all disciplines to join us in this work. The challenges of creating truly healthy buildings—spaces that support physical health, psychological wellbeing, social connection, and cultural meaning—are too complex for any single approach. By bridging the divide between engineering and arts & humanities, we can develop more holistic, effective, and humane solutions.
+        </p>
+        
+        <p class="mb-6">
+          After all, buildings are simultaneously physical structures and cultural artifacts, technical systems and lived experiences, scientific problems and human stories. Shouldn't our approaches to understanding and designing them be equally multifaceted?
+        </p>
+        
+        <div class="bg-gradient-to-r from-hbnPurple to-hbnBlue p-8 rounded-xl text-white mb-6">
+          <h3 class="font-bold text-xl mb-4">Get Involved</h3>
+          <p class="mb-4">
+            Are you a researcher in arts, humanities, or cultural studies interested in the built environment? Or an engineer curious about how cultural and experiential perspectives might enhance your work? We want to hear from you.
+          </p>
+          <p class="mb-4">
+            <strong>Join us on July 15 for our first cross-disciplinary workshop: "Building Stories: Narratives and Numbers in Healthy Environment Research."</strong> Register through our <a href="../events.html" class="underline hover:text-gray-200 transition-colors">events page</a>.
+          </p>
+          <p>
+            Contact us at <a href="mailto:healthy_buildings_network@leeds.ac.uk" class="underline hover:text-gray-200 transition-colors">healthy_buildings_network@leeds.ac.uk</a> to discuss potential collaborations or to join our interdisciplinary mailing list.
+          </p>
+        </div>
+      </div>
+
+      <!-- Author Box -->
+      <div class="flex items-start mt-16 p-6 bg-gray-50 rounded-xl">
+        <img src="../assets/images/profile_marco-felipe_king.png" alt="Dr. Marco-Felipe King" class="w-20 h-20 rounded-full object-cover mr-4">
+        <div>
+          <h4 class="text-xl font-semibold text-gray-800">Dr. Marco-Felipe King</h4>
+          <p class="text-gray-600 mb-2">Director, Water, Public Health & Environmental Engineering Research Group, University of Leeds</p>
+          <p class="text-gray-700">
+            Dr. King leads interdisciplinary research at the intersection of fluid dynamics, infection control, and public health. He is increasingly interested in how engineering approaches can be enriched through collaboration with arts and humanities disciplines.
+          </p>
+        </div>
+      </div>
+
+      <!-- Share and Tags -->
+      <div class="flex flex-wrap justify-between items-center mt-12 pt-6 border-t border-gray-200">
+        <div class="flex items-center space-x-4 mb-4 md:mb-0">
+          <span class="text-gray-700 font-medium">Share:</span>
+          <a href="#" class="text-gray-600 hover:text-hbnPurple">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+            </svg>
+          </a>
+          <a href="#" class="text-gray-600 hover:text-hbnPurple">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
+            </svg>
+          </a>
+          <a href="#" class="text-gray-600 hover:text-hbnPurple">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"/>
+            </svg>
+          </a>
+        </div>
+        <div class="flex flex-wrap gap-2">
+          <span class="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm">Interdisciplinary Research</span>
+          <span class="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm">Arts & Humanities</span>
+          <span class="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm">Collaboration</span>
+          <span class="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm">Engineering</span>
+        </div>
+      </div>
+      
+      <div class="mt-12">
+        <a href="../blog.html" class="inline-flex items-center text-hbnPurple hover:underline">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+          </svg>
+          <span>Back to Blog</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Related Posts -->
+  <section class="py-16 bg-gray-50">
+    <div class="container mx-auto px-6 max-w-6xl">
+      <h2 class="text-3xl font-bold mb-10 text-center">Related Articles</h2>
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Related Post 1 -->
+        <a href="interview_marco.html" class="block">
+          <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+            <img src="../assets/images/profile_marco-felipe_king.png" alt="Interview with Dr. Marco-Felipe King" class="w-full h-48 object-cover">
+            <div class="p-6">
+              <span class="text-sm text-hbnBlue">Jan 14, 2025</span>
+              <h3 class="text-xl font-bold mb-2 mt-1">Interview with Dr. Marco-Felipe King</h3>
+              <p class="text-gray-600 mb-4">On computational modeling and interdisciplinary approaches to healthy buildings</p>
+              <div class="flex items-center text-hbnPurple font-medium">
+                <span>Read More</span>
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </a>
+        
+        <!-- Related Post 2 -->
+        <a href="rethinking_design_process.html" class="block">
+          <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+            <img src="../assets/images/design_process.jpg" alt="Interdisciplinary Design Process" class="w-full h-48 object-cover">
+            <div class="p-6">
+              <span class="text-sm text-hbnBlue">April 8, 2025</span>
+              <h3 class="text-xl font-bold mb-2 mt-1">Rethinking the Design Process</h3>
+              <p class="text-gray-600 mb-4">How collaborative approaches are transforming building design methodologies</p>
+              <div class="flex items-center text-hbnPurple font-medium">
+                <span>Read More</span>
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </a>
+        
+        <!-- Related Post 3 -->
+        <a href="biophilic.html" class="block">
+          <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+            <img src="../assets/images/blogs/biophilic.jpeg" alt="Biophilic Design Cultural Perspectives" class="w-full h-48 object-cover">
+            <div class="p-6">
+              <span class="text-sm text-hbnBlue">March 22, 2025</span>
+              <h3 class="text-xl font-bold mb-2 mt-1">Biophilic Design: Cultural Perspectives</h3>
+              <p class="text-gray-600 mb-4">Exploring how different cultures interpret and implement nature-inspired design</p>
+              <div class="flex items-center text-hbnPurple font-medium">
+                <span>Read More</span>
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white py-12 md:py-16">
+    <div class="container mx-auto max-w-6xl px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <!-- Bio / Logo section -->
+      <div class="mb-8">
+        <img src="../assets/images/hbn_landscape.png" alt="Healthy Buildings Network Leeds Logo" class="h-12 mb-4 filter brightness-0 invert opacity-90">
+        <p class="text-sm tracking-wide text-gray-300">
+          Healthy Buildings Network Leeds is a cross-disciplinary research and collaboration hub at the University of Leeds, focused on healthier, more sustainable built environments.
+        </p>
+  
+        <!-- Social Links -->
+        <ul class="flex mt-4">
+          <li class="mr-4 flex items-center">
+            <a href="https://www.linkedin.com/company/healthy-buildings-network/" target="_blank" class="text-gray-300 hover:text-hbnGreen transition-colors flex items-center">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+              </svg>
+              LinkedIn
+            </a>
+          </li>
+          <li class="mr-4 flex items-center">
+            <a href="mailto:healthy_buildings_network@leeds.ac.uk" class="text-gray-300 hover:text-hbnGreen transition-colors flex items-center">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+              </svg>
+              Email Us
+            </a>
+          </li>
+        </ul>
+      </div>
+  
+      <!-- Quick Links -->
+      <div>
+        <h4 class="text-xl font-bold mb-4">Quick Links</h4>
+        <ul class="space-y-2">
+          <li><a href="../index.html" class="text-gray-300 hover:text-hbnGreen transition-colors">Home</a></li>
+          <li><a href="../about.html" class="text-gray-300 hover:text-hbnGreen transition-colors">About</a></li>
+          <li><a href="../projects.html" class="text-gray-300 hover:text-hbnGreen transition-colors">Projects</a></li>
+          <li><a href="../events.html" class="text-gray-300 hover:text-hbnGreen transition-colors">Events</a></li>
+          <li><a href="../membership.html" class="text-gray-300 hover:text-hbnGreen transition-colors">Membership</a></li>
+          <li><a href="../contact.html" class="text-gray-300 hover:text-hbnGreen transition-colors">Contact</a></li>
+        </ul>
+      </div>
+  
+      <!-- Affiliations -->
+      <div>
+        <h4 class="text-xl font-bold mb-4">Affiliations</h4>
+        <ul class="space-y-2">
+          <li><a href="https://fluids.leeds.ac.uk" target="_blank" class="text-gray-300 hover:text-hbnGreen transition-colors">Leeds Institute for Fluid Dynamics</a></li>
+          <li><a href="https://lssi.leeds.ac.uk" target="_blank" class="text-gray-300 hover:text-hbnGreen transition-colors">Leeds Social Sciences Institute</a></li>
+          <li><a href="https://lahri.leeds.ac.uk" target="_blank" class="text-gray-300 hover:text-hbnGreen transition-colors">Leeds Arts & Humanities Research Institute</a></li>
+          <li><a href="https://environment.leeds.ac.uk/institute-climate-atmospheric-science" target="_blank" class="text-gray-300 hover:text-hbnGreen transition-colors">ICAS</a></li>
+          <li><a href="https://sustainability.leeds.ac.uk/get-involved/leeds-living-lab/" target="_blank" class="text-gray-300 hover:text-hbnGreen transition-colors">Leeds Living Lab</a></li>
+          <li><a href="https://lida.leeds.ac.uk/" target="_blank" class="text-gray-300 hover:text-hbnGreen transition-colors">Leeds Institute for Data Analytics</a></li>
+        </ul>
+      </div>
+    </div>
+  
+    <div class="container mx-auto max-w-6xl px-6 text-sm text-center pt-8 mt-8 border-t border-gray-700">
+      <p>© 2025 Healthy Buildings Network Leeds. All rights reserved.</p>
+      <p class="mt-2">University of Leeds, Leeds LS2 9JT, United Kingdom</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="../assets/js/script.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const menuButton = document.getElementById('mobile-menu-button');
+      const mobileMenu = document.getElementById('mobile-menu');
+      
+      if (menuButton && mobileMenu) {
+        menuButton.addEventListener('click', function() {
+          mobileMenu.classList.toggle('hidden');
+        });
+      }
+      
+      // Scroll to top button functionality
+      const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+      if (scrollToTopBtn) {
+        window.addEventListener('scroll', function() {
+          if (window.pageYOffset > 300) {
+            scrollToTopBtn.classList.remove('hidden');
+          } else {
+            scrollToTopBtn.classList.add('hidden');
+          }
+        });
+        
+        scrollToTopBtn.addEventListener('click', function() {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+      }
+      
+      // Smooth scrolling for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+          e.preventDefault();
+          
+          const targetId = this.getAttribute('href');
+          const targetElement = document.querySelector(targetId);
+          
+          if (targetElement) {
+            window.scrollTo({
+              top: targetElement.offsetTop - 80, // Offset for fixed header
+              behavior: 'smooth'
+            });
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>

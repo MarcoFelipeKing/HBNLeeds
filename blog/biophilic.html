@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            hbnGreen: '#4e9317',
+            hbnPurple: '#8360a9',
+            hbnGray: '#808184',
+            hbnYellow: '#ffca29',
+            hbnBlue: '#3e95dd',
+          }
+        }
+      }
+    };
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Exploring how different cultures around the world interpret and implement biophilic design principles in the built environment.">
+  <title>Biophilic Design: Cultural Perspectives | Healthy Buildings Network Leeds</title>
+  
+  <link rel="icon" href="../assets/images/hbn_fav.ico" type="image/x-icon"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.css" />
+</head>
+<body class="font-poppins">
+
+  <!-- Header / Navbar -->
+  <header class="bg-white shadow-md fixed w-full z-50">
+    <div class="container mx-auto px-6 flex justify-between items-center h-20">
+      <!-- Logo -->
+      <div class="flex-shrink-0">
+        <a href="../index.html">
+          <img src="../assets/images/hbn_landscape.png" alt="Healthy Buildings Network Leeds Logo" class="h-12">
+        </a>
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <button class="md:hidden text-gray-600 hover:text-hbnGreen focus:outline-none" id="mobile-menu-button" aria-label="Open Menu">
+        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+
+      <!-- Navigation -->
+      <nav class="hidden md:flex space-x-8" id="main-nav">
+        <a href="../index.html" class="text-gray-600 hover:text-hbnGreen font-medium transition-colors">Home</a>
+        <a href="../about.html" class="text-gray-600 hover:text-hbnGreen font-medium transition-colors">About Us</a>
+        <a href="../blog.html" class="text-hbnGreen font-medium transition-colors">Blog</a>
+        <a href="../events.html" class="text-gray-600 hover:text-hbnGreen font-medium transition-colors">Events</a>
+        <a href="../projects.html" class="text-gray-600 hover:text-hbnGreen font-medium transition-colors">Projects</a>
+        <a href="../membership.html" class="text-gray-600 hover:text-hbnGreen font-medium transition-colors">Membership</a>
+        <a href="../contact.html" class="text-gray-600 hover:text-hbnGreen font-medium transition-colors">Contact</a>
+      </nav>
+    </div>
+    
+    <!-- Mobile Navigation (Hidden by default) -->
+    <div class="md:hidden hidden bg-white w-full shadow-md" id="mobile-menu">
+      <div class="px-6 py-4 space-y-4">
+        <a href="../index.html" class="block text-gray-600 hover:text-hbnGreen font-medium">Home</a>
+        <a href="../about.html" class="block text-gray-600 hover:text-hbnGreen font-medium">About Us</a>
+        <a href="../blog.html" class="block text-hbnGreen font-medium">Blog</a>
+        <a href="../events.html" class="block text-gray-600 hover:text-hbnGreen font-medium">Events</a>
+        <a href="../projects.html" class="block text-gray-600 hover:text-hbnGreen font-medium">Projects</a>
+        <a href="../membership.html" class="block text-gray-600 hover:text-hbnGreen font-medium">Membership</a>
+        <a href="../contact.html" class="block text-gray-600 hover:text-hbnGreen font-medium">Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Scroll-to-top button -->
+  <button id="scrollToTopBtn" class="fixed bottom-5 right-5 bg-hbnGreen text-white p-3 rounded-full shadow-md hidden z-50" aria-label="Scroll to top">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18" />
+    </svg>
+  </button>
+
+  <!-- Hero Section -->
+  <section class="relative pt-20">
+    <div class="bg-gradient-to-r from-hbnGreen to-hbnYellow text-white py-16 md:py-24">
+      <div class="container mx-auto px-6 max-w-6xl">
+        <div class="md:flex items-center">
+          <div class="md:w-3/5 md:pr-12 mb-10 md:mb-0">
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">Biophilic Design: Cultural Perspectives</h1>
+            <p class="text-xl opacity-90 mb-4 max-w-2xl">
+              Exploring how different cultures interpret and implement nature-inspired design principles in the built environment
+            </p>
+            <div class="flex items-center text-sm opacity-75">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+              </svg>
+              <span>March 22, 2025</span>
+            </div>
+          </div>
+          <div class="md:w-2/5">
+            <img src="../assets/images/blogs/biophilic.jpeg" alt="Biophilic Design Elements" class="rounded-lg shadow-xl">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Breadcrumbs -->
+  <div class="bg-gray-100 py-3">
+    <div class="container mx-auto px-6 max-w-6xl">
+      <div class="flex text-sm">
+        <a href="../index.html" class="text-gray-600 hover:text-hbnGreen">Home</a>
+        <span class="mx-2 text-gray-400">/</span>
+        <a href="../blog.html" class="text-gray-600 hover:text-hbnGreen">Blog</a>
+        <span class="mx-2 text-gray-400">/</span>
+        <span class="text-gray-800">Biophilic Design: Cultural Perspectives</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Blog Content -->
+  <section class="py-16 bg-white">
+    <div class="container mx-auto px-6 max-w-4xl">
+      <!-- Introduction -->
+      <div class="prose max-w-none mb-12">
+        <p class="text-xl text-gray-700 leading-relaxed mb-8">
+          Biophilic design—incorporating nature and natural elements into architecture—has gained tremendous popularity as research confirms its benefits for physical health, cognitive function, and emotional wellbeing. But while the science supporting biophilia is universal, its implementation varies remarkably across different cultural contexts. How do cultural values, historical traditions, and local environments shape interpretations of biophilic design around the world?
+        </p>
+        
+        <div class="bg-gray-50 p-6 rounded-xl mb-10">
+          <blockquote class="italic text-gray-700 border-l-4 border-hbnGreen pl-4 text-lg">
+            "Nature holds the key to our aesthetic, intellectual, cognitive and even spiritual satisfaction."
+            <footer class="text-gray-600 mt-2 not-italic">— E.O. Wilson</footer>
+          </blockquote>
+        </div>
+        
+        <h2 class="text-2xl font-bold mb-4 text-gray-800">Beyond Universal Principles</h2>
+        
+        <p class="mb-6">
+          The fundamental concept of biophilia—our innate affinity for nature—appears to transcend cultural boundaries. Studies consistently show that humans across diverse backgrounds respond positively to views of nature, natural light, and organic materials. However, the specifics of what constitutes "nature" and how it should be integrated into buildings varies enormously based on cultural context.
+        </p>
+        
+        <p class="mb-6">
+          In the Western context, particularly in North America and Europe, biophilic design often manifests as literal reproductions of nature: living walls covered in lush vegetation, large windows framing forest or ocean views, and water features that mimic natural streams. The emphasis tends to be on visual connections with recognizable natural elements, often with a preference for pristine, "untouched" nature.
+        </p>
+        
+        <p class="mb-10">
+          But this is just one cultural interpretation among many. As we expand our perspective globally, we discover rich and varied traditions of human-nature relationships expressed through architecture.
+        </p>
+      
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-10">
+          <div class="bg-hbnGreen bg-opacity-5 p-6 rounded-xl">
+            <h3 class="font-bold text-xl mb-4 text-hbnGreen">Western Biophilia</h3>
+            <ul class="list-disc pl-5 space-y-2 text-gray-700">
+              <li>Emphasis on visual connections to nature</li>
+              <li>Preference for literal incorporation (living walls, etc.)</li>
+              <li>Focus on productivity and stress reduction benefits</li>
+              <li>Often approached as a design "feature" or "amenity"</li>
+              <li>Frequently quantified through certification systems</li>
+            </ul>
+          </div>
+          
+          <div class="bg-hbnYellow bg-opacity-5 p-6 rounded-xl">
+            <h3 class="font-bold text-xl mb-4 text-yellow-700">Eastern Biophilia</h3>
+            <ul class="list-disc pl-5 space-y-2 text-gray-700">
+              <li>Emphasis on subtle suggestion and abstraction</li>
+              <li>Integration of natural principles rather than just elements</li>
+              <li>Focus on spiritual and philosophical dimensions</li>
+              <li>Approached as fundamental to spatial experience</li>
+              <li>Often embedded in traditional design principles</li>
+            </ul>
+          </div>
+        </div>
+        
+        <h2 class="text-2xl font-bold mb-4 text-gray-800">Japanese Ma: The Space Between</h2>
+        
+        <p class="mb-6">
+          Japanese architectural traditions offer profound insights into culturally-specific interpretations of biophilic design. Rather than simply placing natural elements within buildings, Japanese approaches emphasise <em>ma</em>—the meaningful space or interval between objects—and the integration of built and natural environments.
+        </p>
+        
+        <p class="mb-6">
+          Consider the traditional <em>engawa</em>, a veranda-like transition space between interior and exterior. This liminal zone blurs the distinction between inside and outside, creating a graduated experience rather than a binary separation. Similarly, carefully framed views (<em>shakkei</em> or "borrowed scenery") incorporate distant landscapes as if they were extensions of the building's own garden.
+        </p>
+        
+        <div class="bg-gray-50 p-6 rounded-xl mb-8">
+          <h4 class="font-bold mb-3 text-gray-800">Key Elements of Japanese Biophilic Design:</h4>
+          <ul class="list-disc pl-6 space-y-2 text-gray-700">
+            <li><strong>Shakkei (Borrowed Scenery):</strong> Framing distant landscapes as part of the designed environment</li>
+            <li><strong>Engawa (Verandas):</strong> Transitional spaces between interior and exterior</li>
+            <li><strong>Tokonoma:</strong> Alcoves for displaying seasonal natural elements</li>
+            <li><strong>Wabi-Sabi:</strong> Appreciation for imperfection and transience in materials</li>
+            <li><strong>Minimal Intervention:</strong> Allowing natural weathering and aging of materials</li>
+          </ul>
+        </div>
+        
+        <p class="mb-10">
+          These design principles reflect Shinto and Buddhist philosophical traditions that view humans as integrated within nature rather than separate from it. The emphasis is not on conquering or controlling nature, but on creating harmony between natural and built elements.
+        </p>
+        
+        <h2 class="text-2xl font-bold mb-4 text-gray-800">Islamic Gardens: Paradise on Earth</h2>
+        
+        <p class="mb-6">
+          Islamic architectural traditions offer another distinctive cultural interpretation of biophilia. In regions characterised by harsh desert environments, Islamic gardens created protected microclimates that provided both practical benefits and spiritual significance.
+        </p>
+        
+        <p class="mb-6">
+          The <em>chahar bagh</em> (four-part garden) layout, with water channels dividing space into quadrants, represents paradise as described in the Quran. These precisely ordered geometric patterns may appear at odds with Western notions of "natural" design, which often favor organic forms. Yet they exemplify a cultural understanding of nature based not on wilderness but on the life-giving properties of water and vegetation in an arid context.
+        </p>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-10">
+          <div>
+            <div class="bg-blue-50 p-6 rounded-xl">
+              <h4 class="font-bold mb-3 text-blue-800">Water as Multisensory Element</h4>
+              <p class="text-gray-700">
+                In Islamic biophilic design, water serves multiple functions: cooling the air, creating pleasant sounds, reflecting architecture, and symbolising spiritual purification. This multisensory approach contrasts with Western designs that often emphasise water primarily as a visual element.
+              </p>
+            </div>
+          </div>
+          
+          <div>
+            <div class="bg-blue-50 p-6 rounded-xl">
+              <h4 class="font-bold mb-3 text-blue-800">Geometric Abstraction of Nature</h4>
+              <p class="text-gray-700">
+                Rather than literal depictions of plants and animals, Islamic design tradition abstracts natural forms into geometric patterns. This approach reflects theological principles while still connecting occupants to natural order and complexity.
+              </p>
+            </div>
+          </div>
+        </div>
+        
+        <p class="mb-10">
+          Contemporary architects working in Islamic contexts are finding innovative ways to integrate these traditional biophilic approaches with modern sustainability needs, creating buildings that are both culturally resonant and environmentally responsive.
+        </p>
+        
+        <h2 class="text-2xl font-bold mb-4 text-gray-800">Chinese Feng Shui: Energy Flow and Balance</h2>
+        
+        <p class="mb-6">
+          Chinese architectural traditions provide yet another cultural lens on biophilia through principles of feng shui. While often oversimplified in Western contexts, traditional feng shui is a sophisticated system for harmonising buildings with natural energy flows (<em>qi</em>) and balancing opposing forces (yin and yang).
+        </p>
+        
+        <p class="mb-6">
+          Unlike Western biophilic design that might prioritise maximising views or daylight, feng shui considers subtle interactions between building elements, orientation, and surrounding landscape features. For example, a building's relationship to mountains, water bodies, and prevailing winds is carefully considered for both practical and symbolic reasons.
+        </p>
+        
+        <div class="bg-gray-50 p-6 rounded-xl mb-10">
+          <h4 class="font-bold mb-3 text-gray-800">The Five Elements in Spatial Design</h4>
+          <p class="text-gray-700 mb-4">
+            Traditional Chinese design incorporates the five elements—wood, fire, earth, metal, and water—not simply as materials but as interrelated energetic qualities. The presence and balanced arrangement of these elements supports wellbeing according to a holistic understanding of human-nature relationships.
+          </p>
+          <div class="grid grid-cols-2 md:grid-cols-5 gap-4 text-center">
+            <div class="bg-green-50 p-3 rounded-lg">
+              <h5 class="font-semibold text-green-800">Wood</h5>
+              <p class="text-xs text-gray-600">Growth & Vitality</p>
+            </div>
+            <div class="bg-red-50 p-3 rounded-lg">
+              <h5 class="font-semibold text-red-800">Fire</h5>
+              <p class="text-xs text-gray-600">Energy & Expansion</p>
+            </div>
+            <div class="bg-yellow-50 p-3 rounded-lg">
+              <h5 class="font-semibold text-yellow-800">Earth</h5>
+              <p class="text-xs text-gray-600">Stability & Nourishment</p>
+            </div>
+            <div class="bg-gray-100 p-3 rounded-lg">
+              <h5 class="font-semibold text-gray-800">Metal</h5>
+              <p class="text-xs text-gray-600">Clarity & Precision</p>
+            </div>
+            <div class="bg-blue-50 p-3 rounded-lg">
+              <h5 class="font-semibold text-blue-800">Water</h5>
+              <p class="text-xs text-gray-600">Flow & Adaptability</p>
+            </div>
+          </div>
+        </div>
+        
+        <h2 class="text-2xl font-bold mb-4 text-gray-800">Nordic Minimalism: Light and Materiality</h2>
+        
+        <p class="mb-6">
+          In Scandinavian countries, where sunlight is scarce during winter months, biophilic design focuses intensely on maximising natural light and creating connections to the outdoors during all seasons. The Nordic approach often features a restrained material palette dominated by wood, with a preference for showing natural grain patterns and textures.
+        </p>
+        
+        <p class="mb-6">
+          This cultural interpretation of biophilia tends toward minimalism rather than abundance—finding profound connections to nature through careful material selection, quality of light, and honest construction methods rather than overt displays of vegetation.
+        </p>
+        
+        <p class="mb-10">
+          Finnish architect Alvar Aalto exemplified this approach, describing his work as creating a "connection between the human being and the natural world through architecture." His buildings use organic forms and natural materials, but in a highly selective and refined manner that reflects the character of Nordic landscapes and cultural values of practicality and restraint.
+        </p>
+        
+        <h2 class="text-2xl font-bold mb-4 text-gray-800">Indigenous Knowledge Systems: Place-Based Biophilia</h2>
+        
+        <p class="mb-6">
+          Indigenous architectural traditions worldwide offer perhaps the deepest cultural interpretations of biophilic design. These approaches are typically characterised by:
+        </p>
+        
+        <ul class="list-disc pl-6 mb-6 space-y-2 text-gray-700">
+          <li><strong>Deep local specificity</strong> – Designs respond to particular ecosystems and climatic conditions</li>
+          <li><strong>Temporal awareness</strong> – Buildings accommodate seasonal changes and natural cycles</li>
+          <li><strong>Material integration</strong> – Construction uses locally available materials with minimal processing</li>
+          <li><strong>Cultural continuity</strong> – Design reflects and reinforces cultural relationships with land</li>
+        </ul>
+        
+        <p class="mb-6">
+          For example, traditional Navajo (Diné) hooghan dwellings are oriented to cardinal directions, with the door facing east to welcome the morning sun. This orientation connects daily activities to solar patterns and cosmological understanding. Similarly, Māori architecture in New Zealand incorporates intricate wood carvings that tell stories of ancestral connections to specific landscapes and natural forces.
+        </p>
+        
+        <p class="mb-10">
+          These indigenous approaches challenge Western dualisms between nature and culture, instead seeing buildings as manifestations of ongoing relationships with living landscapes. They offer valuable insights for contemporary design seeking to create buildings that are deeply connected to place.
+        </p>
+        
+        <h2 class="text-2xl font-bold mb-4 text-gray-800">Toward Cultural Humility in Biophilic Design</h2>
+        
+        <p class="mb-6">
+          What can we learn from these diverse cultural interpretations of biophilia? Several important principles emerge:
+        </p>
+        
+        <ol class="list-decimal pl-6 mb-6 space-y-4 text-gray-700">
+          <li>
+            <strong>There is no single "correct" way to design with nature.</strong> Cultural context profoundly shapes what constitutes meaningful connection with the natural world in built environments.
+          </li>
+          <li>
+            <strong>Avoid imposing one cultural framework on different contexts.</strong> Western designers working globally should approach biophilic design with cultural humility, learning from local traditions rather than simply importing standardised approaches.
+          </li>
+          <li>
+            <strong>Look beyond visual connections to nature.</strong> Many cultural traditions emphasise other sensory modalities, symbolic elements, or philosophical principles in creating nature-connected spaces.
+          </li>
+          <li>
+            <strong>Consider both individual and collective experiences.</strong> Different cultures vary in how they balance personal wellness benefits with communal relationships to nature.
+          </li>
+          <li>
+            <strong>Recognise that "nature" itself is culturally constructed.</strong> What counts as "natural" varies enormously across cultural contexts.
+          </li>
+        </ol>
+        
+        <div class="bg-hbnGreen bg-opacity-5 p-6 rounded-xl mb-10">
+          <h3 class="font-bold text-xl mb-4 text-hbnGreen">Research Directions: Cultural Biophilia</h3>
+          <p class="text-gray-700 mb-4">
+            At the Healthy Buildings Network Leeds, we're exploring these cultural dimensions of biophilia through several research initiatives:
+          </p>
+          <ul class="list-disc pl-6 space-y-2 text-gray-700">
+            <li>A collaborative project with Leeds' School of Languages, Cultures and Societies examining how linguistic differences shape perceptions of nature in architectural contexts</li>
+            <li>Cross-cultural studies comparing physiological responses to different biophilic design interventions across demographic groups</li>
+            <li>Community-based participatory research with diverse neighborhoods in Leeds to understand culturally-specific preferences for nature integration in retrofit projects</li>
+            <li>Development of culturally-adapted biophilic design guidelines that accommodate various traditions while maintaining evidence-based health benefits</li>
+          </ul>
+        </div>
+        
+        <h2 class="text-2xl font-bold mb-4 text-gray-800">Conclusion: Cultural Resonance in Biophilic Design</h2>
+        
+        <p class="mb-6">
+          While the science behind biophilia is increasingly robust, its application in architecture must be culturally sensitive and contextually appropriate. The most successful biophilic designs don't just incorporate nature—they do so in ways that resonate with local cultural understandings of human-nature relationships.
+        </p>
+        
+        <p class="mb-6">
+          For practitioners, this means working collaboratively with communities, learning from traditional knowledge, and avoiding homogenised approaches. It requires humility to recognise that our own cultural frameworks for understanding nature are just one perspective among many.
+        </p>
+        
+        <p class="mb-6">
+          At the Healthy Buildings Network Leeds, we believe that the future of truly healthy buildings lies in this intersection of universal biophilic principles and cultural specificity. By bringing together insights from diverse cultural traditions with rigorous evidence-based approaches, we can create built environments that support wellbeing in culturally meaningful ways.
+        </p>
+        
+        <p class="mb-6">
+          The richness of human relationships with nature across different cultures isn't a complication to be overcome—it's a profound resource for creating more nuanced, effective, and resonant approaches to biophilic design.
+        </p>
+      </div>
+
+      <!-- Author Box -->
+      <div class="flex items-start mt-16 p-6 bg-gray-50 rounded-xl">
+        <img src="../assets/images/team_zhang.jpg" alt="Dr. Lin Zhang" class="w-20 h-20 rounded-full object-cover mr-4">
+        <div>
+          <h4 class="text-xl font-semibold text-gray-800">Dr. Lin Zhang</h4>
+          <p class="text-gray-600 mb-2">Research Fellow, School of Civil Engineering, University of Leeds</p>
+          <p class="text-gray-700">
+            Dr. Zhang specialises in cultural approaches to sustainable architecture, with particular focus on integrating traditional environmental knowledge with contemporary building science. Her research explores cross-cultural variations in biophilic design implementation.
+          </p>
+        </div>
+      </div>
+
+      <!-- Share and Tags -->
+      <div class="flex flex-wrap justify-between items-center mt-12 pt-6 border-t border-gray-200">
+        <div class="flex items-center space-x-4 mb-4 md:mb-0">
+          <span class="text-gray-700 font-medium">Share:</span>
+          <a href="#" class="text-gray-600 hover:text-hbnPurple">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+            </svg>
+          </a>
+          <a href="#" class="text-gray-600 hover:text-hbnPurple">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
+            </svg>
+          </a>
+          <a href="#" class="text-gray-600 hover:text-hbnPurple">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"/>
+            </svg>
+          </a>
+        </div>
+        <div class="flex flex-wrap gap-2">
+          <span class="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm">Interdisciplinary Research</span>
+          <span class="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm">Arts & Humanities</span>
+          <span class="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm">Collaboration</span>
+          <span class="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm">Engineering</span>
+        </div>
+      </div>
+      
+      <div class="mt-12">
+        <a href="../blog.html" class="inline-flex items-center text-hbnPurple hover:underline">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+          </svg>
+          <span>Back to Blog</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Related Posts -->
+  <section class="py-16 bg-gray-50">
+    <div class="container mx-auto px-6 max-w-6xl">
+      <h2 class="text-3xl font-bold mb-10 text-center">Related Articles</h2>
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Related Post 1 -->
+        <a href="interview_marco.html" class="block">
+          <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+            <img src="../assets/images/profile_marco-felipe_king.png" alt="Interview with Dr. Marco-Felipe King" class="w-full h-48 object-cover">
+            <div class="p-6">
+              <span class="text-sm text-hbnBlue">Jan 14, 2025</span>
+              <h3 class="text-xl font-bold mb-2 mt-1">Interview with Dr. Marco-Felipe King</h3>
+              <p class="text-gray-600 mb-4">On computational modeling and interdisciplinary approaches to healthy buildings</p>
+              <div class="flex items-center text-hbnPurple font-medium">
+                <span>Read More</span>
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </a>
+        
+        <!-- Related Post 2 -->
+        <a href="rethinking_design_process.html" class="block">
+          <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+            <img src="../assets/images/design_process.jpg" alt="Interdisciplinary Design Process" class="w-full h-48 object-cover">
+            <div class="p-6">
+              <span class="text-sm text-hbnBlue">April 8, 2025</span>
+              <h3 class="text-xl font-bold mb-2 mt-1">Rethinking the Design Process</h3>
+              <p class="text-gray-600 mb-4">How collaborative approaches are transforming building design methodologies</p>
+              <div class="flex items-center text-hbnPurple font-medium">
+                <span>Read More</span>
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </a>
+        
+        <!-- Related Post 3 -->
+        <a href="biophilic_design_cultural_perspectives.html" class="block">
+          <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+            <img src="../assets/images/biophilic_design.jpg" alt="Biophilic Design Cultural Perspectives" class="w-full h-48 object-cover">
+            <div class="p-6">
+              <span class="text-sm text-hbnBlue">March 22, 2025</span>
+              <h3 class="text-xl font-bold mb-2 mt-1">Biophilic Design: Cultural Perspectives</h3>
+              <p class="text-gray-600 mb-4">Exploring how different cultures interpret and implement nature-inspired design</p>
+              <div class="flex items-center text-hbnPurple font-medium">
+                <span>Read More</span>
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white py-12 md:py-16">
+    <div class="container mx-auto max-w-6xl px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <!-- Bio / Logo section -->
+      <div class="mb-8">
+        <img src="../assets/images/hbn_landscape.png" alt="Healthy Buildings Network Leeds Logo" class="h-12 mb-4 filter brightness-0 invert opacity-90">
+        <p class="text-sm tracking-wide text-gray-300">
+          Healthy Buildings Network Leeds is a cross-disciplinary research and collaboration hub at the University of Leeds, focused on healthier, more sustainable built environments.
+        </p>
+  
+        <!-- Social Links -->
+        <ul class="flex mt-4">
+          <li class="mr-4 flex items-center">
+            <a href="https://www.linkedin.com/company/healthy-buildings-network/" target="_blank" class="text-gray-300 hover:text-hbnGreen transition-colors flex items-center">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+              </svg>
+              LinkedIn
+            </a>
+          </li>
+          <li class="mr-4 flex items-center">
+            <a href="mailto:healthy_buildings_network@leeds.ac.uk" class="text-gray-300 hover:text-hbnGreen transition-colors flex items-center">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+              </svg>
+              Email Us
+            </a>
+          </li>
+        </ul>
+      </div>
+  
+      <!-- Quick Links -->
+      <div>
+        <h4 class="text-xl font-bold mb-4">Quick Links</h4>
+        <ul class="space-y-2">
+          <li><a href="../index.html" class="text-gray-300 hover:text-hbnGreen transition-colors">Home</a></li>
+          <li><a href="../about.html" class="text-gray-300 hover:text-hbnGreen transition-colors">About</a></li>
+          <li><a href="../projects.html" class="text-gray-300 hover:text-hbnGreen transition-colors">Projects</a></li>
+          <li><a href="../events.html" class="text-gray-300 hover:text-hbnGreen transition-colors">Events</a></li>
+          <li><a href="../membership.html" class="text-gray-300 hover:text-hbnGreen transition-colors">Membership</a></li>
+          <li><a href="../contact.html" class="text-gray-300 hover:text-hbnGreen transition-colors">Contact</a></li>
+        </ul>
+      </div>
+  
+      <!-- Affiliations -->
+      <div>
+        <h4 class="text-xl font-bold mb-4">Affiliations</h4>
+        <ul class="space-y-2">
+          <li><a href="https://fluids.leeds.ac.uk" target="_blank" class="text-gray-300 hover:text-hbnGreen transition-colors">Leeds Institute for Fluid Dynamics</a></li>
+          <li><a href="https://lssi.leeds.ac.uk" target="_blank" class="text-gray-300 hover:text-hbnGreen transition-colors">Leeds Social Sciences Institute</a></li>
+          <li><a href="https://lahri.leeds.ac.uk" target="_blank" class="text-gray-300 hover:text-hbnGreen transition-colors">Leeds Arts & Humanities Research Institute</a></li>
+          <li><a href="https://environment.leeds.ac.uk/institute-climate-atmospheric-science" target="_blank" class="text-gray-300 hover:text-hbnGreen transition-colors">ICAS</a></li>
+          <li><a href="https://sustainability.leeds.ac.uk/get-involved/leeds-living-lab/" target="_blank" class="text-gray-300 hover:text-hbnGreen transition-colors">Leeds Living Lab</a></li>
+          <li><a href="https://lida.leeds.ac.uk/" target="_blank" class="text-gray-300 hover:text-hbnGreen transition-colors">Leeds Institute for Data Analytics</a></li>
+        </ul>
+      </div>
+    </div>
+  
+    <div class="container mx-auto max-w-6xl px-6 text-sm text-center pt-8 mt-8 border-t border-gray-700">
+      <p>© 2025 Healthy Buildings Network Leeds. All rights reserved.</p>
+      <p class="mt-2">University of Leeds, Leeds LS2 9JT, United Kingdom</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="../assets/js/script.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const menuButton = document.getElementById('mobile-menu-button');
+      const mobileMenu = document.getElementById('mobile-menu');
+      
+      if (menuButton && mobileMenu) {
+        menuButton.addEventListener('click', function() {
+          mobileMenu.classList.toggle('hidden');
+        });
+      }
+      
+      // Scroll to top button functionality
+      const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+      if (scrollToTopBtn) {
+        window.addEventListener('scroll', function() {
+          if (window.pageYOffset > 300) {
+            scrollToTopBtn.classList.remove('hidden');
+          } else {
+            scrollToTopBtn.classList.add('hidden');
+          }
+        });
+        
+        scrollToTopBtn.addEventListener('click', function() {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+      }
+      
+      // Smooth scrolling for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+          e.preventDefault();
+          
+          const targetId = this.getAttribute('href');
+          const targetElement = document.querySelector(targetId);
+          
+          if (targetElement) {
+            window.scrollTo({
+              top: targetElement.offsetTop - 80, // Offset for fixed header
+              behavior: 'smooth'
+            });
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>
