@@ -1,0 +1,805 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            hbnGreen: '#4e9317',
+            hbnPurple: '#8360a9',
+            hbnGray: '#808184',
+            hbnYellow: '#ffca29',
+            hbnBlue: '#3e95dd',
+          }
+        }
+      }
+    };
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Insights from the Healthy Buildings Network seminar on the evolving landscape of social housing, policy changes, and opportunities for healthier populations through data and collaboration.">
+  <title>Social Housing at a Crossroads: Insights from the HBN Seminar | Healthy Buildings Network Leeds</title>
+  
+  <link rel="icon" href="assets/images/hbn_fav.ico" type="image/x-icon"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    /* Additional styles for infographic text if needed */
+    .infographic-text {
+      font-family: 'Poppins', sans-serif;
+      font-size: 10px; /* Base size, will be scaled by SVG viewbox */
+      fill: #333;
+    }
+    .infographic-title {
+      font-size: 18px;
+      font-weight: 600;
+      fill: #333;
+    }
+    .infographic-subtitle {
+      font-size: 12px;
+      font-weight: 500;
+      fill: #555;
+    }
+    .infographic-icon-text {
+      font-size: 9px;
+      text-anchor: middle;
+      fill: #4A5568; /* Tailwind gray-700 */
+    }
+  </style>
+  </head>
+<body class="font-poppins">
+
+  <header class="bg-white shadow-md fixed w-full z-50">
+    <div class="container mx-auto px-6 flex justify-between items-center h-20">
+      <!-- Logo -->
+      <div class="flex-shrink-0">
+        <a href="../index.html" class="flex items-center space-x-4">
+          <img src="../assets/images/hbn_landscape.png" alt="Healthy Buildings Network Leeds Logo" class="h-12">
+          <img src="../assets/images/leeds_logo_black_on_white_bk.jpg" alt="Leeds Logo" class="h-12" >
+        </a>
+      </div>
+
+      <button class="md:hidden text-gray-600 hover:text-hbnGreen focus:outline-none" id="mobile-menu-button" aria-label="Open Menu">
+        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+
+      <nav class="hidden md:flex space-x-8" id="main-nav">
+        <a href="../index.html" class="text-gray-600 hover:text-hbnGreen font-medium transition-colors">Home</a>
+        <a href="../about.html" class="text-gray-600 hover:text-hbnGreen font-medium transition-colors">About Us</a>
+        <a href="../blog.html" class="text-hbnGreen font-medium transition-colors">Blog</a> <a href="../events.html" class="text-gray-600 hover:text-hbnGreen font-medium transition-colors">Events</a>
+        <a href="../projects.html" class="text-gray-600 hover:text-hbnGreen font-medium transition-colors">Projects</a>
+        <a href="../membership.html" class="text-gray-600 hover:text-hbnGreen font-medium transition-colors">Membership</a>
+        <a href="../contact.html" class="text-gray-600 hover:text-hbnGreen font-medium transition-colors">Contact</a>
+      </nav>
+    </div>
+    
+    <div class="md:hidden hidden bg-white w-full shadow-md" id="mobile-menu">
+      <div class="px-6 py-4 space-y-4">
+        <a href="../index.html" class="block text-gray-600 hover:text-hbnGreen font-medium">Home</a>
+        <a href="../about.html" class="block text-gray-600 hover:text-hbnGreen font-medium">About Us</a>
+        <a href="../blog.html" class="block text-hbnGreen font-medium">Blog</a>
+        <a href="../events.html" class="block text-gray-600 hover:text-hbnGreen font-medium">Events</a>
+        <a href="../projects.html" class="block text-gray-600 hover:text-hbnGreen font-medium">Projects</a>
+        <a href="../membership.html" class="block text-gray-600 hover:text-hbnGreen font-medium">Membership</a>
+        <a href="../contact.html" class="block text-gray-600 hover:text-hbnGreen font-medium">Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <button id="scrollToTopBtn" class="fixed bottom-5 right-5 bg-hbnGreen text-white p-3 rounded-full shadow-md hidden z-50" aria-label="Scroll to top">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18" />
+    </svg>
+  </button>
+
+  <section class="relative pt-20">
+    <div class="bg-gradient-to-r from-hbnPurple to-hbnBlue text-white py-16 md:py-24">
+      <div class="container mx-auto px-6 max-w-6xl">
+        <div class="md:flex items-center">
+          <div class="md:w-3/5 md:pr-12 mb-10 md:mb-0">
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">Social Housing at a Crossroads</h1>
+            <p class="text-xl opacity-90 mb-4 max-w-2xl">
+              Insights from the HBN Seminar on Policy Shifts, Data, and Healthier Populations
+            </p>
+            <div class="flex items-center text-sm opacity-75">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+              </svg>
+              <span>15 May 2025</span> </div>
+          </div>
+          <div class="md:w-2/5">
+            <img src="../assets/images/events/seminars/jon/nwldc-new-logo-white_original.png" alt="Stylised image representing healthy communities" class="rounded-lg shadow-xl">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="bg-gray-100 py-3">
+    <div class="container mx-auto px-6 max-w-6xl">
+      <div class="flex text-sm">
+        <a href="../index.html" class="text-gray-600 hover:text-hbnGreen">Home</a>
+        <span class="mx-2 text-gray-400">/</span>
+        <a href="../blog.html" class="text-gray-600 hover:text-hbnGreen">Blog</a>
+        <span class="mx-2 text-gray-400">/</span>
+        <span class="text-gray-800">Social Housing at a Crossroads</span>
+      </div>
+    </div>
+  </div>
+
+  <section class="py-16 bg-white">
+    <div class="container mx-auto px-6 max-w-4xl">
+      <div class="prose max-w-none mb-12">
+        <p class="text-xl text-gray-700 leading-relaxed mb-8">
+          The UK's social housing sector is navigating a period of profound transformation. On the 14th May 2025, the Healthy Buildings Network Leeds hosted an insightful online seminar featuring Jon Fairburn and Louise Austin from <a 
+          href="https://www.nwleics.gov.uk/" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          class="text-hbnGreen hover:underline font-medium"
+        >
+          North West Leicestershire District Council
+        </a>. The discussion, "Trends and policy changes in social housing: Opportunities for healthier populations?", shed light on the complex challenges and significant opportunities facing the sector, emphasising the pivotal role of data and collaboration in shaping healthier futures for residents.
+        </p>
+
+
+        <div class="flex justify-center my-8">
+          <a href="../events/seminars/jon/NWLDC_Healthy_Building_Network_slides.pdf" download class="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-hbnGreen text-white font-semibold shadow-lg hover:bg-green-700 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+            </svg>
+            Download Presentation Slides
+          </a>
+        </div>
+
+
+        <h2 class="text-2xl font-bold mb-4 text-gray-800">The Shifting Landscape: New Pressures and Standards</h2>
+        
+        <p class="mb-6">
+          Jon Fairburn opened by contextualising the immense pressures on social housing providers. Decades of under-investment, coupled with recent crises, have created a "perfect storm." Key drivers of change include:
+        </p>
+        <ul class="list-disc pl-6 mb-6 space-y-3">
+          <li><strong>Awaab’s Law:</strong> Mandating swift action on hazards like damp and mould, placing health outcomes at the forefront.</li>
+          <li><strong>New Consumer Standards (April 2024):</strong> The Regulator of Social Housing is enforcing stricter standards for safety, quality, transparency, and tenant engagement. Many providers are currently struggling to meet these, with only a few achieving top C1 grades.</li>
+          <li><strong>Net Zero Targets:</strong> The urgent need to decarbonise housing stock, requiring substantial investment and innovative solutions, often supported by initiatives like the Social Housing Decarbonisation Fund (SHDF).</li>
+          <li><strong>Demographic and Climate Pressures:</strong> An ageing population with increasing health vulnerabilities and the growing threat of overheating in homes due to climate change.</li>
+        </ul>
+        <p class="mb-6">
+          These pressures demand a more data-driven and proactive approach to housing management, moving beyond reactive repairs to preventative strategies that enhance resident wellbeing.
+        </p>
+
+        <div class="my-8 mx-auto bg-gray-50 p-6 rounded-lg shadow-lg max-w-3xl">
+          <h2 class="text-center text-2xl font-bold mb-6 text-indigo-700">Social Housing Transformation</h2>
+          
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <!-- CHALLENGES SECTION -->
+            <div class="bg-purple-50 p-4 rounded-lg">
+              <h3 class="text-center text-lg font-semibold text-purple-800 mb-4">Key Challenges</h3>
+              
+              <div class="grid grid-cols-2 gap-4">
+                <div class="flex flex-col items-center">
+                  <div class="bg-white p-3 rounded-full shadow-md mb-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#8360a9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M2 22l.01-.01M3 16l.01-.01M7 22l.01-.01M12 16v6M17 22l.01-.01M22 16l.01-.01M22 11l.01-.01M16 12V6M12 3L8 7H6a2 2 0 00-2 2v9"></path>
+                      <path d="M18 5l4 2v5a2 2 0 01-2 2h-2"></path>
+                    </svg>
+                  </div>
+                  <span class="text-sm font-medium text-center">Damp &<br/>Mould</span>
+                </div>
+                
+                <div class="flex flex-col items-center">
+                  <div class="bg-white p-3 rounded-full shadow-md mb-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#8360a9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M12 22a10 10 0 1 0 0-20 10 10 0 0 0 0 20z"></path>
+                      <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
+                      <line x1="12" y1="17" x2="12.01" y2="17"></line>
+                    </svg>
+                  </div>
+                  <span class="text-sm font-medium text-center">Regulatory<br/>Standards</span>
+                </div>
+                
+                <div class="flex flex-col items-center">
+                  <div class="bg-white p-3 rounded-full shadow-md mb-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#8360a9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M12 3v1M12 21v1M4.22 4.22l.77.77M18.78 18.78l.77.77M3 12h1M21 12h1M4.22 19.78l.77-.77M18.78 5.22l.77-.77"></path>
+                      <circle cx="12" cy="12" r="7"></circle>
+                    </svg>
+                  </div>
+                  <span class="text-sm font-medium text-center">Climate<br/>Change</span>
+                </div>
+                
+                <div class="flex flex-col items-center">
+                  <div class="bg-white p-3 rounded-full shadow-md mb-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#8360a9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                      <circle cx="9" cy="7" r="4"></circle>
+                      <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                      <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                    </svg>
+                  </div>
+                  <span class="text-sm font-medium text-center">Staff<br/>Shortages</span>
+                </div>
+              </div>
+            </div>
+            
+            <!-- OPPORTUNITIES SECTION -->
+            <div class="bg-green-50 p-4 rounded-lg">
+              <h3 class="text-center text-lg font-semibold text-green-800 mb-4">Key Opportunities</h3>
+              
+              <div class="grid grid-cols-2 gap-4">
+                <div class="flex flex-col items-center">
+                  <div class="bg-white p-3 rounded-full shadow-md mb-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#4e9317" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <line x1="18" y1="20" x2="18" y2="10"></line>
+                      <line x1="12" y1="20" x2="12" y2="4"></line>
+                      <line x1="6" y1="20" x2="6" y2="14"></line>
+                      <line x1="3" y1="20" x2="21" y2="20"></line>
+                    </svg>
+                  </div>
+                  <span class="text-sm font-medium text-center">Data<br/>Analysis</span>
+                </div>
+                
+                <div class="flex flex-col items-center">
+                  <div class="bg-white p-3 rounded-full shadow-md mb-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#4e9317" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M17 3a2.83 2.83 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"></path>
+                    </svg>
+                  </div>
+                  <span class="text-sm font-medium text-center">Academic<br/>Partnerships</span>
+                </div>
+                
+                <div class="flex flex-col items-center">
+                  <div class="bg-white p-3 rounded-full shadow-md mb-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#4e9317" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <circle cx="12" cy="12" r="10"></circle>
+                      <circle cx="12" cy="12" r="6"></circle>
+                      <circle cx="12" cy="12" r="2"></circle>
+                    </svg>
+                  </div>
+                  <span class="text-sm font-medium text-center">Smart<br/>Technology</span>
+                </div>
+                
+                <div class="flex flex-col items-center">
+                  <div class="bg-white p-3 rounded-full shadow-md mb-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#4e9317" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <line x1="12" y1="1" x2="12" y2="23"></line>
+                      <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                    </svg>
+                  </div>
+                  <span class="text-sm font-medium text-center">£1.3B Wave 3<br/>Funding</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- OUTCOMES SECTION -->
+          <div class="mt-6 bg-gradient-to-r from-purple-500 to-green-500 p-4 rounded-lg text-white">
+            <h3 class="text-center text-lg font-semibold mb-3">Outcomes</h3>
+            
+            <div class="flex justify-center items-center">
+              <div class="mr-4">
+                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                  <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                </svg>
+              </div>
+              <ul class="list-disc list-inside">
+                <li>Improved tenant health & wellbeing</li>
+                <li>Energy efficient & sustainable housing</li>
+                <li>Better data-driven decision making</li>
+                <li>Enhanced community engagement</li>
+              </ul>
+            </div>
+          </div>
+          
+          <p class="text-center mt-6 text-lg font-semibold text-green-800">Healthier Communities & Environments</p>
+          <p class="text-center text-xs text-gray-500 mt-1">Source: Healthy Buildings Network Seminar, Leeds, May 2025</p>
+        </div>
+        <h2 class="text-2xl font-bold mb-4 text-gray-800">The Data Goldmine: Untapped Potential in Housing Stock</h2>
+        
+        <p class="mb-6">
+          Louise Austin provided a compelling overview of the vast datasets held by housing providers. NWLDC, for instance, manages 4,000 homes and collects extensive data on property characteristics (age of components, construction type, EPC ratings) and tenant demographics (age, vulnerabilities, contact preferences).
+        </p>
+        <p class="mb-6">
+          "Housing associations are sitting on masses of data," Jon Fairburn reiterated, "but often lack the capacity and capability to analyse it effectively. Academics, on the other hand, have the expertise but often lack access to such rich, real-world data." This gap, he argued, presents a prime opportunity for partnership. Louise Austin added, "We spend so much time firefighting the day-to-day operational problems, we don't always get to see that strategic data analysis to help future problems."
+        </p>
+
+        <h2 class="text-2xl font-bold mb-4 text-gray-800">A Call for Collaboration: Universities and Housing Providers Unite</h2>
+        
+        <p class="mb-6">
+          The seminar strongly advocated for synergistic partnerships between universities and housing providers. Such collaborations can unlock significant value:
+        </p>
+        <ul class="list-disc pl-6 mb-6 space-y-3">
+          <li><strong>Monitoring & Evaluation:</strong> Assisting with the evaluation of SHDF Wave 3 projects. NWLDC, for example, has secured £8 million to retrofit 882 homes and is keen to partner with universities to analyse outcomes related to energy savings, carbon reduction, health, and comfort.</li>
+          <li><strong>Data Analysis & Insights:</strong> Applying advanced data science techniques to housing data to identify trends, predict issues (e.g., properties at risk of damp/mould), and inform strategic decisions.</li>
+          <li><strong>Student Placements & Talent Pipeline:</strong> Providing students in fields like data science, geography, engineering, and health sciences with valuable real-world experience, while simultaneously addressing staff shortages in the housing sector.</li>
+          <li><strong>Knowledge Transfer Partnerships (KTPs):</strong> Developing longer-term strategic projects to tackle complex issues, with successful examples already funded in the sector.</li>
+          <li><strong>Research & Innovation:</strong> Co-creating research projects that address practical challenges and contribute to academic knowledge, leading to impactful case studies.</li>
+        </ul>
+        <p class="mb-6">
+          The speakers shared a briefing paper outlining numerous research ideas for their SHDF Wave 3 project, inviting academics to engage.
+        </p>
+
+        <div class="max-w-4xl mx-auto p-6 bg-gradient-to-br from-slate-50 to-slate-100 rounded-xl shadow-lg">
+          <h2 class="text-center text-2xl font-bold text-indigo-800 mb-6">Universities & Housing Providers: The Power of Collaboration</h2>
+          
+          <div class="flex flex-col md:flex-row gap-6 mb-8">
+            <!-- Left Column - Stakeholders -->
+            <div class="flex-1 bg-white rounded-lg shadow-md p-4">
+              <h3 class="text-center text-lg font-semibold text-indigo-700 mb-4">Key Stakeholders</h3>
+              
+              <div class="flex items-center mb-6 bg-indigo-50 p-3 rounded-lg">
+                <div class="bg-indigo-100 p-3 rounded-full mr-3">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-indigo-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                  </svg>
+                </div>
+                <div>
+                  <h4 class="font-semibold text-indigo-900">Housing Providers</h4>
+                  <p class="text-sm text-indigo-700">Data-rich, resource-constrained</p>
+                </div>
+              </div>
+              
+              <div class="flex items-center bg-indigo-50 p-3 rounded-lg">
+                <div class="bg-indigo-100 p-3 rounded-full mr-3">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-indigo-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path d="M12 14l9-5-9-5-9 5 9 5z" />
+                    <path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222" />
+                  </svg>
+                </div>
+                <div>
+                  <h4 class="font-semibold text-indigo-900">Universities</h4>
+                  <p class="text-sm text-indigo-700">Expertise-rich, data-seeking</p>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Right Column - Case Study -->
+            <div class="flex-1 bg-white rounded-lg shadow-md p-4">
+              <h3 class="text-center text-lg font-semibold text-green-700 mb-4">Success Story</h3>
+              
+              <div class="bg-green-50 p-4 rounded-lg">
+                <h4 class="font-semibold text-green-800 mb-2">NWLDC Wave 3 Project</h4>
+                <div class="flex items-center mb-3">
+                  <div class="bg-green-100 p-2 rounded-full mr-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                  </div>
+                  <span class="font-semibold text-green-800">£8 million funding</span>
+                </div>
+                <div class="flex items-center mb-3">
+                  <div class="bg-green-100 p-2 rounded-full mr-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+                    </svg>
+                  </div>
+                  <span class="font-semibold text-green-800">882 homes retrofitted</span>
+                </div>
+                <div class="flex items-center">
+                  <div class="bg-green-100 p-2 rounded-full mr-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                    </svg>
+                  </div>
+                  <span class="font-semibold text-green-800">PAS 2035 standards</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Collaboration Opportunities - Center Section -->
+          <div class="bg-white rounded-lg shadow-md p-6 mb-8">
+            <h3 class="text-center text-lg font-semibold text-gray-800 mb-6">Collaboration Opportunities</h3>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+              <!-- Card 1 -->
+              <div class="bg-blue-50 rounded-lg p-4 flex flex-col items-center">
+                <div class="bg-blue-100 p-3 rounded-full mb-3">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-blue-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                  </svg>
+                </div>
+                <h4 class="font-semibold text-blue-900 mb-2 text-center">Monitoring & Evaluation</h4>
+                <ul class="text-sm text-blue-700 space-y-1">
+                  <li>• Energy & carbon savings analysis</li>
+                  <li>• Health impact assessment</li>
+                  <li>• Comfort & wellbeing measures</li>
+                </ul>
+              </div>
+              
+              <!-- Card 2 -->
+              <div class="bg-purple-50 rounded-lg p-4 flex flex-col items-center">
+                <div class="bg-purple-100 p-3 rounded-full mb-3">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-purple-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 12l3-3 3 3 4-4M8 21l4-4 4 4M3 4h18M4 4h16v12a1 1 0 01-1 1H5a1 1 0 01-1-1V4z" />
+                  </svg>
+                </div>
+                <h4 class="font-semibold text-purple-900 mb-2 text-center">Data Analysis & Insights</h4>
+                <ul class="text-sm text-purple-700 space-y-1">
+                  <li>• Predictive modeling for issues</li>
+                  <li>• GIS spatial analysis</li>
+                  <li>• Strategic decision support</li>
+                </ul>
+              </div>
+              
+              <!-- Card 3 -->
+              <div class="bg-amber-50 rounded-lg p-4 flex flex-col items-center">
+                <div class="bg-amber-100 p-3 rounded-full mb-3">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-amber-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                  </svg>
+                </div>
+                <h4 class="font-semibold text-amber-900 mb-2 text-center">Student Placements</h4>
+                <ul class="text-sm text-amber-700 space-y-1">
+                  <li>• Data science & GIS specialists</li>
+                  <li>• Engineering & sustainability</li>
+                  <li>• Health & social sciences</li>
+                </ul>
+              </div>
+              
+              <!-- Card 4 -->
+              <div class="bg-emerald-50 rounded-lg p-4 flex flex-col items-center">
+                <div class="bg-emerald-100 p-3 rounded-full mb-3">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-emerald-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122" />
+                  </svg>
+                </div>
+                <h4 class="font-semibold text-emerald-900 mb-2 text-center">Knowledge Transfer</h4>
+                <ul class="text-sm text-emerald-700 space-y-1">
+                  <li>• Management KTPs</li>
+                  <li>• Long-term strategic projects</li>
+                  <li>• Better Care Fund integration</li>
+                </ul>
+              </div>
+              
+              <!-- Card 5 -->
+              <div class="bg-rose-50 rounded-lg p-4 flex flex-col items-center">
+                <div class="bg-rose-100 p-3 rounded-full mb-3">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-rose-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                  </svg>
+                </div>
+                <h4 class="font-semibold text-rose-900 mb-2 text-center">Research & Innovation</h4>
+                <ul class="text-sm text-rose-700 space-y-1">
+                  <li>• UKRI & EU Horizon bids</li>
+                  <li>• Co-created research projects</li>
+                  <li>• REF impact case studies</li>
+                </ul>
+              </div>
+              
+              <!-- Card 6 -->
+              <div class="bg-teal-50 rounded-lg p-4 flex flex-col items-center">
+                <div class="bg-teal-100 p-3 rounded-full mb-3">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-teal-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z" />
+                  </svg>
+                </div>
+                <h4 class="font-semibold text-teal-900 mb-2 text-center">Co-creation & Engagement</h4>
+                <ul class="text-sm text-teal-700 space-y-1">
+                  <li>• Tenant consultation expertise</li>
+                  <li>• Community engagement</li>
+                  <li>• Social justice & equity focus</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Benefits Section - Bottom -->
+          <div class="bg-gradient-to-r from-indigo-500 to-green-500 rounded-lg shadow-md p-5">
+            <h3 class="text-center text-xl font-bold text-white mb-4">Win-Win Outcomes</h3>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div class="bg-white bg-opacity-20 rounded-lg p-4">
+                <h4 class="font-semibold text-white text-lg mb-3 text-center">For Housing Providers</h4>
+                <ul class="text-white space-y-2">
+                  <li class="flex items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                    </svg>
+                    Better data-driven decisions
+                  </li>
+                  <li class="flex items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                    </svg>
+                    Address staff & expertise gaps
+                  </li>
+                  <li class="flex items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                    </svg>
+                    Enhanced regulatory compliance
+                  </li>
+                  <li class="flex items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                    </svg>
+                    Healthier buildings & tenants
+                  </li>
+                </ul>
+              </div>
+              
+              <div class="bg-white bg-opacity-20 rounded-lg p-4">
+                <h4 class="font-semibold text-white text-lg mb-3 text-center">For Universities</h4>
+                <ul class="text-white space-y-2">
+                  <li class="flex items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                    </svg>
+                    Access to rich, real-world data
+                  </li>
+                  <li class="flex items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                    </svg>
+                    Student placement opportunities
+                  </li>
+                  <li class="flex items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                    </svg>
+                    REF impact case study potential
+                  </li>
+                  <li class="flex items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                    </svg>
+                    Funding for applied research
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          
+          <p class="text-center text-xs text-gray-500 mt-4">Source: Healthy Buildings Network Seminar, Leeds, May 2025</p>
+        </div>
+        <h2 class="text-2xl font-bold mb-4 text-gray-800">Addressing Key Challenges: Damp, Mould, and Beyond</h2>
+        <p class="mb-6">
+          Damp and mould remain a pervasive issue, with NWLDC alone having over 700 open repair orders. Awaab’s Law intensifies the pressure to resolve these swiftly. The seminar explored how data from in-home monitors (like AICO or Switchee devices, which NWLDC is piloting) can provide early warnings and support preventative measures. These monitors can track temperature, humidity, CO2 levels, and even occupancy patterns, offering rich data for analysis.
+        </p>
+        <p class="mb-6">
+          Other significant challenges discussed included the need to protect vulnerable, ageing populations from issues like overheating – a risk potentially exacerbated by some energy efficiency retrofits if not carefully managed – and the complexities of effective tenant engagement and co-creation of services.
+        </p>
+
+        <h2 class="text-2xl font-bold mb-4 text-gray-800">The Role of Technology: Sensors and AI</h2>
+        <p class="mb-6">
+          The potential for technologies like IoT sensors and Artificial Intelligence (AI) was a recurring theme. While still nascent in the housing sector, AI could be a "game changer" for spotting trends in repairs, improving regulatory reporting, informing decisions, and even predicting tenant health needs. The rich datasets held by housing providers are ideal training grounds for AI models, provided ethical considerations and data governance are robustly addressed.
+        </p>
+        
+        <h2 class="text-2xl font-bold mb-4 text-gray-800">A Path Forward</h2>
+        
+        <p class="mb-6">
+          The seminar concluded with a powerful message: the challenges facing social housing are immense, but so are the opportunities for positive change. By fostering strong, collaborative relationships between those on the frontline of housing provision and the research community, we can unlock innovative solutions.
+        </p>
+        
+        <p class="mb-6">
+          The Healthy Buildings Network Leeds is committed to being a catalyst for these collaborations. We aim to bridge the gap between theory and practice, ensuring that research translates into tangible improvements in the health, safety, and wellbeing of residents in social housing across the UK.
+        </p>
+        
+        <div class="bg-hbnPurple bg-opacity-5 p-6 rounded-xl mb-10">
+          <h3 class="font-bold text-xl mb-4 text-hbnPurple">Join the Conversation</h3>
+          <p class="text-gray-700">
+            We invite researchers, housing professionals, policymakers, and community advocates to connect with us. Let's work together to build a future where every home is a healthy home. Visit [www.healthybuildingsnetwork.org](http://www.healthybuildingsnetwork.org) to learn more and get involved.
+          </p>
+        </div>
+      </div>
+
+      <div class="flex items-start mt-16 p-6 bg-gray-50 rounded-xl">
+        <img src="https://placehold.co/80x80/cccccc/333333?text=MFK" alt="Dr. Marco-Felipe King" class="w-20 h-20 rounded-full object-cover mr-4"> <div>
+          <h4 class="text-xl font-semibold text-gray-800">Dr. Marco-Felipe King</h4>
+          <p class="text-gray-600 mb-2">Director, Healthy Buildings Network Leeds & Water, Public Health & Environmental Engineering Research Group, University of Leeds</p>
+          <p class="text-gray-700">
+            Dr. King leads interdisciplinary research at the intersection of building engineering, public health, and data science. He is passionate about fostering collaborations to create healthier and more sustainable built environments for all.
+          </p>
+        </div>
+      </div>
+
+      <div class="flex flex-wrap justify-between items-center mt-12 pt-6 border-t border-gray-200">
+        <div class="flex items-center space-x-4 mb-4 md:mb-0">
+          <span class="text-gray-700 font-medium">Share:</span>
+          <a href="#" class="text-gray-600 hover:text-hbnPurple" aria-label="Share on LinkedIn">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+            </svg>
+          </a>
+          <a href="#" class="text-gray-600 hover:text-hbnPurple" aria-label="Share on Twitter">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
+            </svg>
+          </a>
+          <a href="#" class="text-gray-600 hover:text-hbnPurple" aria-label="Share on Facebook">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"/>
+            </svg>
+          </a>
+        </div>
+        <div class="flex flex-wrap gap-2">
+          <span class="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm">Social Housing</span>
+          <span class="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm">Healthy Buildings</span>
+          <span class="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm">Housing Policy</span>
+          <span class="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm">Data Analytics</span>
+          <span class="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm">Research Collaboration</span>
+        </div>
+      </div>
+      
+      <div class="mt-12">
+        <a href="../blog.html" class="inline-flex items-center text-hbnPurple hover:underline">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+          </svg>
+          <span>Back to Blog</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 bg-gray-50">
+    <div class="container mx-auto px-6 max-w-6xl">
+      <h2 class="text-3xl font-bold mb-10 text-center text-gray-800">Related Articles</h2>
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <a href="#" class="block group"> <div class="bg-white rounded-xl shadow-md overflow-hidden group-hover:shadow-lg transition-shadow h-full flex flex-col">
+            <img src="https://placehold.co/600x400/3e95dd/ffffff?text=Data+in+Housing" alt="Data in Housing" class="w-full h-48 object-cover">
+            <div class="p-6 flex flex-col flex-grow">
+              <span class="text-sm text-hbnBlue">May 10, 2025</span>
+              <h3 class="text-xl font-bold mb-2 mt-1 text-gray-800 group-hover:text-hbnPurple transition-colors">The Critical Role of Data in Modern Housing Management</h3>
+              <p class="text-gray-600 mb-4 flex-grow">Exploring how data analytics can transform housing services and improve tenant outcomes.</p>
+              <div class="flex items-center text-hbnPurple font-medium mt-auto">
+                <span>Read More</span>
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </a>
+        
+        <a href="#" class="block group"> <div class="bg-white rounded-xl shadow-md overflow-hidden group-hover:shadow-lg transition-shadow h-full flex flex-col">
+            <img src="https://placehold.co/600x400/4e9317/ffffff?text=Damp+and+Mould+Solutions" alt="Damp and Mould Solutions" class="w-full h-48 object-cover">
+            <div class="p-6 flex flex-col flex-grow">
+              <span class="text-sm text-hbnBlue">April 28, 2025</span>
+              <h3 class="text-xl font-bold mb-2 mt-1 text-gray-800 group-hover:text-hbnPurple transition-colors">Tackling Damp and Mould: A Multi-faceted Approach for Healthier Homes</h3>
+              <p class="text-gray-600 mb-4 flex-grow">Strategies for prevention, remediation, and policy changes to combat damp and mould in residential properties.</p>
+              <div class="flex items-center text-hbnPurple font-medium mt-auto">
+                <span>Read More</span>
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </a>
+        
+        <a href="#" class="block group"> <div class="bg-white rounded-xl shadow-md overflow-hidden group-hover:shadow-lg transition-shadow h-full flex flex-col">
+            <img src="https://placehold.co/600x400/ffca29/333333?text=University+Partnerships" alt="University Partnerships" class="w-full h-48 object-cover">
+            <div class="p-6 flex flex-col flex-grow">
+              <span class="text-sm text-hbnBlue">March 15, 2025</span>
+              <h3 class="text-xl font-bold mb-2 mt-1 text-gray-800 group-hover:text-hbnPurple transition-colors">University Partnerships: Driving Innovation in Social Housing</h3>
+              <p class="text-gray-600 mb-4 flex-grow">How academic collaborations are helping to solve real-world housing challenges.</p>
+              <div class="flex items-center text-hbnPurple font-medium mt-auto">
+                <span>Read More</span>
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="bg-gray-800 text-white py-12 md:py-16">
+    <div class="container mx-auto max-w-6xl px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div class="mb-8">
+         <img src="../assets/images/hbn_landscape.png" alt="Healthy Buildings Network Leeds Logo" class="h-12 mb-4 filter brightness-0 invert opacity-90"> <p class="text-sm tracking-wide text-gray-300">
+          Healthy Buildings Network Leeds is a cross-disciplinary research and collaboration hub at the University of Leeds, focused on healthier, more sustainable built environments.
+        </p>
+  
+        <ul class="flex mt-4 space-x-4">
+          <li class="flex items-center">
+            <a href="https://www.linkedin.com/company/healthy-buildings-network/" target="_blank" class="text-gray-300 hover:text-hbnGreen transition-colors flex items-center" aria-label="LinkedIn Profile">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+              </svg>
+              LinkedIn
+            </a>
+          </li>
+          <li class="flex items-center">
+            <a href="mailto:M.F.King@leeds.ac.uk" class="text-gray-300 hover:text-hbnGreen transition-colors flex items-center" aria-label="Email Us">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+              </svg>
+              Email Us
+            </a>
+          </li>
+        </ul>
+      </div>
+  
+      <div>
+        <h4 class="text-xl font-bold mb-4">Quick Links</h4>
+        <ul class="space-y-2">
+          <li><a href="../index.html" class="text-gray-300 hover:text-hbnGreen transition-colors">Home</a></li>
+          <li><a href="../about.html" class="text-gray-300 hover:text-hbnGreen transition-colors">About</a></li>
+          <li><a href="../projects.html" class="text-gray-300 hover:text-hbnGreen transition-colors">Projects</a></li>
+          <li><a href="../events.html" class="text-gray-300 hover:text-hbnGreen transition-colors">Events</a></li>
+          <li><a href="../membership.html" class="text-gray-300 hover:text-hbnGreen transition-colors">Membership</a></li>
+          <li><a href="../contact.html" class="text-gray-300 hover:text-hbnGreen transition-colors">Contact</a></li>
+        </ul>
+      </div>
+  
+      <div>
+        <h4 class="text-xl font-bold mb-4">Affiliations</h4>
+        <ul class="space-y-2">
+          <li><a href="https://fluids.leeds.ac.uk" target="_blank" class="text-gray-300 hover:text-hbnGreen transition-colors">Leeds Institute for Fluid Dynamics</a></li>
+          <li><a href="https://lssi.leeds.ac.uk" target="_blank" class="text-gray-300 hover:text-hbnGreen transition-colors">Leeds Social Sciences Institute</a></li>
+          <li><a href="https://lahri.leeds.ac.uk" target="_blank" class="text-gray-300 hover:text-hbnGreen transition-colors">Leeds Arts & Humanities Research Institute</a></li>
+          <li><a href="https://environment.leeds.ac.uk/institute-climate-atmospheric-science" target="_blank" class="text-gray-300 hover:text-hbnGreen transition-colors">ICAS</a></li>
+          <li><a href="https://sustainability.leeds.ac.uk/get-involved/leeds-living-lab/" target="_blank" class="text-gray-300 hover:text-hbnGreen transition-colors">Leeds Living Lab</a></li>
+          <li><a href="https://lida.leeds.ac.uk/" target="_blank" class="text-gray-300 hover:text-hbnGreen transition-colors">Leeds Institute for Data Analytics</a></li>
+        </ul>
+      </div>
+    </div>
+  
+    <div class="container mx-auto max-w-6xl px-6 text-sm text-center pt-8 mt-8 border-t border-gray-700">
+      <p>© 2025 Healthy Buildings Network Leeds. All rights reserved.</p>
+      <p class="mt-2">University of Leeds, Leeds LS2 9JT, United Kingdom</p>
+    </div>
+  </footer>
+
+  <script>
+    // Basic script for mobile menu toggle and scroll-to-top button
+    document.addEventListener('DOMContentLoaded', function() {
+      const menuButton = document.getElementById('mobile-menu-button');
+      const mobileMenu = document.getElementById('mobile-menu');
+      
+      if (menuButton && mobileMenu) {
+        menuButton.addEventListener('click', function() {
+          mobileMenu.classList.toggle('hidden');
+        });
+      }
+      
+      const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+      if (scrollToTopBtn) {
+        window.addEventListener('scroll', function() {
+          if (window.pageYOffset > 300) { // Show button after 300px scroll
+            scrollToTopBtn.classList.remove('hidden');
+          } else {
+            scrollToTopBtn.classList.add('hidden');
+          }
+        });
+        
+        scrollToTopBtn.addEventListener('click', function() {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+      }
+      
+      // Smooth scrolling for any internal anchor links (if added later)
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+          e.preventDefault();
+          
+          const targetId = this.getAttribute('href');
+          const targetElement = document.querySelector(targetId);
+          
+          if (targetElement) {
+            // Adjust offset if header is fixed, e.g., header height is 80px
+            const headerOffset = 80; 
+            const elementPosition = targetElement.getBoundingClientRect().top;
+            const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+            
+            window.scrollTo({
+              top: offsetPosition,
+              behavior: 'smooth'
+            });
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>
