@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            hbnGreen: '#4e9317',
+            hbnPurple: '#8360a9',
+            hbnGray: '#808184',
+            hbnYellow: '#ffca29',
+            hbnBlue: '#3e95dd',
+          }
+        }
+      }
+    };
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Insights from the Healthy Buildings Network seminar with Prof. Chuck Gerba and Dr. Khalid Iljaz on pathogen transmission in bathrooms, toilet hygiene, and the dynamic nature of disease spread in indoor environments.">
+  <title>Beyond Flushing: The Dynamic World of Pathogen Transmission in Bathrooms | Healthy Buildings Network Leeds</title>
+  
+  <link rel="icon" href="assets/images/hbn_fav.ico" type="image/x-icon"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    /* Additional styles for infographic text if needed */
+    .infographic-text {
+      font-family: 'Poppins', sans-serif;
+      font-size: 10px; /* Base size, will be scaled by SVG viewbox */
+      fill: #333;
+    }
+    .infographic-title {
+      font-size: 18px;
+      font-weight: 600;
+      fill: #333;
+    }
+    .infographic-subtitle {
+      font-size: 12px;
+      font-weight: 500;
+      fill: #555;
+    }
+    .infographic-icon-text {
+      font-size: 9px;
+      text-anchor: middle;
+      fill: #4A5568; /* Tailwind gray-700 */
+    }
+  </style>
+  </head>
+<body class="font-poppins">
+
+  <header class="bg-white shadow-md fixed w-full z-50">
+    <div class="container mx-auto px-6 flex justify-between items-center h-20">
+      <!-- Logo -->
+      <div class="flex-shrink-0">
+        <a href="../index.html" class="flex items-center space-x-4">
+          <img src="../assets/images/hbn_landscape.png" alt="Healthy Buildings Network Leeds Logo" class="h-12">
+          <img src="../assets/images/leeds_logo_black_on_white_bk.jpg" alt="Leeds Logo" class="h-12" >
+        </a>
+      </div>
+
+      <button class="md:hidden text-gray-600 hover:text-hbnGreen focus:outline-none" id="mobile-menu-button" aria-label="Open Menu">
+        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+
+      <nav class="hidden md:flex space-x-8" id="main-nav">
+        <a href="../index.html" class="text-gray-600 hover:text-hbnGreen font-medium transition-colors">Home</a>
+        <a href="../about.html" class="text-gray-600 hover:text-hbnGreen font-medium transition-colors">About Us</a>
+        <a href="../blog.html" class="text-hbnGreen font-medium transition-colors">Blog</a> <a href="../events.html" class="text-gray-600 hover:text-hbnGreen font-medium transition-colors">Events</a>
+        <a href="../projects.html" class="text-gray-600 hover:text-hbnGreen font-medium transition-colors">Projects</a>
+        <a href="../membership.html" class="text-gray-600 hover:text-hbnGreen font-medium transition-colors">Membership</a>
+        <a href="../contact.html" class="text-gray-600 hover:text-hbnGreen font-medium transition-colors">Contact</a>
+      </nav>
+    </div>
+    
+    <div class="md:hidden hidden bg-white w-full shadow-md" id="mobile-menu">
+      <div class="px-6 py-4 space-y-4">
+        <a href="../index.html" class="block text-gray-600 hover:text-hbnGreen font-medium">Home</a>
+        <a href="../about.html" class="block text-gray-600 hover:text-hbnGreen font-medium">About Us</a>
+        <a href="../blog.html" class="block text-hbnGreen font-medium">Blog</a>
+        <a href="../events.html" class="block text-gray-600 hover:text-hbnGreen font-medium">Events</a>
+        <a href="../projects.html" class="block text-gray-600 hover:text-hbnGreen font-medium">Projects</a>
+        <a href="../membership.html" class="block text-gray-600 hover:text-hbnGreen font-medium">Membership</a>
+        <a href="../contact.html" class="block text-gray-600 hover:text-hbnGreen font-medium">Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <button id="scrollToTopBtn" class="fixed bottom-5 right-5 bg-hbnGreen text-white p-3 rounded-full shadow-md hidden z-50" aria-label="Scroll to top">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18" />
+    </svg>
+  </button>
+
+  <section class="relative pt-20">
+    <div class="bg-gradient-to-r from-hbnPurple to-hbnBlue text-white py-16 md:py-24">
+      <div class="container mx-auto px-6 max-w-6xl">
+        <div class="md:flex items-center">
+          <div class="md:w-3/5 md:pr-12 mb-10 md:mb-0">
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">Beyond Flushing</h1>
+            <p class="text-xl opacity-90 mb-4 max-w-2xl">
+              The Dynamic World of Pathogen Transmission in Bathrooms
+            </p>
+            <div class="flex items-center text-sm opacity-75">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+              </svg>
+              <span>23 January 2025</span>
+            </div>
+          </div>
+          <div class="md:w-2/5">
+            <img src="../assets/images/events/seminars/gerba/toilet_plume.jpg" alt="Visualization of aerosol plume from toilet flushing" class="rounded-lg shadow-xl">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="bg-gray-100 py-3">
+    <div class="container mx-auto px-6 max-w-6xl">
+      <div class="flex text-sm">
+        <a href="../index.html" class="text-gray-600 hover:text-hbnGreen">Home</a>
+        <span class="mx-2 text-gray-400">/</span>
+        <a href="../blog.html" class="text-gray-600 hover:text-hbnGreen">Blog</a>
+        <span class="mx-2 text-gray-400">/</span>
+        <span class="text-gray-800">Beyond Flushing: The Dynamic World of Pathogen Transmission in Bathrooms</span>
+      </div>
+    </div>
+  </div>
+
+  <section class="py-16 bg-white">
+    <div class="container mx-auto px-6 max-w-4xl">
+      <div class="prose max-w-none mb-12">
+        <p class="text-xl text-gray-700 leading-relaxed mb-8">
+          The first Healthy Buildings Network seminar of 2025 brought together two leading experts in the field of environmental microbiology and hygiene to explore a topic that affects every building worldwide—toilet hygiene and pathogen transmission. <a 
+          href="https://cals.arizona.edu/swes/gerba/" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          class="text-hbnGreen hover:underline font-medium"
+        >
+          Prof. Chuck Gerba
+        </a> from the University of Arizona and <a 
+          href="https://www.rb.com/" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          class="text-hbnGreen hover:underline font-medium"
+        >
+          Dr. Khalid Iljaz
+        </a> from Reckitt Benckiser shared fascinating insights into how pathogens move through our built environments, with a special focus on bathrooms and toilets.
+        </p>
+        
+        <div class="flex justify-center my-8">
+          <a href="../events/seminars/gerba/GerbaIljaz_slides.pdf" download class="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-hbnGreen text-white font-semibold shadow-lg hover:bg-green-700 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+            </svg>
+            Download Presentation Slides
+          </a>
+        </div>
+
+        <section class="my-12 bg-gray-50 rounded-xl shadow-md overflow-hidden">
+          <h2 class="text-2xl font-bold text-center py-6 bg-gradient-to-r from-hbnPurple to-hbnBlue text-white">Meet the Speakers</h2>
+          
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 p-6">
+            <!-- Chuck Gerba Profile -->
+            <div class="flex flex-col md:flex-row items-center bg-white rounded-lg shadow-sm p-4 transition-transform hover:shadow-md">
+              <div class="mb-4 md:mb-0 md:mr-4 flex-shrink-0">
+                <div class="w-32 h-32 rounded-full overflow-hidden border-4 border-hbnPurple bg-gray-100 flex items-center justify-center">
+                  <img 
+                    src="../events/seminars/gerba/chuck_gerba.jpg" 
+                    alt="Professor Chuck Gerba" 
+                    class="w-full h-full object-cover"
+                  />
+                </div>
+              </div>
+              
+              <div>
+                <h3 class="text-xl font-semibold text-hbnPurple">Professor Chuck Gerba</h3>
+                <p class="text-gray-600 font-medium mb-1">Environmental Virologist, University of Arizona</p>
+                <p class="text-gray-700 text-sm">
+                  Prof. Gerba is a renowned environmental virologist with decades of experience studying the transmission of viruses in indoor environments. His pioneering work on surface contamination and bathroom hygiene has reshaped our understanding of pathogen transmission.
+                </p>
+              </div>
+            </div>
+            
+            <!-- Khalid Iljaz Profile -->
+            <div class="flex flex-col md:flex-row items-center bg-white rounded-lg shadow-sm p-4 transition-transform hover:shadow-md">
+              <div class="mb-4 md:mb-0 md:mr-4 flex-shrink-0">
+                <div class="w-32 h-32 rounded-full overflow-hidden border-4 border-hbnGreen bg-gray-100 flex items-center justify-center">
+                  <img 
+                    src="../events/seminars/gerba/khalid_iljaz.jpg" 
+                    alt="Dr. Khalid Iljaz" 
+                    class="w-full h-full object-cover"
+                  />
+                </div>
+              </div>
+              
+              <div>
+                <h3 class="text-xl font-semibold text-hbnGreen">Dr. Khalid Iljaz</h3>
+                <p class="text-gray-600 font-medium mb-1">Microbiology Expert, Reckitt Benckiser</p>
+                <p class="text-gray-700 text-sm">
+                  Dr. Iljaz specializes in aerobiology and public health, bringing both academic expertise and industry experience to his research on pathogen control. His work focuses on developing effective interventions to break the chain of infection transmission.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <h2 class="text-2xl font-bold mb-4 text-gray-800">The Dynamic Nature of Pathogen Transmission</h2>
+        
+        <p class="mb-6">
+          A central theme from both speakers was that pathogen transmission is not static but highly dynamic. As Dr. Iljaz emphasized, "It's not either/or, it's dynamic interdependent." Microorganisms move continuously between surfaces and air in what he called a "surface contamination network."
+        </p>
+        <p class="mb-6">
+          Prof. Gerba demonstrated this dynamic through his research on toilet plumes - the aerosols generated when toilets are flushed. His team used viral tracers similar to norovirus to track contamination patterns:
+        </p>
+
+        <div class="my-8 mx-auto bg-gray-50 p-6 rounded-lg shadow-lg max-w-3xl">
+          <h2 class="text-center text-2xl font-bold mb-6 text-indigo-700">Bathroom Pathogen Transmission</h2>
+          
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <!-- CHALLENGES SECTION -->
+            <div class="bg-purple-50 p-4 rounded-lg">
+              <h3 class="text-center text-lg font-semibold text-purple-800 mb-4">Key Findings</h3>
+              
+              <div class="grid grid-cols-2 gap-4">
+                <div class="flex flex-col items-center">
+                  <div class="bg-white p-3 rounded-full shadow-md mb-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#8360a9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+                    </svg>
+                  </div>
+                  <span class="text-sm font-medium text-center">Dynamic<br/>Transfer</span>
+                </div>
+                
+                <div class="flex flex-col items-center">
+                  <div class="bg-white p-3 rounded-full shadow-md mb-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#8360a9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M3 3v18h18"></path>
+                      <path d="M3 9l4-4 4 4 4-4 4 4"></path>
+                    </svg>
+                  </div>
+                  <span class="text-sm font-medium text-center">Lid Closing<br/>Ineffective</span>
+                </div>
+                
+                <div class="flex flex-col items-center">
+                  <div class="bg-white p-3 rounded-full shadow-md mb-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#8360a9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+                      <path d="M2 17l10 5 10-5"></path>
+                      <path d="M2 12l10 5 10-5"></path>
+                    </svg>
+                  </div>
+                  <span class="text-sm font-medium text-center">Biofilm<br/>Development</span>
+                </div>
+                
+                <div class="flex flex-col items-center">
+                  <div class="bg-white p-3 rounded-full shadow-md mb-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#8360a9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                      <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                      <polyline points="21 15 16 10 5 21"></polyline>
+                    </svg>
+                  </div>
+                  <span class="text-sm font-medium text-center">Surface-Air<br/>Exchange</span>
+                </div>
+              </div>
+            </div>
+            
+            <!-- OPPORTUNITIES SECTION -->
+            <div class="bg-green-50 p-4 rounded-lg">
+              <h3 class="text-center text-lg font-semibold text-green-800 mb-4">Effective Interventions</h3>
+              
+              <div class="grid grid-cols-2 gap-4">
+                <div class="flex flex-col items-center">
+                  <div class="bg-white p-3 rounded-full shadow-md mb-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#4e9317" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2"></path>
+                      <rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect>
+                      <path d="M16 16h.01"></path>
+                      <path d="M12 12h.01"></path>
+                      <path d="M8 12h.01"></path>
+                      <path d="M12 16h.01"></path>
+                      <path d="M8 20h.01"></path>
+                      <path d="M12 20h.01"></path>
+                      <path d="M20 8h-4.09a1 1 0 00-.7.29l-4.08 4.1a1 1 0 000 1.41l4.08 4.1a1 1 0 00.7.3H20a1 1 0 001-1v-8a1 1 0 00-1-1z"></path>
+                    </svg>
+                  </div>
+                  <span class="text-sm font-medium text-center">Targeted<br/>Disinfection</span>
+                </div>
+                
+                <div class="flex flex-col items-center">
+                  <div class="bg-white p-3 rounded-full shadow-md mb-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#4e9317" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M8 2h8"></path>
+                      <path d="M9 2v2.789a4 4 0 01-.672 2.219l-.656.984A4 4 0 007 10.212V20a2 2 0 004 0v-2a3 3 0 013-3h2"></path>
+                      <path d="M12.5 15.5l-1-1"></path>
+                      <path d="M19.5 15.5l-1-1"></path>
+                      <path d="M12.5 18.5l-1-1"></path>
+                      <path d="M19.5 18.5l-1-1"></path>
+                    </svg>
+                  </div>
+                  <span class="text-sm font-medium text-center">Air<br/>Sanitizers</span>
+                </div>
+                
+                <div class="flex flex-col items-center">
+                  <div class="bg-white p-3 rounded-full shadow-md mb-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#4e9317" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <circle cx="12" cy="12" r="10"></circle>
+                      <path d="M8 14s1.5 2 4 2 4-2 4-2"></path>
+                      <line x1="9" y1="9" x2="9.01" y2="9"></line>
+                      <line x1="15" y1="9" x2="15.01" y2="9"></line>
+                    </svg>
+                  </div>
+                  <span class="text-sm font-medium text-center">Optimal<br/>Frequency</span>
+                </div>
+                
+                <div class="flex flex-col items-center">
+                  <div class="bg-white p-3 rounded-full shadow-md mb-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#4e9317" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M17 5H7V7H17V5Z"></path>
+                      <path d="M17 11H7V13H17V11Z"></path>
+                      <path d="M7 17H17V19H7V17Z"></path>
+                      <path d="M4 17H1V19H4V17Z"></path>
+                      <path d="M4 11H1V13H4V11Z"></path>
+                      <path d="M4 5H1V7H4V5Z"></path>
+                      <path d="M23 17H20V19H23V17Z"></path>
+                      <path d="M23 11H20V13H23V11Z"></path>
+                      <path d="M23 5H20V7H23V5Z"></path>
+                    </svg>
+                  </div>
+                  <span class="text-sm font-medium text-center">Holistic<br/>Approach</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- OUTCOMES SECTION -->
+          <div class="mt-6 bg-gradient-to-r from-purple-500 to-green-500 p-4 rounded-lg text-white">
+            <h3 class="text-center text-lg font-semibold mb-3">Key Takeaways</h3>
+            
+            <div class="flex justify-center items-center">
+              <div class="mr-4">
+                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
+                  <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                </svg>
+              </div>
+              <ul class="list-disc list-inside">
+                <li>Closing toilet lid doesn't significantly reduce contamination</li>
+                <li>Twice-weekly cleaning provides optimal biofilm control</li>
+                <li>Aerosols & surfaces form an interconnected contamination network</li>
+                <li>Targeted interventions can achieve 99% risk reduction</li>
+              </ul>
+            </div>
+          </div>
+          
+          <p class="text-center mt-6 text-lg font-semibold text-green-800">Healthier Bathrooms = Healthier Buildings</p>
+          <p class="text-center text-xs text-gray-500 mt-1">Source: Healthy Buildings Network Seminar, Leeds, January 2025</p>
+        </div>
+
+        <div class="my-8 bg-gradient-to-r from-purple-50 to-blue-50 rounded-xl p-6 shadow-md">
+          <div class="flex items-start">
+            <div class="hidden md:block flex-shrink-0 mr-5">
+              <div class="w-20 h-20 rounded-full overflow-hidden border-3 border-hbnPurple shadow-md">
+                <img 
+                  src="../events/seminars/gerba/khalid_iljaz_quote.jpg" 
+                  alt="Dr. Khalid Iljaz" 
+                  class="w-full h-full object-cover"
+                />
+              </div>
+            </div>
+            
+            <div>
+              <svg class="h-8 w-8 text-hbnPurple opacity-25 mb-1" fill="currentColor" viewBox="0 0 32 32" aria-hidden="true">
+                <path d="M9.352 4C4.456 7.456 1 13.12 1 19.36c0 5.088 3.072 8.064 6.624 8.064 3.36 0 5.856-2.688 5.856-5.856 0-3.168-2.208-5.472-5.088-5.472-.576 0-1.344.096-1.536.192.48-3.264 3.552-7.104 6.624-9.024L9.352 4zm16.512 0c-4.8 3.456-8.256 9.12-8.256 15.36 0 5.088 3.072 8.064 6.624 8.064 3.264 0 5.856-2.688 5.856-5.856 0-3.168-2.304-5.472-5.184-5.472-.576 0-1.248.096-1.44.192.48-3.264 3.456-7.104 6.528-9.024L25.864 4z" />
+              </svg>
+              
+              <p class="text-gray-700 text-lg italic mb-4">
+                When it comes to transmission, the air-surface back to air is a dynamic process and they are interdependent. One cannot put just hands, just surfaces, just air. They're all related when it comes to transmission.
+              </p>
+              
+              <div class="flex items-center">
+                <div class="md:hidden mr-3">
+                  <div class="w-10 h-10 rounded-full overflow-hidden border-2 border-hbnPurple">
+                    <img 
+                      src="../events/seminars/gerba/khalid_iljaz_quote.jpg" 
+                      alt="Dr. Khalid Iljaz" 
+                      class="w-full h-full object-cover"
+                    />
+                  </div>
+                </div>
+                <div>
+                  <p class="font-semibold text-hbnPurple">Dr. Khalid Iljaz</p>
+                  <p class="text-sm text-gray-600">Reckitt Benckiser</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <p class="mb-6">
+          Their findings challenge common assumptions about bathroom hygiene:
+        </p>
+        
+        <ul class="list-disc pl-6 mb-6 space-y-3">
+          <li><strong>Myth busted:</strong> Closing the toilet lid during flushing doesn't significantly reduce contamination. The pressure forces aerosols out from the sides, contaminating toilet seats and surrounding areas regardless.</li>
+          <li><strong>Concerning revelation:</strong> Viruses from toilet flushing can move beyond the bathroom through human activity, as Prof. Gerba noted, "What is in the restroom doesn't stay in the restroom."</li>
+          <li><strong>Unexpected finding:</strong> Cleaning toilets with a brush without disinfectant actually spreads contamination throughout the bathroom.</li>
+        </ul>
+        
+        <p class="mb-6">
+          Dr. Iljaz reinforced these findings by demonstrating that pathogens exist in a continuous cycle between air and surfaces. His research showed that walking across contaminated floors, vacuuming, or even sitting on soft surfaces can resuspend settled viruses back into the air.
+        </p>
+
+        <h2 class="text-2xl font-bold mb-4 text-gray-800">Targeted Hygiene: When and What to Clean</h2>
+        
+        <p class="mb-6">
+          One of the most practical insights from the seminar came from Prof. Gerba's studies on optimal cleaning frequency. Counter to intuition, daily cleaning wasn't necessarily best. His research found:
+        </p>
+        
+        <ul class="list-disc pl-6 mb-6 space-y-3">
+          <li>The bathroom becomes most contaminated on day three after cleaning</li>
+          <li>Cleaning twice per week (every 3-4 days) provided the maximum benefit</li>
+          <li>This pattern may relate to biofilm development, with day three representing peak vulnerability</li>
+        </ul>
+        
+        <p class="mb-6">
+          "Twice a week it turned out to be was a good idea to clean it if you want to do the maximum benefit of your product," Prof. Gerba explained. This cleaning frequency achieved approximately 99% risk reduction when using appropriate disinfection products.
+        </p>
+
+        <div class="max-w-4xl mx-auto p-6 bg-gradient-to-br from-slate-50 to-slate-100 rounded-xl shadow-lg">
+          <h2 class="text-center text-2xl font-bold text-indigo-800 mb-6">Air & Surface Sanitization: Breaking the Infection Chain</h2>
+          
+          <div class="flex flex-col md:flex-row gap-6 mb-8">
+            <!-- Left Column - The Problem -->
+            <div class="flex-1 bg-white rounded-lg shadow-md p-4">
+              <h3 class="text-center text-lg font-semibold text-indigo-700 mb-4">The Challenge</h3>
+              
+              <div class="flex items-center mb-6 bg-indigo-50 p-3 rounded-lg">
+                <div class="bg-indigo-100 p-3 rounded-full mr-3">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-indigo-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+                  </svg>
+                </div>
+                <div>
+                  <h4 class="font-semibold text-indigo-900">Dynamic Transmission</h4>
+                  <p class="text-sm text-indigo-700">Continuous pathogen exchange between surfaces and air</p>
+                </div>
+              </div>
+              
+              <div class="flex items-center bg-indigo-50 p-3 rounded-lg">
+                <div class="bg-indigo-100 p-3 rounded-full mr-3">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-indigo-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z" />
+                  </svg>
+                </div>
+                <div>
+                  <h4 class="font-semibold text-indigo-900">Traditional Approaches Limited</h4>
+                  <p class="text-sm text-indigo-700">Surface cleaning alone insufficient for complete protection</p>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Right Column - Study Results -->
+            <div class="flex-1 bg-white rounded-lg shadow-md p-4">
+              <h3 class="text-center text-lg font-semibold text-green-700 mb-4">Research Results</h3>
+              
+              <div class="bg-green-50 p-4 rounded-lg">
+                <h4 class="font-semibold text-green-800 mb-2">Air Sanitizer Efficacy</h4>
+                <div class="flex items-center mb-3">
+                  <div class="bg-green-100 p-2 rounded-full mr-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                    </svg>
+                  </div>
+                  <span class="font-semibold text-green-800">3-log reduction in bacteria within 3 minutes</span>
+                </div>
+                <div class="flex items-center mb-3">
+                  <div class="bg-green-100 p-2 rounded-full mr-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                    </svg>
+                  </div>
+                  <span class="font-semibold text-green-800">Effective against enveloped & non-enveloped viruses</span>
+                </div>
+                <div class="flex items-center">
+                  <div class="bg-green-100 p-2 rounded-full mr-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                    </svg>
+                  </div>
+                  <span class="font-semibold text-green-800">Significant reduction in surface contamination as well</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Diagram - Center Section -->
+          <div class="bg-white rounded-lg shadow-md p-6 mb-8">
+            <h3 class="text-center text-lg font-semibold text-gray-800 mb-6">Holistic Approach to Pathogen Control</h3>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+              <!-- Method 1 -->
+              <div class="bg-blue-50 rounded-lg p-4 flex flex-col items-center">
+                <div class="bg-blue-100 p-3 rounded-full mb-3">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-blue-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 11.5V14m0-2.5v-6a1.5 1.5 0 113 0m-3 6a1.5 1.5 0 00-3 0v2a7.5 7.5 0 0015 0v-5a1.5 1.5 0 00-3 0m-6-3V11m0-5.5v-1a1.5 1.5 0 013 0v1m0 0V11m0-5.5a1.5 1.5 0 013 0v3m0 0V11" />
+                  </svg>
+                </div>
+                <h4 class="font-semibold text-blue-900 mb-2 text-center">Hand Hygiene</h4>
+                <ul class="text-sm text-blue-700 space-y-1">
+                  <li>• 20-second hand washing</li>
+                  <li>• Hand sanitizer use</li>
+                  <li>• Prevents hand-to-surface transmission</li>
+                </ul>
+              </div>
+              
+              <!-- Method 2 -->
+              <div class="bg-purple-50 rounded-lg p-4 flex flex-col items-center">
+                <div class="bg-purple-100 p-3 rounded-full mb-3">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-purple-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 19v-8.93a2 2 0 01.89-1.664l7-4.666a2 2 0 012.22 0l7 4.666A2 2 0 0121 10.07V19M3 19a2 2 0 002 2h14a2 2 0 002-2M3 19l6.75-4.5M21 19l-6.75-4.5M3 10l6.75 4.5M21 10l-6.75 4.5m0 0l-1.14.76a2 2 0 01-2.22 0l-1.14-.76" />
+                  </svg>
+                </div>
+                <h4 class="font-semibold text-purple-900 mb-2 text-center">Surface Disinfection</h4>
+                <ul class="text-sm text-purple-700 space-y-1">
+                  <li>• Twice-weekly cleaning optimal</li>
+                  <li>• Targeted disinfection of high-touch areas</li>
+                  <li>• Use of appropriate disinfectant products</li>
+                </ul>
+              </div>
+              
+              <!-- Method 3 -->
+              <div class="bg-amber-50 rounded-lg p-4 flex flex-col items-center">
+                <div class="bg-amber-100 p-3 rounded-full mb-3">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-amber-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.121 14.121L19 19m-7-7l7-7m-7 7l-2.879 2.879M12 12L9.121 9.121m0 5.758a3 3 0 10-4.243 4.243 3 3 0 004.243-4.243zm0-5.758a3 3 0 10-4.243-4.243 3 3 0 004.243 4.243z" />
+                  </svg>
+                </div>
+                <h4 class="font-semibold text-amber-900 mb-2 text-center">Air Sanitization</h4>
+                <ul class="text-sm text-amber-700 space-y-1">
+                  <li>• Glycol-based air sanitizers</li>
+                  <li>• Application after toilet use</li>
+                  <li>• Reduces both airborne and settled pathogens</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Benefits Section - Bottom -->
+          <div class="bg-gradient-to-r from-indigo-500 to-green-500 rounded-lg shadow-md p-5">
+            <h3 class="text-center text-xl font-bold text-white mb-4">Combined Approach Benefits</h3>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div class="bg-white bg-opacity-20 rounded-lg p-4">
+                <h4 class="font-semibold text-white text-lg mb-3 text-center">Health Outcomes</h4>
+                <ul class="text-white space-y-2">
+                  <li class="flex items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                    </svg>
+                    Up to 99% risk reduction for infection
+                  </li>
+                  <li class="flex items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                    </svg>
+                    Reduced cross-contamination in households
+                  </li>
+                  <li class="flex items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                    </svg>
+                    Decreased gastroenteritis incidence
+                  </li>
+                  <li class="flex items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                    </svg>
+                    Lower respiratory infection rates
+                  </li>
+                </ul>
+              </div>
+              
+              <div class="bg-white bg-opacity-20 rounded-lg p-4">
+                <h4 class="font-semibold text-white text-lg mb-3 text-center">Practical Benefits</h4>
+                <ul class="text-white space-y-2">
+                  <li class="flex items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                    </svg>
+                    Optimized cleaning schedule (less frequent)
+                  </li>
+                  <li class="flex items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                    </svg>
+                    Targeted use of disinfectants
+                  </li>
+                  <li class="flex items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                    </svg>
+                    Simple, user-friendly interventions
+                  </li>
+                  <li class="flex items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                    </svg>
+                    Effective for various settings (home, public, healthcare)
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          
+          <p class="text-center text-xs text-gray-500 mt-4">Source: Healthy Buildings Network Seminar, Leeds, January 2025</p>
+        </div>
+
+        <div class="flex flex-wrap justify-between items-center mt-12 pt-6 border-t border-gray-200">
+          <div class="flex items-center space-x-4 mb-4 md:mb-0">
+            <span class="text-gray-700 font-medium">Share:</span>
+            <a href="#" class="text-gray-600 hover:text-hbnPurple" aria-label="Share on LinkedIn">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+              </svg>
+            </a>
+            <a href="#" class="text-gray-600 hover:text-hbnPurple" aria-label="Share on Twitter">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
+              </svg>
+            </a>
+            <a href="#" class="text-gray-600 hover:text-hbnPurple" aria-label="Share on Facebook">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"/>
+              </svg>
+            </a>
+          </div>
+          <div class="flex flex-wrap gap-2">
+            <span class="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm">Social Housing</span>
+            <span class="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm">Healthy Buildings</span>
+            <span class="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm">Housing Policy</span>
+            <span class="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm">Data Analytics</span>
+            <span class="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm">Research Collaboration</span>
+          </div>
+        </div>
+        
+        <div class="mt-12">
+          <a href="../blog.html" class="inline-flex items-center text-hbnPurple hover:underline">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+            </svg>
+            <span>Back to Blog</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  
+    <section class="py-16 bg-gray-50">
+      <div class="container mx-auto px-6 max-w-6xl">
+        <h2 class="text-3xl font-bold mb-10 text-center text-gray-800">Related Articles</h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <a href="#" class="block group"> <div class="bg-white rounded-xl shadow-md overflow-hidden group-hover:shadow-lg transition-shadow h-full flex flex-col">
+              <img src="https://placehold.co/600x400/3e95dd/ffffff?text=Data+in+Housing" alt="Data in Housing" class="w-full h-48 object-cover">
+              <div class="p-6 flex flex-col flex-grow">
+                <span class="text-sm text-hbnBlue">May 10, 2025</span>
+                <h3 class="text-xl font-bold mb-2 mt-1 text-gray-800 group-hover:text-hbnPurple transition-colors">The Critical Role of Data in Modern Housing Management</h3>
+                <p class="text-gray-600 mb-4 flex-grow">Exploring how data analytics can transform housing services and improve tenant outcomes.</p>
+                <div class="flex items-center text-hbnPurple font-medium mt-auto">
+                  <span>Read More</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </a>
+          
+          <a href="#" class="block group"> <div class="bg-white rounded-xl shadow-md overflow-hidden group-hover:shadow-lg transition-shadow h-full flex flex-col">
+              <img src="https://placehold.co/600x400/4e9317/ffffff?text=Damp+and+Mould+Solutions" alt="Damp and Mould Solutions" class="w-full h-48 object-cover">
+              <div class="p-6 flex flex-col flex-grow">
+                <span class="text-sm text-hbnBlue">April 28, 2025</span>
+                <h3 class="text-xl font-bold mb-2 mt-1 text-gray-800 group-hover:text-hbnPurple transition-colors">Tackling Damp and Mould: A Multi-faceted Approach for Healthier Homes</h3>
+                <p class="text-gray-600 mb-4 flex-grow">Strategies for prevention, remediation, and policy changes to combat damp and mould in residential properties.</p>
+                <div class="flex items-center text-hbnPurple font-medium mt-auto">
+                  <span>Read More</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </a>
+          
+          <a href="#" class="block group"> <div class="bg-white rounded-xl shadow-md overflow-hidden group-hover:shadow-lg transition-shadow h-full flex flex-col">
+              <img src="https://placehold.co/600x400/ffca29/333333?text=University+Partnerships" alt="University Partnerships" class="w-full h-48 object-cover">
+              <div class="p-6 flex flex-col flex-grow">
+                <span class="text-sm text-hbnBlue">March 15, 2025</span>
+                <h3 class="text-xl font-bold mb-2 mt-1 text-gray-800 group-hover:text-hbnPurple transition-colors">University Partnerships: Driving Innovation in Social Housing</h3>
+                <p class="text-gray-600 mb-4 flex-grow">How academic collaborations are helping to solve real-world housing challenges.</p>
+                <div class="flex items-center text-hbnPurple font-medium mt-auto">
+                  <span>Read More</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+  
+    <footer class="bg-gray-800 text-white py-12 md:py-16">
+      <div class="container mx-auto max-w-6xl px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="mb-8">
+           <img src="../assets/images/hbn_landscape.png" alt="Healthy Buildings Network Leeds Logo" class="h-12 mb-4 filter brightness-0 invert opacity-90"> <p class="text-sm tracking-wide text-gray-300">
+            Healthy Buildings Network Leeds is a cross-disciplinary research and collaboration hub at the University of Leeds, focused on healthier, more sustainable built environments.
+          </p>
+    
+          <ul class="flex mt-4 space-x-4">
+            <li class="flex items-center">
+              <a href="https://www.linkedin.com/company/healthy-buildings-network/" target="_blank" class="text-gray-300 hover:text-hbnGreen transition-colors flex items-center" aria-label="LinkedIn Profile">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                </svg>
+                LinkedIn
+              </a>
+            </li>
+            <li class="flex items-center">
+              <a href="mailto:M.F.King@leeds.ac.uk" class="text-gray-300 hover:text-hbnGreen transition-colors flex items-center" aria-label="Email Us">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                </svg>
+                Email Us
+              </a>
+            </li>
+          </ul>
+        </div>
+    
+        <div>
+          <h4 class="text-xl font-bold mb-4">Quick Links</h4>
+          <ul class="space-y-2">
+            <li><a href="../index.html" class="text-gray-300 hover:text-hbnGreen transition-colors">Home</a></li>
+            <li><a href="../about.html" class="text-gray-300 hover:text-hbnGreen transition-colors">About</a></li>
+            <li><a href="../projects.html" class="text-gray-300 hover:text-hbnGreen transition-colors">Projects</a></li>
+            <li><a href="../events.html" class="text-gray-300 hover:text-hbnGreen transition-colors">Events</a></li>
+            <li><a href="../membership.html" class="text-gray-300 hover:text-hbnGreen transition-colors">Membership</a></li>
+            <li><a href="../contact.html" class="text-gray-300 hover:text-hbnGreen transition-colors">Contact</a></li>
+          </ul>
+        </div>
+    
+        <div>
+          <h4 class="text-xl font-bold mb-4">Affiliations</h4>
+          <ul class="space-y-2">
+            <li><a href="https://fluids.leeds.ac.uk" target="_blank" class="text-gray-300 hover:text-hbnGreen transition-colors">Leeds Institute for Fluid Dynamics</a></li>
+            <li><a href="https://lssi.leeds.ac.uk" target="_blank" class="text-gray-300 hover:text-hbnGreen transition-colors">Leeds Social Sciences Institute</a></li>
+            <li><a href="https://lahri.leeds.ac.uk" target="_blank" class="text-gray-300 hover:text-hbnGreen transition-colors">Leeds Arts & Humanities Research Institute</a></li>
+            <li><a href="https://environment.leeds.ac.uk/institute-climate-atmospheric-science" target="_blank" class="text-gray-300 hover:text-hbnGreen transition-colors">ICAS</a></li>
+            <li><a href="https://sustainability.leeds.ac.uk/get-involved/leeds-living-lab/" target="_blank" class="text-gray-300 hover:text-hbnGreen transition-colors">Leeds Living Lab</a></li>
+            <li><a href="https://lida.leeds.ac.uk/" target="_blank" class="text-gray-300 hover:text-hbnGreen transition-colors">Leeds Institute for Data Analytics</a></li>
+          </ul>
+        </div>
+      </div>
+    
+      <div class="container mx-auto max-w-6xl px-6 text-sm text-center pt-8 mt-8 border-t border-gray-700">
+        <p>© 2025 Healthy Buildings Network Leeds. All rights reserved.</p>
+        <p class="mt-2">University of Leeds, Leeds LS2 9JT, United Kingdom</p>
+      </div>
+    </footer>
+  
+    <script>
+      // Basic script for mobile menu toggle and scroll-to-top button
+      document.addEventListener('DOMContentLoaded', function() {
+        const menuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        if (menuButton && mobileMenu) {
+          menuButton.addEventListener('click', function() {
+            mobileMenu.classList.toggle('hidden');
+          });
+        }
+        
+        const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+        if (scrollToTopBtn) {
+          window.addEventListener('scroll', function() {
+            if (window.pageYOffset > 300) { // Show button after 300px scroll
+              scrollToTopBtn.classList.remove('hidden');
+            } else {
+              scrollToTopBtn.classList.add('hidden');
+            }
+          });
+          
+          scrollToTopBtn.addEventListener('click', function() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+          });
+        }
+        
+        // Smooth scrolling for any internal anchor links (if added later)
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+          anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            const targetId = this.getAttribute('href');
+            const targetElement = document.querySelector(targetId);
+            
+            if (targetElement) {
+              // Adjust offset if header is fixed, e.g., header height is 80px
+              const headerOffset = 80; 
+              const elementPosition = targetElement.getBoundingClientRect().top;
+              const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+              
+              window.scrollTo({
+                top: offsetPosition,
+                behavior: 'smooth'
+              });
+            }
+          });
+        });
+      });
+    </script>
+  </body>
+  </html>
+  
