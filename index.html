@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Preconnects for performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdn.tailwindcss.com">
+
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -8,594 +13,1164 @@
         extend: {
           colors: {
             hbnGreen: '#4e9317',
+            hbnGreenDark: '#3d7412',
             hbnPurple: '#8360a9',
             hbnGray: '#808184',
             hbnYellow: '#ffca29',
             hbnBlue: '#3e95dd',
-          }
+          },
+          fontFamily: {
+            'poppins': ['Poppins', 'sans-serif'],
+            'shadows': ['"Shadows Into Light"', 'cursive'],
+          },
+          animation: {
+            'fade-in': 'fadeIn 0.6s ease-out',
+            'fade-in-up': 'fadeInUp 0.6s ease-out',
+            'slide-in-left': 'slideInLeft 0.6s ease-out',
+          },
+          keyframes: {
+            fadeIn: {
+              '0%': { opacity: '0' },
+              '100%': { opacity: '1' },
+            },
+            fadeInUp: {
+              '0%': { opacity: '0', transform: 'translateY(20px)' },
+              '100%': { opacity: '1', transform: 'translateY(0)' },
+            },
+            slideInLeft: {
+              '0%': { opacity: '0', transform: 'translateX(-20px)' },
+              '100%': { opacity: '1', transform: 'translateX(0)' },
+            },
+          },
         }
       }
     };
   </script>
   
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="Healthy Buildings Network Leeds - A cross-disciplinary research and collaboration hub focused on healthier, more sustainable built environments.">
-  <title>Healthy Buildings Network Leeds</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Healthy Buildings Network Leeds - A cross-disciplinary research and collaboration hub at the University of Leeds focused on healthier, more sustainable built environments.">
+  <meta name="keywords" content="healthy buildings, sustainable architecture, indoor air quality, building research, University of Leeds, indoor environments">
+  <meta name="author" content="Healthy Buildings Network Leeds">
+  <meta name="robots" content="index, follow">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://healthybuildingsnetwork.leeds.ac.uk/">
+  <meta property="og:title" content="Healthy Buildings Network Leeds">
+  <meta property="og:description" content="A cross-disciplinary research and collaboration hub focused on healthier, more sustainable built environments.">
+  <meta property="og:image" content="https://healthybuildingsnetwork.leeds.ac.uk/assets/images/og-image.jpg">
+  <meta property="og:site_name" content="Healthy Buildings Network Leeds">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://healthybuildingsnetwork.leeds.ac.uk/">
+  <meta name="twitter:title" content="Healthy Buildings Network Leeds">
+  <meta name="twitter:description" content="A cross-disciplinary research and collaboration hub focused on healthier, more sustainable built environments.">
+  <meta name="twitter:image" content="https://healthybuildingsnetwork.leeds.ac.uk/assets/images/og-image.jpg">
+
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://healthybuildingsnetwork.leeds.ac.uk/">
+  
+  <!-- Theme color for mobile browsers -->
+  <meta name="theme-color" content="#4e9317">
+  
+  <title>Healthy Buildings Network Leeds | Research & Collaboration Hub</title>
   
   <!-- Favicon -->
-  <link rel="icon" href="assets/images/hbn_fav.ico" type="image/x-icon"/>
+  <link rel="icon" href="assets/images/hbn_fav.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
   
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Shadows+Into+Light&display=swap" rel="stylesheet">
   
   <!-- Main CSS -->
-  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ResearchOrganization",
+    "name": "Healthy Buildings Network Leeds",
+    "alternateName": "HBN Leeds",
+    "url": "https://healthybuildingsnetwork.leeds.ac.uk",
+    "logo": "https://healthybuildingsnetwork.leeds.ac.uk/assets/images/hbn_landscape.png",
+    "description": "A cross-disciplinary research and collaboration hub at the University of Leeds focused on healthier, more sustainable built environments.",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "University of Leeds",
+      "addressLocality": "Leeds",
+      "postalCode": "LS2 9JT",
+      "addressCountry": "GB"
+    },
+    "parentOrganization": {
+      "@type": "EducationalOrganization",
+      "name": "University of Leeds",
+      "url": "https://www.leeds.ac.uk"
+    },
+    "sameAs": [
+      "https://www.linkedin.com/company/healthy-buildings-network/"
+    ],
+    "foundingDate": "2024",
+    "areaServed": "United Kingdom"
+  }
+  </script>
+
+  <!-- Inline critical styles -->
+  <style>
+    /* Smooth scrolling with reduced motion preference */
+    html {
+      scroll-behavior: smooth;
+    }
+    
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+      .animate-fade-in,
+      .animate-fade-in-up,
+      .animate-slide-in-left {
+        animation: none !important;
+      }
+    }
+
+    /* Custom scrollbar */
+    ::-webkit-scrollbar {
+      width: 10px;
+    }
+    
+    ::-webkit-scrollbar-track {
+      background: #f1f1f1;
+    }
+    
+    ::-webkit-scrollbar-thumb {
+      background: #4e9317;
+      border-radius: 5px;
+    }
+    
+    ::-webkit-scrollbar-thumb:hover {
+      background: #3d7412;
+    }
+
+    /* Focus visible for better keyboard navigation */
+    :focus-visible {
+      outline: 2px solid #4e9317;
+      outline-offset: 2px;
+    }
+
+    /* Section title styling */
+    .section-title {
+      @apply text-3xl md:text-4xl font-bold text-gray-800 relative inline-block;
+    }
+    
+    .section-title::after {
+      content: '';
+      @apply absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-16 h-1 bg-hbnGreen rounded-full;
+    }
+
+    /* Print styles */
+    @media print {
+      header, footer, #scrollToTopBtn, #cookie-banner {
+        display: none !important;
+      }
+      
+      main {
+        padding-top: 0 !important;
+      }
+      
+      a[href]::after {
+        content: " (" attr(href) ")";
+        font-size: 0.8em;
+        color: #666;
+      }
+    }
+  </style>
 </head>
-<body class="font-poppins">
+
+<body class="font-poppins antialiased text-gray-700">
+  <!-- Skip to main content link for accessibility -->
+  <a href="#main-content" 
+     class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 
+            bg-hbnGreen text-white px-4 py-2 rounded-lg z-[100] font-medium
+            focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-hbnGreen">
+    Skip to main content
+  </a>
 
   <!-- Header / Navbar -->
-  <header class="bg-white shadow-md fixed w-full z-50">
+  <header class="bg-white shadow-md fixed w-full z-50 top-0" role="banner">
     <div class="container mx-auto px-6 flex justify-between items-center h-20">
       <!-- Logo -->
       <div class="flex-shrink-0">
-        <a href="index.html" class="flex items-center space-x-4">
-          <img src="assets/images/hbn_landscape.png" alt="Healthy Buildings Network Leeds Logo" class="h-12">
-          <img src="assets/images/leeds_logo_black_on_white_bk.jpg" alt="Leeds Logo" class="h-12" >
+        <a href="index.html" class="flex items-center space-x-4 focus:outline-none focus:ring-2 focus:ring-hbnGreen focus:ring-offset-2 rounded-lg">
+          <img src="assets/images/hbn_landscape.png" 
+               alt="Healthy Buildings Network Leeds" 
+               class="h-12 w-auto"
+               width="180" 
+               height="48">
+          <img src="assets/images/leeds_logo_black_on_white_bk.jpg" 
+               alt="University of Leeds" 
+               class="h-12 w-auto hidden sm:block"
+               width="120" 
+               height="48">
         </a>
       </div>
 
       <!-- Mobile Menu Button -->
-      <button class="md:hidden text-gray-600 hover:text-hbnGreen focus:outline-none" id="mobile-menu-button" aria-label="Open Menu">
-        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <button class="md:hidden text-gray-600 hover:text-hbnGreen p-2 rounded-lg
+                     focus:outline-none focus:ring-2 focus:ring-hbnGreen focus:ring-offset-2" 
+              id="mobile-menu-button" 
+              aria-label="Open navigation menu"
+              aria-expanded="false"
+              aria-controls="mobile-menu">
+        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
         </svg>
       </button>
 
-      <!-- Navigation -->
-      <nav class="hidden md:flex space-x-8" id="main-nav">
-        <a href="index.html" class="text-gray-600 hover:text-hbnGreen font-medium transition-colors">Home</a>
-        <a href="about.html" class="text-gray-600 hover:text-hbnGreen font-medium transition-colors">About Us</a>
-        <a href="blog.html" class="text-gray-600 hover:text-hbnGreen font-medium transition-colors">Blog</a>
-        <a href="events.html" class="text-gray-600 hover:text-hbnGreen font-medium transition-colors">Events</a>
-        <a href="projects.html" class="text-gray-600 hover:text-hbnGreen font-medium transition-colors">Projects</a>
-        <a href="membership.html" class="text-gray-600 hover:text-hbnGreen font-medium transition-colors">Membership</a>
-        <a href="contact.html" class="text-gray-600 hover:text-hbnGreen font-medium transition-colors">Contact</a>
+      <!-- Desktop Navigation -->
+      <nav class="hidden md:flex space-x-6 lg:space-x-8" id="main-nav" role="navigation" aria-label="Main navigation">
+        <a href="index.html" 
+           class="text-hbnGreen font-medium transition-colors border-b-2 border-hbnGreen pb-1"
+           aria-current="page">Home</a>
+        <a href="about.html" 
+           class="text-gray-600 hover:text-hbnGreen font-medium transition-colors border-b-2 border-transparent hover:border-hbnGreen pb-1">About Us</a>
+        <a href="blog.html" 
+           class="text-gray-600 hover:text-hbnGreen font-medium transition-colors border-b-2 border-transparent hover:border-hbnGreen pb-1">Blog</a>
+        <a href="events.html" 
+           class="text-gray-600 hover:text-hbnGreen font-medium transition-colors border-b-2 border-transparent hover:border-hbnGreen pb-1">Events</a>
+        <a href="projects.html" 
+           class="text-gray-600 hover:text-hbnGreen font-medium transition-colors border-b-2 border-transparent hover:border-hbnGreen pb-1">Projects</a>
+        <a href="membership.html" 
+           class="text-gray-600 hover:text-hbnGreen font-medium transition-colors border-b-2 border-transparent hover:border-hbnGreen pb-1">Membership</a>
+        <a href="contact.html" 
+           class="text-gray-600 hover:text-hbnGreen font-medium transition-colors border-b-2 border-transparent hover:border-hbnGreen pb-1">Contact</a>
       </nav>
     </div>
     
     <!-- Mobile Navigation (Hidden by default) -->
-    <div class="md:hidden hidden bg-white w-full" id="mobile-menu">
-      <div class="px-6 py-4 space-y-4">
-        <a href="index.html" class="block text-gray-600 hover:text-hbnGreen font-medium">Home</a>
-        <a href="about.html" class="block text-gray-600 hover:text-hbnGreen font-medium">About Us</a>
-        <a href="blog.html" class="block text-gray-600 hover:text-hbnGreen font-medium">Blog</a>
-        <a href="events.html" class="block text-gray-600 hover:text-hbnGreen font-medium">Events</a>
-        <a href="projects.html" class="block text-gray-600 hover:text-hbnGreen font-medium">Projects</a>
-        <a href="membership.html" class="block text-gray-600 hover:text-hbnGreen font-medium">Membership</a>
-        <a href="contact.html" class="block text-gray-600 hover:text-hbnGreen font-medium">Contact</a>
+    <div class="md:hidden hidden bg-white w-full border-t border-gray-100" id="mobile-menu" role="navigation" aria-label="Mobile navigation">
+      <div class="px-6 py-4 space-y-1">
+        <a href="index.html" class="block py-3 px-4 text-hbnGreen font-medium bg-green-50 rounded-lg" aria-current="page">Home</a>
+        <a href="about.html" class="block py-3 px-4 text-gray-600 hover:text-hbnGreen hover:bg-gray-50 font-medium rounded-lg transition-colors">About Us</a>
+        <a href="blog.html" class="block py-3 px-4 text-gray-600 hover:text-hbnGreen hover:bg-gray-50 font-medium rounded-lg transition-colors">Blog</a>
+        <a href="events.html" class="block py-3 px-4 text-gray-600 hover:text-hbnGreen hover:bg-gray-50 font-medium rounded-lg transition-colors">Events</a>
+        <a href="projects.html" class="block py-3 px-4 text-gray-600 hover:text-hbnGreen hover:bg-gray-50 font-medium rounded-lg transition-colors">Projects</a>
+        <a href="membership.html" class="block py-3 px-4 text-gray-600 hover:text-hbnGreen hover:bg-gray-50 font-medium rounded-lg transition-colors">Membership</a>
+        <a href="contact.html" class="block py-3 px-4 text-gray-600 hover:text-hbnGreen hover:bg-gray-50 font-medium rounded-lg transition-colors">Contact</a>
       </div>
     </div>
   </header>
 
   <!-- Scroll-to-top button -->
-  <button id="scrollToTopBtn" class="fixed bottom-5 right-5 bg-hbnGreen text-white p-3 rounded-full shadow-md hidden z-50" aria-label="Scroll to top">
-    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18" />
+  <button id="scrollToTopBtn" 
+          class="fixed bottom-6 right-6 bg-hbnGreen text-white p-3 rounded-full shadow-lg 
+                 hidden z-50 hover:bg-hbnGreenDark transition-all duration-300 
+                 focus:outline-none focus:ring-2 focus:ring-hbnGreen focus:ring-offset-2
+                 hover:scale-110 active:scale-95" 
+          aria-label="Scroll to top">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"/>
     </svg>
   </button>
 
-  <!-- Hero Section -->
-  <section class="relative min-h-screen flex items-center">
-    <!-- Background Image -->
-    <div class="absolute inset-0 z-0">
-      <img src="assets/images/building_roger.jpg" 
-           alt="Healthy Buildings" 
-           class="w-full h-full object-cover opacity-20">
-    </div>
+  <!-- Main Content -->
+  <main id="main-content">
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex items-center pt-20" aria-labelledby="hero-heading">
+      <!-- Background Image -->
+      <div class="absolute inset-0 z-0">
+        <img src="assets/images/building_roger.jpg" 
+             alt="" 
+             role="presentation"
+             class="w-full h-full object-cover">
+        <!-- Overlay for better text readability -->
+        <div class="absolute inset-0 bg-white/85"></div>
+      </div>
 
-    <div class="container mx-auto px-6 py-32 relative z-10">
-      <!-- Main Content -->
-      <div class="max-w-4xl mx-auto space-y-8 animate-fadeIn text-center">
-        <h1 class="text-5xl md:text-6xl font-bold text-black-600 leading-tight">
-          Healthy Buildings Network Leeds
-        </h1>
-        
-        <h2 class="text-2xl md:text-3xl text-hbnGreen font-shadows-into-light">
-          Hyper-local to global
-        </h2>
-        
-        <p class="text-lg md:text-xl text-black-600 leading-relaxed max-w-3xl mx-auto">
-          Welcome to the Healthy Buildings Network Leeds, where we collaborate on 
-          research, innovation, and education for healthier, more sustainable 
-          buildings and their environments.
-          <span class="block mt-4">
+      <div class="container mx-auto px-6 py-20 md:py-32 relative z-10">
+        <!-- Main Content -->
+        <div class="max-w-4xl mx-auto space-y-8 text-center animate-fade-in-up">
+          <h1 id="hero-heading" class="text-4xl sm:text-5xl md:text-6xl font-bold text-gray-900 leading-tight">
+            Healthy Buildings Network Leeds
+          </h1>
+          
+          <p class="text-2xl md:text-3xl text-hbnGreen font-shadows">
+            Hyper-local to global
+          </p>
+          
+          <p class="text-lg md:text-xl text-gray-700 leading-relaxed max-w-3xl mx-auto">
+            Welcome to the Healthy Buildings Network Leeds, where we collaborate on 
+            research, innovation, and education for healthier, more sustainable 
+            buildings and their environments.
+          </p>
+          
+          <p class="text-lg md:text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto">
             Born out of a Horizons Challenge Network at the University of Leeds, 
             we empower collaborations across disciplines and between academia, industry, and the public.
-          </span>
+          </p>
+
+          <div class="flex flex-wrap justify-center gap-4 pt-4">
+            <a href="membership.html" 
+               class="px-8 py-4 text-lg font-semibold text-white 
+                      bg-hbnGreen rounded-full hover:bg-hbnGreenDark 
+                      transition-all duration-300 transform hover:scale-105 active:scale-95
+                      focus:outline-none focus:ring-4 focus:ring-hbnGreen/50
+                      shadow-lg hover:shadow-xl">
+              Join Us
+            </a>
+            <a href="#upcoming-events" 
+               class="px-8 py-4 text-lg font-semibold text-hbnGreen 
+                      border-2 border-hbnGreen bg-white rounded-full hover:bg-gray-50 
+                      transition-all duration-300 transform hover:scale-105 active:scale-95
+                      focus:outline-none focus:ring-4 focus:ring-hbnGreen/50
+                      shadow-lg hover:shadow-xl">
+              Upcoming Events
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Gradient Overlay at bottom -->
+      <div class="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-white to-transparent" aria-hidden="true"></div>
+      
+      <!-- Scroll indicator -->
+      <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce hidden md:block" aria-hidden="true">
+        <svg class="w-6 h-6 text-hbnGreen" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
+        </svg>
+      </div>
+    </section>
+
+    <!-- Impact Stats Section -->
+    <section class="py-12 bg-hbnGreen text-white" aria-label="Network statistics">
+      <div class="container mx-auto max-w-6xl px-6">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+          <div class="space-y-2">
+            <p class="text-4xl md:text-5xl font-bold">5</p>
+            <p class="text-sm md:text-base opacity-90">Funded Projects</p>
+          </div>
+          <div class="space-y-2">
+            <p class="text-4xl md:text-5xl font-bold">50+</p>
+            <p class="text-sm md:text-base opacity-90">Network Members</p>
+          </div>
+          <div class="space-y-2">
+            <p class="text-4xl md:text-5xl font-bold">12+</p>
+            <p class="text-sm md:text-base opacity-90">Partner Organisations</p>
+          </div>
+          <div class="space-y-2">
+            <p class="text-4xl md:text-5xl font-bold">20+</p>
+            <p class="text-sm md:text-base opacity-90">Events Hosted</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Intro Section -->
+    <section class="py-20 bg-white" aria-labelledby="what-we-do-heading">
+      <div class="container mx-auto max-w-4xl px-6 text-center">
+        <h2 id="what-we-do-heading" class="section-title mb-8">What We Do</h2>
+        <p class="text-lg text-gray-600 leading-relaxed mb-8 mt-12">
+          We connect experts, practitioners, and community members to explore 
+          how buildings impact health and well-being. Our activities include 
+          seminars, funded research projects, and collaborative initiatives 
+          to make indoor environments better for everyone.
         </p>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
+          <!-- Research Card -->
+          <article class="bg-gray-50 p-6 rounded-xl shadow hover:shadow-lg transition-shadow duration-300 group">
+            <div class="text-hbnPurple mb-4">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 mx-auto group-hover:scale-110 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold mb-2 text-gray-800">Research</h3>
+            <p class="text-gray-600">Facilitating cross-disciplinary research on healthy buildings through our pump-priming projects and collaborations.</p>
+          </article>
+          
+          <!-- Events Card -->
+          <article class="bg-gray-50 p-6 rounded-xl shadow hover:shadow-lg transition-shadow duration-300 group">
+            <div class="text-hbnBlue mb-4">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 mx-auto group-hover:scale-110 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold mb-2 text-gray-800">Events</h3>
+            <p class="text-gray-600">Hosting seminars, workshops, and conferences to share knowledge and foster dialogue on healthy building practices.</p>
+          </article>
+          
+          <!-- Collaboration Card -->
+          <article class="bg-gray-50 p-6 rounded-xl shadow hover:shadow-lg transition-shadow duration-300 group">
+            <div class="text-hbnGreen mb-4">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 mx-auto group-hover:scale-110 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z"/>
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold mb-2 text-gray-800">Collaboration</h3>
+            <p class="text-gray-600">Building bridges between academia, industry, local government, and communities to implement evidence-based solutions.</p>
+          </article>
+        </div>
+      </div>
+    </section>
 
-        <div class="flex flex-wrap justify-center gap-4">
+    <!-- What Are Healthy Buildings Section -->
+    <section class="py-20 bg-gray-50" aria-labelledby="healthy-buildings-heading">
+      <div class="container mx-auto max-w-6xl px-6">
+        <h2 id="healthy-buildings-heading" class="section-title text-center mb-16">What Are Healthy Buildings?</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+          
+          <a href="health.html" class="block group focus:outline-none focus:ring-4 focus:ring-hbnGreen/50 rounded-xl">
+            <article class="bg-white p-8 rounded-xl shadow-lg group-hover:shadow-xl transition-all duration-300 h-full group-hover:-translate-y-1">
+              <img src="assets/images/card_health.jpg" 
+                   alt="Person experiencing wellbeing in a healthy indoor environment" 
+                   class="w-full h-48 object-cover rounded-lg mb-6"
+                   loading="lazy"
+                   width="400"
+                   height="192">
+              <h3 class="text-xl font-semibold mb-4 group-hover:text-hbnGreen transition-colors">Mental & Physical Health</h3>
+              <p class="text-gray-600">Healthy buildings enhance physical and mental well-being by fostering supportive social, economic, emotional, and environmental indoor climates.</p>
+            </article>
+          </a>
+
+          <a href="sustainability.html" class="block group focus:outline-none focus:ring-4 focus:ring-hbnGreen/50 rounded-xl">
+            <article class="bg-white p-8 rounded-xl shadow-lg group-hover:shadow-xl transition-all duration-300 h-full group-hover:-translate-y-1">
+              <img src="assets/images/card_sustainability.jpg" 
+                   alt="Sustainable building with green features and energy efficiency" 
+                   class="w-full h-48 object-cover rounded-lg mb-6"
+                   loading="lazy"
+                   width="400"
+                   height="192">
+              <h3 class="text-xl font-semibold mb-4 group-hover:text-hbnGreen transition-colors">Sustainability</h3>
+              <p class="text-gray-600">Buildings that minimise environmental impact while maximising occupant comfort through efficient resource use and smart design.</p>
+            </article>
+          </a>
+
+          <a href="innovation.html" class="block group focus:outline-none focus:ring-4 focus:ring-hbnGreen/50 rounded-xl">
+            <article class="bg-white p-8 rounded-xl shadow-lg group-hover:shadow-xl transition-all duration-300 h-full group-hover:-translate-y-1">
+              <img src="assets/images/card_innovation.jpg" 
+                   alt="Innovative building technology and smart building systems" 
+                   class="w-full h-48 object-cover rounded-lg mb-6"
+                   loading="lazy"
+                   width="400"
+                   height="192">
+              <h3 class="text-xl font-semibold mb-4 group-hover:text-hbnGreen transition-colors">Innovation</h3>
+              <p class="text-gray-600">Embracing new technologies and approaches to create spaces that actively contribute to occupant health and environmental stewardship.</p>
+            </article>
+          </a>
+
+          <a href="design.html" class="block group focus:outline-none focus:ring-4 focus:ring-hbnGreen/50 rounded-xl">
+            <article class="bg-white p-8 rounded-xl shadow-lg group-hover:shadow-xl transition-all duration-300 h-full group-hover:-translate-y-1">
+              <img src="assets/images/card_building_bw.jpg" 
+                   alt="Inclusive and accessible building design process" 
+                   class="w-full h-48 object-cover rounded-lg mb-6"
+                   loading="lazy"
+                   width="400"
+                   height="192">
+              <h3 class="text-xl font-semibold mb-4 group-hover:text-hbnGreen transition-colors">Design</h3>
+              <p class="text-gray-600">Design through careful understanding of the end-user with inclusive, safe and collaborative approaches to suit.</p>
+            </article>
+          </a>
+
+          <a href="people.html" class="block group focus:outline-none focus:ring-4 focus:ring-hbnGreen/50 rounded-xl">
+            <article class="bg-white p-8 rounded-xl shadow-lg group-hover:shadow-xl transition-all duration-300 h-full group-hover:-translate-y-1">
+              <img src="assets/images/card_people.jpg" 
+                   alt="Community members engaged in healthy building education" 
+                   class="w-full h-48 object-cover rounded-lg mb-6"
+                   loading="lazy"
+                   width="400"
+                   height="192">
+              <h3 class="text-xl font-semibold mb-4 group-hover:text-hbnGreen transition-colors">People</h3>
+              <p class="text-gray-600">Empowering people with knowledge and means to act around healthy buildings through education and communication.</p>
+            </article>
+          </a>
+
+          <a href="projects.html" class="block group focus:outline-none focus:ring-4 focus:ring-hbnGreen/50 rounded-xl">
+            <article class="bg-white p-8 rounded-xl shadow-lg group-hover:shadow-xl transition-all duration-300 h-full group-hover:-translate-y-1">
+              <img src="assets/images/news/funding.jpg" 
+                   alt="Research team collaborating on healthy buildings project" 
+                   class="w-full h-48 object-cover rounded-lg mb-6"
+                   loading="lazy"
+                   width="400"
+                   height="192">
+              <h3 class="text-xl font-semibold mb-4 group-hover:text-hbnGreen transition-colors">Our Projects</h3>
+              <p class="text-gray-600">Explore our funded research projects that are advancing knowledge in healthy and sustainable building environments.</p>
+            </article>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Funded Projects Section -->
+    <section class="py-20 bg-white" aria-labelledby="projects-heading">
+      <div class="container mx-auto max-w-6xl px-6">
+        <h2 id="projects-heading" class="section-title text-center mb-8">Our Funded Projects</h2>
+        <p class="text-center text-lg text-gray-600 max-w-3xl mx-auto mb-12 mt-8">
+          We've funded 5 innovative pump-priming research projects, each exploring different aspects of healthy buildings and indoor environments.
+        </p>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Living in Clover -->
+          <article class="bg-gray-50 rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+            <div class="h-48 bg-hbnGreen flex items-center justify-center">
+              <h3 class="text-white text-2xl font-semibold px-4 text-center">Living in Clover</h3>
+            </div>
+            <div class="p-6">
+              <p class="text-gray-600 mb-4">Exploring natural building materials and their impact on energy consumption and occupant well-being.</p>
+              <a href="projects/clover.html" 
+                 class="text-hbnGreen font-medium hover:underline inline-flex items-center group">
+                Learn more 
+                <svg class="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                </svg>
+              </a>
+            </div>
+          </article>
+          
+          <!-- ThermoAge -->
+          <article class="bg-gray-50 rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+            <div class="h-48 bg-hbnPurple flex items-center justify-center">
+              <h3 class="text-white text-2xl font-semibold px-4 text-center">ThermoAge</h3>
+            </div>
+            <div class="p-6">
+              <p class="text-gray-600 mb-4">Investigating thermal comfort needs across different age groups and building implications.</p>
+              <a href="projects/thermoage.html" 
+                 class="text-hbnGreen font-medium hover:underline inline-flex items-center group">
+                Learn more 
+                <svg class="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                </svg>
+              </a>
+            </div>
+          </article>
+          
+          <!-- Human-Centered Housing Design -->
+          <article class="bg-gray-50 rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+            <div class="h-48 bg-hbnBlue flex items-center justify-center">
+              <h3 class="text-white text-2xl font-semibold px-4 text-center">Human-Centered Housing Design</h3>
+            </div>
+            <div class="p-6">
+              <p class="text-gray-600 mb-4">"We shape buildings and thereafter they shape us": towards evidence-based human-centered housing design.</p>
+              <a href="projects/human-centered-housing.html" 
+                 class="text-hbnGreen font-medium hover:underline inline-flex items-center group">
+                Learn more 
+                <svg class="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                </svg>
+              </a>
+            </div>
+          </article>
+        </div>
+        
+        <div class="text-center mt-12">
+          <a href="projects.html" 
+             class="inline-block px-8 py-4 text-lg font-semibold text-white bg-hbnGreen rounded-full 
+                    hover:bg-hbnGreenDark transition-all duration-300 
+                    focus:outline-none focus:ring-4 focus:ring-hbnGreen/50
+                    shadow-lg hover:shadow-xl hover:scale-105 active:scale-95">
+            View All Projects
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Upcoming Events Section -->
+    <section id="upcoming-events" class="py-20 bg-gray-50 scroll-mt-24" aria-labelledby="events-heading">
+      <div class="container mx-auto max-w-6xl px-6">
+        <h2 id="events-heading" class="section-title text-center mb-16">Upcoming Events</h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+          
+          <!-- TOMORROW'S EVENT: Sarah Price -->
+          <article class="bg-white rounded-xl shadow-xl overflow-hidden flex flex-col h-full hover:shadow-2xl transition-shadow duration-300 border border-hbnGreen">
+            <div class="relative flex-shrink-0">
+              <img src="events/seminars/sarah/sarah_price.png" 
+                   alt="Dr. Sarah Price presenting on moisture risk" 
+                   class="w-full h-64 object-cover"
+                   loading="lazy"
+                   width="400"
+                   height="256"
+                   onerror="this.src='assets/images/hbn_landscape.png'">
+              <div class="absolute top-4 right-4 bg-hbnGreen text-white px-4 py-1 rounded-full font-semibold text-sm shadow">
+                <time datetime="2025-12-09">Tomorrow: Dec 9th</time>
+              </div>
+            </div>
+            <div class="p-8 flex flex-col flex-grow">
+              <h3 class="text-2xl font-bold mb-4 text-gray-800">Moisture Risk in Retrofit</h3>
+              <p class="text-gray-600 mb-6 flex-grow">
+                "Getting retrofit wrong doesn't just waste energy; it makes people ill." Join Dr. Sarah Price for this critical seminar on moisture movement and mould risk in retrofit projects.
+              </p>
+              <div class="flex flex-wrap gap-3 mt-auto">
+                <a href="https://forms.cloud.microsoft/e/ryWHVueSXX" 
+                   target="_blank" 
+                   rel="noopener noreferrer"
+                   class="inline-block px-6 py-2 bg-hbnGreen text-white rounded-full hover:bg-hbnGreenDark transition-colors
+                          focus:outline-none focus:ring-2 focus:ring-hbnGreen focus:ring-offset-2">
+                  Register Now
+                  <span class="sr-only">(opens in new tab)</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- NEXT YEAR: ECR Workshops -->
+          <article class="bg-white rounded-xl shadow-xl overflow-hidden flex flex-col h-full hover:shadow-2xl transition-shadow duration-300">
+            <div class="relative flex-shrink-0">
+              <img src="assets/images/events/launch/irene.JPEG" 
+                   alt="Collaborative workshop session" 
+                   class="w-full h-64 object-cover"
+                   loading="lazy"
+                   width="400"
+                   height="256">
+              <div class="absolute top-4 right-4 bg-hbnYellow text-gray-800 px-4 py-1 rounded-full font-semibold text-sm shadow">
+                <time datetime="2026-01-01">January 2026</time>
+              </div>
+            </div>
+            <div class="p-8 flex flex-col flex-grow">
+              <h3 class="text-2xl font-bold mb-4 text-gray-800">ECR-led Workshop Series</h3>
+              <p class="text-gray-600 mb-6 flex-grow">
+                Launching in the New Year! A dynamic series of workshops designed and led by Early Career Researchers to tackle emerging challenges in healthy buildings.
+              </p>
+              <div class="flex flex-wrap gap-3 mt-auto">
+                <a href="events.html" 
+                   class="inline-block px-6 py-2 border-2 border-hbnGreen text-hbnGreen rounded-full hover:bg-gray-50 transition-colors
+                          focus:outline-none focus:ring-2 focus:ring-hbnGreen focus:ring-offset-2">
+                  Coming Soon
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- FUTURE: Call for Seminars -->
+          <article class="bg-white rounded-xl shadow-xl overflow-hidden flex flex-col h-full hover:shadow-2xl transition-shadow duration-300">
+            <div class="relative flex-shrink-0 bg-gray-100 flex items-center justify-center h-64">
+              <img src="assets/images/hbn_landscape.png" 
+                   alt="Healthy Buildings Network Leeds Logo" 
+                   class="w-3/4 h-auto opacity-80"
+                   loading="lazy">
+              <div class="absolute top-4 right-4 bg-hbnBlue text-white px-4 py-1 rounded-full font-semibold text-sm shadow">
+                Spring 2026
+              </div>
+            </div>
+            <div class="p-8 flex flex-col flex-grow">
+              <h3 class="text-2xl font-bold mb-4 text-gray-800">Call for Spring Seminars</h3>
+              <p class="text-gray-600 mb-6 flex-grow">
+                We are currently accepting proposals for our Spring 2026 seminar series. If you have research or a case study to share, we want to hear from you.
+              </p>
+              <div class="flex flex-wrap gap-3 mt-auto">
+                <a href="contact.html" 
+                   class="inline-block px-6 py-2 bg-hbnBlue text-white rounded-full hover:bg-blue-700 transition-colors
+                          focus:outline-none focus:ring-2 focus:ring-hbnBlue focus:ring-offset-2">
+                  Get in Touch
+                </a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+        
+        <div class="text-center mt-12">
+          <a href="events-archive.html" 
+             class="inline-block px-8 py-4 text-lg font-semibold border-2 border-hbnGray text-hbnGray rounded-full hover:bg-gray-100 transition-colors">
+            View Past Events
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Affiliations Section -->
+    <section class="py-20 bg-white" aria-labelledby="affiliations-heading">
+      <div class="container mx-auto max-w-6xl px-6">
+        <h2 id="affiliations-heading" class="section-title text-center mb-16">Our Affiliations & Collaborations</h2>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 items-center mt-12">
+          <a href="https://www.leeds.ac.uk" 
+             target="_blank" 
+             rel="noopener noreferrer"
+             class="hover:opacity-75 transition-opacity p-4 flex items-center justify-center
+                    focus:outline-none focus:ring-2 focus:ring-hbnGreen focus:ring-offset-4 rounded-lg">
+            <img src="assets/images/leeds_logo_black_on_white_bk.jpg" 
+                 alt="University of Leeds" 
+                 class="max-h-16 md:max-h-20 w-auto"
+                 loading="lazy"
+                 width="160"
+                 height="80">
+          </a>
+          <a href="https://lifd.leeds.ac.uk" 
+             target="_blank"
+             rel="noopener noreferrer"
+             class="hover:opacity-75 transition-opacity p-4 flex items-center justify-center
+                    focus:outline-none focus:ring-2 focus:ring-hbnGreen focus:ring-offset-4 rounded-lg">
+            <img src="assets/images/logo_lifd.jpeg" 
+                 alt="Leeds Institute for Fluid Dynamics" 
+                 class="max-h-16 md:max-h-20 w-auto"
+                 loading="lazy"
+                 width="160"
+                 height="80">
+          </a>
+          <a href="https://lssi.leeds.ac.uk" 
+             target="_blank"
+             rel="noopener noreferrer"
+             class="hover:opacity-75 transition-opacity p-4 flex items-center justify-center
+                    focus:outline-none focus:ring-2 focus:ring-hbnGreen focus:ring-offset-4 rounded-lg">
+            <img src="assets/images/logo_leeds_social_sciences_institute_logo.jpeg" 
+                 alt="Leeds Social Sciences Institute" 
+                 class="max-h-16 md:max-h-20 w-auto"
+                 loading="lazy"
+                 width="160"
+                 height="80">
+          </a>
+          <a href="https://lahri.leeds.ac.uk" 
+             target="_blank"
+             rel="noopener noreferrer"
+             class="hover:opacity-75 transition-opacity p-4 flex items-center justify-center
+                    focus:outline-none focus:ring-2 focus:ring-hbnGreen focus:ring-offset-4 rounded-lg">
+            <img src="assets/images/logo_lahri.jpg" 
+                 alt="Leeds Arts & Humanities Research Institute" 
+                 class="max-h-16 md:max-h-20 w-auto"
+                 loading="lazy"
+                 width="160"
+                 height="80">
+          </a>
+          <a href="https://ukieg.org" 
+             target="_blank"
+             rel="noopener noreferrer"
+             class="hover:opacity-75 transition-opacity p-4 flex items-center justify-center
+                    focus:outline-none focus:ring-2 focus:ring-hbnGreen focus:ring-offset-4 rounded-lg">
+            <img src="assets/images/UKIEG.png" 
+                 alt="UK Indoor Environments Group" 
+                 class="max-h-16 md:max-h-20 w-auto"
+                 loading="lazy"
+                 width="160"
+                 height="80">
+          </a>
+          <a href="https://ncas.ac.uk" 
+             target="_blank"
+             rel="noopener noreferrer"
+             class="hover:opacity-75 transition-opacity p-4 flex items-center justify-center
+                    focus:outline-none focus:ring-2 focus:ring-hbnGreen focus:ring-offset-4 rounded-lg">
+            <img src="assets/images/logo_ncas.jpg" 
+                 alt="National Centre for Atmospheric Science" 
+                 class="max-h-16 md:max-h-20 w-auto"
+                 loading="lazy"
+                 width="160"
+                 height="80">
+          </a>
+          <a href="https://water.leeds.ac.uk" 
+             target="_blank"
+             rel="noopener noreferrer"
+             class="hover:opacity-75 transition-opacity p-4 flex items-center justify-center
+                    focus:outline-none focus:ring-2 focus:ring-hbnGreen focus:ring-offset-4 rounded-lg">
+            <img src="assets/images/logo_water_at_leeds.jpeg" 
+                 alt="Water@Leeds research centre" 
+                 class="max-h-16 md:max-h-20 w-auto"
+                 loading="lazy"
+                 width="160"
+                 height="80">
+          </a>
+          <a href="https://lida.leeds.ac.uk" 
+             target="_blank"
+             rel="noopener noreferrer"
+             class="hover:opacity-75 transition-opacity p-4 flex items-center justify-center
+                    focus:outline-none focus:ring-2 focus:ring-hbnGreen focus:ring-offset-4 rounded-lg">
+            <img src="assets/images/logo_lida.jpeg" 
+                 alt="Leeds Institute for Data Analytics" 
+                 class="max-h-16 md:max-h-20 w-auto"
+                 loading="lazy"
+                 width="160"
+                 height="80">
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Latest News Section -->
+    <section class="py-20 bg-gray-50" aria-labelledby="news-heading">
+      <div class="container mx-auto max-w-6xl px-6">
+        <h2 id="news-heading" class="section-title text-center mb-8">Latest News & Updates</h2>
+        <p class="text-center text-lg text-gray-600 max-w-3xl mx-auto mb-12 mt-8">
+          Stay up to date with the latest developments from our network, including event recaps, project updates, and more.
+        </p>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- News Item 1 -->
+          <a href="news/launch_2024.html" class="group focus:outline-none focus:ring-4 focus:ring-hbnGreen/50 rounded-xl">
+            <article class="bg-white rounded-xl shadow-lg overflow-hidden group-hover:shadow-xl transition-all duration-300 h-full group-hover:-translate-y-1">
+              <div class="relative">
+                <img src="assets/images/events/launch/elisabeth.JPEG" 
+                     alt="Network launch event with Elisabeth addressing attendees" 
+                     class="w-full h-48 object-cover"
+                     loading="lazy"
+                     width="400"
+                     height="192">
+                <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent h-24"></div>
+              </div>
+              <div class="p-6">
+                <time datetime="2024-10-17" class="text-sm text-gray-500 block mb-2">October 17, 2024</time>
+                <h3 class="text-xl font-semibold mb-3 group-hover:text-hbnGreen transition-colors">Network Launch Success</h3>
+                <p class="text-gray-600 mb-4">Celebrating the successful launch of our network with industry partners and academics.</p>
+                <span class="text-hbnGreen font-medium group-hover:underline inline-flex items-center">
+                  Read more 
+                  <svg class="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                  </svg>
+                </span>
+              </div>
+            </article>
+          </a>
+
+          <!-- News Item 2 -->
+          <a href="blog/pump-priming-progress.html" class="group focus:outline-none focus:ring-4 focus:ring-hbnGreen/50 rounded-xl">
+            <article class="bg-white rounded-xl shadow-lg overflow-hidden group-hover:shadow-xl transition-all duration-300 h-full group-hover:-translate-y-1">
+              <div class="relative">
+                <img src="assets/images/news/funding.jpg" 
+                     alt="Research team celebrating funding award announcement" 
+                     class="w-full h-48 object-cover"
+                     loading="lazy"
+                     width="400"
+                     height="192">
+                <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent h-24"></div>
+              </div>
+              <div class="p-6">
+                <time datetime="2025-03-01" class="text-sm text-gray-500 block mb-2">March 1, 2025</time>
+                <h3 class="text-xl font-semibold mb-3 group-hover:text-hbnGreen transition-colors">Pump-priming Funding Award</h3>
+                <p class="text-gray-600 mb-4">Four brilliant projects secure funding for innovative healthy buildings research.</p>
+                <span class="text-hbnGreen font-medium group-hover:underline inline-flex items-center">
+                  Read more 
+                  <svg class="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                  </svg>
+                </span>
+              </div>
+            </article>
+          </a>
+
+          <!-- News Item 3 -->
+          <a href="news/collaboration.html" class="group focus:outline-none focus:ring-4 focus:ring-hbnGreen/50 rounded-xl">
+            <article class="bg-white rounded-xl shadow-lg overflow-hidden group-hover:shadow-xl transition-all duration-300 h-full group-hover:-translate-y-1">
+              <div class="relative">
+                <img src="assets/images/undraw_quiet-street_v45k.png" 
+                     alt="Illustration of community street representing local partnerships" 
+                     class="w-full h-48 object-cover"
+                     loading="lazy"
+                     width="400"
+                     height="192">
+                <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent h-24"></div>
+              </div>
+              <div class="p-6">
+                <time datetime="2024-02-15" class="text-sm text-gray-500 block mb-2">February 15, 2024</time>
+                <h3 class="text-xl font-semibold mb-3 group-hover:text-hbnGreen transition-colors">Looking to Partner With Local City Councils</h3>
+                <p class="text-gray-600 mb-4">If you work for a local council or the Yorkshire Combined Authority and are interested in proposing a workshop or seminar, get in touch.</p>
+                <span class="text-hbnGreen font-medium group-hover:underline inline-flex items-center">
+                  Read more 
+                  <svg class="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                  </svg>
+                </span>
+              </div>
+            </article>
+          </a>
+        </div>
+        
+        <div class="text-center mt-12">
+          <a href="blog.html" 
+             class="inline-block px-8 py-4 text-lg font-semibold border-2 border-hbnGreen text-hbnGreen rounded-full 
+                    hover:bg-hbnGreen hover:text-white transition-all duration-300
+                    focus:outline-none focus:ring-4 focus:ring-hbnGreen/50">
+            View All News
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="py-24 bg-hbnGreen text-white" aria-labelledby="cta-heading">
+      <div class="container mx-auto max-w-4xl px-6 text-center">
+        <h2 id="cta-heading" class="text-3xl md:text-4xl font-bold mb-6">Join Our Network</h2>
+        <p class="text-xl mb-10 max-w-2xl mx-auto opacity-95">
+          Whether you're a researcher, industry professional, policymaker, or community member, we welcome your 
+          involvement in creating healthier, more sustainable building environments.
+        </p>
+        <div class="flex flex-wrap justify-center gap-6">
           <a href="membership.html" 
-             class="px-8 py-4 text-lg font-semibold text-white 
-                    bg-hbnGreen rounded-full hover:bg-green-700 
-                    transition-colors duration-300 transform hover:scale-105">
-            Join Us
+             class="px-8 py-4 text-lg font-semibold bg-white text-hbnGreen rounded-full 
+                    hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 active:scale-95
+                    focus:outline-none focus:ring-4 focus:ring-white/50
+                    shadow-lg">
+            Become a Member
           </a>
-          <a href="#upcoming-events" 
-             class="px-8 py-4 text-lg font-semibold text-hbnGreen 
-                    border-2 border-hbnGreen bg-white rounded-full hover:bg-gray-100 
-                    transition-colors duration-300 transform hover:scale-105">
-            Upcoming Events
+          <a href="contact.html" 
+             class="px-8 py-4 text-lg font-semibold border-2 border-white text-white rounded-full 
+                    hover:bg-white/10 transition-all duration-300 transform hover:scale-105 active:scale-95
+                    focus:outline-none focus:ring-4 focus:ring-white/50">
+            Contact Us
           </a>
         </div>
       </div>
-    </div>
+    </section>
+  </main>
 
-    <!-- Gradient Overlay -->
-    <div class="absolute bottom-0 left-0 right-0 h-32 
-                bg-gradient-to-t from-white to-transparent">
-    </div>
-  </section>
-
-  <!-- Intro Section -->
-  <section class="py-20 bg-white">
-    <div class="container mx-auto max-w-4xl px-6 text-center">
-      <h2 class="section-title mb-8">What We Do</h2>
-      <p class="text-lg text-gray-600 leading-relaxed mb-8">
-        We connect experts, practitioners, and community members to explore 
-        how buildings impact health and well-being. Our activities include 
-        seminars, funded research projects, and collaborative initiatives 
-        to make indoor environments better for everyone.
-      </p>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
-        <div class="bg-gray-50 p-6 rounded-lg shadow hover:shadow-md transition-shadow">
-          <div class="text-hbnPurple text-4xl mb-4">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 13v-1m4 1v-3m4 3V8M12 21l8-8-8-8-8 8 8 8z" />
-            </svg>
-          </div>
-          <h3 class="text-xl font-semibold mb-2">Research</h3>
-          <p>Facilitating cross-disciplinary research on healthy buildings through our pump-priming projects and collaborations.</p>
-        </div>
-        <div class="bg-gray-50 p-6 rounded-lg shadow hover:shadow-md transition-shadow">
-          <div class="text-hbnBlue text-4xl mb-4">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-            </svg>
-          </div>
-          <h3 class="text-xl font-semibold mb-2">Events</h3>
-          <p>Hosting seminars, workshops, and conferences to share knowledge and foster dialogue on healthy building practices.</p>
-        </div>
-        <div class="bg-gray-50 p-6 rounded-lg shadow hover:shadow-md transition-shadow">
-          <div class="text-hbnGreen text-4xl mb-4">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z" />
-            </svg>
-          </div>
-          <h3 class="text-xl font-semibold mb-2">Collaboration</h3>
-          <p>Building bridges between academia, industry, local government, and communities to implement evidence-based solutions.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- What Are Healthy Buildings Section -->
-  <section class="py-20 bg-gray-50">
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white py-12 md:py-16" role="contentinfo">
     <div class="container mx-auto max-w-6xl px-6">
-      <h2 class="section-title text-center mb-16">What Are Healthy Buildings?</h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
-        
-        <a href="health.html" class="block group">
-          <div class="bg-white p-8 rounded-lg shadow-lg group-hover:shadow-xl transition-shadow h-full">
-            <img src="assets/images/card_health.png" alt="Mental & Physical Health" class="w-full h-48 object-cover rounded-lg mb-6">
-            <h3 class="text-xl font-semibold mb-4 group-hover:text-hbnGreen transition-colors">Mental & Physical Health</h3>
-            <p class="text-gray-600">Healthy buildings enhance physical and mental well-being by fostering supportive social, economic, emotional, and environmental indoor climates.</p>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
+        <!-- Bio / Logo section -->
+        <div class="lg:col-span-1">
+          <div class="flex items-center space-x-4 mb-4">
+            <img src="assets/images/hbn_landscape.png" 
+                 alt="Healthy Buildings Network Leeds" 
+                 class="h-10 w-auto brightness-0 invert opacity-90"
+                 width="150"
+                 height="40">
           </div>
-        </a>
-
-        <a href="sustainability.html" class="block group">
-          <div class="bg-white p-8 rounded-lg shadow-lg group-hover:shadow-xl transition-shadow h-full">
-            <img src="assets/images/card_sustainable.png" alt="Sustainability" class="w-full h-48 object-cover rounded-lg mb-6">
-            <h3 class="text-xl font-semibold mb-4 group-hover:text-hbnGreen transition-colors">Sustainability</h3>
-            <p class="text-gray-600">Buildings that minimise environmental impact while maximising occupant comfort through efficient resource use and smart design.</p>
-          </div>
-        </a>
-
-        <a href="innovation.html" class="block group">
-          <div class="bg-white p-8 rounded-lg shadow-lg group-hover:shadow-xl transition-shadow h-full">
-            <img src="assets/images/card_adaptive.png" alt="Innovation" class="w-full h-48 object-cover rounded-lg mb-6">
-            <h3 class="text-xl font-semibold mb-4 group-hover:text-hbnGreen transition-colors">Innovation</h3>
-            <p class="text-gray-600">Embracing new technologies and approaches to create spaces that actively contribute to occupant health and environmental stewardship.</p>
-          </div>
-        </a>
-
-        <a href="design.html" class="block group">
-          <div class="bg-white p-8 rounded-lg shadow-lg group-hover:shadow-xl transition-shadow h-full">
-            <img src="assets/images/card_design.png" alt="Design" class="w-full h-48 object-cover rounded-lg mb-6">
-            <h3 class="text-xl font-semibold mb-4 group-hover:text-hbnGreen transition-colors">Design</h3>
-            <p class="text-gray-600">Design through carefully understanding of the end-user with inclusive, safe and collaborative approaches to suit.</p>
-          </div>
-        </a>
-
-        <a href="people.html" class="block group">
-          <div class="bg-white p-8 rounded-lg shadow-lg group-hover:shadow-xl transition-shadow h-full">
-            <img src="assets/images/card_people.png" alt="People" class="w-full h-48 object-cover rounded-lg mb-6">
-            <h3 class="text-xl font-semibold mb-4 group-hover:text-hbnGreen transition-colors">People</h3>
-            <p class="text-gray-600">Empowering people with knowledge and means to act around healthy buildings through education and communication.</p>
-          </div>
-        </a>
-
-        <a href="projects.html" class="block group">
-          <div class="bg-white p-8 rounded-lg shadow-lg group-hover:shadow-xl transition-shadow h-full">
-            <img src="assets/images/news/funding.jpg" alt="Our Projects" class="w-full h-48 object-cover rounded-lg mb-6">
-            <h3 class="text-xl font-semibold mb-4 group-hover:text-hbnGreen transition-colors">Our Projects</h3>
-            <p class="text-gray-600">Explore our funded research projects that are advancing knowledge in healthy and sustainable building environments.</p>
-          </div>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Funded Projects Section -->
-  <section class="py-20 bg-white">
-    <div class="container mx-auto max-w-6xl px-6">
-      <h2 class="section-title text-center mb-8">Our Funded Projects</h2>
-      <p class="text-center text-lg text-gray-600 max-w-3xl mx-auto mb-12">
-        We've funded 5 innovative pump-priming research projects, each exploring different aspects of healthy buildings and indoor environments.
-      </p>
-      
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <div class="bg-gray-50 rounded-lg shadow-lg overflow-hidden">
-          <div class="h-48 bg-hbnGreen flex items-center justify-center">
-            <h3 class="text-white text-2xl font-semibold px-4 text-center">Living in Clover</h3>
-          </div>
-          <div class="p-6">
-            <p class="text-gray-600 mb-4">Exploring natural building materials and their impact on energy consumption and occupant well-being.</p>
-            <a href="projects/clover.html" class="text-hbnGreen font-medium hover:underline">Learn more →</a>
-          </div>
-        </div>
-        
-        <div class="bg-gray-50 rounded-lg shadow-lg overflow-hidden">
-          <div class="h-48 bg-hbnPurple flex items-center justify-center">
-            <h3 class="text-white text-2xl font-semibold px-4 text-center">ThermoAge</h3>
-          </div>
-          <div class="p-6">
-            <p class="text-gray-600 mb-4">Investigating thermal comfort needs across different age groups and building implications.</p>
-            <a href="projects/thermoage.html" class="text-hbnGreen font-medium hover:underline">Learn more →</a>
-          </div>
-        </div>
-        
-        <div class="bg-gray-50 rounded-lg shadow-lg overflow-hidden">
-          <div class="h-48 bg-hbnBlue flex items-center justify-center">
-            <h3 class="text-white text-2xl font-semibold px-4 text-center">Human-Centered Housing Design</h3>
-          </div>
-          <div class="p-6">
-            <p class="text-gray-600 mb-4">"We shape buildings and thereafter they shape us": towards evidence-based human-centered housing design.</p>
-            <a href="projects/human-centered-housing.html" class="text-hbnGreen font-medium hover:underline">Learn more →</a>
-          </div>
-        </div>
-      </div>
-      
-      <div class="text-center mt-12">
-        <a href="projects.html" class="inline-block px-8 py-4 text-lg font-semibold text-white bg-hbnGreen rounded-full hover:bg-green-700 transition-colors">View All Projects</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Upcoming Events Section -->
-  <section id="upcoming-events" class="py-20 bg-gray-50">
-    <div class="container mx-auto max-w-6xl px-6">
-      <h2 class="section-title text-center mb-16">Upcoming Events</h2>
-      
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
-        <!-- UKIEG Conference -->
-        <div class="bg-white rounded-xl shadow-xl overflow-hidden flex flex-col h-full">
-          <div class="relative">
-            <img src="assets/images/events/ukieg/ukieg_conference.png" alt="UKIEG 2025 Conference" class="w-full h-64 object-cover">
-            <div class="absolute top-4 right-4 bg-hbnYellow text-gray-800 px-4 py-1 rounded-full font-semibold">
-              19th June 2025
-            </div>
-          </div>
-          <div class="p-8 flex-grow">
-            <h3 class="text-2xl font-bold mb-4">UKIEG 2025 Annual Conference</h3>
-            <p class="text-gray-600 mb-6">
-              Join us for the UK Indoor Environments Group's annual conference at the University of Leeds. This flagship event brings together researchers, practitioners, and policymakers to discuss indoor environmental quality.
-            </p>
-            <div class="mt-auto flex flex-wrap gap-4">
-              <a href="http://www.ukieg2025leeds.co.uk" target="_blank" class="inline-block px-6 py-2 bg-hbnGreen text-white rounded-full hover:bg-green-700 transition-colors">
-                Conference Website
-              </a>
-              <a href="http://www.ukieg2025leeds.co.uk" class="inline-block px-6 py-2 border-2 border-hbnGreen text-hbnGreen rounded-full hover:bg-gray-50 transition-colors">
-                Learn More
-              </a>
-            </div>
-          </div>
-        </div>
-        <!--
-        <div class="bg-white rounded-xl shadow-xl overflow-hidden flex flex-col h-full">
-          <div class="relative">
-            <img src="assets/images/events/seminars/louis/louis.jpg" alt="Louis Platman" class="w-full h-64 object-cover">
-            <div class="absolute top-4 right-4 bg-hbnYellow text-gray-800 px-4 py-1 rounded-full font-semibold">
-              30th April 2025
-            </div>
-          </div>
-          <div class="p-8 flex-grow">
-            <h3 class="text-2xl font-bold mb-4">Exploring the Essence of Home</h3>
-            <p class="text-gray-600 mb-6">
-              An Interactive Seminar with Louis Platman. Join us for a captivating two-hour interactive seminar led by Louis Platman, curator at London's renowned <strong>Museum of the Home</strong>. Louis specialises in the diverse narratives and evolving interpretations of what home means across different communities and historical periods.
-
-            </p>
-            <div class="mt-auto flex flex-wrap gap-4">
-              <a href="https://forms.office.com/e/Z7hXrBvmy6" class="inline-block px-6 py-2 bg-hbnGreen text-white rounded-full hover:bg-green-700 transition-colors">
-                Register
-              </a>
-              <a href="https://www.museumofthehome.org.uk" class="inline-block px-6 py-2 border-2 border-hbnGreen text-hbnGreen rounded-full hover:bg-gray-50 transition-colors">
-                Museum of the Home
-              </a>
-            </div>
-          </div>
-        </div>-->
-        <!-- Next Seminar -->
-        <div class="bg-white rounded-xl shadow-xl overflow-hidden flex flex-col h-full">
-          <div class="relative">
-            <img src="assets/images/events/seminars/fairburn/fairburn_austin.png" alt="fairburn" class="w-full h-64 object-cover">
-            <div class="absolute top-4 right-4 bg-hbnYellow text-gray-800 px-4 py-1 rounded-full font-semibold">
-              14th May 2025
-            </div>
-          </div>
-          <div class="p-8 flex-grow">
-            <h3 class="text-2xl font-bold mb-4">Trends and Policy Changes in Social Housing: Opportunities for Healthier Populations</h3>
-            <p class="text-gray-600 mb-6">
-              Prof. Jon Fairburn and Dr. Louise Austin will explore how these changes present not only challenges but also vital opportunities to improve public health outcomes and create more sustainable communities.
-            </p>
-            <div class="mt-auto flex flex-wrap gap-4">
-              <a href="https://forms.office.com/e/Ezgs8sTkzt" class="inline-block px-6 py-2 bg-hbnGreen text-white rounded-full hover:bg-green-700 transition-colors">
-                Register
-              </a>
-              <a href="events.html" class="inline-block px-6 py-2 border-2 border-hbnGreen text-hbnGreen rounded-full hover:bg-gray-50 transition-colors">
-                View All Seminars
-              </a>
-            </div>
-          </div>
-        </div>
-        <!-- Next Seminar -->
-        <div class="bg-white rounded-xl shadow-xl overflow-hidden flex flex-col h-full">
-          <div class="relative">
-            <img src="assets/images/events/seminars/gesa/Gesa-Reiss.png" alt="Gesa Reiss Seminar on Hempcrete" class="w-full h-64 object-cover">
-            <div class="absolute top-4 right-4 bg-hbnYellow text-gray-800 px-4 py-1 rounded-full font-semibold">
-              28th May 2025
-            </div>
-          </div>
-          <div class="p-8 flex-grow">
-            <h3 class="text-2xl font-bold mb-4">Hempcrete and Natural Building Materials</h3>
-            <p class="text-gray-600 mb-6">
-              Dr. Gesa Reiss presents her research on hempcrete and other natural building materials, exploring their properties, benefits, and applications in sustainable construction.
-            </p>
-            <div class="mt-auto flex flex-wrap gap-4">
-              <a href="https://forms.office.com/Pages/ResponsePage.aspx?id=qO3qvR3IzkWGPlIypTW3y3WKWaOxj3RLk0lAv5VpDqxUMFYyVVdHUEpIR0VMVUQyNEtITkNWU05PUC4u" class="inline-block px-6 py-2 bg-hbnGreen text-white rounded-full hover:bg-green-700 transition-colors">
-                Register
-              </a>
-              <a href="events.html" class="inline-block px-6 py-2 border-2 border-hbnGreen text-hbnGreen rounded-full hover:bg-gray-50 transition-colors">
-                View All Seminars
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Affiliations Section -->
-  <section class="py-20 bg-white">
-    <div class="container mx-auto max-w-6xl px-6">
-      <h2 class="section-title text-center mb-16">Our Affiliations & Collaborations</h2>
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-12 items-center">
-        <a href="https://www.leeds.ac.uk" target="_blank" class="hover:opacity-75 transition-opacity">
-          <img src="assets/images/leeds_logo_black_on_white_bk.jpg" alt="University of Leeds" class="max-h-20 mx-auto">
-        </a>
-        <a href="https://lifd.leeds.ac.uk" target="_blank" class="hover:opacity-75 transition-opacity">
-          <img src="assets/images/logo_lifd.jpeg" alt="Leeds Institute for Fluid Dynamics" class="max-h-20 mx-auto">
-        </a>
-        <a href="https://lssi.leeds.ac.uk" target="_blank" class="hover:opacity-75 transition-opacity">
-          <img src="assets/images/logo_leeds_social_sciences_institute_logo.jpeg" alt="Leeds Social Sciences Institute" class="max-h-20 mx-auto">
-        </a>
-        <a href="https://lahri.leeds.ac.uk" target="_blank" class="hover:opacity-75 transition-opacity">
-          <img src="assets/images/logo_lahri.jpg" alt="Leeds Arts & Humanities Research Institute" class="max-h-20 mx-auto">
-        </a>
-        <a href="https://ukieg.org" target="_blank" class="hover:opacity-75 transition-opacity">
-          <img src="assets/images/UKIEG.png" alt="UKIEG" class="max-h-20 mx-auto">
-        </a>
-        <a href="https://ncas.ac.uk" target="_blank" class="hover:opacity-75 transition-opacity">
-          <img src="assets/images/logo_ncas.jpg" alt="NCAS" class="max-h-20 mx-auto">
-        </a>
-        <a href="https://water.leeds.ac.uk" target="_blank" class="hover:opacity-75 transition-opacity">
-          <img src="assets/images/logo_water_at_leeds.jpeg" alt="Water@Leeds" class="max-h-20 mx-auto">
-        </a>
-        <a href="https://lida.leeds.ac.uk" target="_blank" class="hover:opacity-75 transition-opacity">
-          <img src="assets/images/logo_lida.jpeg" alt="LIDA" class="max-h-20 mx-auto">
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Latest News Section -->
-  <section class="py-20 bg-gray-50">
-    <div class="container mx-auto max-w-6xl px-6">
-      <h2 class="section-title text-center mb-8">Latest News & Updates</h2>
-      <p class="text-center text-lg text-gray-600 max-w-3xl mx-auto mb-12">
-        Stay up to date with the latest developments from our network, including event recaps, project updates, and more.
-      </p>
-      
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
-        <a href="news/launch_2024.html" class="group">
-          <article class="bg-white rounded-lg shadow-lg overflow-hidden group-hover:shadow-xl transition-shadow h-full">
-            <div class="relative">
-              <img src="assets/images/events/launch/elisabeth.JPEG" alt="Network Launch" class="w-full h-48 object-cover">
-              <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent h-24 opacity-50"></div>
-            </div>
-            <div class="p-6">
-              <span class="text-sm text-gray-500 block mb-2">October 17, 2024</span>
-              <h3 class="text-xl font-semibold mb-3 group-hover:text-hbnGreen transition-colors">Network Launch Success</h3>
-              <p class="text-gray-600 mb-4">Celebrating the successful launch of our network with industry partners and academics.</p>
-              <span class="text-hbnGreen font-medium group-hover:underline">Read more →</span>
-            </div>
-          </article>
-        </a>
-
-        <a href="blog/pump-priming-progress.html" class="group">
-          <article class="bg-white rounded-lg shadow-lg overflow-hidden group-hover:shadow-xl transition-shadow h-full">
-            <div class="relative">
-              <img src="assets/images/news/funding.jpg" alt="Funding Award" class="w-full h-48 object-cover">
-              <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent h-24 opacity-50"></div>
-            </div>
-            <div class="p-6">
-              <span class="text-sm text-gray-500 block mb-2">March 1, 2025</span>
-              <h3 class="text-xl font-semibold mb-3 group-hover:text-hbnGreen transition-colors">Pump-priming Funding Award</h3>
-              <p class="text-gray-600 mb-4">Four brilliant projects secure funding for innovative healthy buildings research.</p>
-              <span class="text-hbnGreen font-medium group-hover:underline">Read more →</span>
-            </div>
-          </article>
-        </a>
-
-        <a href="news/collaboration.html" class="group">
-          <article class="bg-white rounded-lg shadow-lg overflow-hidden group-hover:shadow-xl transition-shadow h-full">
-            <div class="relative">
-              <img src="assets/images/undraw_quiet-street_v45k.png" alt="New Partnership" class="w-full h-48 object-cover">
-              <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent h-24 opacity-50"></div>
-            </div>
-            <div class="p-6">
-              <span class="text-sm text-gray-500 block mb-2">February 15, 2024</span>
-              <h3 class="text-xl font-semibold mb-3 group-hover:text-hbnGreen transition-colors">Looking to Partner With Local City Councils</h3>
-              <p class="text-gray-600 mb-4">If you work for a local council or the Yorkshire Combined Authority and are interested in proposing a workshop or seminar, 
-                get in touch and we can help support with logistics, venue and registration. </p>
-              <span class="text-hbnGreen font-medium group-hover:underline">Read more →</span>
-            </div>
-          </article>
-        </a>
-      </div>
-      
-      <div class="text-center mt-12">
-        <a href="blog.html" class="inline-block px-8 py-4 text-lg font-semibold border-2 border-hbnGreen text-hbnGreen rounded-full hover:bg-gray-50 transition-colors">View All News</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Call to Action -->
-  <section class="py-24 bg-hbnGreen text-white">
-    <div class="container mx-auto max-w-4xl px-6 text-center">
-      <h2 class="text-3xl md:text-4xl font-bold mb-6">Join Our Network</h2>
-      <p class="text-xl mb-10 max-w-2xl mx-auto">
-        Whether you're a researcher, industry professional, policymaker, or community member, we welcome your 
-        involvement in creating healthier, more sustainable building environments.
-      </p>
-      <div class="flex flex-wrap justify-center gap-6">
-        <a href="membership.html" class="px-8 py-4 text-lg font-semibold bg-white text-hbnGreen rounded-full hover:bg-gray-100 transition-colors transform hover:scale-105">
-          Become a Member
-        </a>
-        <a href="contact.html" class="px-8 py-4 text-lg font-semibold border-2 border-white text-white rounded-full hover:bg-hbnGreen-700 transition-colors transform hover:scale-105">
-          Contact Us
-        </a>
-      </div>
-    </div>
-  </section>
-
- <!-- Footer -->
-<footer class="bg-gray-800 text-white py-12 md:py-16">
-  <div class="container mx-auto max-w-6xl px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-    <!-- Bio / Logo section -->
-    <div class="mb-8">
-      <div class="flex items-center space-x-4 mb-4">
-        <img src="assets/images/hbn_landscape.png" alt="Healthy Buildings Network Leeds Logo" class="h-12 filter brightness-0 invert opacity-90">
-        <img src="assets/images/leeds_logo_white_transparent.png" alt="Leeds Logo" class="h-12 filter brightness-0 invert opacity-90">
-      </div>
-      <p class="text-sm tracking-wide text-gray-300">
-        Healthy Buildings Network Leeds is a cross-disciplinary research and collaboration hub at the University of Leeds, focused on healthier, more sustainable built environments.
-      </p>
-
+          <p class="text-sm leading-relaxed text-gray-300 mb-6">
+            Healthy Buildings Network Leeds is a cross-disciplinary research and collaboration hub at the University of Leeds, focused on healthier, more sustainable built environments.
+          </p>
   
-        <!-- Social Links -->
-        <ul class="flex mt-4">
-          <li class="mr-4 flex items-center">
-            <a href="https://www.linkedin.com/company/healthy-buildings-network/" target="_blank" class="text-gray-300 hover:text-hbnGreen transition-colors flex items-center">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
-              </svg>
-              LinkedIn
-            </a>
-          </li>
-          <li class="mr-4 flex items-center">
-            <a href="mailto:healthy_buildings_network@leeds.ac.uk" class="text-gray-300 hover:text-hbnGreen transition-colors flex items-center">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-              </svg>
-              Email Us
-            </a>
-          </li>
-        </ul>
+          <!-- Social Links -->
+          <ul class="flex space-x-4">
+            <li>
+              <a href="https://www.linkedin.com/company/healthy-buildings-network/" 
+                 target="_blank" 
+                 rel="noopener noreferrer"
+                 class="text-gray-300 hover:text-hbnGreen transition-colors inline-flex items-center
+                        focus:outline-none focus:ring-2 focus:ring-hbnGreen rounded"
+                 aria-label="Follow us on LinkedIn (opens in new tab)">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="mailto:healthy_buildings_network@leeds.ac.uk" 
+                 class="text-gray-300 hover:text-hbnGreen transition-colors inline-flex items-center
+                        focus:outline-none focus:ring-2 focus:ring-hbnGreen rounded"
+                 aria-label="Email us">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+  
+        <!-- Quick Links -->
+        <div>
+          <h4 class="text-lg font-bold mb-4 text-white">Quick Links</h4>
+          <ul class="space-y-2">
+            <li><a href="index.html" class="text-gray-300 hover:text-hbnGreen transition-colors focus:outline-none focus:underline">Home</a></li>
+            <li><a href="about.html" class="text-gray-300 hover:text-hbnGreen transition-colors focus:outline-none focus:underline">About</a></li>
+            <li><a href="projects.html" class="text-gray-300 hover:text-hbnGreen transition-colors focus:outline-none focus:underline">Projects</a></li>
+            <li><a href="events.html" class="text-gray-300 hover:text-hbnGreen transition-colors focus:outline-none focus:underline">Seminars</a></li>
+            <li><a href="membership.html" class="text-gray-300 hover:text-hbnGreen transition-colors focus:outline-none focus:underline">Membership</a></li>
+            <li><a href="contact.html" class="text-gray-300 hover:text-hbnGreen transition-colors focus:outline-none focus:underline">Contact</a></li>
+          </ul>
+        </div>
+  
+        <!-- Affiliations -->
+        <div>
+          <h4 class="text-lg font-bold mb-4 text-white">Affiliations</h4>
+          <ul class="space-y-2">
+            <li><a href="https://fluids.leeds.ac.uk" target="_blank" rel="noopener noreferrer" class="text-gray-300 hover:text-hbnGreen transition-colors focus:outline-none focus:underline">Leeds Institute for Fluid Dynamics</a></li>
+            <li><a href="https://lssi.leeds.ac.uk" target="_blank" rel="noopener noreferrer" class="text-gray-300 hover:text-hbnGreen transition-colors focus:outline-none focus:underline">Leeds Social Sciences Institute</a></li>
+            <li><a href="https://lahri.leeds.ac.uk" target="_blank" rel="noopener noreferrer" class="text-gray-300 hover:text-hbnGreen transition-colors focus:outline-none focus:underline">Leeds Arts & Humanities Research Institute</a></li>
+            <li><a href="https://environment.leeds.ac.uk/institute-climate-atmospheric-science" target="_blank" rel="noopener noreferrer" class="text-gray-300 hover:text-hbnGreen transition-colors focus:outline-none focus:underline">ICAS</a></li>
+            <li><a href="https://sustainability.leeds.ac.uk/get-involved/leeds-living-lab/" target="_blank" rel="noopener noreferrer" class="text-gray-300 hover:text-hbnGreen transition-colors focus:outline-none focus:underline">Leeds Living Lab</a></li>
+            <li><a href="https://lida.leeds.ac.uk/" target="_blank" rel="noopener noreferrer" class="text-gray-300 hover:text-hbnGreen transition-colors focus:outline-none focus:underline">Leeds Institute for Data Analytics</a></li>
+          </ul>
+        </div>
+
+        <!-- Newsletter -->
+        <div>
+          <h4 class="text-lg font-bold mb-4 text-white">Stay Updated</h4>
+          <p class="text-gray-300 text-sm mb-4">Subscribe to our newsletter for the latest updates on events and research.</p>
+          <form class="space-y-3" action="#" method="POST">
+            <label for="newsletter-email" class="sr-only">Email address</label>
+            <input type="email" 
+                   id="newsletter-email"
+                   name="email"
+                   placeholder="Your email address" 
+                   class="w-full px-4 py-2 rounded-lg bg-gray-700 border border-gray-600 
+                          focus:border-hbnGreen focus:outline-none focus:ring-2 focus:ring-hbnGreen 
+                          text-white placeholder-gray-400"
+                   required
+                   autocomplete="email">
+            <button type="submit" 
+                    class="w-full px-4 py-2 bg-hbnGreen rounded-lg hover:bg-hbnGreenDark transition-colors 
+                           font-medium focus:outline-none focus:ring-2 focus:ring-hbnGreen focus:ring-offset-2 focus:ring-offset-gray-800">
+              Subscribe
+            </button>
+          </form>
+        </div>
       </div>
   
-      <!-- Quick Links -->
-      <div>
-        <h4 class="text-xl font-bold mb-4">Quick Links</h4>
-        <ul class="space-y-2">
-          <li><a href="index.html" class="text-gray-300 hover:text-hbnGreen transition-colors">Home</a></li>
-          <li><a href="about.html" class="text-gray-300 hover:text-hbnGreen transition-colors">About</a></li>
-          <li><a href="projects.html" class="text-gray-300 hover:text-hbnGreen transition-colors">Projects</a></li>
-          <li><a href="events.html" class="text-gray-300 hover:text-hbnGreen transition-colors">Seminars</a></li>
-          <li><a href="membership.html" class="text-gray-300 hover:text-hbnGreen transition-colors">Membership</a></li>
-          <li><a href="contact.html" class="text-gray-300 hover:text-hbnGreen transition-colors">Contact</a></li>
-        </ul>
+      <!-- Bottom bar -->
+      <div class="border-t border-gray-700 mt-12 pt-8">
+        <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+          <p class="text-sm text-gray-400">© 2025 Healthy Buildings Network Leeds. All rights reserved.</p>
+          <div class="flex flex-wrap justify-center gap-6 text-sm">
+            <a href="privacy.html" class="text-gray-400 hover:text-hbnGreen transition-colors focus:outline-none focus:underline">Privacy Policy</a>
+            <a href="accessibility.html" class="text-gray-400 hover:text-hbnGreen transition-colors focus:outline-none focus:underline">Accessibility</a>
+            <a href="terms.html" class="text-gray-400 hover:text-hbnGreen transition-colors focus:outline-none focus:underline">Terms of Use</a>
+          </div>
+        </div>
+        <p class="text-center text-sm text-gray-500 mt-4">University of Leeds, Leeds LS2 9JT, United Kingdom</p>
       </div>
-  
-      <!-- Affiliations -->
-      <div>
-        <h4 class="text-xl font-bold mb-4">Affiliations</h4>
-        <ul class="space-y-2">
-          <li><a href="https://fluids.leeds.ac.uk" target="_blank" class="text-gray-300 hover:text-hbnGreen transition-colors">Leeds Institute for Fluid Dynamics</a></li>
-          <li><a href="https://lssi.leeds.ac.uk" target="_blank" class="text-gray-300 hover:text-hbnGreen transition-colors">Leeds Social Sciences Institute</a></li>
-          <li><a href="https://lahri.leeds.ac.uk" target="_blank" class="text-gray-300 hover:text-hbnGreen transition-colors">Leeds Arts & Humanities Research Institute</a></li>
-          <li><a href="https://environment.leeds.ac.uk/institute-climate-atmospheric-science" target="_blank" class="text-gray-300 hover:text-hbnGreen transition-colors">ICAS</a></li>
-          <li><a href="https://sustainability.leeds.ac.uk/get-involved/leeds-living-lab/" target="_blank" class="text-gray-300 hover:text-hbnGreen transition-colors">Leeds Living Lab</a></li>
-          <li><a href="https://lida.leeds.ac.uk/" target="_blank" class="text-gray-300 hover:text-hbnGreen transition-colors">Leeds Institute for Data Analytics</a></li>
-        </ul>
-      </div>
-    </div>
-  
-    <div class="container mx-auto max-w-6xl px-6 text-sm text-center pt-8 mt-8 border-t border-gray-700">
-      <p>© 2025 Healthy Buildings Network Leeds. All rights reserved.</p>
-      <p class="mt-2">University of Leeds, Leeds LS2 9JT, United Kingdom</p>
     </div>
   </footer>
 
+  <!-- Cookie Consent Banner -->
+  <div id="cookie-banner" 
+       class="fixed bottom-0 left-0 right-0 bg-gray-900 text-white p-4 z-50 hidden shadow-2xl"
+       role="dialog"
+       aria-labelledby="cookie-heading"
+       aria-describedby="cookie-description">
+    <div class="container mx-auto max-w-6xl flex flex-col md:flex-row items-center justify-between gap-4">
+      <div>
+        <h2 id="cookie-heading" class="font-semibold mb-1">Cookie Notice</h2>
+        <p id="cookie-description" class="text-sm text-gray-300">
+          We use cookies to enhance your experience. By continuing to visit this site you agree to our use of cookies.
+          <a href="privacy.html" class="underline hover:text-hbnGreen focus:outline-none focus:text-hbnGreen">Learn more</a>
+        </p>
+      </div>
+      <div class="flex gap-3 flex-shrink-0">
+        <button id="accept-cookies" 
+                class="px-6 py-2 bg-hbnGreen rounded-full hover:bg-hbnGreenDark transition-colors text-sm font-medium
+                       focus:outline-none focus:ring-2 focus:ring-hbnGreen focus:ring-offset-2 focus:ring-offset-gray-900">
+          Accept All
+        </button>
+        <button id="reject-cookies" 
+                class="px-6 py-2 border border-white rounded-full hover:bg-gray-800 transition-colors text-sm font-medium
+                       focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-900">
+          Reject
+        </button>
+      </div>
+    </div>
+  </div>
+
   <!-- Scripts -->
   <script src="assets/js/script.js"></script>
-  <!-- Add this additional script for the mobile menu toggle -->
   <script>
     document.addEventListener('DOMContentLoaded', function() {
+      // Mobile menu toggle
       const menuButton = document.getElementById('mobile-menu-button');
       const mobileMenu = document.getElementById('mobile-menu');
       
       if (menuButton && mobileMenu) {
         menuButton.addEventListener('click', function() {
-          mobileMenu.classList.toggle('hidden');
+          const isHidden = mobileMenu.classList.toggle('hidden');
+          menuButton.setAttribute('aria-expanded', !isHidden);
+          menuButton.setAttribute('aria-label', isHidden ? 'Open navigation menu' : 'Close navigation menu');
+          
+          // Update icon
+          const icon = menuButton.querySelector('svg path');
+          if (icon) {
+            icon.setAttribute('d', isHidden 
+              ? 'M4 6h16M4 12h16M4 18h16' 
+              : 'M6 18L18 6M6 6l12 12');
+          }
+        });
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(e) {
+          if (!menuButton.contains(e.target) && !mobileMenu.contains(e.target)) {
+            mobileMenu.classList.add('hidden');
+            menuButton.setAttribute('aria-expanded', 'false');
+            menuButton.setAttribute('aria-label', 'Open navigation menu');
+          }
+        });
+
+        // Close mobile menu on escape key
+        document.addEventListener('keydown', function(e) {
+          if (e.key === 'Escape' && !mobileMenu.classList.contains('hidden')) {
+            mobileMenu.classList.add('hidden');
+            menuButton.setAttribute('aria-expanded', 'false');
+            menuButton.setAttribute('aria-label', 'Open navigation menu');
+            menuButton.focus();
+          }
         });
       }
       
       // Scroll to top button functionality
       const scrollToTopBtn = document.getElementById('scrollToTopBtn');
       if (scrollToTopBtn) {
+        let ticking = false;
+        
         window.addEventListener('scroll', function() {
-          if (window.pageYOffset > 300) {
-            scrollToTopBtn.classList.remove('hidden');
-          } else {
-            scrollToTopBtn.classList.add('hidden');
+          if (!ticking) {
+            window.requestAnimationFrame(function() {
+              if (window.pageYOffset > 300) {
+                scrollToTopBtn.classList.remove('hidden');
+                scrollToTopBtn.classList.add('animate-fade-in');
+              } else {
+                scrollToTopBtn.classList.add('hidden');
+              }
+              ticking = false;
+            });
+            ticking = true;
           }
         });
         
         scrollToTopBtn.addEventListener('click', function() {
           window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+      }
+
+      // Cookie banner functionality
+      const cookieBanner = document.getElementById('cookie-banner');
+      const acceptCookies = document.getElementById('accept-cookies');
+      const rejectCookies = document.getElementById('reject-cookies');
+
+      // Check if user has already made a choice
+      if (cookieBanner && !localStorage.getItem('cookieConsent')) {
+        // Show banner after a short delay
+        setTimeout(function() {
+          cookieBanner.classList.remove('hidden');
+        }, 1000);
+      }
+
+      if (acceptCookies) {
+        acceptCookies.addEventListener('click', function() {
+          localStorage.setItem('cookieConsent', 'accepted');
+          cookieBanner.classList.add('hidden');
+          // Initialize analytics or other cookie-dependent features here
+        });
+      }
+
+      if (rejectCookies) {
+        rejectCookies.addEventListener('click', function() {
+          localStorage.setItem('cookieConsent', 'rejected');
+          cookieBanner.classList.add('hidden');
+        });
+      }
+
+      // Add intersection observer for fade-in animations
+      const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+      };
+
+      const observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('animate-fade-in-up');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, observerOptions);
+
+      // Observe all section titles and cards
+      document.querySelectorAll('.section-title, article').forEach(function(el) {
+        observer.observe(el);
+      });
+
+      // Header shadow on scroll
+      const header = document.querySelector('header');
+      if (header) {
+        window.addEventListener('scroll', function() {
+          if (window.scrollY > 10) {
+            header.classList.add('shadow-lg');
+          } else {
+            header.classList.remove('shadow-lg');
+          }
         });
       }
     });
