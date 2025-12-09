@@ -26,8 +26,18 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/style.css" />
+  
+  <style>
+    /* Smooth transition for filtering */
+    .blog-post {
+      transition: all 0.3s ease-in-out;
+    }
+    .hidden-post {
+      display: none;
+    }
+  </style>
 </head>
-<body class="font-poppins bg-gray-50">
+<body class="font-poppins bg-gray-50 flex flex-col min-h-screen">
 
   <!-- Header / Navbar -->
   <header class="bg-white shadow-md fixed w-full z-50">
@@ -74,7 +84,7 @@
   </header>
 
   <!-- Scroll-to-top button -->
-  <button id="scrollToTopBtn" class="fixed bottom-5 right-5 bg-hbnGreen text-white p-3 rounded-full shadow-md hidden z-50" aria-label="Scroll to top">
+  <button id="scrollToTopBtn" class="fixed bottom-5 right-5 bg-hbnGreen text-white p-3 rounded-full shadow-md hidden z-50 hover:bg-hbnGreenDark transition-all" aria-label="Scroll to top">
     <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18" />
     </svg>
@@ -89,11 +99,11 @@
       </p>
       
       <!-- Search & Filter Bar -->
-      <div class="flex flex-col md:flex-row md:items-center justify-between mt-12 bg-gray-50 p-4 rounded-lg shadow-sm">
+      <div class="flex flex-col md:flex-row md:items-center justify-between mt-12 bg-gray-50 p-4 rounded-lg shadow-sm border border-gray-100">
         <!-- Search Bar -->
         <div class="md:w-1/2 mb-4 md:mb-0">
           <div class="relative">
-            <input type="text" placeholder="Search articles..." class="w-full py-2 pl-10 pr-4 border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-hbnGreen">
+            <input type="text" id="searchInput" placeholder="Search articles..." class="w-full py-2 pl-10 pr-4 border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-hbnGreen transition-all">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-400 absolute left-3 top-1/2 transform -translate-y-1/2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
             </svg>
@@ -101,17 +111,17 @@
         </div>
         
         <!-- Category Filters -->
-        <div class="flex flex-wrap gap-2">
-          <button class="px-4 py-2 bg-hbnGreen text-white rounded-full text-sm hover:bg-green-700 transition-colors">
+        <div class="flex flex-wrap gap-2" id="categoryFilters">
+          <button class="filter-btn px-4 py-2 bg-hbnGreen text-white rounded-full text-sm hover:bg-green-700 transition-colors shadow-sm" data-filter="all">
             All Posts
           </button>
-          <button class="px-4 py-2 bg-gray-200 text-gray-800 rounded-full text-sm hover:bg-gray-300 transition-colors">
+          <button class="filter-btn px-4 py-2 bg-white text-gray-700 border border-gray-200 rounded-full text-sm hover:bg-gray-100 hover:text-hbnGreen transition-colors" data-filter="Events">
             Events
           </button>
-          <button class="px-4 py-2 bg-gray-200 text-gray-800 rounded-full text-sm hover:bg-gray-300 transition-colors">
+          <button class="filter-btn px-4 py-2 bg-white text-gray-700 border border-gray-200 rounded-full text-sm hover:bg-gray-100 hover:text-hbnGreen transition-colors" data-filter="Projects">
             Projects
           </button>
-          <button class="px-4 py-2 bg-gray-200 text-gray-800 rounded-full text-sm hover:bg-gray-300 transition-colors">
+          <button class="filter-btn px-4 py-2 bg-white text-gray-700 border border-gray-200 rounded-full text-sm hover:bg-gray-100 hover:text-hbnGreen transition-colors" data-filter="Research">
             Research
           </button>
         </div>
@@ -119,402 +129,297 @@
     </div>
   </section>
 
-  <!-- Featured Post Section -->
-  <section class="py-12 bg-gradient-to-r from-gray-50 to-gray-100">
+  <!-- Featured Post Section (Sarah Price) -->
+  <section class="py-12 bg-gradient-to-r from-gray-50 to-gray-100" id="featuredPost">
     <div class="container mx-auto px-6 max-w-5xl">
-      <div class="flex flex-col md:flex-row overflow-hidden bg-white rounded-xl shadow-xl">
-        <div class="md:w-1/2">
-          <img src="assets/images/undraw_walking-outside_7jfy.png" alt="Pump-Priming Projects Progress" class="w-full h-full object-cover">
+      <div class="flex flex-col md:flex-row overflow-hidden bg-white rounded-xl shadow-xl blog-post" data-category="Events" data-title="Retrofit Roulette Sarah Price">
+        <div class="md:w-1/2 relative">
+          <img src="events/seminars/sarah/sarah_price.png" 
+               alt="Dr. Sarah Price - Moisture Risk in Retrofit" 
+               class="w-full h-full object-cover"
+               onerror="this.src='https://placehold.co/600x400/4e9317/ffffff?text=Sarah+Price'">
+          <div class="absolute top-4 left-4 bg-hbnYellow text-gray-900 px-3 py-1 rounded-full text-sm font-bold shadow-md">
+            New
+          </div>
         </div>
-        <div class="md:w-1/2 p-8 md:p-12 flex flex-col">
+        <div class="md:w-1/2 p-8 md:p-12 flex flex-col justify-center">
           <div class="mb-auto">
             <div class="flex items-center mb-4">
-              <span class="bg-hbnGreen text-white px-3 py-1 rounded-full text-sm font-medium">Projects</span>
-              <span class="text-gray-500 text-sm ml-4">February 20, 2025</span>
+              <span class="bg-hbnGreen text-white px-3 py-1 rounded-full text-sm font-medium">Events</span>
+              <span class="text-gray-500 text-sm ml-4">December 9, 2025</span>
             </div>
-            <h2 class="text-2xl md:text-3xl font-bold text-gray-800 mb-4">Pump-Priming Projects: Spotlight on Progress</h2>
+            <h2 class="text-2xl md:text-3xl font-bold text-gray-800 mb-4">Retrofit Roulette: Why We Keep Getting Moisture Wrong</h2>
             <p class="text-gray-600 mb-6">
-              We're thrilled to share an update on our four funded pump-priming projects, each exploring a unique angle on how building environments impact health and well-being. From air quality monitoring in historical structures to occupant-centric sensor feedback, these projects are already uncovering valuable insights.
-            </p>
-            <p class="text-gray-600">
-              The principal investigators recently hosted a collaborative "review and reflect" session, comparing lessons learned from each pilot study...
+              80% of building failures are moisture-related. In this recap of Dr. Sarah Price's seminar, we explore why simply "sticking insulation in" is causing a 92% failure rate in some schemes, the specific risks to joist ends, and why wood fibre might be the answer traditional buildings need.
             </p>
           </div>
-          <a href="blog/pump-priming-progress.html" class="mt-8 inline-block px-6 py-3 bg-hbnGreen text-white rounded-full hover:bg-green-700 transition-colors">
-            Read Full Article
-          </a>
+          <div class="flex items-center gap-4 mt-4">
+            <a href="blog/retrofit-roulette.html" class="inline-block px-6 py-3 bg-hbnGreen text-white rounded-full hover:bg-green-700 transition-colors shadow-md">
+              Read Full Recap
+            </a>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Recent Posts Section -->
+  <!-- Recent Posts Grid -->
   <section class="py-16">
     <div class="container mx-auto px-6 max-w-6xl">
       <h2 class="section-title mb-10 text-center">Recent Posts</h2>
-      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Post 1 -->
-        <article class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow">
-          <a href="blog/blog_jon_louise.html" class="block">
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8" id="blogGrid">
+        
+        <!-- Moved Pump-Priming Post Here -->
+        <article class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow blog-post border border-gray-100" data-category="Projects" data-title="Pump Priming Projects Progress">
+          <a href="blog/pump-priming-progress.html" class="block h-full flex flex-col">
+            <img src="assets/images/undraw_walking-outside_7jfy.png" alt="Pump-Priming Projects" class="w-full h-48 object-cover">
+            <div class="p-6 flex flex-col flex-grow">
+              <div class="flex items-center mb-4">
+                <span class="bg-hbnGreen bg-opacity-10 text-hbnGreen px-3 py-1 rounded-full text-sm font-medium">Projects</span>
+                <span class="text-gray-500 text-sm ml-auto">Feb 20, 2025</span>
+              </div>
+              <h3 class="text-xl font-bold text-gray-800 mb-3 hover:text-hbnGreen transition-colors">Pump-Priming Projects: Spotlight on Progress</h3>
+              <p class="text-gray-600 mb-4 text-sm flex-grow">
+                An update on our four funded pump-priming projects, exploring how building environments impact health and well-being.
+              </p>
+              <span class="text-hbnGreen font-medium text-sm mt-auto inline-flex items-center">
+                Read Article <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+              </span>
+            </div>
+          </a>
+        </article>
+
+        <!-- Jon & Louise -->
+        <article class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow blog-post border border-gray-100" data-category="Events" data-title="Social Housing Policy Seminar">
+          <a href="blog/blog_jon_louise.html" class="block h-full flex flex-col">
             <img src="assets/images/events/seminars/jon/NWLDC_logo.png" alt="Social Housing Policy Seminar" class="w-full h-48 object-cover">
-            <div class="p-6">
+            <div class="p-6 flex flex-col flex-grow">
               <div class="flex items-center mb-4">
                 <span class="bg-hbnBlue bg-opacity-10 text-hbnBlue px-3 py-1 rounded-full text-sm font-medium">Events</span>
-                <span class="text-gray-500 text-sm ml-4">May 14, 2025</span>
+                <span class="text-gray-500 text-sm ml-auto">May 14, 2025</span>
               </div>
-              <h3 class="text-xl font-bold text-gray-800 mb-3 hover:text-hbnGreen transition-colors">Seminar Recap: Social Housing Policy Shifts & Health Opportunities</h3>
-              <p class="text-gray-600 mb-4">
-                Jon Fairburn and Louise Austin shared insights on transforming housing data into healthier communities through university partnerships</p>
-              <div class="flex items-center mt-4">
+              <h3 class="text-xl font-bold text-gray-800 mb-3 hover:text-hbnGreen transition-colors">Social Housing Policy Shifts & Health Opportunities</h3>
+              <p class="text-gray-600 mb-4 text-sm flex-grow">
+                Jon Fairburn and Louise Austin shared insights on transforming housing data into healthier communities through university partnerships.
+              </p>
+              <div class="flex items-center mt-auto pt-4 border-t border-gray-100">
                 <div class="flex -space-x-2 mr-3">
-                  <img src="assets/images/jon_fairburn.png" alt="Jon Fairburn" class="w-8 h-8 rounded-full border-2 border-white">
-                  <img src="assets/images/louise_austin.png" alt="Louise Austin" class="w-8 h-8 rounded-full border-2 border-white">
+                  <img src="assets/images/jon_fairburn.png" alt="Jon" class="w-8 h-8 rounded-full border-2 border-white bg-gray-200">
+                  <img src="assets/images/louise_austin.png" alt="Louise" class="w-8 h-8 rounded-full border-2 border-white bg-gray-200">
                 </div>
-                <div class="text-sm">
-                  <p class="text-gray-900 font-medium">Jon Fairburn & Louise Austin</p>
-                  <p class="text-gray-500">Housing & Data Specialists</p>
+                <div class="text-xs text-gray-500">
+                  <p class="text-gray-900 font-medium">Fairburn & Austin</p>
                 </div>
               </div>
             </div>
           </a>
         </article>
 
-         <!-- Post 1 -->
-         <article class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow">
-          <a href="blog/louis-platman.html" class="block">
+         <!-- Louis Platman -->
+         <article class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow blog-post border border-gray-100" data-category="Events" data-title="Museum of the Home Seminar">
+          <a href="blog/louis-platman.html" class="block h-full flex flex-col">
             <img src="assets/images/events/seminars/louis/louis_seminar.jpeg" alt="Seminar Recap" class="w-full h-48 object-cover">
-            <div class="p-6">
+            <div class="p-6 flex flex-col flex-grow">
               <div class="flex items-center mb-4">
                 <span class="bg-hbnBlue bg-opacity-10 text-hbnBlue px-3 py-1 rounded-full text-sm font-medium">Events</span>
-                <span class="text-gray-500 text-sm ml-4">April 30, 2025</span>
+                <span class="text-gray-500 text-sm ml-auto">Apr 30, 2025</span>
               </div>
               <h3 class="text-xl font-bold text-gray-800 mb-3 hover:text-hbnGreen transition-colors">Seminar Recap: Louis Platman (Museum of the Home)</h3>
-              <p class="text-gray-600 mb-4">
-                Our most recent seminar session welcomed Louis Platman from the Museum</p>
-              <div class="flex items-center mt-4">
-                <img src="assets/images/hbn_portrait.png" alt="HBN Leeds Team" class="w-8 h-8 rounded-full mr-3">
-                <div class="text-sm">
-                  <p class="text-gray-900 font-medium">HBN Leeds</p>
-                </div>
-              </div>
+              <p class="text-gray-600 mb-4 text-sm flex-grow">
+                Exploring the history of the home and health with insights from the Museum of the Home's collection.
+              </p>
+              <span class="text-hbnGreen font-medium text-sm mt-auto inline-flex items-center">
+                Read Article <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+              </span>
             </div>
           </a>
         </article>
 
-        <!-- Post 1 -->
-        <article class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow">
-          <a href="blog/pete-apps-grenfell.html" class="block">
-            <img src="assets/images/hbn_portrait.png" alt="Seminar Recap" class="w-full h-48 object-cover">
-            <div class="p-6">
+        <!-- Pete Apps -->
+        <article class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow blog-post border border-gray-100" data-category="Events" data-title="Pete Apps Grenfell Seminar">
+          <a href="blog/pete-apps-grenfell.html" class="block h-full flex flex-col">
+            <img src="assets/images/hbn_portrait.png" alt="Seminar Recap" class="w-full h-48 object-cover bg-gray-100">
+            <div class="p-6 flex flex-col flex-grow">
               <div class="flex items-center mb-4">
                 <span class="bg-hbnBlue bg-opacity-10 text-hbnBlue px-3 py-1 rounded-full text-sm font-medium">Events</span>
-                <span class="text-gray-500 text-sm ml-4">February 27, 2025</span>
+                <span class="text-gray-500 text-sm ml-auto">Feb 27, 2025</span>
               </div>
-              <h3 class="text-xl font-bold text-gray-800 mb-3 hover:text-hbnGreen transition-colors">Seminar Recap: Freelance Journalists Pete Apps (Grenfell)</h3>
-              <p class="text-gray-600 mb-4">
-                Our most recent seminar session welcomed specialists who brought vital perspectives on building safety and community resilience. They discussed lessons learned from the Grenfell tragedy...
+              <h3 class="text-xl font-bold text-gray-800 mb-3 hover:text-hbnGreen transition-colors">Seminar Recap: Pete Apps on Grenfell's Legacy</h3>
+              <p class="text-gray-600 mb-4 text-sm flex-grow">
+                Vital perspectives on building safety, community resilience, and the lessons learned from the Grenfell tragedy.
               </p>
-              <div class="flex items-center mt-4">
-                <img src="assets/images/hbn_portrait.png" alt="HBN Leeds Team" class="w-8 h-8 rounded-full mr-3">
-                <div class="text-sm">
-                  <p class="text-gray-900 font-medium">HBN Leeds</p>
-                </div>
-              </div>
+              <span class="text-hbnGreen font-medium text-sm mt-auto inline-flex items-center">
+                Read Article <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+              </span>
             </div>
           </a>
         </article>
         
-        <!-- Post 2 -->
-        <article class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow">
-          <a href="blog/air-quality-workshop.html" class="block">
-            <img src="assets/images/events/workshops/energy/lucie_doug.JPEG" alt="Energy and Air Quality Workshop" class="w-full h-48 object-cover">
-            <div class="p-6">
-              <div class="flex items-center mb-4">
-                <span class="bg-hbnPurple bg-opacity-10 text-hbnPurple px-3 py-1 rounded-full text-sm font-medium">Workshop</span>
-                <span class="text-gray-500 text-sm ml-4">Nov 27, 2024</span>
-              </div>
-              <h3 class="text-xl font-bold text-gray-800 mb-3 hover:text-hbnGreen transition-colors">Energy and Air Quality Equality Workshop Results</h3>
-              <p class="text-gray-600 mb-4">
-                Our recent workshop brought together experts from energy, air quality, and social equity fields to explore the intersections of these important domains and identify opportunities for collaborative research...
-              </p>
-              <div class="flex items-center mt-4">
-                <img src="assets/images/events/launch/doug.JPEG" alt="Doug Booker" class="w-8 h-8 rounded-full mr-3">
-                <div class="text-sm">
-                  <p class="text-gray-900 font-medium">Douglas Booker</p>
-                </div>
-              </div>
-            </div>
-          </a>
-        </article>
-        
-        <!-- Post 3 -->
-        <article class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow">
-          <a href="https://www.ukieg2025leeds.co.uk" class="block">
-            <img src="assets/images/events/ukieg/ukieg_conference.png" alt="UKIEG Conference Preview" class="w-full h-48 object-cover">
-            <div class="p-6">
-              <div class="flex items-center mb-4">
-                <span class="bg-hbnYellow bg-opacity-10 text-yellow-700 px-3 py-1 rounded-full text-sm font-medium">Conference</span>
-                <span class="text-gray-500 text-sm ml-4">March 5, 2025</span>
-              </div>
-              <h3 class="text-xl font-bold text-gray-800 mb-3 hover:text-hbnGreen transition-colors">UKIEG 2025 Conference: Preview of Sessions and Speakers</h3>
-              <p class="text-gray-600 mb-4">
-                The UK Indoor Environments Group (UKIEG) 2025 Conference is approaching! We're excited to host this prestigious event at the University of Leeds on June 19, 2025. Here's a preview of the keynote speakers and sessions...
-              </p>
-              <div class="flex items-center mt-4">
-                <img src="assets/images/UKIEG.png" alt="Irene Mussio" class="w-8 h-8 rounded-full mr-3">
-                <div class="text-sm">
-                  <p class="text-gray-900 font-medium">UKIEG</p>
-                </div>
-              </div>
-            </div>
-          </a>
-        </article>
-        
-        <!-- Post 4 -->
-        <article class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow">
-          <a href="blog/interview_martin.html" class="block">
-            <img src="assets/images/profile_Martin.png" alt="Interview with Martin" class="w-full h-48 object-cover">
-            <div class="p-6">
-              <div class="flex items-center mb-4">
-                <span class="bg-hbnGreen bg-opacity-10 text-hbnGreen px-3 py-1 rounded-full text-sm font-medium">Interview</span>
-                <span class="text-gray-500 text-sm ml-4">February 5, 2025</span>
-              </div>
-              <h3 class="text-xl font-bold text-gray-800 mb-3 hover:text-hbnGreen transition-colors">Interview: Martín López-García on Mathematical Modeling for Healthy Buildings</h3>
-              <p class="text-gray-600 mb-4">
-                In this interview, co-founder Martín López-García discusses how mathematical modeling can provide insights into air flow, pathogen spread, and occupant behavior in indoor environments...
-              </p>
-              <div class="flex items-center mt-4">
-                <img src="assets/images/hbn_portrait.png" alt="Guest Writer" class="w-8 h-8 rounded-full mr-3">
-                <div class="text-sm">
-                  <p class="text-gray-900 font-medium">HBN Leeds</p>
-                </div>
-              </div>
-            </div>
-          </a>
-        </article>
-        
-        <!-- Post 5 -->
-        <article class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow">
-          <a href="news/launch_2024.html" class="block">
-            <img src="assets/images/events/launch/jane.JPEG" alt="Launch Event Success" class="w-full h-48 object-cover">
-            <div class="p-6">
-              <div class="flex items-center mb-4">
-                <span class="bg-hbnBlue bg-opacity-10 text-hbnBlue px-3 py-1 rounded-full text-sm font-medium">Events</span>
-                <span class="text-gray-500 text-sm ml-4">October 20, 2024</span>
-              </div>
-              <h3 class="text-xl font-bold text-gray-800 mb-3 hover:text-hbnGreen transition-colors">Network Launch Success and Key Takeaways</h3>
-              <p class="text-gray-600 mb-4">
-                We're thrilled to report on the successful launch of the Healthy Buildings Network Leeds on October 16, 2024. The event brought together over 30 participants from academia and industry...
-              </p>
-              <div class="flex items-center mt-4">
-                <img src="assets/images/hbn_portrait.png" alt="HBN Leeds Team" class="w-8 h-8 rounded-full mr-3">
-                <div class="text-sm">
-                  <p class="text-gray-900 font-medium">HBN Leeds</p>
-                </div>
-              </div>
-            </div>
-          </a>
-        </article>
-        
-        <!-- Post 6 -->
-        <article class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow">
-          <a href="blog/healthy-buildings-definition.html" class="block">
-            <img src="assets/images/events/launch/healthy_buildings_after.png" alt="What Makes a Building Healthy?" class="w-full h-48 object-cover">
-            <div class="p-6">
+        <!-- Air Quality Workshop -->
+        <article class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow blog-post border border-gray-100" data-category="Research" data-title="Energy and Air Quality Workshop">
+          <a href="blog/air-quality-workshop.html" class="block h-full flex flex-col">
+            <img src="assets/images/events/workshops/energy/lucie_doug.JPEG" alt="Workshop" class="w-full h-48 object-cover">
+            <div class="p-6 flex flex-col flex-grow">
               <div class="flex items-center mb-4">
                 <span class="bg-hbnPurple bg-opacity-10 text-hbnPurple px-3 py-1 rounded-full text-sm font-medium">Research</span>
-                <span class="text-gray-500 text-sm ml-4">November 8, 2024</span>
+                <span class="text-gray-500 text-sm ml-auto">Nov 27, 2024</span>
               </div>
-              <h3 class="text-xl font-bold text-gray-800 mb-3 hover:text-hbnGreen transition-colors">What Makes a Building "Healthy"? Perspectives from Our Launch Event</h3>
-              <p class="text-gray-600 mb-4">
-                During our network launch event, we asked participants to share their perspectives on what constitutes a "healthy building." The results revealed diverse and complementary viewpoints spanning multiple disciplines...
+              <h3 class="text-xl font-bold text-gray-800 mb-3 hover:text-hbnGreen transition-colors">Energy and Air Quality Equality Workshop Results</h3>
+              <p class="text-gray-600 mb-4 text-sm flex-grow">
+                Exploring the intersections of energy efficiency, air quality, and social equity to identify collaborative research opportunities.
               </p>
-              <div class="flex items-center mt-4">
-                <img src="assets/images/profile_irene.png" alt="Irene Mussio" class="w-8 h-8 rounded-full mr-3">
-                <div class="text-sm">
-                  <p class="text-gray-900 font-medium">Irene Mussio</p>
-                </div>
+              <span class="text-hbnGreen font-medium text-sm mt-auto inline-flex items-center">
+                Read Article <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+              </span>
+            </div>
+          </a>
+        </article>
+        
+        <!-- UKIEG -->
+        <article class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow blog-post border border-gray-100" data-category="Events" data-title="UKIEG Conference">
+          <a href="https://www.ukieg2025leeds.co.uk" class="block h-full flex flex-col">
+            <img src="assets/images/events/ukieg/ukieg_conference.png" alt="UKIEG Conference" class="w-full h-48 object-cover">
+            <div class="p-6 flex flex-col flex-grow">
+              <div class="flex items-center mb-4">
+                <span class="bg-hbnYellow bg-opacity-10 text-yellow-700 px-3 py-1 rounded-full text-sm font-medium">Conference</span>
+                <span class="text-gray-500 text-sm ml-auto">Mar 5, 2025</span>
               </div>
+              <h3 class="text-xl font-bold text-gray-800 mb-3 hover:text-hbnGreen transition-colors">UKIEG 2025 Conference: Sessions and Speakers</h3>
+              <p class="text-gray-600 mb-4 text-sm flex-grow">
+                A preview of the keynote speakers and sessions for the upcoming UK Indoor Environments Group conference.
+              </p>
+              <span class="text-hbnGreen font-medium text-sm mt-auto inline-flex items-center">
+                Conference Site <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+              </span>
+            </div>
+          </a>
+        </article>
+        
+        <!-- Martin Interview -->
+        <article class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow blog-post border border-gray-100" data-category="Research" data-title="Interview Martin Lopez Garcia">
+          <a href="blog/interview_martin.html" class="block h-full flex flex-col">
+            <img src="assets/images/profile_Martin.png" alt="Martin" class="w-full h-48 object-cover">
+            <div class="p-6 flex flex-col flex-grow">
+              <div class="flex items-center mb-4">
+                <span class="bg-hbnGreen bg-opacity-10 text-hbnGreen px-3 py-1 rounded-full text-sm font-medium">Interview</span>
+                <span class="text-gray-500 text-sm ml-auto">Feb 5, 2025</span>
+              </div>
+              <h3 class="text-xl font-bold text-gray-800 mb-3 hover:text-hbnGreen transition-colors">Interview: Martín López-García on Mathematical Modeling</h3>
+              <p class="text-gray-600 mb-4 text-sm flex-grow">
+                Discussing how mathematical modeling provides insights into air flow, pathogen spread, and occupant behavior.
+              </p>
+              <span class="text-hbnGreen font-medium text-sm mt-auto inline-flex items-center">
+                Read Article <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+              </span>
+            </div>
+          </a>
+        </article>
+        
+        <!-- Launch Success -->
+        <article class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow blog-post border border-gray-100" data-category="Events" data-title="Network Launch Success">
+          <a href="news/launch_2024.html" class="block h-full flex flex-col">
+            <img src="assets/images/events/launch/jane.JPEG" alt="Launch" class="w-full h-48 object-cover">
+            <div class="p-6 flex flex-col flex-grow">
+              <div class="flex items-center mb-4">
+                <span class="bg-hbnBlue bg-opacity-10 text-hbnBlue px-3 py-1 rounded-full text-sm font-medium">Events</span>
+                <span class="text-gray-500 text-sm ml-auto">Oct 20, 2024</span>
+              </div>
+              <h3 class="text-xl font-bold text-gray-800 mb-3 hover:text-hbnGreen transition-colors">Network Launch Success and Key Takeaways</h3>
+              <p class="text-gray-600 mb-4 text-sm flex-grow">
+                A report on the successful launch of the Healthy Buildings Network Leeds, bringing together over 30 participants.
+              </p>
+              <span class="text-hbnGreen font-medium text-sm mt-auto inline-flex items-center">
+                Read Article <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+              </span>
+            </div>
+          </a>
+        </article>
+        
+        <!-- Healthy Buildings Def -->
+        <article class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow blog-post border border-gray-100" data-category="Research" data-title="What makes a building healthy">
+          <a href="blog/healthy-buildings-definition.html" class="block h-full flex flex-col">
+            <img src="assets/images/events/launch/healthy_buildings_after.png" alt="Definition" class="w-full h-48 object-cover">
+            <div class="p-6 flex flex-col flex-grow">
+              <div class="flex items-center mb-4">
+                <span class="bg-hbnPurple bg-opacity-10 text-hbnPurple px-3 py-1 rounded-full text-sm font-medium">Research</span>
+                <span class="text-gray-500 text-sm ml-auto">Nov 8, 2024</span>
+              </div>
+              <h3 class="text-xl font-bold text-gray-800 mb-3 hover:text-hbnGreen transition-colors">What Makes a Building "Healthy"?</h3>
+              <p class="text-gray-600 mb-4 text-sm flex-grow">
+                Perspectives from our launch event participants on the definition and components of a healthy building.
+              </p>
+              <span class="text-hbnGreen font-medium text-sm mt-auto inline-flex items-center">
+                Read Article <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+              </span>
             </div>
           </a>
         </article>
 
-        
-        <!-- Post 7 -->
-        <article class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow">
-          <a href="blog/social_sciences.html" class="block">
-            <img src="assets/images/logo_lahri.jpg" alt="Arts and Engineering Collaboration" class="w-full h-48 object-cover">
-            <div class="p-6">
+        <!-- Social Sciences -->
+        <article class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow blog-post border border-gray-100" data-category="Research" data-title="Bridging the Divide Engineering Arts">
+          <a href="blog/social_sciences.html" class="block h-full flex flex-col">
+            <img src="assets/images/logo_lahri.jpg" alt="LAHRI" class="w-full h-48 object-cover">
+            <div class="p-6 flex flex-col flex-grow">
               <div class="flex items-center mb-4">
                 <span class="bg-hbnPurple bg-opacity-10 text-hbnPurple px-3 py-1 rounded-full text-sm font-medium">Perspective</span>
-                <span class="text-gray-500 text-sm ml-4">Dec 21, 2025</span>
+                <span class="text-gray-500 text-sm ml-auto">Dec 21, 2025</span>
               </div>
               <h3 class="text-xl font-bold text-gray-800 mb-3 hover:text-hbnGreen transition-colors">Bridging the Divide</h3>
-              <p class="text-gray-600 mb-4">
-                Why Engineering and Arts & Humanities Need Each Other for Truly Healthy Buildings
+              <p class="text-gray-600 mb-4 text-sm flex-grow">
+                Why Engineering and Arts & Humanities Need Each Other for Truly Healthy Buildings.
               </p>
-              <div class="flex items-center mt-4">
-                <img src="assets/images/profile_marco-felipe_king.png" alt="Marco-Felipe" class="w-8 h-8 rounded-full mr-3">
-                <div class="text-sm">
-                  <p class="text-gray-900 font-medium">Marco-Felipe King</p>
-                </div>
-              </div>
+              <span class="text-hbnGreen font-medium text-sm mt-auto inline-flex items-center">
+                Read Article <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+              </span>
             </div>
           </a>
         </article>
 
-        <!-- Post 8 -->
-        <!-- Post for Biophilic Design -->
-        <article class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow">
-          <a href="blog/biophilic.html" class="block">
-            <img src="assets/images/blogs/biophilic.jpg" alt="Biophilic Design Cultural Perspectives" class="w-full h-48 object-cover">
-            <div class="p-6">
+        <!-- Biophilic -->
+        <article class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow blog-post border border-gray-100" data-category="Research" data-title="Biophilic Design Cultural">
+          <a href="blog/biophilic.html" class="block h-full flex flex-col">
+            <img src="assets/images/blogs/biophilic.jpg" alt="Biophilic" class="w-full h-48 object-cover" onerror="this.src='https://placehold.co/600x400/4e9317/ffffff?text=Nature'">
+            <div class="p-6 flex flex-col flex-grow">
               <div class="flex items-center mb-4">
                 <span class="bg-hbnGreen bg-opacity-10 text-hbnGreen px-3 py-1 rounded-full text-sm font-medium">Research</span>
-                <span class="text-gray-500 text-sm ml-4">March 22, 2025</span>
+                <span class="text-gray-500 text-sm ml-auto">Mar 22, 2025</span>
               </div>
               <h3 class="text-xl font-bold text-gray-800 mb-3 hover:text-hbnGreen transition-colors">Biophilic Design: Cultural Perspectives</h3>
-              <p class="text-gray-600 mb-4">
-                Exploring how different cultures interpret and implement nature-inspired design principles in the built environment
+              <p class="text-gray-600 mb-4 text-sm flex-grow">
+                Exploring how different cultures interpret and implement nature-inspired design principles.
               </p>
-              <div class="flex items-center mt-4">
-                <img src="assets/images/team_zhang.jpg" alt="Dr. Lin Zhang" class="w-8 h-8 rounded-full mr-3">
-                <div class="text-sm">
-                  <p class="text-gray-900 font-medium">Dr. Lin Zhang</p>
-                </div>
-              </div>
+              <span class="text-hbnGreen font-medium text-sm mt-auto inline-flex items-center">
+                Read Article <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+              </span>
             </div>
           </a>
         </article>
         
-        <article class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow">
-          <a href="blog/biophilic.html" class="block">
-            <img src="assets/images/blogs/toilet.jpg" alt="Toilet cleaning" class="w-full h-48 object-cover">
-            <div class="p-6">
+        <!-- Toilets -->
+        <article class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow blog-post border border-gray-100" data-category="Research" data-title="Pathogen Transmission Bathrooms">
+          <a href="blog/biophilic.html" class="block h-full flex flex-col">
+            <img src="assets/images/blogs/toilet.jpg" alt="Toilet Hygiene" class="w-full h-48 object-cover" onerror="this.src='https://placehold.co/600x400/3e95dd/ffffff?text=Hygiene'">
+            <div class="p-6 flex flex-col flex-grow">
               <div class="flex items-center mb-4">
                 <span class="bg-hbnGreen bg-opacity-10 text-hbnGreen px-3 py-1 rounded-full text-sm font-medium">Research</span>
-                <span class="text-gray-500 text-sm ml-4">Jan 23, 2025</span>
+                <span class="text-gray-500 text-sm ml-auto">Jan 23, 2025</span>
               </div>
-              <h3 class="text-xl font-bold text-gray-800 mb-3 hover:text-hbnGreen transition-colors">Beyond Flushing: The Dynamic World of Pathogen Transmission in Bathrooms</h3>
-              <p class="text-gray-600 mb-4">
-                Two leading experts in the field of environmental microbiology and hygiene explore a topic that affects every building worldwide, toilet hygiene and pathogen transmission.
+              <h3 class="text-xl font-bold text-gray-800 mb-3 hover:text-hbnGreen transition-colors">Beyond Flushing: Pathogen Transmission</h3>
+              <p class="text-gray-600 mb-4 text-sm flex-grow">
+                Two leading experts in environmental microbiology explore toilet hygiene and pathogen transmission.
               </p>
-              <div class="flex items-center mt-4">
-                <img src="assets/images/profile_marco-felipe_king.png" alt="Dr. Marco-Felipe King" class="w-8 h-8 rounded-full mr-3">
-                <div class="text-sm">
-                  <p class="text-gray-900 font-medium">Dr. Marco-Felipe King</p>
-                </div>
-              </div>
+              <span class="text-hbnGreen font-medium text-sm mt-auto inline-flex items-center">
+                Read Article <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+              </span>
             </div>
           </a>
         </article>
       </div>
-      
-      <!-- Pagination
-      <div class="mt-16 flex justify-center">
-        <nav class="inline-flex rounded-md shadow">
-          <a href="#" class="rounded-l-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50">
-            Previous
-          </a>
-          <a href="#" class="border-t border-b border-r border-gray-300 bg-hbnGreen px-4 py-2 text-sm font-medium text-white">
-            1
-          </a>
-          <a href="#" class="border-t border-b border-r border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50">
-            2
-          </a>
-          <a href="#" class="border-t border-b border-r border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50">
-            3
-          </a>
-          <a href="#" class="rounded-r-md border-t border-b border-r border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50">
-            Next
-          </a>
-        </nav>
-      </div> -->
     </div>
   </section>
 
-  <!-- Newsletter Section -->
-  <section class="py-16 bg-gray-100">
-    <div class="container mx-auto px-6 max-w-4xl">
-      <div class="text-center mb-10">
-        <h2 class="section-title mb-4">Subscribe to Our Blog</h2>
-        <p class="text-gray-600 max-w-2xl mx-auto">
-          Stay up to date with our latest articles, event recaps, and research insights. We'll send you a monthly digest of our best content.
-        </p>
-      </div>
-      <div class="bg-white rounded-xl shadow-lg p-8 md:p-10">
-        <form class="max-w-2xl mx-auto">
-          <div class="flex flex-col md:flex-row gap-4">
-            <div class="md:flex-1">
-              <input type="email" placeholder="Your email address" class="w-full py-3 px-4 border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-hbnGreen" required>
-            </div>
-            <button type="submit" class="bg-hbnGreen text-white py-3 px-8 rounded-full hover:bg-green-700 transition-colors shadow-md">
-              Subscribe
-            </button>
-          </div>
-          <div class="mt-4 text-center text-sm text-gray-500">
-            We respect your privacy. Unsubscribe at any time.
-          </div>
-        </form>
-      </div>
-    </div>
-  </section>
-
-  <!-- Related Resources Section -->
-  <section class="py-16 bg-white">
-    <div class="container mx-auto px-6 max-w-6xl">
-      <h2 class="section-title mb-12 text-center">Related Resources</h2>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <div class="bg-hbnGreen bg-opacity-10 rounded-xl p-8 text-center">
-          <div class="w-16 h-16 mx-auto mb-6 flex items-center justify-center bg-hbnGreen bg-opacity-20 rounded-full">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-hbnGreen" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-            </svg>
-          </div>
-          <h3 class="text-xl font-bold text-gray-800 mb-3">Upcoming Events</h3>
-          <p class="text-gray-600 mb-6">
-            Join our seminars, workshops, and the UKIEG Conference to connect with experts and peers.
-          </p>
-          <a href="events.html" class="inline-block px-6 py-2 border-2 border-hbnGreen text-hbnGreen rounded-full hover:bg-hbnGreen hover:text-white transition-colors">
-            View Events
-          </a>
-        </div>
-        
-        <div class="bg-hbnPurple bg-opacity-10 rounded-xl p-8 text-center">
-          <div class="w-16 h-16 mx-auto mb-6 flex items-center justify-center bg-hbnPurple bg-opacity-20 rounded-full">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-hbnPurple" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
-            </svg>
-          </div>
-          <h3 class="text-xl font-bold text-gray-800 mb-3">Funded Projects</h3>
-          <p class="text-gray-600 mb-6">
-            Explore our pump-priming research projects advancing knowledge in healthy building environments.
-          </p>
-          <a href="projects.html" class="inline-block px-6 py-2 border-2 border-hbnPurple text-hbnPurple rounded-full hover:bg-hbnPurple hover:text-white transition-colors">
-            View Projects
-          </a>
-        </div>
-        
-        <div class="bg-hbnBlue bg-opacity-10 rounded-xl p-8 text-center">
-          <div class="w-16 h-16 mx-auto mb-6 flex items-center justify-center bg-hbnBlue bg-opacity-20 rounded-full">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-hbnBlue" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-            </svg>
-          </div>
-          <h3 class="text-xl font-bold text-gray-800 mb-3">Membership</h3>
-          <p class="text-gray-600 mb-6">
-            Join our network to collaborate with academics, industry professionals, and policymakers.
-          </p>
-          <a href="membership.html" class="inline-block px-6 py-2 border-2 border-hbnBlue text-hbnBlue rounded-full hover:bg-hbnBlue hover:text-white transition-colors">
-            Join Us
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-   <!-- Footer -->
-   <footer class="bg-gray-800 text-white py-12 md:py-16">
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white py-12 md:py-16 mt-auto">
     <div class="container mx-auto max-w-6xl px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
       <!-- Bio / Logo section -->
       <div class="mb-8">
@@ -551,7 +456,7 @@
           <li><a href="index.html" class="text-gray-300 hover:text-hbnGreen transition-colors">Home</a></li>
           <li><a href="about.html" class="text-gray-300 hover:text-hbnGreen transition-colors">About</a></li>
           <li><a href="projects.html" class="text-gray-300 hover:text-hbnGreen transition-colors">Projects</a></li>
-          <li><a href="events.html" class="text-gray-300 hover:text-hbnGreen transition-colors">Events</a></li>
+          <li><a href="events.html" class="text-gray-300 hover:text-hbnGreen transition-colors">Seminars</a></li>
           <li><a href="membership.html" class="text-gray-300 hover:text-hbnGreen transition-colors">Membership</a></li>
           <li><a href="contact.html" class="text-gray-300 hover:text-hbnGreen transition-colors">Contact</a></li>
         </ul>
@@ -579,9 +484,62 @@
 
   <!-- Scripts -->
   <script src="assets/js/script.js"></script>
-  <!-- Add this additional script for the mobile menu toggle -->
   <script>
     document.addEventListener('DOMContentLoaded', function() {
+      // --- Search and Filter Logic ---
+      const searchInput = document.getElementById('searchInput');
+      const filterButtons = document.querySelectorAll('.filter-btn');
+      const posts = document.querySelectorAll('.blog-post');
+      
+      let currentCategory = 'all';
+      let currentSearchTerm = '';
+
+      function filterPosts() {
+        posts.forEach(post => {
+          const postCategory = post.getAttribute('data-category');
+          const postTitle = post.getAttribute('data-title').toLowerCase();
+          
+          const matchesCategory = currentCategory === 'all' || postCategory === currentCategory;
+          const matchesSearch = postTitle.includes(currentSearchTerm);
+          
+          if (matchesCategory && matchesSearch) {
+            post.classList.remove('hidden-post');
+            post.classList.remove('opacity-0');
+            post.classList.add('opacity-100');
+          } else {
+            post.classList.add('hidden-post');
+            post.classList.add('opacity-0');
+            post.classList.remove('opacity-100');
+          }
+        });
+      }
+
+      // Search Event Listener
+      searchInput.addEventListener('input', (e) => {
+        currentSearchTerm = e.target.value.toLowerCase();
+        filterPosts();
+      });
+
+      // Filter Button Event Listeners
+      filterButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          // Remove active class from all buttons
+          filterButtons.forEach(b => {
+            b.classList.remove('bg-hbnGreen', 'text-white');
+            b.classList.add('bg-white', 'text-gray-700');
+          });
+          
+          // Add active class to clicked button
+          btn.classList.remove('bg-white', 'text-gray-700');
+          btn.classList.add('bg-hbnGreen', 'text-white');
+          
+          // Set current category
+          currentCategory = btn.getAttribute('data-filter');
+          filterPosts();
+        });
+      });
+
+      // --- Mobile menu toggle ---
       const menuButton = document.getElementById('mobile-menu-button');
       const mobileMenu = document.getElementById('mobile-menu');
       
@@ -591,7 +549,7 @@
         });
       }
       
-      // Scroll to top button functionality
+      // --- Scroll to top button ---
       const scrollToTopBtn = document.getElementById('scrollToTopBtn');
       if (scrollToTopBtn) {
         window.addEventListener('scroll', function() {
