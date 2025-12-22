@@ -38,6 +38,180 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
   });
 });
 
+// ============================================
+// EVENT FILTERING
+// ============================================
+
+document.addEventListener('DOMContentLoaded', function() {
+  initEventFilters();
+});
+
+function initEventFilters() {
+  const filterButtons = document.querySelectorAll('.filter-btn');
+  const eventCards = document.querySelectorAll('.event-card');
+  
+  // Exit if not on events page
+  if (filterButtons.length === 0 || eventCards.length === 0) return;
+
+  filterButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      const filter = button.dataset.filter;
+      
+      // Update active button state
+      updateActiveButton(filterButtons, button);
+      
+      // Filter events
+      filterEvents(eventCards, filter);
+      
+      // Update URL (optional - allows sharing filtered view)
+      updateURL(filter);
+      
+      // Update counts
+      updateCounts(eventCards, filter);
+    });
+  });
+
+  // Check URL for initial filter
+  const urlParams = new URLSearchParams(window.location.search);
+  const initialFilter = urlParams.get('filter');
+  
+  if (initialFilter) {
+    const targetButton = document.querySelector(`[data-filter="${initialFilter}"]`);
+    if (targetButton) {
+      targetButton.click();
+    }
+  }
+}
+
+function updateActiveButton(buttons, activeButton) {
+  buttons.forEach(btn => {
+    btn.classList.remove('bg-hbnBlue', 'text-white', 'shadow-md', 'active');
+    btn.classList.add('bg-gray-100', 'text-gray-700');
+  });
+  
+  activeButton.classList.remove('bg-gray-100', 'text-gray-700');
+  activeButton.classList.add('bg-hbnBlue', 'text-white', 'shadow-md', 'active');
+}
+
+function filterEvents(cards, filter) {
+  let visibleCount = 0;
+  
+  cards.forEach(card => {
+    const category = card.dataset.category;
+    const shouldShow = filter === 'all' || category === filter;
+    
+    if (shouldShow) {
+      card.classList.remove('hidden');
+      card.style.opacity = '0';
+      card.style.transform = 'translateY(10px)';
+      
+      // Staggered animation
+      setTimeout(() => {
+        card.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
+        card.style.opacity = '1';
+        card.style.transform = 'translateY(0)';
+      }, visibleCount * 50);
+      
+      visibleCount++;
+    } else {
+      card.style.opacity = '0';
+      card.style.transform = 'translateY(-10px)';
+      
+      setTimeout(() => {
+        card.classList.add('hidden');
+      }, 300);
+    }
+  });
+
+  // Show "no results" message if needed
+  handleNoResults(visibleCount, filter);
+}
+
+function handleNoResults(count, filter) {
+  const container = document.getElementById('events-container');
+  let noResultsMsg = document.getElementById('no-results-message');
+  
+  if (count === 0) {
+    if (!noResultsMsg && container) {
+      noResultsMsg = document.createElement('div');
+      noResultsMsg.id = 'no-results-message';
+      noResultsMsg.className = 'text-center py-12 text-gray-500';
+      noResultsMsg.innerHTML = `
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 mx-auto mb-4 text-gray-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+        </svg>
+        <p class="text-lg">No ${filter} events found.</p>
+        <button onclick="document.querySelector('[data-filter=all]').click()" class="mt-4 text-hbnGreen hover:underline">
+          View all events
+        </button>
+      `;
+      container.appendChild(noResultsMsg);
+    }
+  } else if (noResultsMsg) {
+    noResultsMsg.remove();
+  }
+}
+
+function updateCounts(cards, filter) {
+  const upcomingCount = document.getElementById('upcoming-count');
+  const pastCount = document.getElementById('past-count');
+  
+  if (!upcomingCount || !pastCount) return;
+
+  let upcoming = 0;
+  let past = 0;
+
+  cards.forEach(card => {
+    const category = card.dataset.category;
+    const status = card.dataset.status;
+    const matches = filter === 'all' || category === filter;
+    
+    if (matches) {
+      if (status === 'upcoming') upcoming++;
+      if (status === 'past') past++;
+    }
+  });
+
+  // Animate count change
+  animateCount(upcomingCount, upcoming);
+  animateCount(pastCount, past);
+}
+
+function animateCount(element, newValue) {
+  const currentValue = parseInt(element.textContent) || 0;
+  
+  if (currentValue === newValue) return;
+  
+  const duration = 300;
+  const steps = 10;
+  const stepDuration = duration / steps;
+  const increment = (newValue - currentValue) / steps;
+  
+  let step = 0;
+  const timer = setInterval(() => {
+    step++;
+    const value = Math.round(currentValue + (increment * step));
+    element.textContent = value;
+    
+    if (step >= steps) {
+      clearInterval(timer);
+      element.textContent = newValue;
+    }
+  }, stepDuration);
+}
+
+function updateURL(filter) {
+  const url = new URL(window.location);
+  
+  if (filter === 'all') {
+    url.searchParams.delete('filter');
+  } else {
+    url.searchParams.set('filter', filter);
+  }
+  
+  window.history.replaceState({}, '', url);
+}
+
 // Form validation (only if contact form exists)
 const contactForm = document.getElementById('contact-form');
 

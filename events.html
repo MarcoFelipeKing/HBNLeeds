@@ -138,42 +138,43 @@
 
   <!-- Main Content Section -->
   <main class="container mx-auto px-6 py-16 max-w-6xl">
-    <!-- Event Categories -->
-    <section class="mb-16">
-      <div class="flex flex-wrap gap-4 justify-center mb-10">
-        <button class="px-6 py-3 rounded-full bg-hbnBlue text-white shadow-md hover:bg-blue-700 transition-colors">
-          All Events
-        </button>
-        <button class="px-6 py-3 rounded-full bg-gray-100 text-gray-700 hover:bg-gray-200 transition-colors">
-          Seminars
-        </button>
-        <button class="px-6 py-3 rounded-full bg-gray-100 text-gray-700 hover:bg-gray-200 transition-colors">
-          Workshops
-        </button>
-        <button class="px-6 py-3 rounded-full bg-gray-100 text-gray-700 hover:bg-gray-200 transition-colors">
-          Conferences
-        </button>
+  <!-- Event Categories -->
+  <section class="mb-16">
+    <div class="flex flex-wrap gap-4 justify-center mb-10" id="filter-buttons">
+      <button data-filter="all" class="filter-btn px-6 py-3 rounded-full bg-hbnBlue text-white shadow-md hover:bg-blue-700 transition-colors active">
+        All Events
+      </button>
+      <button data-filter="seminar" class="filter-btn px-6 py-3 rounded-full bg-gray-100 text-gray-700 hover:bg-gray-200 transition-colors">
+        Seminars
+      </button>
+      <button data-filter="workshop" class="filter-btn px-6 py-3 rounded-full bg-gray-100 text-gray-700 hover:bg-gray-200 transition-colors">
+        Workshops
+      </button>
+      <button data-filter="conference" class="filter-btn px-6 py-3 rounded-full bg-gray-100 text-gray-700 hover:bg-gray-200 transition-colors">
+        Conferences
+      </button>
+    </div>
+    
+    <!-- Stats will update dynamically -->
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+      <div class="bg-white p-6 rounded-lg shadow hover:shadow-md transition-shadow">
+        <div class="text-4xl font-bold text-hbnGreen mb-2" id="upcoming-count">2</div>
+        <div class="text-gray-600">Upcoming Events</div>
       </div>
-      
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-        <div class="bg-white p-6 rounded-lg shadow hover:shadow-md transition-shadow">
-          <div class="text-4xl font-bold text-hbnGreen mb-2">2</div>
-          <div class="text-gray-600">Upcoming Events</div>
-        </div>
-        <div class="bg-white p-6 rounded-lg shadow hover:shadow-md transition-shadow">
-          <div class="text-4xl font-bold text-hbnPurple mb-2">15</div>
-          <div class="text-gray-600">Past Events</div>
-        </div>
-        <div class="bg-white p-6 rounded-lg shadow hover:shadow-md transition-shadow">
-          <div class="text-4xl font-bold text-hbnBlue mb-2">30+</div>
-          <div class="text-gray-600">Expert Speakers</div>
-        </div>
-        <div class="bg-white p-6 rounded-lg shadow hover:shadow-md transition-shadow">
-          <div class="text-4xl font-bold text-hbnYellow mb-2">600+</div>
-          <div class="text-gray-600">Attendees</div>
-        </div>
+      <div class="bg-white p-6 rounded-lg shadow hover:shadow-md transition-shadow">
+        <div class="text-4xl font-bold text-hbnPurple mb-2" id="past-count">15</div>
+        <div class="text-gray-600">Past Events</div>
       </div>
-    </section>
+      <div class="bg-white p-6 rounded-lg shadow hover:shadow-md transition-shadow">
+        <div class="text-4xl font-bold text-hbnBlue mb-2">30+</div>
+        <div class="text-gray-600">Expert Speakers</div>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow hover:shadow-md transition-shadow">
+        <div class="text-4xl font-bold text-hbnYellow mb-2">600+</div>
+        <div class="text-gray-600">Attendees</div>
+      </div>
+    </div>
+  </section>
 
     <!-- Featured Event Section -->
     <section id="featured-event" class="mb-24">
@@ -348,8 +349,9 @@
       <p class="text-center text-gray-600 max-w-3xl mx-auto mb-12">
         Explore our archive of seminars, conferences, and workshops.
       </p>
-
+      
       <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <article class="event-card" data-category="seminar" data-status="past">
         <!-- Sarah Price - Past Event -->
         <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow border border-gray-100">
           <div class="relative h-48">
@@ -377,8 +379,9 @@
             -->
           </div>
         </div>
-
+        </article>
         <!-- UKIEG Conference -->
+        <article class="event-card" data-category="conference" data-status="past">
         <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow border border-gray-100">
           <div class="relative h-48">
             <img src="assets/images/events/ukieg/ukieg_conference.png" alt="UKIEG 2025 Annual Conference" class="w-full h-full object-cover">
@@ -397,7 +400,9 @@
             </a>
           </div>
         </div>
+        </article>
 
+      <article class="event-card" data-category="seminar" data-status="past">
         <!-- Gesa Reiss Seminar (Moved to Past) -->
         <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow border border-gray-100">
           <div class="relative h-48">
@@ -416,7 +421,9 @@
             </a>
           </div>
         </div>
+      </article>
 
+      <article class="event-card" data-category="seminar" data-status="past">
         <!-- Fairburn/Austin Seminar (Moved to Past) -->
         <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow border border-gray-100">
           <div class="relative h-48">
@@ -436,11 +443,12 @@
             </a>
           </div>
         </div>
-
+        </article>
+        <article class="event-card" data-category="seminar" data-status="past">
         <!-- Pete Apps Seminar -->
         <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow border border-gray-100">
           <div class="relative h-48">
-            <img src="assets/images/hbn_portrait.png" alt="Pete Apps Seminar on Grenfell" class="w-full h-full object-cover">
+            <img src="assets/images/events/seminars/pete/gren_fell.jpg" alt="Pete Apps Seminar on Grenfell" class="w-full h-full object-cover">
             <div class="absolute top-4 right-4 bg-gray-800 text-white px-3 py-1 rounded-full text-xs font-semibold">
               Feb 2025
             </div>
@@ -456,7 +464,8 @@
             </a>
           </div>
         </div>
-
+      </article>
+      <article class="event-card" data-category="workshop" data-status="upcoming"> 
         <!-- Launch Event -->
         <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow border border-gray-100">
           <div class="relative h-48">
@@ -476,7 +485,8 @@
             </a>
           </div>
         </div>
-
+        </article>
+        <article class="event-card" data-category="seminar" data-status="upcoming">
         <!-- Chuck Gerba -->
         <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow border border-gray-100">
           <div class="relative h-48">
@@ -495,7 +505,7 @@
             </a>
           </div>
         </div>
-
+        </article>
       </div>
       
       <div class="text-center mt-12">
