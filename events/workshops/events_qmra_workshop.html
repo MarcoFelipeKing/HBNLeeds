@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            hbnGreen: '#4e9317',
+            hbnGreenDark: '#3d7412',
+            hbnPurple: '#8360a9',
+            hbnGray: '#808184',
+            hbnYellow: '#ffca29',
+            hbnBlue: '#3e95dd',
+          }
+        }
+      }
+    };
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Infection Transmission in Indoor Settings: A multidisciplinary workshop at the University of Leeds on 22nd April 2026. Exploring indoor infection risk, QMRA modelling, and public health strategies.">
+  <title>Infection Transmission in Indoor Settings Workshop | HBN Leeds</title>
+  
+  <link rel="icon" href="../../assets/images/hbn_fav.ico" type="image/x-icon"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="font-poppins text-gray-700 flex flex-col min-h-screen">
+
+  <!-- Header -->
+  <header class="bg-white shadow-md fixed w-full z-50">
+    <div class="container mx-auto px-6 flex justify-between items-center h-20">
+      <div class="flex-shrink-0">
+        <a href="../../index.html" class="flex items-center space-x-4">
+          <img src="../../assets/images/hbn_landscape.png" alt="HBN Leeds Logo" class="h-12">
+          <img src="../../assets/images/leeds_logo_black_on_white_bk.jpg" alt="Leeds Logo" class="h-12" >
+        </a>
+      </div>
+      <button class="md:hidden text-gray-600 hover:text-hbnGreen focus:outline-none" id="mobile-menu-button">
+        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+      <nav class="hidden md:flex space-x-8" id="main-nav">
+        <a href="../../index.html" class="text-gray-600 hover:text-hbnGreen font-medium transition-colors">Home</a>
+        <a href="../../about.html" class="text-gray-600 hover:text-hbnGreen font-medium transition-colors">About Us</a>
+        <a href="../../blog.html" class="text-gray-600 hover:text-hbnGreen font-medium transition-colors">Blog</a>
+        <a href="../../events.html" class="text-hbnGreen font-medium transition-colors">Events</a>
+        <a href="../../projects.html" class="text-gray-600 hover:text-hbnGreen font-medium transition-colors">Projects</a>
+        <a href="../../contact.html" class="text-gray-600 hover:text-hbnGreen font-medium transition-colors">Contact</a>
+      </nav>
+    </div>
+    <!-- Mobile Menu -->
+    <div class="md:hidden hidden bg-white w-full shadow-md" id="mobile-menu">
+      <div class="px-6 py-4 space-y-4">
+        <a href="../../index.html" class="block text-gray-600 hover:text-hbnGreen">Home</a>
+        <a href="../../about.html" class="block text-gray-600 hover:text-hbnGreen">About Us</a>
+        <a href="../../blog.html" class="block text-gray-600 hover:text-hbnGreen">Blog</a>
+        <a href="../../events.html" class="block text-hbnGreen">Events</a>
+        <a href="../../projects.html" class="block text-gray-600 hover:text-hbnGreen">Projects</a>
+        <a href="../../contact.html" class="block text-gray-600 hover:text-hbnGreen">Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="relative pt-20">
+    <div class="bg-gradient-to-r from-hbnGreen to-hbnBlue text-white py-16 md:py-24">
+      <div class="container mx-auto px-6 max-w-6xl">
+        <div class="md:flex items-center">
+          <div class="md:w-3/5 md:pr-12 mb-10 md:mb-0">
+            <span class="inline-block py-1 px-3 rounded-full bg-white/20 text-white font-semibold text-sm mb-4">Workshop</span>
+            <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight">Infection Transmission in Indoor Settings</h1>
+            <p class="text-xl opacity-90 mb-2">A Multidisciplinary Workshop</p>
+            <p class="text-lg opacity-80 mb-6 max-w-2xl">
+              Advancing understanding of infection transmission in indoor environments and exploring practical strategies to create more resilient spaces.
+            </p>
+            <div class="flex flex-wrap gap-4 text-sm mb-6">
+              <div class="flex items-center bg-white/10 rounded-full px-4 py-2">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                </svg>
+                <span>22nd April 2026</span>
+              </div>
+              <div class="flex items-center bg-white/10 rounded-full px-4 py-2">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                </svg>
+                <span>MALL, School of Mathematics, University of Leeds</span>
+              </div>
+            </div>
+            <div class="flex flex-wrap gap-3">
+              <a href="https://docs.google.com/forms/d/e/1FAIpQLSc-Yl7OmrfbCR7KbX4G0fS9tpWx1aYFUpgRbJm3Ftod4dxntQ/viewform" target="_blank" class="inline-flex items-center px-6 py-3 bg-white text-hbnGreen font-bold rounded-full hover:bg-gray-100 transition-colors shadow-lg">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
+                </svg>
+                Register Now (Free)
+              </a>
+              <a href="https://indoor-transmission-workshop.my.canva.site" target="_blank" class="inline-flex items-center px-6 py-3 bg-white/20 text-white font-bold rounded-full hover:bg-white/30 transition-colors">
+                Event Website
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                </svg>
+              </a>
+            </div>
+          </div>
+          <div class="md:w-2/5">
+            <div class="bg-white p-2 rounded-lg shadow-xl transform -rotate-2">
+                <img src="../../assets/images/events/workshops/infection/infection_workshop.jpg" 
+                     alt="Infection Transmission Workshop" 
+                     class="rounded-lg w-full object-cover aspect-square"
+                     onerror="this.src='https://placehold.co/600x400/4e9317/ffffff?text=Infection+Workshop'">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Breadcrumbs -->
+  <div class="bg-gray-50 py-3 border-b border-gray-200">
+    <div class="container mx-auto px-6 max-w-6xl">
+      <div class="flex text-sm">
+        <a href="../../index.html" class="text-gray-500 hover:text-hbnGreen">Home</a>
+        <span class="mx-2 text-gray-400">/</span>
+        <a href="../../events.html" class="text-gray-500 hover:text-hbnGreen">Events</a>
+        <span class="mx-2 text-gray-400">/</span>
+        <span class="text-gray-800 font-medium">Infection Transmission Workshop</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Key Dates Banner -->
+  <section class="bg-hbnYellow/20 border-b border-hbnYellow/30 py-6">
+    <div class="container mx-auto px-6 max-w-6xl">
+      <div class="grid md:grid-cols-3 gap-6 text-center">
+        <div>
+          <p class="text-sm text-gray-600 uppercase tracking-wide font-medium">Registration Open</p>
+          <p class="text-lg font-bold text-gray-800">Now – 31st March 2026</p>
+        </div>
+        <div>
+          <p class="text-sm text-gray-600 uppercase tracking-wide font-medium">Abstract Submission</p>
+          <p class="text-lg font-bold text-gray-800">Deadline: 15th March 2026</p>
+        </div>
+        <div>
+          <p class="text-sm text-gray-600 uppercase tracking-wide font-medium">Workshop Date</p>
+          <p class="text-lg font-bold text-gray-800">22nd April 2026</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <section class="py-16 bg-white">
+    <div class="container mx-auto px-6 max-w-4xl">
+      
+      <!-- About Section -->
+      <div class="prose max-w-none mb-12">
+        <h2 class="text-2xl font-bold text-gray-800 mb-4">About the Workshop</h2>
+        <p class="text-lg text-gray-600 leading-relaxed mb-6">
+          This one-day workshop brings together researchers from diverse disciplines and career stages to explore the multifaceted topic of indoor infection risk. Registration is <strong>free</strong>, and we especially encourage participation from <strong>early career researchers</strong>.
+        </p>
+        <p class="mb-6">
+          Through a combination of contributed talks and poster sessions, participants will have the opportunity to present their latest work, exchange ideas, and engage in cross-disciplinary discussion about different challenges in the field.
+        </p>
+        <p class="mb-6">
+          The event aims to foster collaboration, highlight emerging research, and support a holistic approach to studying and mitigating infection risks in indoor settings.
+        </p>
+      </div>
+
+      <!-- Research Areas -->
+      <div class="bg-gradient-to-br from-hbnGreen/10 to-hbnBlue/10 p-8 rounded-2xl mb-12 border border-gray-100">
+        <h3 class="text-xl font-bold text-gray-800 mb-6 text-center">Areas of Research</h3>
+        <p class="text-gray-600 text-center mb-6">We encourage participants to present work in the following topics:</p>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+          <div class="bg-white p-4 rounded-lg shadow-sm border border-gray-100 flex items-center">
+            <span class="text-2xl mr-3">🦠</span>
+            <span class="text-sm text-gray-700">Mechanisms and mitigations of indoor infection transmission</span>
+          </div>
+          <div class="bg-white p-4 rounded-lg shadow-sm border border-gray-100 flex items-center">
+            <span class="text-2xl mr-3">📊</span>
+            <span class="text-sm text-gray-700">QMRA modelling and mathematical approaches</span>
+          </div>
+          <div class="bg-white p-4 rounded-lg shadow-sm border border-gray-100 flex items-center">
+            <span class="text-2xl mr-3">🔬</span>
+            <span class="text-sm text-gray-700">Experimental frameworks and studies</span>
+          </div>
+          <div class="bg-white p-4 rounded-lg shadow-sm border border-gray-100 flex items-center">
+            <span class="text-2xl mr-3">🏛️</span>
+            <span class="text-sm text-gray-700">The impact of architectural design</span>
+          </div>
+          <div class="bg-white p-4 rounded-lg shadow-sm border border-gray-100 flex items-center">
+            <span class="text-2xl mr-3">🏥</span>
+            <span class="text-sm text-gray-700">Implementation in public health</span>
+          </div>
+          <div class="bg-white p-4 rounded-lg shadow-sm border border-gray-100 flex items-center">
+            <span class="text-2xl mr-3">💡</span>
+            <span class="text-sm text-gray-700">...and more!</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Invited Speakers -->
+      <div class="mb-12">
+        <h2 class="text-2xl font-bold text-gray-800 mb-6 text-center">Invited Speakers</h2>
+        <div class="grid md:grid-cols-2 gap-8">
+          <!-- Dr Thomas Woolley -->
+          <div class="bg-white rounded-xl shadow-md overflow-hidden border border-gray-100">
+            <div class="bg-gradient-to-r from-hbnGreen to-hbnGreenDark p-4 text-white">
+              <p class="text-sm font-medium opacity-80">Morning Session • 10:30am</p>
+            </div>
+            <div class="p-6">
+              <div class="flex items-start gap-4 mb-4">
+                <div class="w-16 h-16 rounded-full bg-gray-200 flex-shrink-0 overflow-hidden">
+                  <img src="../../assets/images/events/workshops/qmra/thomas.png" 
+                       alt="Dr Thomas Woolley" 
+                       class="w-full h-full object-cover"
+                       onerror="this.parentElement.innerHTML='<div class=\'w-full h-full flex items-center justify-center text-gray-400 text-xl font-bold\'>TW</div>'">
+                </div>
+                <div>
+                  <h4 class="font-bold text-lg text-gray-800">Dr Thomas Woolley</h4>
+                  <p class="text-sm text-hbnGreen">Reader in Applied Mathematics, Cardiff University</p>
+                </div>
+              </div>
+              <p class="text-sm text-gray-600">
+                Dr Woolley studied mathematics at University of Oxford between 2004-2017. His doctorate focused on understanding pattern formation behind fish spots and zebra stripes. Alongside this research, he now investigates airborne disease spread in small-scale settings.
+              </p>
+            </div>
+          </div>
+
+          <!-- Dr Daniel Miller -->
+          <div class="bg-white rounded-xl shadow-md overflow-hidden border border-gray-100">
+            <div class="bg-gradient-to-r from-hbnBlue to-hbnPurple p-4 text-white">
+              <p class="text-sm font-medium opacity-80">Afternoon Session • 13:45pm</p>
+            </div>
+            <div class="p-6">
+              <div class="flex items-start gap-4 mb-4">
+                <div class="w-16 h-16 rounded-full bg-gray-200 flex-shrink-0 overflow-hidden">
+                  <img src="../../assets/images/events/workshops/qmra/daniel.png" 
+                       alt="Dr Daniel Miller" 
+                       class="w-full h-full object-cover"
+                       onerror="this.parentElement.innerHTML='<div class=\'w-full h-full flex items-center justify-center text-gray-400 text-xl font-bold\'>DM</div>'">
+                </div>
+                <div>
+                  <h4 class="font-bold text-lg text-gray-800">Dr Daniel Miller</h4>
+                  <p class="text-sm text-hbnBlue">Senior Scientist, Dstl</p>
+                </div>
+              </div>
+              <p class="text-sm text-gray-600">
+                Dr Miller is a Senior Scientist at Dstl with a focus on ventilation, dispersion, and fluid dynamics. Since the onset of the pandemic, he has focused on mitigating transmission of SARS-CoV-2 in indoor environments through Dstl's contribution to the TRACK and NCS PROTECT projects.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Schedule -->
+      <div class="mb-12">
+        <h2 class="text-2xl font-bold text-gray-800 mb-6 text-center">Tentative Schedule</h2>
+        <p class="text-sm text-gray-500 text-center mb-6 italic">Schedule may change subject to the number of participants</p>
+        
+        <div class="bg-gray-50 rounded-xl p-6 border border-gray-200">
+          <div class="space-y-4">
+            <div class="flex items-start gap-4 pb-4 border-b border-gray-200">
+              <div class="w-28 flex-shrink-0">
+                <span class="text-sm font-bold text-hbnGreen">09:30 - 10:00</span>
+              </div>
+              <div>
+                <p class="font-medium text-gray-800">Registration</p>
+                <p class="text-sm text-gray-500">Arrival and check-in</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-4 pb-4 border-b border-gray-200">
+              <div class="w-28 flex-shrink-0">
+                <span class="text-sm font-bold text-hbnGreen">10:00 - 10:30</span>
+              </div>
+              <div>
+                <p class="font-medium text-gray-800">Welcome</p>
+                <p class="text-sm text-gray-500">Opening remarks and introductions</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-4 pb-4 border-b border-gray-200 bg-hbnGreen/5 -mx-6 px-6 py-4">
+              <div class="w-28 flex-shrink-0">
+                <span class="text-sm font-bold text-hbnGreen">10:30 - 11:15</span>
+              </div>
+              <div>
+                <p class="font-medium text-gray-800">Invited Speaker: Dr Thomas Woolley</p>
+                <p class="text-sm text-gray-500">Keynote presentation</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-4 pb-4 border-b border-gray-200">
+              <div class="w-28 flex-shrink-0">
+                <span class="text-sm font-bold text-gray-400">11:15 - 11:45</span>
+              </div>
+              <div>
+                <p class="font-medium text-gray-800">Short Break</p>
+                <p class="text-sm text-gray-500">Refreshments</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-4 pb-4 border-b border-gray-200">
+              <div class="w-28 flex-shrink-0">
+                <span class="text-sm font-bold text-hbnGreen">11:45 - 12:45</span>
+              </div>
+              <div>
+                <p class="font-medium text-gray-800">Contributed Talks</p>
+                <p class="text-sm text-gray-500">3 × 20-minute presentations</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-4 pb-4 border-b border-gray-200 bg-hbnYellow/10 -mx-6 px-6 py-4">
+              <div class="w-28 flex-shrink-0">
+                <span class="text-sm font-bold text-yellow-700">12:45 - 13:45</span>
+              </div>
+              <div>
+                <p class="font-medium text-gray-800">Poster Session with Lunch</p>
+                <p class="text-sm text-gray-500">Maths Research Deck – Food and refreshments provided</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-4 pb-4 border-b border-gray-200 bg-hbnBlue/5 -mx-6 px-6 py-4">
+              <div class="w-28 flex-shrink-0">
+                <span class="text-sm font-bold text-hbnBlue">13:45 - 14:30</span>
+              </div>
+              <div>
+                <p class="font-medium text-gray-800">Invited Speaker: Dr Daniel Miller</p>
+                <p class="text-sm text-gray-500">Keynote presentation</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-4 pb-4 border-b border-gray-200">
+              <div class="w-28 flex-shrink-0">
+                <span class="text-sm font-bold text-hbnGreen">14:30 - 14:50</span>
+              </div>
+              <div>
+                <p class="font-medium text-gray-800">Contributed Talk</p>
+                <p class="text-sm text-gray-500">1 × 20-minute presentation</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-4 pb-4 border-b border-gray-200">
+              <div class="w-28 flex-shrink-0">
+                <span class="text-sm font-bold text-hbnPurple">14:50 - 15:50</span>
+              </div>
+              <div>
+                <p class="font-medium text-gray-800">Open Discussion & Snacks</p>
+                <p class="text-sm text-gray-500">
+                  <a href="https://docs.google.com/forms/d/e/discussion-input-form" target="_blank" class="text-hbnGreen hover:underline">Submit discussion topics here →</a>
+                </p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-4">
+              <div class="w-28 flex-shrink-0">
+                <span class="text-sm font-bold text-gray-400">15:50 - 16:00</span>
+              </div>
+              <div>
+                <p class="font-medium text-gray-800">Closing Remarks</p>
+                <p class="text-sm text-gray-500">Summary and next steps</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bursary Info -->
+      <div class="bg-gradient-to-r from-hbnPurple to-hbnBlue text-white p-8 rounded-2xl mb-12">
+        <div class="flex items-start gap-4">
+          <div class="text-4xl">💰</div>
+          <div>
+            <h3 class="text-xl font-bold mb-2">Financial Support Available</h3>
+            <p class="mb-4 opacity-90">
+              Bursaries of up to <strong>£100</strong> are available for travel and accommodation support.
+            </p>
+            <p class="text-sm opacity-80 mb-4">
+              Priority given to active participants and early career researchers (without existing financial support, e.g., grant-funded PhD).
+            </p>
+            <p class="text-sm">
+              You can request a bursary on the registration form.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Call to Action Cards -->
+      <div class="grid md:grid-cols-2 gap-6 mb-12">
+        <div class="bg-white p-6 rounded-xl shadow-md border-t-4 border-hbnGreen">
+          <h4 class="font-bold text-lg mb-3">📝 Register Now</h4>
+          <p class="text-sm text-gray-600 mb-4">Registration is free. Deadline: <strong>31st March 2026</strong></p>
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSc-Yl7OmrfbCR7KbX4G0fS9tpWx1aYFUpgRbJm3Ftod4dxntQ/viewform" target="_blank" class="inline-flex items-center text-hbnGreen font-semibold hover:underline">
+            Complete Registration Form →
+          </a>
+        </div>
+        <div class="bg-white p-6 rounded-xl shadow-md border-t-4 border-hbnBlue">
+          <h4 class="font-bold text-lg mb-3">📄 Submit an Abstract</h4>
+          <p class="text-sm text-gray-600 mb-4">Present your work! Deadline: <strong>15th March 2026</strong></p>
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSc-Yl7OmrfbCR7KbX4G0fS9tpWx1aYFUpgRbJm3Ftod4dxntQ/viewform" target="_blank" class="inline-flex items-center text-hbnBlue font-semibold hover:underline">
+            Submit via Registration Form →
+          </a>
+        </div>
+      </div>
+
+      <!-- Venue Information -->
+      <div class="mb-12">
+        <h2 class="text-2xl font-bold text-gray-800 mb-6">Venue & Travel Information</h2>
+        
+        <div class="grid md:grid-cols-2 gap-8">
+          <!-- Venue -->
+          <div class="bg-gray-50 rounded-xl p-6 border border-gray-200">
+            <h4 class="font-bold text-gray-800 mb-4 flex items-center">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-hbnGreen" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+              </svg>
+              Venue
+            </h4>
+            <p class="text-gray-700 mb-2"><strong>MALL, School of Mathematics</strong></p>
+            <p class="text-sm text-gray-600">
+              University of Leeds<br>
+              Woodhouse<br>
+              Leeds<br>
+              LS2 9JT
+            </p>
+          </div>
+
+          <!-- Getting There -->
+          <div class="bg-gray-50 rounded-xl p-6 border border-gray-200">
+            <h4 class="font-bold text-gray-800 mb-4 flex items-center">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-hbnGreen" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+              </svg>
+              Getting There
+            </h4>
+            <ul class="text-sm text-gray-600 space-y-2">
+              <li>🚆 <strong>Train station to Campus:</strong> 23 min walk</li>
+              <li>🚌 <strong>Bus station to Campus:</strong> 29 min walk</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Hotels & Parking -->
+        <div class="grid md:grid-cols-2 gap-8 mt-6">
+          <div class="bg-white rounded-xl p-6 border border-gray-200">
+            <h4 class="font-bold text-gray-800 mb-4">🏨 Hotel Options</h4>
+            <ul class="text-sm text-gray-600 space-y-2">
+              <li><a href="https://www.premierinn.com" target="_blank" class="text-hbnGreen hover:underline">Premier Inn</a> – Wellington St. (25min), Whitehall Rd. (23min), Leeds Arena (14min)</li>
+              <li><a href="https://www.ibis.com" target="_blank" class="text-hbnGreen hover:underline">Ibis</a> – Malborough St. (20min walk)</li>
+              <li><a href="https://www.ibis.com" target="_blank" class="text-hbnGreen hover:underline">Ibis Styles</a> – City Centre Arena (18min walk)</li>
+              <li><a href="https://www.radissonhotels.com" target="_blank" class="text-hbnGreen hover:underline">Radisson Blu</a> – The Light (14min walk)</li>
+              <li><a href="https://www.queenshotelleeds.co.uk" target="_blank" class="text-hbnGreen hover:underline">The Queen's Hotel</a> – City Square (21min walk)</li>
+            </ul>
+          </div>
+
+          <div class="bg-white rounded-xl p-6 border border-gray-200">
+            <h4 class="font-bold text-gray-800 mb-4">🚗 Car Parking</h4>
+            <ul class="text-sm text-gray-600 space-y-2">
+              <li><a href="https://www.ncp.co.uk" target="_blank" class="text-hbnGreen hover:underline">Woodhouse Lane Car Park</a> – 13 min walk</li>
+              <li><a href="https://www.ncp.co.uk" target="_blank" class="text-hbnGreen hover:underline">Burley Road Car Park</a> – 23 min walk</li>
+              <li><a href="https://www.ncp.co.uk" target="_blank" class="text-hbnGreen hover:underline">Kirkstall Road Car Park</a> – 26 min walk</li>
+              <li class="text-gray-500 italic">Free residential areas: Hyde Park (20min), Woodhouse (18min)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contact -->
+      <div class="bg-gray-800 text-white p-8 rounded-2xl mb-12">
+        <h3 class="text-xl font-bold mb-4 text-center">Contact the Organisers</h3>
+        <p class="text-center mb-6 opacity-80">For general enquiries, please contact:</p>
+        <div class="flex flex-col md:flex-row justify-center gap-6">
+          <div class="text-center">
+            <p class="font-semibold">Xiaoxuan Qin</p>
+            <a href="mailto:ml202xq@leeds.ac.uk" class="text-hbnGreen hover:underline text-sm">ml202xq@leeds.ac.uk</a>
+          </div>
+          <div class="text-center">
+            <p class="font-semibold">Marcus Marshall</p>
+            <a href="mailto:ll17mjm@leeds.ac.uk" class="text-hbnGreen hover:underline text-sm">ll17mjm@leeds.ac.uk</a>
+          </div>
+        </div>
+        <p class="text-center text-sm opacity-60 mt-6 italic">On behalf of the Healthy Buildings Network</p>
+      </div>
+
+      <!-- Final CTA -->
+      <div class="text-center bg-gradient-to-r from-hbnGreen/10 to-hbnBlue/10 p-8 rounded-2xl border border-gray-100">
+        <h3 class="text-2xl font-bold text-gray-800 mb-4">Join Us on 22nd April 2026</h3>
+        <p class="text-gray-600 mb-6 max-w-2xl mx-auto">
+          We look forward to welcoming researchers from across disciplines for a day of collaboration, discussion, and discovery.
+        </p>
+        <div class="flex flex-wrap justify-center gap-4">
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSc-Yl7OmrfbCR7KbX4G0fS9tpWx1aYFUpgRbJm3Ftod4dxntQ/viewform" target="_blank" class="inline-flex items-center px-8 py-4 bg-hbnGreen text-white font-bold rounded-full hover:bg-hbnGreenDark transition-colors shadow-lg">
+            Register Now
+          </a>
+          <a href="https://indoor-transmission-workshop.my.canva.site" target="_blank" class="inline-flex items-center px-8 py-4 bg-white text-hbnGreen border-2 border-hbnGreen font-bold rounded-full hover:bg-hbnGreen hover:text-white transition-colors">
+            Visit Event Website
+          </a>
+        </div>
+      </div>
+
+      <!-- Navigation -->
+      <div class="mt-12 flex justify-between items-center border-t border-gray-200 pt-8">
+        <a href="../events.html" class="flex items-center text-gray-600 hover:text-hbnGreen transition-colors">
+            <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+            Back to Events
+        </a>
+        <div class="flex gap-2">
+            <span class="text-sm text-gray-400">Share:</span>
+            <a href="#" class="text-hbnBlue hover:opacity-80">LinkedIn</a>
+            <span class="text-gray-300">|</span>
+            <a href="#" class="text-hbnBlue hover:opacity-80">Twitter</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white py-12 md:py-16">
+    <div class="container mx-auto max-w-6xl px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div class="mb-8">
+        <img src="../../assets/images/hbn_landscape.png" alt="Healthy Buildings Network Leeds Logo" class="h-12 mb-4 filter brightness-0 invert opacity-90">
+        <p class="text-sm tracking-wide text-gray-300">
+          Healthy Buildings Network Leeds is a cross-disciplinary research and collaboration hub at the University of Leeds, focused on healthier, more sustainable built environments.
+        </p>
+        <ul class="flex mt-4">
+          <li class="mr-4 flex items-center">
+            <a href="https://www.linkedin.com/company/healthy-buildings-network/" target="_blank" class="text-gray-300 hover:text-hbnGreen transition-colors flex items-center">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+              </svg>
+              LinkedIn
+            </a>
+          </li>
+          <li class="mr-4 flex items-center">
+            <a href="mailto:healthy_buildings_network@leeds.ac.uk" class="text-gray-300 hover:text-hbnGreen transition-colors flex items-center">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+              </svg>
+              Email Us
+            </a>
+          </li>
+        </ul>
+      </div>
+  
+      <div>
+        <h4 class="text-xl font-bold mb-4">Quick Links</h4>
+        <ul class="space-y-2">
+          <li><a href="../index.html" class="text-gray-300 hover:text-hbnGreen transition-colors">Home</a></li>
+          <li><a href="../about.html" class="text-gray-300 hover:text-hbnGreen transition-colors">About</a></li>
+          <li><a href="../projects.html" class="text-gray-300 hover:text-hbnGreen transition-colors">Projects</a></li>
+          <li><a href="../events.html" class="text-gray-300 hover:text-hbnGreen transition-colors">Events</a></li>
+          <li><a href="../membership.html" class="text-gray-300 hover:text-hbnGreen transition-colors">Membership</a></li>
+          <li><a href="../contact.html" class="text-gray-300 hover:text-hbnGreen transition-colors">Contact</a></li>
+        </ul>
+      </div>
+  
+      <div>
+        <h4 class="text-xl font-bold mb-4">Affiliations</h4>
+        <ul class="space-y-2">
+          <li><a href="https://fluids.leeds.ac.uk" target="_blank" class="text-gray-300 hover:text-hbnGreen transition-colors">Leeds Institute for Fluid Dynamics</a></li>
+          <li><a href="https://lssi.leeds.ac.uk" target="_blank" class="text-gray-300 hover:text-hbnGreen transition-colors">Leeds Social Sciences Institute</a></li>
+          <li><a href="https://lahri.leeds.ac.uk" target="_blank" class="text-gray-300 hover:text-hbnGreen transition-colors">Leeds Arts & Humanities Research Institute</a></li>
+          <li><a href="https://environment.leeds.ac.uk/institute-climate-atmospheric-science" target="_blank" class="text-gray-300 hover:text-hbnGreen transition-colors">ICAS</a></li>
+          <li><a href="https://sustainability.leeds.ac.uk/get-involved/leeds-living-lab/" target="_blank" class="text-gray-300 hover:text-hbnGreen transition-colors">Leeds Living Lab</a></li>
+          <li><a href="https://lida.leeds.ac.uk/" target="_blank" class="text-gray-300 hover:text-hbnGreen transition-colors">Leeds Institute for Data Analytics</a></li>
+        </ul>
+      </div>
+    </div>
+  
+    <div class="container mx-auto max-w-6xl px-6 text-sm text-center pt-8 mt-8 border-t border-gray-700">
+      <p>© 2025 Healthy Buildings Network Leeds. All rights reserved.</p>
+      <p class="mt-2">University of Leeds, Leeds LS2 9JT, United Kingdom</p>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile menu toggle
+    const btn = document.getElementById('mobile-menu-button');
+    const menu = document.getElementById('mobile-menu');
+    btn.addEventListener('click', () => {
+      menu.classList.toggle('hidden');
+    });
+  </script>
+</body>
+</html>
