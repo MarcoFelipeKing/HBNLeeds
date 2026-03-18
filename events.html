@@ -104,33 +104,33 @@
               <div class="absolute inset-0 bg-white opacity-10 rounded-lg transform rotate-3"></div>
               <div class="relative bg-white p-6 rounded-lg shadow-lg">
                 <div class="text-hbnGreen font-bold text-2xl mb-2">Next Event:</div>
-                <div class="text-gray-800 font-bold">Infection Transmission in Indoor Settings</div>
-                <div class="text-gray-600 text-sm font-medium">ECR-led Multidisciplinary Workshop</div>
+                <div class="text-gray-800 font-bold">Whose Power? Exploring Energy in the Home</div>
+                <div class="text-gray-600 text-sm font-medium">Family Workshop at Leeds Discovery Centre</div>
                 <div class="flex items-center text-gray-600 mt-2">
                   <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
                   </svg>
-                  <span>Apr 22, 2026</span>
+                  <span>Apr 15, 2026</span>
                 </div>
                 <div class="flex items-center text-gray-600 mt-1">
                   <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
-                  <span>9:30 AM - 4:00 PM</span>
+                  <span>10:00 AM - 12:00 PM</span>
                 </div>
                 <div class="flex items-center text-gray-600 mt-1">
                   <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                   </svg>
-                  <span>School of Mathematics, Leeds</span>
+                  <span>Leeds Discovery Centre</span>
                 </div>
                 <div class="flex gap-2 mt-3">
-                  <span class="text-xs bg-hbnGreen/10 text-hbnGreen px-2 py-1 rounded font-medium">Free</span>
-                  <span class="text-xs bg-hbnYellow/20 text-yellow-800 px-2 py-1 rounded font-medium">ECR-Led</span>
+                  <span class="text-xs bg-hbnPurple/10 text-hbnPurple px-2 py-1 rounded font-medium">Family Event</span>
+                  <span class="text-xs bg-hbnYellow/20 text-yellow-800 px-2 py-1 rounded font-medium">Free</span>
                 </div>
-                <a href="#featured-event" class="mt-4 inline-block px-6 py-2 bg-hbnGreen text-white rounded-full hover:bg-green-700 transition-colors text-sm">
-                  Register Now
+                <a href="#whosepower-family" class="mt-4 inline-block px-6 py-2 bg-hbnGreen text-white rounded-full hover:bg-green-700 transition-colors text-sm">
+                  Learn More
                 </a>
               </div>
             </div>
@@ -142,140 +142,132 @@
 
   <!-- Main Content Section -->
   <main class="container mx-auto px-6 py-16 max-w-6xl">
-  <!-- Event Categories -->
-  <section class="mb-16">
-    <div class="flex flex-wrap gap-4 justify-center mb-10" id="filter-buttons">
-      <button data-filter="all" class="filter-btn px-6 py-3 rounded-full bg-hbnBlue text-white shadow-md hover:bg-blue-700 transition-colors active">
-        All Events
-      </button>
-      <button data-filter="seminar" class="filter-btn px-6 py-3 rounded-full bg-gray-100 text-gray-700 hover:bg-gray-200 transition-colors">
-        Seminars
-      </button>
-      <button data-filter="workshop" class="filter-btn px-6 py-3 rounded-full bg-gray-100 text-gray-700 hover:bg-gray-200 transition-colors">
-        Workshops
-      </button>
-      <button data-filter="conference" class="filter-btn px-6 py-3 rounded-full bg-gray-100 text-gray-700 hover:bg-gray-200 transition-colors">
-        Conferences
-      </button>
-    </div>
+    <!-- Event Categories -->
+    <section class="mb-16">
+      <div class="flex flex-wrap gap-4 justify-center mb-10" id="filter-buttons">
+        <button data-filter="all" class="filter-btn px-6 py-3 rounded-full bg-hbnBlue text-white shadow-md hover:bg-blue-700 transition-colors active">
+          All Events
+        </button>
+        <button data-filter="seminar" class="filter-btn px-6 py-3 rounded-full bg-gray-100 text-gray-700 hover:bg-gray-200 transition-colors">
+          Seminars
+        </button>
+        <button data-filter="workshop" class="filter-btn px-6 py-3 rounded-full bg-gray-100 text-gray-700 hover:bg-gray-200 transition-colors">
+          Workshops
+        </button>
+        <button data-filter="conference" class="filter-btn px-6 py-3 rounded-full bg-gray-100 text-gray-700 hover:bg-gray-200 transition-colors">
+          Conferences
+        </button>
+      </div>
+      
+      <!-- Stats -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+        <div class="bg-white p-6 rounded-lg shadow hover:shadow-md transition-shadow">
+          <div class="text-4xl font-bold text-hbnGreen mb-2" id="upcoming-count">7</div>
+          <div class="text-gray-600">Upcoming Events</div>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow hover:shadow-md transition-shadow">
+          <div class="text-4xl font-bold text-hbnPurple mb-2" id="past-count">16</div>
+          <div class="text-gray-600">Past Events</div>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow hover:shadow-md transition-shadow">
+          <div class="text-4xl font-bold text-hbnBlue mb-2">30+</div>
+          <div class="text-gray-600">Expert Speakers</div>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow hover:shadow-md transition-shadow">
+          <div class="text-4xl font-bold text-hbnYellow mb-2">600+</div>
+          <div class="text-gray-600">Attendees</div>
+        </div>
+      </div>
+    </section>
     
-    <!-- Stats -->
-    <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-      <div class="bg-white p-6 rounded-lg shadow hover:shadow-md transition-shadow">
-        <div class="text-4xl font-bold text-hbnGreen mb-2" id="upcoming-count">3</div>
-        <div class="text-gray-600">Upcoming Events</div>
-      </div>
-      <div class="bg-white p-6 rounded-lg shadow hover:shadow-md transition-shadow">
-        <div class="text-4xl font-bold text-hbnPurple mb-2" id="past-count">16</div>
-        <div class="text-gray-600">Past Events</div>
-      </div>
-      <div class="bg-white p-6 rounded-lg shadow hover:shadow-md transition-shadow">
-        <div class="text-4xl font-bold text-hbnBlue mb-2">30+</div>
-        <div class="text-gray-600">Expert Speakers</div>
-      </div>
-      <div class="bg-white p-6 rounded-lg shadow hover:shadow-md transition-shadow">
-        <div class="text-4xl font-bold text-hbnYellow mb-2">600+</div>
-        <div class="text-gray-600">Attendees</div>
-      </div>
-    </div>
-  </section>
-
-    <!-- Featured Event Section - Infection Transmission Workshop -->
+    <!-- Featured Event - HBN Showcase 2026 -->
     <section id="featured-event" class="mb-24">
       <h2 class="section-title mb-12 text-center">Featured Event</h2>
-      
+
       <div class="bg-white rounded-xl shadow-xl overflow-hidden border border-gray-100">
         <div class="md:flex">
-          <!-- Event Image -->
-          <div class="md:w-1/2 relative bg-gradient-to-br from-hbnGreen/20 to-hbnBlue/20 min-h-[300px]">
-            <img src="assets/images/events/workshops/infection/infection_workshop.jpg" 
-                onerror="this.src='https://placehold.co/800x600/4e9317/ffffff?text=Infection+Workshop'"
-                alt="Infection Transmission in Indoor Settings Workshop" 
+          <div class="md:w-1/2 relative bg-gradient-to-br from-hbnGreen/20 to-hbnBlue/20 min-h-[300px] flex items-center justify-center">
+            <img src="assets/images/events/showcase/showcase_2026.jpg"
+                onerror="this.src='https://placehold.co/800x600/4e9317/ffffff?text=HBN+Showcase+2026'"
+                alt="HBN Showcase Event 2026"
                 class="w-full h-full object-cover">
             <div class="absolute inset-0 bg-black/10"></div>
             <div class="absolute top-4 left-4 flex gap-2">
               <span class="bg-hbnGreen text-white px-3 py-1 rounded-full text-sm font-semibold shadow-md">
                 Registration Open
               </span>
-              <span class="bg-hbnYellow text-gray-900 px-3 py-1 rounded-full text-sm font-semibold shadow-md">
-                ECR-Led
-              </span>
             </div>
           </div>
-          
-          <!-- Event Details -->
+
           <div class="md:w-1/2 p-8 md:p-10 flex flex-col justify-center">
-            <div class="bg-hbnBlue/10 text-hbnBlue inline-block px-4 py-1 rounded-full text-sm font-semibold mb-4 self-start">
-              Multidisciplinary Workshop
+            <div class="bg-hbnGreen/10 text-hbnGreen inline-block px-4 py-1 rounded-full text-sm font-semibold mb-4 self-start">
+              Showcase Event
             </div>
-            
-            <h3 class="text-2xl md:text-3xl font-bold mb-4 text-gray-900">Infection Transmission in Indoor Settings</h3>
-            <p class="text-lg text-gray-600 mb-6">A one-day workshop bringing together researchers from diverse disciplines to explore indoor infection risk.</p>
-            
+
+            <h3 class="text-2xl md:text-3xl font-bold mb-4 text-gray-900">HBN Showcase Event 2026</h3>
+            <p class="text-lg text-gray-600 mb-6">Showcasing interdisciplinary research for healthier buildings — keynotes, funded project presentations, and panel discussion.</p>
+
             <div class="flex flex-col space-y-3 text-gray-700 mb-6">
               <div class="flex items-center">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-3 text-hbnGreen" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
                 </svg>
-                <span class="font-medium">April 22, 2026</span>
+                <span class="font-medium">Tuesday, 1 July 2026</span>
               </div>
               <div class="flex items-center">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-3 text-hbnGreen" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
-                <span class="font-medium">9:30 AM - 4:00 PM</span>
+                <span class="font-medium">10:00 AM – 4:00 PM</span>
               </div>
               <div class="flex items-center">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-3 text-hbnGreen" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                 </svg>
-                <span class="font-medium">MALL, School of Mathematics, University of Leeds</span>
+                <span class="font-medium">University of Leeds</span>
               </div>
             </div>
-            
+
             <div class="mb-6 bg-gray-50 p-5 rounded-lg">
-              <h4 class="font-semibold text-gray-800 mb-3">Workshop Highlights:</h4>
+              <h4 class="font-semibold text-gray-800 mb-3">Event Highlights:</h4>
               <ul class="space-y-2">
                 <li class="flex items-start">
                   <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-hbnGreen flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                   </svg>
-                  <span class="text-sm text-gray-700">Invited speakers: Dr Thomas Woolley (Cardiff) & Dr Daniel Miller (Dstl)</span>
+                  <span class="text-sm text-gray-700">Keynote addresses from leading researchers</span>
                 </li>
                 <li class="flex items-start">
                   <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-hbnGreen flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                   </svg>
-                  <span class="text-sm text-gray-700">QMRA modelling, experimental frameworks, architectural design</span>
+                  <span class="text-sm text-gray-700">8 funded project presentations (4 Pump-Priming + 4 ECR)</span>
                 </li>
                 <li class="flex items-start">
                   <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-hbnGreen flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                   </svg>
-                  <span class="text-sm text-gray-700">Poster session, contributed talks, and open discussion</span>
+                  <span class="text-sm text-gray-700">Interactive panel discussion on future research priorities</span>
                 </li>
                 <li class="flex items-start">
                   <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-hbnGreen flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                   </svg>
-                  <span class="text-sm text-gray-700">Bursaries up to £100 available for ECRs</span>
+                  <span class="text-sm text-gray-700">Networking and cross-disciplinary collaboration</span>
                 </li>
               </ul>
             </div>
 
             <div class="flex flex-wrap gap-2 mb-6">
-              <span class="text-xs bg-hbnGreen/10 text-hbnGreen px-3 py-1 rounded-full font-medium">Free Registration</span>
+              <span class="text-xs bg-hbnGreen/10 text-hbnGreen px-3 py-1 rounded-full font-medium">Free for Members</span>
               <span class="text-xs bg-hbnYellow/20 text-yellow-800 px-3 py-1 rounded-full font-medium">Lunch Provided</span>
-              <span class="text-xs bg-hbnBlue/10 text-hbnBlue px-3 py-1 rounded-full font-medium">Call for Abstracts Open</span>
+              <span class="text-xs bg-hbnBlue/10 text-hbnBlue px-3 py-1 rounded-full font-medium">Open to Affiliates</span>
             </div>
-            
+
             <div class="flex flex-wrap gap-4">
-              <a href="events/workshops/events_qmra_workshop.html" class="px-8 py-3 bg-hbnGreen text-white rounded-full hover:bg-green-700 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
+              <a href="events/hbn-showcase-2026.html" class="px-8 py-3 bg-hbnGreen text-white rounded-full hover:bg-green-700 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
                 View Details & Register
-              </a>
-              <a href="https://sites.google.com/view/infection-workshop-leeds/home" target="_blank" class="px-6 py-3 border-2 border-hbnGreen text-hbnGreen rounded-full hover:bg-hbnGreen/5 transition-colors">
-                Event Website →
               </a>
             </div>
           </div>
@@ -291,25 +283,66 @@
       </p>
       
       <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-        
-        <!-- Indoor Microbiome Seminar - Placeholder -->
-        <article class="event-card" data-category="seminar" data-status="upcoming">
+
+        <!-- Whose Power? Family Event -->
+        <article id="whosepower-family" class="event-card" data-category="workshop" data-status="upcoming">
           <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow border border-gray-100">
-            <div class="relative h-48 bg-gradient-to-br frojkm-hbnPurple/20 to-hbnBlue/20 flex items-center justify-center">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-20 w-20 text-hbnPurple/30" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+            <div class="relative h-48 bg-gradient-to-br from-hbnPurple/20 to-hbnYellow/20 flex items-center justify-center">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-20 w-20 text-hbnPurple/40" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
               </svg>
-              <div class="absolute top-4 right-4 bg-hbnPurple text-white px-3 py-1 rounded-full text-xs font-semibold">
+              <div class="absolute top-4 left-4 bg-hbnPurple text-white px-3 py-1 rounded-full text-xs font-semibold">
+                Family Event
+              </div>
+              <div class="absolute top-4 right-4 bg-hbnGreen text-white px-3 py-1 rounded-full text-xs font-semibold">
                 Coming Soon
               </div>
             </div>
             <div class="p-6">
-              <p class="text-sm text-gray-500 mb-2">May 2026 • Date TBC</p>
-              <h3 class="font-bold text-lg mb-2 text-gray-800">The Indoor Microbiome and the Healthy Building: Are They Compatible?</h3>
+              <p class="text-sm text-gray-500 mb-2">April 15, 2026 • 10:00 AM - 12:00 PM</p>
+              <h3 class="font-bold text-lg mb-2 text-gray-800">Whose Power? Exploring Energy in the Home</h3>
               <p class="text-gray-600 mb-4 text-sm line-clamp-3">
-                Exploring the complex relationship between indoor microbial communities and building health. How do our buildings shape microbial ecosystems, and what does this mean for occupant wellbeing?
+                Have you ever thought about how your cooker, washing machine or vacuum cleaner can help us explore the history and future of energy? Join us for a family-focused workshop at the Discovery Centre.
               </p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span class="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded">Leeds Discovery Centre</span>
+                <span class="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded">All Ages</span>
+              </div>
               <span class="text-hbnPurple font-medium text-sm flex items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                Booking Details Coming Soon
+              </span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Whose Power? Academic Workshop -->
+        <article id="whosepower-academic" class="event-card" data-category="workshop" data-status="upcoming">
+          <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow border border-gray-100">
+            <div class="relative h-48 bg-gradient-to-br from-hbnBlue/20 to-hbnPurple/20 flex items-center justify-center">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-20 w-20 text-hbnBlue/40" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+              </svg>
+              <div class="absolute top-4 left-4 bg-hbnBlue text-white px-3 py-1 rounded-full text-xs font-semibold">
+                Academic Workshop
+              </div>
+              <div class="absolute top-4 right-4 bg-hbnGreen text-white px-3 py-1 rounded-full text-xs font-semibold">
+                Coming Soon
+              </div>
+            </div>
+            <div class="p-6">
+              <p class="text-sm text-gray-500 mb-2">April 15, 2026 • 1:00 PM - 3:30 PM</p>
+              <h3 class="font-bold text-lg mb-2 text-gray-800">Whose Power? Participatory Approaches to Domestic Energy Histories</h3>
+              <p class="text-gray-600 mb-4 text-sm line-clamp-3">
+                How do we look back to think forward in a just way? Explore participatory research processes informed by museum objects to support fairer energy transitions.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span class="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded">Leeds Discovery Centre</span>
+                <span class="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded">Participatory Research</span>
+              </div>
+              <span class="text-hbnBlue font-medium text-sm flex items-center">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
@@ -323,7 +356,7 @@
         <article class="event-card" data-category="workshop" data-status="upcoming">
           <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow border border-gray-100">
             <div class="relative h-48">
-              <img src="assets/images/events/workshops/infection/infection_workshop.jpg" 
+              <img src="assets/images/events/workshops/qmra/flowers.png" 
                    alt="Infection Transmission Workshop" 
                    class="w-full h-full object-cover"
                    onerror="this.src='https://placehold.co/600x400/4e9317/ffffff?text=Workshop'">
@@ -335,15 +368,15 @@
               </div>
             </div>
             <div class="p-6">
-              <p class="text-sm text-gray-500 mb-2">April 22, 2026 • School of Mathematics</p>
+              <p class="text-sm text-gray-500 mb-2">April 22, 2026 • 9:30 AM - 4:00 PM</p>
               <h3 class="font-bold text-lg mb-2 text-gray-800">Infection Transmission in Indoor Settings</h3>
               <p class="text-gray-600 mb-4 text-sm line-clamp-3">
-                A multidisciplinary workshop exploring indoor infection risk, QMRA modelling, and public health strategies. Free registration, ECRs welcome. Bursaries available.
+                A multidisciplinary workshop exploring indoor infection risk, QMRA modelling, and public health strategies. Invited speakers: Dr Thomas Woolley (Cardiff) & Dr Daniel Miller (Dstl).
               </p>
               <div class="flex flex-wrap gap-2 mb-4">
                 <span class="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded">Free Entry</span>
                 <span class="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded">Lunch Provided</span>
-                <span class="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded">Poster Session</span>
+                <span class="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded">ECR Bursaries</span>
               </div>
               <a href="events/workshops/events_qmra_workshop.html" class="text-hbnGreen hover:text-hbnGreenDark font-medium text-sm flex items-center group">
                 View Details & Register
@@ -353,27 +386,95 @@
           </div>
         </article>
 
-        <!-- ECR Workshop Series Teaser -->
+        <!-- Healthy Buildings Healthy Microbiome Workshop -->
         <article class="event-card" data-category="workshop" data-status="upcoming">
-          <div class="bg-gradient-to-br from-hbnBlue/5 to-hbnPurple/5 border border-gray-100 rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
-            <div class="p-8 text-center h-full flex flex-col justify-center min-h-[350px]">
-              <div class="inline-block p-4 rounded-full bg-white shadow-sm mb-4 mx-auto">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-hbnPurple" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
-                </svg>
+          <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow border border-gray-100">
+            <div class="relative h-48 bg-gradient-to-br from-hbnPurple/20 to-hbnBlue/20 flex items-center justify-center">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-20 w-20 text-hbnPurple/30" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+              </svg>
+              <div class="absolute top-4 right-4 bg-hbnPurple text-white px-3 py-1 rounded-full text-xs font-semibold">
+                Coming Soon
               </div>
-              <h3 class="text-xl font-bold mb-3 text-gray-800">ECR-led Workshop Series</h3>
-              <p class="text-gray-600 mb-6 text-sm">
-                A series of workshops designed and led by Early Career Researchers to tackle emerging challenges in healthy buildings research.
+            </div>
+            <div class="p-6">
+              <p class="text-sm text-gray-500 mb-2">May/June 2026 • Date TBC</p>
+              <h3 class="font-bold text-lg mb-2 text-gray-800">Healthy Buildings, Healthy Microbiome</h3>
+              <p class="text-gray-600 mb-4 text-sm line-clamp-3">
+                Exploring the complex relationship between indoor microbial communities and building health. How do our buildings shape microbial ecosystems, and what does this mean for occupant wellbeing?
               </p>
-              <div class="flex justify-center">
-                <span class="px-4 py-2 bg-gray-100 text-gray-600 rounded-full text-sm font-semibold border border-gray-200">
-                  Throughout 2026
-                </span>
-              </div>
+              <span class="text-hbnPurple font-medium text-sm flex items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                Details Coming Soon
+              </span>
             </div>
           </div>
         </article>
+
+        <!-- Sonic Belonging Workshop -->
+        <article class="event-card" data-category="workshop" data-status="upcoming">
+          <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow border border-gray-100">
+            <div class="relative h-48 bg-gradient-to-br from-hbnBlue/20 to-hbnYellow/20 flex items-center justify-center">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-20 w-20 text-hbnBlue/30" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3" />
+              </svg>
+              <div class="absolute top-4 right-4 bg-hbnBlue text-white px-3 py-1 rounded-full text-xs font-semibold">
+                Coming Soon
+              </div>
+            </div>
+            <div class="p-6">
+              <p class="text-sm text-gray-500 mb-2">May/June 2026 • Date TBC</p>
+              <h3 class="font-bold text-lg mb-2 text-gray-800">Sonic Belonging: Co-Designing Community Music Spaces</h3>
+              <p class="text-gray-600 mb-4 text-sm line-clamp-3">
+                Exploring how shared spaces can support culturally inclusive music activities that promote psychosocial well-being and physical engagement. Features a live traditional Chinese music performance.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span class="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded">Participatory</span>
+                <span class="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded">Community</span>
+              </div>
+              <span class="text-hbnBlue font-medium text-sm flex items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                Details Coming Soon
+              </span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Child-Friendly Environments Workshop -->
+        <article class="event-card" data-category="workshop" data-status="upcoming">
+          <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow border border-gray-100">
+            <div class="relative h-48 bg-gradient-to-br from-hbnGreen/20 to-hbnYellow/20 flex items-center justify-center">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-20 w-20 text-hbnGreen/30" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+              </svg>
+              <div class="absolute top-4 right-4 bg-hbnGreen text-white px-3 py-1 rounded-full text-xs font-semibold">
+                Coming Soon
+              </div>
+            </div>
+            <div class="p-6">
+              <p class="text-sm text-gray-500 mb-2">May/June 2026 • Date TBC</p>
+              <h3 class="font-bold text-lg mb-2 text-gray-800">Co-producing Child-Friendly Futures in the Built Environment</h3>
+              <p class="text-gray-600 mb-4 text-sm line-clamp-3">
+                Exploring how child-friendly environments including greenspaces and buildings can meaningfully support children's health, resilience, and everyday experiences.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span class="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded">Seminar & Workshop</span>
+                <span class="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded">Youth Voice</span>
+              </div>
+              <span class="text-hbnGreen font-medium text-sm flex items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                Details Coming Soon
+              </span>
+            </div>
+          </div>
+        </article>
+
       </div>
     </section>
 
@@ -388,24 +489,49 @@
         
         <div class="space-y-6">
 
-          <!-- March Event - Indoor Microbiome (Placeholder) -->
+          <!-- April 15 - Whose Power? Family Event -->
           <div class="flex flex-col md:flex-row border-l-4 border-hbnPurple pl-4 py-2 hover:bg-gray-50 transition-colors rounded-r-lg">
             <div class="md:w-1/4 mb-2 md:mb-0">
-              <div class="text-hbnPurple font-bold text-lg">March 2026</div>
-              <div class="text-gray-600 font-medium">Date TBC</div>
+              <div class="text-hbnPurple font-bold text-lg">Apr 15, 2026</div>
+              <div class="text-gray-600 font-medium">10:00 AM - 12:00 PM</div>
             </div>
             <div class="md:w-2/4 mb-2 md:mb-0">
-              <div class="font-bold text-gray-800 text-lg">The Indoor Microbiome and the Healthy Building</div>
-              <div class="text-gray-600">Are they compatible? (Seminar)</div>
+              <div class="font-bold text-gray-800 text-lg">Whose Power? Exploring Energy in the Home</div>
+              <div class="text-gray-600">Family Workshop • Leeds Discovery Centre</div>
+              <div class="flex flex-wrap gap-1 mt-1">
+                <span class="text-xs bg-hbnPurple/20 text-purple-800 px-2 py-0.5 rounded">Family Event</span>
+                <span class="text-xs bg-hbnYellow/20 text-yellow-800 px-2 py-0.5 rounded">Free</span>
+              </div>
             </div>
             <div class="md:w-1/4 md:text-right flex items-center justify-end">
               <span class="inline-block px-5 py-2 bg-hbnPurple/10 text-hbnPurple rounded-full text-sm font-medium">
-                Coming Soon
+                Booking Soon
+              </span>
+            </div>
+          </div>
+
+          <!-- April 15 - Whose Power? Academic Workshop -->
+          <div class="flex flex-col md:flex-row border-l-4 border-hbnBlue pl-4 py-2 hover:bg-gray-50 transition-colors rounded-r-lg">
+            <div class="md:w-1/4 mb-2 md:mb-0">
+              <div class="text-hbnBlue font-bold text-lg">Apr 15, 2026</div>
+              <div class="text-gray-600 font-medium">1:00 PM - 3:30 PM</div>
+            </div>
+            <div class="md:w-2/4 mb-2 md:mb-0">
+              <div class="font-bold text-gray-800 text-lg">Whose Power? Participatory Approaches</div>
+              <div class="text-gray-600">Academic Workshop • Leeds Discovery Centre</div>
+              <div class="flex flex-wrap gap-1 mt-1">
+                <span class="text-xs bg-hbnBlue/20 text-blue-800 px-2 py-0.5 rounded">Academic</span>
+                <span class="text-xs bg-hbnGreen/20 text-green-800 px-2 py-0.5 rounded">Participatory Research</span>
+              </div>
+            </div>
+            <div class="md:w-1/4 md:text-right flex items-center justify-end">
+              <span class="inline-block px-5 py-2 bg-hbnBlue/10 text-hbnBlue rounded-full text-sm font-medium">
+                Details Soon
               </span>
             </div>
           </div>
           
-          <!-- April Event - Infection Workshop -->
+          <!-- April 22 - Infection Workshop -->
           <div class="flex flex-col md:flex-row border-l-4 border-hbnGreen pl-4 py-2 hover:bg-gray-50 transition-colors rounded-r-lg bg-hbnGreen/5">
             <div class="md:w-1/4 mb-2 md:mb-0">
               <div class="text-hbnGreen font-bold text-lg">Apr 22, 2026</div>
@@ -427,19 +553,74 @@
             </div>
           </div>
 
-          <!-- More events TBC -->
-          <div class="flex flex-col md:flex-row border-l-4 border-gray-300 pl-4 py-2 hover:bg-gray-50 transition-colors rounded-r-lg opacity-60">
+          <!-- May/June - Microbiome Workshop -->
+          <div class="flex flex-col md:flex-row border-l-4 border-hbnPurple pl-4 py-2 hover:bg-gray-50 transition-colors rounded-r-lg">
             <div class="md:w-1/4 mb-2 md:mb-0">
-              <div class="text-gray-500 font-bold text-lg">2026</div>
-              <div class="text-gray-500 font-medium">Throughout the year</div>
+              <div class="text-hbnPurple font-bold text-lg">May/June 2026</div>
+              <div class="text-gray-600 font-medium">Date TBC</div>
             </div>
             <div class="md:w-2/4 mb-2 md:mb-0">
-              <div class="font-bold text-gray-600 text-lg">More Events Coming Soon</div>
-              <div class="text-gray-500">Stay tuned for additional seminars and workshops</div>
+              <div class="font-bold text-gray-800 text-lg">Healthy Buildings, Healthy Microbiome</div>
+              <div class="text-gray-600">Workshop • Venue TBC</div>
             </div>
             <div class="md:w-1/4 md:text-right flex items-center justify-end">
-              <a href="membership.html" class="inline-block px-5 py-2 bg-gray-100 text-gray-600 rounded-full hover:bg-gray-200 transition-colors text-sm font-medium">
-                Join Mailing List
+              <span class="inline-block px-5 py-2 bg-hbnPurple/10 text-hbnPurple rounded-full text-sm font-medium">
+                Coming Soon
+              </span>
+            </div>
+          </div>
+
+          <!-- May/June - Sonic Belonging -->
+          <div class="flex flex-col md:flex-row border-l-4 border-hbnBlue pl-4 py-2 hover:bg-gray-50 transition-colors rounded-r-lg">
+            <div class="md:w-1/4 mb-2 md:mb-0">
+              <div class="text-hbnBlue font-bold text-lg">May/June 2026</div>
+              <div class="text-gray-600 font-medium">Date TBC</div>
+            </div>
+            <div class="md:w-2/4 mb-2 md:mb-0">
+              <div class="font-bold text-gray-800 text-lg">Sonic Belonging: Co-Designing Community Music Spaces</div>
+              <div class="text-gray-600">Participatory Workshop • Venue TBC</div>
+            </div>
+            <div class="md:w-1/4 md:text-right flex items-center justify-end">
+              <span class="inline-block px-5 py-2 bg-hbnBlue/10 text-hbnBlue rounded-full text-sm font-medium">
+                Coming Soon
+              </span>
+            </div>
+          </div>
+
+          <!-- May/June - Child-Friendly Environments -->
+          <div class="flex flex-col md:flex-row border-l-4 border-hbnGreen pl-4 py-2 hover:bg-gray-50 transition-colors rounded-r-lg">
+            <div class="md:w-1/4 mb-2 md:mb-0">
+              <div class="text-hbnGreen font-bold text-lg">May/June 2026</div>
+              <div class="text-gray-600 font-medium">Date TBC</div>
+            </div>
+            <div class="md:w-2/4 mb-2 md:mb-0">
+              <div class="font-bold text-gray-800 text-lg">Co-producing Child-Friendly Futures</div>
+              <div class="text-gray-600">Seminar & Workshop • University of Leeds</div>
+            </div>
+            <div class="md:w-1/4 md:text-right flex items-center justify-end">
+              <span class="inline-block px-5 py-2 bg-hbnGreen/10 text-hbnGreen rounded-full text-sm font-medium">
+                Coming Soon
+              </span>
+            </div>
+          </div>
+
+          <!-- July 1 - HBN Showcase -->
+          <div class="flex flex-col md:flex-row border-l-4 border-hbnGreen pl-4 py-2 hover:bg-gray-50 transition-colors rounded-r-lg bg-hbnGreen/5">
+            <div class="md:w-1/4 mb-2 md:mb-0">
+              <div class="text-hbnGreen font-bold text-lg">Jul 1, 2026</div>
+              <div class="text-gray-600 font-medium">10:00 AM - 4:00 PM</div>
+            </div>
+            <div class="md:w-2/4 mb-2 md:mb-0">
+              <div class="font-bold text-gray-800 text-lg">HBN Showcase Event 2026</div>
+              <div class="text-gray-600">Keynotes, funded project presentations & panel discussion • University of Leeds</div>
+              <div class="flex flex-wrap gap-1 mt-1">
+                <span class="text-xs bg-hbnGreen/20 text-green-800 px-2 py-0.5 rounded">Free for Members</span>
+                <span class="text-xs bg-hbnBlue/20 text-blue-800 px-2 py-0.5 rounded">Registration Open</span>
+              </div>
+            </div>
+            <div class="md:w-1/4 md:text-right flex items-center justify-end">
+              <a href="events/hbn-showcase-2026.html" class="inline-block px-5 py-2 bg-hbnGreen text-white rounded-full hover:bg-green-700 transition-colors text-sm font-medium shadow-sm">
+                View Details
               </a>
             </div>
           </div>
@@ -456,7 +637,7 @@
       
       <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
 
-        <!-- Jacobo Elíes Gómez - NOW PAST EVENT -->
+        <!-- Jacobo Elíes Gómez -->
         <article class="event-card" data-category="seminar" data-status="past">
           <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow border border-gray-100">
             <div class="relative h-48">
@@ -479,7 +660,7 @@
           </div>
         </article>
 
-        <!-- Sarah Price - Past Event -->
+        <!-- Sarah Price -->
         <article class="event-card" data-category="seminar" data-status="past">
           <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow border border-gray-100">
             <div class="relative h-48">
