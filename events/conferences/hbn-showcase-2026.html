@@ -75,70 +75,91 @@
     </svg>
   </button>
 
-  <!-- Hero Banner -->
-  <section class="relative pt-20">
-    <div class="bg-gradient-to-r from-hbnGreen to-hbnBlue text-white py-16 md:py-24">
-      <div class="container mx-auto px-6 max-w-6xl">
-        <div class="flex flex-col md:flex-row items-center">
-          <div class="md:w-2/3 mb-10 md:mb-0 md:pr-12">
-            <div class="inline-block px-4 py-1 bg-white/20 rounded-full text-sm font-semibold mb-4">
-              Showcase Event
-            </div>
-            <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-              HBN Showcase Event 2026
-            </h1>
-            <p class="text-xl md:text-2xl opacity-90 mb-4 max-w-2xl">
-              Showcasing Interdisciplinary Research for Healthier Buildings
-            </p>
-            <p class="text-lg opacity-80 mb-8">
-              Celebrating the outputs of our funded research programme and shaping the future direction of the network.
-            </p>
-            <div class="flex flex-wrap gap-4">
-              <a href="#registration" class="px-8 py-3 bg-white text-hbnGreen rounded-full hover:bg-gray-100 transition-colors shadow-md font-semibold">
-                Register Now
-              </a>
-              <a href="#programme" class="px-6 py-3 border-2 border-white text-white rounded-full hover:bg-white/10 transition-colors">
-                View Programme
-              </a>
-            </div>
+  <!-- Hero Banner — Option A: Background Image -->
+<section class="relative pt-20">
+  <div class="relative text-white py-16 md:py-24 overflow-hidden">
+    <!-- Background image -->
+    <div class="absolute inset-0">
+      <img src="../../assets/images/events/showcase/building.jpg"
+           onerror="this.style.display='none'"
+           alt=""
+           class="w-full h-full object-cover">
+    </div>
+    <!-- Gradient overlay (keeps text readable, falls back gracefully if no image) -->
+    <div class="absolute inset-0 bg-gradient-to-r from-hbnGreen/90 via-hbnGreen/80 to-hbnBlue/85"></div>
+    <!-- Subtle pattern overlay for texture -->
+    <div class="absolute inset-0 opacity-5" style="background-image: url('data:image/svg+xml,%3Csvg width=&quot;60&quot; height=&quot;60&quot; viewBox=&quot;0 0 60 60&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Cg fill=&quot;none&quot; fill-rule=&quot;evenodd&quot;%3E%3Cg fill=&quot;%23ffffff&quot; fill-opacity=&quot;1&quot;%3E%3Cpath d=&quot;M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z&quot;/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');"></div>
+
+    <div class="relative container mx-auto px-6 max-w-6xl">
+      <div class="flex flex-col md:flex-row items-center">
+        <div class="md:w-2/3 mb-10 md:mb-0 md:pr-12">
+          <div class="inline-block px-4 py-1 bg-white/20 backdrop-blur-sm rounded-full text-sm font-semibold mb-4">
+            🎉 Showcase Event
           </div>
-          <div class="md:w-1/3">
-            <div class="relative">
-              <div class="absolute inset-0 bg-white opacity-10 rounded-lg transform rotate-3"></div>
-              <div class="relative bg-white p-6 rounded-lg shadow-lg">
-                <div class="text-hbnGreen font-bold text-xl mb-3">Event Details</div>
-                <div class="flex items-center text-gray-700 mb-2">
-                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-3 text-hbnGreen flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                  </svg>
-                  <span class="font-medium">Thursday, 2 July 2026</span>
-                </div>
-                <div class="flex items-center text-gray-700 mb-2">
-                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-3 text-hbnGreen flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
-                  <span class="font-medium">10:00 AM – 4:00 PM</span>
-                </div>
-                <div class="flex items-center text-gray-700 mb-3">
-                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-3 text-hbnGreen flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                  </svg>
-                  <span class="font-medium">University House, University of Leeds</span>
-                </div>
-                <div class="flex gap-2 mb-4">
-                  <span class="text-xs bg-hbnGreen/10 text-hbnGreen px-2 py-1 rounded font-medium">Free for All</span>
-                </div>
-                <a href="https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=qO3qvR3IzkWGPlIypTW3y3WKWaOxj3RLk0lAv5VpDqxUQldLWkJOOFhZTUpIM0hWWllYWlFZQTAwVi4u" class="block text-center px-6 py-2 bg-hbnGreen text-white rounded-full hover:bg-green-700 transition-colors text-sm font-medium">
-                  Register Now
-                </a>
+          <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 drop-shadow-lg">
+            HBN Showcase Event 2026
+          </h1>
+          <p class="text-xl md:text-2xl opacity-90 mb-4 max-w-2xl drop-shadow">
+            Showcasing Interdisciplinary Research for Healthier Buildings
+          </p>
+          <p class="text-lg opacity-80 mb-8 drop-shadow">
+            Celebrating the outputs of our funded research programme and shaping the future direction of the network.
+          </p>
+          <div class="flex flex-wrap gap-4">
+            <a href="https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=qO3qvR3IzkWGPlIypTW3y3WKWaOxj3RLk0lAv5VpDqxUQldLWkJOOFhZTUpIM0hWWllYWlFZQTAwVi4u" 
+               target="_blank"
+               class="px-8 py-3 bg-white text-hbnGreen rounded-full hover:bg-gray-100 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 font-semibold">
+              Register Now
+            </a>
+            <a href="#programme" class="px-6 py-3 border-2 border-white text-white rounded-full hover:bg-white/10 transition-colors backdrop-blur-sm">
+              View Programme
+            </a>
+          </div>
+        </div>
+        <div class="md:w-1/3">
+          <div class="relative">
+            <div class="absolute -inset-1 bg-white opacity-10 rounded-xl transform rotate-2 blur-sm"></div>
+            <div class="relative bg-white/95 backdrop-blur-md p-6 rounded-xl shadow-2xl">
+              <div class="text-hbnGreen font-bold text-xl mb-3 flex items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                Event Details
               </div>
+              <div class="flex items-center text-gray-700 mb-2">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-3 text-hbnGreen flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                </svg>
+                <span class="font-medium">Thursday, 2 July 2026</span>
+              </div>
+              <div class="flex items-center text-gray-700 mb-2">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-3 text-hbnGreen flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <span class="font-medium">10:00 AM – 4:00 PM</span>
+              </div>
+              <div class="flex items-center text-gray-700 mb-3">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-3 text-hbnGreen flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                </svg>
+                <span class="font-medium">University House, University of Leeds</span>
+              </div>
+              <div class="flex gap-2 mb-4">
+                <span class="text-xs bg-hbnGreen/10 text-hbnGreen px-2 py-1 rounded font-medium">Free for All</span>
+              </div>
+              <a href="https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=qO3qvR3IzkWGPlIypTW3y3WKWaOxj3RLk0lAv5VpDqxUQldLWkJOOFhZTUpIM0hWWllYWlFZQTAwVi4u" 
+                 target="_blank"
+                 class="block text-center px-6 py-2.5 bg-hbnGreen text-white rounded-full hover:bg-green-700 transition-all text-sm font-medium shadow-md hover:shadow-lg">
+                Register Now →
+              </a>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
   <!-- Main Content -->
   <main class="container mx-auto px-6 py-16 max-w-6xl">
@@ -536,7 +557,7 @@
               </svg>
               PI: Dr Suparna Mitra
             </p>
-            <p class="text-xs text-gray-400 mb-3">CoI: Dr Paula Sherlock (née Sherlock)</p>
+            <p class="text-xs text-gray-400 mb-3">CoI: Dr Paula Avello</p>
             <p class="text-sm text-gray-600 leading-relaxed">
               An interdisciplinary mini-symposium exploring the complex relationship between indoor microbial communities and building health. Connecting perspectives from environmental microbiology, building science, and public health to examine how our buildings shape microbial ecosystems and what this means for occupant wellbeing.
             </p>
@@ -588,7 +609,7 @@
             </div>
             <div>
               <div class="font-semibold text-gray-800">Welcome & Introduction</div>
-              <div class="text-gray-500 text-sm">HBN Director / Network Lead</div>
+              <div class="text-gray-500 text-sm">HBN Network Leads</div>
             </div>
           </div>
 
@@ -603,90 +624,76 @@
                 <div class="font-semibold text-gray-800">Keynote Address 1</div>
                 <span class="text-xs bg-hbnGreen/10 text-hbnGreen px-2 py-0.5 rounded-full font-medium">Keynote</span>
               </div>
-              <div class="text-gray-500 text-sm">[Speaker TBC]</div>
+              <div class="text-gray-500 text-sm">Dr. Marcella Ucci</div>
+            </div>
+          </div>
+
+          <!-- Coffee 2 -->
+          <div class="flex items-start p-5 hover:bg-gray-50 transition-colors">
+            <div class="w-32 flex-shrink-0">
+              <span class="text-hbnGreen font-bold">11:00</span>
+              <span class="text-gray-400 text-sm"> – 11:20</span>
+            </div>
+            <div>
+              <div class="font-semibold text-gray-800">Coffee Break</div>
             </div>
           </div>
 
           <!-- Pump-Priming Presentations -->
           <div class="flex items-start p-5 hover:bg-gray-50 transition-colors">
             <div class="w-32 flex-shrink-0">
-              <span class="text-hbnGreen font-bold">11:00</span>
-              <span class="text-gray-400 text-sm"> – 12:00</span>
+              <span class="text-hbnGreen font-bold">11:20</span>
+              <span class="text-gray-400 text-sm"> – 12:20</span>
             </div>
             <div>
               <div class="flex items-center gap-2">
                 <div class="font-semibold text-gray-800">Pump-Priming Project Presentations</div>
                 <span class="text-xs bg-hbnBlue/10 text-hbnBlue px-2 py-0.5 rounded-full font-medium">4 talks</span>
               </div>
-              <div class="text-gray-500 text-sm">12 min presentation + 3 min Q&A each</div>
+              <div class="text-gray-500 text-sm">10 min presentations + 3 min Q&A each</div>
             </div>
           </div>
 
           <!-- Lunch -->
           <div class="flex items-start p-5 bg-hbnYellow/5 hover:bg-hbnYellow/10 transition-colors">
             <div class="w-32 flex-shrink-0">
-              <span class="text-hbnGreen font-bold">12:00</span>
-              <span class="text-gray-400 text-sm"> – 13:00</span>
+              <span class="text-hbnGreen font-bold">12:20</span>
+              <span class="text-gray-400 text-sm"> – 13:30</span>
             </div>
             <div>
               <div class="font-semibold text-gray-800">Lunch & Networking</div>
-              <div class="text-gray-500 text-sm">Buffet lunch provided • Poster viewing</div>
+              <div class="text-gray-500 text-sm">Buffet lunch provided • Networking and Chat</div>
             </div>
           </div>
 
-          <!-- Keynote 2 -->
-          <div class="flex items-start p-5 bg-hbnPurple/5 hover:bg-hbnPurple/10 transition-colors">
-            <div class="w-32 flex-shrink-0">
-              <span class="text-hbnGreen font-bold">13:00</span>
-              <span class="text-gray-400 text-sm"> – 13:45</span>
-            </div>
-            <div>
-              <div class="flex items-center gap-2">
-                <div class="font-semibold text-gray-800">Keynote Address 2</div>
-                <span class="text-xs bg-hbnPurple/10 text-hbnPurple px-2 py-0.5 rounded-full font-medium">Keynote</span>
-              </div>
-              <div class="text-gray-500 text-sm">[Speaker TBC]</div>
-            </div>
-          </div>
 
           <!-- ECR Presentations -->
           <div class="flex items-start p-5 hover:bg-gray-50 transition-colors">
             <div class="w-32 flex-shrink-0">
-              <span class="text-hbnGreen font-bold">13:45</span>
-              <span class="text-gray-400 text-sm"> – 14:45</span>
+              <span class="text-hbnGreen font-bold">13:30</span>
+              <span class="text-gray-400 text-sm"> – 14:00</span>
             </div>
             <div>
               <div class="flex items-center gap-2">
                 <div class="font-semibold text-gray-800">ECR Project Presentations</div>
                 <span class="text-xs bg-hbnGreen/10 text-hbnGreen px-2 py-0.5 rounded-full font-medium">4 talks</span>
               </div>
-              <div class="text-gray-500 text-sm">12 min presentation + 3 min Q&A each</div>
-            </div>
-          </div>
-
-          <!-- Coffee -->
-          <div class="flex items-start p-5 bg-hbnYellow/5 hover:bg-hbnYellow/10 transition-colors">
-            <div class="w-32 flex-shrink-0">
-              <span class="text-hbnGreen font-bold">14:45</span>
-              <span class="text-gray-400 text-sm"> – 15:00</span>
-            </div>
-            <div>
-              <div class="font-semibold text-gray-800">Afternoon Coffee Break</div>
+              <div class="text-gray-500 text-sm">5 min presentation + 2 min Q&A each</div>
             </div>
           </div>
 
           <!-- Panel Discussion -->
           <div class="flex items-start p-5 hover:bg-gray-50 transition-colors">
             <div class="w-32 flex-shrink-0">
-              <span class="text-hbnGreen font-bold">15:00</span>
+              <span class="text-hbnGreen font-bold">14:15</span>
               <span class="text-gray-400 text-sm"> – 15:45</span>
             </div>
             <div>
               <div class="flex items-center gap-2">
-                <div class="font-semibold text-gray-800">Panel Discussion</div>
+                <div class="font-semibold text-gray-800">Networks and Hub Pitches + Panel Discussion</div>
                 <span class="text-xs bg-hbnYellow/20 text-yellow-800 px-2 py-0.5 rounded-full font-medium">Interactive</span>
               </div>
-              <div class="text-gray-500 text-sm italic">"[Topic TBC — e.g. Future Priorities for Healthy Buildings Research]"</div>
+              <div class="text-gray-500 text-sm italic">"Future Priorities for Healthy Buildings"</div>
             </div>
           </div>
 
@@ -704,7 +711,7 @@
         </div>
       </div>
 
-      <p class="text-center text-gray-400 text-sm mt-6 italic">Programme subject to change. Last updated: [date].</p>
+      <p class="text-center text-gray-400 text-sm mt-6 italic">Programme subject to change. Last updated: 26th of March 2026.</p>
     </section>
 
     <!-- Venue Section -->
@@ -715,7 +722,7 @@
       <div class="bg-white rounded-xl shadow-lg overflow-hidden max-w-5xl mx-auto">
         <div class="md:flex">
           <div class="md:w-1/2 p-8">
-            <h3 class="text-xl font-bold text-gray-800 mb-4">[Building Name & Room — TBC]</h3>
+            <h3 class="text-xl font-bold text-gray-800 mb-4">University House, Woodhouse Suite.</h3>
             <p class="text-gray-600 mb-4">University of Leeds, Leeds LS2 9JT, UK</p>
 
             <div class="space-y-3 text-gray-600">
@@ -723,25 +730,25 @@
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-3 text-hbnGreen flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16V6a1 1 0 00-1-1H4a1 1 0 00-1 1v10l4-2 4 2z" />
                 </svg>
-                <span><strong>By train:</strong> Leeds station is ~15 minutes' walk or a short taxi/bus ride.</span>
+                <span><strong>By train:</strong> Leeds station is ~25 minutes' walk or a short taxi/bus ride.</span>
               </div>
               <div class="flex items-start">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-3 text-hbnGreen flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4" />
                 </svg>
-                <span><strong>By bus:</strong> Routes 1, 6, 28, 56, 97 serve the campus.</span>
+                <span><strong>By bus:</strong> Routes 1, 6, 28, 56, 97 serve the campus and stop at Parkinson Building.</span>
               </div>
               <div class="flex items-start">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-3 text-hbnGreen flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8" />
                 </svg>
-                <span><strong>By car:</strong> Pay & display parking is available on campus (limited).</span>
+                <span><strong>By car:</strong> Limited parking is available on campus on campus but if you let us know we can register your vehicle with a day pass.</span>
               </div>
             </div>
 
             <div class="mt-6 p-4 bg-hbnGreen/5 rounded-lg">
               <p class="text-sm text-gray-600">
-                <strong>Accessibility:</strong> The venue is step-free with accessible facilities. Please let us know of any specific requirements when registering.
+                <strong>Accessibility:</strong> The venue has accessible facilities, natural lighting and a lift. Please let us know of any specific requirements when registering.
               </p>
             </div>
           </div>
@@ -763,8 +770,8 @@
       <div class="max-w-3xl mx-auto">
         <div class="bg-white rounded-xl shadow-lg p-8 border border-gray-100">
           <p class="text-gray-600 mb-6 text-lg">
-            The event is <strong>free for HBN members and affiliates</strong>.
-            Please register by <strong>[23 June 2025]</strong> so we can finalise catering and logistics.
+            The event is <strong>free </strong>.
+            Please register by <strong>23rd of June 2026</strong> so we can finalise catering and logistics.
           </p>
 
           <div class="bg-gray-50 rounded-lg p-6 mb-6">
