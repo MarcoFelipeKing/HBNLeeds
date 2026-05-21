@@ -112,6 +112,14 @@
     /* ── Sticky register ── */
     #sticky-reg { position: fixed; bottom: 1.5rem; right: 1.5rem; z-index: 100; opacity: 0; transform: translateY(12px); transition: opacity 0.4s, transform 0.4s; pointer-events: none; }
     #sticky-reg.visible { opacity: 1; transform: translateY(0); pointer-events: auto; }
+
+    /* floating particles */
+    @keyframes float-up {
+      0%   { transform: translateY(0) scale(1); opacity: 0; }
+      20%  { opacity: 0.6; }
+      80%  { opacity: 0.3; }
+      100% { transform: translateY(-120px) scale(0.4); opacity: 0; }
+    }
   </style>
 </head>
 
@@ -128,7 +136,7 @@
 <header class="bg-white border-b border-gray-100 fixed w-full z-50">
   <div class="max-w-7xl mx-auto px-6 flex justify-between items-center h-18 py-3">
     <a href="../../../index.html" class="flex items-center gap-4">
-      <img src="../../../assets/images/hbn_landscape.png" alt="HBN Leeds"
+      <img src="../../../assets/images/hbn_landscape_new.svg" alt="HBN Leeds"
            class="h-10" onerror="this.outerHTML='<span class=\'font-display font-bold text-hbnGreen text-lg\'>HBN Leeds</span>'">
       <img src="../../../assets/images/leeds_logo_black_on_white_bk.jpg" alt="University of Leeds"
            class="h-10" onerror="this.style.display='none'">
@@ -162,11 +170,11 @@
 
 <!-- ══════════════════════════════════ HERO ══════════════════════════════════ -->
 <section class="relative pt-16 overflow-hidden bg-[#f4f9f0] min-h-screen flex flex-col">
-
+<div id="particles" class="absolute inset-0 pointer-events-none z-0">
   <!-- Ambient colour -->
   <div class="orb w-[600px] h-[600px] bg-hbnGreen top-[-100px] right-[-200px]" style="animation-duration:12s"></div>
   <div class="orb w-[400px] h-[400px] bg-hbnBlue bottom-[-50px] left-[-100px]" style="animation-duration:16s; animation-delay:-5s"></div>
-
+</div>
   <div class="relative z-10 max-w-7xl mx-auto px-6 flex-1 flex items-center py-16 md:py-24">
     <div class="grid md:grid-cols-2 gap-12 lg:gap-20 w-full items-center">
 
@@ -251,7 +259,7 @@
         </div>
 
         <!-- Speaker 2, offset lower -->
-        <div class="relative mt-8">
+        <div class="relative">
           <div class="speaker-photo-wrap">
             <!-- Replace src with actual photo path: assets/images/events/workshops/cleanair/carolina.jpg -->
             <img src="carolina.jpg"
@@ -277,6 +285,7 @@
 
     </div>
   </div>
+
 
   <!-- Wave -->
   <div class="relative z-10">
@@ -347,6 +356,14 @@
 <!-- ══════════════════════════════════ ABOUT ══════════════════════════════════ -->
 <section id="about" class="py-24 bg-white">
   <div class="max-w-5xl mx-auto px-6">
+    <div class="inline-flex items-center gap-3 bg-[#f4f9f0] border border-hbnGreen/20 rounded-xl px-5 py-3 mb-8">
+  <span class="w-2 h-2 rounded-full bg-hbnGreen flex-shrink-0"></span>
+  <p class="text-sm text-gray-600">
+    This event is part of <a href="https://www.cleanairday.org.uk" target="_blank" 
+    class="font-semibold text-hbnGreen hover:underline">Clean Air Day</a> — 
+    the UK's largest air pollution campaign, bringing communities together every June.
+  </p>
+</div>
     <div class="md:grid md:grid-cols-5 md:gap-16 items-start">
 
       <!-- Text: 3 cols -->
@@ -621,6 +638,144 @@
   </div>
 </section>
 
+<!--
+  ═══════════════════════════════════════════════════════════════
+  GALLERY SECTION — "From a Previous Workshop"
+  Drop this <section> block into the page wherever you'd like it.
+  Replace the 4 src="" paths with your actual image file paths.
+  Captions are in the <figcaption> tags.
+  Fonts (Syne, DM Sans) and Tailwind are inherited from the parent page.
+  ═══════════════════════════════════════════════════════════════
+-->
+
+<section class="py-24 bg-white">
+  <div class="max-w-5xl mx-auto px-6">
+
+    <!-- Section header -->
+    <div class="mb-12">
+      <p class="text-xs font-bold uppercase tracking-widest text-hbnGreen mb-3">In Practice</p>
+      <h2 style="font-family:Syne,sans-serif; font-weight:800; font-size:clamp(1.75rem,4vw,2.75rem); line-height:1.1; color:#111; letter-spacing:-0.025em;">
+        What a session looks like
+      </h2>
+      <p class="text-gray-500 mt-3 max-w-lg text-sm leading-relaxed">
+        From a previous workshop at a local school — hands-on, creative, and genuinely engaging.
+      </p>
+    </div>
+
+    <!-- ── Grid ──
+         Layout (desktop):
+         [ Claudia presenting — tall, left ]  [ Setup — top right        ]
+                                              [ Artwork 1 | Artwork 2 — bottom right ]
+    -->
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-5">
+
+      <!-- 1. Claudia presenting — spans 5 cols, 2 rows tall -->
+      <figure class="md:col-span-5 md:row-span-2 group relative overflow-hidden rounded-2xl bg-gray-100">
+        <div class="aspect-[3/4] md:aspect-auto md:h-full overflow-hidden">
+          <img
+            src="claudia_presenting.jpeg"
+            alt="Dr. Claudia Castro Faccetti presenting at a school workshop"
+            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+            style="min-height: 400px;"
+          >
+          <!-- placeholder shown if src is empty or broken -->
+          <div class="absolute inset-0 flex items-end" aria-hidden="true"
+               style="background:linear-gradient(to top, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.08) 55%, transparent 100%)">
+          </div>
+        </div>
+        <figcaption class="absolute bottom-0 left-0 right-0 px-5 py-4 text-white">
+          <p style="font-family:Syne,sans-serif; font-weight:700; font-size:0.9rem; line-height:1.3;">
+            Dr. Castro Faccetti presenting
+          </p>
+          <p class="text-white/65 text-xs mt-0.5">Explaining indoor air pollution sources to students</p>
+        </figcaption>
+      </figure>
+
+      <!-- 2. Setup — spans 7 cols, 1 row -->
+      <figure class="md:col-span-7 group relative overflow-hidden rounded-2xl bg-gray-100">
+        <div class="aspect-video overflow-hidden">
+          <img
+            src="setup_1.jpeg"
+            alt="Workshop setup — sensors, materials, and activity stations"
+            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+          >
+        </div>
+        <figcaption class="absolute bottom-0 left-0 right-0 px-5 py-4 text-white"
+                    style="background:linear-gradient(to top, rgba(0,0,0,0.55) 0%, transparent 100%)">
+          <p style="font-family:Syne,sans-serif; font-weight:700; font-size:0.9rem;">The setup</p>
+          <p class="text-white/65 text-xs mt-0.5">Activity stations, sensors, and creative materials</p>
+        </figcaption>
+      </figure>
+
+      <!-- 3. Artwork 1 — spans ~3-4 cols -->
+      <figure class="md:col-span-4 group relative overflow-hidden rounded-2xl bg-gray-100">
+        <div class="aspect-square overflow-hidden">
+          <img
+            src="artwork_1.jpeg"
+            alt="Student artwork from the workshop"
+            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+          >
+        </div>
+        <figcaption class="absolute bottom-0 left-0 right-0 px-4 py-3 text-white"
+                    style="background:linear-gradient(to top, rgba(0,0,0,0.55) 0%, transparent 100%)">
+          <p style="font-family:Syne,sans-serif; font-weight:700; font-size:0.85rem;">Participant artwork</p>
+          <p class="text-white/65 text-xs mt-0.5">Modelling pollutants with creative materials</p>
+        </figcaption>
+      </figure>
+
+      <!-- 4. Artwork 2 — spans ~3 cols -->
+      <figure class="md:col-span-3 group relative overflow-hidden rounded-2xl bg-gray-100">
+        <div class="aspect-square overflow-hidden">
+          <img
+            src="artwork_2.jpeg"
+            alt="Student artwork from the workshop"
+            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+          >
+        </div>
+        <figcaption class="absolute bottom-0 left-0 right-0 px-4 py-3 text-white"
+                    style="background:linear-gradient(to top, rgba(0,0,0,0.55) 0%, transparent 100%)">
+          <p style="font-family:Syne,sans-serif; font-weight:700; font-size:0.85rem;">Participant artwork</p>
+          <p class="text-white/65 text-xs mt-0.5">Visualising invisible pollutants</p>
+        </figcaption>
+      </figure>
+
+      <figure class="md:col-span-3 group relative overflow-hidden rounded-2xl bg-gray-100">
+        <div class="aspect-square overflow-hidden">
+          <img
+            src="clay.jpg"
+            alt="Student artwork from the workshop"
+            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+          >
+        </div>
+        <figcaption class="absolute bottom-0 left-0 right-0 px-4 py-3 text-white"
+                    style="background:linear-gradient(to top, rgba(0,0,0,0.55) 0%, transparent 100%)">
+          <p style="font-family:Syne,sans-serif; font-weight:700; font-size:0.85rem;">Hands-on modelling</p>
+          <p class="text-white/65 text-xs mt-0.5">Visualising invisible pollutants</p>
+        </figcaption>
+      </figure>
+
+    </div>
+
+    <!-- Placeholder overlay — remove once all 4 images are added -->
+    <style>
+      /* Shows a gentle placeholder state when img src is empty or broken */
+      figure img:not([src]),
+      figure img[src=""] {
+        opacity: 0;
+      }
+      figure img:not([src]) ~ div.placeholder,
+      figure img[src=""] ~ div.placeholder {
+        display: flex !important;
+      }
+    </style>
+
+    <!-- Footnote -->
+    <p class="text-xs text-gray-400 mt-6 text-right italic">
+      Images from a previous CELIA CIC and HBN Leeds workshop
+    </p>
+
+  </div>
+</section>
 
 <!-- ══════════════════════════════════ VENUE ══════════════════════════════════ -->
 <section class="py-24 bg-gray-50">
@@ -718,7 +873,7 @@
 <footer class="bg-gray-800 text-white py-12 md:py-16">
   <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8">
     <div>
-      <img src="../../../assets/images/hbn_landscape.png" alt="Healthy Buildings Network Leeds"
+      <img src="../../../assets/images/hbn_logo_white_portrait_new.svg" alt="Healthy Buildings Network Leeds"
            class="h-10 mb-3 filter brightness-0 invert opacity-80"
            onerror="this.style.display='none'">
       <p class="text-sm text-gray-300 leading-relaxed">
