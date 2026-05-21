@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            hbnGreen: '#4e9317',
+            hbnGreenDark: '#3d7412',
+            hbnPurple: '#8360a9',
+            hbnGray: '#808184',
+            hbnYellow: '#ffca29',
+            hbnBlue: '#3e95dd',
+            celiaOrange: '#e06b2f',
+          }
+        }
+      }
+    };
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Clear the Air: Practical Steps for Healthier Homes. A free Clean Air Day workshop co-organised by HBN Leeds and CELIA CIC, 18 June 2026, Imagine Leeds.">
+  <title>Clear the Air | Clean Air Day Workshop | HBN Leeds & CELIA CIC</title>
+  <link rel="icon" href="../../../assets/images/hbn_fav.ico" type="image/x-icon"/>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body { font-family: 'DM Sans', sans-serif; color: #1a1a1a; background: #fff; overflow-x: hidden; }
+    .font-display { font-family: 'Syne', sans-serif; }
+
+    /* ── Orbs ── */
+    .orb {
+      position: absolute; border-radius: 50%;
+      filter: blur(60px); opacity: 0.28;
+      animation: orb-drift ease-in-out infinite alternate;
+    }
+    @keyframes orb-drift {
+      from { transform: translate(0, 0) scale(1); }
+      to   { transform: translate(25px, -30px) scale(1.08); }
+    }
+
+    /* ── Hero layout ── */
+    .hero-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0; min-height: 100vh; }
+    @media (max-width: 768px) { .hero-grid { grid-template-columns: 1fr; } }
+
+    /* ── Speaker photo ── */
+    .speaker-photo-wrap {
+      aspect-ratio: 3/4;
+      overflow: hidden;
+      border-radius: 1.5rem;
+      background: #e8e8e8;
+      position: relative;
+    }
+    .speaker-photo-wrap img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .speaker-photo-placeholder {
+      width: 100%; height: 100%;
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+      background: linear-gradient(135deg, #e8efe0, #d0dfc8);
+      color: #6a7f5a; font-family: 'Syne', sans-serif;
+      font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase;
+      gap: 0.5rem;
+    }
+
+    /* ── Marquee ── */
+    .marquee-track { display: flex; width: max-content; animation: marquee 30s linear infinite; }
+    @keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
+    /* ── Dividers ── */
+    .clip-diagonal { clip-path: polygon(0 3%, 100% 0, 100% 100%, 0 100%); }
+
+    /* ── Pull quote ── */
+    .pull-quote {
+      border-left: 4px solid #4e9317;
+      padding-left: 1.5rem;
+      font-style: italic;
+      font-size: 1.1rem;
+      color: #333;
+      line-height: 1.7;
+    }
+
+    /* ── Timeline ── */
+    .tl-line { position: absolute; left: 0; top: 10px; bottom: -2rem; width: 2px; background: #e5e7eb; }
+    .tl-dot { width: 10px; height: 10px; border-radius: 50%; background: #4e9317; position: absolute; left: -4px; top: 10px; flex-shrink: 0; }
+    .tl-item { position: relative; padding-left: 2rem; }
+
+    /* ── Nav ── */
+    .nav-events { color: #4e9317; }
+
+    /* ── Register pill ── */
+    .register-pill {
+      display: inline-flex; align-items: center; gap: 0.6rem;
+      background: #4e9317; color: #fff;
+      font-family: 'Syne', sans-serif; font-weight: 700; font-size: 1rem;
+      padding: 1rem 2rem; border-radius: 999px;
+      transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+      box-shadow: 0 4px 20px rgba(78,147,23,0.35);
+    }
+    .register-pill:hover { background: #3d7412; transform: translateY(-2px); box-shadow: 0 8px 30px rgba(78,147,23,0.4); }
+
+    /* ── Orgs bar ── */
+    .org-bar { background: #fff; border-top: 1px solid #e5e7eb; border-bottom: 1px solid #e5e7eb; }
+
+    /* ── Activity row ── */
+    .activity-row { display: grid; grid-template-columns: 3rem 1fr; gap: 1.25rem; align-items: start; padding: 1.5rem 0; border-bottom: 1px solid #f0f0f0; }
+    .activity-row:last-child { border-bottom: none; }
+    .activity-num { font-family: 'Syne', sans-serif; font-size: 0.7rem; font-weight: 800; color: #4e9317; letter-spacing: 0.08em; padding-top: 0.15rem; }
+
+    /* ── Sticky register ── */
+    #sticky-reg { position: fixed; bottom: 1.5rem; right: 1.5rem; z-index: 100; opacity: 0; transform: translateY(12px); transition: opacity 0.4s, transform 0.4s; pointer-events: none; }
+    #sticky-reg.visible { opacity: 1; transform: translateY(0); pointer-events: auto; }
+  </style>
+</head>
+
+<body>
+
+<!-- ══════ STICKY CTA ══════ -->
+<div id="sticky-reg">
+  <a href="https://forms.cloud.microsoft/e/an5wZhTpi3" target="_blank" class="register-pill shadow-2xl text-sm">
+    Reserve your spot →
+  </a>
+</div>
+
+<!-- ══════════════════════════════════ HEADER ══════════════════════════════════ -->
+<header class="bg-white border-b border-gray-100 fixed w-full z-50">
+  <div class="max-w-7xl mx-auto px-6 flex justify-between items-center h-18 py-3">
+    <a href="../../../index.html" class="flex items-center gap-4">
+      <img src="../../../assets/images/hbn_landscape.png" alt="HBN Leeds"
+           class="h-10" onerror="this.outerHTML='<span class=\'font-display font-bold text-hbnGreen text-lg\'>HBN Leeds</span>'">
+      <img src="../../../assets/images/leeds_logo_black_on_white_bk.jpg" alt="University of Leeds"
+           class="h-10" onerror="this.style.display='none'">
+    </a>
+    <button id="mobile-menu-button" class="md:hidden text-gray-500 hover:text-hbnGreen p-2">
+      <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+      </svg>
+    </button>
+    <nav class="hidden md:flex gap-8 text-sm font-medium" id="main-nav">
+      <a href="../../../index.html"    class="text-gray-500 hover:text-hbnGreen transition-colors">Home</a>
+      <a href="../../../about.html"    class="text-gray-500 hover:text-hbnGreen transition-colors">About Us</a>
+      <a href="../../../blog.html"     class="text-gray-500 hover:text-hbnGreen transition-colors">Blog</a>
+      <a href="../../../events.html"   class="nav-events font-semibold">Events</a>
+      <a href="../../../projects.html" class="text-gray-500 hover:text-hbnGreen transition-colors">Projects</a>
+      <a href="../../../contact.html"  class="text-gray-500 hover:text-hbnGreen transition-colors">Contact</a>
+    </nav>
+  </div>
+  <div class="md:hidden hidden bg-white border-t border-gray-100" id="mobile-menu">
+    <div class="px-6 py-4 space-y-3 text-sm font-medium">
+      <a href="../../../index.html"    class="block text-gray-600 hover:text-hbnGreen">Home</a>
+      <a href="../../../about.html"    class="block text-gray-600 hover:text-hbnGreen">About Us</a>
+      <a href="../../../blog.html"     class="block text-gray-600 hover:text-hbnGreen">Blog</a>
+      <a href="../../../events.html"   class="block text-hbnGreen font-semibold">Events</a>
+      <a href="../../../projects.html" class="block text-gray-600 hover:text-hbnGreen">Projects</a>
+      <a href="../../../contact.html"  class="block text-gray-600 hover:text-hbnGreen">Contact</a>
+    </div>
+  </div>
+</header>
+
+
+<!-- ══════════════════════════════════ HERO ══════════════════════════════════ -->
+<section class="relative pt-16 overflow-hidden bg-[#f4f9f0] min-h-screen flex flex-col">
+
+  <!-- Ambient colour -->
+  <div class="orb w-[600px] h-[600px] bg-hbnGreen top-[-100px] right-[-200px]" style="animation-duration:12s"></div>
+  <div class="orb w-[400px] h-[400px] bg-hbnBlue bottom-[-50px] left-[-100px]" style="animation-duration:16s; animation-delay:-5s"></div>
+
+  <div class="relative z-10 max-w-7xl mx-auto px-6 flex-1 flex items-center py-16 md:py-24">
+    <div class="grid md:grid-cols-2 gap-12 lg:gap-20 w-full items-center">
+
+      <!-- Left text -->
+      <div>
+        <!-- Breadcrumb -->
+        <div class="flex text-xs text-gray-400 gap-1.5 mb-8">
+          <a href="../../../index.html" class="hover:text-hbnGreen">Home</a>
+          <span>/</span>
+          <a href="../../../events.html" class="hover:text-hbnGreen">Events</a>
+          <span>/</span>
+          <span class="text-gray-600">Clean Air Day 2026</span>
+        </div>
+
+        <div class="flex flex-wrap gap-2 mb-5">
+          <span style="font-family:Syne,sans-serif; font-size:0.65rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; background:#4e9317; color:#fff; border-radius:999px; padding:0.3rem 0.85rem;">Clean Air Day 2026</span>
+          <span style="font-family:Syne,sans-serif; font-size:0.65rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; background:#fff; color:#555; border-radius:999px; padding:0.3rem 0.85rem; border:1px solid #e0e0e0;">Free to Attend</span>
+        </div>
+
+        <h1 class="font-display text-5xl md:text-6xl lg:text-7xl font-extrabold leading-none text-gray-900 mb-1"
+            style="font-family:Syne,sans-serif; letter-spacing:-0.03em">
+          Clear<br>the Air
+        </h1>
+        <p class="font-display text-xl md:text-2xl text-hbnGreen font-bold mb-6 mt-2"
+           style="font-family:Syne,sans-serif">
+          Practical Steps for Healthier Homes
+        </p>
+
+        <p class="text-gray-600 leading-relaxed text-base md:text-lg mb-8 max-w-lg">
+          Indoor air pollution is often invisible but it has a real impact on your health every single day. 
+          Join us for an interactive, hands-on evening exploring what's in the air at home, and what you can do about it.
+        </p>
+
+        <!-- Date / Time / Place pills -->
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-10">
+          <div class="bg-white rounded-xl px-4 py-3 border border-gray-100 shadow-sm">
+            <p class="text-xs font-semibold text-hbnGreen uppercase tracking-wide mb-0.5">Date</p>
+            <p class="font-semibold text-gray-800 text-sm">Thu 18 June 2026</p>
+          </div>
+          <div class="bg-white rounded-xl px-4 py-3 border border-gray-100 shadow-sm">
+            <p class="text-xs font-semibold text-hbnGreen uppercase tracking-wide mb-0.5">Time</p>
+            <p class="font-semibold text-gray-800 text-sm">6:00 – 8:00 pm</p>
+          </div>
+          <div class="bg-white rounded-xl px-4 py-3 border border-gray-100 shadow-sm">
+            <p class="text-xs font-semibold text-hbnGreen uppercase tracking-wide mb-0.5">Where</p>
+            <p class="font-semibold text-gray-800 text-sm">Imagine Leeds, LS2</p>
+          </div>
+        </div>
+
+        <div class="flex flex-wrap gap-3">
+          <a href="https://forms.cloud.microsoft/e/an5wZhTpi3" target="_blank" class="register-pill">
+            Reserve your free spot
+          </a>
+          <a href="#about" class="inline-flex items-center gap-2 px-6 py-4 rounded-full bg-white border-2 border-gray-200 text-gray-700 font-semibold text-sm hover:border-hbnGreen hover:text-hbnGreen transition-colors">
+            About the event ↓
+          </a>
+        </div>
+
+        <p class="text-xs text-gray-400 mt-4">Spaces limited to around 30 people</p>
+      </div>
+
+      <!-- Right: speaker faces -->
+      <div class="grid grid-cols-2 gap-4 relative">
+
+        <!-- Speaker 1 -->
+        <div class="relative">
+          <div class="speaker-photo-wrap">
+            <!-- Replace src with actual photo path: assets/images/events/workshops/cleanair/claudia.jpg -->
+            <img src="claudia.jpg"
+                 alt="Dr. Claudia Castro Faccetti, founder of CELIA CIC"
+                 onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+            <div class="speaker-photo-placeholder" style="display:none">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+              <span>Dr. Claudia<br>Castro Faccetti</span>
+            </div>
+          </div>
+          <!-- Name tag -->
+          <div class="absolute bottom-0 left-0 right-0 p-3 bg-gradient-to-t from-black/70 to-transparent rounded-b-2xl">
+            <p class="text-white font-semibold text-sm" style="font-family:Syne,sans-serif">Dr. Claudia Castro Faccetti</p>
+            <p class="text-white/70 text-xs">Founder, CELIA CIC</p>
+          </div>
+        </div>
+
+        <!-- Speaker 2, offset lower -->
+        <div class="relative mt-8">
+          <div class="speaker-photo-wrap">
+            <!-- Replace src with actual photo path: assets/images/events/workshops/cleanair/carolina.jpg -->
+            <img src="carolina.jpg"
+                 alt="Dr. Carolina Montoya Pachongo"
+                 onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+            <div class="speaker-photo-placeholder" style="display:none">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+              <span>Dr. Carolina<br>Montoya Pachongo</span>
+            </div>
+          </div>
+          <div class="absolute bottom-0 left-0 right-0 p-3 bg-gradient-to-t from-black/70 to-transparent rounded-b-2xl">
+            <p class="text-white font-semibold text-sm" style="font-family:Syne,sans-serif">Dr. Carolina Montoya Pachongo</p>
+            <p class="text-white/70 text-xs">Faculty of Biological Science, University of Leeds</p>
+          </div>
+        </div>
+
+        <!-- Floating tag -->
+        <div class="absolute -bottom-4 left-1/2 -translate-x-1/2 bg-hbnYellow text-gray-900 px-4 py-2 rounded-full font-bold text-xs shadow-lg whitespace-nowrap"
+             style="font-family:Syne,sans-serif; letter-spacing:0.05em">
+          Two experts. One evening. Fresh air.
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Wave -->
+  <div class="relative z-10">
+    <svg viewBox="0 0 1440 64" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" class="w-full h-12 fill-white block">
+      <path d="M0,48 C480,96 960,0 1440,48 L1440,64 L0,64 Z"/>
+    </svg>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════ ORGANISERS BAR ══════════════════════════════════ -->
+<div class="org-bar py-6">
+  <div class="max-w-5xl mx-auto px-6">
+    <p class="text-center text-xs font-semibold uppercase tracking-widest text-gray-400 mb-5">Co-organised by</p>
+    <div class="flex flex-wrap justify-center items-center gap-10">
+      <!-- HBN -->
+      <div class="text-center">
+        <img src="../../../assets/images/hbn_landscape.png" alt="Healthy Buildings Network Leeds"
+             class="h-10 mx-auto mb-1" onerror="this.style.display='none'">
+        <p class="text-xs text-gray-500">Healthy Buildings Network Leeds</p>
+        <p class="text-xs text-gray-400">University of Leeds</p>
+      </div>
+      <div class="text-gray-200 font-light text-3xl hidden md:block">×</div>
+      <!-- CELIA -->
+      <div class="text-center">
+        <div class="h-10 flex items-center justify-center mb-1">
+          <span class="font-display font-extrabold text-2xl" style="font-family:Syne,sans-serif; color:#04592b; letter-spacing:-0.02em">CELIA CIC</span>
+        </div>
+        <p class="text-xs text-gray-500">Community Environmental Learning</p>
+        <p class="text-xs text-gray-400">and Impact Alliance CIC</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ══════════════════════════════════ MARQUEE ══════════════════════════════════ -->
+<div class="bg-hbnPurple py-3 overflow-hidden">
+  <div class="marquee-track text-white text-xs font-semibold select-none" style="letter-spacing:0.05em; text-transform:uppercase">
+    <span class="px-8">Clean Air Day 2026</span>
+    <span class="px-4 opacity-40">—</span>
+    <span class="px-8">Indoor Air Quality</span>
+    <span class="px-4 opacity-40">—</span>
+    <span class="px-8">Live Sensor Demonstrations</span>
+    <span class="px-4 opacity-40">—</span>
+    <span class="px-8">Hands-On Activities</span>
+    <span class="px-4 opacity-40">—</span>
+    <span class="px-8">Free to Attend · 18 June 2026</span>
+    <span class="px-4 opacity-40">—</span>
+    <span class="px-8">Imagine Leeds · 9 Blenheim Terrace</span>
+    <span class="px-4 opacity-40">—</span>
+    <span class="px-8">Clean Air Day 2026</span>
+    <span class="px-4 opacity-40">—</span>
+    <span class="px-8">Indoor Air Quality</span>
+    <span class="px-4 opacity-40">—</span>
+    <span class="px-8">Live Sensor Demonstrations</span>
+    <span class="px-4 opacity-40">—</span>
+    <span class="px-8">Hands-On Activities</span>
+    <span class="px-4 opacity-40">—</span>
+    <span class="px-8">Free to Attend · 18 June 2026</span>
+    <span class="px-4 opacity-40">—</span>
+    <span class="px-8">Imagine Leeds · 9 Blenheim Terrace</span>
+    <span class="px-4 opacity-40">—</span>
+  </div>
+</div>
+
+
+<!-- ══════════════════════════════════ ABOUT ══════════════════════════════════ -->
+<section id="about" class="py-24 bg-white">
+  <div class="max-w-5xl mx-auto px-6">
+    <div class="md:grid md:grid-cols-5 md:gap-16 items-start">
+
+      <!-- Text: 3 cols -->
+      <div class="md:col-span-3 mb-10 md:mb-0">
+        <p class="text-xs font-bold uppercase tracking-widest text-hbnGreen mb-4">About the Workshop</p>
+        <h2 class="font-display text-3xl md:text-4xl font-extrabold text-gray-900 leading-tight mb-6"
+            style="font-family:Syne,sans-serif">
+          Most of us spend over 90% of our time indoors.
+          <span class="text-hbnGreen">We rarely think about what we're breathing.</span>
+        </h2>
+        <p class="text-gray-600 leading-relaxed mb-4">
+          Cooking, cleaning, even just breathing, everyday activities generate pollutants that accumulate invisibly. Fine particles, volatile organic compounds, mould spores, and pathogens all have a home in our living rooms and bedrooms.
+        </p>
+        <p class="text-gray-600 leading-relaxed mb-4">
+          This workshop isn't a lecture. It's an evening designed around hands-on exploration: interactive quizzes, creative modelling of pollutants, live sensors you can hold and interact with, and genuine conversation about what simple changes make the most difference.
+        </p>
+        <p class="text-gray-600 leading-relaxed">
+          Whether you're a concerned resident, or someone who just wants to breathe easier at home, you belong here. No background in science needed.
+        </p>
+
+        <!-- Accessibility note -->
+        <div class="mt-8 p-5 rounded-2xl border border-gray-100 bg-gray-50">
+          <p class="text-sm font-semibold text-gray-700 mb-1">Accessibility</p>
+          <p class="text-sm text-gray-500">Step-free access is available at the rear of Imagine Leeds. Please get in touch if you have any specific needs.</p>
+        </div>
+      </div>
+
+      <!-- Stats: 2 cols -->
+      <div class="md:col-span-2 space-y-4">
+        <div class="p-6 bg-[#f4f9f0] rounded-2xl border-l-4 border-hbnGreen">
+          <p class="font-display font-extrabold text-4xl text-hbnGreen" style="font-family:Syne,sans-serif">90%</p>
+          <p class="text-sm text-gray-600 mt-1">of our time is spent indoors, yet indoor air quality is almost never discussed</p>
+        </div>
+        <div class="p-6 bg-[#eef5fd] rounded-2xl border-l-4 border-hbnBlue">
+          <p class="font-display font-extrabold text-4xl text-hbnBlue" style="font-family:Syne,sans-serif">2–5×</p>
+          <p class="text-sm text-gray-600 mt-1">indoor pollutant concentrations can be 2–5× higher than outdoors</p>
+        </div>
+        <div class="p-6 bg-[#fff9ec] rounded-2xl border-l-4 border-hbnYellow">
+          <p class="font-display font-extrabold text-xl text-gray-800" style="font-family:Syne,sans-serif">Low cost, high impact</p>
+          <p class="text-sm text-gray-600 mt-1">The most effective home air quality interventions cost little or nothing, you just need to know them</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════ PROGRAMME ══════════════════════════════════ -->
+<section class="py-24 bg-gray-50">
+  <div class="max-w-5xl mx-auto px-6">
+
+    <div class="mb-14">
+      <p class="text-xs font-bold uppercase tracking-widest text-hbnGreen mb-3">What to Expect</p>
+      <h2 class="font-display text-3xl md:text-4xl font-extrabold text-gray-900" style="font-family:Syne,sans-serif">
+        A relaxed evening of science,<br>creativity, and practical action.
+      </h2>
+    </div>
+
+    <div class="bg-white rounded-3xl p-8 md:p-12 shadow-sm border border-gray-100">
+      <div>
+        <div class="activity-row">
+          <p class="activity-num">01</p>
+          <div>
+            <h3 class="font-display font-bold text-gray-900 mb-1" style="font-family:Syne,sans-serif">Air Pollution Basics — with an interactive quiz</h3>
+            <p class="text-sm text-gray-500 leading-relaxed">A clear, jargon-free introduction to indoor air pollution. What it is, where it comes from, and why it matters. The quiz keeps it honest.</p>
+          </div>
+        </div>
+        <div class="activity-row">
+          <p class="activity-num">02</p>
+          <div>
+            <h3 class="font-display font-bold text-gray-900 mb-1" style="font-family:Syne,sans-serif">Where pollution hides in your home</h3>
+            <p class="text-sm text-gray-500 leading-relaxed">From kitchens to bedrooms to living spaces, a room-by-room exploration of the everyday sources of indoor pollution that most people never think about.</p>
+          </div>
+        </div>
+        <div class="activity-row">
+          <p class="activity-num">03</p>
+          <div>
+            <h3 class="font-display font-bold text-gray-900 mb-1" style="font-family:Syne,sans-serif">Live air quality sensor demonstrations</h3>
+            <p class="text-sm text-gray-500 leading-relaxed">See real-time monitoring data respond to different activities in the room. Numbers on screen, in the moment — it tends to surprise people.</p>
+          </div>
+        </div>
+        <div class="activity-row">
+          <p class="activity-num">04</p>
+          <div>
+            <h3 class="font-display font-bold text-gray-900 mb-1" style="font-family:Syne,sans-serif">Hands-on modelling of pollutants</h3>
+            <p class="text-sm text-gray-500 leading-relaxed">Model PM, VOCs, mould, and viruses using creative materials. Science you can touch, build, and actually remember afterwards.</p>
+          </div>
+        </div>
+        <div class="activity-row">
+          <p class="activity-num">05</p>
+          <div>
+            <h3 class="font-display font-bold text-gray-900 mb-1" style="font-family:Syne,sans-serif">Take-home knowledge and practical actions</h3>
+            <p class="text-sm text-gray-500 leading-relaxed">Leave with concrete, low-cost steps you can start using tonight. No expensive kit, no complex equipment — just things that work.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Evening timeline -->
+    <div class="mt-16">
+      <p class="text-xs font-bold uppercase tracking-widest text-gray-400 mb-8">Evening Schedule</p>
+      <div class="relative">
+        <div class="absolute left-0 top-0 bottom-0 w-px bg-gray-200"></div>
+        <div class="space-y-8 pl-8">
+
+          <div class="relative">
+            
+            <div class="flex flex-col sm:flex-row sm:items-baseline gap-2">
+              <span class="font-display font-bold text-hbnGreen text-sm w-20 flex-shrink-0" style="font-family:Syne,sans-serif">6:00 pm</span>
+              <div>
+                <p class="font-semibold text-gray-800">Doors open</p>
+                <p class="text-sm text-gray-400">Grab a drink, settle in, meet the team</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="relative">
+            
+            <div class="flex flex-col sm:flex-row sm:items-baseline gap-2">
+              <span class="font-display font-bold text-hbnGreen text-sm w-20 flex-shrink-0" style="font-family:Syne,sans-serif">6:15 pm</span>
+              <div>
+                <p class="font-semibold text-gray-800">Indoor Air 101 + Interactive Quiz</p>
+                <p class="text-sm text-gray-400">A friendly intro with audience participation</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="relative">
+            
+            <div class="flex flex-col sm:flex-row sm:items-baseline gap-2">
+              <span class="font-display font-bold text-hbnBlue text-sm w-20 flex-shrink-0" style="font-family:Syne,sans-serif">6:40 pm</span>
+              <div>
+                <p class="font-semibold text-gray-800">Speaker presentations</p>
+                <p class="text-sm text-gray-400">Dr. Castro Faccetti and Dr. Montoya Pachongo on the science and health dimensions of indoor air</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="relative">
+            
+            <div class="flex flex-col sm:flex-row sm:items-baseline gap-2">
+              <span class="font-display font-bold text-hbnPurple text-sm w-20 flex-shrink-0" style="font-family:Syne,sans-serif">7:10 pm</span>
+              <div>
+                <p class="font-semibold text-gray-800">Live demos and hands-on activities</p>
+                <p class="text-sm text-gray-400">Sensors, creative modelling, room-by-room exploration</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="relative">
+            
+            <div class="flex flex-col sm:flex-row sm:items-baseline gap-2">
+              <span class="font-display font-bold text-sm w-20 flex-shrink-0" style="font-family:Syne,sans-serif; color:#04592b">7:45 pm</span>
+              <div>
+                <p class="font-semibold text-gray-800">Open Q&A and practical take-aways</p>
+                <p class="text-sm text-gray-400">Discussion, questions, and what to do when you get home</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="relative">
+          
+            <div class="flex flex-col sm:flex-row sm:items-baseline gap-2">
+              <span class="font-display font-bold text-gray-400 text-sm w-20 flex-shrink-0" style="font-family:Syne,sans-serif">8:00 pm</span>
+              <div>
+                <p class="font-semibold text-gray-400">Close</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════ SPEAKERS ══════════════════════════════════ -->
+<section class="py-24 bg-white">
+  <div class="max-w-5xl mx-auto px-6">
+
+    <p class="text-xs font-bold uppercase tracking-widest text-hbnGreen mb-3">Your Speakers</p>
+    <h2 class="font-display text-3xl md:text-4xl font-extrabold text-gray-900 mb-16"
+        style="font-family:Syne,sans-serif">
+      Meet the people behind the evening
+    </h2>
+
+    <!-- Speaker 1: Claudia -->
+    <div class="md:grid md:grid-cols-5 md:gap-16 items-start mb-20">
+      <div class="md:col-span-2 mb-8 md:mb-0">
+        <div class="speaker-photo-wrap" style="aspect-ratio:4/5">
+          <img src="claudia.jpg"
+               alt="Dr. Claudia Castro Faccetti"
+               onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+          <div class="speaker-photo-placeholder" style="display:none; aspect-ratio:4/5">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+            <span style="text-align:center; padding:0 1rem">Photo: Dr. Claudia<br>Castro Faccetti</span>
+          </div>
+        </div>
+      </div>
+      <div class="md:col-span-3">
+        <div class="flex items-center gap-3 mb-1">
+          <p class="text-xs font-bold uppercase tracking-widest" style="color:#04592b">CELIA CIC</p>
+        </div>
+        <h3 class="font-display text-2xl md:text-3xl font-extrabold text-gray-900 mb-1"
+            style="font-family:Syne,sans-serif">Dr. Claudia Castro Faccetti</h3>
+        <p class="text-hbnGreen font-semibold text-sm mb-6">Founder & Director, CELIA CIC</p>
+        <p class="text-gray-600 leading-relaxed mb-5">
+          Claudia founded CELIA CIC — the Community Environmental Learning and Impact Alliance to build a bridge between environmental science and the communities it most directly affects. CELIA is a not-for-profit community interest company registered in England and Wales, delivering inclusive education that equips people with essential digital skills alongside the environmental awareness needed to create a more sustainable future.
+        </p>
+        <p class="text-gray-600 leading-relaxed mb-8">
+          Claudia's work is rooted in the belief that science should be accessible, participatory, and useful to real people, not just published in journals. Expect insights grounded both in research and in lived community experience.
+        </p>
+        <!-- CELIA info box -->
+        <div class="p-5 rounded-2xl border border-gray-100 bg-gray-50">
+          <p class="text-xs font-bold uppercase tracking-widest mb-2" style="color:#04592b">About CELIA CIC</p>
+          <p class="text-sm text-gray-600 leading-relaxed">
+            A not-for-profit community interest company (registered in England and Wales) delivering inclusive education at the intersection of digital skills and environmental awareness — equipping people and communities to build a more sustainable future.
+          </p>
+          <a href="https://celiacic.org" target="_blank"
+             class="inline-block mt-3 text-sm font-semibold hover:underline" style="color:#04592b">
+            celiacic.org →
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Divider -->
+    <div class="border-t border-gray-100 mb-20"></div>
+
+    <!-- Speaker 2: Carolina -->
+    <div class="md:grid md:grid-cols-5 md:gap-16 items-start">
+      <!-- On desktop, text left, photo right -->
+      <div class="md:col-span-3 mb-8 md:mb-0 order-2 md:order-1">
+        <div class="flex items-center gap-3 mb-1">
+          <p class="text-xs font-bold uppercase tracking-widest text-hbnBlue">University of Leeds</p>
+        </div>
+        <h3 class="font-display text-2xl md:text-3xl font-extrabold text-gray-900 mb-1"
+            style="font-family:Syne,sans-serif">Dr. Carolina Montoya Pachongo</h3>
+        <p class="text-hbnBlue font-semibold text-sm mb-6">Faculty of Biological Science, University of Leeds</p>
+        <p class="text-gray-600 leading-relaxed mb-6">
+          Carolina is a researcher in the Faculty of Biological Science at the University of Leeds, working at the intersection of environmental biology, community science, and urban health. Her current research focuses on air quality, noise, and biodiversity monitoring across Leeds with a distinctly participatory approach that puts communities at the centre of data collection and decision-making.
+        </p>
+
+        <!-- Pull quote in Spanish with translation -->
+        <div class="pull-quote mb-2">
+          <p class="text-gray-700">"I'm working on a project about participatory monitoring of air quality, noise, and biodiversity in Leeds."</p>
+        </div>
+        <p class="text-sm text-gray-400 mb-8 pl-6 italic">
+          
+        </p>
+
+        <p class="text-gray-600 leading-relaxed">
+          Carolina brings both the science and the community-facing methodology to the evening — her work on participatory monitoring means she understands both what's in the data and what people actually need to know to use it.
+        </p>
+      </div>
+      <div class="md:col-span-2 order-1 md:order-2">
+        <div class="speaker-photo-wrap" style="aspect-ratio:4/5">
+          <img src="carolina.jpg"
+               alt="Dr. Carolina Montoya Pachongo"
+               onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+          <div class="speaker-photo-placeholder" style="display:none; background:linear-gradient(135deg,#e0edf8,#c8d8ec);">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+            <span style="text-align:center; padding:0 1rem">Photo: Dr. Carolina<br>Montoya Pachongo</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════ VENUE ══════════════════════════════════ -->
+<section class="py-24 bg-gray-50">
+  <div class="max-w-5xl mx-auto px-6">
+    <div class="md:grid md:grid-cols-2 md:gap-12 items-start">
+
+      <div>
+        <p class="text-xs font-bold uppercase tracking-widest text-hbnGreen mb-3">Getting There</p>
+        <h2 class="font-display text-3xl font-extrabold text-gray-900 mb-6"
+            style="font-family:Syne,sans-serif">Imagine Leeds</h2>
+        <p class="text-gray-600 mb-1 font-semibold">9 Blenheim Terrace</p>
+        <p class="text-gray-500 mb-1">Next to the little Tesco</p>
+        <p class="text-gray-500 mb-6">Leeds, LS2</p>
+        <a href="https://www.climateactionleeds.org.uk/discover-imagine-leeds" target="_blank"
+           class="text-sm font-semibold text-hbnGreen hover:underline">
+          About the venue at Imagine Leeds →
+        </a>
+
+        <div class="mt-8 space-y-3 text-sm text-gray-600">
+          <div class="flex items-start gap-3 p-4 bg-white rounded-xl border border-gray-100">
+            <span class="text-gray-400 mt-0.5 flex-shrink-0">Train</span>
+            <span>Leeds City Station — approximately 20 minutes on foot, or a short bus or taxi</span>
+          </div>
+          <div class="flex items-start gap-3 p-4 bg-white rounded-xl border border-gray-100">
+            <span class="text-gray-400 mt-0.5 flex-shrink-0">Bus</span>
+            <span>Multiple services stop at Parkinson Steps, across the road from the venue</span>
+          </div>
+          <div class="flex items-start gap-3 p-4 bg-white rounded-xl border border-gray-100">
+            <span class="text-gray-400 mt-0.5 flex-shrink-0">Car</span>
+            <span>Nearest parking: Woodhouse Lane NCP (approximately 5 minutes walk)</span>
+          </div>
+          <div class="flex items-start gap-3 p-4 bg-[#f4f9f0] rounded-xl border border-hbnGreen/20">
+            <span class="text-hbnGreen font-semibold mt-0.5 flex-shrink-0">Access</span>
+            <span>Step-free access available at the rear entrance</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Map embed placeholder / contact -->
+      <div class="mt-10 md:mt-0">
+        <div class="rounded-2xl overflow-hidden bg-gray-200 aspect-square flex items-center justify-center border border-gray-200">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2356.5!2d-1.554!3d53.806!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48795ec1c2b6b1b3%3A0x1!2s9+Blenheim+Terrace%2C+Leeds+LS2!5e0!3m2!1sen!2suk!4v1"
+            width="100%" height="100%" style="border:0; min-height:360px" allowfullscreen="" loading="lazy"
+            title="Map showing Imagine Leeds, 9 Blenheim Terrace, Leeds LS2">
+          </iframe>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════ REGISTER CTA ══════════════════════════════════ -->
+<section class="py-24 bg-gray-900 text-white relative overflow-hidden">
+  <!-- Subtle grid texture -->
+  <div class="absolute inset-0 opacity-[0.04]"
+       style="background-image:linear-gradient(#fff 1px,transparent 1px),linear-gradient(90deg,#fff 1px,transparent 1px); background-size:40px 40px;"></div>
+  <!-- Green accent -->
+  <div class="absolute top-0 left-0 right-0 h-1 bg-hbnGreen"></div>
+
+  <div class="relative max-w-3xl mx-auto px-6 text-center">
+    <p class="text-xs font-bold uppercase tracking-widest text-hbnGreen mb-5">Clean Air Day · 18 June 2026</p>
+    <h2 class="font-display text-4xl md:text-5xl font-extrabold mb-5 leading-tight"
+        style="font-family:Syne,sans-serif; letter-spacing:-0.02em">
+      Come breathe easier<br>with us in Leeds.
+    </h2>
+    <p class="text-gray-400 text-lg mb-2 max-w-xl mx-auto">
+      A free evening of science, sensor demos, hands-on activities, and practical knowledge you'll actually use.
+    </p>
+    <p class="text-gray-500 text-sm mb-10">
+      Imagine Leeds · 9 Blenheim Terrace · Thursday 18 June · 6:00 – 8:00 pm
+    </p>
+    <a href="https://forms.cloud.microsoft/e/an5wZhTpi3" target="_blank" class="register-pill text-lg px-10 py-5">
+      Register — it's free
+    </a>
+    <p class="text-gray-600 text-sm mt-5">Around 30 spaces available</p>
+
+    <div class="mt-14 pt-10 border-t border-gray-800 flex flex-wrap justify-center gap-8 text-sm text-gray-500">
+      <div class="text-center">
+        <p class="text-white font-semibold mb-0.5">HBN Leeds</p>
+        <p class="text-xs">healthy_buildings_network@leeds.ac.uk</p>
+      </div>
+      <div class="text-center">
+        <p class="font-semibold mb-0.5" style="color:#e06b2f">CELIA CIC</p>
+        <a href="https://celiacic.org" class="text-xs hover:text-white transition-colors">celiacic.org</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════ FOOTER ══════════════════════════════════ -->
+<footer class="bg-gray-800 text-white py-12 md:py-16">
+  <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8">
+    <div>
+      <img src="../../../assets/images/hbn_landscape.png" alt="Healthy Buildings Network Leeds"
+           class="h-10 mb-3 filter brightness-0 invert opacity-80"
+           onerror="this.style.display='none'">
+      <p class="text-sm text-gray-300 leading-relaxed">
+        A cross-disciplinary research and collaboration hub at the University of Leeds, focused on healthier, more sustainable built environments.
+      </p>
+      <div class="flex gap-4 mt-4 text-sm">
+        <a href="https://www.linkedin.com/company/healthy-buildings-network/" target="_blank" class="text-gray-400 hover:text-hbnGreen transition-colors">LinkedIn</a>
+        <a href="mailto:healthy_buildings_network@leeds.ac.uk" class="text-gray-400 hover:text-hbnGreen transition-colors">Email</a>
+      </div>
+    </div>
+    <div>
+      <h4 class="font-bold mb-4 text-sm uppercase tracking-wider text-gray-400">Quick Links</h4>
+      <ul class="space-y-2 text-sm">
+        <li><a href="../../../index.html"    class="text-gray-300 hover:text-hbnGreen transition-colors">Home</a></li>
+        <li><a href="../../../about.html"    class="text-gray-300 hover:text-hbnGreen transition-colors">About</a></li>
+        <li><a href="../../../projects.html" class="text-gray-300 hover:text-hbnGreen transition-colors">Projects</a></li>
+        <li><a href="../../../events.html"   class="text-gray-300 hover:text-hbnGreen transition-colors">Events</a></li>
+        <li><a href="../../../contact.html"  class="text-gray-300 hover:text-hbnGreen transition-colors">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4 class="font-bold mb-4 text-sm uppercase tracking-wider text-gray-400">Affiliations</h4>
+      <ul class="space-y-2 text-sm">
+        <li><a href="https://fluids.leeds.ac.uk"      target="_blank" class="text-gray-300 hover:text-hbnGreen transition-colors">Leeds Institute for Fluid Dynamics</a></li>
+        <li><a href="https://lssi.leeds.ac.uk"        target="_blank" class="text-gray-300 hover:text-hbnGreen transition-colors">Leeds Social Sciences Institute</a></li>
+        <li><a href="https://lahri.leeds.ac.uk"       target="_blank" class="text-gray-300 hover:text-hbnGreen transition-colors">Leeds Arts & Humanities Research Institute</a></li>
+        <li><a href="https://lida.leeds.ac.uk/"       target="_blank" class="text-gray-300 hover:text-hbnGreen transition-colors">Leeds Institute for Data Analytics</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="max-w-6xl mx-auto px-6 pt-8 mt-8 border-t border-gray-700 text-xs text-center text-gray-500">
+    <p>© 2026 Healthy Buildings Network Leeds. All rights reserved.</p>
+    <p class="mt-1">University of Leeds, Leeds LS2 9JT, United Kingdom</p>
+  </div>
+</footer>
+
+
+<script>
+  // Mobile menu
+  document.getElementById('mobile-menu-button').addEventListener('click', () => {
+    document.getElementById('mobile-menu').classList.toggle('hidden');
+  });
+
+  // Sticky register button — appears after scrolling past hero
+  const stickyReg = document.getElementById('sticky-reg');
+  const observer = new IntersectionObserver(([entry]) => {
+    stickyReg.classList.toggle('visible', !entry.isIntersecting);
+  }, { threshold: 0 });
+  observer.observe(document.querySelector('section'));
+</script>
+
+</body>
+</html>
