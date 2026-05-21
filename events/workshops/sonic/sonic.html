@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            hbnGreen:     '#4e9317',
+            hbnGreenDark: '#3d7412',
+            hbnBlue:      '#3e95dd',
+            hbnYellow:    '#ffca29',
+            hbnPurple:    '#8360a9',
+            ink:          '#1c1410',
+            gold:         '#b8832a',
+            goldLight:    '#d4a853',
+            inkRed:       '#9e2a2b',
+            cream:        '#faf7f2',
+            warmGray:     '#8a7060',
+          }
+        }
+      }
+    };
+  </script>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Sonic Belonging – A free traditional Chinese music performance at the Wellbeing Hub, University of Leeds. Thursday 4 June 2026, 1:30–2:30 pm.">
+  <title>Sonic Belonging | Traditional Chinese Music | HBN Leeds</title>
+  <link rel="icon" href="../../../assets/images/hbn_fav.ico" type="image/x-icon"/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: #faf7f2;
+      color: #1c1410;
+      overflow-x: hidden;
+    }
+    .cormorant { font-family: 'Cormorant Garamond', serif; }
+    .syne { font-family: 'Syne', sans-serif; }
+
+    /* ── Ripple rings in hero ── */
+    .ripple-ring {
+      position: absolute;
+      border-radius: 50%;
+      border: 1px solid rgba(184,131,42,0.25);
+      animation: ripple-expand ease-out infinite;
+      transform: translate(-50%, -50%);
+      left: 50%; top: 50%;
+    }
+    @keyframes ripple-expand {
+      0%   { width: 80px;  height: 80px;  opacity: 0.7; }
+      100% { width: 900px; height: 900px; opacity: 0; }
+    }
+
+    /* ── Ink brush stroke divider (SVG-based) ── */
+    .brush-divider { width: 60px; height: 3px; background: #b8832a; border-radius: 2px; }
+
+    /* ── Nav ── */
+    .nav-active { color: #4e9317; }
+
+    /* ── Register pill ── */
+    .register-pill {
+      display: inline-flex; align-items: center; gap: 0.6rem;
+      background: #b8832a; color: #fff;
+      font-family: 'DM Sans', sans-serif; font-weight: 600; font-size: 0.9rem;
+      padding: 0.9rem 2rem; border-radius: 999px;
+      transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+      box-shadow: 0 4px 20px rgba(184,131,42,0.3);
+      letter-spacing: 0.01em;
+    }
+    .register-pill:hover {
+      background: #9e6e1f;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 28px rgba(184,131,42,0.4);
+    }
+
+    /* ── Instrument card ── */
+    .instrument-card {
+      border-top: 1px solid rgba(184,131,42,0.3);
+      transition: border-color 0.3s;
+    }
+    .instrument-card:hover { border-color: #b8832a; }
+
+    /* ── Chinese character display ── */
+    .hanzi {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 3.5rem;
+      line-height: 1;
+      color: rgba(28,20,16,0.12);
+      font-weight: 300;
+      letter-spacing: -0.02em;
+      position: absolute;
+      top: 0; right: 0;
+      user-select: none;
+    }
+
+    /* ── Sticky register ── */
+    #sticky-reg {
+      position: fixed; bottom: 1.5rem; right: 1.5rem; z-index: 100;
+      opacity: 0; transform: translateY(10px);
+      transition: opacity 0.4s, transform 0.4s; pointer-events: none;
+    }
+    #sticky-reg.visible { opacity: 1; transform: translateY(0); pointer-events: auto; }
+
+    /* ── Section fade-in ── */
+    .fade-up {
+      opacity: 0; transform: translateY(20px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+    .fade-up.visible { opacity: 1; transform: translateY(0); }
+
+    /* ── W3W pill ── */
+    .w3w-pill {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      background: #e11d48; color: #fff;
+      font-size: 0.75rem; font-weight: 600;
+      padding: 0.35rem 0.85rem; border-radius: 999px;
+      text-decoration: none;
+    }
+    .w3w-pill:hover { background: #be123c; }
+
+    /* ── Quote mark ── */
+    .open-quote {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 6rem; line-height: 0.5;
+      color: #b8832a; opacity: 0.3;
+      float: left; margin-right: 0.25rem;
+      margin-top: 1rem;
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- ══════ STICKY CTA ══════ -->
+<div id="sticky-reg">
+  <a href="https://leeds365.sharepoint.com/sites/WellbeingSafetyandHealth/_layouts/15/Event.aspx?ListGuid=e67c0a3c-feb5-4ba0-b5d2-910a67ecf44a&ItemId=276"
+     target="_blank" class="register-pill">
+    No Need to Register →
+  </a>
+</div>
+
+
+<!-- ══════════════════════════════════ HEADER ══════════════════════════════════ -->
+<header class="bg-white border-b border-gray-100 fixed w-full z-50">
+  <div class="max-w-7xl mx-auto px-6 flex justify-between items-center py-3">
+    <a href="../../../index.html" class="flex items-center gap-4">
+      <img src="../../../assets/images/hbn_landscape.png" alt="HBN Leeds" class="h-10"
+           onerror="this.outerHTML='<span class=\'font-bold text-hbnGreen text-lg\'>HBN Leeds</span>'">
+      <img src="../../../assets/images/leeds_logo_black_on_white_bk.jpg" alt="University of Leeds" class="h-10"
+           onerror="this.style.display='none'">
+    </a>
+    <button id="mobile-menu-button" class="md:hidden text-gray-500 hover:text-hbnGreen p-2">
+      <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+      </svg>
+    </button>
+    <nav class="hidden md:flex gap-8 text-sm font-medium" id="main-nav">
+      <a href="../../../index.html"    class="text-gray-500 hover:text-hbnGreen transition-colors">Home</a>
+      <a href="../../../about.html"    class="text-gray-500 hover:text-hbnGreen transition-colors">About Us</a>
+      <a href="../../../blog.html"     class="text-gray-500 hover:text-hbnGreen transition-colors">Blog</a>
+      <a href="../../../events.html"   class="nav-active font-semibold">Events</a>
+      <a href="../../../projects.html" class="text-gray-500 hover:text-hbnGreen transition-colors">Projects</a>
+      <a href="../../../contact.html"  class="text-gray-500 hover:text-hbnGreen transition-colors">Contact</a>
+    </nav>
+  </div>
+  <div class="md:hidden hidden bg-white border-t border-gray-100" id="mobile-menu">
+    <div class="px-6 py-4 space-y-3 text-sm font-medium">
+      <a href="../../../index.html"    class="block text-gray-600 hover:text-hbnGreen">Home</a>
+      <a href="../../../about.html"    class="block text-gray-600 hover:text-hbnGreen">About Us</a>
+      <a href="../../../blog.html"     class="block text-gray-600 hover:text-hbnGreen">Blog</a>
+      <a href="../../../events.html"   class="block text-hbnGreen font-semibold">Events</a>
+      <a href="../../../projects.html" class="block text-gray-600 hover:text-hbnGreen">Projects</a>
+      <a href="../../../contact.html"  class="block text-gray-600 hover:text-hbnGreen">Contact</a>
+    </div>
+  </div>
+</header>
+
+
+<!-- ══════════════════════════════════ HERO ══════════════════════════════════ -->
+<section id="hero" class="relative pt-16 min-h-screen flex flex-col justify-center overflow-hidden">
+
+  <!-- Lujin full-bleed photo -->
+  <div class="absolute inset-0">
+    <img src="lijun_on_guzheng.jpg"
+         alt="Lijun performing on guzheng"
+         class="w-full h-full object-cover object-center">
+    <!-- gradient: dark left for text, transparent right to show photo -->
+    <div class="absolute inset-0"
+         style="background: linear-gradient(to right, rgba(15,10,6,0.92) 0%, rgba(15,10,6,0.75) 40%, rgba(15,10,6,0.15) 70%, transparent 100%)">
+    </div>
+  </div>
+
+  <!-- Ripple rings — left-anchored to sit behind text -->
+  <div class="ripple-ring" style="left:25%; animation-duration:5s; animation-delay:0s"></div>
+  <div class="ripple-ring" style="left:25%; animation-duration:5s; animation-delay:1.67s"></div>
+  <div class="ripple-ring" style="left:25%; animation-duration:5s; animation-delay:3.33s"></div>
+
+  <!-- Content — left-aligned -->
+  <div class="relative z-10 max-w-5xl mx-auto px-6 py-24 w-full">
+    <div class="max-w-lg">
+
+      <div class="flex text-xs gap-1.5 mb-10" style="color:rgba(255,255,255,0.35)">
+        <a href="../../../index.html" class="hover:text-gold transition-colors"
+           style="color:rgba(255,255,255,0.35)">Home</a>
+        <span>/</span>
+        <a href="../../../events.html" class="hover:text-gold transition-colors"
+           style="color:rgba(255,255,255,0.35)">Events</a>
+        <span>/</span>
+        <span style="color:rgba(255,255,255,0.6)">Sonic Belonging</span>
+      </div>
+
+      <div class="flex flex-wrap gap-2 mb-8">
+        <span style="font-size:0.65rem; font-weight:700; letter-spacing:0.12em; text-transform:uppercase;
+                     background:rgba(184,131,42,0.25); color:#d4a853;
+                     border:1px solid rgba(184,131,42,0.4); border-radius:999px; padding:0.35rem 1rem;">
+          Free Performance
+        </span>
+        <span style="font-size:0.65rem; font-weight:700; letter-spacing:0.12em; text-transform:uppercase;
+                     background:rgba(255,255,255,0.07); color:rgba(255,255,255,0.5);
+                     border:1px solid rgba(255,255,255,0.12); border-radius:999px; padding:0.35rem 1rem;">
+          4 June 2026
+        </span>
+      </div>
+
+      <h1 class="cormorant text-white mb-4"
+          style="font-size:clamp(3.5rem,8vw,6.5rem); font-weight:300; line-height:1.0; letter-spacing:-0.02em;">
+        Sonic<br>
+        <em style="font-style:italic; color:#d4a853;">Belonging</em>
+      </h1>
+
+      <p class="cormorant mb-6"
+         style="font-size:1.05rem; font-weight:300; color:rgba(255,255,255,0.55); letter-spacing:0.12em;">
+        A Free Traditional Chinese Music Performance
+      </p>
+
+      <div class="flex flex-wrap gap-4 mb-8" style="color:rgba(212,168,83,0.65); font-family:'Cormorant Garamond',serif; font-style:italic; font-size:1.15rem; font-weight:300; letter-spacing:0.04em;">
+        <span>古筝 guzheng</span>
+        <span style="color:rgba(255,255,255,0.15)">·</span>
+        <span>二胡 erhu</span>
+        <span style="color:rgba(255,255,255,0.15)">·</span>
+        <span>琵琶 pipa</span>
+        <span style="color:rgba(255,255,255,0.15)">·</span>
+        <span>笛子 dizi</span>
+      </div>
+
+      <div class="flex flex-wrap gap-3 mb-10">
+        <div class="px-4 py-2.5 rounded-xl text-sm"
+             style="background:rgba(255,255,255,0.07); border:1px solid rgba(255,255,255,0.1); color:#fff;">
+          <span style="color:rgba(212,168,83,0.7); font-size:0.65rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; display:block; margin-bottom:0.1rem;">Date & Time</span>
+          Thursday 4 June · 1:30 – 2:30 pm
+        </div>
+        <div class="px-4 py-2.5 rounded-xl text-sm"
+             style="background:rgba(255,255,255,0.07); border:1px solid rgba(255,255,255,0.1); color:#fff;">
+          <span style="color:rgba(212,168,83,0.7); font-size:0.65rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; display:block; margin-bottom:0.1rem;">Where</span>
+          Wellbeing Hub Lounge, University of Leeds
+        </div>
+      </div>
+
+      <div class="flex flex-wrap gap-3">
+        <a href="https://leeds365.sharepoint.com/sites/WellbeingSafetyandHealth/_layouts/15/Event.aspx?ListGuid=e67c0a3c-feb5-4ba0-b5d2-910a67ecf44a&ItemId=276"
+           target="_blank" class="register-pill">
+          Free
+        </a>
+        <a href="#about"
+           style="display:inline-flex; align-items:center; padding:0.9rem 1.5rem; border-radius:999px;
+                  border:1px solid rgba(255,255,255,0.18); color:rgba(255,255,255,0.65);
+                  font-size:0.9rem; text-decoration:none; transition:all 0.2s;"
+           onmouseover="this.style.borderColor='rgba(184,131,42,0.5)'; this.style.color='#d4a853'"
+           onmouseout="this.style.borderColor='rgba(255,255,255,0.18)'; this.style.color='rgba(255,255,255,0.65)'">
+          About the evening ↓
+        </a>
+      </div>
+
+      <p class="mt-4" style="font-size:0.7rem; color:rgba(255,255,255,0.25)">Drop in anytime 13:30–14:30</p>
+    </div>
+  </div>
+
+  <!-- Bottom fade -->
+  <div class="absolute bottom-0 left-0 right-0 h-32 pointer-events-none"
+       style="background:linear-gradient(to bottom, transparent, #faf7f2)"></div>
+</section>
+
+<!-- ══════════════════════════════════ ABOUT ══════════════════════════════════ -->
+<section id="about" class="py-24" style="background:#faf7f2;">
+  <div class="max-w-4xl mx-auto px-6">
+    <div class="md:grid md:grid-cols-5 md:gap-16 items-start fade-up">
+
+      <!-- Text: 3 cols -->
+      <div class="md:col-span-3 mb-12 md:mb-0">
+        <p style="font-size:0.7rem; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:#b8832a; margin-bottom:1rem;">About the Performance</p>
+        <h2 class="cormorant mb-6"
+            style="font-size:clamp(2rem,4vw,3rem); font-weight:400; line-height:1.15; color:#1c1410;">
+          A chance to slow down,<br>
+          <em>listen, and share time with others.</em>
+        </h2>
+        <div class="brush-divider mb-8"></div>
+        <p class="leading-relaxed mb-5" style="color:#5a4a3a; font-size:1rem;">
+          Come and enjoy a live performance of traditional Chinese music in the warm, relaxed setting of the Wellbeing Hub Lounge. You'll hear beautiful sounds from the guzheng, erhu, and pipa, and learn a little about the music and culture behind them.
+        </p>
+        <p class="leading-relaxed mb-5" style="color:#5a4a3a;">
+          This is a lunchtime event designed around rest and connection — a moment to step away from your desk, listen to something beautiful, and share a quiet hour with people from across the university.
+        </p>
+        <p class="leading-relaxed" style="color:#5a4a3a;">
+          Everyone is welcome. No background in music, no prior knowledge needed — just an open ear and an hour to spare.
+        </p>
+      </div>
+
+      <!-- Event image: 2 cols -->
+      <div class="md:col-span-2">
+        <div class="rounded-2xl overflow-hidden" style="background:#e8e0d4; aspect-ratio:3/4;">
+          
+          <img src="1000054693.jpg"
+               alt="Traditional Chinese instruments at a previous performance"
+               class="w-full h-full object-cover"
+               onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+          <div style="display:none; width:100%; height:100%; min-height:320px; align-items:center; justify-content:center; flex-direction:column; gap:0.75rem; color:#8a7060;">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.8">
+              <path d="M9 18V5l12-2v13M9 18a3 3 0 11-6 0 3 3 0 016 0zM21 16a3 3 0 11-6 0 3 3 0 016 0z"/>
+            </svg>
+            <span style="font-size:0.75rem; text-transform:uppercase; letter-spacing:0.08em;">Image</span>
+          </div>
+        </div>
+        <!-- HBN credit -->
+        <p style="font-size:0.7rem; color:#b8a898; margin-top:0.75rem; text-align:right;">
+          Supported by the Healthy Buildings Network, University of Leeds
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section style="background:#f2ede4; padding:0;">
+  <div class="grid grid-cols-2" style="gap:3px;">
+    <figure class="relative overflow-hidden" style="aspect-ratio:4/3;">
+      <img src="lijun_merion_far.jpg"
+           alt="Performers on stage — wide view"
+           class="w-full h-full object-cover transition-transform duration-700 hover:scale-105">
+    </figure>
+    <figure class="relative overflow-hidden" style="aspect-ratio:4/3;">
+      <img src="lijun_merion_close.jpg"
+           alt="Full stage — the ensemble performing"
+           class="w-full h-full object-cover transition-transform duration-700 hover:scale-105">
+    </figure>
+  </div>
+  <p style="font-size:0.7rem; color:#b8a898; text-align:right; padding:0.75rem 1.5rem 0;">
+    Traditional Chinese Music Performance · University of Leeds
+  </p>
+</section>
+
+<!-- ══════════════════════════════════ INSTRUMENTS ══════════════════════════════════ -->
+<section class="py-24" style="background:#f2ede4;">
+  <div class="max-w-4xl mx-auto px-6 fade-up">
+<p style="font-size:0.7rem; font-weight:700; letter-spacing:0.12em; text-transform:uppercase;
+           color:#b8832a; margin-bottom:1rem;">The Instruments</p>
+<h2 class="cormorant mb-12"
+    style="font-size:clamp(1.75rem,3.5vw,2.5rem); font-weight:400; color:#1c1410; line-height:1.2;">
+  Four voices, centuries of tradition.
+</h2>
+
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+
+  <!-- Guzheng -->
+  <figure class="group">
+    <div class="overflow-hidden rounded-xl mb-4" style="aspect-ratio:2/3; background:#e8e0d4;">
+      <img src="1000054691.jpg" alt="Guzheng"
+           class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+    </div>
+    <figcaption>
+      <p class="cormorant" style="font-size:1.35rem; font-weight:400; color:#1c1410; line-height:1.1;">
+        Guzheng <span style="color:#b8832a; font-style:italic;">古筝</span>
+      </p>
+      <p style="font-size:0.8rem; color:#8a7060; margin-top:0.4rem; line-height:1.5;">
+        A plucked zither with 21 strings — one of China's most recognisable voices, flowing and resonant.
+      </p>
+    </figcaption>
+  </figure>
+
+  <!-- Erhu -->
+  <figure class="group">
+    <div class="overflow-hidden rounded-xl mb-4" style="aspect-ratio:2/3; background:#e8e0d4;">
+      <img src="1000054688.jpg" alt="Erhu"
+           class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+    </div>
+    <figcaption>
+      <p class="cormorant" style="font-size:1.35rem; font-weight:400; color:#1c1410; line-height:1.1;">
+        Erhu <span style="color:#b8832a; font-style:italic;">二胡</span>
+      </p>
+      <p style="font-size:0.8rem; color:#8a7060; margin-top:0.4rem; line-height:1.5;">
+        A two-stringed fiddle with a voice so human it can carry both laughter and grief in a single note.
+      </p>
+    </figcaption>
+  </figure>
+
+  <!-- Pipa -->
+  <figure class="group">
+    <div class="overflow-hidden rounded-xl mb-4" style="aspect-ratio:2/3; background:#e8e0d4;">
+      <img src="1000054687.jpg" alt="Pipa"
+           class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+    </div>
+    <figcaption>
+      <p class="cormorant" style="font-size:1.35rem; font-weight:400; color:#1c1410; line-height:1.1;">
+        Pipa <span style="color:#b8832a; font-style:italic;">琵琶</span>
+      </p>
+      <p style="font-size:0.8rem; color:#8a7060; margin-top:0.4rem; line-height:1.5;">
+        A pear-shaped lute, arriving along the Silk Road — capable of storms and stillness in equal measure.
+      </p>
+    </figcaption>
+  </figure>
+
+  <!-- Dizi -->
+  <figure class="group">
+    <div class="overflow-hidden rounded-xl mb-4" style="aspect-ratio:2/3; background:#e8e0d4;">
+      <img src="1000054689.jpg" alt="Dizi"
+           class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+    </div>
+    <figcaption>
+      <p class="cormorant" style="font-size:1.35rem; font-weight:400; color:#1c1410; line-height:1.1;">
+        Dizi <span style="color:#b8832a; font-style:italic;">笛子</span>
+      </p>
+      <p style="font-size:0.8rem; color:#8a7060; margin-top:0.4rem; line-height:1.5;">
+        A transverse bamboo flute — bright, clear, and ancient. The sound most associated with open skies and rivers.
+      </p>
+    </figcaption>
+  </figure>
+
+</div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════ PRACTICAL ══════════════════════════════════ -->
+<section class="py-24" style="background:#faf7f2;">
+  <div class="max-w-4xl mx-auto px-6 fade-up">
+
+    <div class="md:grid md:grid-cols-2 md:gap-12">
+
+      <!-- Details -->
+      <div class="mb-10 md:mb-0">
+        <p style="font-size:0.7rem; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:#b8832a; margin-bottom:1rem;">Practical Details</p>
+        <h2 class="cormorant mb-8" style="font-size:2.25rem; font-weight:400; color:#1c1410; line-height:1.2;">
+          Come as you are.<br>Bring nothing but yourself.
+        </h2>
+
+        <div class="space-y-4 text-sm" style="color:#5a4a3a;">
+          <div class="flex gap-4 items-start p-4 rounded-xl" style="background:#f2ede4; border:1px solid rgba(184,131,42,0.15);">
+            <div style="flex-shrink:0; width:3rem; font-size:0.65rem; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; color:#b8832a; padding-top:0.1rem;">Date</div>
+            <div>Thursday 4 June 2026</div>
+          </div>
+          <div class="flex gap-4 items-start p-4 rounded-xl" style="background:#f2ede4; border:1px solid rgba(184,131,42,0.15);">
+            <div style="flex-shrink:0; width:3rem; font-size:0.65rem; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; color:#b8832a; padding-top:0.1rem;">Time</div>
+            <div>1:30 – 2:30 pm</div>
+          </div>
+          <div class="flex gap-4 items-start p-4 rounded-xl" style="background:#f2ede4; border:1px solid rgba(184,131,42,0.15);">
+            <div style="flex-shrink:0; width:3rem; font-size:0.65rem; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; color:#b8832a; padding-top:0.1rem;">Where</div>
+            <div>
+              <p class="font-semibold" style="color:#1c1410;">Wellbeing Hub Lounge</p>
+              <p>43 University Road, Leeds, LS2 9JZ</p>
+              <p style="color:#8a7060; margin-top:0.25rem; font-size:0.8rem;">Open weekdays 10:00 – 15:00</p>
+            </div>
+          </div>
+          <div class="flex gap-4 items-start p-4 rounded-xl" style="background:#f2ede4; border:1px solid rgba(184,131,42,0.15);">
+            <div style="flex-shrink:0; width:3rem; font-size:0.65rem; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; color:#b8832a; padding-top:0.1rem;">Cost</div>
+            <div>Free — no ticket needed</div>
+          </div>
+        </div>
+
+        <!-- W3W + Map links -->
+        <div class="flex flex-wrap gap-3 mt-6">
+          <a href="https://w3w.co/green.loud.define" target="_blank" class="w3w-pill">
+            <svg width="14" height="14" viewBox="0 0 100 100" fill="currentColor"><path d="M0 0h100v100H0z" fill="none"/><text y="80" font-size="80" font-weight="bold">///</text></svg>
+            green.loud.define
+          </a>
+          <a href="https://www.google.co.uk/maps/place/The+Wellbeing+Hub+for+Staff+Colleagues%2C+University+of%2C+43+University+Rd%2C+Woodhouse%2C+Leeds+LS2+9JZ"
+             target="_blank"
+             style="display:inline-flex; align-items:center; gap:0.4rem; font-size:0.75rem; font-weight:600;
+                    color:#5a4a3a; border:1px solid rgba(90,74,58,0.25); border-radius:999px; padding:0.35rem 0.85rem;
+                    text-decoration:none; transition:border-color 0.2s;"
+             onmouseover="this.style.borderColor='#b8832a'; this.style.color='#b8832a'"
+             onmouseout="this.style.borderColor='rgba(90,74,58,0.25)'; this.style.color='#5a4a3a'">
+            Google Maps →
+          </a>
+          <a href="http://www.leeds.ac.uk/campusmap?location=17499" target="_blank"
+             style="display:inline-flex; align-items:center; gap:0.4rem; font-size:0.75rem; font-weight:600;
+                    color:#5a4a3a; border:1px solid rgba(90,74,58,0.25); border-radius:999px; padding:0.35rem 0.85rem;
+                    text-decoration:none; transition:border-color 0.2s;"
+             onmouseover="this.style.borderColor='#b8832a'; this.style.color='#b8832a'"
+             onmouseout="this.style.borderColor='rgba(90,74,58,0.25)'; this.style.color='#5a4a3a'">
+            Campus Map →
+          </a>
+        </div>
+      </div>
+
+      <!-- Map -->
+      <div>
+        <div class="rounded-2xl overflow-hidden border" style="border-color:rgba(184,131,42,0.2); aspect-ratio:1;">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1178!2d-1.5583899!3d53.8076648!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48795ea95254cc23%3A0x93f010fc866e60a1!2sThe%20Wellbeing%20Hub%20for%20Staff%20Colleagues%2C%20University%20of%2C%2043%20University%20Rd%2C%20Woodhouse%2C%20Leeds%20LS2%209JZ!5e0!3m2!1sen!2suk!4v1748000000000"
+            width="100%" height="100%" style="border:0; min-height:320px;" allowfullscreen loading="lazy"
+            title="The Wellbeing Hub, 43 University Road, Leeds">
+          </iframe>
+        </div>
+
+        <!-- Good to know -->
+        <div class="mt-5 p-5 rounded-xl" style="background:#f2ede4; border-left:3px solid #b8832a;">
+          <p style="font-size:0.7rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:#b8832a; margin-bottom:0.75rem;">Good to know</p>
+          <ul class="space-y-1.5 text-sm" style="color:#6a5040;">
+            <li>No music knowledge or experience needed</li>
+            <li>Nothing to bring — just yourself</li>
+            <li>A relaxed, drop-in atmosphere</li>
+            <li>Part of the University's Wellbeing programme</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════ CTA ══════════════════════════════════ -->
+<section class="py-24 relative overflow-hidden"
+         style="background: linear-gradient(135deg, #1c1410 0%, #2a1a0e 100%);">
+
+  <!-- Ripple, single slow one -->
+  <div class="ripple-ring" style="animation-duration:8s; border-color:rgba(184,131,42,0.15)"></div>
+
+  <div class="relative z-10 max-w-2xl mx-auto px-6 text-center fade-up">
+    <p class="cormorant mb-4"
+       style="font-size:0.85rem; letter-spacing:0.2em; text-transform:uppercase; color:rgba(212,168,83,0.7);">
+       Thursday 4 June · 1:30 pm
+    </p>
+    <h2 class="cormorant text-white mb-4"
+        style="font-size:clamp(2.5rem,5vw,4rem); font-weight:300; line-height:1.1; letter-spacing:-0.01em;">
+      An hour of music.<br>
+      <em style="color:#d4a853;">A moment of belonging.</em>
+    </h2>
+    <p class="mb-10" style="color:rgba(255,255,255,0.5); font-size:0.95rem;">
+      Wellbeing Hub Lounge · 43 University Road · University of Leeds
+    </p>
+    <a href="https://leeds365.sharepoint.com/sites/WellbeingSafetyandHealth/_layouts/15/Event.aspx?ListGuid=e67c0a3c-feb5-4ba0-b5d2-910a67ecf44a&ItemId=276"
+       target="_blank" class="register-pill" style="font-size:1rem; padding:1.1rem 2.5rem;">
+      No Need to Register — it's free
+    </a>
+    <p style="color:rgba(255,255,255,0.25); font-size:0.75rem; margin-top:1.25rem;">
+      Supported by the Healthy Buildings Network, University of Leeds
+    </p>
+
+    <!-- Contact -->
+    <p style="color:rgba(255,255,255,0.3); font-size:0.75rem; margin-top:0.75rem;">
+      Questions? <a href="mailto:healthy_buildings_network@leeds.ac.uk"
+                    style="color:rgba(212,168,83,0.6); text-decoration:none;"
+                    onmouseover="this.style.color='#d4a853'"
+                    onmouseout="this.style.color='rgba(212,168,83,0.6)'">
+        healthy_buildings_network@leeds.ac.uk
+      </a>
+    </p>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════ FOOTER ══════════════════════════════════ -->
+<footer class="bg-gray-800 text-white py-12">
+  <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8">
+    <div>
+      <img src="../../../assets/images/hbn_landscape.png" alt="HBN Leeds"
+           class="h-10 mb-3" style="filter:brightness(0) invert(1); opacity:0.7;"
+           onerror="this.style.display='none'">
+      <p class="text-sm text-gray-300 leading-relaxed">
+        A cross-disciplinary research and collaboration hub at the University of Leeds, focused on healthier, more sustainable built environments.
+      </p>
+      <div class="flex gap-4 mt-4 text-sm">
+        <a href="https://www.linkedin.com/company/healthy-buildings-network/" target="_blank" class="text-gray-400 hover:text-hbnGreen transition-colors">LinkedIn</a>
+        <a href="mailto:healthy_buildings_network@leeds.ac.uk" class="text-gray-400 hover:text-hbnGreen transition-colors">Email</a>
+      </div>
+    </div>
+    <div>
+      <h4 class="font-bold mb-4 text-sm uppercase tracking-wider text-gray-400">Quick Links</h4>
+      <ul class="space-y-2 text-sm">
+        <li><a href="../../../index.html"    class="text-gray-300 hover:text-hbnGreen transition-colors">Home</a></li>
+        <li><a href="../../../about.html"    class="text-gray-300 hover:text-hbnGreen transition-colors">About</a></li>
+        <li><a href="../../../projects.html" class="text-gray-300 hover:text-hbnGreen transition-colors">Projects</a></li>
+        <li><a href="../../../events.html"   class="text-gray-300 hover:text-hbnGreen transition-colors">Events</a></li>
+        <li><a href="../../../contact.html"  class="text-gray-300 hover:text-hbnGreen transition-colors">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4 class="font-bold mb-4 text-sm uppercase tracking-wider text-gray-400">Affiliations</h4>
+      <ul class="space-y-2 text-sm">
+        <li><a href="https://fluids.leeds.ac.uk"  target="_blank" class="text-gray-300 hover:text-hbnGreen transition-colors">Leeds Institute for Fluid Dynamics</a></li>
+        <li><a href="https://lssi.leeds.ac.uk"    target="_blank" class="text-gray-300 hover:text-hbnGreen transition-colors">Leeds Social Sciences Institute</a></li>
+        <li><a href="https://lida.leeds.ac.uk/"   target="_blank" class="text-gray-300 hover:text-hbnGreen transition-colors">Leeds Institute for Data Analytics</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="max-w-6xl mx-auto px-6 pt-8 mt-8 border-t border-gray-700 text-xs text-center text-gray-500">
+    <p>© 2026 Healthy Buildings Network Leeds. All rights reserved.</p>
+    <p class="mt-1">University of Leeds, Leeds LS2 9JT, United Kingdom</p>
+  </div>
+</footer>
+
+
+<script>
+  // Mobile menu
+  document.getElementById('mobile-menu-button').addEventListener('click', () => {
+    document.getElementById('mobile-menu').classList.toggle('hidden');
+  });
+
+  // Sticky CTA
+  const stickyReg = document.getElementById('sticky-reg');
+  const hero = document.querySelector('section');
+  const obs = new IntersectionObserver(([e]) => {
+    stickyReg.classList.toggle('visible', !e.isIntersecting);
+  }, { threshold: 0 });
+  obs.observe(hero);
+
+  // Fade-up on scroll
+  const fadeEls = document.querySelectorAll('.fade-up');
+  const fadeObs = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.1 });
+  fadeEls.forEach(el => fadeObs.observe(el));
+</script>
+
+</body>
+</html>
