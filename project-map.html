@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            hbnGreen: '#4e9317',
+            hbnPurple: '#8360a9',
+            hbnGray: '#808184',
+            hbnYellow: '#ffca29',
+            hbnBlue: '#3e95dd',
+          }
+        }
+      }
+    };
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Explore an interactive map of healthy building projects across Leeds and the surrounding areas, showcasing innovative research and implementation by the Healthy Buildings Network Leeds.">
+  <title>Project Map | Healthy Buildings Network Leeds</title>
+  
+  <link rel="icon" href="assets/images/hbn_fav.ico" type="image/x-icon"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css" />
+  
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+  
+  <!-- Leaflet JS -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  
+  <!-- MarkerCluster for grouping nearby markers -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.Default.css" />
+  <script src="https://unpkg.com/leaflet.markercluster@1.4.1/dist/leaflet.markercluster.js"></script>
+  
+  <style>
+    #map {
+      height: 600px;
+      width: 100%;
+      border-radius: 0.5rem;
+    }
+    
+    .marker-cluster-small {
+      background-color: rgba(78, 147, 23, 0.6);
+    }
+    .marker-cluster-small div {
+      background-color: rgba(78, 147, 23, 0.8);
+    }
+
+    .marker-cluster-medium {
+      background-color: rgba(131, 96, 169, 0.6);
+    }
+    .marker-cluster-medium div {
+      background-color: rgba(131, 96, 169, 0.8);
+    }
+
+    .marker-cluster-large {
+      background-color: rgba(62, 149, 221, 0.6);
+    }
+    .marker-cluster-large div {
+      background-color: rgba(62, 149, 221, 0.8);
+    }
+    
+    .marker-cluster div {
+      color: white;
+      font-weight: bold;
+    }
+    
+    .project-popup .leaflet-popup-content-wrapper {
+      border-radius: 8px;
+      box-shadow: 0 3px 14px rgba(0,0,0,0.2);
+    }
+    
+    .project-popup .leaflet-popup-content {
+      margin: 12px 20px;
+      min-width: 250px;
+    }
+    
+    .project-popup .leaflet-popup-tip-container {
+      margin-top: -1px;
+    }
+    
+    .legend {
+      background: white;
+      padding: 8px 12px;
+      border-radius: 4px;
+      box-shadow: 0 1px 5px rgba(0,0,0,0.2);
+      line-height: 1.8;
+    }
+    
+    .legend i {
+      display: inline-block;
+      width: 16px;
+      height: 16px;
+      margin-right: 8px;
+      vertical-align: middle;
+      border-radius: 50%;
+    }
+    
+    .filters {
+      background: white;
+      padding: 8px 12px;
+      border-radius: 4px;
+      box-shadow: 0 1px 5px rgba(0,0,0,0.2);
+    }
+    
+    .filters label {
+      display: block;
+      margin-bottom: 4px;
+    }
+  </style>
+</head>
+<body class="font-poppins">
+
+  <!-- Header / Navbar -->
+  <header class="bg-white shadow-md fixed w-full z-50">
+    <div class="container mx-auto px-6 flex justify-between items-center h-20">
+      <!-- Logo -->
+      <div class="flex-shrink-0">
+        <a href="index.html">
+          <img src="assets/images/hbn_landscape.png" alt="Healthy Buildings Network Leeds Logo" class="h-12">
+        </a>
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <button class="md:hidden text-gray-600 hover:text-hbnGreen focus:outline-none" id="mobile-menu-button" aria-label="Open Menu">
+        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+
+      <!-- Navigation -->
+      <nav class="hidden md:flex space-x-8" id="main-nav">
+        <a href="index.html" class="text-gray-600 hover:text-hbnGreen font-medium transition-colors">Home</a>
+        <a href="about.html" class="text-gray-600 hover:text-hbnGreen font-medium transition-colors">About Us</a>
+        <a href="blog.html" class="text-gray-600 hover:text-hbnGreen font-medium transition-colors">Blog</a>
+        <a href="events.html" class="text-gray-600 hover:text-hbnGreen font-medium transition-colors">Events</a>
+        <a href="projects.html" class="text-gray-600 hover:text-hbnGreen font-medium transition-colors">Projects</a>
+        <a href="project-map.html" class="text-hbnGreen font-medium transition-colors">Project Map</a>
+        <a href="membership.html" class="text-gray-600 hover:text-hbnGreen font-medium transition-colors">Membership</a>
+        <a href="contact.html" class="text-gray-600 hover:text-hbnGreen font-medium transition-colors">Contact</a>
+      </nav>
+    </div>
+    
+    <!-- Mobile Navigation (Hidden by default) -->
+    <div class="md:hidden hidden bg-white w-full shadow-md" id="mobile-menu">
+      <div class="px-6 py-4 space-y-4">
+        <a href="index.html" class="block text-gray-600 hover:text-hbnGreen font-medium">Home</a>
+        <a href="about.html" class="block text-gray-600 hover:text-hbnGreen font-medium">About Us</a>
+        <a href="blog.html" class="block text-gray-600 hover:text-hbnGreen font-medium">Blog</a>
+        <a href="events.html" class="block text-gray-600 hover:text-hbnGreen font-medium">Events</a>
+        <a href="projects.html" class="block text-gray-600 hover:text-hbnGreen font-medium">Projects</a>
+        <a href="project-map.html" class="block text-hbnGreen font-medium">Project Map</a>
+        <a href="membership.html" class="block text-gray-600 hover:text-hbnGreen font-medium">Membership</a>
+        <a href="contact.html" class="block text-gray-600 hover:text-hbnGreen font-medium">Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Scroll-to-top button -->
+  <button id="scrollToTopBtn" class="fixed bottom-5 right-5 bg-hbnGreen text-white p-3 rounded-full shadow-md hidden z-50" aria-label="Scroll to top">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18" />
+    </svg>
+  </button>
+
+  <!-- Hero Section -->
+  <section class="pt-20 bg-gradient-to-r from-hbnBlue to-hbnPurple text-white">
+    <div class="container mx-auto px-6 py-16 max-w-6xl">
+      <div class="text-center max-w-3xl mx-auto">
+        <h1 class="text-4xl md:text-5xl font-bold mb-6">Healthy Building Projects Map</h1>
+        <p class="text-xl opacity-90 mb-8">
+          Explore healthy building projects and initiatives across Leeds and beyond. Discover how our network is transforming the built environment through innovative research and practical implementations.
+        </p>
+      </div>
+    </div>
+    <!-- Wave divider -->
+    <div class="wave-divider">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 100" fill="#ffffff" preserveAspectRatio="none">
+        <path d="M0,0 C240,95 480,100 720,80 C960,60 1200,0 1440,40 L1440,100 L0,100 Z"></path>
+      </svg>
+    </div>
+  </section>
+
+  <!-- Map Section -->
+  <section class="py-16 bg-white">
+    <div class="container mx-auto px-6 max-w-6xl">
+      <div class="mb-8">
+        <h2 class="text-3xl font-bold mb-6">Interactive Project Map</h2>
+        <p class="text-gray-600 mb-6">
+          This map shows the locations of various healthy building projects, research sites, and collaborating organizations within the Healthy Buildings Network. Click on the markers to learn more about each project.
+        </p>
+        
+        <!-- Map Filters -->
+        <div class="bg-gray-50 rounded-lg p-6 mb-6 shadow-sm">
+          <h3 class="text-xl font-bold mb-4">Filter Projects</h3>
+          <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+            <div>
+              <h4 class="font-semibold mb-2">Project Type</h4>
+              <div class="space-y-2">
+                <label class="flex items-center">
+                  <input type="checkbox" class="filter-checkbox rounded text-hbnGreen focus:ring-hbnGreen h-4 w-4" data-filter="type" data-value="research" checked>
+                  <span class="ml-2 text-gray-700">Research Projects</span>
+                </label>
+                <label class="flex items-center">
+                  <input type="checkbox" class="filter-checkbox rounded text-hbnGreen focus:ring-hbnGreen h-4 w-4" data-filter="type" data-value="implementation" checked>
+                  <span class="ml-2 text-gray-700">Implementation Sites</span>
+                </label>
+                <label class="flex items-center">
+                  <input type="checkbox" class="filter-checkbox rounded text-hbnGreen focus:ring-hbnGreen h-4 w-4" data-filter="type" data-value="partner" checked>
+                  <span class="ml-2 text-gray-700">Partner Organizations</span>
+                </label>
+              </div>
+            </div>
+            
+            <div>
+              <h4 class="font-semibold mb-2">Focus Area</h4>
+              <div class="space-y-2">
+                <label class="flex items-center">
+                  <input type="checkbox" class="filter-checkbox rounded text-hbnGreen focus:ring-hbnGreen h-4 w-4" data-filter="focus" data-value="air-quality" checked>
+                  <span class="ml-2 text-gray-700">Air Quality</span>
+                </label>
+                <label class="flex items-center">
+                  <input type="checkbox" class="filter-checkbox rounded text-hbnGreen focus:ring-hbnGreen h-4 w-4" data-filter="focus" data-value="thermal-comfort" checked>
+                  <span class="ml-2 text-gray-700">Thermal Comfort</span>
+                </label>
+                <label class="flex items-center">
+                  <input type="checkbox" class="filter-checkbox rounded text-hbnGreen focus:ring-hbnGreen h-4 w-4" data-filter="focus" data-value="building-materials" checked>
+                  <span class="ml-2 text-gray-700">Building Materials</span>
+                </label>
+              </div>
+            </div>
+            
+            <div>
+              <h4 class="font-semibold mb-2">Building Type</h4>
+              <div class="space-y-2">
+                <label class="flex items-center">
+                  <input type="checkbox" class="filter-checkbox rounded text-hbnGreen focus:ring-hbnGreen h-4 w-4" data-filter="building" data-value="residential" checked>
+                  <span class="ml-2 text-gray-700">Residential</span>
+                </label>
+                <label class="flex items-center">
+                  <input type="checkbox" class="filter-checkbox rounded text-hbnGreen focus:ring-hbnGreen h-4 w-4" data-filter="building" data-value="commercial" checked>
+                  <span class="ml-2 text-gray-700">Commercial</span>
+                </label>
+                <label class="flex items-center">
+                  <input type="checkbox" class="filter-checkbox rounded text-hbnGreen focus:ring-hbnGreen h-4 w-4" data-filter="building" data-value="educational" checked>
+                  <span class="ml-2 text-gray-700">Educational</span>
+                </label>
+                <label class="flex items-center">
+                  <input type="checkbox" class="filter-checkbox rounded text-hbnGreen focus:ring-hbnGreen h-4 w-4" data-filter="building" data-value="healthcare" checked>
+                  <span class="ml-2 text-gray-700">Healthcare</span>
+                </label>
+              </div>
+            </div>
+            
+            <div>
+              <h4 class="font-semibold mb-2">Status</h4>
+              <div class="space-y-2">
+                <label class="flex items-center">
+                  <input type="checkbox" class="filter-checkbox rounded text-hbnGreen focus:ring-hbnGreen h-4 w-4" data-filter="status" data-value="active" checked>
+                  <span class="ml-2 text-gray-700">Active</span>
+                </label>
+                <label class="flex items-center">
+                  <input type="checkbox" class="filter-checkbox rounded text-hbnGreen focus:ring-hbnGreen h-4 w-4" data-filter="status" data-value="completed" checked>
+                  <span class="ml-2 text-gray-700">Completed</span>
+                </label>
+                <label class="flex items-center">
+                  <input type="checkbox" class="filter-checkbox rounded text-hbnGreen focus:ring-hbnGreen h-4 w-4" data-filter="status" data-value="planned" checked>
+                  <span class="ml-2 text-gray-700">Planned</span>
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Map Container -->
+      <div id="map-container" class="relative mb-8">
+        <div id="map" class="shadow-lg"></div>
+        <!-- Loading Indicator -->
+        <div id="map-loading" class="absolute inset-0 flex items-center justify-center bg-white bg-opacity-80 z-10">
+          <div class="text-center">
+            <svg class="animate-spin h-10 w-10 text-hbnGreen mx-auto mb-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+              <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+              <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+            </svg>
+            <p>Loading map data...</p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Legend & Info -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="bg-gray-50 rounded-lg p-6 shadow-sm">
+          <h3 class="text-xl font-bold mb-4">Map Legend</h3>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <h4 class="font-semibold mb-2">Project Type</h4>
+              <ul class="space-y-2">
+                <li class="flex items-center">
+                  <span class="w-4 h-4 rounded-full bg-hbnGreen mr-2"></span>
+                  <span>Research Projects</span>
+                </li>
+                <li class="flex items-center">
+                  <span class="w-4 h-4 rounded-full bg-hbnPurple mr-2"></span>
+                  <span>Implementation Sites</span>
+                </li>
+                <li class="flex items-center">
+                  <span class="w-4 h-4 rounded-full bg-hbnBlue mr-2"></span>
+                  <span>Partner Organizations</span>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h4 class="font-semibold mb-2">Status</h4>
+              <ul class="space-y-2">
+                <li class="flex items-center">
+                  <span class="border-2 border-green-500 w-4 h-4 rounded-full mr-2"></span>
+                  <span>Active</span>
+                </li>
+                <li class="flex items-center">
+                  <span class="border-2 border-blue-500 w-4 h-4 rounded-full mr-2"></span>
+                  <span>Completed</span>
+                </li>
+                <li class="flex items-center">
+                  <span class="border-2 border-yellow-500 w-4 h-4 rounded-full mr-2"></span>
+                  <span>Planned</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        
+        <div class="bg-gray-50 rounded-lg p-6 shadow-sm">
+          <h3 class="text-xl font-bold mb-4">Project Distribution</h3>
+          <p class="mb-4">
+            The Healthy Buildings Network has <span id="project-count" class="font-bold">15</span> projects and partnerships across Leeds and the surrounding areas, focusing on different aspects of healthy building research and implementation.
+          </p>
+          <div class="grid grid-cols-3 gap-4 text-center">
+            <div>
+              <div class="text-3xl font-bold text-hbnGreen">5</div>
+              <p class="text-sm text-gray-600">Research Projects</p>
+            </div>
+            <div>
+              <div class="text-3xl font-bold text-hbnPurple">6</div>
+              <p class="text-sm text-gray-600">Implementation Sites</p>
+            </div>
+            <div>
+              <div class="text-3xl font-bold text-hbnBlue">4</div>
+              <p class="text-sm text-gray-600">Partner Organizations</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Projects Section -->
+  <section class="py-16 bg-gray-50">
+    <div class="container mx-auto px-6 max-w-6xl">
+      <h2 class="text-3xl font-bold mb-10 text-center">Featured Projects</h2>
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Featured Project 1 -->
+        <div class="bg-white rounded-lg shadow-md overflow-hidden">
+          <img src="assets/images/featured_project_1.jpg" alt="ThermoAge Project" class="w-full h-48 object-cover">
+          <div class="p-6">
+            <div class="flex justify-between items-center mb-4">
+              <span class="px-3 py-1 bg-hbnPurple text-white text-sm rounded-full">Implementation</span>
+              <span class="text-sm text-gray-500">Active</span>
+            </div>
+            <h3 class="font-bold text-xl mb-2">ThermoAge Project</h3>
+            <p class="text-gray-600 mb-4">Investigating thermal comfort needs across different age groups in residential settings, with a focus on energy efficiency and occupant wellbeing.</p>
+            <a href="projects/thermoage.html" class="text-hbnGreen hover:underline inline-flex items-center">
+              <span>View Project</span>
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+              </svg>
+            </a>
+          </div>
+        </div>
+        
+        <!-- Featured Project 2 -->
+        <div class="bg-white rounded-lg shadow-md overflow-hidden">
+          <img src="assets/images/featured_project_2.jpg" alt="Living in Clover" class="w-full h-48 object-cover">
+          <div class="p-6">
+            <div class="flex justify-between items-center mb-4">
+              <span class="px-3 py-1 bg-hbnGreen text-white text-sm rounded-full">Research</span>
+              <span class="text-sm text-gray-500">Active</span>
+            </div>
+            <h3 class="font-bold text-xl mb-2">Living in Clover</h3>
+            <p class="text-gray-600 mb-4">Exploring natural building materials derived from agricultural waste and their impact on indoor air quality and occupant health.</p>
+            <a href="projects/living-in-clover.html" class="text-hbnGreen hover:underline inline-flex items-center">
+              <span>View Project</span>
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+              </svg>
+            </a>
+          </div>
+        </div>
+        
+        <!-- Featured Project 3 -->
+        <div class="bg-white rounded-lg shadow-md overflow-hidden">
+          <img src="assets/images/featured_project_3.jpg" alt="CloverLeaf" class="w-full h-48 object-cover">
+          <div class="p-6">
+            <div class="flex justify-between items-center mb-4">
+              <span class="px-3 py-1 bg-hbnPurple text-white text-sm rounded-full">Implementation</span>
+              <span class="text-sm text-gray-500">Active</span>
+            </div>
+            <h3 class="font-bold text-xl mb-2">CloverLeaf</h3>
+            <p class="text-gray-600 mb-4">Retrofitting social housing to improve health outcomes while reducing energy consumption through innovative, low-cost interventions.</p>
+            <a href="projects/cloverleaf.html" class="text-hbnGreen hover:underline inline-flex items-center">
+              <span>View Project</span>
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Add Project CTA Section -->
+  <section class="py-16 bg-white">
+    <div class="container mx-auto px-6 max-w-3xl text-center">
+      <h2 class="text-3xl font-bold mb-6">Is Your Project Missing?</h2>
+      <p class="text-gray-600 mb-8">
+        If you're working on a healthy building project in Leeds or the surrounding areas and would like to be featured on our map, we'd love to hear from you. Contact us with details about your project and we'll consider adding it to our interactive map.
+      </p>
+      <a href="contact.html" class="inline-block px-8 py-4 bg-hbnGreen text-white rounded-full hover:bg-green-700 transition-colors shadow-md">
+        Submit Your Project
+      </a>
+    </div>
+  </section>
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white">
+    <div class="container mx-auto px-6 py-12">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <!-- Contact Info -->
+        <div>
+          <h3 class="text-lg font-bold mb-4">Contact Us</h3>
+          <p class="mb-2">Healthy Buildings Network Leeds</p>
+          <p class="mb-2">University of Leeds</p>
+          <p class="mb-2">Leeds, LS2 9JT</p>
+          <p>Email: info@hbnleeds.org</p>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+          <h3 class="text-lg font-bold mb-4">Quick Links</h3>
+          <ul class="space-y-2">
+            <li><a href="about.html" class="hover:text-hbnGreen">About Us</a></li>
+            <li><a href="projects.html" class="hover:text-hbnGreen">Projects</a></li>
+            <li><a href="events.html" class="hover:text-hbnGreen">Events</a></li>
+            <li><a href="membership.html" class="hover:text-hbnGreen">Join Us</a></li>
+          </ul>
+        </div>
+
+        <!-- Social Links -->
+        <div>
+          <h3 class="text-lg font-bold mb-4">Follow Us</h3>
+          <div class="flex space-x-4">
+            <a href="#" class="hover:text-hbnGreen"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="hover:text-hbnGreen"><i class="fab fa-linkedin"></i></a>
+            <a href="#" class="hover:text-hbnGreen"><i class="fab fa-facebook"></i></a>
+          </div>
+        </div>
+
+        <!-- Newsletter -->
+        <div>
+          <h3 class="text-lg font-bold mb-4">Newsletter</h3>
+          <p class="mb-4">Subscribe for updates about healthy building initiatives</p>
+          <form class="flex">
+            <input type="email" placeholder="Enter your email" class="px-4 py-2 rounded-l text-gray-800 w-full">
+            <button type="submit" class="bg-hbnGreen px-4 py-2 rounded-r hover:bg-green-700">Sign Up</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="border-t border-gray-700 mt-8 pt-8 text-center">
+        <p>&copy; 2024 Healthy Buildings Network Leeds. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

@@ -191,11 +191,11 @@
 <body class="font-poppins antialiased text-gray-700">
   <div class="bg-hbnGreen text-white text-center py-2 px-4 text-sm font-medium fixed w-full z-[60] top-0"
      id="announcement-bar">
-  🎉 HBN Showcase Event — 2 July 2026 — Free registration now open!
-    <a href="events/conferences/hbn-showcase-2026.html" class="underline ml-2 font-semibold hover:text-hbnYellow">
-      View details →
+    Next event: Clear the Air workshop — 18 June 2026, 6–8 pm, Imagine Leeds.
+    <a href="events/workshops/cleanair/clean-air-day-workshop.html" class="underline ml-2 font-semibold hover:text-hbnYellow">
+      Register free →
     </a>
-    <button onclick="this.parentElement.remove(); document.querySelector('header').style.top='0px';" 
+    <button onclick="this.parentElement.remove(); document.querySelector('header').style.top='0px';"
             class="ml-4 opacity-70 hover:opacity-100" aria-label="Dismiss announcement">✕</button>
   </div>
   <!-- Skip to main content link for accessibility -->
@@ -387,37 +387,43 @@
         </p>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
           <!-- Research Card -->
-          <article class="bg-gray-50 p-6 rounded-xl shadow hover:shadow-lg transition-shadow duration-300 group">
-            <div class="text-hbnPurple mb-4">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 mx-auto group-hover:scale-110 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
-              </svg>
-            </div>
-            <h3 class="text-xl font-semibold mb-2 text-gray-800">Research</h3>
-            <p class="text-gray-600">Facilitating cross-disciplinary research on healthy buildings through our pump-priming projects and collaborations.</p>
-          </article>
-          
+          <a href="projects.html" class="block group focus:outline-none focus:ring-4 focus:ring-hbnPurple/50 rounded-xl">
+            <article class="bg-gray-50 p-6 rounded-xl shadow group-hover:shadow-lg transition-shadow duration-300 h-full">
+              <div class="text-hbnPurple mb-4">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 mx-auto group-hover:scale-110 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
+                </svg>
+              </div>
+              <h3 class="text-xl font-semibold mb-2 text-gray-800 group-hover:text-hbnPurple transition-colors">Research</h3>
+              <p class="text-gray-600">Facilitating cross-disciplinary research on healthy buildings through our pump-priming projects and collaborations.</p>
+            </article>
+          </a>
+
           <!-- Events Card -->
-          <article class="bg-gray-50 p-6 rounded-xl shadow hover:shadow-lg transition-shadow duration-300 group">
-            <div class="text-hbnBlue mb-4">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 mx-auto group-hover:scale-110 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
-              </svg>
-            </div>
-            <h3 class="text-xl font-semibold mb-2 text-gray-800">Events</h3>
-            <p class="text-gray-600">Hosting seminars, workshops, and conferences to share knowledge and foster dialogue on healthy building practices.</p>
-          </article>
-          
+          <a href="events.html" class="block group focus:outline-none focus:ring-4 focus:ring-hbnBlue/50 rounded-xl">
+            <article class="bg-gray-50 p-6 rounded-xl shadow group-hover:shadow-lg transition-shadow duration-300 h-full">
+              <div class="text-hbnBlue mb-4">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 mx-auto group-hover:scale-110 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
+                </svg>
+              </div>
+              <h3 class="text-xl font-semibold mb-2 text-gray-800 group-hover:text-hbnBlue transition-colors">Events</h3>
+              <p class="text-gray-600">Hosting seminars, workshops, and conferences to share knowledge and foster dialogue on healthy building practices.</p>
+            </article>
+          </a>
+
           <!-- Collaboration Card -->
-          <article class="bg-gray-50 p-6 rounded-xl shadow hover:shadow-lg transition-shadow duration-300 group">
-            <div class="text-hbnGreen mb-4">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 mx-auto group-hover:scale-110 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z"/>
-              </svg>
-            </div>
-            <h3 class="text-xl font-semibold mb-2 text-gray-800">Collaboration</h3>
-            <p class="text-gray-600">Building bridges between academia, industry, local government, and communities to implement evidence-based solutions.</p>
-          </article>
+          <a href="membership.html" class="block group focus:outline-none focus:ring-4 focus:ring-hbnGreen/50 rounded-xl">
+            <article class="bg-gray-50 p-6 rounded-xl shadow group-hover:shadow-lg transition-shadow duration-300 h-full">
+              <div class="text-hbnGreen mb-4">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 mx-auto group-hover:scale-110 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z"/>
+                </svg>
+              </div>
+              <h3 class="text-xl font-semibold mb-2 text-gray-800 group-hover:text-hbnGreen transition-colors">Collaboration</h3>
+              <p class="text-gray-600">Building bridges between academia, industry, local government, and communities to implement evidence-based solutions.</p>
+            </article>
+          </a>
         </div>
       </div>
     </section>
@@ -428,10 +434,10 @@
         <h2 id="healthy-buildings-heading" class="section-title text-center mb-16">What Are Healthy Buildings?</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
           
-          <a href="health.html" class="block group focus:outline-none focus:ring-4 focus:ring-hbnGreen/50 rounded-xl">
+          <a href="blog/healthy-buildings-definition.html" class="block group focus:outline-none focus:ring-4 focus:ring-hbnGreen/50 rounded-xl">
             <article class="bg-white p-8 rounded-xl shadow-lg group-hover:shadow-xl transition-all duration-300 h-full group-hover:-translate-y-1">
-              <img src="assets/images/card_health.jpg" 
-                   alt="Person experiencing wellbeing in a healthy indoor environment" 
+              <img src="assets/images/card_health.jpg"
+                   alt="Person experiencing wellbeing in a healthy indoor environment"
                    class="w-full h-48 object-cover rounded-lg mb-6"
                    loading="lazy"
                    width="400"
@@ -441,10 +447,10 @@
             </article>
           </a>
 
-          <a href="sustainability.html" class="block group focus:outline-none focus:ring-4 focus:ring-hbnGreen/50 rounded-xl">
+          <a href="projects.html" class="block group focus:outline-none focus:ring-4 focus:ring-hbnGreen/50 rounded-xl">
             <article class="bg-white p-8 rounded-xl shadow-lg group-hover:shadow-xl transition-all duration-300 h-full group-hover:-translate-y-1">
-              <img src="assets/images/card_sustainability.jpg" 
-                   alt="Sustainable building with green features and energy efficiency" 
+              <img src="assets/images/card_sustainability.jpg"
+                   alt="Sustainable building with green features and energy efficiency"
                    class="w-full h-48 object-cover rounded-lg mb-6"
                    loading="lazy"
                    width="400"
@@ -454,10 +460,10 @@
             </article>
           </a>
 
-          <a href="innovation.html" class="block group focus:outline-none focus:ring-4 focus:ring-hbnGreen/50 rounded-xl">
+          <a href="projects.html#ecr-projects" class="block group focus:outline-none focus:ring-4 focus:ring-hbnGreen/50 rounded-xl">
             <article class="bg-white p-8 rounded-xl shadow-lg group-hover:shadow-xl transition-all duration-300 h-full group-hover:-translate-y-1">
-              <img src="assets/images/card_innovation.jpg" 
-                   alt="Innovative building technology and smart building systems" 
+              <img src="assets/images/card_innovation.jpg"
+                   alt="Innovative building technology and smart building systems"
                    class="w-full h-48 object-cover rounded-lg mb-6"
                    loading="lazy"
                    width="400"
@@ -467,10 +473,10 @@
             </article>
           </a>
 
-          <a href="design.html" class="block group focus:outline-none focus:ring-4 focus:ring-hbnGreen/50 rounded-xl">
+          <a href="projects/human-centered-housing.html" class="block group focus:outline-none focus:ring-4 focus:ring-hbnGreen/50 rounded-xl">
             <article class="bg-white p-8 rounded-xl shadow-lg group-hover:shadow-xl transition-all duration-300 h-full group-hover:-translate-y-1">
-              <img src="assets/images/card_building_bw.jpg" 
-                   alt="Inclusive and accessible building design process" 
+              <img src="assets/images/card_building_bw.jpg"
+                   alt="Inclusive and accessible building design process"
                    class="w-full h-48 object-cover rounded-lg mb-6"
                    loading="lazy"
                    width="400"
@@ -480,10 +486,10 @@
             </article>
           </a>
 
-          <a href="people.html" class="block group focus:outline-none focus:ring-4 focus:ring-hbnGreen/50 rounded-xl">
+          <a href="membership.html" class="block group focus:outline-none focus:ring-4 focus:ring-hbnGreen/50 rounded-xl">
             <article class="bg-white p-8 rounded-xl shadow-lg group-hover:shadow-xl transition-all duration-300 h-full group-hover:-translate-y-1">
-              <img src="assets/images/card_people.jpg" 
-                   alt="Community members engaged in healthy building education" 
+              <img src="assets/images/card_people.jpg"
+                   alt="Community members engaged in healthy building education"
                    class="w-full h-48 object-cover rounded-lg mb-6"
                    loading="lazy"
                    width="400"
@@ -495,8 +501,8 @@
 
           <a href="projects.html" class="block group focus:outline-none focus:ring-4 focus:ring-hbnGreen/50 rounded-xl">
             <article class="bg-white p-8 rounded-xl shadow-lg group-hover:shadow-xl transition-all duration-300 h-full group-hover:-translate-y-1">
-              <img src="assets/images/news/funding.jpg" 
-                   alt="Research team collaborating on healthy buildings project" 
+              <img src="assets/images/news/funding.jpg"
+                   alt="Research team collaborating on healthy buildings project"
                    class="w-full h-48 object-cover rounded-lg mb-6"
                    loading="lazy"
                    width="400"
@@ -511,74 +517,38 @@
 
     <!-- Funded Projects Section -->
     <section class="py-20 bg-white" aria-labelledby="projects-heading">
-      <div class="container mx-auto max-w-6xl px-6">
-        <h2 id="projects-heading" class="section-title text-center mb-8">Our Funded Projects</h2>
-        <p class="text-center text-lg text-gray-600 max-w-3xl mx-auto mb-12 mt-8">
-          We've funded 5 innovative pump-priming research projects, each exploring different aspects of healthy buildings and indoor environments.
+      <div class="container mx-auto max-w-5xl px-6 text-center">
+        <h2 id="projects-heading" class="section-title text-center mb-8">Our Funded Research</h2>
+        <p class="text-lg text-gray-600 max-w-3xl mx-auto mb-12 mt-8">
+          We have funded eight projects across two rounds — four pump-priming projects exploring indoor environments from new angles, and four ECR-led projects that brought research directly to the public through workshops and events.
         </p>
-        
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <!-- Living in Clover -->
-          <article class="bg-gray-50 rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
-            <div class="h-48 bg-hbnGreen flex items-center justify-center">
-              <h3 class="text-white text-2xl font-semibold px-4 text-center">Living in Clover</h3>
-            </div>
-            <div class="p-6">
-              <p class="text-gray-600 mb-4">Exploring natural building materials and their impact on energy consumption and occupant well-being.</p>
-              <a href="projects/clover.html" 
-                 class="text-hbnGreen font-medium hover:underline inline-flex items-center group">
-                Learn more 
-                <svg class="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-                </svg>
-              </a>
-            </div>
-          </article>
-          
-          <!-- ThermoAge -->
-          <article class="bg-gray-50 rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
-            <div class="h-48 bg-hbnPurple flex items-center justify-center">
-              <h3 class="text-white text-2xl font-semibold px-4 text-center">ThermoAge</h3>
-            </div>
-            <div class="p-6">
-              <p class="text-gray-600 mb-4">Investigating thermal comfort needs across different age groups and building implications.</p>
-              <a href="projects/thermoage.html" 
-                 class="text-hbnGreen font-medium hover:underline inline-flex items-center group">
-                Learn more 
-                <svg class="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-                </svg>
-              </a>
-            </div>
-          </article>
-          
-          <!-- Human-Centered Housing Design -->
-          <article class="bg-gray-50 rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
-            <div class="h-48 bg-hbnBlue flex items-center justify-center">
-              <h3 class="text-white text-2xl font-semibold px-4 text-center">Human-Centered Housing Design</h3>
-            </div>
-            <div class="p-6">
-              <p class="text-gray-600 mb-4">"We shape buildings and thereafter they shape us": towards evidence-based human-centered housing design.</p>
-              <a href="projects/human-centered-housing.html" 
-                 class="text-hbnGreen font-medium hover:underline inline-flex items-center group">
-                Learn more 
-                <svg class="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-                </svg>
-              </a>
-            </div>
-          </article>
+
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mb-14">
+          <div class="bg-gray-50 rounded-xl p-6 shadow-sm">
+            <div class="text-4xl font-bold text-hbnGreen mb-1">4</div>
+            <div class="text-sm text-gray-600 font-medium">Pump-Priming<br>Projects</div>
+          </div>
+          <div class="bg-gray-50 rounded-xl p-6 shadow-sm">
+            <div class="text-4xl font-bold text-hbnPurple mb-1">4</div>
+            <div class="text-sm text-gray-600 font-medium">ECR-Led<br>Projects</div>
+          </div>
+          <div class="bg-gray-50 rounded-xl p-6 shadow-sm">
+            <div class="text-4xl font-bold text-hbnBlue mb-1">11+</div>
+            <div class="text-sm text-gray-600 font-medium">Departments<br>Involved</div>
+          </div>
+          <div class="bg-gray-50 rounded-xl p-6 shadow-sm">
+            <div class="text-4xl font-bold text-hbnYellow mb-1">20+</div>
+            <div class="text-sm text-gray-600 font-medium">Researchers<br>&amp; Investigators</div>
+          </div>
         </div>
-        
-        <div class="text-center mt-12">
-          <a href="projects.html" 
-             class="inline-block px-8 py-4 text-lg font-semibold text-white bg-hbnGreen rounded-full 
-                    hover:bg-hbnGreenDark transition-all duration-300 
-                    focus:outline-none focus:ring-4 focus:ring-hbnGreen/50
-                    shadow-lg hover:shadow-xl hover:scale-105 active:scale-95">
-            View All Projects
-          </a>
-        </div>
+
+        <a href="projects.html"
+           class="inline-block px-8 py-4 text-lg font-semibold text-white bg-hbnGreen rounded-full
+                  hover:bg-hbnGreenDark transition-all duration-300
+                  focus:outline-none focus:ring-4 focus:ring-hbnGreen/50
+                  shadow-lg hover:shadow-xl hover:scale-105 active:scale-95">
+          Explore All Eight Projects
+        </a>
       </div>
     </section>
 
@@ -587,35 +557,33 @@
       <div class="container mx-auto max-w-6xl px-6">
         <h2 id="events-heading" class="section-title text-center mb-16">Upcoming Events</h2>
         
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
-          
-          <!-- Replace the three current event cards with these -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12 max-w-3xl mx-auto lg:max-w-none lg:grid-cols-2">
 
-          <!-- 1. HBN Showcase Event — Featured/Primary -->
+          <!-- 1. Clear the Air — Clean Air Day (Next Event) -->
           <article class="bg-white rounded-xl shadow-xl overflow-hidden flex flex-col h-full hover:shadow-2xl transition-shadow duration-300 border-2 border-hbnGreen">
             <div class="relative flex-shrink-0">
-              <img src="assets/images/events/showcase/building.jpg" 
-                  alt="HBN Showcase Event 2026" 
+              <img src="events/workshops/cleanair/clean_air_2026_poster.png"
+                  alt="Clear the Air: Practical Steps for Healthier Homes — Clean Air Day Workshop"
                   class="w-full h-64 object-cover"
                   loading="lazy"
                   width="400"
                   height="256"
                   onerror="this.src='assets/images/hbn_landscape.png'">
               <div class="absolute top-4 right-4 bg-hbnGreen text-white px-4 py-1 rounded-full font-semibold text-sm shadow">
-                <time datetime="2026-07-02">Jul 2nd</time>
+                <time datetime="2026-06-18">18 June</time>
               </div>
               <div class="absolute top-4 left-4 bg-white text-hbnGreen px-3 py-1 rounded-full text-xs font-bold shadow">
-                ⭐ Featured
+                Next Event
               </div>
             </div>
             <div class="p-8 flex flex-col flex-grow">
-              <h3 class="text-2xl font-bold mb-4 text-gray-800">HBN Showcase Event 2026</h3>
+              <h3 class="text-2xl font-bold mb-4 text-gray-800">Clear the Air: Practical Steps for Healthier Homes</h3>
               <p class="text-gray-600 mb-6 flex-grow">
-                Celebrate our funded research with keynote speaker Dr Marcella Ucci (UCL), 
-                8 project presentations, panel discussion, and networking. Free for all.
+                A hands-on Clean Air Day workshop — live indoor air quality sensor demos, creative activities,
+                and take-home actions. Free. Imagine Leeds, 9 Blenheim Terrace. 6–8 pm.
               </p>
               <div class="flex flex-wrap gap-3 mt-auto">
-                <a href="events/conferences/hbn-showcase-2026.html" 
+                <a href="events/workshops/cleanair/clean-air-day-workshop.html"
                   class="inline-block px-6 py-2 bg-hbnGreen text-white rounded-full hover:bg-hbnGreenDark transition-colors
                           focus:outline-none focus:ring-2 focus:ring-hbnGreen focus:ring-offset-2">
                   View Details & Register
@@ -624,69 +592,45 @@
             </div>
           </article>
 
-          <!-- 2. Infection Transmission Workshop -->
+          <!-- 2. HBN Showcase Event — Featured -->
           <article class="bg-white rounded-xl shadow-xl overflow-hidden flex flex-col h-full hover:shadow-2xl transition-shadow duration-300">
             <div class="relative flex-shrink-0">
-              <img src="assets/images/events/workshops/qmra/flowers_large.png" 
-                  alt="Infection Transmission Workshop" 
+              <img src="assets/images/events/showcase/building.jpg"
+                  alt="HBN Showcase Event 2026"
                   class="w-full h-64 object-cover"
                   loading="lazy"
                   width="400"
-                  height="256">
-              <div class="absolute top-4 right-4 bg-hbnYellow text-gray-800 px-4 py-1 rounded-full font-semibold text-sm shadow">
-                <time datetime="2026-04-22">Apr 22nd</time>
+                  height="256"
+                  onerror="this.src='assets/images/hbn_landscape.png'">
+              <div class="absolute top-4 right-4 bg-hbnBlue text-white px-4 py-1 rounded-full font-semibold text-sm shadow">
+                <time datetime="2026-07-02">2 July</time>
+              </div>
+              <div class="absolute top-4 left-4 bg-white text-hbnGreen px-3 py-1 rounded-full text-xs font-bold shadow">
+                Featured
               </div>
             </div>
             <div class="p-8 flex flex-col flex-grow">
-              <h3 class="text-2xl font-bold mb-4 text-gray-800">Infection Transmission in Indoor Settings</h3>
+              <h3 class="text-2xl font-bold mb-4 text-gray-800">HBN Showcase Event 2026</h3>
               <p class="text-gray-600 mb-6 flex-grow">
-                ECR-led multidisciplinary workshop exploring indoor infection risk, QMRA modelling, 
-                and public health. Free registration, bursaries available.
+                Celebrate our funded research with keynote speaker Dr Marcella Ucci (UCL),
+                8 project presentations, panel discussion, and networking. Free for all. Lunch provided.
               </p>
               <div class="flex flex-wrap gap-3 mt-auto">
-                <a href="events/workshops/events_qmra_workshop.html" 
+                <a href="events/conferences/hbn-showcase-2026.html"
                   class="inline-block px-6 py-2 bg-hbnGreen text-white rounded-full hover:bg-hbnGreenDark transition-colors
                           focus:outline-none focus:ring-2 focus:ring-hbnGreen focus:ring-offset-2">
-                  Register Now
-                </a>
-              </div>
-            </div>
-          </article>
-
-          <!-- 3. Whose Power? — Discovery Centre -->
-          <article class="bg-white rounded-xl shadow-xl overflow-hidden flex flex-col h-full hover:shadow-2xl transition-shadow duration-300">
-            <div class="relative flex-shrink-0 bg-gradient-to-br from-hbnPurple/20 to-hbnYellow/20 flex items-center justify-center h-64">
-              <img src="assets/images/events/workshops/whosepower/whose_power_poster.png" 
-                  alt="Infection Transmission Workshop" 
-                  class="w-full h-64 object-cover"
-                  loading="lazy"
-                  width="400"
-                  height="256"><div class="absolute top-4 right-4 bg-hbnPurple text-white px-4 py-1 rounded-full font-semibold text-sm shadow">
-                <time datetime="2026-04-15">Apr 15th</time>
-              </div>
-            </div>
-            <div class="p-8 flex flex-col flex-grow">
-              <h3 class="text-2xl font-bold mb-4 text-gray-800">Whose Power? Energy in the Home</h3>
-              <p class="text-gray-600 mb-6 flex-grow">
-                Family workshop (AM) + academic workshop (PM) at Leeds Discovery Centre. 
-                Explore domestic energy histories and participatory research with museum objects.
-              </p>
-              <div class="flex flex-wrap gap-3 mt-auto">
-                <a href="events.html" 
-                  class="inline-block px-6 py-2 border-2 border-hbnPurple text-hbnPurple rounded-full hover:bg-gray-50 transition-colors
-                          focus:outline-none focus:ring-2 focus:ring-hbnPurple focus:ring-offset-2">
-                  Family Workshop - Just drop in!
+                  View Details & Register
                 </a>
               </div>
             </div>
           </article>
 
         </div>
-        
+
         <div class="text-center mt-12">
-          <a href="events-archive.html" 
-             class="inline-block px-8 py-4 text-lg font-semibold border-2 border-hbnGray text-hbnGray rounded-full hover:bg-gray-100 transition-colors">
-            View Past Events
+          <a href="events.html"
+             class="inline-block px-8 py-4 text-lg font-semibold border-2 border-hbnGreen text-hbnGreen rounded-full hover:bg-hbnGreen hover:text-white transition-all duration-300">
+            View All Events
           </a>
         </div>
       </div>
@@ -859,7 +803,7 @@
           </a>
 
           <!-- News Item 3 -->
-          <a href="news/collaboration.html" class="group focus:outline-none focus:ring-4 focus:ring-hbnGreen/50 rounded-xl">
+          <a href="contact.html" class="group focus:outline-none focus:ring-4 focus:ring-hbnGreen/50 rounded-xl">
             <article class="bg-white rounded-xl shadow-lg overflow-hidden group-hover:shadow-xl transition-all duration-300 h-full group-hover:-translate-y-1">
               <div class="relative">
                 <img src="assets/images/undraw_quiet-street_v45k.png" 
@@ -1009,7 +953,7 @@
     </div>
   
     <div class="container mx-auto max-w-6xl px-6 text-sm text-center pt-8 mt-8 border-t border-gray-700">
-      <p>© 2025 Healthy Buildings Network Leeds. All rights reserved.</p>
+      <p>© 2026 Healthy Buildings Network Leeds. All rights reserved.</p>
       <p class="mt-2">University of Leeds, Leeds LS2 9JT, United Kingdom</p>
     </div>
   </footer>
@@ -1025,7 +969,7 @@
         <h2 id="cookie-heading" class="font-semibold mb-1">Cookie Notice</h2>
         <p id="cookie-description" class="text-sm text-gray-300">
           We use cookies to enhance your experience. By continuing to visit this site you agree to our use of cookies.
-          <a href="privacy.html" class="underline hover:text-hbnGreen focus:outline-none focus:text-hbnGreen">Learn more</a>
+          <a href="https://www.leeds.ac.uk/about/doc/privacy-policy" target="_blank" rel="noopener noreferrer" class="underline hover:text-hbnGreen focus:outline-none focus:text-hbnGreen">Learn more</a>
         </p>
       </div>
       <div class="flex gap-3 flex-shrink-0">
