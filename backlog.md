@@ -1,5 +1,34 @@
 # HBN Leeds — Site Backlog
 > Audited 2026-06-17. 41 HTML pages checked. Issues grouped by priority.
+> Last updated 2026-06-17 (session 2).
+
+---
+
+## ✅ COMPLETED (session 1 + 2)
+
+| Item | What was done |
+|---|---|
+| BUG-01 | Showcase panellists: all 6 photo paths fixed |
+| BUG-02 (partial) | `suparna.jpeg` now exists; `passivehouse.jpg` → using `building.jpg` placeholder |
+| BUG-03 | `blog_sarah_price.html` footer link depths fixed |
+| BUG-04 | `whose_power.html` head CSS/favicon paths fixed |
+| BUG-05 | `air-quality-workshop.html` nav links fixed |
+| BUG-06 | `events_qmra_workshop.html` footer nav links fixed |
+| BUG-07 | Sonic workshop card image fixed on `events.html` |
+| BUG-08 | `biophilic.html` image extension fixed |
+| CONTENT-01 | `blog_chuck.html` card link fixed (was linking to `biophilic.html`) |
+| CONTENT-02 | `whose_power.html` and `louis.html` past-event cards added to `events.html` |
+| CONTENT-03 | Broken `rethinking_design_process.html` link removed from `social_sciences.html` |
+| CONTENT-04 | `living-in-clover.html` / `cloverleaf.html` → `clover.html` links corrected |
+| CONTENT-05 | `past-count` stat updated to 16 |
+| CONTENT-06 | Copyright `2025` → `2026` across all sub-pages |
+| SEO-01 | OG/Twitter Card/canonical added to `hbn-showcase-2026.html` |
+| SEO-02 | OG/canonical added to 17 blog sub-pages |
+| SEO-03 | OG/canonical added to 11 event and project sub-pages |
+| SITEMAP-01 | `index.html` added; showcase priority raised; `cleanair` and event sub-pages added |
+| POLISH-01 | `louis-platman.html` second `<h1>` changed to `<h2>` |
+| POLISH-06 | `script.js` path depth fixed in 3 pages |
+| louis.html | Wrong `<title>`, `<meta description>`, and stylesheet path fixed |
 
 ---
 
