@@ -1,6 +1,6 @@
 # HBN Leeds — Site Backlog
 > Audited 2026-06-17. 41 HTML pages checked. Issues grouped by priority.
-> Last updated 2026-06-17 (session 2).
+> Last updated 2026-06-18 (session 3).
 
 ---
 
@@ -29,6 +29,7 @@
 | POLISH-01 | `louis-platman.html` second `<h1>` changed to `<h2>` |
 | POLISH-06 | `script.js` path depth fixed in 3 pages |
 | louis.html | Wrong `<title>`, `<meta description>`, and stylesheet path fixed |
+| CONTENT-07 | Clear the Air moved to past; upcoming-count → 1, past-count → 17; hero + calendar + index.html announcement updated to HBN Showcase |
 
 ---
 
@@ -151,17 +152,6 @@ All four posts have a "Related Posts" or footer link to this page which was neve
 A global footer find-and-replace is needed: `© 2025 Healthy Buildings` → `© 2026 Healthy Buildings`
 
 Pages affected include all blog sub-pages, all project sub-pages, news/launch_2024.html, and event sub-pages.
-
----
-
-### CONTENT-07 · Clear the Air (18 June) needs post-event update
-**Deadline: 19 June 2026**
-After tomorrow's event:
-1. Move Clear the Air card in `events.html` from upcoming to past section, set `data-status="past"`
-2. Update `#upcoming-count` to `1` (only Showcase remains upcoming)
-3. Update `#past-count` to `15`
-4. Update `events.html` hero "Next Event" box to show HBN Showcase (2 July)
-5. Update `index.html` announcement bar to the Showcase event
 
 ---
 
