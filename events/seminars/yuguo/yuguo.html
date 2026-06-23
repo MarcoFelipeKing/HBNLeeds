@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            hbnGreen: '#4e9317',
+            hbnGreenDark: '#3d7412',
+            hbnPurple: '#8360a9',
+            hbnGray: '#808184',
+            hbnYellow: '#ffca29',
+            hbnBlue: '#3e95dd',
+          }
+        }
+      }
+    };
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Public seminar by Prof. Yuguo Li (University of Hong Kong) on airborne transmission of respiratory infections in poorly diluted, crowded, and connected indoor networks. Co-hosted by HBN and LIFD. 6 July 2026, 2–3pm, Bragg Building GR25, University of Leeds.">
+  <title>Airborne Transmission of Respiratory Infections — Prof. Yuguo Li | Healthy Buildings Network Leeds</title>
+
+  <link rel="icon" href="../../../assets/images/hbn_fav.ico" type="image/x-icon"/>
+
+  <!-- Open Graph / Twitter Card -->
+  <meta property="og:type"        content="website">
+  <meta property="og:title"       content="Airborne Transmission of Respiratory Infections — Prof. Yuguo Li | HBN Leeds">
+  <meta property="og:description" content="Public seminar by Prof. Yuguo Li (University of Hong Kong) on airborne infection transmission. Co-hosted by HBN and LIFD. 6 July 2026, 2–3pm, Bragg Building GR25, University of Leeds.">
+  <meta property="og:url"         content="https://healthybuildingsnetwork.leeds.ac.uk/events/seminars/yuguo/yuguo.html">
+  <meta property="og:image"       content="https://healthybuildingsnetwork.leeds.ac.uk/assets/images/events/seminars/yuguo/yuguo_li.png">
+  <meta property="og:site_name"   content="Healthy Buildings Network Leeds">
+  <meta name="twitter:card"        content="summary_large_image">
+  <meta name="twitter:title"       content="Airborne Transmission of Respiratory Infections — Prof. Yuguo Li | HBN Leeds">
+  <meta name="twitter:description" content="Public seminar by Prof. Yuguo Li (University of Hong Kong) on airborne infection transmission. Co-hosted by HBN and LIFD. 6 July 2026, 2–3pm, Bragg Building GR25, University of Leeds.">
+  <meta name="twitter:image"       content="https://healthybuildingsnetwork.leeds.ac.uk/assets/images/events/seminars/yuguo/yuguo_li.png">
+  <link rel="canonical" href="https://healthybuildingsnetwork.leeds.ac.uk/events/seminars/yuguo/yuguo.html">
+
+  <!-- Event JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Event",
+    "name": "Airborne Transmission of Respiratory Infections in Poorly Diluted, Crowded, and Connected Indoor Networks",
+    "startDate": "2026-07-06T14:00:00+01:00",
+    "endDate": "2026-07-06T15:00:00+01:00",
+    "eventStatus": "https://schema.org/EventScheduled",
+    "eventAttendanceMode": "https://schema.org/MixedEventAttendanceMode",
+    "location": [
+      {
+        "@type": "Place",
+        "name": "Bragg Building GR25",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Bragg Building, University of Leeds",
+          "addressLocality": "Leeds",
+          "postalCode": "LS2 9JT",
+          "addressCountry": "GB"
+        }
+      },
+      {
+        "@type": "VirtualLocation",
+        "url": "https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=qO3qvR3IzkWGPlIypTW3y3WKWaOxj3RLk0lAv5VpDqxURE5HTlFXNjZWSVE4STNUNU5XRVc2NTVVVS4u"
+      }
+    ],
+    "description": "Professor Yuguo Li explores how poor dilution, crowding, and indoor connectivity interact to amplify respiratory infection transmission risk within buildings and across cities.",
+    "organizer": [
+      {
+        "@type": "Organization",
+        "name": "Healthy Buildings Network Leeds",
+        "url": "https://healthybuildingsnetwork.leeds.ac.uk"
+      },
+      {
+        "@type": "Organization",
+        "name": "Leeds Institute for Fluid Dynamics",
+        "url": "https://fluiddynamics.leeds.ac.uk"
+      }
+    ],
+    "performer": {
+      "@type": "Person",
+      "name": "Professor Yuguo Li",
+      "affiliation": "The University of Hong Kong"
+    },
+    "isAccessibleForFree": true,
+    "url": "https://healthybuildingsnetwork.leeds.ac.uk/events/seminars/yuguo/yuguo.html"
+  }
+  </script>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../../assets/css/style.css" />
+</head>
+<body class="font-poppins">
+
+  <!-- Header / Navbar -->
+  <header class="bg-white shadow-md fixed w-full z-50">
+    <div class="container mx-auto px-6 flex justify-between items-center h-20">
+      <div class="flex-shrink-0">
+        <a href="../../../index.html">
+          <img src="../../../assets/images/hbn_landscape.svg" alt="Healthy Buildings Network Leeds Logo" class="h-12">
+        </a>
+      </div>
+      <button class="md:hidden text-gray-600 hover:text-hbnGreen focus:outline-none" id="mobile-menu-button" aria-label="Open Menu">
+        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+      <nav class="hidden md:flex space-x-8" id="main-nav">
+        <a href="../../../index.html"      class="text-gray-600 hover:text-hbnGreen font-medium transition-colors">Home</a>
+        <a href="../../../about.html"      class="text-gray-600 hover:text-hbnGreen font-medium transition-colors">About Us</a>
+        <a href="../../../blog.html"       class="text-gray-600 hover:text-hbnGreen font-medium transition-colors">Blog</a>
+        <a href="../../../events.html"     class="text-hbnGreen font-medium transition-colors">Events</a>
+        <a href="../../../projects.html"   class="text-gray-600 hover:text-hbnGreen font-medium transition-colors">Projects</a>
+        <a href="../../../membership.html" class="text-gray-600 hover:text-hbnGreen font-medium transition-colors">Membership</a>
+        <a href="../../../contact.html"    class="text-gray-600 hover:text-hbnGreen font-medium transition-colors">Contact</a>
+      </nav>
+    </div>
+    <div class="md:hidden hidden bg-white w-full" id="mobile-menu">
+      <div class="px-6 py-4 space-y-4">
+        <a href="../../../index.html"      class="block text-gray-600 hover:text-hbnGreen font-medium">Home</a>
+        <a href="../../../about.html"      class="block text-gray-600 hover:text-hbnGreen font-medium">About Us</a>
+        <a href="../../../blog.html"       class="block text-gray-600 hover:text-hbnGreen font-medium">Blog</a>
+        <a href="../../../events.html"     class="block text-hbnGreen font-medium">Events</a>
+        <a href="../../../projects.html"   class="block text-gray-600 hover:text-hbnGreen font-medium">Projects</a>
+        <a href="../../../membership.html" class="block text-gray-600 hover:text-hbnGreen font-medium">Membership</a>
+        <a href="../../../contact.html"    class="block text-gray-600 hover:text-hbnGreen font-medium">Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <button id="scrollToTopBtn" class="fixed bottom-5 right-5 bg-hbnGreen text-white p-3 rounded-full shadow-md hidden z-50" aria-label="Scroll to top">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18" />
+    </svg>
+  </button>
+
+  <main class="pt-20">
+
+    <!-- Hero -->
+    <div class="bg-gradient-to-r from-hbnBlue to-hbnPurple text-white py-16">
+      <div class="container mx-auto px-6 max-w-5xl">
+        <div class="flex flex-wrap gap-2 mb-4">
+          <span class="bg-white/20 text-white text-xs font-semibold px-3 py-1 rounded-full">Public Seminar</span>
+          <span class="bg-hbnYellow text-gray-900 text-xs font-semibold px-3 py-1 rounded-full">Free · All Welcome</span>
+          <span class="bg-white/20 text-white text-xs font-semibold px-3 py-1 rounded-full">In Person + Online</span>
+        </div>
+        <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 leading-tight">
+          Airborne Transmission of Respiratory Infections in Poorly Diluted, Crowded, and Connected Indoor Networks
+        </h1>
+        <p class="text-xl opacity-90 mb-6">A public seminar by <strong>Professor Yuguo Li</strong> — The University of Hong Kong</p>
+        <div class="flex flex-col sm:flex-row gap-6 text-sm mt-6">
+          <div class="flex items-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 flex-shrink-0 opacity-80" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+            <span>Monday 6 July 2026</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 flex-shrink-0 opacity-80" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            <span>2:00–3:00 PM</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 flex-shrink-0 opacity-80" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+            <span>Bragg Building GR25, University of Leeds</span>
+          </div>
+        </div>
+        <div class="mt-8 flex flex-wrap gap-4">
+          <a href="https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=qO3qvR3IzkWGPlIypTW3y3WKWaOxj3RLk0lAv5VpDqxURE5HTlFXNjZWSVE4STNUNU5XRVc2NTVVVS4u"
+             class="inline-block px-8 py-3 bg-white text-hbnBlue font-semibold rounded-full hover:bg-gray-100 transition-colors shadow-md"
+             target="_blank" rel="noopener">
+            Register Free →
+          </a>
+          <a href="../../../events.html" class="inline-block px-8 py-3 border-2 border-white text-white rounded-full hover:bg-white/10 transition-colors">
+            ← All Events
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container mx-auto px-6 py-16 max-w-5xl">
+      <div class="grid md:grid-cols-3 gap-12">
+
+        <!-- Left: Speaker + details -->
+        <aside class="md:col-span-1">
+
+          <!-- Speaker photo -->
+          <div class="bg-white rounded-xl shadow-md overflow-hidden mb-6">
+            <img src="../../../assets/images/events/seminars/yuguo/yuguo_li.png"
+                 alt="Professor Yuguo Li"
+                 class="w-full object-cover"
+                 onerror="this.src='https://placehold.co/400x400/3e95dd/ffffff?text=Prof+Yuguo+Li'">
+            <div class="p-4">
+              <p class="font-bold text-gray-800 text-lg">Professor Yuguo Li</p>
+              <p class="text-hbnBlue font-medium text-sm">Chair Professor of Building Environment</p>
+              <p class="text-gray-500 text-sm">The University of Hong Kong</p>
+              <p class="text-gray-500 text-xs mt-1">Member, WHO Infection Prevention and Control Guidance Development Group</p>
+            </div>
+          </div>
+
+          <!-- Event details box -->
+          <div class="bg-gray-50 rounded-xl p-6 space-y-4 text-sm text-gray-700">
+            <h3 class="font-bold text-gray-800 text-base mb-2">Event Details</h3>
+            <div class="flex items-start gap-3">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 flex-shrink-0 text-hbnGreen mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+              <div><span class="font-semibold">Date:</span> Monday 6 July 2026</div>
+            </div>
+            <div class="flex items-start gap-3">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 flex-shrink-0 text-hbnGreen mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              <div><span class="font-semibold">Time:</span> 2:00–3:00 PM</div>
+            </div>
+            <div class="flex items-start gap-3">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 flex-shrink-0 text-hbnGreen mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+              <div><span class="font-semibold">In person:</span> Bragg Building GR25, University of Leeds</div>
+            </div>
+            <div class="flex items-start gap-3">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 flex-shrink-0 text-hbnBlue mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.069A1 1 0 0121 8.882v6.236a1 1 0 01-1.447.894L15 14M3 8a2 2 0 012-2h8a2 2 0 012 2v8a2 2 0 01-2 2H5a2 2 0 01-2-2V8z"/></svg>
+              <div><span class="font-semibold">Online:</span> Register for the link</div>
+            </div>
+            <div class="flex items-start gap-3">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 flex-shrink-0 text-hbnPurple mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+              <div><span class="font-semibold">Reception:</span> Bragg Foyer afterwards</div>
+            </div>
+            <div class="pt-2 border-t border-gray-200">
+              <p class="font-semibold text-gray-600 mb-3">Co-hosted by:</p>
+              <div class="flex flex-col gap-3">
+                <img src="../../../assets/images/hbn_landscape.svg"
+                     alt="Healthy Buildings Network Leeds"
+                     class="h-8 object-contain object-left">
+                <img src="../../../assets/images/logo_LIFD.png"
+                     alt="Leeds Institute for Fluid Dynamics"
+                     class="h-8 object-contain object-left">
+              </div>
+            </div>
+          </div>
+
+          <!-- QR code -->
+          <div class="mt-6 text-center">
+            <img src="../../../assets/images/events/seminars/yuguo/qr_code.png"
+                 alt="QR code — register for the Yuguo Li seminar"
+                 class="w-40 mx-auto rounded-lg shadow-sm"
+                 onerror="this.style.display='none'">
+            <p class="text-xs text-gray-500 mt-2">Scan to register</p>
+          </div>
+
+        </aside>
+
+        <!-- Right: Content -->
+        <div class="md:col-span-2 space-y-10">
+
+          <!-- Abstract -->
+          <section>
+            <h2 class="text-2xl font-bold text-gray-800 mb-4">About the Talk</h2>
+            <p class="text-gray-700 leading-relaxed mb-4">
+              Respiratory infections such as COVID-19 and influenza spread mainly via airborne aerosols. In this seminar, Professor Li will explore how <strong>poor dilution, crowding, and indoor connectivity</strong> interact to amplify transmission risk within buildings and across cities.
+            </p>
+            <p class="text-gray-700 leading-relaxed mb-4">
+              The talk will introduce new approaches and metrics for understanding infection risk in indoor spaces, linking ventilation, filtration, occupancy, mobility, and urban connectivity into a practical framework for infection control and healthier building design.
+            </p>
+            <p class="text-gray-700 leading-relaxed">
+              This seminar will be of interest to colleagues and students across engineering, public health, architecture, fluid dynamics, environmental science, epidemiology, urban systems, and the built environment.
+            </p>
+          </section>
+
+          <!-- Flyer -->
+          <section>
+            <img src="../../../assets/images/events/seminars/yuguo/yuguo_flyer.png"
+                 alt="Event flyer — Prof. Yuguo Li seminar 6 July 2026"
+                 class="w-full rounded-xl shadow-md"
+                 onerror="this.style.display='none'">
+          </section>
+
+          <!-- Speaker bio -->
+          <section class="bg-hbnBlue/5 border border-hbnBlue/20 rounded-xl p-6">
+            <h2 class="text-xl font-bold text-gray-800 mb-3">About Professor Yuguo Li</h2>
+            <p class="text-gray-700 leading-relaxed">
+              Professor Yuguo Li is Chair Professor of Building Environment at The University of Hong Kong and a member of the <strong>WHO Infection Prevention and Control Guidance Development Group</strong>. His work has played a major role in reshaping scientific understanding of airborne transmission during and beyond the COVID-19 pandemic, influencing global guidance on ventilation, mask use, and infection control in indoor spaces.
+            </p>
+          </section>
+
+          <!-- Register CTA -->
+          <section class="bg-gradient-to-r from-hbnBlue to-hbnPurple rounded-xl p-8 text-white text-center">
+            <h2 class="text-2xl font-bold mb-2">Register to Attend</h2>
+            <p class="opacity-90 mb-6">Free for all. In person at Bragg Building GR25 or online. Reception in the Bragg Foyer afterwards.</p>
+            <a href="https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=qO3qvR3IzkWGPlIypTW3y3WKWaOxj3RLk0lAv5VpDqxURE5HTlFXNjZWSVE4STNUNU5XRVc2NTVVVS4u"
+               class="inline-block px-10 py-3 bg-white text-hbnBlue font-semibold rounded-full hover:bg-gray-100 transition-colors shadow-md"
+               target="_blank" rel="noopener">
+              Register Free →
+            </a>
+          </section>
+
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white py-10">
+    <div class="container mx-auto px-6">
+      <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+        <p class="text-gray-400 text-sm">&copy; 2026 Healthy Buildings Network Leeds. All rights reserved.</p>
+        <nav class="flex flex-wrap gap-6 text-sm text-gray-400">
+          <a href="../../../index.html"  class="hover:text-white transition-colors">Home</a>
+          <a href="../../../events.html" class="hover:text-white transition-colors">Events</a>
+          <a href="../../../contact.html" class="hover:text-white transition-colors">Contact</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../../../assets/js/script.js"></script>
+</body>
+</html>

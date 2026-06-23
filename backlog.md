@@ -1,6 +1,6 @@
 # HBN Leeds — Site Backlog
 > Audited 2026-06-17. 41 HTML pages checked. Issues grouped by priority.
-> Last updated 2026-06-18 (session 3).
+> Last updated 2026-06-18 (session 3). upcoming-count now 2 (Showcase + Yuguo Li).
 
 ---
 
