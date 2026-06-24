@@ -1,0 +1,1576 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<title>HBN Showcase 2026 — Event Booklet</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,300;1,400&family=Shadows+Into+Light&display=swap" rel="stylesheet">
+<style>
+/* ═══════════════════════════════════════
+   ROOT + RESET
+═══════════════════════════════════════ */
+@page { size: A4 portrait; margin: 0; }
+*, *::before, *::after {
+  box-sizing: border-box; margin: 0; padding: 0;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+:root {
+  --green:       #4e9317;
+  --green-dark:  #3d7412;
+  --green-deep:  #1a3d08;
+  --purple:      #8360a9;
+  --purple-deep: #2d1854;
+  --purple-mid:  #4a2480;
+  --gray:        #808184;
+  --yellow:      #ffca29;
+  --blue:        #3e95dd;
+  --navy:        #0d1b2a;
+  --cream:       #fefcf8;
+  --text:        #1a1a1a;
+  --text-mid:    #444;
+  --text-light:  #777;
+}
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #c8c8c8;
+  color: var(--text);
+}
+@media print { body { background: none; } }
+
+/* ═══════════════════════════════════════
+   PAGE WRAPPER
+═══════════════════════════════════════ */
+.page {
+  width: 210mm;
+  height: 297mm;
+  position: relative;
+  overflow: hidden;
+  margin: 14px auto;
+  box-shadow: 0 6px 32px rgba(0,0,0,0.22);
+  background: white;
+  page-break-after: always;
+}
+@media print { .page { margin: 0; box-shadow: none; } }
+
+/* ═══════════════════════════════════════
+   RUNNING FOOTER (inner pages)
+═══════════════════════════════════════ */
+.run-foot {
+  position: absolute;
+  bottom: 6mm;
+  left: 13mm; right: 13mm;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 0.25mm solid #e0e0e0;
+  padding-top: 2mm;
+}
+.run-foot span {
+  font-size: 2.3mm;
+  font-weight: 300;
+  color: #bbb;
+  letter-spacing: 0.5px;
+}
+.run-foot .pn {
+  font-weight: 700;
+  color: var(--purple);
+}
+
+/* ═══════════════════════════════════════
+   SHARED COMPONENTS
+═══════════════════════════════════════ */
+.eyebrow {
+  font-size: 2.5mm;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--green);
+  margin-bottom: 2mm;
+}
+.section-title {
+  font-size: 8.5mm;
+  font-weight: 800;
+  line-height: 1.05;
+  letter-spacing: -0.5px;
+}
+.body-text {
+  font-size: 3.4mm;
+  font-weight: 300;
+  line-height: 1.65;
+  color: var(--text-mid);
+}
+.tag {
+  display: inline-block;
+  font-size: 2.1mm;
+  font-weight: 600;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+  padding: 0.7mm 2.5mm;
+  border-radius: 10mm;
+  margin-right: 1mm;
+  margin-bottom: 1mm;
+}
+.tag-green  { background: rgba(78,147,23,0.12);   color: #2c5f00; }
+.tag-blue   { background: rgba(62,149,221,0.13);  color: #1a5c99; }
+.tag-purple { background: rgba(131,96,169,0.12);  color: #4a2480; }
+.tag-yellow { background: rgba(255,202,41,0.22);  color: #6b4500; }
+.tag-gray   { background: #f2f2f2;                color: #666; }
+
+/* Photo helpers */
+.photo-circle {
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+  flex-shrink: 0;
+}
+.photo-sq {
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+  width: 100%; height: 100%;
+}
+
+/* Stat number */
+.stat-num {
+  font-size: 10mm;
+  font-weight: 800;
+  color: var(--green);
+  line-height: 1;
+}
+.stat-label {
+  font-size: 2.8mm;
+  font-weight: 300;
+  color: var(--text-light);
+  margin-top: 1mm;
+}
+
+/* Vertical accent bar */
+.v-bar {
+  width: 1.2mm;
+  border-radius: 1mm;
+  flex-shrink: 0;
+}
+
+/* ═══════════════════════════════════════
+   PAGE 1 · COVER
+═══════════════════════════════════════ */
+.cover {
+  background: linear-gradient(145deg, var(--purple-deep) 0%, var(--purple-mid) 45%, var(--purple) 100%);
+}
+.cover .blob-layer {
+  position: absolute;
+  inset: 0;
+  width: 100%; height: 100%;
+}
+.cover-inner {
+  position: relative;
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 0 13mm;
+}
+
+/* Top logos */
+.c-logos {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 9mm;
+}
+.c-logos img { height: 8mm; filter: brightness(0) invert(1); opacity: 0.85; }
+.c-logos .leeds-img { height: 7mm; opacity: 0.6; }
+
+/* Hero image */
+.c-hero {
+  margin-top: 7mm;
+  height: 58mm;
+  border-radius: 3mm;
+  overflow: hidden;
+  position: relative;
+  flex-shrink: 0;
+}
+.c-hero img { width: 100%; height: 100%; object-fit: cover; opacity: 0.5; mix-blend-mode: luminosity; }
+.c-hero::after {
+  content:'';
+  position: absolute; inset: 0;
+  background: linear-gradient(to bottom, rgba(45,24,84,0.2), rgba(45,24,84,0.7));
+}
+.c-hero-bar { position: absolute; bottom:0; left:0; right:0; height:1mm; background: var(--yellow); z-index:2; }
+
+/* Main title */
+.c-title { padding-top: 7mm; flex:1; }
+.c-kicker {
+  font-size: 2.7mm; font-weight: 600;
+  letter-spacing: 4px; text-transform: uppercase;
+  color: var(--yellow); margin-bottom: 3mm;
+}
+.c-showcase {
+  display: block;
+  font-size: 20mm; font-weight: 900;
+  color: white; line-height: 0.95;
+  text-transform: uppercase;
+  letter-spacing: -1.5px;
+}
+.c-year {
+  font-family: 'Shadows Into Light', cursive;
+  font-size: 22mm; color: var(--yellow);
+  vertical-align: bottom; margin-left: 2mm;
+}
+.c-tagline {
+  font-size: 4mm; font-weight: 300; font-style: italic;
+  color: rgba(255,255,255,0.78);
+  margin-top: 4.5mm; max-width: 118mm; line-height: 1.55;
+}
+
+/* Detail pills */
+.c-pills { display: flex; gap: 2.5mm; flex-wrap: wrap; margin-top: 6mm; }
+.c-pill {
+  display: inline-flex; align-items: center; gap: 2mm;
+  background: rgba(255,255,255,0.1);
+  border: 0.3mm solid rgba(255,255,255,0.2);
+  border-radius: 20mm; padding: 2mm 5mm;
+}
+.c-pill svg { width: 3.5mm; height: 3.5mm; stroke: rgba(255,255,255,0.8); fill: none; stroke-width: 2; flex-shrink:0; }
+.c-pill span { font-size: 2.9mm; color: white; font-weight: 500; }
+
+/* Keynote strip */
+.c-keynote {
+  margin-top: 5mm;
+  background: rgba(255,255,255,0.08);
+  border-left: 1.2mm solid var(--yellow);
+  border-radius: 0 2.5mm 2.5mm 0;
+  padding: 3mm 6mm;
+}
+.c-kn-label { font-size: 2.3mm; font-weight: 700; letter-spacing: 2.5px; text-transform: uppercase; color: var(--yellow); margin-bottom: 1mm; }
+.c-kn-name  { font-size: 4.2mm; font-weight: 700; color: white; }
+.c-kn-inst  { font-size: 2.9mm; font-weight: 300; color: rgba(255,255,255,0.6); margin-top: 0.5mm; }
+
+/* Footer */
+.c-foot {
+  display: flex; justify-content: space-between; align-items: flex-end;
+  padding: 0 0 8mm;
+}
+.c-foot-l { font-size: 2.5mm; color: rgba(255,255,255,0.4); }
+.c-foot-r { font-size: 2.5mm; color: rgba(255,255,255,0.4); text-align: right; }
+.c-foot-r strong { display: block; font-size: 2.8mm; font-weight: 600; color: rgba(255,255,255,0.65); }
+
+/* ═══════════════════════════════════════
+   PAGE 2 · WELCOME
+═══════════════════════════════════════ */
+.welcome-page { background: var(--cream); }
+.w-stripe {
+  height: 4mm;
+  background: linear-gradient(to right, var(--purple), var(--green));
+}
+.w-body {
+  display: flex; flex-direction: column;
+  padding: 10mm 13mm 0;
+  height: calc(297mm - 4mm);
+}
+.w-top { display: flex; gap: 10mm; flex: 1; }
+.w-text { flex: 3; }
+.w-sidebar { flex: 1.2; display: flex; flex-direction: column; gap: 5mm; padding-top: 2mm; }
+
+.w-headline {
+  font-size: 11mm; font-weight: 900;
+  color: var(--purple); line-height: 0.95;
+  margin-bottom: 6mm;
+}
+.w-headline span { color: var(--green); }
+
+.w-message { font-size: 3.4mm; font-weight: 300; line-height: 1.7; color: var(--text-mid); }
+.w-message p + p { margin-top: 3.5mm; }
+.w-sig {
+  margin-top: 6mm;
+  font-size: 3mm; font-weight: 600;
+  color: var(--text); line-height: 1.6;
+}
+.w-sig em { display: block; font-weight: 300; font-size: 2.8mm; color: var(--text-light); font-style: italic; }
+
+/* Founder cards in sidebar */
+.w-founder-card {
+  display: flex; flex-direction: column; align-items: center;
+  text-align: center; gap: 2mm;
+}
+.w-founder-card img {
+  width: 27mm; height: 27mm;
+  border-radius: 50%; object-fit: cover; object-position: center top;
+  border: 0.8mm solid white;
+  box-shadow: 0 2mm 8mm rgba(131,96,169,0.25);
+}
+.w-fc-name { font-size: 3mm; font-weight: 700; color: var(--text); line-height: 1.2; }
+.w-fc-role { font-size: 2.4mm; font-weight: 300; color: var(--text-light); }
+
+/* Photo strip at bottom */
+.w-photo-strip {
+  display: flex; gap: 3mm;
+  height: 48mm; margin-top: 6mm;
+  flex-shrink: 0;
+}
+.w-photo-strip .ph {
+  flex: 1; border-radius: 2mm; overflow: hidden; position: relative;
+}
+.w-photo-strip .ph img { width:100%; height:100%; object-fit:cover; }
+.w-photo-strip .ph-cap {
+  position: absolute; bottom: 0; left: 0; right: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.65), transparent);
+  padding: 3mm 3mm 2mm;
+  font-size: 2.3mm; color: white; font-weight: 300;
+}
+
+/* ═══════════════════════════════════════
+   PAGE 3 · ABOUT THE NETWORK
+═══════════════════════════════════════ */
+.about-page { background: white; }
+.a-top-band {
+  height: 40mm;
+  background: linear-gradient(135deg, var(--green-deep), var(--green));
+  position: relative; overflow: hidden;
+  display: flex; align-items: flex-end;
+  padding: 0 13mm 6mm;
+}
+.a-top-band::before {
+  content:''; position: absolute;
+  width: 60mm; height: 60mm; border-radius: 50%;
+  background: rgba(255,255,255,0.06);
+  top: -15mm; right: 20mm;
+}
+.a-top-band::after {
+  content:''; position: absolute;
+  width: 35mm; height: 35mm; border-radius: 50%;
+  background: rgba(255,202,41,0.15);
+  bottom: -8mm; right: 50mm;
+}
+.a-band-title { font-size: 8mm; font-weight: 800; color: white; line-height: 1; position: relative; z-index:2; }
+.a-band-sub   { font-size: 3.5mm; font-weight: 300; color: rgba(255,255,255,0.75); margin-top: 1.5mm; position: relative; z-index:2; }
+
+.a-body { padding: 9mm 13mm 0; }
+.a-cols { display: flex; gap: 9mm; }
+.a-left { flex: 1; }
+.a-right { flex: 1; }
+
+.a-section-lbl {
+  font-size: 2.4mm; font-weight: 700;
+  letter-spacing: 3px; text-transform: uppercase;
+  color: var(--purple); margin-bottom: 2.5mm;
+}
+.a-mission {
+  font-size: 3.8mm; font-weight: 600;
+  color: var(--text); line-height: 1.55;
+  margin-bottom: 4mm;
+}
+.a-desc {
+  font-size: 3.1mm; font-weight: 300;
+  line-height: 1.65; color: var(--text-mid);
+  margin-bottom: 4mm;
+}
+.a-vision-box {
+  background: rgba(131,96,169,0.06);
+  border-left: 1.2mm solid var(--purple);
+  border-radius: 0 2mm 2mm 0;
+  padding: 3mm 5mm;
+  margin-bottom: 5mm;
+}
+.a-vision-label { font-size: 2.4mm; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; color: var(--purple); margin-bottom: 1mm; }
+.a-vision-text  { font-size: 3.2mm; font-weight: 400; line-height: 1.55; color: var(--text-mid); font-style: italic; }
+
+/* Focus areas */
+.a-focus-grid { display: flex; flex-wrap: wrap; gap: 2mm; margin-top: 1mm; }
+.a-focus-pill {
+  font-size: 2.7mm; font-weight: 500;
+  padding: 1.5mm 3.5mm; border-radius: 20mm;
+}
+
+/* Stats row */
+.a-stats {
+  display: flex; gap: 0;
+  border-top: 0.25mm solid #eee;
+  margin-top: 8mm; padding-top: 6mm;
+}
+.a-stat { flex:1; text-align: center; padding: 0 3mm; }
+.a-stat + .a-stat { border-left: 0.25mm solid #eee; }
+.a-stat-n  { font-size: 9mm; font-weight: 800; color: var(--green); line-height: 1; }
+.a-stat-lbl{ font-size: 2.7mm; font-weight: 300; color: var(--text-light); margin-top: 1mm; }
+
+/* ═══════════════════════════════════════
+   PAGE 4 · PROGRAMME
+═══════════════════════════════════════ */
+.prog-page { background: white; }
+.p-stripe { height: 4.5mm; background: linear-gradient(to right, var(--green), var(--blue)); }
+.p-body { padding: 9mm 13mm 0; display: flex; flex-direction: column; height: calc(297mm - 4.5mm); }
+.p-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 7mm; }
+.p-section-lbl { font-size: 2.5mm; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--green); margin-bottom: 1.5mm; }
+.p-title { font-size: 9mm; font-weight: 800; color: #111; line-height: 1; letter-spacing: -0.5px; }
+.p-meta  { font-size: 3mm; color: var(--gray); font-weight: 300; margin-top: 2mm; }
+.p-header-logo { height: 9mm; opacity: 0.55; }
+
+/* Timeline */
+.timeline { flex:1; display: flex; flex-direction: column; }
+.tl-row { display: flex; align-items: stretch; border-bottom: 0.2mm solid #f0f0f0; }
+.tl-row:last-child { border-bottom: none; }
+.tl-time { width: 27mm; flex-shrink:0; padding: 3.5mm 3mm 3.5mm 0; display:flex; flex-direction:column; justify-content:center; }
+.tl-t1 { font-size: 3.8mm; font-weight: 700; color: var(--green); line-height: 1.1; }
+.tl-t2 { font-size: 2.7mm; font-weight: 300; color: #bbb; margin-top: 0.8mm; }
+.tl-spine { width: 5.5mm; flex-shrink:0; display:flex; flex-direction:column; align-items:center; padding-top: 5.5mm; }
+.tl-dot  { width: 2.8mm; height: 2.8mm; border-radius: 50%; background: var(--green); flex-shrink:0; }
+.tl-line { width: 0.3mm; flex:1; background: #e5e5e5; margin-top: 1mm; }
+.tl-body { flex:1; padding: 3.5mm 0 3.5mm 4mm; display:flex; flex-direction:column; justify-content:center; }
+.tl-name { font-size: 3.5mm; font-weight: 600; color: #1a1a1a; line-height: 1.3; }
+.tl-sub  { font-size: 2.8mm; font-weight: 300; color: #888; margin-top: 0.8mm; line-height: 1.4; }
+.tl-badges { display:flex; gap:2mm; margin-top: 1mm; flex-wrap: wrap; }
+.tl-row.hi-green  { background: rgba(78,147,23,0.04); }
+.tl-row.hi-yellow { background: rgba(255,202,41,0.06); }
+.tl-row.hi-purple { background: rgba(131,96,169,0.04); }
+.dc-gray   { background: #ccc !important; }
+.dc-yellow { background: var(--yellow) !important; }
+.dc-blue   { background: var(--blue) !important; }
+.dc-purple { background: var(--purple) !important; }
+.b { font-size:2mm; font-weight:700; letter-spacing:.4px; text-transform:uppercase; padding:.7mm 2.5mm; border-radius:10mm; white-space:nowrap; }
+.b-g { background:rgba(78,147,23,.12); color:#2d6b00; }
+.b-b { background:rgba(62,149,221,.12); color:#1a62a0; }
+.b-y { background:rgba(255,202,41,.22); color:#6b4a00; }
+.b-p { background:rgba(131,96,169,.12); color:#5a3b80; }
+.b-gr{ background:#f4f4f4; color:#888; }
+.p-foot { flex-shrink:0; padding-top:3mm; border-top: 0.2mm solid #eee; display:flex; justify-content:space-between; align-items:center; margin-bottom:6mm; }
+.p-foot-note { font-size:2.4mm; color:#ccc; font-style:italic; }
+.p-pg { font-size:2.4mm; color:#ccc; font-weight:700; }
+
+/* ═══════════════════════════════════════
+   PAGE 5 · KEYNOTE SPEAKER
+═══════════════════════════════════════ */
+.keynote-page { background: var(--navy); }
+.kn-layout { display: flex; height: 297mm; }
+
+/* Left: full-height photo */
+.kn-photo-col {
+  width: 88mm; flex-shrink: 0; position: relative; overflow: hidden;
+}
+.kn-photo-col img {
+  width: 100%; height: 100%; object-fit: cover; object-position: center top;
+  opacity: 0.85;
+}
+.kn-photo-col::after {
+  content:''; position:absolute; inset:0;
+  background: linear-gradient(to right, transparent 60%, var(--navy) 100%);
+}
+
+/* Right: text */
+.kn-text-col {
+  flex:1; display:flex; flex-direction:column;
+  padding: 14mm 13mm 10mm 8mm;
+  position: relative;
+}
+.kn-time-badge {
+  display: inline-flex; align-items: center; gap: 2mm;
+  background: var(--yellow);
+  border-radius: 20mm; padding: 1.5mm 4mm;
+  font-size: 2.7mm; font-weight: 700;
+  color: #1a1a1a; margin-bottom: 6mm;
+  align-self: flex-start;
+}
+.kn-eyebrow {
+  font-size: 2.5mm; font-weight: 700; letter-spacing: 3px;
+  text-transform: uppercase; color: var(--yellow); margin-bottom: 3mm;
+}
+.kn-name {
+  font-size: 7.5mm; font-weight: 800;
+  color: white; line-height: 1.05;
+  margin-bottom: 1.5mm; letter-spacing: -0.3px;
+}
+.kn-inst { font-size: 3mm; font-weight: 300; color: rgba(255,255,255,0.6); margin-bottom: 8mm; }
+.kn-divider { width: 12mm; height: 0.8mm; background: var(--green); margin-bottom: 6mm; border-radius: 1mm; }
+.kn-bio { font-size: 3.2mm; font-weight: 300; line-height: 1.7; color: rgba(255,255,255,0.75); margin-bottom: 7mm; }
+.kn-interests-label { font-size: 2.3mm; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: rgba(255,255,255,0.4); margin-bottom: 3mm; }
+.kn-interests { display: flex; flex-wrap: wrap; gap: 2mm; margin-bottom: 8mm; }
+.kn-tag {
+  font-size: 2.5mm; font-weight: 500;
+  padding: 1.2mm 3mm; border-radius: 20mm;
+  background: rgba(255,255,255,0.08);
+  border: 0.3mm solid rgba(255,255,255,0.18);
+  color: rgba(255,255,255,0.75);
+}
+.kn-quote {
+  flex:1; display:flex; flex-direction:column; justify-content: flex-end;
+}
+.kn-quote-text {
+  font-size: 4mm; font-weight: 300; font-style: italic;
+  color: rgba(255,255,255,0.5); line-height: 1.6;
+  border-left: 1mm solid var(--purple);
+  padding-left: 4mm;
+}
+.kn-foot {
+  position: absolute; bottom: 8mm; left: 8mm; right: 13mm;
+  display: flex; justify-content: space-between; align-items: center;
+  border-top: 0.25mm solid rgba(255,255,255,0.1);
+  padding-top: 3mm;
+}
+.kn-foot span { font-size: 2.3mm; color: rgba(255,255,255,0.25); }
+.kn-foot .pn  { font-size: 2.3mm; color: var(--purple); font-weight: 700; }
+
+/* ═══════════════════════════════════════
+   PAGE 6 · PUMP-PRIMING PROJECTS
+═══════════════════════════════════════ */
+.pp-page { background: white; }
+.proj-header {
+  height: 24mm; position: relative; overflow: hidden;
+  background: linear-gradient(135deg, #0d3b6e, var(--blue));
+  display: flex; align-items: center;
+  padding: 0 13mm;
+}
+.proj-header::after {
+  content:''; position:absolute;
+  width: 55mm; height: 55mm; border-radius: 50%;
+  background: rgba(255,255,255,0.06);
+  top: -18mm; right: 15mm;
+}
+.ph-kicker {
+  font-size: 2.4mm; font-weight: 700; letter-spacing: 3px;
+  text-transform: uppercase; color: rgba(255,255,255,0.6);
+  margin-bottom: 1.5mm; position: relative; z-index: 2;
+}
+.ph-title { font-size: 6.5mm; font-weight: 800; color: white; position: relative; z-index: 2; line-height: 1; }
+.ph-count {
+  position: absolute; right: 13mm; top: 50%; transform: translateY(-50%);
+  font-size: 18mm; font-weight: 900; color: rgba(255,255,255,0.07);
+  line-height: 1; z-index: 1;
+}
+
+/* 2×2 project grid */
+.proj-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 0;
+  height: calc(297mm - 24mm);
+}
+.proj-cell {
+  display: flex; border-right: 0.25mm solid #f0f0f0; border-bottom: 0.25mm solid #f0f0f0;
+  overflow: hidden;
+}
+.proj-cell:nth-child(2) { border-right: none; }
+.proj-cell:nth-child(3) { border-bottom: none; }
+.proj-cell:nth-child(4) { border-right: none; border-bottom: none; }
+
+/* Photo left, text right */
+.pc-photo {
+  width: 38mm; flex-shrink:0;
+  position: relative; overflow: hidden;
+  background: #eee;
+}
+.pc-photo img { width:100%; height:100%; object-fit:cover; object-position: center top; }
+.pc-photo-overlay {
+  position: absolute; inset:0;
+  background: linear-gradient(to bottom, transparent 55%, rgba(0,0,0,0.55));
+}
+.pc-photo-num {
+  position: absolute; bottom: 3mm; left: 3mm;
+  font-size: 7mm; font-weight: 900; color: rgba(255,255,255,0.9);
+  line-height: 1; text-shadow: 0 1mm 3mm rgba(0,0,0,0.5);
+}
+
+.pc-text { flex:1; padding: 5mm 5mm 5mm 5mm; display: flex; flex-direction: column; }
+.pc-num-dot {
+  display: flex; align-items: center; gap: 2.5mm; margin-bottom: 2.5mm;
+}
+.pc-dot { width: 2mm; height: 2mm; border-radius: 50%; background: var(--blue); flex-shrink:0; }
+.pc-project-num { font-size: 2.4mm; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--blue); }
+
+.pc-title { font-size: 3.8mm; font-weight: 700; color: var(--text); line-height: 1.3; margin-bottom: 1.5mm; }
+.pc-pi    { font-size: 2.8mm; font-weight: 400; color: var(--text-light); margin-bottom: 3mm; font-style: italic; }
+.pc-desc  { font-size: 2.9mm; font-weight: 300; line-height: 1.6; color: #555; flex:1; }
+.pc-tags  { margin-top: 3mm; }
+
+/* ═══════════════════════════════════════
+   PAGE 7 · ECR PROJECTS
+═══════════════════════════════════════ */
+.ecr-page { background: white; }
+.ecr-header {
+  height: 24mm; position: relative; overflow: hidden;
+  background: linear-gradient(135deg, var(--purple-deep), var(--purple));
+  display: flex; align-items: center;
+  padding: 0 13mm;
+}
+.ecr-header::after {
+  content:''; position:absolute;
+  width: 55mm; height: 55mm; border-radius: 50%;
+  background: rgba(255,202,41,0.1);
+  top: -15mm; right: 20mm;
+}
+
+/* ═══════════════════════════════════════
+   PAGE 8 · PANEL DISCUSSION
+═══════════════════════════════════════ */
+.panel-page { background: #0f1120; }
+.panel-inner { display: flex; flex-direction: column; height: 297mm; padding: 11mm 13mm 0; }
+.pan-eyebrow {
+  font-size: 2.5mm; font-weight: 700; letter-spacing: 3px;
+  text-transform: uppercase; color: var(--yellow); margin-bottom: 2mm;
+}
+.pan-title { font-size: 6mm; font-weight: 800; color: white; line-height: 1.1; margin-bottom: 1.5mm; }
+.pan-subtitle { font-size: 3.2mm; font-weight: 300; font-style: italic; color: rgba(255,255,255,0.55); margin-bottom: 6mm; }
+
+/* Moderator feature row */
+.mod-row {
+  display: flex; gap: 6mm; align-items: center;
+  background: rgba(255,255,255,0.05);
+  border: 0.3mm solid rgba(255,255,255,0.1);
+  border-left: 1.2mm solid var(--yellow);
+  border-radius: 0 3mm 3mm 0;
+  padding: 4mm 6mm; margin-bottom: 7mm;
+  flex-shrink: 0;
+}
+.mod-photo { width: 20mm; height: 20mm; border-radius: 50%; object-fit: cover; object-position: center top; border: 0.7mm solid var(--yellow); flex-shrink:0; }
+.mod-badge { font-size: 2.2mm; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; background: var(--yellow); color: #1a1a1a; padding: 0.7mm 2.5mm; border-radius: 10mm; margin-bottom: 1.5mm; display: inline-block; }
+.mod-name { font-size: 4mm; font-weight: 700; color: white; line-height: 1.2; }
+.mod-role { font-size: 2.8mm; font-weight: 300; color: rgba(255,255,255,0.6); }
+
+/* Panellist grid: 4 + 3 */
+.pan-section-lbl {
+  font-size: 2.3mm; font-weight: 700; letter-spacing: 2.5px;
+  text-transform: uppercase; color: rgba(255,255,255,0.35);
+  margin-bottom: 4mm;
+}
+.pan-grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 4mm; margin-bottom: 4mm; }
+.pan-grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 4mm; max-width: calc(75% - 3mm); }
+.pan-card {
+  display: flex; flex-direction: column; align-items: center; text-align: center;
+}
+.pan-photo {
+  width: 24mm; height: 24mm; border-radius: 50%;
+  object-fit: cover; object-position: center top;
+  border: 0.6mm solid rgba(255,255,255,0.15);
+  margin-bottom: 2mm;
+  filter: grayscale(20%);
+}
+.pan-name    { font-size: 2.8mm; font-weight: 600; color: white; line-height: 1.3; }
+.pan-inst    { font-size: 2.4mm; font-weight: 300; color: rgba(255,255,255,0.5); margin-top: 0.5mm; }
+.pan-network {
+  font-size: 2mm; font-weight: 700; letter-spacing: 1px;
+  text-transform: uppercase; color: var(--green);
+  background: rgba(78,147,23,0.15); border-radius: 10mm;
+  padding: 0.5mm 2mm; margin-top: 1mm; display: inline-block;
+}
+.pan-foot { position: absolute; bottom: 8mm; left: 13mm; right: 13mm; display:flex; justify-content:space-between; }
+.pan-foot span { font-size: 2.3mm; color: rgba(255,255,255,0.2); }
+.pan-foot .pn { color: var(--purple); font-weight:700; }
+
+/* ═══════════════════════════════════════
+   PAGE 9 · THE BIG QUESTIONS
+═══════════════════════════════════════ */
+.q-page { background: #0d1b2a; }
+.q-inner { display:flex; flex-direction:column; height:297mm; padding: 11mm 13mm; }
+.q-header { margin-bottom: 8mm; flex-shrink:0; }
+.q-eyebrow { font-size: 2.5mm; font-weight:700; letter-spacing:3px; text-transform:uppercase; color: var(--yellow); margin-bottom:2mm; }
+.q-title   { font-size: 7.5mm; font-weight:900; color:white; line-height:1; letter-spacing:-0.5px; }
+.q-subtitle{ font-size: 3.2mm; font-weight:300; font-style:italic; color:rgba(255,255,255,0.5); margin-top:2mm; }
+.q-grid { display:grid; grid-template-columns:1fr 1fr; gap: 5mm 8mm; flex:1; }
+.q-item { display:flex; flex-direction:column; padding-bottom: 4mm; border-bottom: 0.25mm solid rgba(255,255,255,0.08); }
+.q-item:nth-child(7), .q-item:nth-child(8) { border-bottom: none; }
+.q-num { font-size: 9mm; font-weight:900; line-height:0.85; margin-bottom:2mm; }
+.q-theme { font-size: 2.5mm; font-weight:700; letter-spacing:2px; text-transform:uppercase; margin-bottom: 2mm; }
+.q-text { font-size: 2.9mm; font-weight:300; color:rgba(255,255,255,0.7); line-height:1.6; flex:1; font-style:italic; }
+
+/* Question colour pairs */
+.q1 .q-num,.q5 .q-num { color: #87df48; }
+.q1 .q-theme,.q5 .q-theme { color: #87df48; }
+.q2 .q-num,.q6 .q-num { color: #bb94de; }
+.q2 .q-theme,.q6 .q-theme { color: #bb94de; }
+.q3 .q-num,.q7 .q-num { color: #72c8ff; }
+.q3 .q-theme,.q7 .q-theme { color: #72c8ff; }
+.q4 .q-num,.q8 .q-num { color: #3ee8d8; }
+.q4 .q-theme,.q8 .q-theme { color: #3ee8d8; }
+
+.q-source { margin-top: 4mm; font-size:2.3mm; color:rgba(255,255,255,0.25); font-style:italic; flex-shrink:0; }
+.q-foot { display:flex; justify-content:space-between; align-items:center; border-top: 0.25mm solid rgba(255,255,255,0.08); padding-top:3mm; margin-top:3mm; flex-shrink:0; }
+.q-foot span { font-size:2.3mm; color:rgba(255,255,255,0.2); }
+.q-foot .pn { color:var(--purple); font-weight:700; }
+
+/* ═══════════════════════════════════════
+   PAGE 10 · MEET THE FOUNDERS
+═══════════════════════════════════════ */
+.founders-page { background: white; }
+.f-stripe { height: 4.5mm; background: linear-gradient(to right, var(--purple), var(--green)); }
+.f-body { padding: 9mm 13mm 0; }
+.f-header { margin-bottom: 7mm; }
+.f-eyebrow { font-size:2.5mm; font-weight:700; letter-spacing:3px; text-transform:uppercase; color:var(--purple); margin-bottom:1.5mm; }
+.f-title { font-size:8.5mm; font-weight:800; color:var(--text); line-height:1; }
+.f-grid { display:grid; grid-template-columns: repeat(3,1fr); gap:7mm; margin-top: 3mm; }
+.f-card { display:flex; flex-direction:column; align-items:center; text-align:center; }
+.f-photo-wrap {
+  width: 45mm; height: 55mm;
+  border-radius: 3mm;
+  overflow: hidden; margin-bottom: 4mm;
+  position: relative;
+  box-shadow: 0 2mm 10mm rgba(131,96,169,0.2);
+}
+.f-photo-wrap img { width:100%; height:100%; object-fit:cover; object-position: center top; }
+.f-photo-wrap::after {
+  content:''; position:absolute; bottom:0; left:0; right:0;
+  height: 18mm;
+  background: linear-gradient(to top, rgba(45,24,84,0.55), transparent);
+}
+.f-role-badge {
+  position: absolute; bottom: 3mm; left: 50%; transform: translateX(-50%);
+  font-size: 2mm; font-weight: 700; letter-spacing: 1px;
+  text-transform: uppercase; white-space: nowrap;
+  background: var(--yellow); color: #1a1a1a;
+  padding: 0.7mm 3mm; border-radius: 10mm; z-index:2;
+}
+.f-name { font-size: 3.8mm; font-weight: 700; color: var(--text); line-height: 1.25; margin-bottom:1mm; }
+.f-dept { font-size: 2.8mm; font-weight: 400; color: var(--purple); margin-bottom: 3mm; }
+.f-bio  { font-size: 2.9mm; font-weight: 300; line-height: 1.6; color: var(--text-mid); text-align: left; }
+
+/* HBN stats band */
+.f-stats-band {
+  margin-top: 8mm;
+  background: linear-gradient(135deg, var(--green-deep), var(--green));
+  border-radius: 3mm;
+  padding: 5mm 8mm;
+  display: flex; gap: 0;
+}
+.f-stat { flex:1; text-align:center; }
+.f-stat + .f-stat { border-left: 0.3mm solid rgba(255,255,255,0.2); }
+.f-stat-n { font-size: 8mm; font-weight:900; color:white; line-height:1; }
+.f-stat-l { font-size: 2.6mm; font-weight:300; color:rgba(255,255,255,0.7); margin-top:1mm; }
+
+/* ═══════════════════════════════════════
+   PAGE 11 · BACK COVER
+═══════════════════════════════════════ */
+.back-page { background: var(--green-deep); }
+.back-blob-layer { position:absolute; inset:0; width:100%; height:100%; }
+.back-inner {
+  position:relative; z-index:5;
+  display:flex; flex-direction:column;
+  align-items:center; justify-content:center;
+  height:297mm; padding: 0 16mm; text-align: center;
+}
+.back-logo { height: 16mm; filter: brightness(0) invert(1); opacity:0.9; margin-bottom: 10mm; }
+.back-title { font-size: 4.5mm; font-weight: 700; color:white; margin-bottom: 2mm; }
+.back-tagline { font-size: 3.3mm; font-weight:300; font-style:italic; color:rgba(255,255,255,0.6); margin-bottom: 10mm; max-width: 120mm; line-height:1.6; }
+.back-divider { width: 20mm; height:0.5mm; background: var(--yellow); margin-bottom: 10mm; }
+.back-contact { font-size:3mm; font-weight:300; color:rgba(255,255,255,0.7); line-height:2; margin-bottom:10mm; }
+.back-contact a,.back-contact strong { color:white; font-weight:600; }
+.back-affiliations { font-size:2.5mm; font-weight:300; color:rgba(255,255,255,0.4); line-height:2; margin-bottom: 12mm; }
+.back-logos { display:flex; gap:8mm; align-items:center; justify-content:center; flex-wrap:wrap; margin-bottom: 10mm; }
+.back-logos img { height:8mm; filter: brightness(0) invert(1); opacity:0.5; }
+.back-footnote { font-size:2.4mm; color:rgba(255,255,255,0.25); }
+.back-year {
+  position:absolute; bottom: 0; left:0; right:0;
+  text-align:center; padding-bottom: 8mm;
+  font-family:'Shadows Into Light', cursive;
+  font-size: 60mm; font-weight:400;
+  color: rgba(255,255,255,0.03); line-height:1;
+  z-index:1; pointer-events:none;
+}
+</style>
+</head>
+<body>
+
+<!-- ══════════════════════════════════════════
+     PAGE 1  ·  COVER
+══════════════════════════════════════════ -->
+<div class="page cover">
+  <svg class="blob-layer" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 210 297" preserveAspectRatio="xMidYMid slice">
+    <defs>
+      <filter id="bh"><feGaussianBlur stdDeviation="22"/></filter>
+      <filter id="bm"><feGaussianBlur stdDeviation="14"/></filter>
+      <filter id="bs"><feGaussianBlur stdDeviation="8"/></filter>
+    </defs>
+    <!-- Large green blob top-right -->
+    <ellipse cx="168" cy="52"  rx="85" ry="70"  fill="#4e9317" opacity="0.32" filter="url(#bh)"/>
+    <!-- Yellow blob bottom-left -->
+    <ellipse cx="28"  cy="225" rx="68" ry="55"  fill="#ffca29" opacity="0.22" filter="url(#bh)"/>
+    <!-- Blue blob centre-right -->
+    <ellipse cx="185" cy="200" rx="60" ry="75"  fill="#3e95dd" opacity="0.18" filter="url(#bm)"/>
+    <!-- Small purple centre -->
+    <ellipse cx="105" cy="160" rx="50" ry="40"  fill="#8360a9" opacity="0.2"  filter="url(#bh)"/>
+    <!-- Wave bottom -->
+    <path d="M0,270 C40,258 80,278 120,268 C160,258 185,272 210,262 L210,297 L0,297 Z"
+          fill="rgba(255,255,255,0.05)"/>
+    <path d="M0,280 C50,270 100,285 150,275 C175,270 195,278 210,274 L210,297 L0,297 Z"
+          fill="rgba(255,255,255,0.04)"/>
+  </svg>
+
+  <div class="cover-inner">
+    <div class="c-logos">
+      <img src="../images/hbn_landscape.svg" alt="Healthy Buildings Network Leeds">
+      <img class="leeds-img" src="../images/leeds_logo_white_transparent.png" alt="University of Leeds">
+    </div>
+
+    <div class="c-hero">
+      <img src="../images/events/showcase/poster_showcase.png" alt="HBN Showcase 2026">
+      <div class="c-hero-bar"></div>
+    </div>
+
+    <div class="c-title">
+      <div class="c-kicker">Healthy Buildings Network Leeds</div>
+      <div>
+        <span class="c-showcase">Showcase</span><span class="c-year"> 2026</span>
+      </div>
+      <p class="c-tagline">Interdisciplinary Research for Healthier, More Sustainable Built Environments</p>
+    </div>
+
+    <div class="c-pills">
+      <div class="c-pill">
+        <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+        <span>Thursday 2 July 2026</span>
+      </div>
+      <div class="c-pill">
+        <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        <span>10:00 AM – 4:00 PM</span>
+      </div>
+      <div class="c-pill">
+        <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        <span>University House, University of Leeds</span>
+      </div>
+    </div>
+
+    <div class="c-keynote">
+      <div class="c-kn-label">Keynote Speaker</div>
+      <div class="c-kn-name">Prof Marcella Ucci</div>
+      <div class="c-kn-inst">UCL Bartlett &nbsp;·&nbsp; Institute for Environmental Design &amp; Engineering</div>
+    </div>
+
+    <div class="c-foot">
+      <div class="c-foot-l">healthybuildingsnetwork.leeds.ac.uk</div>
+      <div class="c-foot-r">
+        <strong>Free · All Welcome</strong>
+        Lunch &amp; refreshments provided
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ══════════════════════════════════════════
+     PAGE 2  ·  WELCOME
+══════════════════════════════════════════ -->
+<div class="page welcome-page">
+  <div class="w-stripe"></div>
+  <div class="w-body">
+    <div class="w-top">
+
+      <div class="w-text">
+        <div class="w-headline">Wel<span>come.</span></div>
+        <div class="w-message">
+          <p>The Healthy Buildings Network (HBN) at the University of Leeds is a cross-disciplinary research and collaboration hub focused on healthier, more sustainable built environments. Founded in 2024 as a Horizons Challenge Network, HBN now spans more than 20 researchers from over 11 departments across the university, alongside partners in local government, industry, and the voluntary sector.</p>
+          <p>This Showcase marks two years of funded research, community engagement, and interdisciplinary collaboration. Today you will hear from the eight project teams we have supported through our pump-priming and early-career researcher funding programmes, and from leading voices in the broader UK healthy buildings research landscape.</p>
+          <p>We hope the day sparks new conversations, new partnerships, and new questions.</p>
+        </div>
+        <div class="w-sig">
+          Dr Martín López-García &nbsp;·&nbsp; Dr Irene Mussio &nbsp;·&nbsp; Dr Marco-Felipe King
+          <em>Co-Founders &amp; Directors, Healthy Buildings Network Leeds</em>
+        </div>
+      </div>
+
+      <div class="w-sidebar">
+        <div class="w-founder-card">
+          <img src="../images/profile_Martin.png" alt="Dr Martín López-García">
+          <div class="w-fc-name">Dr Martín López-García</div>
+          <div class="w-fc-role">Mathematics</div>
+        </div>
+        <div class="w-founder-card">
+          <img src="../images/profile_irene.png" alt="Dr Irene Mussio">
+          <div class="w-fc-name">Dr Irene Mussio</div>
+          <div class="w-fc-role">Business School</div>
+        </div>
+        <div class="w-founder-card">
+          <img src="../images/profile_marco-felipe_king.png" alt="Dr Marco-Felipe King">
+          <div class="w-fc-name">Dr Marco-Felipe King</div>
+          <div class="w-fc-role">Civil Engineering</div>
+        </div>
+      </div>
+
+    </div><!-- /w-top -->
+
+    <!-- Photo strip from launch event -->
+    <div class="w-photo-strip">
+      <div class="ph">
+        <img src="../images/events/launch/andrew_anushi.jpg" alt="HBN launch event">
+        <div class="ph-cap">HBN Launch Event 2024</div>
+      </div>
+      <div class="ph">
+        <img src="../images/events/launch/hua_doug.jpg" alt="Network members at launch">
+        <div class="ph-cap">Networking</div>
+      </div>
+      <div class="ph">
+        <img src="../images/events/launch/food.jpg" alt="Launch reception">
+        <div class="ph-cap">Collaboration in action</div>
+      </div>
+      <div class="ph">
+        <img src="../images/events/workshops/energy/martin_eai.jpeg" alt="Workshop discussion">
+        <div class="ph-cap">Whose Power? Workshop 2025</div>
+      </div>
+    </div>
+
+    <div class="run-foot" style="position:static;border-top:0.25mm solid #e0e0e0;margin-top:auto;padding-top:2mm;display:flex;justify-content:space-between;padding-bottom:4mm;">
+      <span style="font-size:2.3mm;color:#bbb;font-weight:300;">HBN Showcase 2026</span>
+      <span style="font-size:2.3mm;color:var(--purple);font-weight:700;">2</span>
+    </div>
+  </div>
+</div>
+
+
+<!-- ══════════════════════════════════════════
+     PAGE 3  ·  ABOUT THE NETWORK
+══════════════════════════════════════════ -->
+<div class="page about-page">
+  <div class="a-top-band">
+    <div>
+      <div class="a-band-title">About the Network</div>
+      <div class="a-band-sub">Building bridges across disciplines, councils, and industries</div>
+    </div>
+  </div>
+
+  <div class="a-body">
+    <div class="a-cols">
+
+      <div class="a-left">
+        <div class="a-section-lbl" style="margin-top:0mm;">Our Vision</div>
+        <div class="a-vision-box">
+          <div class="a-vision-text">"A world where all buildings enhance the health, wellbeing, and sustainability of their occupants and the planet through collaborative, evidence-based approaches."</div>
+        </div>
+
+        <div class="a-section-lbl" style="margin-top:5mm;">Our Mission</div>
+        <div class="a-desc">HBN emerged to foster meaningful collaboration on how buildings impact health. We actively engage across campuses, councils, and industries — driving innovative research for healthier indoor environments.</div>
+
+        <div class="a-section-lbl" style="margin-top:5mm;">Our Funding</div>
+        <div class="a-desc">Established in 2024 through the University of Leeds <strong>Horizons Challenge Network</strong> programme. We have delivered two competitive funding rounds — four pump-priming grants (£3,000 each) and four ECR-led grants (£1,500 each, co-funded with the School of Civil Engineering).</div>
+
+        <div class="a-section-lbl" style="margin-top:5mm;">Network Reach</div>
+        <div class="a-desc">Members span engineering, mathematics, business, public health, architecture, environmental science, social science, and the arts — united by a shared commitment to healthier places.</div>
+      </div>
+
+      <div class="a-right">
+        <div class="a-section-lbl">Our Focus Areas</div>
+        <div class="a-focus-grid">
+          <span class="a-focus-pill tag tag-green">Health &amp; Ergonomics</span>
+          <span class="a-focus-pill tag tag-blue">Indoor Air Quality</span>
+          <span class="a-focus-pill tag tag-purple">Thermal Comfort</span>
+          <span class="a-focus-pill tag tag-yellow">Lighting &amp; Visual Comfort</span>
+          <span class="a-focus-pill tag tag-green">Water Quality</span>
+          <span class="a-focus-pill tag tag-blue">Infection Control</span>
+          <span class="a-focus-pill tag tag-purple">Sustainable Materials</span>
+          <span class="a-focus-pill tag tag-yellow">Energy Efficiency</span>
+          <span class="a-focus-pill tag tag-green">Equity &amp; Access</span>
+          <span class="a-focus-pill tag tag-blue">Environmental Resilience</span>
+        </div>
+
+        <div class="a-section-lbl" style="margin-top:6mm;">Our Partners</div>
+        <div class="a-desc">Leeds City Council · NHS · CELIA CIC · Leeds Discovery Centre · University of Leeds estates and facilities teams · Leeds Living Lab · industry sponsors and community organisations across Yorkshire.</div>
+
+        <div style="margin-top:6mm; border-radius:2.5mm; overflow:hidden; height:42mm; position:relative;">
+          <img src="../images/building_health_sciences.jpg" alt="University of Leeds campus" style="width:100%;height:100%;object-fit:cover;">
+          <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(45,24,84,0.5),transparent);"></div>
+          <div style="position:absolute;bottom:3mm;left:4mm;font-size:2.4mm;color:rgba(255,255,255,0.8);font-weight:300;">University of Leeds · established 1904</div>
+        </div>
+      </div>
+
+    </div><!-- /a-cols -->
+
+    <div class="a-stats">
+      <div class="a-stat"><div class="a-stat-n">20+</div><div class="a-stat-lbl">Researchers</div></div>
+      <div class="a-stat"><div class="a-stat-n">11</div><div class="a-stat-lbl">Departments</div></div>
+      <div class="a-stat"><div class="a-stat-n">8</div><div class="a-stat-lbl">Funded Projects</div></div>
+      <div class="a-stat"><div class="a-stat-n">600+</div><div class="a-stat-lbl">Event Attendees</div></div>
+      <div class="a-stat"><div class="a-stat-n">2</div><div class="a-stat-lbl">Years Active</div></div>
+    </div>
+  </div>
+
+  <div class="run-foot">
+    <span>HBN Showcase 2026</span><span class="pn">3</span>
+  </div>
+</div>
+
+
+<!-- ══════════════════════════════════════════
+     PAGE 4  ·  PROGRAMME
+══════════════════════════════════════════ -->
+<div class="page prog-page">
+  <div class="p-stripe"></div>
+  <div class="p-body">
+    <div class="p-header">
+      <div>
+        <div class="p-section-lbl">HBN Showcase 2026</div>
+        <div class="p-title">Programme</div>
+        <div class="p-meta">Thursday 2 July 2026 &nbsp;·&nbsp; University House, Woodhouse Suite, University of Leeds</div>
+      </div>
+      <img class="p-header-logo" src="../images/hbn_landscape.svg" alt="HBN">
+    </div>
+
+    <div class="timeline">
+      <div class="tl-row">
+        <div class="tl-time"><div class="tl-t1">09:30</div><div class="tl-t2">10:00</div></div>
+        <div class="tl-spine"><div class="tl-dot dc-gray"></div><div class="tl-line"></div></div>
+        <div class="tl-body">
+          <div class="tl-name">Registration, Coffee &amp; Pastries</div>
+          <div class="tl-sub">Collect your name badge and programme</div>
+        </div>
+      </div>
+      <div class="tl-row hi-green">
+        <div class="tl-time"><div class="tl-t1">10:00</div><div class="tl-t2">10:15</div></div>
+        <div class="tl-spine"><div class="tl-dot"></div><div class="tl-line"></div></div>
+        <div class="tl-body">
+          <div class="tl-name">Welcome &amp; Introduction</div>
+          <div class="tl-sub">Martín López-García, Irene Mussio &amp; Marco-Felipe King — HBN Network Directors</div>
+        </div>
+      </div>
+      <div class="tl-row hi-green">
+        <div class="tl-time"><div class="tl-t1">10:15</div><div class="tl-t2">11:00</div></div>
+        <div class="tl-spine"><div class="tl-dot"></div><div class="tl-line"></div></div>
+        <div class="tl-body">
+          <div class="tl-name">Keynote Address</div>
+          <div class="tl-sub">Prof Marcella Ucci — UCL Institute for Environmental Design &amp; Engineering (The Bartlett)</div>
+          <div class="tl-badges"><span class="b b-g">Keynote</span></div>
+        </div>
+      </div>
+      <div class="tl-row">
+        <div class="tl-time"><div class="tl-t1">11:00</div><div class="tl-t2">11:20</div></div>
+        <div class="tl-spine"><div class="tl-dot dc-gray"></div><div class="tl-line"></div></div>
+        <div class="tl-body"><div class="tl-name">Coffee Break</div></div>
+      </div>
+      <div class="tl-row">
+        <div class="tl-time"><div class="tl-t1">11:20</div><div class="tl-t2">12:10</div></div>
+        <div class="tl-spine"><div class="tl-dot dc-blue"></div><div class="tl-line"></div></div>
+        <div class="tl-body">
+          <div class="tl-name">Pump-Priming Project Presentations</div>
+          <div class="tl-sub">Living in Clover · ThermoAge · Indoor/Outdoor Air &nbsp;·&nbsp; 15 min each</div>
+          <div class="tl-badges"><span class="b b-b">3 talks</span></div>
+        </div>
+      </div>
+      <div class="tl-row hi-yellow">
+        <div class="tl-time"><div class="tl-t1">12:10</div><div class="tl-t2">13:10</div></div>
+        <div class="tl-spine"><div class="tl-dot dc-yellow"></div><div class="tl-line"></div></div>
+        <div class="tl-body">
+          <div class="tl-name">Lunch &amp; Networking</div>
+          <div class="tl-sub">Buffet lunch provided · Informal networking and cross-disciplinary conversation</div>
+        </div>
+      </div>
+      <div class="tl-row">
+        <div class="tl-time"><div class="tl-t1">13:10</div><div class="tl-t2">13:45</div></div>
+        <div class="tl-spine"><div class="tl-dot dc-purple"></div><div class="tl-line"></div></div>
+        <div class="tl-body">
+          <div class="tl-name">Project Presentations</div>
+          <div class="tl-sub">Human-Centred Housing (15 min) · Sonic Belonging · Child-Friendly Futures · Infection Transmission · Home Microbiomes</div>
+          <div class="tl-badges"><span class="b b-p">5 talks</span></div>
+        </div>
+      </div>
+      <div class="tl-row">
+        <div class="tl-time"><div class="tl-t1">13:45</div><div class="tl-t2">14:00</div></div>
+        <div class="tl-spine"><div class="tl-dot dc-gray"></div><div class="tl-line"></div></div>
+        <div class="tl-body"><div class="tl-name">Comfort Break</div></div>
+      </div>
+      <div class="tl-row hi-purple">
+        <div class="tl-time"><div class="tl-t1">14:00</div><div class="tl-t2">15:45</div></div>
+        <div class="tl-spine"><div class="tl-dot dc-purple"></div><div class="tl-line"></div></div>
+        <div class="tl-body">
+          <div class="tl-name">Networks, Hub Pitches &amp; Panel Discussion</div>
+          <div class="tl-sub"><em>"Top Questions for the Future of Healthy Buildings"</em><br>
+          Moderated by Jade Lewis &nbsp;·&nbsp; HESTIA · AirHub · BREATHEIN · CHILI · GREENIN · INHABIT · UKIEG</div>
+          <div class="tl-badges"><span class="b b-p">Interactive</span></div>
+        </div>
+      </div>
+      <div class="tl-row hi-green">
+        <div class="tl-time"><div class="tl-t1">15:45</div><div class="tl-t2">16:00</div></div>
+        <div class="tl-spine"><div class="tl-dot"></div></div>
+        <div class="tl-body">
+          <div class="tl-name">Closing Remarks &amp; Next Steps</div>
+          <div class="tl-sub">Future direction of the Healthy Buildings Network</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="p-foot">
+      <div class="p-foot-note">Programme subject to change &nbsp;·&nbsp; All sessions at University House, Woodhouse Suite</div>
+      <div class="p-pg">4</div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ══════════════════════════════════════════
+     PAGE 5  ·  KEYNOTE SPEAKER
+══════════════════════════════════════════ -->
+<div class="page keynote-page">
+  <div class="kn-layout">
+
+    <div class="kn-photo-col">
+      <img src="../images/events/showcase/marcella.jpg" alt="Professor Marcella Ucci">
+    </div>
+
+    <div class="kn-text-col">
+      <div class="kn-time-badge">10:15 AM &nbsp;·&nbsp; Keynote</div>
+      <div class="kn-eyebrow">Keynote Speaker</div>
+      <div class="kn-name">Prof Marcella<br>Ucci</div>
+      <div class="kn-inst">UCL Institute for Environmental Design &amp; Engineering<br>The Bartlett, University College London</div>
+      <div class="kn-divider"></div>
+      <div class="kn-bio">Marcella Ucci is a Professor at UCL's Institute for Environmental Design and Engineering (IEDE) at The Bartlett. Her research spans indoor environmental quality, ventilation, building-related health, and the interplay between building design and occupant wellbeing.</div>
+      <div class="kn-bio" style="margin-top:0;">She has contributed to major interdisciplinary projects linking energy efficiency with health outcomes in buildings and has advised on national guidance around indoor air quality and healthy building design.</div>
+      <div class="kn-interests-label">Research Interests</div>
+      <div class="kn-interests">
+        <span class="kn-tag">Indoor Air Quality</span>
+        <span class="kn-tag">Ventilation</span>
+        <span class="kn-tag">Building &amp; Health</span>
+        <span class="kn-tag">Energy &amp; Wellbeing</span>
+        <span class="kn-tag">Occupant Behaviour</span>
+      </div>
+      <div class="kn-quote">
+        <div class="kn-quote-text">"The buildings we live and work in shape our health — often in ways we don't yet fully understand."</div>
+      </div>
+      <div class="kn-foot">
+        <span>HBN Showcase 2026</span>
+        <span class="pn">5</span>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+<!-- ══════════════════════════════════════════
+     PAGE 6  ·  PUMP-PRIMING PROJECTS
+══════════════════════════════════════════ -->
+<div class="page pp-page">
+  <div class="proj-header">
+    <div>
+      <div class="ph-kicker">HBN Funded Research</div>
+      <div class="ph-title">Pump-Priming Projects</div>
+    </div>
+    <div class="ph-count">PP</div>
+  </div>
+
+  <div class="proj-grid">
+
+    <!-- PP1: Living in Clover -->
+    <div class="proj-cell">
+      <div class="pc-photo">
+        <img src="../images/events/showcase/Gleb-Yakubov-410.png" alt="Prof Gleb Yakubov">
+        <div class="pc-photo-overlay"></div>
+        <div class="pc-photo-num">1</div>
+      </div>
+      <div class="pc-text">
+        <div class="pc-num-dot"><div class="pc-dot"></div><div class="pc-project-num">Project 1 · Pump-Priming</div></div>
+        <div class="pc-title">Living in Clover</div>
+        <div class="pc-pi">Prof. Gleb Yakubov</div>
+        <div class="pc-desc">Exploring clover as a sustainable living roof option. Beyond insulation and carbon capture, the team investigates nitrogen-fixing qualities to support pollinators, boost soil health, and create multifunctional rooftop spaces that enhance urban biodiversity and circular-economy principles.</div>
+        <div class="pc-tags">
+          <span class="tag tag-green">Green Roofs</span>
+          <span class="tag tag-blue">Biodiversity</span>
+          <span class="tag tag-yellow">Circular Economy</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- PP2: ThermoAge -->
+    <div class="proj-cell">
+      <div class="pc-photo">
+        <img src="../images/events/showcase/thermoage.jpg" alt="ThermoAge — thermal comfort and ageing">
+        <div class="pc-photo-overlay"></div>
+        <div class="pc-photo-num">2</div>
+      </div>
+      <div class="pc-text">
+        <div class="pc-num-dot"><div class="pc-dot"></div><div class="pc-project-num">Project 2 · Pump-Priming</div></div>
+        <div class="pc-title">ThermoAge</div>
+        <div class="pc-pi">Dr Sally Shahzad</div>
+        <div class="pc-desc">Examining how indoor temperature extremes affect posture, muscle function, and fall risk in older adults. Combining controlled climate chamber sessions, biomechanical monitoring, and occupant diaries to identify threshold temperatures where balance and safety are significantly compromised.</div>
+        <div class="pc-tags">
+          <span class="tag tag-purple">Thermal Comfort</span>
+          <span class="tag tag-blue">Ageing</span>
+          <span class="tag tag-green">Biomechanics</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- PP3: Human-Centred Housing -->
+    <div class="proj-cell">
+      <div class="pc-photo">
+        <img src="../images/events/showcase/alexa.jpeg" alt="Dr Alexa Ruppertsberg">
+        <div class="pc-photo-overlay"></div>
+        <div class="pc-photo-num">3</div>
+      </div>
+      <div class="pc-text">
+        <div class="pc-num-dot"><div class="pc-dot"></div><div class="pc-project-num">Project 3 · Pump-Priming</div></div>
+        <div class="pc-title">Human-Centred Housing: Evidence-Based Design</div>
+        <div class="pc-pi">Dr Alexa Ruppertsberg</div>
+        <div class="pc-desc">Bridging the gap between compliance-focused housing standards and the real-world needs of residents. Integrating technical regulations with Post-Occupancy Evaluation data to embed occupant wellbeing, health, and happiness into the design process.</div>
+        <div class="pc-tags">
+          <span class="tag tag-yellow">Housing Design</span>
+          <span class="tag tag-purple">Post-Occupancy</span>
+          <span class="tag tag-green">Wellbeing</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- PP4: Indoor-Outdoor Air -->
+    <div class="proj-cell">
+      <div class="pc-photo">
+        <img src="../images/events/showcase/Douglas-Booker-2.jpg" alt="Dr Douglas Booker">
+        <div class="pc-photo-overlay"></div>
+        <div class="pc-photo-num">4</div>
+      </div>
+      <div class="pc-text">
+        <div class="pc-num-dot"><div class="pc-dot"></div><div class="pc-project-num">Project 4 · Pump-Priming</div></div>
+        <div class="pc-title">Indoor–Outdoor Air: Passive Houses Study</div>
+        <div class="pc-pi">Prof. Alison Tomlin &amp; Dr Douglas Booker</div>
+        <div class="pc-desc">Investigating how airtight Passive House designs influence indoor and outdoor air quality. Monitoring pollutants including NOₓ, CO₂, PM₂.₅, and ultrafine particles — correlating them with occupant behaviour and ventilation practices.</div>
+        <div class="pc-tags">
+          <span class="tag tag-blue">Air Quality</span>
+          <span class="tag tag-green">Passive House</span>
+          <span class="tag tag-purple">Ventilation</span>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /proj-grid -->
+  <div class="run-foot">
+    <span>HBN Showcase 2026</span><span class="pn">6</span>
+  </div>
+</div>
+
+
+<!-- ══════════════════════════════════════════
+     PAGE 7  ·  ECR PROJECTS
+══════════════════════════════════════════ -->
+<div class="page ecr-page">
+  <div class="ecr-header">
+    <div>
+      <div class="ph-kicker">HBN Funded Research</div>
+      <div class="ph-title">Early Career Researcher Projects</div>
+    </div>
+    <div class="ph-count" style="color:rgba(255,255,255,0.06);">ECR</div>
+  </div>
+
+  <div class="proj-grid">
+
+    <!-- ECR5: Sonic Belonging -->
+    <div class="proj-cell">
+      <div class="pc-photo">
+        <img src="../images/events/showcase/lijun.jpeg" alt="Mr Lijun Zhang">
+        <div class="pc-photo-overlay" style="background:linear-gradient(to bottom,transparent 55%,rgba(45,24,84,0.7));"></div>
+        <div class="pc-photo-num">5</div>
+      </div>
+      <div class="pc-text">
+        <div class="pc-num-dot"><div class="pc-dot" style="background:var(--purple);"></div><div class="pc-project-num" style="color:var(--purple);">Project 5 · ECR</div></div>
+        <div class="pc-title">Sonic Belonging: Co-Designing Community Music Spaces</div>
+        <div class="pc-pi">Mr Lijun Zhang · Prof. Lynda Song · Dr Aiqin Liu · Dr Xunnan Li</div>
+        <div class="pc-desc">Co-designing a 'Community Brief for Active Music Spaces' with Leeds residents, musicians, and researchers — considering acoustics, comfortable seating, and ways to encourage gentle movement to support culturally inclusive music activities.</div>
+        <div class="pc-tags">
+          <span class="tag tag-purple">Music &amp; Wellbeing</span>
+          <span class="tag tag-green">Co-Design</span>
+          <span class="tag tag-blue">Social Inclusion</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ECR6: Child-Friendly -->
+    <div class="proj-cell">
+      <div class="pc-photo">
+        <img src="../images/events/showcase/rodrigo_juarez.jpg" alt="Dr Rodrigo Juárez">
+        <div class="pc-photo-overlay" style="background:linear-gradient(to bottom,transparent 55%,rgba(45,24,84,0.7));"></div>
+        <div class="pc-photo-num">6</div>
+      </div>
+      <div class="pc-text">
+        <div class="pc-num-dot"><div class="pc-dot" style="background:var(--purple);"></div><div class="pc-project-num" style="color:var(--purple);">Project 6 · ECR</div></div>
+        <div class="pc-title">Child-Friendly Environments Through Healthy Buildings</div>
+        <div class="pc-pi">Dr Rodrigo Juárez &amp; team</div>
+        <div class="pc-desc">Exploring how child-friendly green spaces support children's health, resilience, and everyday lives. Bringing together researchers, practitioners, policymakers, and communities across sectors and generations to centre children's needs in design.</div>
+        <div class="pc-tags">
+          <span class="tag tag-green">Child-Friendly</span>
+          <span class="tag tag-blue">Greenspaces</span>
+          <span class="tag tag-purple">Co-Production</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ECR7: Infection Transmission -->
+    <div class="proj-cell">
+      <div class="pc-photo">
+        <img src="../images/events/showcase/xiaoxuan.jpeg" alt="Xiaoxuan Qin">
+        <div class="pc-photo-overlay" style="background:linear-gradient(to bottom,transparent 55%,rgba(45,24,84,0.7));"></div>
+        <div class="pc-photo-num">7</div>
+      </div>
+      <div class="pc-text">
+        <div class="pc-num-dot"><div class="pc-dot" style="background:var(--purple);"></div><div class="pc-project-num" style="color:var(--purple);">Project 7 · ECR</div></div>
+        <div class="pc-title">Infection Transmission in Indoor Settings</div>
+        <div class="pc-pi">Xiaoxuan Qin &amp; Marcus Marshall</div>
+        <div class="pc-desc">A multidisciplinary mini-symposium connecting perspectives from environmental microbiology, fluid dynamics, and quantitative modelling to improve understanding of multi-route infection risks and build new research links across disciplines.</div>
+        <div class="pc-tags">
+          <span class="tag tag-blue">Infection Risk</span>
+          <span class="tag tag-green">Microbiology</span>
+          <span class="tag tag-purple">Fluid Dynamics</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ECR8: Home Microbiomes -->
+    <div class="proj-cell">
+      <div class="pc-photo">
+        <img src="../images/events/showcase/suparna.jpeg" alt="Dr Suparna Mitra">
+        <div class="pc-photo-overlay" style="background:linear-gradient(to bottom,transparent 55%,rgba(45,24,84,0.7));"></div>
+        <div class="pc-photo-num">8</div>
+      </div>
+      <div class="pc-text">
+        <div class="pc-num-dot"><div class="pc-dot" style="background:var(--purple);"></div><div class="pc-project-num" style="color:var(--purple);">Project 8 · ECR</div></div>
+        <div class="pc-title">Healthy Buildings, Healthy Microbiome</div>
+        <div class="pc-pi">Dr Suparna Mitra &amp; Dr Paula Avello</div>
+        <div class="pc-desc">An interdisciplinary mini-symposium exploring the complex relationship between indoor microbial communities and building health. Connecting environmental microbiology, building science, and public health to examine how buildings shape microbial ecosystems.</div>
+        <div class="pc-tags">
+          <span class="tag tag-purple">Microbiome</span>
+          <span class="tag tag-green">Microbiology</span>
+          <span class="tag tag-blue">Building Health</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <div class="run-foot">
+    <span>HBN Showcase 2026</span><span class="pn">7</span>
+  </div>
+</div>
+
+
+<!-- ══════════════════════════════════════════
+     PAGE 8  ·  PANEL DISCUSSION
+══════════════════════════════════════════ -->
+<div class="page panel-page">
+  <div class="panel-inner">
+    <div class="pan-eyebrow">Interactive Session · 14:15 – 15:45</div>
+    <div class="pan-title">Networks, Hub Pitches &amp;<br>Panel Discussion</div>
+    <div class="pan-subtitle">"Top Questions in the Future of Healthy Building Research"</div>
+
+    <!-- Moderator -->
+    <div class="mod-row">
+      <img class="mod-photo" src="../images/events/showcase/jade-lewis.png" alt="Jade Lewis">
+      <div>
+        <div class="mod-badge">Moderator</div>
+        <div class="mod-name">Jade Lewis</div>
+        <div class="mod-role">Chief Executive, Sustainable Energy Association &nbsp;·&nbsp; Secretariat, Healthy Homes &amp; Buildings APPG</div>
+      </div>
+    </div>
+
+    <!-- 7 panellists: 4 top, 3 bottom -->
+    <div class="pan-section-lbl">Panellists</div>
+    <div class="pan-grid-4">
+      <div class="pan-card">
+        <img class="pan-photo" src="../images/events/showcase/Douglas-Booker-2.jpg" alt="Dr Douglas Booker">
+        <div class="pan-name">Dr Douglas Booker</div>
+        <div class="pan-inst">University of Leeds</div>
+        <div class="pan-network">HESTIA</div>
+      </div>
+      <div class="pan-card">
+        <img class="pan-photo" src="../images/events/showcase/abigail-hathway.jpg" alt="Dr Abigail Hathway">
+        <div class="pan-name">Dr Abigail Hathway</div>
+        <div class="pan-inst">University of Sheffield</div>
+        <div class="pan-network">AirHub</div>
+      </div>
+      <div class="pan-card">
+        <img class="pan-photo" src="../images/events/showcase/bruno-fraga.jpg" alt="Dr Bruño Fraga">
+        <div class="pan-name">Dr Bruño Fraga</div>
+        <div class="pan-inst">University of Exeter</div>
+        <div class="pan-network">BREATHEIN</div>
+      </div>
+      <div class="pan-card">
+        <img class="pan-photo" src="../images/events/showcase/marcella.jpg" alt="Prof Marcella Ucci">
+        <div class="pan-name">Prof Marcella Ucci</div>
+        <div class="pan-inst">UCL</div>
+        <div class="pan-network">UKIEG</div>
+      </div>
+    </div>
+    <div class="pan-grid-3">
+      <div class="pan-card">
+        <img class="pan-photo" src="../images/events/showcase/dejan_mumovic.jpg" alt="Prof Dejan Mumovic">
+        <div class="pan-name">Prof Dejan Mumovic</div>
+        <div class="pan-inst">UCL</div>
+        <div class="pan-network">CHILI Hub</div>
+      </div>
+      <div class="pan-card">
+        <img class="pan-photo" src="../images/events/showcase/prashant_kumar.jpg" alt="Prof Prashant Kumar">
+        <div class="pan-name">Prof Prashant Kumar</div>
+        <div class="pan-inst">University of Surrey</div>
+        <div class="pan-network">GREENIN</div>
+      </div>
+      <div class="pan-card">
+        <img class="pan-photo" src="../images/events/showcase/rejat_gupta.jpg" alt="Prof Rajat Gupta">
+        <div class="pan-name">Prof Rajat Gupta</div>
+        <div class="pan-inst">De Montfort University</div>
+        <div class="pan-network">INHABIT</div>
+      </div>
+    </div>
+  </div>
+  <div class="pan-foot">
+    <span>HBN Showcase 2026</span><span class="pn">8</span>
+  </div>
+</div>
+
+
+<!-- ══════════════════════════════════════════
+     PAGE 9  ·  THE BIG QUESTIONS
+══════════════════════════════════════════ -->
+<div class="page q-page">
+  <div class="q-inner">
+    <div class="q-header">
+      <div class="q-eyebrow">Panel Discussion</div>
+      <div class="q-title">8 Questions for the<br>Future of Healthy Buildings</div>
+      <div class="q-subtitle">Curated from over thirty submissions by registered attendees · June 2026</div>
+    </div>
+
+    <div class="q-grid">
+      <div class="q-item q1">
+        <div class="q-num">01</div>
+        <div class="q-theme">The Translation Gap</div>
+        <div class="q-text">We already have strong evidence linking indoor environments to health, yet adoption remains slow. What are the biggest barriers — and how do we accelerate translation into real-world practice?</div>
+      </div>
+      <div class="q-item q2">
+        <div class="q-num">02</div>
+        <div class="q-theme">Health Equity</div>
+        <div class="q-text">How can we design buildings that actively reduce health inequalities — and how do we co-produce healthy buildings with the communities most affected by poor-quality housing?</div>
+      </div>
+      <div class="q-item q3">
+        <div class="q-num">03</div>
+        <div class="q-theme">Standards &amp; Measurement</div>
+        <div class="q-text">What would it take to create a nationally consistent "healthy buildings score"? What percentage of UK buildings fall below a healthy standard — and what is the cost of inaction?</div>
+      </div>
+      <div class="q-item q4">
+        <div class="q-num">04</div>
+        <div class="q-theme">Everyday Air Quality</div>
+        <div class="q-text">How should a typical householder know when their indoor air is worse than outdoors? What does genuinely useful, consistent public messaging around ventilation and air quality look like?</div>
+      </div>
+      <div class="q-item q5">
+        <div class="q-num">05</div>
+        <div class="q-theme">Affordability &amp; Retrofit</div>
+        <div class="q-text">What are the most cost-effective interventions for making buildings healthier? How do we make clean heating genuinely affordable for households in fuel poverty — and persuade landlords to act?</div>
+      </div>
+      <div class="q-item q6">
+        <div class="q-num">06</div>
+        <div class="q-theme">Ageing &amp; Diverse Needs</div>
+        <div class="q-text">How do we design healthy buildings for older people who want to age in place — and for those with multiple intersecting health conditions? Should "one-size-fits-all" standards even exist?</div>
+      </div>
+      <div class="q-item q7">
+        <div class="q-num">07</div>
+        <div class="q-theme">People &amp; Planet</div>
+        <div class="q-text">How can we reconcile the competing demands of energy efficiency, climate resilience, and indoor air quality in future building standards — and make buildings genuinely healthy for people and planet?</div>
+      </div>
+      <div class="q-item q8">
+        <div class="q-num">08</div>
+        <div class="q-theme">Technology Adoption</div>
+        <div class="q-text">Real-time IAQ monitoring, smart ventilation, and AI-driven building controls already exist. What needs to happen — across industry, policy, and research — to accelerate their adoption?</div>
+      </div>
+    </div>
+
+    <div class="q-foot">
+      <span>HBN Showcase 2026</span><span class="pn">9</span>
+    </div>
+  </div>
+</div>
+
+
+<!-- ══════════════════════════════════════════
+     PAGE 10  ·  MEET THE FOUNDERS
+══════════════════════════════════════════ -->
+<div class="page founders-page">
+  <div class="f-stripe"></div>
+  <div class="f-body">
+    <div class="f-header">
+      <div class="f-eyebrow">The people behind the network</div>
+      <div class="f-title">Meet the Founders</div>
+    </div>
+
+    <div class="f-grid">
+
+      <div class="f-card">
+        <div class="f-photo-wrap">
+          <img src="../images/profile_Martin.png" alt="Dr Martín López-García">
+          <div class="f-role-badge">Co-Founder &amp; Director</div>
+        </div>
+        <div class="f-name">Dr Martín<br>López-García</div>
+        <div class="f-dept">School of Mathematics</div>
+        <div class="f-bio">Martín focuses on stochastic models for bacteria spread in hospitals, bringing a mathematical and epidemiological perspective to healthy buildings research. He co-founded HBN to bridge quantitative modelling with real-world built environment challenges.</div>
+      </div>
+
+      <div class="f-card">
+        <div class="f-photo-wrap">
+          <img src="../images/profile_irene.png" alt="Dr Irene Mussio">
+          <div class="f-role-badge">Co-Founder &amp; Director</div>
+        </div>
+        <div class="f-name">Dr Irene<br>Mussio</div>
+        <div class="f-dept">Leeds University Business School</div>
+        <div class="f-bio">Irene specialises in behavioural economics and risk-risk trade-offs, investigating how people perceive and respond to environmental risks in buildings. Her work connects human decision-making with building design and public health.</div>
+      </div>
+
+      <div class="f-card">
+        <div class="f-photo-wrap">
+          <img src="../images/profile_marco-felipe_king.png" alt="Dr Marco-Felipe King">
+          <div class="f-role-badge">Co-Founder &amp; Director</div>
+        </div>
+        <div class="f-name">Dr Marco-Felipe<br>King</div>
+        <div class="f-dept">School of Civil Engineering</div>
+        <div class="f-bio">Marco-Felipe's expertise covers modelling human behaviour in the built environment, including airflow, infection risk, and occupant movement. His research informs how buildings can be designed to protect and promote occupant health.</div>
+      </div>
+
+    </div>
+
+    <div class="f-stats-band">
+      <div class="f-stat"><div class="f-stat-n">2024</div><div class="f-stat-l">Established</div></div>
+      <div class="f-stat"><div class="f-stat-n">20+</div><div class="f-stat-l">Researchers</div></div>
+      <div class="f-stat"><div class="f-stat-n">£18k</div><div class="f-stat-l">Research Funded</div></div>
+      <div class="f-stat"><div class="f-stat-n">600+</div><div class="f-stat-l">Event Attendees</div></div>
+    </div>
+  </div>
+
+  <div class="run-foot">
+    <span>HBN Showcase 2026</span><span class="pn">10</span>
+  </div>
+</div>
+
+
+<!-- ══════════════════════════════════════════
+     PAGE 11  ·  BACK COVER
+══════════════════════════════════════════ -->
+<div class="page back-page">
+  <svg class="back-blob-layer" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 210 297" preserveAspectRatio="xMidYMid slice">
+    <defs>
+      <filter id="bb"><feGaussianBlur stdDeviation="25"/></filter>
+    </defs>
+    <ellipse cx="30"  cy="60"  rx="70" ry="60" fill="#4e9317" opacity="0.3" filter="url(#bb)"/>
+    <ellipse cx="180" cy="240" rx="65" ry="55" fill="#8360a9" opacity="0.25" filter="url(#bb)"/>
+    <ellipse cx="160" cy="80"  rx="40" ry="50" fill="#ffca29" opacity="0.12" filter="url(#bb)"/>
+  </svg>
+
+  <div class="back-year">2026</div>
+
+  <div class="back-inner">
+    <img class="back-logo" src="../images/hbn_landscape.svg" alt="Healthy Buildings Network Leeds">
+
+    <div class="back-title">Healthy Buildings Network Leeds</div>
+    <div class="back-tagline">A cross-disciplinary research and collaboration hub at the University of Leeds — focused on healthier, more sustainable built environments.</div>
+
+    <div class="back-divider"></div>
+
+    <div class="back-contact">
+      <strong>healthy_buildings_network@leeds.ac.uk</strong><br>
+      healthybuildingsnetwork.leeds.ac.uk<br>
+      University of Leeds, Leeds LS2 9JT, United Kingdom
+    </div>
+
+    <div class="back-affiliations">
+      Leeds Institute for Fluid Dynamics &nbsp;·&nbsp; Leeds Social Sciences Institute<br>
+      Leeds Arts &amp; Humanities Research Institute &nbsp;·&nbsp; Leeds Living Lab &nbsp;·&nbsp; LIDA
+    </div>
+
+    <div class="back-logos">
+      <img src="../images/leeds_logo_white_transparent.png" alt="University of Leeds">
+      <img src="../images/logo_LIFD.png" alt="LIFD">
+      <img src="../images/horizons_logo.jpg" alt="Horizons" style="border-radius:1mm;">
+    </div>
+
+    <div class="back-footnote">Established 2024 &nbsp;·&nbsp; Horizons Challenge Network &nbsp;·&nbsp; University of Leeds</div>
+  </div>
+</div>
+
+
+</body>
+</html>
