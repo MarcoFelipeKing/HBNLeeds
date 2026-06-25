@@ -183,9 +183,9 @@ A moderated panel discussion bringing together leaders from seven UK healthy-bui
 
 **Moderator**
 
-**Jade Lewis** — Chief Executive, Sustainable Energy Association · Secretariat, Healthy Homes and Buildings APPG
+**Jade Lewis** — Chief Executive, Jade Advocacy
 
-Jade leads advocacy and policy work to drive the transition to cleaner, healthier, and more energy-efficient buildings across the UK.
+A high-profile advocate for a more energy-efficient, healthy, and sustainable built environment. Jade chairs the Healthy Homes and Buildings Group, the West Midlands Combined Authority Energy Capital Board, and the Board of Trustees of the National Energy Foundation. She provides secretariat services for the All-Party Parliamentary Group for Healthy Homes and Buildings and the British Energy Efficiency Federation. Previously Chief Executive of the Sustainable Energy Association and Director of Advocacy at Saint-Gobain.
 
 **Panellists**
 
@@ -193,11 +193,11 @@ Jade leads advocacy and policy work to drive the transition to cleaner, healthie
 |------|-------------|---------|
 | Dr Douglas Booker | University of Leeds | HESTIA |
 | Dr Abigail Hathway | University of Sheffield | AirHub |
-| Dr Bruño Fraga | University of Exeter | BREATHEIN |
+| Prof. Christian Pfrang | University of Birmingham | BREATHEIN |
 | Prof. Marcella Ucci | UCL | UKIEG |
 | Prof. Dejan Mumovic | UCL | CHILI Hub |
 | Prof. Prashant Kumar | University of Surrey | GREENIN |
-| Prof. Rajat Gupta | De Montfort University | INHABIT |
+| TBC | HEARTH Hub | HEARTH Hub |
 
 ---
 
@@ -314,6 +314,143 @@ LinkedIn: /company/healthy-buildings-network-leeds
 **Affiliations**
 Leeds Institute for Fluid Dynamics · Leeds Social Sciences Institute
 Leeds Arts & Humanities Research Institute · ICAS · Leeds Living Lab · Leeds Institute for Data Analytics
+
+---
+
+## HBN EVENTS SERIES — Workshops & Seminars
+
+*Complete record of all HBN-organised workshops and seminars, 2024–2026.*
+
+---
+
+### SEMINARS
+
+**Seminar 1 · Beyond Flushing: Pathogen Transmission in Bathrooms**
+*23 January 2025 · University of Leeds*
+
+Speakers:
+- **Prof. Chuck Gerba** — University of Arizona (environmental microbiology, pathogen transmission)
+- **Dr. Khalid Ijaz** — CDC (hygiene and infection prevention)
+
+The first HBN seminar of 2025. Explored toilet hygiene, biofilm development, and the dynamic nature of disease spread in indoor bathroom environments.
+
+---
+
+**Seminar 2 · Social Housing at a Crossroads**
+*14 May 2025 · Online*
+
+Speakers:
+- **Jon Fairburn** — North West Leicestershire District Council (NWLDC), asset management and retrofit
+- **Louise Austin** — North West Leicestershire District Council (NWLDC), housing data management
+
+Explored the UK social housing sector's transformation: decarbonisation, regulatory compliance, and data-driven strategies for healthier tenant outcomes across a portfolio of 4,000 homes.
+
+---
+
+**Seminar 3 · Exploring the Essence of Home**
+*30 April 2025 · University of Leeds*
+
+Speaker:
+- **Louis Platman** — Curator, Museum of the Home, London
+
+An interactive seminar exploring how domestic spaces shape personal and collective identity. Louis drew on the Museum of the Home's collections to examine diverse narratives of what "home" means across communities and historical periods.
+
+---
+
+**Seminar 4 · Retrofit Roulette: Why We Keep Getting Moisture Wrong**
+*9 December 2025 · University of Leeds*
+
+Speaker:
+- **Dr. Sarah Price** — Building performance and retrofit specialist
+
+Examined moisture risk in residential retrofit: why 80% of building failures are moisture-related, the 92% failure rate in external wall insulation, joist-end risks, and the case for wood-fibre insulation as a safer approach.
+
+---
+
+**Seminar 5 · Indoor Air Pollution and the Beating Heart**
+*12 February 2026 · University of Leeds*
+
+Speaker:
+- **Jacobo Elies-Gómez** — University of Bradford (cardiac electrophysiology)
+
+Linked real-world indoor carbon monoxide (CO) exposure to the molecular mechanisms of arrhythmia — connecting building air quality directly to cardiac health outcomes.
+
+---
+
+**Seminar 6 · Airborne Transmission of Respiratory Infections**
+*6 July 2026 · 14:00–15:00 · Bragg Building GR.25, University of Leeds*
+*Co-hosted with Leeds Institute for Fluid Dynamics (LIFD)*
+
+Speaker:
+- **Prof. Yuguo Li** — University of Hong Kong (indoor air quality, infection transmission)
+
+Full title: *Airborne Transmission of Respiratory Infections in Poorly Diluted, Crowded, and Connected Indoor Networks*. Modelling how respiratory pathogens spread through networks of connected indoor spaces.
+
+---
+
+### WORKSHOPS
+
+**Workshop 1 · Indoor Air Quality and Energy Interface**
+*27 November 2024 · University of Leeds*
+
+Speakers / facilitators:
+- **Dr Douglas Booker** — University of Leeds (indoor air quality)
+- **Prof. Lucie Middlemiss** — University of Leeds (energy and society)
+- **Dr Marco-Felipe King** — University of Leeds (building occupant behaviour)
+
+A collaborative workshop exploring the complex relationship between indoor air quality and energy efficiency in buildings — one of HBN's first public events.
+
+---
+
+**Workshop 2 · Whose Power? Energy, Housing & Health**
+*15 April 2026 · Leeds Discovery Centre, Leeds*
+
+Facilitators:
+- **Dr Lauren Theweneti**
+- **Prof. Abigail Harrison Moore** — University of Leeds
+
+A family workshop and academic session held at Leeds Discovery Centre exploring domestic energy histories through museum objects. Linked to the 'Whose Power? Energy Change in the Home' exhibition and the Preservative Party participatory project with 14–24 year old volunteer curators.
+
+---
+
+**Workshop 3 · Infection Transmission in Indoor Settings**
+*22 April 2026 · University of Leeds*
+
+Invited speakers:
+- **Dr Thomas Woolley** — Cardiff University (mathematical modelling of airborne disease spread)
+- **Dr Daniel Miller** — Dstl (ventilation, dispersion, and fluid dynamics; TRACK and NCS PROTECT projects)
+
+Organised by Xiaoxuan Qin & Marcus Marshall (HBN ECR grant holders). A multidisciplinary workshop connecting microbiology, fluid dynamics, and quantitative modelling to improve understanding of multi-route infection risks in indoor settings.
+
+---
+
+**Workshop 4 · Indoor Microbiomes and Healthy Buildings**
+*19 May 2026 · Nexus, University of Leeds*
+
+Organisers:
+- **Dr Suparna Mitra** — University of Leeds (environmental microbiology)
+- **Dr Hema Viswambharan** — University of Leeds
+
+Full title: *Indoor Microbiomes and Healthy Buildings: Rethinking the Future of Indoor Health*. A free one-day interdisciplinary workshop exploring the emerging science of indoor microbiomes and what it means for healthy building design.
+
+---
+
+**Workshop 5 · Sonic Belonging: Community Music Workshop**
+*4 June 2026 · 13:30–14:30*
+
+Led by:
+- **Lijun Zhang** — guzheng performance and community co-design
+- Co-investigators: **Prof. Lynda Song, Dr Aiqin Liu, Dr Xunnan Li**
+
+A community workshop co-designing spaces for culturally inclusive music activities. Featured guzheng performance and discussion of acoustics, seating, and participation in shared music spaces. Shaped the 'Community Brief for Active Music Spaces'.
+
+---
+
+**Workshop 6 · Clear the Air: Practical Steps for Healthier Homes**
+*18 June 2026 · 18:00 · Imagine Leeds, 9 Blenheim Terrace, Leeds*
+*Co-organised with CELIA CIC*
+
+A free Clean Air Day workshop for the public, exploring practical steps to improve indoor air quality in homes. Held at Imagine Leeds in partnership with CELIA CIC (Community Energy Leeds in Action).
 
 ---
 
