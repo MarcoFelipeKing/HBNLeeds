@@ -196,7 +196,7 @@ A high-profile advocate for a more energy-efficient, healthy, and sustainable bu
 | Prof. Christian Pfrang | University of Birmingham | BREATHEIN |
 | Prof. Marcella Ucci | UCL | UKIEG |
 | Prof. Dejan Mumovic | UCL | CHILI Hub |
-| Prof. Prashant Kumar | University of Surrey | GREENIN |
+| Akash Biswal | GREENIN | GREENIN |
 | TBC | HEARTH Hub | HEARTH Hub |
 
 ---
