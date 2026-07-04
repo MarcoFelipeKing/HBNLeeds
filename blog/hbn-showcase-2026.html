@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            hbnGreen: '#4e9317',
+            hbnGreenDark: '#3d7412',
+            hbnPurple: '#8360a9',
+            hbnGray: '#808184',
+            hbnYellow: '#ffca29',
+            hbnBlue: '#3e95dd',
+          }
+        }
+      }
+    };
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Panel write-up from the HBN Showcase 2026 — six network leaders debated the future of healthy buildings research at the University of Leeds on 2 July 2026.">
+  <title>"I don't know what a healthy building means" — HBN Showcase 2026 Panel | Healthy Buildings Network Leeds</title>
+
+  <link rel="icon" href="../assets/images/hbn_fav.ico" type="image/x-icon"/>
+  <meta property="og:type"        content="article">
+  <meta property="og:title"       content=""I don't know what a healthy building means" — HBN Showcase 2026">
+  <meta property="og:description" content="Panel write-up: Top Questions in the Future of Healthy Buildings. Six network leaders, one moderator, and no shortage of honest moments.">
+  <meta property="og:url"         content="https://healthybuildingsnetwork.leeds.ac.uk/blog/hbn-showcase-2026.html">
+  <meta property="og:image"       content="https://healthybuildingsnetwork.leeds.ac.uk/assets/images/events/showcase/HBN-132.jpg">
+  <meta name="twitter:card"        content="summary_large_image">
+  <meta name="twitter:title"       content=""I don't know what a healthy building means" — HBN Showcase 2026">
+  <meta name="twitter:description" content="Panel write-up: Top Questions in the Future of Healthy Buildings. Six network leaders, one moderator, and no shortage of honest moments.">
+  <meta name="twitter:image"       content="https://healthybuildingsnetwork.leeds.ac.uk/assets/images/events/showcase/HBN-132.jpg">
+  <link rel="canonical" href="https://healthybuildingsnetwork.leeds.ac.uk/blog/hbn-showcase-2026.html">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.css" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "\"I don't know what a healthy building means\" — and other honest moments from the HBN Showcase 2026",
+    "description": "Panel write-up from the HBN Showcase 2026 — six network leaders debated the future of healthy buildings research at the University of Leeds on 2 July 2026.",
+    "datePublished": "2026-07-03",
+    "url": "https://healthybuildingsnetwork.leeds.ac.uk/blog/hbn-showcase-2026.html",
+    "image": "https://healthybuildingsnetwork.leeds.ac.uk/assets/images/events/showcase/HBN-132.jpg",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Healthy Buildings Network Leeds",
+      "url": "https://healthybuildingsnetwork.leeds.ac.uk"
+    },
+    "author": {
+      "@type": "Organization",
+      "name": "Healthy Buildings Network Leeds"
+    }
+  }
+  </script>
+</head>
+<body class="font-poppins">
+
+  <!-- Header -->
+  <header class="bg-white shadow-md fixed w-full z-50">
+    <div class="container mx-auto px-6 flex justify-between items-center h-20">
+      <div class="flex-shrink-0">
+        <a href="../index.html" class="flex items-center space-x-4">
+          <img src="../assets/images/hbn_landscape.svg" alt="Healthy Buildings Network Leeds Logo" class="h-12">
+          <img src="../assets/images/leeds_logo_black_on_white_bk.jpg" alt="Leeds Logo" class="h-12">
+        </a>
+      </div>
+      <button class="md:hidden text-gray-600 hover:text-hbnGreen focus:outline-none" id="mobile-menu-button" aria-label="Open Menu">
+        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+      <nav class="hidden md:flex space-x-8" id="main-nav">
+        <a href="../index.html" class="text-gray-600 hover:text-hbnGreen font-medium transition-colors">Home</a>
+        <a href="../about.html" class="text-gray-600 hover:text-hbnGreen font-medium transition-colors">About Us</a>
+        <a href="../blog.html" class="text-hbnGreen font-medium transition-colors">Blog</a>
+        <a href="../events.html" class="text-gray-600 hover:text-hbnGreen font-medium transition-colors">Events</a>
+        <a href="../projects.html" class="text-gray-600 hover:text-hbnGreen font-medium transition-colors">Projects</a>
+        <a href="../membership.html" class="text-gray-600 hover:text-hbnGreen font-medium transition-colors">Membership</a>
+        <a href="../contact.html" class="text-gray-600 hover:text-hbnGreen font-medium transition-colors">Contact</a>
+      </nav>
+    </div>
+    <div class="md:hidden hidden bg-white w-full shadow-md" id="mobile-menu">
+      <div class="px-6 py-4 space-y-4">
+        <a href="../index.html" class="block text-gray-600 hover:text-hbnGreen font-medium">Home</a>
+        <a href="../about.html" class="block text-gray-600 hover:text-hbnGreen font-medium">About Us</a>
+        <a href="../blog.html" class="block text-hbnGreen font-medium">Blog</a>
+        <a href="../events.html" class="block text-gray-600 hover:text-hbnGreen font-medium">Events</a>
+        <a href="../projects.html" class="block text-gray-600 hover:text-hbnGreen font-medium">Projects</a>
+        <a href="../membership.html" class="block text-gray-600 hover:text-hbnGreen font-medium">Membership</a>
+        <a href="../contact.html" class="block text-gray-600 hover:text-hbnGreen font-medium">Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <button id="scrollToTopBtn" class="fixed bottom-5 right-5 bg-hbnGreen text-white p-3 rounded-full shadow-md hidden z-50" aria-label="Scroll to top">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18" />
+    </svg>
+  </button>
+
+  <!-- Hero -->
+  <section class="relative pt-20">
+    <div class="bg-gradient-to-r from-hbnBlue to-hbnGreen text-white py-16 md:py-24">
+      <div class="container mx-auto px-6 max-w-6xl">
+        <div class="md:flex items-center gap-12">
+          <div class="md:w-3/5 mb-10 md:mb-0">
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="text-xs bg-white/20 text-white px-3 py-1 rounded-full font-semibold">Panel Write-Up</span>
+              <span class="text-xs bg-white/20 text-white px-3 py-1 rounded-full font-semibold">Showcase 2026</span>
+              <span class="text-xs bg-white/20 text-white px-3 py-1 rounded-full font-semibold">Policy</span>
+            </div>
+            <h1 class="text-3xl md:text-5xl font-bold mb-4 leading-tight">"I don't know what a healthy building means" — and other honest moments from the HBN Showcase 2026</h1>
+            <p class="text-xl opacity-90 mb-6 max-w-xl">
+              Six network leaders. One moderator. Eight questions from the audience. What happened when we stopped pretending we had all the answers.
+            </p>
+            <div class="flex flex-wrap items-center gap-4 text-sm opacity-80">
+              <span class="flex items-center gap-1.5">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                2 July 2026
+              </span>
+              <span class="flex items-center gap-1.5">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                University House, University of Leeds
+              </span>
+              <span class="flex items-center gap-1.5">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg>
+                HBN Editorial
+              </span>
+            </div>
+          </div>
+          <div class="md:w-2/5">
+            <img src="../assets/images/events/showcase/HBN-132.jpg"
+                 alt="The panel at HBN Showcase 2026 — six network leaders and moderator Jade Lewis in discussion"
+                 class="rounded-xl shadow-2xl w-full object-cover">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Breadcrumb -->
+  <div class="bg-gray-100 py-3">
+    <div class="container mx-auto px-6 max-w-6xl">
+      <div class="flex text-sm flex-wrap gap-1">
+        <a href="../index.html" class="text-gray-600 hover:text-hbnGreen">Home</a>
+        <span class="mx-2 text-gray-400">/</span>
+        <a href="../blog.html" class="text-gray-600 hover:text-hbnGreen">Blog</a>
+        <span class="mx-2 text-gray-400">/</span>
+        <span class="text-gray-800">HBN Showcase 2026 Panel</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <main class="py-16 bg-white">
+    <div class="container mx-auto px-6 max-w-6xl">
+      <div class="flex flex-col lg:flex-row gap-12">
+
+        <!-- Article -->
+        <article class="lg:w-2/3 prose-like">
+
+          <!-- Opening -->
+          <p class="text-xl text-gray-700 leading-relaxed mb-6 font-light">
+            You know a panel discussion has gone well when one of the UK's leading building scientists opens with "I'm going to be controversial" — and then actually is.
+          </p>
+
+          <p class="text-gray-600 leading-relaxed mb-6">
+            On 2 July, the Healthy Buildings Network Showcase brought together representatives from six major research networks and hubs — Doug Booker (HESTIA), Abigail Hathway (AirHub), Marcella Ucci (UKIEG), Akash Biswal (GREENIN), Dejan Mumovic (CHILI Hub), and Rajat Gupta (HEARTH) — expertly steered by Jade Lewis of the APPG for Healthy Homes and Buildings. The questions came from you: registered attendees submitted their most pressing questions ahead of the event, and eight themes emerged, from the translation gap to technology adoption. Here's what happened when we put them to the panel.
+          </p>
+
+          <!-- Panel photo -->
+          <figure class="my-8">
+            <img src="../assets/images/events/showcase/HBN-135.jpg"
+                 alt="Jade Lewis moderating with Marcella Ucci — HBN Showcase 2026 panel discussion"
+                 class="rounded-xl shadow-lg w-full object-cover">
+            <figcaption class="text-sm text-gray-500 text-center mt-3">Jade Lewis (right) brought energy and precision to the moderation — Marcella Ucci (left) with one of the afternoon's most quoted contributions.</figcaption>
+          </figure>
+
+          <!-- Section 1 -->
+          <h2 class="text-2xl font-bold text-gray-800 mt-10 mb-4">We've been selling healthy buildings in the wrong language</h2>
+
+          <p class="text-gray-600 leading-relaxed mb-4">
+            The discussion opened with a deceptively simple observation: say "healthy retrofit" to someone and it resonates; say "energy retrofit" and their eyes glaze over. Everybody cares about their own health and wellbeing. Not everybody cares about carbon. If we want change, the panel agreed, we need to talk about buildings the way people actually experience them — as places that make us feel well, or don't.
+          </p>
+
+          <p class="text-gray-600 leading-relaxed mb-4">
+            But there's a deeper problem. Much of our evidence sits at the population level, and people struggle to connect it to their own front door — until something catastrophic happens. Most of us assume we're better protected by current standards than we really are. As one panellist put it, if the public had a clearer picture of the gap between what's possible and what's actually happening, they'd be demanding action from policymakers already.
+          </p>
+
+          <p class="text-gray-600 leading-relaxed mb-6">
+            And a humbling admission from the architects in the room: health barely features in architectural education. Sustainability and energy efficiency are taught; the idea of designers as "agents of public health" is not.
+          </p>
+
+          <!-- Section 2 -->
+          <h2 class="text-2xl font-bold text-gray-800 mt-10 mb-4">The provocation: do we even know what a healthy building is?</h2>
+
+          <figure class="my-8 float-right ml-8 mb-4 w-80 max-w-full">
+            <img src="../assets/images/events/showcase/HBN-137.jpg"
+                 alt="Dejan Mumovic speaking at the HBN Showcase 2026 panel, Akash Biswal beside him"
+                 class="rounded-xl shadow-lg w-full object-cover">
+            <figcaption class="text-sm text-gray-500 text-center mt-2">Dejan Mumovic (left) with what became the afternoon's most-quoted admission.</figcaption>
+          </figure>
+
+          <p class="text-gray-600 leading-relaxed mb-4">
+            Then came the moment of the afternoon. Dejan Mumovic confessed that he doesn't know what a healthy building means — and that if he did, the CHILI Hub wouldn't need to exist. Try to optimise a building simultaneously for PM<sub>2.5</sub>, nitrogen dioxide, VOCs, comfort <em>and</em> noise, and you end up somewhere uncomfortable: a fully automated, sensor-driven building that no human occupant controls. Is that where we want to live?
+          </p>
+
+          <p class="text-gray-600 leading-relaxed mb-6">
+            Jade pushed back with the WHO's definition of health — complete physical, mental and social wellbeing — and Marcella Ucci offered perhaps the most useful reframe of the day: we already <em>know</em> good recipes for healthy buildings. Space. Daylight. Passivhaus principles. The genuinely unsolved problem isn't the recipe — it's how we fund it, and how we make sure the poorest in society get a slice of the cake rather than watching others eat it.
+          </p>
+
+          <div class="clear-both"></div>
+
+          <!-- Callout -->
+          <div class="bg-hbnBlue/5 border-l-4 border-hbnBlue rounded-r-xl p-6 my-8">
+            <p class="text-gray-700 font-medium leading-relaxed italic">
+              "We already know the recipes for healthy buildings — space, daylight, good design. What we lack is the funding, and the fairness, to deliver them to those who need them most."
+            </p>
+            <p class="text-sm text-gray-500 mt-3">— Marcella Ucci, UCL / UKIEG</p>
+          </div>
+
+          <!-- Section 3 -->
+          <h2 class="text-2xl font-bold text-gray-800 mt-10 mb-4">Health versus carbon: a false fight with a very real timescale problem</h2>
+
+          <figure class="my-8">
+            <img src="../assets/images/events/showcase/HBN-139.jpg"
+                 alt="Rajat Gupta speaking at mic, Marcella Ucci listening — HBN Showcase 2026"
+                 class="rounded-xl shadow-lg w-full object-cover">
+            <figcaption class="text-sm text-gray-500 text-center mt-3">Rajat Gupta (HEARTH Hub) sharing the sobering finding: developments built within the last two years already need retrofitting.</figcaption>
+          </figure>
+
+          <p class="text-gray-600 leading-relaxed mb-4">
+            The panel was united on one thing: energy efficiency and health shouldn't be rivals. But the way we retrofit often forces the fight — external wall insulation with no external shading, airtightness with no ventilation. Rajat Gupta shared a sobering finding from HEARTH: developments built within the <em>last two years</em> already need retrofitting. That's a cost in disruption, money and embodied carbon we simply cannot keep paying.
+          </p>
+
+          <p class="text-gray-600 leading-relaxed mb-4">
+            The economics carry a cruel asymmetry, too. The CHILI Hub is calculating what it would cost to retrofit the entire school building stock — alongside what inaction costs the NHS in asthma and respiratory illness. The trouble? Capital costs land today; the health savings arrive 30 or 40 years later; and governments think in four-year cycles.
+          </p>
+
+          <p class="text-gray-600 leading-relaxed mb-6">
+            There was good news, though. Jade pointed to the new government schools retrofit programme, which explicitly recognises health — not just carbon — as an outcome. In her words: on that front, "we won the battle."
+          </p>
+
+          <p class="text-gray-600 leading-relaxed mb-6">
+            And a thread of welcome humility ran through it all. There is no safe threshold for PM<sub>2.5</sub> — which means, by definition, all air carries some pollution, and how much we accept is ultimately a political and values-based decision, not a purely technical one. Perhaps, as several panellists suggested, the goal isn't the perfectly optimised building at all, but robust, adaptable environments that can respond as the evidence — and the climate — changes.
+          </p>
+
+          <!-- Section 4 -->
+          <h2 class="text-2xl font-bold text-gray-800 mt-10 mb-4">Measure what matters (and know why you're measuring)</h2>
+
+          <figure class="my-8 float-right ml-8 mb-4 w-80 max-w-full">
+            <img src="../assets/images/events/showcase/HBN-140.jpg"
+                 alt="Abigail Hathway speaking at the panel — Akash Biswal and Doug Booker listening"
+                 class="rounded-xl shadow-lg w-full object-cover">
+            <figcaption class="text-sm text-gray-500 text-center mt-2">Abigail Hathway (AirHub / University of Sheffield) making the case for joined-up datasets across the research community.</figcaption>
+          </figure>
+
+          <p class="text-gray-600 leading-relaxed mb-4">
+            On monitoring, the practical consensus: CO<sub>2</sub> as a proxy for ventilation, plus PM<sub>2.5</sub> and TVOCs for the bigger picture. But the panel's engineers were refreshingly suspicious of engineering. Complex buildings mean maintenance problems, and a poorly maintained HVAC system becomes a <em>source</em> of pollution rather than a solution. The best buildings, we heard, are simple buildings.
+          </p>
+
+          <p class="text-gray-600 leading-relaxed mb-4">
+            Two neglected senses got their moment, too. Acoustics and lighting rarely make the healthy buildings headlines, yet noise is one of the biggest complaints in social housing — and in post-occupancy studies of more than 500 buildings, occupants consistently ranked noise above air quality, because you can't see the air, but you can certainly hear your neighbours. (A related finding from those same studies: not a single building management system was working as intended.)
+          </p>
+
+          <p class="text-gray-600 leading-relaxed mb-6">
+            And a note of caution: measurement needs a purpose. Handing people data they don't understand can frighten rather than empower. Ask people how they <em>feel</em> alongside what the sensors say.
+          </p>
+
+          <div class="clear-both"></div>
+
+          <!-- Section 5: One wish each -->
+          <h2 class="text-2xl font-bold text-gray-800 mt-10 mb-6">One wish each</h2>
+
+          <p class="text-gray-600 leading-relaxed mb-6">
+            To close, Jade asked each panellist for the one thing that would deliver healthy homes and buildings. The answers were varied — and surprisingly concrete.
+          </p>
+
+          <figure class="my-8">
+            <img src="../assets/images/events/showcase/HBN-133.jpg"
+                 alt="Doug Booker speaking with microphone at HBN Showcase panel"
+                 class="rounded-xl shadow-lg w-full object-cover">
+            <figcaption class="text-sm text-gray-500 text-center mt-3">Doug Booker (HESTIA / University of Leeds) opening the closing round: think beyond health to <em>flourishing</em>.</figcaption>
+          </figure>
+
+          <div class="space-y-4 mb-8">
+            <div class="flex gap-4 bg-gray-50 rounded-xl p-5">
+              <div class="flex-shrink-0 w-10 h-10 bg-hbnBlue/10 rounded-full flex items-center justify-center">
+                <span class="text-hbnBlue font-bold text-sm">DB</span>
+              </div>
+              <div>
+                <p class="font-semibold text-gray-800 mb-1">Doug Booker <span class="font-normal text-gray-500 text-sm">— HESTIA / University of Leeds</span></p>
+                <p class="text-gray-600 text-sm leading-relaxed">Think beyond health to <em>flourishing</em> — buildings that help people live the lives they want, not just avoid illness.</p>
+              </div>
+            </div>
+            <div class="flex gap-4 bg-gray-50 rounded-xl p-5">
+              <div class="flex-shrink-0 w-10 h-10 bg-amber-100 rounded-full flex items-center justify-center">
+                <span class="text-amber-700 font-bold text-sm">RG</span>
+              </div>
+              <div>
+                <p class="font-semibold text-gray-800 mb-1">Rajat Gupta <span class="font-normal text-gray-500 text-sm">— HEARTH Hub / Oxford Brookes University</span></p>
+                <p class="text-gray-600 text-sm leading-relaxed">Treat the coming wave of retrofit at scale as a once-in-a-generation opportunity to build in climate resilience and indoor air quality, not just energy savings.</p>
+              </div>
+            </div>
+            <div class="flex gap-4 bg-gray-50 rounded-xl p-5">
+              <div class="flex-shrink-0 w-10 h-10 bg-hbnGreen/10 rounded-full flex items-center justify-center">
+                <span class="text-hbnGreen font-bold text-sm">MU</span>
+              </div>
+              <div>
+                <p class="font-semibold text-gray-800 mb-1">Marcella Ucci <span class="font-normal text-gray-500 text-sm">— UKIEG / UCL</span></p>
+                <p class="text-gray-600 text-sm leading-relaxed">A czar for healthy homes and buildings — someone with vision, targets and real power to join up an agenda currently scattered across government departments.</p>
+              </div>
+            </div>
+            <div class="flex gap-4 bg-gray-50 rounded-xl p-5">
+              <div class="flex-shrink-0 w-10 h-10 bg-hbnGreen/10 rounded-full flex items-center justify-center">
+                <span class="text-hbnGreen font-bold text-sm">AH</span>
+              </div>
+              <div>
+                <p class="font-semibold text-gray-800 mb-1">Abigail Hathway <span class="font-normal text-gray-500 text-sm">— AirHub / University of Sheffield</span></p>
+                <p class="text-gray-600 text-sm leading-relaxed">Joined-up datasets across research projects, so our individual studies add up to a bigger understanding of the building stock we actually live in.</p>
+              </div>
+            </div>
+            <div class="flex gap-4 bg-gray-50 rounded-xl p-5">
+              <div class="flex-shrink-0 w-10 h-10 bg-emerald-100 rounded-full flex items-center justify-center">
+                <span class="text-emerald-700 font-bold text-sm">AB</span>
+              </div>
+              <div>
+                <p class="font-semibold text-gray-800 mb-1">Akash Biswal <span class="font-normal text-gray-500 text-sm">— GREENIN / University of Surrey</span></p>
+                <p class="text-gray-600 text-sm leading-relaxed">Climate- and seasonality-normalised standards — healthy indoor environments that work across the whole year, not just the season we happened to measure.</p>
+              </div>
+            </div>
+            <div class="flex gap-4 bg-gray-50 rounded-xl p-5">
+              <div class="flex-shrink-0 w-10 h-10 bg-red-100 rounded-full flex items-center justify-center">
+                <span class="text-red-700 font-bold text-sm">DM</span>
+              </div>
+              <div>
+                <p class="font-semibold text-gray-800 mb-1">Dejan Mumovic <span class="font-normal text-gray-500 text-sm">— CHILI Hub / UCL</span></p>
+                <p class="text-gray-600 text-sm leading-relaxed">Engineering in its beautiful simplicity — remove pollutants at the source, insist on low-VOC materials, and stop designing buildings that seal us off from the world.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Photo gallery -->
+          <h2 class="text-2xl font-bold text-gray-800 mt-12 mb-6">From the day</h2>
+
+          <div class="grid grid-cols-2 gap-3 mb-10">
+            <figure class="col-span-2">
+              <img src="../assets/images/events/showcase/HBN-1.jpg"
+                   alt="The room at the HBN Showcase 2026 opening — Dr Irene Mussio at the front with the full audience"
+                   class="rounded-xl shadow w-full object-cover h-56">
+              <figcaption class="text-xs text-gray-500 text-center mt-1.5">Dr Irene Mussio opening the day to a full room at University House</figcaption>
+            </figure>
+            <figure>
+              <img src="../assets/images/events/showcase/HBN-11.jpg"
+                   alt="Prof. Marcella Ucci keynote with Maslow's Hierarchy of Needs slide"
+                   class="rounded-xl shadow w-full object-cover h-48">
+              <figcaption class="text-xs text-gray-500 text-center mt-1.5">Prof. Marcella Ucci — keynote on shifting our mindsets</figcaption>
+            </figure>
+            <figure>
+              <img src="../assets/images/events/showcase/HBN-42.jpg"
+                   alt="Live piano performance during lunch at the HBN Showcase 2026"
+                   class="rounded-xl shadow w-full object-cover h-48 object-top">
+              <figcaption class="text-xs text-gray-500 text-center mt-1.5">Live piano during the lunch break</figcaption>
+            </figure>
+            <figure>
+              <img src="../assets/images/events/showcase/HBN-112.jpg"
+                   alt="Audience members laughing during the HBN Showcase 2026"
+                   class="rounded-xl shadow w-full object-cover h-48">
+              <figcaption class="text-xs text-gray-500 text-center mt-1.5">The atmosphere in the room</figcaption>
+            </figure>
+            <figure>
+              <img src="../assets/images/events/showcase/HBN-29.jpg"
+                   alt="Networking during the coffee break"
+                   class="rounded-xl shadow w-full object-cover h-48">
+              <figcaption class="text-xs text-gray-500 text-center mt-1.5">Networking during the coffee break</figcaption>
+            </figure>
+            <figure class="col-span-2">
+              <img src="../assets/images/events/showcase/HBN-90.jpg"
+                   alt="Prof. Martín López-García and Prof. Gleb Yakubov in conversation during the session"
+                   class="rounded-xl shadow w-full object-cover h-56">
+              <figcaption class="text-xs text-gray-500 text-center mt-1.5">Prof. Martín López-García and Prof. Gleb Yakubov — HBN co-founders in the room</figcaption>
+            </figure>
+          </div>
+
+          <!-- Closing -->
+          <div class="bg-gradient-to-br from-hbnBlue/5 to-hbnGreen/5 rounded-2xl p-8 my-10 border border-gray-100">
+            <h3 class="text-xl font-bold text-gray-800 mb-4">Thank you</h3>
+            <p class="text-gray-600 leading-relaxed mb-4">
+              To our panel, to Jade for moderating with such energy, and above all to everyone who submitted questions and joined us on the day — if any of the discussion felt radical or provocative, that's entirely your fault, and we're grateful for it.
+            </p>
+            <p class="text-gray-600 leading-relaxed">
+              The Healthy Buildings Network Showcase 2026 took place on 2 July at University House, University of Leeds. If you'd like to get involved with HBN's work, <a href="../membership.html" class="text-hbnGreen hover:underline font-medium">join the network</a> or <a href="../contact.html" class="text-hbnGreen hover:underline font-medium">get in touch</a>.
+            </p>
+          </div>
+
+        </article>
+
+        <!-- Sidebar -->
+        <aside class="lg:w-1/3">
+
+          <div class="bg-gray-50 rounded-xl p-6 mb-8 sticky top-24">
+
+            <!-- Event snapshot -->
+            <h3 class="text-lg font-semibold text-gray-800 mb-4">Event at a Glance</h3>
+            <ul class="space-y-3 text-sm text-gray-600 mb-6">
+              <li class="flex items-start gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-hbnBlue flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                2 July 2026
+              </li>
+              <li class="flex items-start gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-hbnBlue flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                10:00 AM – 4:00 PM
+              </li>
+              <li class="flex items-start gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-hbnBlue flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                University House, University of Leeds
+              </li>
+              <li class="flex items-start gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-hbnBlue flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
+                100+ attendees from academia, policy, and practice
+              </li>
+            </ul>
+
+            <!-- Panellists -->
+            <h3 class="text-lg font-semibold text-gray-800 mb-3">The Panel</h3>
+            <ul class="space-y-2 text-sm mb-6">
+              <li class="flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-hbnBlue flex-shrink-0"></span>
+                <span><strong>Doug Booker</strong> — HESTIA</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-hbnGreen flex-shrink-0"></span>
+                <span><strong>Abigail Hathway</strong> — AirHub</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-hbnGreen flex-shrink-0"></span>
+                <span><strong>Marcella Ucci</strong> — UKIEG</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-emerald-500 flex-shrink-0"></span>
+                <span><strong>Akash Biswal</strong> — GREENIN</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-red-400 flex-shrink-0"></span>
+                <span><strong>Dejan Mumovic</strong> — CHILI Hub</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-amber-500 flex-shrink-0"></span>
+                <span><strong>Rajat Gupta</strong> — HEARTH Hub</span>
+              </li>
+              <li class="flex items-center gap-2 pt-1 border-t border-gray-200">
+                <span class="w-2 h-2 rounded-full bg-hbnPurple flex-shrink-0"></span>
+                <span><strong>Jade Lewis</strong> — Moderator (APPG Healthy Homes &amp; Buildings)</span>
+              </li>
+            </ul>
+
+            <a href="../events/conferences/hbn-showcase-2026.html" class="block w-full text-center px-4 py-2.5 bg-hbnBlue text-white rounded-full text-sm font-semibold hover:bg-blue-700 transition-colors mb-3">
+              View Full Event Page
+            </a>
+            <a href="../blog.html" class="block w-full text-center px-4 py-2.5 border border-gray-300 text-gray-700 rounded-full text-sm font-semibold hover:bg-gray-50 transition-colors">
+              More from the Blog
+            </a>
+
+          </div>
+
+        </aside>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white py-12">
+    <div class="container mx-auto px-6 max-w-6xl">
+      <div class="grid md:grid-cols-3 gap-8 mb-8">
+        <div>
+          <img src="../assets/images/hbn_landscape.svg" alt="HBN Leeds Logo" class="h-10 mb-4 brightness-0 invert">
+          <p class="text-gray-400 text-sm">A cross-disciplinary network at the University of Leeds, promoting healthier and more sustainable built environments.</p>
+        </div>
+        <div>
+          <h4 class="font-semibold mb-4">Quick Links</h4>
+          <ul class="space-y-2 text-gray-400 text-sm">
+            <li><a href="../about.html" class="hover:text-white transition-colors">About Us</a></li>
+            <li><a href="../events.html" class="hover:text-white transition-colors">Events</a></li>
+            <li><a href="../projects.html" class="hover:text-white transition-colors">Projects</a></li>
+            <li><a href="../blog.html" class="hover:text-white transition-colors">Blog</a></li>
+            <li><a href="../membership.html" class="hover:text-white transition-colors">Join the Network</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-semibold mb-4">Contact</h4>
+          <p class="text-gray-400 text-sm mb-2">
+            <a href="mailto:healthy_buildings_network@leeds.ac.uk" class="hover:text-white transition-colors">healthy_buildings_network@leeds.ac.uk</a>
+          </p>
+          <p class="text-gray-400 text-sm">University of Leeds, Leeds LS2 9JT, United Kingdom</p>
+        </div>
+      </div>
+      <div class="border-t border-gray-700 pt-8 text-center text-gray-400 text-sm">
+        <p>© 2026 Healthy Buildings Network Leeds. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../assets/js/script.js"></script>
+</body>
+</html>
