@@ -87,6 +87,14 @@
   <!-- Main CSS -->
   <link rel="stylesheet" href="assets/css/style.css">
 
+  <!-- Blob float animation for decorative background accents -->
+  <style>
+    @keyframes blobFloat {
+      0%   { transform: translate(0px, 0px)   scale(1)    rotate(0deg); }
+      100% { transform: translate(30px, -25px) scale(1.06) rotate(5deg); }
+    }
+  </style>
+
   <!-- Structured Data -->
   <script type="application/ld+json">
   {
@@ -294,7 +302,14 @@
              role="presentation"
              class="w-full h-full object-cover">
         <!-- Overlay for better text readability -->
-        <div class="absolute inset-0 bg-white/85"></div>
+        <div class="absolute inset-0 bg-white/80"></div>
+      </div>
+
+      <!-- Wispy floating blobs — decorative background accents -->
+      <div class="absolute inset-0 pointer-events-none overflow-hidden" style="z-index:1" aria-hidden="true">
+        <div style="position:absolute;top:5%;right:-5%;width:45%;height:70%;background:radial-gradient(ellipse at 40% 40%,rgba(78,147,23,0.14) 0%,transparent 65%);border-radius:60% 40% 70% 30%/50% 60% 40% 50%;animation:blobFloat 10s ease-in-out infinite alternate;"></div>
+        <div style="position:absolute;bottom:10%;left:-3%;width:40%;height:60%;background:radial-gradient(ellipse at 60% 60%,rgba(62,149,221,0.11) 0%,transparent 65%);border-radius:40% 60% 30% 70%/60% 40% 60% 40%;animation:blobFloat 14s ease-in-out infinite alternate-reverse;"></div>
+        <div style="position:absolute;top:30%;left:20%;width:35%;height:50%;background:radial-gradient(ellipse at 50% 50%,rgba(131,96,169,0.09) 0%,transparent 65%);border-radius:50% 50% 40% 60%/40% 55% 45% 60%;animation:blobFloat 8s ease-in-out infinite alternate;"></div>
       </div>
 
       <div class="container mx-auto px-6 py-20 md:py-32 relative z-10">
@@ -351,9 +366,19 @@
       </div>
     </section>
 
+    <!-- Wave divider: hero white → stats green -->
+    <div class="bg-white overflow-hidden leading-none" aria-hidden="true">
+      <svg viewBox="0 0 1440 80" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" style="display:block;width:100%;height:80px">
+        <path fill="#4e9317" d="M0,40 C120,20 240,60 360,40 C480,20 600,60 720,45 C840,30 960,65 1080,40 C1200,15 1320,55 1440,35 L1440,80 L0,80 Z"/>
+      </svg>
+    </div>
+
     <!-- Impact Stats Section -->
-    <section class="py-12 bg-hbnGreen text-white" aria-label="Network statistics">
-      <div class="container mx-auto max-w-6xl px-6">
+    <section class="py-12 bg-hbnGreen text-white relative overflow-hidden" aria-label="Network statistics">
+      <!-- Subtle wisp accent -->
+      <div class="absolute pointer-events-none" aria-hidden="true"
+           style="top:-30%;left:25%;width:50%;height:160%;background:radial-gradient(ellipse at 50% 50%,rgba(255,255,255,0.08) 0%,transparent 60%);border-radius:50% 50% 40% 60%/40% 50% 50% 60%;animation:blobFloat 15s ease-in-out infinite alternate;"></div>
+      <div class="container mx-auto max-w-6xl px-6 relative z-10">
         <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
           <div class="space-y-2">
             <p class="text-4xl md:text-5xl font-bold">8</p>
@@ -374,6 +399,13 @@
         </div>
       </div>
     </section>
+
+    <!-- Wave divider: stats green → What We Do white -->
+    <div class="overflow-hidden leading-none" style="background-color:#4e9317" aria-hidden="true">
+      <svg viewBox="0 0 1440 80" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" style="display:block;width:100%;height:80px">
+        <path fill="white" d="M0,40 C180,70 360,10 540,40 C720,70 900,10 1080,35 C1260,60 1380,20 1440,40 L1440,80 L0,80 Z"/>
+      </svg>
+    </div>
 
     <!-- Intro Section -->
     <section class="py-20 bg-white" aria-labelledby="what-we-do-heading">
@@ -863,9 +895,21 @@
       </div>
     </section>
 
+    <!-- Wave divider: Latest News gray-50 → CTA green -->
+    <div class="overflow-hidden leading-none" style="background-color:#f9fafb" aria-hidden="true">
+      <svg viewBox="0 0 1440 80" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" style="display:block;width:100%;height:80px">
+        <path fill="#4e9317" d="M0,30 C360,70 720,5 1080,45 C1260,60 1380,20 1440,40 L1440,80 L0,80 Z"/>
+      </svg>
+    </div>
+
     <!-- Call to Action -->
-    <section class="py-24 bg-hbnGreen text-white" aria-labelledby="cta-heading">
-      <div class="container mx-auto max-w-4xl px-6 text-center">
+    <section class="py-24 bg-hbnGreen text-white relative overflow-hidden" aria-labelledby="cta-heading">
+      <!-- Wispy background accents -->
+      <div class="absolute pointer-events-none" aria-hidden="true"
+           style="top:-20%;right:-5%;width:50%;height:150%;background:radial-gradient(ellipse at 50% 50%,rgba(255,255,255,0.09) 0%,transparent 65%);border-radius:60% 40% 50% 50%/40% 50% 50% 60%;animation:blobFloat 12s ease-in-out infinite alternate;"></div>
+      <div class="absolute pointer-events-none" aria-hidden="true"
+           style="bottom:-10%;left:-5%;width:40%;height:120%;background:radial-gradient(ellipse at 50% 50%,rgba(255,255,255,0.06) 0%,transparent 65%);border-radius:40% 60% 30% 70%/60% 40% 60% 40%;animation:blobFloat 9s ease-in-out infinite alternate-reverse;"></div>
+      <div class="container mx-auto max-w-4xl px-6 text-center relative z-10">
         <h2 id="cta-heading" class="text-3xl md:text-4xl font-bold mb-6">Join Our Network</h2>
         <p class="text-xl mb-10 max-w-2xl mx-auto opacity-95">
           Whether you're a researcher, industry professional, policymaker, or community member, we welcome your 

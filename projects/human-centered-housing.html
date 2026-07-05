@@ -7,7 +7,8 @@
       theme: {
         extend: {
           colors: {
-            hbnBlue: '#4e9317',
+            hbnGreen: '#4e9317',
+            hbnGreenDark: '#3d7412',
             hbnPurple: '#8360a9',
             hbnGray: '#808184',
             hbnYellow: '#ffca29',
@@ -48,8 +49,9 @@
     <div class="container mx-auto px-6 flex justify-between items-center h-20">
       <!-- Logo -->
       <div class="flex-shrink-0">
-        <a href="../index.html">
-          <img src="../assets/images/hbn_landscape.svg" alt="Healthy Buildings Network Leeds Logo" class="h-12">
+        <a href="../index.html" class="flex items-center space-x-4">
+          <img src="../assets/images/hbn_landscape.svg" alt="Healthy Buildings Network Leeds Logo" class="h-12 w-auto">
+          <img src="../assets/images/leeds_logo_black_on_white_bk.jpg" alt="University of Leeds" class="h-12 w-auto hidden sm:block" width="120" height="48">
         </a>
       </div>
 
@@ -114,7 +116,7 @@
           </div>
           <div class="md:w-2/5">
             <!-- Optional Hero Image (replace with relevant image if desired) -->
-            <img src="../assets/images/house_design.jpg" alt="Human-Centered Housing Design" class="rounded-lg shadow-xl">
+            <img src="../assets/images/events/showcase/HBN-74.jpg" alt="Dr. Alexa Ruppertsberg presenting the Human-Centred Housing project" class="rounded-lg shadow-xl object-cover object-top" style="max-height:340px;width:100%">
           </div>
         </div>
       </div>
@@ -194,8 +196,26 @@
                 <div class="relative pl-12">
                   <div class="absolute left-0 top-0 w-8 h-8 bg-hbnBlue rounded-full flex items-center justify-center text-white font-bold">3</div>
                   <div>
-                    <h4 class="font-semibold text-gray-800">End Date: 31 December 2025</h4>
+                    <h4 class="font-semibold text-gray-800">Late 2025 – Early 2026</h4>
                     <p class="text-gray-600">Collaborative report production & distribution, shaping a future research agenda</p>
+                  </div>
+                </div>
+
+                <!-- Phase 4 -->
+                <div class="relative pl-12">
+                  <div class="absolute left-0 top-0 w-8 h-8 bg-hbnBlue rounded-full flex items-center justify-center text-white font-bold">4</div>
+                  <div>
+                    <h4 class="font-semibold text-gray-800">1 July 2026 — Workshop held <span class="ml-2 text-xs bg-hbnBlue text-white px-2 py-0.5 rounded-full">Completed</span></h4>
+                    <p class="text-gray-600">Multi-sector stakeholder workshop convened, bringing together architects, developers, planners, and residents to map barriers and co-design a shared research agenda on human-centred housing design</p>
+                  </div>
+                </div>
+
+                <!-- Phase 5 -->
+                <div class="relative pl-12">
+                  <div class="absolute left-0 top-0 w-8 h-8 bg-hbnBlue rounded-full flex items-center justify-center text-white font-bold">5</div>
+                  <div>
+                    <h4 class="font-semibold text-gray-800">2 July 2026 — Preliminary findings at HBN Showcase <span class="ml-2 text-xs bg-hbnBlue text-white px-2 py-0.5 rounded-full">Completed</span></h4>
+                    <p class="text-gray-600">Alexa Ruppertsberg presented early insights from the stakeholder engagement and workshop at the HBN Showcase 2026, sparking discussion on embedding post-occupancy evaluation into mainstream housing practice</p>
                   </div>
                 </div>
               </div>
@@ -357,11 +377,11 @@
         </div>
         
         <div class="bg-gray-50 rounded-xl shadow-md overflow-hidden">
-          <div class="h-3 bg-hbnGray"></div>
+          <div class="h-3 bg-hbnYellow"></div>
           <div class="p-6">
-            <h3 class="text-xl font-bold mb-2">Indoor/Outdoor Nexus</h3>
-            <p class="text-gray-600 mb-4">Studying how external climate factors interact with indoor environment to shape occupant wellbeing.</p>
-            <a href="#" class="text-gray-600 hover:underline inline-flex items-center">
+            <h3 class="text-xl font-bold mb-2">Indoor-Outdoor Air</h3>
+            <p class="text-gray-600 mb-4">Investigating how Passive House ventilation systems and occupant behaviour interact to shape indoor air quality.</p>
+            <a href="indoor-outdoor-air.html" class="text-yellow-700 hover:underline inline-flex items-center">
               <span>Learn More</span>
               <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
