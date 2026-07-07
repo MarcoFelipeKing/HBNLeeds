@@ -223,14 +223,38 @@
   </main>
 
   <!-- Footer -->
-  <footer class="bg-gray-800 text-white py-10 mt-auto">
-    <div class="container mx-auto max-w-6xl px-6 flex flex-col md:flex-row justify-between items-center gap-4">
-      <img src="../assets/images/hbn_landscape.svg" alt="Healthy Buildings Network Leeds" class="h-10 filter brightness-0 invert opacity-80">
-      <p class="text-sm text-gray-400 text-center">© 2026 Healthy Buildings Network Leeds · University of Leeds, LS2 9JT</p>
-      <a href="../blog.html" class="text-sm text-gray-400 hover:text-hbnGreen transition-colors">← Back to Blog</a>
+  <footer class="bg-gray-800 text-white py-12">
+    <div class="container mx-auto px-6 max-w-6xl">
+      <div class="grid md:grid-cols-3 gap-8 mb-8">
+        <div>
+          <img src="../assets/images/hbn_landscape.svg" alt="HBN Leeds Logo" class="h-10 mb-4 brightness-0 invert">
+          <p class="text-gray-400 text-sm">A cross-disciplinary network at the University of Leeds, promoting healthier and more sustainable built environments.</p>
+        </div>
+        <div>
+          <h4 class="font-semibold mb-4">Quick Links</h4>
+          <ul class="space-y-2 text-gray-400 text-sm">
+            <li><a href="../about.html" class="hover:text-white transition-colors">About Us</a></li>
+            <li><a href="../events.html" class="hover:text-white transition-colors">Events</a></li>
+            <li><a href="../projects.html" class="hover:text-white transition-colors">Projects</a></li>
+            <li><a href="../blog.html" class="hover:text-white transition-colors">Blog</a></li>
+            <li><a href="../membership.html" class="hover:text-white transition-colors">Join the Network</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-semibold mb-4">Contact</h4>
+          <p class="text-gray-400 text-sm mb-2">
+            <a href="mailto:healthy_buildings_network@leeds.ac.uk" class="hover:text-white transition-colors">healthy_buildings_network@leeds.ac.uk</a>
+          </p>
+          <p class="text-gray-400 text-sm">University of Leeds, Leeds LS2 9JT, United Kingdom</p>
+        </div>
+      </div>
+      <div class="border-t border-gray-700 pt-8 text-center text-gray-400 text-sm">
+        <p>© 2026 Healthy Buildings Network Leeds. All rights reserved.</p>
+      </div>
     </div>
   </footer>
 
+  <script src="../assets/js/script.js"></script>
   <script>
     document.getElementById('mobile-menu-button').addEventListener('click', function() {
       document.getElementById('mobile-menu').classList.toggle('hidden');
