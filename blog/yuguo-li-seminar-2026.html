@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            hbnGreen: '#4e9317',
+            hbnGreenDark: '#3d7412',
+            hbnPurple: '#8360a9',
+            hbnGray: '#808184',
+            hbnYellow: '#ffca29',
+            hbnBlue: '#3e95dd',
+          }
+        }
+      }
+    };
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Seminar write-up: Professor Yuguo Li (University of Hong Kong) presented a new particle-based framework for airborne infection transmission at the University of Leeds, 6 July 2026.">
+  <title>Beyond Quanta: Prof. Yuguo Li Challenges How We Think About Airborne Infection | HBN Leeds</title>
+
+  <link rel="icon" href="../assets/images/hbn_fav.ico" type="image/x-icon"/>
+  <meta property="og:type"        content="article">
+  <meta property="og:title"       content="Beyond Quanta: Prof. Yuguo Li Challenges How We Think About Airborne Infection | HBN Leeds">
+  <meta property="og:description" content="A new particle-based framework, Clean Air Equivalent, and an answer to why COVID-19 superspreads more than influenza — seminar write-up from the University of Leeds.">
+  <meta property="og:url"         content="https://healthybuildingsnetwork.leeds.ac.uk/blog/yuguo-li-seminar-2026.html">
+  <meta property="og:image"       content="https://healthybuildingsnetwork.leeds.ac.uk/assets/images/events/seminars/yuguo/yuguo_li.png">
+  <meta name="twitter:card"        content="summary_large_image">
+  <meta name="twitter:title"       content="Beyond Quanta: Prof. Yuguo Li Challenges How We Think About Airborne Infection">
+  <meta name="twitter:description" content="A new particle-based framework, Clean Air Equivalent, and an answer to why COVID-19 superspreads more than influenza — seminar write-up from the University of Leeds.">
+  <meta name="twitter:image"       content="https://healthybuildingsnetwork.leeds.ac.uk/assets/images/events/seminars/yuguo/yuguo_li.png">
+  <link rel="canonical" href="https://healthybuildingsnetwork.leeds.ac.uk/blog/yuguo-li-seminar-2026.html">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.css" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Beyond Quanta: Prof. Yuguo Li Challenges How We Think About Airborne Infection Transmission",
+    "description": "Seminar write-up: Professor Yuguo Li presented a new particle-based framework for modelling airborne infection risk at the University of Leeds on 6 July 2026.",
+    "datePublished": "2026-07-06",
+    "url": "https://healthybuildingsnetwork.leeds.ac.uk/blog/yuguo-li-seminar-2026.html",
+    "image": "https://healthybuildingsnetwork.leeds.ac.uk/assets/images/events/seminars/yuguo/yuguo_li.png",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Healthy Buildings Network Leeds",
+      "url": "https://healthybuildingsnetwork.leeds.ac.uk"
+    },
+    "author": {
+      "@type": "Organization",
+      "name": "Healthy Buildings Network Leeds"
+    }
+  }
+  </script>
+</head>
+<body class="font-poppins text-gray-700 flex flex-col min-h-screen">
+
+  <!-- Header -->
+  <header class="bg-white shadow-md fixed w-full z-50">
+    <div class="container mx-auto px-6 flex justify-between items-center h-20">
+      <div class="flex-shrink-0">
+        <a href="../index.html" class="flex items-center space-x-4">
+          <img src="../assets/images/hbn_landscape.svg" alt="Healthy Buildings Network Leeds Logo" class="h-12 w-auto">
+          <img src="../assets/images/leeds_logo_black_on_white_bk.jpg" alt="University of Leeds" class="h-12 w-auto hidden sm:block" width="120" height="48">
+        </a>
+      </div>
+      <button class="md:hidden text-gray-600 hover:text-hbnGreen focus:outline-none" id="mobile-menu-button">
+        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+      <nav class="hidden md:flex space-x-8" id="main-nav">
+        <a href="../index.html" class="text-gray-600 hover:text-hbnGreen font-medium transition-colors">Home</a>
+        <a href="../about.html" class="text-gray-600 hover:text-hbnGreen font-medium transition-colors">About Us</a>
+        <a href="../blog.html" class="text-hbnGreen font-medium transition-colors">Blog</a>
+        <a href="../events.html" class="text-gray-600 hover:text-hbnGreen font-medium transition-colors">Events</a>
+        <a href="../projects.html" class="text-gray-600 hover:text-hbnGreen font-medium transition-colors">Projects</a>
+        <a href="../contact.html" class="text-gray-600 hover:text-hbnGreen font-medium transition-colors">Contact</a>
+      </nav>
+    </div>
+    <div class="md:hidden hidden bg-white w-full shadow-md" id="mobile-menu">
+      <div class="px-6 py-4 space-y-4">
+        <a href="../index.html" class="block text-gray-600 hover:text-hbnGreen">Home</a>
+        <a href="../about.html" class="block text-gray-600 hover:text-hbnGreen">About Us</a>
+        <a href="../blog.html" class="block text-hbnGreen">Blog</a>
+        <a href="../events.html" class="block text-gray-600 hover:text-hbnGreen">Events</a>
+        <a href="../projects.html" class="block text-gray-600 hover:text-hbnGreen">Projects</a>
+        <a href="../contact.html" class="block text-gray-600 hover:text-hbnGreen">Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="relative pt-20">
+    <div class="bg-gradient-to-br from-[#0f2d5c] via-hbnBlue to-[#1a4a7a] text-white py-16 md:py-24">
+      <div class="container mx-auto px-6 max-w-6xl">
+        <div class="md:flex items-center gap-12">
+          <div class="md:w-3/5 mb-10 md:mb-0">
+            <div class="flex items-center gap-3 mb-4 flex-wrap">
+              <span class="inline-block py-1 px-3 rounded-full bg-white/20 text-white font-semibold text-sm">Seminar Write-Up</span>
+              <span class="inline-block py-1 px-3 rounded-full bg-hbnGreen/80 text-white font-semibold text-sm">Airborne Infection</span>
+            </div>
+            <h1 class="text-4xl md:text-5xl font-bold mb-5 leading-tight">Beyond Quanta: rethinking how we model airborne infection transmission</h1>
+            <p class="text-lg opacity-90 mb-6 max-w-xl leading-relaxed">
+              Professor Yuguo Li of the University of Hong Kong visited Leeds to present a new theoretical framework — and to pose some uncomfortable questions about decades of received wisdom.
+            </p>
+            <div class="flex items-center gap-4 text-sm opacity-75 flex-wrap">
+              <span class="flex items-center gap-1">
+                <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                6 July 2026
+              </span>
+              <span>·</span>
+              <span>Bragg Building, University of Leeds</span>
+              <span>·</span>
+              <span>Co-hosted with Leeds Institute for Fluid Dynamics</span>
+            </div>
+          </div>
+          <div class="md:w-2/5 flex justify-center">
+            <div class="bg-white p-2 rounded-2xl shadow-xl transform rotate-1">
+              <img src="../assets/images/events/seminars/yuguo/yuguo_li.png"
+                   alt="Professor Yuguo Li, University of Hong Kong"
+                   class="rounded-xl w-72 object-cover object-top"
+                   style="max-height:320px">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Breadcrumbs -->
+  <div class="bg-gray-50 py-3 border-b border-gray-200">
+    <div class="container mx-auto px-6 max-w-6xl">
+      <div class="flex text-sm">
+        <a href="../index.html" class="text-gray-500 hover:text-hbnGreen">Home</a>
+        <span class="mx-2 text-gray-400">/</span>
+        <a href="../blog.html" class="text-gray-500 hover:text-hbnGreen">Blog</a>
+        <span class="mx-2 text-gray-400">/</span>
+        <span class="text-gray-800 font-medium">Yuguo Li Seminar 2026</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <main class="py-16 bg-white flex-grow">
+    <div class="container mx-auto px-6 max-w-3xl">
+
+      <!-- Hook -->
+      <p class="text-xl text-gray-600 leading-relaxed font-light mb-8">
+        How do you explain superspreading events? Why do influenza and COVID-19 behave so differently if both travel through the air? And can we model infection risk across an entire city without losing the complexity of what happens inside a single room?
+      </p>
+      <p class="text-gray-600 leading-relaxed mb-10">
+        These were the questions at the heart of yesterday's seminar. Rather than presenting an incremental improvement to an existing model, Professor Li proposed something more ambitious: a rethinking of the theoretical foundations used to model airborne infection transmission altogether.
+      </p>
+
+      <!-- Event photo placeholder -->
+      <div class="rounded-2xl overflow-hidden mb-10 border border-dashed border-gray-300 bg-gray-50 flex flex-col items-center justify-center py-10 px-6 text-center">
+        <!-- PLACEHOLDER: replace this block with an actual seminar photo when available -->
+        <svg class="h-12 w-12 text-gray-300 mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+        </svg>
+        <p class="text-gray-400 text-sm font-medium">Photos from the seminar — add here when available</p>
+        <p class="text-gray-300 text-xs mt-1">Bragg Building GR25, University of Leeds · 6 July 2026</p>
+      </div>
+
+      <!-- Section 1: Wells-Riley -->
+      <div class="md:flex gap-8 items-start mb-12">
+        <div class="md:flex-1">
+          <h2 class="text-2xl font-bold text-gray-800 mb-4">Moving beyond the Wells–Riley paradigm</h2>
+          <p class="text-gray-600 leading-relaxed mb-4">
+            For decades, the Wells–Riley equation has underpinned much of our understanding of airborne infection risk. Enormously influential — but Professor Li argued that quanta-based approaches struggle with one of the defining features of respiratory epidemics: <strong>superspreading</strong>.
+          </p>
+          <p class="text-gray-600 leading-relaxed mb-4">
+            His alternative is a <strong>particle-based framework</strong> that follows infectious particles rather than abstract quanta. This shift opens the door to modelling infection risk across multiple scales simultaneously — from close contact between two people, to a single room, to an entire building, to a whole city.
+          </p>
+          <p class="text-gray-600 leading-relaxed">
+            A central message: simplicity and realism do not have to be mutually exclusive. By defining the right assumptions carefully, highly complex building systems can be represented without becoming computationally intractable.
+          </p>
+        </div>
+        <div class="md:w-44 flex-shrink-0 mt-6 md:mt-0">
+          <img src="../assets/images/events/seminars/yuguo/yuguo_flyer.png"
+               alt="Yuguo Li seminar flyer — HBN Leeds and Leeds Institute for Fluid Dynamics"
+               class="w-full rounded-xl shadow-md">
+        </div>
+      </div>
+
+      <!-- Two Concepts -->
+      <h2 class="text-2xl font-bold text-gray-800 mb-5">Two new concepts worth knowing</h2>
+
+      <div class="grid md:grid-cols-2 gap-6 mb-12">
+        <div class="bg-hbnBlue/8 border border-hbnBlue/20 rounded-2xl p-6">
+          <div class="text-hbnBlue font-bold text-xs uppercase tracking-widest mb-2">New Metric</div>
+          <h3 class="text-xl font-bold text-gray-800 mb-3">Clean Air Equivalent <span class="text-hbnBlue">(Q<sub>E</sub>)</span></h3>
+          <p class="text-gray-600 text-sm leading-relaxed">
+            Instead of measuring ventilation alone, Q<sub>E</sub> combines <em>all</em> the mechanisms that remove infectious aerosols from a space — ventilation, filtration, deposition, viral deactivation, spatial air distribution and time-dependent effects — into a single number. One metric that genuinely reflects how a real building performs.
+          </p>
+        </div>
+        <div class="bg-hbnGreen/8 border border-hbnGreen/20 rounded-2xl p-6">
+          <div class="text-hbnGreen font-bold text-xs uppercase tracking-widest mb-2">New Concept</div>
+          <h3 class="text-xl font-bold text-gray-800 mb-3">Close Time Equivalent</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">
+            A new way of representing short-range exposure without modelling every detail of people's movements. Together with Q<sub>E</sub>, it aims to bridge the gap between sophisticated physics and practical engineering design — giving practitioners tools they can actually use.
+          </p>
+        </div>
+      </div>
+
+      <!-- Superspreading callout -->
+      <div class="bg-gray-900 text-white rounded-2xl p-8 mb-12">
+        <div class="flex gap-4 items-start">
+          <div class="text-3xl flex-shrink-0">🦠</div>
+          <div>
+            <h3 class="font-bold text-lg mb-3">Why does COVID-19 superspreads more than influenza?</h3>
+            <p class="text-gray-300 leading-relaxed mb-3">
+              Both are predominantly airborne. Yet COVID-19 generates far more superspreading events. This question challenged infectious disease researchers throughout the pandemic — and most models still can't reproduce the observed distribution of secondary infections for both diseases simultaneously.
+            </p>
+            <p class="text-gray-300 leading-relaxed">
+              Professor Li's framework suggests the answer lies in the <strong class="text-white">interaction between particle physics, viral biology, human behaviour and building environments</strong> — not in any single factor alone. Getting this right is an important benchmark for any credible model of airborne transmission.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Implications -->
+      <h2 class="text-2xl font-bold text-gray-800 mb-4">What this means for building design</h2>
+      <p class="text-gray-600 leading-relaxed mb-6">
+        The seminar was not purely theoretical. Professor Li drew out practical implications that matter directly for building design, operation and policy.
+      </p>
+
+      <div class="space-y-4 mb-10">
+        <div class="flex items-start gap-4 bg-gray-50 rounded-xl p-5">
+          <div class="w-8 h-8 rounded-full bg-hbnBlue flex items-center justify-center text-white font-bold text-sm flex-shrink-0 mt-0.5">1</div>
+          <div>
+            <p class="font-semibold text-gray-800 mb-1">A small fraction of buildings carry most of the risk</p>
+            <p class="text-gray-600 text-sm leading-relaxed">A relatively small proportion of buildings and rooms may account for a disproportionately large share of transmission. Identifying and improving these high-risk spaces could be far more effective than applying identical ventilation strategies everywhere.</p>
+          </div>
+        </div>
+        <div class="flex items-start gap-4 bg-gray-50 rounded-xl p-5">
+          <div class="w-8 h-8 rounded-full bg-hbnGreen flex items-center justify-center text-white font-bold text-sm flex-shrink-0 mt-0.5">2</div>
+          <div>
+            <p class="font-semibold text-gray-800 mb-1">Ventilation standards may need to change</p>
+            <p class="text-gray-600 text-sm leading-relaxed">Should guidance focus solely on outdoor air ventilation rates? Or should it account for filtration, air cleaning, occupancy, room volume and all the other factors that actually determine infection risk? These are live questions for building standards bodies.</p>
+          </div>
+        </div>
+        <div class="flex items-start gap-4 bg-gray-50 rounded-xl p-5">
+          <div class="w-8 h-8 rounded-full bg-hbnPurple flex items-center justify-center text-white font-bold text-sm flex-shrink-0 mt-0.5">3</div>
+          <div>
+            <p class="font-semibold text-gray-800 mb-1">Scale matters — from room to city</p>
+            <p class="text-gray-600 text-sm leading-relaxed">The framework's ability to span scales — from the air between two people to a city-wide epidemic model — could reshape how urban planners and public health agencies use building science data in their work.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Discussion -->
+      <blockquote class="border-l-4 border-hbnBlue pl-6 mb-10">
+        <p class="text-xl text-gray-600 italic leading-relaxed mb-2">"Many of the ideas presented remain under active development — but the seminar demonstrated the value of challenging established assumptions and bringing together expertise from across disciplines."</p>
+        <cite class="text-sm text-gray-500 not-italic">Healthy Buildings Network Leeds</cite>
+      </blockquote>
+
+      <p class="text-gray-600 leading-relaxed mb-10">
+        The lively discussion that followed ranged from modelling connected indoor spaces and naturally ventilated buildings, to translating theoretical advances into engineering standards and public health guidance. Exactly the kind of conversation the network was built for.
+      </p>
+
+      <!-- Second photo placeholder -->
+      <div class="rounded-2xl overflow-hidden mb-10 border border-dashed border-gray-300 bg-gray-50 flex flex-col items-center justify-center py-10 px-6 text-center">
+        <!-- PLACEHOLDER: add Q&A / audience photos here when available -->
+        <svg class="h-10 w-10 text-gray-300 mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/>
+        </svg>
+        <p class="text-gray-400 text-sm font-medium">Audience & discussion photos — add here when available</p>
+      </div>
+
+      <!-- Thanks -->
+      <div class="bg-gradient-to-br from-hbnBlue/10 to-hbnGreen/10 border border-gray-100 rounded-2xl p-8 mb-10">
+        <p class="text-gray-700 leading-relaxed">
+          The Healthy Buildings Network extends its sincere thanks to <strong>Professor Yuguo Li</strong> for an inspiring seminar, and to everyone who joined us in person and online. Many thanks also to our colleagues at the <strong>Leeds Institute for Fluid Dynamics</strong> for co-hosting the event.
+        </p>
+      </div>
+
+      <!-- CTA / footer nav -->
+      <div class="border-t border-gray-200 pt-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+        <div>
+          <p class="text-gray-600 text-sm mb-1">Professor Li's group at the University of Hong Kong</p>
+          <a href="https://www.mech.hku.hk/academic-staff/Li-Y"
+             target="_blank" rel="noopener noreferrer"
+             class="text-hbnBlue hover:underline text-sm font-medium">
+            View his HKU profile →
+          </a>
+        </div>
+        <a href="../events.html"
+           class="flex-shrink-0 inline-flex items-center gap-2 px-6 py-3 border-2 border-hbnGreen text-hbnGreen rounded-full font-semibold hover:bg-hbnGreen hover:text-white transition-colors text-sm">
+          See upcoming events
+        </a>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white py-10 mt-auto">
+    <div class="container mx-auto max-w-6xl px-6 flex flex-col md:flex-row justify-between items-center gap-4">
+      <img src="../assets/images/hbn_landscape.svg" alt="Healthy Buildings Network Leeds" class="h-10 filter brightness-0 invert opacity-80">
+      <p class="text-sm text-gray-400 text-center">© 2026 Healthy Buildings Network Leeds · University of Leeds, LS2 9JT</p>
+      <a href="../blog.html" class="text-sm text-gray-400 hover:text-hbnGreen transition-colors">← Back to Blog</a>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('mobile-menu-button').addEventListener('click', function() {
+      document.getElementById('mobile-menu').classList.toggle('hidden');
+    });
+  </script>
+</body>
+</html>

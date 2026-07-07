@@ -152,6 +152,11 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://healthybuildingsnetwork.leeds.ac.uk/blog/yuguo-li-seminar-2026.html</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://healthybuildingsnetwork.leeds.ac.uk/blog/vincent-luo.html</loc>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
