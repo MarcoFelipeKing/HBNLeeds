@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            hbnGreen: '#4e9317',
+            hbnGreenDark: '#3d7412',
+            hbnPurple: '#8360a9',
+            hbnGray: '#808184',
+            hbnYellow: '#ffca29',
+            hbnBlue: '#3e95dd',
+          }
+        }
+      }
+    };
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Recap of the Healthy Buildings Network workshop on the Indoor Air Quality and Energy Interface, hosted by Dr Doug Booker and Prof Lucie Middlemiss at the University of Leeds, 27 November 2024.">
+  <title>Where Energy Efficiency Meets Indoor Air Quality | Healthy Buildings Network Leeds</title>
+
+  <link rel="icon" href="../assets/images/hbn_fav.ico" type="image/x-icon"/>
+  <meta property="og:type"        content="article">
+  <meta property="og:title"       content="Where Energy Efficiency Meets Indoor Air Quality">
+  <meta property="og:description" content="Recap of the HBN workshop on the Indoor Air Quality and Energy Interface — hosted by Dr Doug Booker and Prof Lucie Middlemiss, with talks spanning CFD modelling, energy poverty, and the history of the healthy home.">
+  <meta property="og:url"         content="https://healthybuildingsnetwork.leeds.ac.uk/blog/air-quality-workshop.html">
+  <meta property="og:image"       content="https://healthybuildingsnetwork.leeds.ac.uk/assets/images/events/workshops/energy/lucie_doug.jpg">
+  <meta name="twitter:card"        content="summary_large_image">
+  <meta name="twitter:title"       content="Where Energy Efficiency Meets Indoor Air Quality">
+  <meta name="twitter:description" content="Recap of the HBN workshop on the Indoor Air Quality and Energy Interface — hosted by Dr Doug Booker and Prof Lucie Middlemiss, with talks spanning CFD modelling, energy poverty, and the history of the healthy home.">
+  <meta name="twitter:image"       content="https://healthybuildingsnetwork.leeds.ac.uk/assets/images/events/workshops/energy/lucie_doug.jpg">
+  <link rel="canonical" href="https://healthybuildingsnetwork.leeds.ac.uk/blog/air-quality-workshop.html">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.css" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Where Energy Efficiency Meets Indoor Air Quality",
+    "description": "Recap of the Healthy Buildings Network workshop on the Indoor Air Quality and Energy Interface, hosted by Dr Doug Booker and Prof Lucie Middlemiss at the University of Leeds, 27 November 2024.",
+    "datePublished": "2024-11-27",
+    "url": "https://healthybuildingsnetwork.leeds.ac.uk/blog/air-quality-workshop.html",
+    "image": "https://healthybuildingsnetwork.leeds.ac.uk/assets/images/events/workshops/energy/lucie_doug.jpg",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Healthy Buildings Network Leeds",
+      "url": "https://healthybuildingsnetwork.leeds.ac.uk"
+    },
+    "author": {
+      "@type": "Organization",
+      "name": "Healthy Buildings Network Leeds"
+    }
+  }
+  </script>
+</head>
+<body class="font-poppins">
+
+  <!-- Header -->
+  <header class="bg-white shadow-md fixed w-full z-50">
+    <div class="container mx-auto px-6 flex justify-between items-center h-20">
+      <div class="flex-shrink-0">
+        <a href="../index.html" class="flex items-center space-x-4">
+          <img src="../assets/images/hbn_landscape.svg" alt="Healthy Buildings Network Leeds Logo" class="h-12">
+          <img src="../assets/images/leeds_logo_black_on_white_bk.jpg" alt="Leeds Logo" class="h-12">
+        </a>
+      </div>
+      <button class="md:hidden text-gray-600 hover:text-hbnGreen focus:outline-none" id="mobile-menu-button" aria-label="Open Menu">
+        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+      <nav class="hidden md:flex space-x-8" id="main-nav">
+        <a href="../index.html" class="text-gray-600 hover:text-hbnGreen font-medium transition-colors">Home</a>
+        <a href="../about.html" class="text-gray-600 hover:text-hbnGreen font-medium transition-colors">About Us</a>
+        <a href="../blog.html" class="text-hbnGreen font-medium transition-colors">Blog</a>
+        <a href="../events.html" class="text-gray-600 hover:text-hbnGreen font-medium transition-colors">Events</a>
+        <a href="../projects.html" class="text-gray-600 hover:text-hbnGreen font-medium transition-colors">Projects</a>
+        <a href="../membership.html" class="text-gray-600 hover:text-hbnGreen font-medium transition-colors">Membership</a>
+        <a href="../contact.html" class="text-gray-600 hover:text-hbnGreen font-medium transition-colors">Contact</a>
+      </nav>
+    </div>
+    <div class="md:hidden hidden bg-white w-full shadow-md" id="mobile-menu">
+      <div class="px-6 py-4 space-y-4">
+        <a href="../index.html" class="block text-gray-600 hover:text-hbnGreen font-medium">Home</a>
+        <a href="../about.html" class="block text-gray-600 hover:text-hbnGreen font-medium">About Us</a>
+        <a href="../blog.html" class="block text-hbnGreen font-medium">Blog</a>
+        <a href="../events.html" class="block text-gray-600 hover:text-hbnGreen font-medium">Events</a>
+        <a href="../projects.html" class="block text-gray-600 hover:text-hbnGreen font-medium">Projects</a>
+        <a href="../membership.html" class="block text-gray-600 hover:text-hbnGreen font-medium">Membership</a>
+        <a href="../contact.html" class="block text-gray-600 hover:text-hbnGreen font-medium">Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <button id="scrollToTopBtn" class="fixed bottom-5 right-5 bg-hbnGreen text-white p-3 rounded-full shadow-md hidden z-50" aria-label="Scroll to top">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18" />
+    </svg>
+  </button>
+
+  <!-- Hero -->
+  <section class="relative pt-20">
+    <div class="bg-gradient-to-r from-hbnBlue to-hbnPurple text-white py-16 md:py-24">
+      <div class="container mx-auto px-6 max-w-6xl">
+        <div class="md:flex items-center gap-12">
+          <div class="md:w-3/5 mb-10 md:mb-0">
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="text-xs bg-white/20 text-white px-3 py-1 rounded-full font-semibold">Workshop Report</span>
+              <span class="text-xs bg-white/20 text-white px-3 py-1 rounded-full font-semibold">Energy</span>
+              <span class="text-xs bg-white/20 text-white px-3 py-1 rounded-full font-semibold">Indoor Air Quality</span>
+            </div>
+            <h1 class="text-3xl md:text-5xl font-bold mb-4 leading-tight">Where Energy Efficiency Meets Indoor Air Quality</h1>
+            <p class="text-xl opacity-90 mb-6 max-w-xl">
+              A day of CFD models, energy poverty maps, low-cost sensors, and a surprise history lesson on the "healthy home" — hosted by Dr Doug Booker and Prof Lucie Middlemiss.
+            </p>
+            <div class="flex flex-wrap items-center gap-4 text-sm opacity-80">
+              <span class="flex items-center gap-1.5">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                27 November 2024
+              </span>
+              <span class="flex items-center gap-1.5">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                University of Leeds
+              </span>
+              <span class="flex items-center gap-1.5">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
+                21 attendees, 7 institutions
+              </span>
+            </div>
+          </div>
+          <div class="md:w-2/5">
+            <img src="../assets/images/events/workshops/energy/lucie_doug.jpg"
+                 alt="Prof Lucie Middlemiss and Dr Doug Booker, workshop co-hosts, beside the HBN Leeds banner"
+                 class="rounded-xl shadow-2xl w-full object-cover">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Breadcrumb -->
+  <div class="bg-gray-100 py-3">
+    <div class="container mx-auto px-6 max-w-6xl">
+      <div class="flex text-sm flex-wrap gap-1">
+        <a href="../index.html" class="text-gray-600 hover:text-hbnGreen">Home</a>
+        <span class="mx-2 text-gray-400">/</span>
+        <a href="../blog.html" class="text-gray-600 hover:text-hbnGreen">Blog</a>
+        <span class="mx-2 text-gray-400">/</span>
+        <span class="text-gray-800">Indoor Air Quality and Energy Workshop</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <main class="py-16 bg-white">
+    <div class="container mx-auto px-6 max-w-6xl">
+      <div class="flex flex-col lg:flex-row gap-12">
+
+        <!-- Article -->
+        <article class="lg:w-2/3 prose-like">
+
+          <!-- Opening -->
+          <p class="text-xl text-gray-700 leading-relaxed mb-6 font-light">
+            The built environment plays a pivotal role in driving both climate change and influencing health and wellbeing. Efforts to decarbonise and to improve health outcomes often fail to align — and on 27 November 2024, the Healthy Buildings Network brought together researchers from across the UK and beyond to work out where the friction really lies.
+          </p>
+
+          <p class="text-gray-600 leading-relaxed mb-6">
+            Hosted by <strong>Dr Doug Booker</strong> and <strong>Prof Lucie Middlemiss</strong>, both of the University of Leeds, the workshop on "The Indoor Air Quality and Energy Interface" drew 21 participants from 7 institutions and 8 disciplines — environmental science, sociology, engineering, geography, building physics, and public health among them. The day mixed kick-off talks, a run of sandpit-style breakout sessions, and a fair amount of networking over coffee.
+          </p>
+
+          <!-- Section: Two Hosts -->
+          <h2 class="text-2xl font-bold text-gray-800 mt-10 mb-4">Two Hosts, One Interface</h2>
+
+          <p class="text-gray-600 leading-relaxed mb-4">
+            Dr Doug Booker — Lecturer in Indoor Air at Leeds, Co-Founder and CEO of NAQTS, and a Regional Clean Air Champion — opened by explaining how his work sits at the crossing point of research, monitoring technology, and public policy. His own talk turned to environmental justice: households without a car consistently show worse air quality, and households in poverty are far less likely to own one — the exposure and the emissions burden land unevenly, and not in the direction you'd hope.
+          </p>
+
+          <div class="grid grid-cols-2 gap-3 my-6">
+            <figure>
+              <img src="../assets/images/events/workshops/energy/doug_eai.jpeg" alt="Dr Doug Booker presenting his 'My Hats' slide — Lecturer in Indoor Air, Co-Founder of NAQTS, Regional Clean Air Champion" class="rounded-xl shadow w-full object-cover h-56">
+              <figcaption class="text-xs text-gray-500 text-center mt-1.5">Dr Doug Booker introduces his three "hats"</figcaption>
+            </figure>
+            <figure>
+              <img src="../assets/images/events/workshops/energy/lucie_eai.jpeg" alt="Prof Lucie Middlemiss presenting 'What do we know about healthy buildings?'" class="rounded-xl shadow w-full object-cover h-56">
+              <figcaption class="text-xs text-gray-500 text-center mt-1.5">Prof Lucie Middlemiss on what we already know</figcaption>
+            </figure>
+          </div>
+
+          <p class="text-gray-600 leading-relaxed mb-4">
+            Prof Middlemiss, from the School of Earth and Environment, pushed on energy justice and fuel poverty — reminding the room that technical fixes for buildings can't be considered in isolation from who can actually afford to live in them. Her presentation set up a theme that ran through the whole day: the energy-efficiency and indoor-air-quality nexus is as much a social equity question as an engineering one.
+          </p>
+
+          <figure class="my-8">
+            <img src="../assets/images/events/workshops/energy/doug2_eai.jpeg" alt="Doug Booker's slide on environmental justice and air quality — households without a car have worse air quality and more households in poverty have no car" class="rounded-xl shadow-lg w-full object-cover">
+            <figcaption class="text-sm text-gray-500 text-center mt-3">Environmental justice and air quality: exposure and emissions don't burden everyone equally.</figcaption>
+          </figure>
+
+          <!-- Section: Network -->
+          <h2 class="text-2xl font-bold text-gray-800 mt-10 mb-4">A Network Backing New Ideas</h2>
+
+          <figure class="my-8 float-right ml-8 mb-4 w-80 max-w-full">
+            <img src="../assets/images/events/workshops/energy/martin_eai.jpeg" alt="HBN Leeds Network Activities slide — pump-priming programme, Idea Development Fund, Networking Grant" class="rounded-xl shadow-lg w-full object-cover">
+            <figcaption class="text-sm text-gray-500 text-center mt-2">HBN's funding routes, explained to the room.</figcaption>
+          </figure>
+
+          <p class="text-gray-600 leading-relaxed mb-4">
+            Between the research talks, HBN Leeds used the room to explain what the network could actually do for the collaborations forming in front of us: monthly research seminars, early-career events, hands-on workshops, and — announced on the day — a pump-priming programme open for applications, alongside a smaller Idea Development Fund (up to £3k) and Networking Grant (up to £1k) for activities that trigger new collaboration.
+          </p>
+
+          <p class="text-gray-600 leading-relaxed mb-6">
+            It set the tone for the rest of the day: this wasn't a workshop for talking about research in the abstract, it was one designed to turn into funded proposals.
+          </p>
+
+          <div class="clear-both"></div>
+
+          <!-- Section: Variety of talks -->
+          <h2 class="text-2xl font-bold text-gray-800 mt-10 mb-4">A Variety of Other Talks</h2>
+
+          <p class="text-gray-600 leading-relaxed mb-6">
+            Beyond the two hosts, the programme ranged well outside Leeds and well outside engineering.
+          </p>
+
+          <div class="space-y-4 mb-8">
+            <div class="flex gap-4 bg-gray-50 rounded-xl p-5">
+              <div class="flex-shrink-0 w-10 h-10 bg-hbnBlue/10 rounded-full flex items-center justify-center">
+                <span class="text-hbnBlue font-bold text-sm">PF</span>
+              </div>
+              <div>
+                <p class="font-semibold text-gray-800 mb-1">Paul Francisco <span class="font-normal text-gray-500 text-sm">— Colorado State University / Champaign County Regional Planning Commission</span></p>
+                <p class="text-gray-600 text-sm leading-relaxed">An American perspective on "Efficient and Healthy Homes for All" — field measurements of retrofit impacts and training programmes for home performance practitioners.</p>
+              </div>
+            </div>
+            <div class="flex gap-4 bg-gray-50 rounded-xl p-5">
+              <div class="flex-shrink-0 w-10 h-10 bg-hbnPurple/10 rounded-full flex items-center justify-center">
+                <span class="text-hbnPurple font-bold text-sm">LH</span>
+              </div>
+              <div>
+                <p class="font-semibold text-gray-800 mb-1">Lenka Hasova <span class="font-normal text-gray-500 text-sm">— University of Bristol</span></p>
+                <p class="text-gray-600 text-sm leading-relaxed">Spatial inequality of indoor air quality — mapping environmental, structural, and human vulnerability indexes against deprivation across England, part of the Mapping Ambient Vulnerabilities (MAV) project.</p>
+              </div>
+            </div>
+            <div class="flex gap-4 bg-gray-50 rounded-xl p-5">
+              <div class="flex-shrink-0 w-10 h-10 bg-hbnGreen/10 rounded-full flex items-center justify-center">
+                <span class="text-hbnGreen font-bold text-sm">LZ</span>
+              </div>
+              <div>
+                <p class="font-semibold text-gray-800 mb-1">Dr Lin Zhang <span class="font-normal text-gray-500 text-sm">— University of Bristol</span></p>
+                <p class="text-gray-600 text-sm leading-relaxed">Also from the MAV project — winter energy poverty and summer overheating as two faces of the same vulnerability, shaped by housing tenure, dwelling age, and household composition.</p>
+              </div>
+            </div>
+            <div class="flex gap-4 bg-gray-50 rounded-xl p-5">
+              <div class="flex-shrink-0 w-10 h-10 bg-amber-100 rounded-full flex items-center justify-center">
+                <span class="text-amber-700 font-bold text-sm">DD</span>
+              </div>
+              <div>
+                <p class="font-semibold text-gray-800 mb-1">Darpan Das <span class="font-normal text-gray-500 text-sm">— University of York</span></p>
+                <p class="text-gray-600 text-sm leading-relaxed">Managing the spatial and temporal variability of pollutants — from CFD simulation of indoor exposure through to low-cost sensing with the BlueSky air monitor.</p>
+              </div>
+            </div>
+            <div class="flex gap-4 bg-gray-50 rounded-xl p-5">
+              <div class="flex-shrink-0 w-10 h-10 bg-red-100 rounded-full flex items-center justify-center">
+                <span class="text-red-700 font-bold text-sm">EY</span>
+              </div>
+              <div>
+                <p class="font-semibold text-gray-800 mb-1">Elisabeth M. Yang, PhD <span class="font-normal text-gray-500 text-sm">— Centre for History and Philosophy of Science, Leeds</span></p>
+                <p class="text-gray-600 text-sm leading-relaxed">The one that turned heads: a history of "healthful and happy homes for healthy and happy babies" in American and British paediatrics — a reminder that the healthy-home ideal is nothing new.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-2 gap-3 mb-10">
+            <figure>
+              <img src="../assets/images/events/workshops/energy/IMG_7398.jpeg" alt="Darpan Das presenting CFD simulation and the BlueSky low-cost air monitor" class="rounded-xl shadow w-full object-cover h-56">
+              <figcaption class="text-xs text-gray-500 text-center mt-1.5">Darpan Das on CFD modelling and low-cost sensing</figcaption>
+            </figure>
+            <figure>
+              <img src="../assets/images/events/workshops/energy/IMG_7393.jpeg" alt="Elisabeth M. Yang presenting on the history of healthy homes in American and British paediatrics" class="rounded-xl shadow w-full object-cover h-56">
+              <figcaption class="text-xs text-gray-500 text-center mt-1.5">Elisabeth Yang on the history of the "healthy home"</figcaption>
+            </figure>
+            <figure>
+              <img src="../assets/images/events/workshops/energy/IMG_7400.jpeg" alt="Dr Lin Zhang presenting on winter energy poverty and summer overheating vulnerabilities" class="rounded-xl shadow w-full object-cover h-56">
+              <figcaption class="text-xs text-gray-500 text-center mt-1.5">Dr Lin Zhang on energy poverty and overheating</figcaption>
+            </figure>
+            <figure>
+              <img src="../assets/images/events/workshops/energy/IMG_7381.jpeg" alt="Paul Francisco presenting on efficient and healthy homes for all" class="rounded-xl shadow w-full object-cover h-56">
+              <figcaption class="text-xs text-gray-500 text-center mt-1.5">Paul Francisco on retrofit impacts and practitioner training</figcaption>
+            </figure>
+          </div>
+
+          <!-- Section: Sandpit breakouts -->
+          <h2 class="text-2xl font-bold text-gray-800 mt-10 mb-4">Sandpit Breakouts</h2>
+
+          <p class="text-gray-600 leading-relaxed mb-6">
+            The afternoon moved from listening to doing: three rounds of sandpit-style breakout discussions, each followed by feedback to the whole room, designed to turn the morning's talks into collaborative project ideas.
+          </p>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+            <div class="bg-gray-50 p-5 rounded-lg border-t-4 border-hbnBlue">
+              <h4 class="font-semibold text-gray-800 mb-2">Measuring Success</h4>
+              <p class="text-gray-600 text-sm">Metrics and methodologies for evaluating energy efficiency and indoor air quality together in residential settings.</p>
+            </div>
+            <div class="bg-gray-50 p-5 rounded-lg border-t-4 border-hbnPurple">
+              <h4 class="font-semibold text-gray-800 mb-2">Policy Implications</h4>
+              <p class="text-gray-600 text-sm">How this research can inform building regulations and energy policy to better protect vulnerable populations.</p>
+            </div>
+            <div class="bg-gray-50 p-5 rounded-lg border-t-4 border-hbnGreen">
+              <h4 class="font-semibold text-gray-800 mb-2">Interdisciplinary Approaches</h4>
+              <p class="text-gray-600 text-sm">Where engineering, social science, and the humanities can actually collaborate rather than talk past one another.</p>
+            </div>
+            <div class="bg-gray-50 p-5 rounded-lg border-t-4 border-hbnYellow">
+              <h4 class="font-semibold text-gray-800 mb-2">Outcomes & Next Steps</h4>
+              <p class="text-gray-600 text-sm">Working groups formed on the day to develop proposals for HBN's pump-priming funding.</p>
+            </div>
+          </div>
+
+          <!-- Closing -->
+          <div class="bg-gradient-to-br from-hbnBlue/5 to-hbnPurple/5 rounded-2xl p-8 my-10 border border-gray-100">
+            <h3 class="text-xl font-bold text-gray-800 mb-4">Thank you</h3>
+            <p class="text-gray-600 leading-relaxed mb-4">
+              To Doug and Lucie for hosting, to every speaker who travelled in — from York to Bristol to Colorado — and to everyone who stayed for the sandpit sessions and helped turn a day of talks into working groups. Several collaborative project ideas came directly out of this workshop, and HBN continues to support them through pump-priming funding, follow-up events on specific themes, and help with larger external funding applications.
+            </p>
+            <p class="text-gray-600 leading-relaxed">
+              The workshop took place on 27 November 2024 at the University of Leeds. If you'd like to get involved with HBN's work on energy and indoor air quality, <a href="../membership.html" class="text-hbnGreen hover:underline font-medium">join the network</a> or <a href="../contact.html" class="text-hbnGreen hover:underline font-medium">get in touch</a>.
+            </p>
+          </div>
+
+        </article>
+
+        <!-- Sidebar -->
+        <aside class="lg:w-1/3">
+
+          <div class="bg-gray-50 rounded-xl p-6 mb-8 sticky top-24">
+
+            <!-- Event snapshot -->
+            <h3 class="text-lg font-semibold text-gray-800 mb-4">Workshop at a Glance</h3>
+            <ul class="space-y-3 text-sm text-gray-600 mb-6">
+              <li class="flex items-start gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-hbnBlue flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                27 November 2024, 9:30am – 4:00pm
+              </li>
+              <li class="flex items-start gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-hbnBlue flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                University of Leeds
+              </li>
+              <li class="flex items-start gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-hbnBlue flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
+                21 participants — 11 Leeds, 10 external, across 7 institutions
+              </li>
+            </ul>
+
+            <!-- Speakers -->
+            <h3 class="text-lg font-semibold text-gray-800 mb-3">Speakers</h3>
+            <ul class="space-y-2 text-sm mb-6">
+              <li class="flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-hbnBlue flex-shrink-0"></span>
+                <span><strong>Dr Doug Booker</strong> — Leeds / NAQTS (host)</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-hbnBlue flex-shrink-0"></span>
+                <span><strong>Prof Lucie Middlemiss</strong> — Leeds (host)</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-hbnGreen flex-shrink-0"></span>
+                <span><strong>Paul Francisco</strong> — Colorado State University</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-hbnPurple flex-shrink-0"></span>
+                <span><strong>Lenka Hasova</strong> — University of Bristol</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-hbnPurple flex-shrink-0"></span>
+                <span><strong>Dr Lin Zhang</strong> — University of Bristol</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-amber-500 flex-shrink-0"></span>
+                <span><strong>Darpan Das</strong> — University of York</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-red-400 flex-shrink-0"></span>
+                <span><strong>Elisabeth M. Yang</strong> — Leeds, History &amp; Philosophy of Science</span>
+              </li>
+            </ul>
+
+            <a href="../events/workshops/air-quality-workshop.html" class="block w-full text-center px-4 py-2.5 bg-hbnBlue text-white rounded-full text-sm font-semibold hover:bg-blue-700 transition-colors mb-3">
+              View Full Event Page
+            </a>
+            <a href="../blog.html" class="block w-full text-center px-4 py-2.5 border border-gray-300 text-gray-700 rounded-full text-sm font-semibold hover:bg-gray-50 transition-colors">
+              More from the Blog
+            </a>
+
+          </div>
+
+        </aside>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white py-12">
+    <div class="container mx-auto px-6 max-w-6xl">
+      <div class="grid md:grid-cols-3 gap-8 mb-8">
+        <div>
+          <img src="../assets/images/hbn_landscape.svg" alt="HBN Leeds Logo" class="h-10 mb-4 brightness-0 invert">
+          <p class="text-gray-400 text-sm">A cross-disciplinary network at the University of Leeds, promoting healthier and more sustainable built environments.</p>
+        </div>
+        <div>
+          <h4 class="font-semibold mb-4">Quick Links</h4>
+          <ul class="space-y-2 text-gray-400 text-sm">
+            <li><a href="../about.html" class="hover:text-white transition-colors">About Us</a></li>
+            <li><a href="../events.html" class="hover:text-white transition-colors">Events</a></li>
+            <li><a href="../projects.html" class="hover:text-white transition-colors">Projects</a></li>
+            <li><a href="../blog.html" class="hover:text-white transition-colors">Blog</a></li>
+            <li><a href="../membership.html" class="hover:text-white transition-colors">Join the Network</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-semibold mb-4">Contact</h4>
+          <p class="text-gray-400 text-sm mb-2">
+            <a href="mailto:healthy_buildings_network@leeds.ac.uk" class="hover:text-white transition-colors">healthy_buildings_network@leeds.ac.uk</a>
+          </p>
+          <p class="text-gray-400 text-sm">University of Leeds, Leeds LS2 9JT, United Kingdom</p>
+        </div>
+      </div>
+      <div class="border-t border-gray-700 pt-8 text-center text-gray-400 text-sm">
+        <p>© 2026 Healthy Buildings Network Leeds. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../assets/js/script.js"></script>
+</body>
+</html>
