@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { poppins: ['Poppins', 'sans-serif'] },
+          colors: {
+            hbnGreen:     '#4e9317',
+            hbnGreenDark: '#3d7412',
+            hbnPurple:    '#8360a9',
+            hbnGray:      '#808184',
+            hbnYellow:    '#ffca29',
+            hbnBlue:      '#3e95dd',
+          }
+        }
+      }
+    };
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="A joint half-day sandpit event to support competitive NIHR PHR applications on housing, place and the built environment for an ageing population. Co-led by Reimagine Ageing and Healthy Buildings Network, University of Leeds. September 2026." />
+  <title>NIHR Sandpit: Housing, Place & Ageing | HBN Leeds</title>
+
+  <link rel="icon" href="../../assets/images/hbn_fav.ico" type="image/x-icon" />
+  <meta property="og:type"        content="website">
+  <meta property="og:title"       content="NIHR Sandpit: Housing, Place and Ageing | HBN Leeds">
+  <meta property="og:description" content="A joint half-day sandpit event to support competitive applications to the NIHR call on housing, place and the built environment for an ageing population. September 2026, University of Leeds.">
+  <meta property="og:url"         content="https://healthybuildingsnetwork.leeds.ac.uk/events/workshops/nihr-sandpit/nihr-sandpit.html">
+  <meta property="og:image"       content="https://healthybuildingsnetwork.leeds.ac.uk/assets/images/og-image.jpg">
+  <meta name="twitter:card"        content="summary_large_image">
+  <meta name="twitter:title"       content="NIHR Sandpit: Housing, Place and Ageing | HBN Leeds">
+  <meta name="twitter:description" content="A joint half-day sandpit event to support competitive applications to the NIHR call on housing, place and the built environment for an ageing population.">
+  <meta name="twitter:image"       content="https://healthybuildingsnetwork.leeds.ac.uk/assets/images/og-image.jpg">
+  <link rel="canonical" href="https://healthybuildingsnetwork.leeds.ac.uk/events/workshops/nihr-sandpit/nihr-sandpit.html">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Event",
+    "name": "NIHR Sandpit: Housing, Place and the Built Environment for an Ageing Population",
+    "description": "A joint half-day sandpit event co-led by Reimagine Ageing and Healthy Buildings Network to accelerate competitive applications to the NIHR Public Health Research Programme call on housing, place and the built environment for an ageing population.",
+    "startDate": "2026-09-08",
+    "endDate": "2026-09-08",
+    "eventStatus": "https://schema.org/EventScheduled",
+    "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+    "location": {
+      "@type": "Place",
+      "name": "University of Leeds",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Leeds",
+        "postalCode": "LS2 9JT",
+        "addressCountry": "GB"
+      }
+    },
+    "organizer": [
+      {
+        "@type": "Organization",
+        "name": "Healthy Buildings Network Leeds",
+        "url": "https://healthybuildingsnetwork.leeds.ac.uk"
+      },
+      {
+        "@type": "Organization",
+        "name": "Reimagine Ageing Network, University of Leeds"
+      }
+    ],
+    "url": "https://healthybuildingsnetwork.leeds.ac.uk/events/workshops/nihr-sandpit/nihr-sandpit.html"
+  }
+  </script>
+
+  <style>
+    .timeline-step { position: relative; padding-left: 2.5rem; }
+    .timeline-step::before {
+      content: '';
+      position: absolute;
+      left: 0.65rem;
+      top: 1.6rem;
+      bottom: -0.5rem;
+      width: 2px;
+      background: #e5e7eb;
+    }
+    .timeline-step:last-child::before { display: none; }
+    .timeline-dot {
+      position: absolute;
+      left: 0;
+      top: 0.25rem;
+      width: 1.3rem;
+      height: 1.3rem;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  </style>
+</head>
+<body class="font-poppins text-gray-700 flex flex-col min-h-screen bg-white">
+
+  <!-- Header -->
+  <header class="bg-white/95 backdrop-blur shadow-md fixed w-full z-50">
+    <div class="container mx-auto px-6 flex justify-between items-center h-20">
+      <div class="flex-shrink-0">
+        <a href="../../index.html" class="flex items-center space-x-4" aria-label="Healthy Buildings Network Leeds home">
+          <img src="../../assets/images/hbn_landscape.svg" alt="Healthy Buildings Network Leeds logo" class="h-12" />
+          <img src="../../assets/images/leeds_logo_black_on_white_bk.jpg" alt="University of Leeds logo" class="h-12 hidden sm:block" />
+        </a>
+      </div>
+      <button class="md:hidden text-gray-600 hover:text-hbnGreen focus:outline-none" id="mobile-menu-button" aria-label="Toggle menu">
+        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+      <nav class="hidden md:flex space-x-8" id="main-nav">
+        <a href="../../index.html"   class="text-gray-600 hover:text-hbnGreen font-medium transition-colors">Home</a>
+        <a href="../../about.html"   class="text-gray-600 hover:text-hbnGreen font-medium transition-colors">About Us</a>
+        <a href="../../blog.html"    class="text-gray-600 hover:text-hbnGreen font-medium transition-colors">Blog</a>
+        <a href="../../events.html"  class="text-hbnGreen font-medium transition-colors">Events</a>
+        <a href="../../projects.html" class="text-gray-600 hover:text-hbnGreen font-medium transition-colors">Projects</a>
+        <a href="../../contact.html" class="text-gray-600 hover:text-hbnGreen font-medium transition-colors">Contact</a>
+      </nav>
+    </div>
+    <div class="md:hidden hidden bg-white w-full shadow-md" id="mobile-menu">
+      <div class="px-6 py-4 space-y-4">
+        <a href="../../index.html"   class="block text-gray-600 hover:text-hbnGreen">Home</a>
+        <a href="../../about.html"   class="block text-gray-600 hover:text-hbnGreen">About Us</a>
+        <a href="../../blog.html"    class="block text-gray-600 hover:text-hbnGreen">Blog</a>
+        <a href="../../events.html"  class="block text-hbnGreen font-medium">Events</a>
+        <a href="../../projects.html" class="block text-gray-600 hover:text-hbnGreen">Projects</a>
+        <a href="../../contact.html" class="block text-gray-600 hover:text-hbnGreen">Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="relative pt-20">
+    <div class="relative bg-gradient-to-br from-[#3a1a5c] via-[#7b4fa8] to-[#b06a28] text-white overflow-hidden">
+
+      <!-- Decorative background shapes -->
+      <div class="absolute inset-0 pointer-events-none" aria-hidden="true">
+        <div style="position:absolute;top:-10%;right:-5%;width:50%;height:80%;background:radial-gradient(ellipse,rgba(255,255,255,0.06) 0%,transparent 65%);border-radius:60% 40% 70% 30%/50% 60% 40% 50%;"></div>
+        <div style="position:absolute;bottom:-15%;left:-5%;width:45%;height:70%;background:radial-gradient(ellipse,rgba(255,202,41,0.10) 0%,transparent 65%);border-radius:40% 60% 30% 70%/60% 40% 60% 40%;"></div>
+      </div>
+
+      <div class="relative container mx-auto px-6 max-w-6xl py-20 md:py-28">
+        <div class="md:flex items-start gap-12">
+
+          <!-- Text block -->
+          <div class="md:w-3/5 mb-10 md:mb-0">
+            <div class="flex flex-wrap gap-2 mb-5">
+              <span class="bg-white/20 text-white text-xs font-semibold px-3 py-1 rounded-full">Workshop · Sandpit</span>
+              <span class="bg-hbnYellow/30 text-yellow-100 text-xs font-semibold px-3 py-1 rounded-full">Expression of Interest Open</span>
+            </div>
+
+            <h1 class="text-3xl md:text-5xl font-bold leading-tight mb-5">
+              NIHR Sandpit: Housing, Place and the Built Environment for an Ageing Population
+            </h1>
+
+            <p class="text-lg text-white/85 leading-relaxed mb-6 max-w-xl">
+              A focused half-day event to bring together researchers, practitioners, and lived-experience experts — and to help you develop a strong outline application to the NIHR Public Health Research call.
+            </p>
+
+            <div class="flex flex-wrap gap-x-6 gap-y-2 text-sm text-white/70 mb-8">
+              <span class="flex items-center gap-1.5">
+                <svg class="h-4 w-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                September 2026 (date TBC)
+              </span>
+              <span class="flex items-center gap-1.5">
+                <svg class="h-4 w-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                11am – 3pm
+              </span>
+              <span class="flex items-center gap-1.5">
+                <svg class="h-4 w-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                In person, University of Leeds
+              </span>
+            </div>
+
+            <div class="flex flex-wrap gap-3">
+              <a href="#register"
+                 class="inline-block px-7 py-3 bg-white text-[#7b4fa8] font-semibold rounded-full hover:bg-gray-100 transition-colors shadow-lg">
+                Express Interest
+              </a>
+              <a href="#programme"
+                 class="inline-block px-7 py-3 border-2 border-white/60 text-white rounded-full hover:bg-white/10 transition-colors">
+                View Programme
+              </a>
+            </div>
+          </div>
+
+          <!-- Info card -->
+          <div class="md:w-2/5">
+            <div class="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6">
+              <div class="text-white/60 text-xs uppercase tracking-widest mb-4 font-medium">Key Dates</div>
+
+              <div class="space-y-4">
+                <div class="flex items-start gap-3">
+                  <div class="w-2 h-2 rounded-full bg-hbnYellow mt-2 flex-shrink-0"></div>
+                  <div>
+                    <div class="text-white font-semibold text-sm">Interest form closes</div>
+                    <div class="text-white/65 text-sm">Early August 2026</div>
+                  </div>
+                </div>
+                <div class="flex items-start gap-3">
+                  <div class="w-2 h-2 rounded-full bg-white/60 mt-2 flex-shrink-0"></div>
+                  <div>
+                    <div class="text-white font-semibold text-sm">Flash talk selection</div>
+                    <div class="text-white/65 text-sm">Week of 27 July 2026</div>
+                  </div>
+                </div>
+                <div class="flex items-start gap-3">
+                  <div class="w-2 h-2 rounded-full bg-hbnGreen mt-2 flex-shrink-0"></div>
+                  <div>
+                    <div class="text-white font-semibold text-sm">Sandpit event</div>
+                    <div class="text-white/65 text-sm">8–10 or 16–17 September 2026 (TBC)</div>
+                  </div>
+                </div>
+                <div class="flex items-start gap-3 pt-2 border-t border-white/20">
+                  <div class="w-2 h-2 rounded-full bg-red-400 mt-2 flex-shrink-0"></div>
+                  <div>
+                    <div class="text-white font-semibold text-sm">NIHR EOI deadline</div>
+                    <div class="text-white/65 text-sm">8 December 2026</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="mt-5 pt-4 border-t border-white/20">
+                <div class="text-white/60 text-xs mb-2">Co-led by</div>
+                <div class="flex items-center gap-3 flex-wrap">
+                  <span class="bg-white/15 text-white text-xs px-3 py-1.5 rounded-full font-medium">Reimagine Ageing</span>
+                  <span class="bg-white/15 text-white text-xs px-3 py-1.5 rounded-full font-medium">Healthy Buildings Network</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Breadcrumbs -->
+  <div class="bg-gray-50 py-3 border-b border-gray-200">
+    <div class="container mx-auto px-6 max-w-6xl text-sm flex items-center gap-2 text-gray-500">
+      <a href="../../index.html" class="hover:text-hbnGreen">Home</a>
+      <span>/</span>
+      <a href="../../events.html" class="hover:text-hbnGreen">Events</a>
+      <span>/</span>
+      <span class="text-gray-800 font-medium">NIHR Sandpit 2026</span>
+    </div>
+  </div>
+
+  <!-- Main content -->
+  <main class="flex-grow">
+
+    <!-- About the event -->
+    <section class="py-16 bg-white">
+      <div class="container mx-auto px-6 max-w-4xl">
+
+        <div class="mb-12">
+          <span class="text-hbnPurple font-semibold text-sm uppercase tracking-wider">About the event</span>
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mt-2 mb-5">What is this event for?</h2>
+          <p class="text-lg text-gray-600 leading-relaxed mb-5">
+            NIHR has opened a significant call for research on <strong>Housing, Place and the Built Environment for an Ageing Population</strong>. The outline application deadline is <strong>8 December 2026</strong>.
+          </p>
+          <p class="text-gray-600 leading-relaxed mb-5">
+            This sandpit is designed to help you get there. Rather than developing applications in silos, we're bringing together around 30–40 researchers, practitioners, and people with lived experience for a focused half-day. The aim is to identify strong research questions, form credible multi-disciplinary teams, and leave with a clear plan for an outline application.
+          </p>
+          <p class="text-gray-600 leading-relaxed">
+            It's a joint event between the <strong>Reimagine Ageing</strong> network and the <strong>Healthy Buildings Network</strong> — combining expertise across ageing research, housing design, public health, built environment, social sciences, and policy. Support from Horizon's team is expected and we're working with <strong>HESTIA</strong> and <strong>Remaking Places</strong> as additional partners.
+          </p>
+        </div>
+
+        <!-- NIHR call link -->
+        <div class="bg-[#f6f0fc] border border-hbnPurple/20 rounded-2xl p-6 flex flex-col sm:flex-row items-start sm:items-center gap-4">
+          <div class="flex-shrink-0 w-12 h-12 rounded-xl bg-hbnPurple/10 flex items-center justify-center">
+            <svg class="h-6 w-6 text-hbnPurple" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+          </div>
+          <div class="flex-1">
+            <div class="font-semibold text-gray-800 mb-1">NIHR Call: Housing, Place and the Built Environment for an Ageing Population</div>
+            <div class="text-sm text-gray-600 mb-3">Public Health Research Programme · EOI deadline 8 December 2026</div>
+            <a href="https://www.nihr.ac.uk/funding/housing-place-and-built-environment-ageing-population/2026380"
+               target="_blank" rel="noopener noreferrer"
+               class="inline-flex items-center gap-1 text-sm text-hbnPurple font-medium hover:underline">
+              Read the full call on NIHR.ac.uk
+              <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Programme -->
+    <section class="py-16 bg-gray-50" id="programme">
+      <div class="container mx-auto px-6 max-w-4xl">
+        <span class="text-hbnPurple font-semibold text-sm uppercase tracking-wider">On the day</span>
+        <h2 class="text-3xl font-bold text-gray-900 mt-2 mb-10">Programme</h2>
+
+        <div class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
+
+          <!-- Time blocks -->
+          <div class="divide-y divide-gray-100">
+
+            <div class="flex items-start gap-5 p-6">
+              <div class="w-24 flex-shrink-0 text-sm font-semibold text-hbnPurple pt-0.5">11:00</div>
+              <div>
+                <div class="font-semibold text-gray-800 mb-1">Registration, tea and coffee</div>
+                <div class="text-sm text-gray-500">Arrive, meet the organisers, catch up with colleagues.</div>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-5 p-6">
+              <div class="w-24 flex-shrink-0 text-sm font-semibold text-hbnPurple pt-0.5">11:10</div>
+              <div>
+                <div class="font-semibold text-gray-800 mb-1">Welcome and scene-setting</div>
+                <div class="text-sm text-gray-500">Brief overview of the NIHR call, event objectives, and the networks co-hosting today.</div>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-5 p-6">
+              <div class="w-24 flex-shrink-0 text-sm font-semibold text-hbnPurple pt-0.5">11:15</div>
+              <div>
+                <div class="font-semibold text-gray-800 mb-2">Flash talks</div>
+                <div class="text-sm text-gray-500 mb-3">8–10 three-minute talks from attendees on current work, pilot data, or early-stage proposals. Each followed by a short Q&A period (~60 minutes total).</div>
+                <div class="bg-gray-50 rounded-xl px-4 py-3 text-sm text-gray-600">
+                  <strong>Want to give a flash talk?</strong> Say so in the expression of interest form. Include a 200-word overview of what you'd like to share.
+                </div>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-5 p-6 bg-hbnGreen/5">
+              <div class="w-24 flex-shrink-0 text-sm font-semibold text-hbnGreen pt-0.5">12:15</div>
+              <div>
+                <div class="font-semibold text-gray-800 mb-1">Lunch and networking</div>
+                <div class="text-sm text-gray-500">Informal time to talk, make connections, and explore potential collaborations.</div>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-5 p-6">
+              <div class="w-24 flex-shrink-0 text-sm font-semibold text-hbnPurple pt-0.5">13:00</div>
+              <div>
+                <div class="font-semibold text-gray-800 mb-2">Sandpit — themed breakouts</div>
+                <div class="text-sm text-gray-500 mb-3">The core of the event. Facilitated group discussions structured around five priority themes. The aim is to move from broad challenge to fundable research concept.</div>
+                <div class="grid sm:grid-cols-2 gap-2">
+                  <div class="text-xs bg-hbnPurple/8 text-hbnPurple rounded-lg px-3 py-2 font-medium">1. Housing Quality, Design & Adaptation</div>
+                  <div class="text-xs bg-hbnPurple/8 text-hbnPurple rounded-lg px-3 py-2 font-medium">2. Neighbourhoods, Place & Health Inequalities</div>
+                  <div class="text-xs bg-hbnPurple/8 text-hbnPurple rounded-lg px-3 py-2 font-medium">3. Social Connection & Mental Health</div>
+                  <div class="text-xs bg-hbnPurple/8 text-hbnPurple rounded-lg px-3 py-2 font-medium">4. Inclusion, Diversity & Inequalities</div>
+                  <div class="text-xs bg-hbnPurple/8 text-hbnPurple rounded-lg px-3 py-2 font-medium sm:col-span-2 sm:w-fit">5. Innovation & Horizon Opportunities</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-5 p-6 bg-gray-50/50">
+              <div class="w-24 flex-shrink-0 text-sm font-semibold text-gray-500 pt-0.5">14:30</div>
+              <div>
+                <div class="font-semibold text-gray-800 mb-1">Coffee break</div>
+                <div class="text-sm text-gray-500">Short break before plenary.</div>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-5 p-6">
+              <div class="w-24 flex-shrink-0 text-sm font-semibold text-hbnPurple pt-0.5">14:40</div>
+              <div>
+                <div class="font-semibold text-gray-800 mb-1">Plenary synthesis</div>
+                <div class="text-sm text-gray-500">Each group reports back. We identify converging priorities, potential bid leads, and areas for further development.</div>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-5 p-6">
+              <div class="w-24 flex-shrink-0 text-sm font-semibold text-hbnPurple pt-0.5">14:55</div>
+              <div>
+                <div class="font-semibold text-gray-800 mb-1">Closing and next steps</div>
+                <div class="text-sm text-gray-500">Thank yous, timelines towards the December NIHR deadline, and follow-on support for selected bid teams.</div>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-5 p-5 bg-gray-50">
+              <div class="w-24 flex-shrink-0 text-sm font-semibold text-gray-400">15:00</div>
+              <div class="text-sm text-gray-400 font-medium">Close</div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Five themes -->
+    <section class="py-16 bg-white">
+      <div class="container mx-auto px-6 max-w-4xl">
+        <span class="text-hbnPurple font-semibold text-sm uppercase tracking-wider">Sandpit themes</span>
+        <h2 class="text-3xl font-bold text-gray-900 mt-2 mb-4">Five NIHR-aligned research priorities</h2>
+        <p class="text-gray-600 mb-10 max-w-2xl">Each breakout group will focus on one of these themes — working from problem definition through to intervention, population, outcomes, and policy relevance.</p>
+
+        <div class="space-y-4">
+
+          <div class="rounded-2xl border border-gray-100 p-6 hover:shadow-sm transition-shadow">
+            <div class="flex items-start gap-4">
+              <div class="flex-shrink-0 w-10 h-10 rounded-xl bg-hbnPurple/10 flex items-center justify-center font-bold text-hbnPurple">1</div>
+              <div>
+                <h3 class="font-bold text-gray-800 mb-2">Housing Quality, Design and Adaptation</h3>
+                <p class="text-sm text-gray-600 leading-relaxed">How do housing conditions, design, and adaptations influence health, functional ability, and independence in later life? Both networks bring expertise here — ageing bodies and lived experience alongside building performance, sustainability, and housing intervention evaluation.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="rounded-2xl border border-gray-100 p-6 hover:shadow-sm transition-shadow">
+            <div class="flex items-start gap-4">
+              <div class="flex-shrink-0 w-10 h-10 rounded-xl bg-hbnPurple/10 flex items-center justify-center font-bold text-hbnPurple">2</div>
+              <div>
+                <h3 class="font-bold text-gray-800 mb-2">Neighbourhoods, Place and Health Inequalities</h3>
+                <p class="text-sm text-gray-600 leading-relaxed">How do neighbourhood environments shape health outcomes and inequalities among older adults? Our combined strengths in planning, transport, spatial analysis, and place-based research position us well to study urban, rural, and deprived contexts using mixed methods and natural experiments.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="rounded-2xl border border-gray-100 p-6 hover:shadow-sm transition-shadow">
+            <div class="flex items-start gap-4">
+              <div class="flex-shrink-0 w-10 h-10 rounded-xl bg-hbnPurple/10 flex items-center justify-center font-bold text-hbnPurple">3</div>
+              <div>
+                <h3 class="font-bold text-gray-800 mb-2">Social Connection, Community and Mental Health</h3>
+                <p class="text-sm text-gray-600 leading-relaxed">What role do social infrastructure, housing models, and community environments play in supporting wellbeing and connection? Strong expertise in loneliness, participatory research with older adults, social spaces, and community development spans both networks.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="rounded-2xl border border-gray-100 p-6 hover:shadow-sm transition-shadow">
+            <div class="flex items-start gap-4">
+              <div class="flex-shrink-0 w-10 h-10 rounded-xl bg-hbnPurple/10 flex items-center justify-center font-bold text-hbnPurple">4</div>
+              <div>
+                <h3 class="font-bold text-gray-800 mb-2">Inclusion, Diversity and Health Inequalities</h3>
+                <p class="text-sm text-gray-600 leading-relaxed">How do the impacts of housing and place differ across populations — and how can we reduce those differences? Both networks have strong qualitative and quantitative capabilities for working with socioeconomically disadvantaged groups, disabled older adults, and under-represented communities.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="rounded-2xl border border-gray-100 p-6 hover:shadow-sm transition-shadow bg-gray-50/60">
+            <div class="flex items-start gap-4">
+              <div class="flex-shrink-0 w-10 h-10 rounded-xl bg-hbnGreen/10 flex items-center justify-center font-bold text-hbnGreen">5</div>
+              <div>
+                <h3 class="font-bold text-gray-800 mb-2">Innovation and Horizon Opportunities</h3>
+                <p class="text-sm text-gray-600 leading-relaxed">What does the third sector, or emerging work not covered above, bring to this space? This theme is intentionally open — for opportunities proposed by partners, insights from practice, or cross-cutting ideas that don't fit neatly into the other groups.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Timeline -->
+    <section class="py-16 bg-gray-50">
+      <div class="container mx-auto px-6 max-w-4xl">
+        <span class="text-hbnPurple font-semibold text-sm uppercase tracking-wider">How to get involved</span>
+        <h2 class="text-3xl font-bold text-gray-900 mt-2 mb-10">What happens next</h2>
+
+        <div class="space-y-6 max-w-xl">
+
+          <div class="timeline-step">
+            <div class="timeline-dot bg-hbnYellow border-2 border-white shadow-sm">
+              <span class="sr-only">Step 1</span>
+            </div>
+            <div class="bg-white rounded-xl border border-gray-100 p-5 shadow-sm ml-2">
+              <div class="text-xs font-semibold text-hbnPurple uppercase tracking-wider mb-1">Now → Early August 2026</div>
+              <div class="font-semibold text-gray-800 mb-1">Complete the expression of interest form</div>
+              <div class="text-sm text-gray-600">Tell us who you are, your team, your research theme, any pilot data or proposals you have, and whether you'd like to give a flash talk (with a 200-word summary).</div>
+            </div>
+          </div>
+
+          <div class="timeline-step">
+            <div class="timeline-dot bg-gray-300 border-2 border-white shadow-sm">
+              <span class="sr-only">Step 2</span>
+            </div>
+            <div class="bg-white rounded-xl border border-gray-100 p-5 shadow-sm ml-2">
+              <div class="text-xs font-semibold text-hbnPurple uppercase tracking-wider mb-1">Week of 27 July 2026</div>
+              <div class="font-semibold text-gray-800 mb-1">Flash talks and invitees confirmed</div>
+              <div class="text-sm text-gray-600">The organising team reviews submissions and confirms 8–10 flash talks, plus the invitation list for the sandpit event.</div>
+            </div>
+          </div>
+
+          <div class="timeline-step">
+            <div class="timeline-dot bg-hbnGreen border-2 border-white shadow-sm">
+              <span class="sr-only">Step 3</span>
+            </div>
+            <div class="bg-white rounded-xl border border-gray-100 p-5 shadow-sm ml-2">
+              <div class="text-xs font-semibold text-hbnPurple uppercase tracking-wider mb-1">September 2026 (date TBC — 8–10 or 16–17 Sept)</div>
+              <div class="font-semibold text-gray-800 mb-1">Sandpit event</div>
+              <div class="text-sm text-gray-600">Half day in person, 11am–3pm. Flash talks, networking lunch, themed breakout groups, plenary synthesis, and next steps.</div>
+            </div>
+          </div>
+
+          <div class="timeline-step">
+            <div class="timeline-dot bg-red-400 border-2 border-white shadow-sm">
+              <span class="sr-only">Step 4</span>
+            </div>
+            <div class="bg-white rounded-xl border border-gray-100 p-5 shadow-sm ml-2">
+              <div class="text-xs font-semibold text-red-500 uppercase tracking-wider mb-1">8 December 2026</div>
+              <div class="font-semibold text-gray-800 mb-1">NIHR outline application deadline</div>
+              <div class="text-sm text-gray-600">EOI deadline for the NIHR PHR call. Post-sandpit support available for selected bid teams.</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Register -->
+    <section class="py-20 bg-gradient-to-br from-[#3a1a5c] via-[#7b4fa8] to-[#b06a28] text-white" id="register">
+      <div class="container mx-auto px-6 max-w-3xl text-center">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">Express your interest</h2>
+        <p class="text-lg text-white/80 mb-3 leading-relaxed">
+          The form takes around 5 minutes. We ask about you, your research theme, your team, and whether you'd like to give a flash talk.
+        </p>
+        <p class="text-white/60 text-sm mb-8">Expression of interest form closes <strong class="text-white">early August 2026</strong>. Places are limited.</p>
+        <a href="https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=qO3qvR3IzkWGPlIypTW3y3WKWaOxj3RLk0lAv5VpDqxUOEZLVVpWVTczMEcwTTY0SEhTRUJUMzVJNi4u"
+           target="_blank" rel="noopener noreferrer"
+           class="inline-block px-10 py-4 bg-white text-[#7b4fa8] font-bold text-lg rounded-full hover:bg-gray-100 transition-colors shadow-xl hover:shadow-2xl transform hover:-translate-y-0.5">
+          Complete the Expression of Interest Form →
+        </a>
+        <div class="mt-6 text-white/55 text-sm">
+          Questions? Email <a href="mailto:healthy_buildings_network@leeds.ac.uk" class="underline hover:text-white">healthy_buildings_network@leeds.ac.uk</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Partners -->
+    <section class="py-16 bg-white">
+      <div class="container mx-auto px-6 max-w-4xl">
+        <h2 class="text-2xl font-bold text-gray-800 mb-10 text-center">Organisers and partners</h2>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+
+          <div class="bg-gray-50 rounded-xl p-5 text-center border border-gray-100">
+            <img src="../../assets/images/hbn_landscape.svg" alt="Healthy Buildings Network Leeds" class="h-10 mx-auto mb-3">
+            <div class="text-sm font-semibold text-gray-700">Healthy Buildings Network Leeds</div>
+          </div>
+
+          <div class="bg-gray-50 rounded-xl p-5 text-center border border-gray-100 flex flex-col items-center justify-center">
+            <div class="w-10 h-10 rounded-full bg-hbnPurple/15 flex items-center justify-center mb-3">
+              <svg class="h-5 w-5 text-hbnPurple" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+            </div>
+            <div class="text-sm font-semibold text-gray-700">Reimagine Ageing</div>
+            <div class="text-xs text-gray-400 mt-1">University of Leeds</div>
+          </div>
+
+          <div class="bg-gray-50 rounded-xl p-5 text-center border border-gray-100 flex flex-col items-center justify-center">
+            <div class="w-10 h-10 rounded-full bg-hbnBlue/10 flex items-center justify-center mb-3">
+              <svg class="h-5 w-5 text-hbnBlue" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
+            </div>
+            <div class="text-sm font-semibold text-gray-700">HESTIA</div>
+            <div class="text-xs text-gray-400 mt-1">
+              <a href="https://eps.leeds.ac.uk/faculty-engineering-physical-sciences/news/article/6145/supporting-the-steps-to-sustainable-healthier-homes-and-schools"
+                 target="_blank" rel="noopener noreferrer" class="hover:text-hbnBlue underline">University of Leeds</a>
+            </div>
+          </div>
+
+          <div class="bg-gray-50 rounded-xl p-5 text-center border border-gray-100 flex flex-col items-center justify-center">
+            <div class="w-10 h-10 rounded-full bg-hbnGreen/10 flex items-center justify-center mb-3">
+              <svg class="h-5 w-5 text-hbnGreen" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064"/></svg>
+            </div>
+            <div class="text-sm font-semibold text-gray-700">Remaking Places</div>
+            <div class="text-xs text-gray-400 mt-1">University of Leeds</div>
+          </div>
+
+        </div>
+
+        <p class="text-center text-sm text-gray-500 mt-8">
+          Also promoted through <a href="https://healthyhomesbuildings.org.uk/" target="_blank" rel="noopener noreferrer" class="text-hbnGreen hover:underline">Healthy Homes & Buildings</a> and the Horizons team, University of Leeds.
+        </p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white py-12">
+    <div class="container mx-auto px-6 max-w-6xl">
+      <div class="grid md:grid-cols-3 gap-8 mb-8">
+        <div>
+          <img src="../../assets/images/hbn_landscape.svg" alt="HBN Leeds Logo" class="h-10 mb-4 brightness-0 invert">
+          <p class="text-gray-400 text-sm">A cross-disciplinary network at the University of Leeds, promoting healthier and more sustainable built environments.</p>
+        </div>
+        <div>
+          <h4 class="font-semibold mb-4">Quick Links</h4>
+          <ul class="space-y-2 text-gray-400 text-sm">
+            <li><a href="../../about.html"      class="hover:text-white transition-colors">About Us</a></li>
+            <li><a href="../../events.html"     class="hover:text-white transition-colors">Events</a></li>
+            <li><a href="../../projects.html"   class="hover:text-white transition-colors">Projects</a></li>
+            <li><a href="../../blog.html"       class="hover:text-white transition-colors">Blog</a></li>
+            <li><a href="../../membership.html" class="hover:text-white transition-colors">Join the Network</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-semibold mb-4">Contact</h4>
+          <p class="text-gray-400 text-sm mb-2">
+            <a href="mailto:healthy_buildings_network@leeds.ac.uk" class="hover:text-white transition-colors">healthy_buildings_network@leeds.ac.uk</a>
+          </p>
+          <p class="text-gray-400 text-sm">University of Leeds, Leeds LS2 9JT, United Kingdom</p>
+        </div>
+      </div>
+      <div class="border-t border-gray-700 pt-8 text-center text-gray-400 text-sm">
+        <p>© 2026 Healthy Buildings Network Leeds. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../../assets/js/script.js"></script>
+  <script>
+    document.getElementById('mobile-menu-button').addEventListener('click', function() {
+      document.getElementById('mobile-menu').classList.toggle('hidden');
+    });
+  </script>
+</body>
+</html>
