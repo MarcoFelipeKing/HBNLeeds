@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { poppins: ['Poppins', 'sans-serif'] },
+          colors: {
+            hbnGreen:     '#4e9317',
+            hbnGreenDark: '#3d7412',
+            hbnPurple:    '#8360a9',
+            hbnGray:      '#808184',
+            hbnYellow:    '#ffca29',
+            hbnBlue:      '#3e95dd',
+          }
+        }
+      }
+    };
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Public seminar by Jenny McLaughlin, Principal Project Manager at Heathrow Airport, on Systematic Inclusion — why accessible design is the foundation of a safe, sustainable built environment. Hosted by Healthy Buildings Network Leeds.">
+  <title>Systematic Inclusion — Jenny McLaughlin, Heathrow | HBN Leeds</title>
+
+  <link rel="icon" href="../../../assets/images/hbn_fav.ico" type="image/x-icon"/>
+
+  <meta property="og:type"        content="website">
+  <meta property="og:title"       content="Systematic Inclusion — Jenny McLaughlin, Heathrow | HBN Leeds">
+  <meta property="og:description" content="Public seminar by Jenny McLaughlin (Heathrow Airport) on Systematic Inclusion — accessible design, equitable safety, and the buildings we build for everyone.">
+  <meta property="og:url"         content="https://healthybuildingsnetwork.leeds.ac.uk/events/seminars/jenny/jenny.html">
+  <meta property="og:image"       content="https://healthybuildingsnetwork.leeds.ac.uk/events/seminars/jenny/25260_EH_View17_AerialNight.jpg">
+  <meta property="og:site_name"   content="Healthy Buildings Network Leeds">
+  <meta name="twitter:card"        content="summary_large_image">
+  <meta name="twitter:title"       content="Systematic Inclusion — Jenny McLaughlin, Heathrow | HBN Leeds">
+  <meta name="twitter:description" content="Public seminar by Jenny McLaughlin (Heathrow Airport) on Systematic Inclusion — accessible design, equitable safety, and the buildings we build for everyone.">
+  <meta name="twitter:image"       content="https://healthybuildingsnetwork.leeds.ac.uk/events/seminars/jenny/25260_EH_View17_AerialNight.jpg">
+  <link rel="canonical" href="https://healthybuildingsnetwork.leeds.ac.uk/events/seminars/jenny/jenny.html">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Event",
+    "name": "Systematic Inclusion: Accessible Design as a Foundation for Safe and Sustainable Buildings",
+    "description": "Jenny McLaughlin, Principal Project Manager at Heathrow Airport, on Systematic Inclusion — why accessible design is not an add-on but a precondition for buildings that are genuinely healthy, safe, and sustainable.",
+    "eventStatus": "https://schema.org/EventScheduled",
+    "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+    "location": {
+      "@type": "Place",
+      "name": "University of Leeds",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Leeds",
+        "postalCode": "LS2 9JT",
+        "addressCountry": "GB"
+      }
+    },
+    "organizer": {
+      "@type": "Organization",
+      "name": "Healthy Buildings Network Leeds",
+      "url": "https://healthybuildingsnetwork.leeds.ac.uk"
+    },
+    "performer": {
+      "@type": "Person",
+      "name": "Jenny McLaughlin",
+      "affiliation": "Heathrow Airport"
+    },
+    "isAccessibleForFree": true,
+    "url": "https://healthybuildingsnetwork.leeds.ac.uk/events/seminars/jenny/jenny.html"
+  }
+  </script>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../../assets/css/style.css" />
+</head>
+<body class="font-poppins text-gray-700 bg-white">
+
+  <!-- Header -->
+  <header class="bg-white shadow-md fixed w-full z-50">
+    <div class="container mx-auto px-6 flex justify-between items-center h-20">
+      <div class="flex-shrink-0">
+        <a href="../../../index.html" class="flex items-center space-x-4">
+          <img src="../../../assets/images/hbn_landscape.svg" alt="Healthy Buildings Network Leeds Logo" class="h-12 w-auto">
+          <img src="../../../assets/images/leeds_logo_black_on_white_bk.jpg" alt="University of Leeds" class="h-12 w-auto hidden sm:block">
+        </a>
+      </div>
+      <button class="md:hidden text-gray-600 hover:text-hbnGreen focus:outline-none" id="mobile-menu-button" aria-label="Open Menu">
+        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+      <nav class="hidden md:flex space-x-8" id="main-nav">
+        <a href="../../../index.html"      class="text-gray-600 hover:text-hbnGreen font-medium transition-colors">Home</a>
+        <a href="../../../about.html"      class="text-gray-600 hover:text-hbnGreen font-medium transition-colors">About Us</a>
+        <a href="../../../blog.html"       class="text-gray-600 hover:text-hbnGreen font-medium transition-colors">Blog</a>
+        <a href="../../../events.html"     class="text-hbnGreen font-medium transition-colors">Events</a>
+        <a href="../../../projects.html"   class="text-gray-600 hover:text-hbnGreen font-medium transition-colors">Projects</a>
+        <a href="../../../membership.html" class="text-gray-600 hover:text-hbnGreen font-medium transition-colors">Membership</a>
+        <a href="../../../contact.html"    class="text-gray-600 hover:text-hbnGreen font-medium transition-colors">Contact</a>
+      </nav>
+    </div>
+    <div class="md:hidden hidden bg-white w-full" id="mobile-menu">
+      <div class="px-6 py-4 space-y-4">
+        <a href="../../../index.html"      class="block text-gray-600 hover:text-hbnGreen font-medium">Home</a>
+        <a href="../../../about.html"      class="block text-gray-600 hover:text-hbnGreen font-medium">About Us</a>
+        <a href="../../../blog.html"       class="block text-gray-600 hover:text-hbnGreen font-medium">Blog</a>
+        <a href="../../../events.html"     class="block text-hbnGreen font-medium">Events</a>
+        <a href="../../../projects.html"   class="block text-gray-600 hover:text-hbnGreen font-medium">Projects</a>
+        <a href="../../../membership.html" class="block text-gray-600 hover:text-hbnGreen font-medium">Membership</a>
+        <a href="../../../contact.html"    class="block text-gray-600 hover:text-hbnGreen font-medium">Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <button id="scrollToTopBtn" class="fixed bottom-5 right-5 bg-hbnGreen text-white p-3 rounded-full shadow-md hidden z-50" aria-label="Scroll to top">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18" />
+    </svg>
+  </button>
+
+  <main class="pt-20">
+
+    <!-- Hero -->
+    <div class="relative text-white overflow-hidden" style="min-height: 420px;">
+      <img src="25260_EH_View17_AerialNight.jpg"
+           alt="Heathrow Airport aerial night view"
+           class="absolute inset-0 w-full h-full object-cover object-center">
+      <div class="absolute inset-0 bg-gradient-to-r from-gray-900/85 via-gray-900/70 to-hbnGreen/40"></div>
+      <div class="relative container mx-auto px-6 max-w-5xl py-20">
+        <div class="flex flex-wrap gap-2 mb-5">
+          <span class="bg-white/20 text-white text-xs font-semibold px-3 py-1 rounded-full">Public Seminar</span>
+          <span class="bg-hbnYellow text-gray-900 text-xs font-semibold px-3 py-1 rounded-full">Free · All Welcome</span>
+          <span class="bg-white/20 text-white text-xs font-semibold px-3 py-1 rounded-full">Industry Speaker</span>
+        </div>
+        <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 leading-tight max-w-3xl">
+          Systematic Inclusion: Accessible Design as a Foundation for Safe and Sustainable Buildings
+        </h1>
+        <p class="text-xl opacity-90 mb-6">A public seminar by <strong>Jenny McLaughlin</strong> — Principal Project Manager, Heathrow Airport Expansion</p>
+        <div class="flex flex-col sm:flex-row gap-5 text-sm mt-6 flex-wrap">
+          <div class="flex items-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 flex-shrink-0 opacity-80" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+            <span>Date TBC — Autumn 2026</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 flex-shrink-0 opacity-80" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            <span>Time TBC</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 flex-shrink-0 opacity-80" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+            <span>University of Leeds</span>
+          </div>
+        </div>
+        <div class="mt-8 flex flex-wrap gap-4">
+          <a href="../../../events.html" class="inline-block px-8 py-3 border-2 border-white text-white rounded-full hover:bg-white/10 transition-colors">
+            ← All Events
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Breadcrumb -->
+    <div class="bg-gray-50 py-3 border-b border-gray-200">
+      <div class="container mx-auto px-6 max-w-5xl text-sm flex items-center gap-2 text-gray-500">
+        <a href="../../../index.html" class="hover:text-hbnGreen">Home</a>
+        <span>/</span>
+        <a href="../../../events.html" class="hover:text-hbnGreen">Events</a>
+        <span>/</span>
+        <span class="text-gray-800 font-medium">Jenny McLaughlin — Systematic Inclusion</span>
+      </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container mx-auto px-6 py-16 max-w-5xl">
+      <div class="grid md:grid-cols-3 gap-12">
+
+        <!-- Sidebar -->
+        <aside class="md:col-span-1">
+
+          <!-- Speaker photo -->
+          <div class="bg-white rounded-xl shadow-md overflow-hidden mb-6">
+            <img src="JennyMcL_headshot.jpg"
+                 alt="Jenny McLaughlin"
+                 class="w-full object-cover object-top"
+                 style="max-height: 320px;">
+            <div class="p-4">
+              <p class="font-bold text-gray-800 text-lg">Jenny McLaughlin</p>
+              <p class="text-hbnGreen font-medium text-sm">Principal Project Manager, Expansion</p>
+              <p class="text-gray-500 text-sm">Heathrow Airport</p>
+              <p class="text-gray-400 text-xs mt-1">Co-author, RIBA Inclusive Design Overlay · Equitable Safety Initiative</p>
+            </div>
+          </div>
+
+          <!-- Event details -->
+          <div class="bg-gray-50 rounded-xl p-6 space-y-4 text-sm text-gray-700">
+            <h3 class="font-bold text-gray-800 text-base mb-2">Event Details</h3>
+            <div class="flex items-start gap-3">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 flex-shrink-0 text-hbnGreen mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+              <div><span class="font-semibold">Date:</span> TBC — Autumn 2026</div>
+            </div>
+            <div class="flex items-start gap-3">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 flex-shrink-0 text-hbnGreen mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              <div><span class="font-semibold">Time:</span> TBC</div>
+            </div>
+            <div class="flex items-start gap-3">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 flex-shrink-0 text-hbnGreen mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+              <div><span class="font-semibold">Venue:</span> University of Leeds</div>
+            </div>
+            <div class="flex items-start gap-3">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 flex-shrink-0 text-hbnPurple mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              <div><span class="font-semibold">Cost:</span> Free — all welcome</div>
+            </div>
+            <div class="pt-2 border-t border-gray-200">
+              <p class="font-semibold text-gray-600 mb-3">Hosted by:</p>
+              <img src="../../../assets/images/hbn_landscape.svg"
+                   alt="Healthy Buildings Network Leeds"
+                   class="h-8 object-contain object-left">
+            </div>
+          </div>
+
+        </aside>
+
+        <!-- Main column -->
+        <div class="md:col-span-2 space-y-10">
+
+          <!-- About the talk -->
+          <section>
+            <h2 class="text-2xl font-bold text-gray-800 mb-4">About the Talk</h2>
+            <p class="text-gray-700 leading-relaxed mb-4">
+              What does a healthy building look like if it doesn't work for everyone? Jenny McLaughlin has spent 18 years at Heathrow Airport — one of the world's most complex built environments — and her answer is clear: <strong>accessibility isn't an add-on. It's a precondition.</strong>
+            </p>
+            <p class="text-gray-700 leading-relaxed mb-4">
+              In this seminar, Jenny will introduce <strong>Systematic Inclusion</strong> — her framework for embedding accessible, equitable design into infrastructure from the ground up, not as a compliance exercise but as a driver of safety and sustainability. Drawing on her work as a co-author of the <strong>RIBA Inclusive Design Overlay</strong> (2023) and the launch of the <strong>Equitable Safety Initiative</strong> (2025), she will show what happens when inclusion is treated as a systemic challenge rather than an individual accommodation.
+            </p>
+            <p class="text-gray-700 leading-relaxed mb-4">
+              Jenny will also speak candidly about her own experience as a dyslexic professional with ADHD — and why neurodiversity, far from being a barrier, is an asset in designing for the full range of human experience.
+            </p>
+            <p class="text-gray-700 leading-relaxed">
+              This seminar will be of interest to colleagues across architecture, engineering, public health, policy, and practice — and to anyone whose research asks what it means to build environments that are genuinely healthy for everyone who uses them.
+            </p>
+          </section>
+
+          <!-- Key themes -->
+          <section>
+            <h2 class="text-xl font-bold text-gray-800 mb-4">The talk will cover</h2>
+            <div class="grid sm:grid-cols-2 gap-3">
+              <div class="flex items-start gap-3 bg-hbnGreen/5 border border-hbnGreen/15 rounded-xl p-4">
+                <div class="w-8 h-8 rounded-lg bg-hbnGreen/15 flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <svg class="h-4 w-4 text-hbnGreen" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                </div>
+                <p class="text-sm text-gray-700 leading-snug"><strong>Systematic Inclusion</strong> in practice — at the scale of a major infrastructure programme</p>
+              </div>
+              <div class="flex items-start gap-3 bg-hbnGreen/5 border border-hbnGreen/15 rounded-xl p-4">
+                <div class="w-8 h-8 rounded-lg bg-hbnGreen/15 flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <svg class="h-4 w-4 text-hbnGreen" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                </div>
+                <p class="text-sm text-gray-700 leading-snug"><strong>RIBA Inclusive Design Overlay</strong> — what it is and why it matters for research and practice</p>
+              </div>
+              <div class="flex items-start gap-3 bg-hbnGreen/5 border border-hbnGreen/15 rounded-xl p-4">
+                <div class="w-8 h-8 rounded-lg bg-hbnGreen/15 flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <svg class="h-4 w-4 text-hbnGreen" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                </div>
+                <p class="text-sm text-gray-700 leading-snug"><strong>Equitable Safety Initiative</strong> — reframing building safety as an equity issue</p>
+              </div>
+              <div class="flex items-start gap-3 bg-hbnGreen/5 border border-hbnGreen/15 rounded-xl p-4">
+                <div class="w-8 h-8 rounded-lg bg-hbnGreen/15 flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <svg class="h-4 w-4 text-hbnGreen" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                </div>
+                <p class="text-sm text-gray-700 leading-snug"><strong>Neurodiversity as an asset</strong> — what different thinking brings to the built environment</p>
+              </div>
+            </div>
+          </section>
+
+          <!-- Heathrow image -->
+          <section>
+            <figure>
+              <img src="25260_EH_View17_AerialNight.jpg"
+                   alt="Heathrow Airport aerial night view — one of the world's most complex built environments"
+                   class="w-full rounded-xl shadow-md object-cover"
+                   style="max-height: 360px;">
+              <figcaption class="text-xs text-gray-400 mt-2 text-center">Heathrow Airport — one of the world's most complex built environments, and the backdrop to Jenny's 18-year career in infrastructure.</figcaption>
+            </figure>
+          </section>
+
+          <!-- Speaker bio -->
+          <section class="bg-hbnGreen/5 border border-hbnGreen/20 rounded-xl p-6">
+            <h2 class="text-xl font-bold text-gray-800 mb-3">About Jenny McLaughlin</h2>
+            <p class="text-gray-700 leading-relaxed mb-3">
+              Jenny McLaughlin has worked in the airport industry for over 20 years — starting at East Midlands Airport and spending the last 18 years at Heathrow across Environment, Airside, and now Infrastructure, where she is a Principal Project Manager on the Expansion programme.
+            </p>
+            <p class="text-gray-700 leading-relaxed mb-3">
+              Jenny has delivered a wide range of business changes, from new IT applications to infrastructure projects including taxiway rehabilitation, fire training facilities, and the new Virtual Contingency Facility.
+            </p>
+            <p class="text-gray-700 leading-relaxed mb-3">
+              She is a co-author of the <strong>RIBA Inclusive Design Overlay</strong> (published 2023) and a key figure in the launch of the <strong>Equitable Safety Initiative</strong> (2025). She speaks regularly at industry events on Systematic Inclusion and the role of accessibility in keeping the built environment safe and sustainable.
+            </p>
+            <p class="text-gray-700 leading-relaxed">
+              Jenny is a Governor for Harrow Richmond and Uxbridge College and leads the Heathrow Inclusive Learners Partnership, creating equitable pathways for learners into the industry. She is dyslexic and has ADHD — and believes that "the way that my brain is wired differently is an asset."
+            </p>
+          </section>
+
+          <!-- Register CTA -->
+          <section class="bg-gradient-to-r from-hbnGreen to-hbnBlue rounded-xl p-8 text-white text-center">
+            <h2 class="text-2xl font-bold mb-2">Register to Attend</h2>
+            <p class="opacity-90 mb-6">Free and open to all. Registration details will be confirmed with the event date.</p>
+            <a href="../../../contact.html"
+               class="inline-block px-10 py-3 bg-white text-hbnGreen font-semibold rounded-full hover:bg-gray-100 transition-colors shadow-md">
+              Get in touch to be notified →
+            </a>
+          </section>
+
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white py-12">
+    <div class="container mx-auto max-w-6xl px-6 grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div>
+        <img src="../../../assets/images/hbn_landscape.svg" alt="Healthy Buildings Network Leeds Logo" class="h-12 mb-4 filter brightness-0 invert opacity-90">
+        <p class="text-sm text-gray-300">Healthy Buildings Network Leeds is a cross-disciplinary research and collaboration hub at the University of Leeds, focused on healthier, more sustainable built environments.</p>
+      </div>
+      <div>
+        <h4 class="text-xl font-bold mb-4">Quick Links</h4>
+        <ul class="space-y-2">
+          <li><a href="../../../index.html"      class="text-gray-300 hover:text-hbnGreen transition-colors">Home</a></li>
+          <li><a href="../../../about.html"      class="text-gray-300 hover:text-hbnGreen transition-colors">About</a></li>
+          <li><a href="../../../events.html"     class="text-gray-300 hover:text-hbnGreen transition-colors">Events</a></li>
+          <li><a href="../../../projects.html"   class="text-gray-300 hover:text-hbnGreen transition-colors">Projects</a></li>
+          <li><a href="../../../membership.html" class="text-gray-300 hover:text-hbnGreen transition-colors">Membership</a></li>
+          <li><a href="../../../contact.html"    class="text-gray-300 hover:text-hbnGreen transition-colors">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="text-xl font-bold mb-4">Contact</h4>
+        <ul class="space-y-2 text-gray-300 text-sm">
+          <li><a href="mailto:healthy_buildings_network@leeds.ac.uk" class="hover:text-hbnGreen transition-colors">healthy_buildings_network@leeds.ac.uk</a></li>
+          <li><a href="https://www.linkedin.com/company/healthy-buildings-network/" target="_blank" rel="noopener noreferrer" class="hover:text-hbnGreen transition-colors">LinkedIn</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container mx-auto max-w-6xl px-6 text-sm text-center pt-8 mt-8 border-t border-gray-700 text-gray-400">
+      <p>&copy; 2026 Healthy Buildings Network Leeds. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="../../../assets/js/script.js"></script>
+  <script>
+    document.getElementById('mobile-menu-button').addEventListener('click', function() {
+      document.getElementById('mobile-menu').classList.toggle('hidden');
+    });
+  </script>
+</body>
+</html>
