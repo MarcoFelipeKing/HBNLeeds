@@ -1,7 +1,7 @@
 # CLAUDE.md — Healthy Buildings Network Leeds
 
 Static website for the Healthy Buildings Network (HBN) at the University of Leeds.
-Live at: **https://healthybuildingsnetwork.leeds.ac.uk**
+Live at: **https://www.healthybuildingsnetwork.org**
 Hosted on GitHub Pages. No build step, no backend, no CMS.
 
 ---

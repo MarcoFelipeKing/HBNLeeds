@@ -295,7 +295,7 @@ The Healthy Buildings Network thrives through diverse partnerships. We are activ
 
 Whether you are a researcher, practitioner, policymaker, or community member — there is a place for you in the network.
 
-**Sign up at:** healthybuildingsnetwork.leeds.ac.uk/membership
+**Sign up at:** www.healthybuildingsnetwork.org/membership
 
 ---
 
@@ -306,7 +306,7 @@ Whether you are a researcher, practitioner, policymaker, or community member —
 University of Leeds, Leeds LS2 9JT, United Kingdom
 
 Email: healthy_buildings_network@leeds.ac.uk
-Web: healthybuildingsnetwork.leeds.ac.uk
+Web: www.healthybuildingsnetwork.org
 LinkedIn: /company/healthy-buildings-network-leeds
 
 *Established 2024 · University of Leeds*
@@ -454,5 +454,5 @@ A free Clean Air Day workshop for the public, exploring practical steps to impro
 
 ---
 
-*Booklet copy compiled from healthybuildingsnetwork.leeds.ac.uk · June 2026*
+*Booklet copy compiled from www.healthybuildingsnetwork.org · June 2026*
 *Do not publish to the website — for Canva use only.*
