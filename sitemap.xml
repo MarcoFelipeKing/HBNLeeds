@@ -204,6 +204,11 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://www.healthybuildingsnetwork.org/events/seminars/kathy/kathy.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://www.healthybuildingsnetwork.org/events/workshops/microbiome_workshop.html</loc>
     <changefreq>yearly</changefreq>
     <priority>0.4</priority>

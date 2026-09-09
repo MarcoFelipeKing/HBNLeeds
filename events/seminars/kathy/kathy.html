@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { poppins: ['Poppins', 'sans-serif'] },
+          colors: {
+            hbnGreen:     '#4e9317',
+            hbnGreenDark: '#3d7412',
+            hbnPurple:    '#8360a9',
+            hbnGray:      '#808184',
+            hbnYellow:    '#ffca29',
+            hbnBlue:      '#3e95dd',
+            ember:        '#b5451b',
+            emberDark:    '#7c2d12',
+          }
+        }
+      }
+    };
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Dr Kathy Davies and Dr Rebecca Wright (Northumbria University) on how health shaped the fight between coal, gas and electricity for Britain's domestic heat market, 1960 to 1980. Free hybrid seminar, 19 November 2026.">
+  <title>Burning for Warmth: Health and Britain's Domestic Heat Market | HBN Leeds</title>
+
+  <link rel="icon" href="../../../assets/images/hbn_fav.ico" type="image/x-icon"/>
+
+  <meta property="og:type"        content="website">
+  <meta property="og:title"       content="Burning for Warmth: Health and Britain's Domestic Heat Market, 1960-1980 | HBN Leeds">
+  <meta property="og:description" content="Dr Kathy Davies and Dr Rebecca Wright (Northumbria University) on how health shaped the fight between coal, gas and electricity for Britain's domestic heat market. Free hybrid seminar, 19 November 2026.">
+  <meta property="og:url"         content="https://www.healthybuildingsnetwork.org/events/seminars/kathy/kathy.html">
+  <meta property="og:image"       content="https://www.healthybuildingsnetwork.org/assets/images/og-image.jpg">
+  <meta property="og:site_name"   content="Healthy Buildings Network Leeds">
+  <meta name="twitter:card"        content="summary_large_image">
+  <meta name="twitter:title"       content="Burning for Warmth: Health and Britain's Domestic Heat Market, 1960-1980 | HBN Leeds">
+  <meta name="twitter:description" content="Dr Kathy Davies and Dr Rebecca Wright (Northumbria University) on how health shaped the fight between coal, gas and electricity for Britain's domestic heat market.">
+  <meta name="twitter:image"       content="https://www.healthybuildingsnetwork.org/assets/images/og-image.jpg">
+  <link rel="canonical" href="https://www.healthybuildingsnetwork.org/events/seminars/kathy/kathy.html">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Event",
+    "name": "Burning for warmth: The role of health in the future of Britain's domestic heat market, 1960-1980",
+    "description": "Dr Kathy Davies and Dr Rebecca Wright of Northumbria University examine how arguments about health shaped competition between the coal, gas and electricity industries for Britain's domestic heat market in the postwar decades.",
+    "startDate": "2026-11-19T12:00:00+00:00",
+    "endDate": "2026-11-19T13:00:00+00:00",
+    "eventStatus": "https://schema.org/EventScheduled",
+    "eventAttendanceMode": "https://schema.org/MixedEventAttendanceMode",
+    "location": [
+      {
+        "@type": "Place",
+        "name": "University of Leeds",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Leeds",
+          "postalCode": "LS2 9JT",
+          "addressCountry": "GB"
+        }
+      },
+      {
+        "@type": "VirtualLocation",
+        "url": "https://www.healthybuildingsnetwork.org/events/seminars/kathy/kathy.html"
+      }
+    ],
+    "organizer": {
+      "@type": "Organization",
+      "name": "Healthy Buildings Network Leeds",
+      "url": "https://www.healthybuildingsnetwork.org"
+    },
+    "performer": [
+      { "@type": "Person", "name": "Dr Kathy Davies",   "affiliation": "Northumbria University" },
+      { "@type": "Person", "name": "Dr Rebecca Wright", "affiliation": "Northumbria University" }
+    ],
+    "isAccessibleForFree": true,
+    "url": "https://www.healthybuildingsnetwork.org/events/seminars/kathy/kathy.html"
+  }
+  </script>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../../assets/css/style.css" />
+</head>
+<body class="font-poppins text-gray-700 bg-white">
+
+  <!-- Header -->
+  <header class="bg-white shadow-md fixed w-full z-50">
+    <div class="container mx-auto px-6 flex justify-between items-center h-20">
+      <div class="flex-shrink-0">
+        <a href="../../../index.html" class="flex items-center space-x-4">
+          <img src="../../../assets/images/hbn_landscape.svg" alt="Healthy Buildings Network Leeds Logo" class="h-12 w-auto">
+          <img src="../../../assets/images/leeds_logo_black_on_white_bk.jpg" alt="University of Leeds" class="h-12 w-auto hidden sm:block">
+        </a>
+      </div>
+      <button class="md:hidden text-gray-600 hover:text-hbnGreen focus:outline-none" id="mobile-menu-button" aria-label="Open Menu">
+        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+      <nav class="hidden md:flex space-x-8" id="main-nav">
+        <a href="../../../index.html"      class="text-gray-600 hover:text-hbnGreen font-medium transition-colors">Home</a>
+        <a href="../../../about.html"      class="text-gray-600 hover:text-hbnGreen font-medium transition-colors">About Us</a>
+        <a href="../../../blog.html"       class="text-gray-600 hover:text-hbnGreen font-medium transition-colors">Blog</a>
+        <a href="../../../events.html"     class="text-hbnGreen font-medium transition-colors">Events</a>
+        <a href="../../../projects.html"   class="text-gray-600 hover:text-hbnGreen font-medium transition-colors">Projects</a>
+        <a href="../../../membership.html" class="text-gray-600 hover:text-hbnGreen font-medium transition-colors">Membership</a>
+        <a href="../../../contact.html"    class="text-gray-600 hover:text-hbnGreen font-medium transition-colors">Contact</a>
+      </nav>
+    </div>
+    <div class="md:hidden hidden bg-white w-full" id="mobile-menu">
+      <div class="px-6 py-4 space-y-4">
+        <a href="../../../index.html"      class="block text-gray-600 hover:text-hbnGreen font-medium">Home</a>
+        <a href="../../../about.html"      class="block text-gray-600 hover:text-hbnGreen font-medium">About Us</a>
+        <a href="../../../blog.html"       class="block text-gray-600 hover:text-hbnGreen font-medium">Blog</a>
+        <a href="../../../events.html"     class="block text-hbnGreen font-medium">Events</a>
+        <a href="../../../projects.html"   class="block text-gray-600 hover:text-hbnGreen font-medium">Projects</a>
+        <a href="../../../membership.html" class="block text-gray-600 hover:text-hbnGreen font-medium">Membership</a>
+        <a href="../../../contact.html"    class="block text-gray-600 hover:text-hbnGreen font-medium">Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <button id="scrollToTopBtn" class="fixed bottom-5 right-5 bg-hbnGreen text-white p-3 rounded-full shadow-md hidden z-50" aria-label="Scroll to top">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18" />
+    </svg>
+  </button>
+
+  <main class="pt-20">
+
+    <!-- Hero -->
+    <div class="relative text-white overflow-hidden bg-emberDark">
+      <div class="absolute inset-0 bg-gradient-to-br from-[#3b1206] via-[#b5451b] to-[#e8a33d]"></div>
+      <!-- soft ember glow -->
+      <div class="absolute inset-0 pointer-events-none" aria-hidden="true">
+        <div style="position:absolute;bottom:-30%;left:8%;width:55%;height:110%;background:radial-gradient(ellipse,rgba(255,202,41,0.30) 0%,transparent 62%);"></div>
+        <div style="position:absolute;top:-25%;right:-8%;width:45%;height:90%;background:radial-gradient(ellipse,rgba(255,255,255,0.10) 0%,transparent 65%);"></div>
+      </div>
+
+      <div class="relative container mx-auto px-6 max-w-5xl py-20">
+        <div class="flex flex-wrap gap-2 mb-5">
+          <span class="bg-white/20 text-white text-xs font-semibold px-3 py-1 rounded-full">Public Seminar</span>
+          <span class="bg-hbnYellow text-gray-900 text-xs font-semibold px-3 py-1 rounded-full">Free &middot; All Welcome</span>
+          <span class="bg-white/20 text-white text-xs font-semibold px-3 py-1 rounded-full">In person + Online</span>
+          <span class="bg-white/20 text-white text-xs font-semibold px-3 py-1 rounded-full">History &amp; Energy</span>
+        </div>
+
+        <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 leading-tight max-w-3xl">
+          Burning for warmth
+        </h1>
+        <p class="text-lg md:text-xl text-white/90 mb-6 max-w-3xl leading-relaxed">
+          The role of health in the future of Britain's domestic heat market, 1960 to 1980
+        </p>
+        <p class="text-base text-white/80 mb-8">
+          A joint paper by <strong>Dr Kathy Davies</strong> and <strong>Dr Rebecca Wright</strong>, Northumbria University Newcastle
+        </p>
+
+        <div class="flex flex-col sm:flex-row gap-5 text-sm flex-wrap">
+          <div class="flex items-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 flex-shrink-0 opacity-80" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+            <span>Thursday, 19 November 2026</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 flex-shrink-0 opacity-80" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            <span>12:00 to 1:00 PM</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 flex-shrink-0 opacity-80" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+            <span>University of Leeds, room to be confirmed</span>
+          </div>
+        </div>
+
+        <div class="mt-8 flex flex-wrap gap-4 items-center">
+          <span class="inline-block px-7 py-3 bg-white/15 border border-white/30 text-white/90 rounded-full font-medium cursor-default">
+            Registration opens soon
+          </span>
+          <a href="../../../contact.html" class="inline-block px-7 py-3 border-2 border-white text-white rounded-full hover:bg-white/10 transition-colors">
+            Ask to be notified
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Breadcrumb -->
+    <div class="bg-gray-50 py-3 border-b border-gray-200">
+      <div class="container mx-auto px-6 max-w-5xl text-sm flex items-center gap-2 text-gray-500">
+        <a href="../../../index.html" class="hover:text-hbnGreen">Home</a>
+        <span>/</span>
+        <a href="../../../events.html" class="hover:text-hbnGreen">Events</a>
+        <span>/</span>
+        <span class="text-gray-800 font-medium">Burning for Warmth</span>
+      </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container mx-auto px-6 py-16 max-w-5xl">
+      <div class="grid md:grid-cols-3 gap-12">
+
+        <!-- Sidebar -->
+        <aside class="md:col-span-1 space-y-6">
+
+          <!-- Event details -->
+          <div class="bg-gray-50 rounded-xl p-6 space-y-4 text-sm text-gray-700 border border-gray-100">
+            <h2 class="font-bold text-gray-800 text-base mb-2">Event details</h2>
+            <div class="flex items-start gap-3">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 flex-shrink-0 text-ember mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+              <div><span class="font-semibold">Date:</span> Thursday, 19 November 2026</div>
+            </div>
+            <div class="flex items-start gap-3">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 flex-shrink-0 text-ember mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              <div><span class="font-semibold">Time:</span> 12:00 to 1:00 PM</div>
+            </div>
+            <div class="flex items-start gap-3">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 flex-shrink-0 text-ember mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+              <div><span class="font-semibold">In person:</span> University of Leeds, room to be confirmed</div>
+            </div>
+            <div class="flex items-start gap-3">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 flex-shrink-0 text-hbnBlue mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.069A1 1 0 0121 8.882v6.236a1 1 0 01-1.447.894L15 14M3 8a2 2 0 012-2h8a2 2 0 012 2v8a2 2 0 01-2 2H5a2 2 0 01-2-2V8z"/></svg>
+              <div><span class="font-semibold">Online:</span> joining link sent on registration</div>
+            </div>
+            <div class="flex items-start gap-3">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 flex-shrink-0 text-hbnGreen mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              <div><span class="font-semibold">Cost:</span> Free, all welcome</div>
+            </div>
+            <div class="pt-3 border-t border-gray-200">
+              <p class="font-semibold text-gray-600 mb-3">Hosted by</p>
+              <img src="../../../assets/images/hbn_landscape.svg" alt="Healthy Buildings Network Leeds" class="h-8 object-contain object-left">
+            </div>
+          </div>
+
+          <!-- Format -->
+          <div class="bg-white rounded-xl p-6 border border-gray-200">
+            <h2 class="font-bold text-gray-800 text-base mb-4">Format</h2>
+            <div class="space-y-3">
+              <div class="flex items-center gap-3">
+                <div class="w-12 flex-shrink-0 text-sm font-bold text-ember">40 min</div>
+                <div class="text-sm text-gray-600">Joint paper</div>
+              </div>
+              <div class="h-px bg-gray-100"></div>
+              <div class="flex items-center gap-3">
+                <div class="w-12 flex-shrink-0 text-sm font-bold text-hbnGreen">20 min</div>
+                <div class="text-sm text-gray-600">Open discussion</div>
+              </div>
+            </div>
+            <p class="text-xs text-gray-400 mt-4 leading-relaxed">We keep the discussion generous on purpose. Bring questions from your own discipline.</p>
+          </div>
+
+          <!-- Project -->
+          <div class="bg-amber-50 rounded-xl p-6 border border-amber-200">
+            <div class="text-xs font-bold uppercase tracking-widest text-amber-700 mb-2">Part of</div>
+            <h2 class="font-bold text-gray-800 mb-2 leading-snug">Carbon Bodies: Warmth and Fuelling Health in Britain, 1918 to 2022</h2>
+            <p class="text-sm text-gray-600 leading-relaxed">A Wellcome Trust funded project at Northumbria University, led by Dr Rebecca Wright, tracing how warmth, fuel and health have been bound together across a century of British life.</p>
+          </div>
+
+        </aside>
+
+        <!-- Main column -->
+        <div class="md:col-span-2 space-y-10">
+
+          <!-- About the talk -->
+          <section>
+            <h2 class="text-2xl font-bold text-gray-800 mb-4">About the talk</h2>
+            <p class="text-gray-700 leading-relaxed mb-4">
+              Between 1960 and 1980 the way Britain heated its homes changed almost completely. Open coal fires gave way to gas central heating, electricity fought hard for a share of the market, and the Clean Air Acts reshaped what people were allowed to burn. It was one of the fastest domestic energy transitions this country has been through.
+            </p>
+            <p class="text-gray-700 leading-relaxed mb-4">
+              Kathy Davies and Rebecca Wright argue that health sat close to the centre of that story. Coal, gas and electricity were all competing for the same living rooms, and each had reasons to make claims about what its fuel did to the air people breathed, to damp and condensation, and to the comfort and wellbeing of the household. Health was not simply a public good that the transition happened to deliver. It was also a commercial argument, made by industries with a great deal at stake.
+            </p>
+            <p class="text-gray-700 leading-relaxed mb-4">
+              The paper draws on their work for <strong>Carbon Bodies</strong>, a Wellcome funded project examining how warmth and health have been connected in Britain since 1918, and it looks at the interplay between domestic heating, indoor and outdoor air quality, energy transition, and the commercial interests shaping all three.
+            </p>
+            <p class="text-gray-700 leading-relaxed">
+              If you work on retrofit, fuel poverty, indoor air quality or the path to net zero, the parallels are hard to miss. We are again asking households to change how they heat their homes, again making health arguments for doing so, and again doing it in a market where different technologies have very different interests in how those arguments land.
+            </p>
+          </section>
+
+          <!-- Themes -->
+          <section>
+            <h2 class="text-xl font-bold text-gray-800 mb-4">Themes</h2>
+            <div class="grid sm:grid-cols-2 gap-3">
+              <div class="flex items-start gap-3 bg-amber-50/60 border border-amber-100 rounded-xl p-4">
+                <div class="w-8 h-8 rounded-lg bg-amber-100 flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <svg class="h-4 w-4 text-amber-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z"/></svg>
+                </div>
+                <p class="text-sm text-gray-700 leading-snug">Coal, gas and electricity competing for the domestic hearth</p>
+              </div>
+              <div class="flex items-start gap-3 bg-amber-50/60 border border-amber-100 rounded-xl p-4">
+                <div class="w-8 h-8 rounded-lg bg-amber-100 flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <svg class="h-4 w-4 text-amber-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.002 4.002 0 003 15z"/></svg>
+                </div>
+                <p class="text-sm text-gray-700 leading-snug">Air quality, smoke control and the Clean Air Acts</p>
+              </div>
+              <div class="flex items-start gap-3 bg-amber-50/60 border border-amber-100 rounded-xl p-4">
+                <div class="w-8 h-8 rounded-lg bg-amber-100 flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <svg class="h-4 w-4 text-amber-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                </div>
+                <p class="text-sm text-gray-700 leading-snug">Health as a commercial argument in an energy transition</p>
+              </div>
+              <div class="flex items-start gap-3 bg-amber-50/60 border border-amber-100 rounded-xl p-4">
+                <div class="w-8 h-8 rounded-lg bg-amber-100 flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <svg class="h-4 w-4 text-amber-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
+                </div>
+                <p class="text-sm text-gray-700 leading-snug">What the postwar transition tells us about retrofit today</p>
+              </div>
+            </div>
+          </section>
+
+          <!-- Speakers -->
+          <section>
+            <h2 class="text-2xl font-bold text-gray-800 mb-6">The speakers</h2>
+
+            <!-- Kathy -->
+            <div class="bg-white border border-gray-200 rounded-xl overflow-hidden mb-6">
+              <div class="sm:flex">
+                <div class="sm:w-44 flex-shrink-0 bg-gradient-to-br from-emberDark to-ember flex items-center justify-center relative min-h-[180px]">
+                  <span class="text-white text-4xl font-bold opacity-40 select-none">KD</span>
+                  <img src="kathy_davies.jpg" alt="Dr Kathy Davies"
+                       class="absolute inset-0 w-full h-full object-cover object-top"
+                       onerror="this.style.display='none'">
+                </div>
+                <div class="p-6 flex-1">
+                  <h3 class="font-bold text-gray-800 text-lg">Dr Kathy Davies</h3>
+                  <p class="text-ember font-medium text-sm mb-3">Research Fellow, School of Humanities and Social Sciences, Northumbria University</p>
+                  <p class="text-gray-600 text-sm leading-relaxed mb-3">
+                    Kathy is a historian of energy and environment, working across oral history, transdisciplinary collaboration, exhibitions and public programming, and policy engagement. She leads a strand of the Wellcome funded <em>Carbon Bodies</em> project, looking at how energy, heat, space, the body and the state were tied together in twentieth century Britain. Her wider research covers the social, cultural and political histories of domestic energy, air quality and environmental change in everyday life.
+                  </p>
+                  <p class="text-gray-600 text-sm leading-relaxed">
+                    She was Archives By-Fellow at Churchill College, Cambridge in Lent 2025, and the British Library's first Postdoctoral Visiting Fellow in Environment and Sustainability in 2025. From 2023 to 2025 she led History Lab Plus, the national network for early career historians at the Institute of Historical Research.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Rebecca -->
+            <div class="bg-white border border-gray-200 rounded-xl overflow-hidden">
+              <div class="sm:flex">
+                <div class="sm:w-44 flex-shrink-0 bg-gradient-to-br from-[#5c3317] to-[#c98a3c] flex items-center justify-center relative min-h-[180px]">
+                  <span class="text-white text-4xl font-bold opacity-40 select-none">RW</span>
+                  <img src="rebecca_wright.jpg" alt="Dr Rebecca Wright"
+                       class="absolute inset-0 w-full h-full object-cover object-top"
+                       onerror="this.style.display='none'">
+                </div>
+                <div class="p-6 flex-1">
+                  <h3 class="font-bold text-gray-800 text-lg">Dr Rebecca Wright</h3>
+                  <p class="text-amber-700 font-medium text-sm mb-3">Associate Professor in History, Northumbria University</p>
+                  <p class="text-gray-600 text-sm leading-relaxed mb-3">
+                    Rebecca is Principal Investigator of the Wellcome Trust funded project <em>Carbon Bodies: Warmth and Fuelling Health in Britain, 1918 to 2022</em>. She joined Northumbria in 2018.
+                  </p>
+                  <p class="text-gray-600 text-sm leading-relaxed">
+                    Before that she was a Research Fellow in Future Health at the Centre for Global Health Histories, University of York, a Research Fellow in Mass Observation Studies at the University of Sussex in 2017, and a Research Fellow on the AHRC collaborative project <em>Material Cultures of Energy</em> at Birkbeck College from 2014 to 2016. She completed her PhD at Birkbeck in 2015.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Registration -->
+          <section class="bg-gradient-to-r from-emberDark to-ember rounded-xl p-8 text-white text-center">
+            <h2 class="text-2xl font-bold mb-2">Registration opens soon</h2>
+            <p class="opacity-90 mb-2">Free and open to all, in person at Leeds or online.</p>
+            <p class="opacity-70 text-sm mb-6">Thursday 19 November 2026 &middot; 12:00 to 1:00 PM</p>
+            <a href="../../../contact.html"
+               class="inline-block px-10 py-3 bg-white text-emberDark font-semibold rounded-full hover:bg-gray-100 transition-colors shadow-md">
+              Ask us to let you know
+            </a>
+            <div class="mt-6 text-white/70 text-sm">
+              Or email <a href="mailto:healthy_buildings_network@leeds.ac.uk" class="underline hover:text-white">healthy_buildings_network@leeds.ac.uk</a>
+            </div>
+          </section>
+
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white py-12">
+    <div class="container mx-auto max-w-6xl px-6 grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div>
+        <img src="../../../assets/images/hbn_landscape.svg" alt="Healthy Buildings Network Leeds Logo" class="h-12 mb-4 filter brightness-0 invert opacity-90">
+        <p class="text-sm text-gray-300">Healthy Buildings Network Leeds is a cross-disciplinary research and collaboration hub at the University of Leeds, focused on healthier, more sustainable built environments.</p>
+      </div>
+      <div>
+        <h2 class="text-xl font-bold mb-4">Quick Links</h2>
+        <ul class="space-y-2">
+          <li><a href="../../../index.html"      class="text-gray-300 hover:text-hbnGreen transition-colors">Home</a></li>
+          <li><a href="../../../about.html"      class="text-gray-300 hover:text-hbnGreen transition-colors">About</a></li>
+          <li><a href="../../../events.html"     class="text-gray-300 hover:text-hbnGreen transition-colors">Events</a></li>
+          <li><a href="../../../projects.html"   class="text-gray-300 hover:text-hbnGreen transition-colors">Projects</a></li>
+          <li><a href="../../../membership.html" class="text-gray-300 hover:text-hbnGreen transition-colors">Membership</a></li>
+          <li><a href="../../../contact.html"    class="text-gray-300 hover:text-hbnGreen transition-colors">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2 class="text-xl font-bold mb-4">Contact</h2>
+        <ul class="space-y-2 text-gray-300 text-sm">
+          <li><a href="mailto:healthy_buildings_network@leeds.ac.uk" class="hover:text-hbnGreen transition-colors">healthy_buildings_network@leeds.ac.uk</a></li>
+          <li><a href="https://www.linkedin.com/company/healthy-buildings-network/" target="_blank" rel="noopener noreferrer" class="hover:text-hbnGreen transition-colors">LinkedIn</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container mx-auto max-w-6xl px-6 text-sm text-center pt-8 mt-8 border-t border-gray-700 text-gray-400">
+      <p>&copy; 2026 Healthy Buildings Network Leeds. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="../../../assets/js/script.js"></script>
+  <script>
+    document.getElementById('mobile-menu-button').addEventListener('click', function() {
+      document.getElementById('mobile-menu').classList.toggle('hidden');
+    });
+  </script>
+</body>
+</html>
