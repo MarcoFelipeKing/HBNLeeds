@@ -6,6 +6,7 @@
     tailwind.config = {
       theme: {
         extend: {
+          textColor: { hbnGreen: '#3d7412', hbnBlue: '#0369a1', hbnPurple: '#7550a0', hbnGray: '#6b6c6f' },
           colors: {
             hbnGreen: '#4e9317',
             hbnGreenDark: '#3d7412',
@@ -213,7 +214,7 @@
       <!-- Left text -->
       <div>
         <!-- Breadcrumb -->
-        <div class="flex text-xs text-gray-400 gap-1.5 mb-8">
+        <div class="flex text-xs text-gray-500 gap-1.5 mb-8">
           <a href="../../../index.html" class="hover:text-hbnGreen">Home</a>
           <span>/</span>
           <a href="../../../events.html" class="hover:text-hbnGreen">Events</a>
@@ -265,7 +266,7 @@
           </a>
         </div>
 
-        <p class="text-xs text-gray-400 mt-4">Spaces limited to around 30 people</p>
+        <p class="text-xs text-gray-500 mt-4">Spaces limited to around 30 people</p>
       </div>
 
       <!-- Right: speaker faces -->
@@ -331,14 +332,14 @@
 <!-- ══════════════════════════════════ ORGANISERS BAR ══════════════════════════════════ -->
 <div class="org-bar py-6">
   <div class="max-w-5xl mx-auto px-6">
-    <p class="text-center text-xs font-semibold uppercase tracking-widest text-gray-400 mb-5">Co-organised by</p>
+    <p class="text-center text-xs font-semibold uppercase tracking-widest text-gray-500 mb-5">Co-organised by</p>
     <div class="flex flex-wrap justify-center items-center gap-10">
       <!-- HBN -->
       <div class="text-center">
         <img src="../../../assets/images/hbn_landscape.svg" alt="Healthy Buildings Network Leeds"
              class="h-10 mx-auto mb-1" onerror="this.style.display='none'">
         <p class="text-xs text-gray-500">Healthy Buildings Network Leeds</p>
-        <p class="text-xs text-gray-400">University of Leeds</p>
+        <p class="text-xs text-gray-500">University of Leeds</p>
       </div>
       <div class="text-gray-200 font-light text-3xl hidden md:block">×</div>
       <!-- CELIA -->
@@ -348,7 +349,7 @@
             onerror="this.style.display='none'; this.nextElementSibling.style.display='block'">
         <span style="display:none; font-family:Syne,sans-serif; font-weight:800; font-size:1.5rem; color:#e06b2f;">CELIA CIC</span>
         <p class="text-xs text-gray-500">Community Environmental Learning</p>
-        <p class="text-xs text-gray-400">and Impact Alliance CIC</p>
+        <p class="text-xs text-gray-500">and Impact Alliance CIC</p>
       </div>
     </div>
   </div>
@@ -529,7 +530,7 @@
 
     <!-- Evening timeline -->
     <div class="mt-16">
-      <p class="text-xs font-bold uppercase tracking-widest text-gray-400 mb-8">Evening Schedule</p>
+      <p class="text-xs font-bold uppercase tracking-widest text-gray-500 mb-8">Evening Schedule</p>
       <div class="relative">
         <div class="absolute left-0 top-0 bottom-0 w-px bg-gray-200"></div>
         <div class="space-y-8 pl-8">
@@ -540,7 +541,7 @@
               <span class="font-display font-bold text-hbnGreen text-sm w-20 flex-shrink-0" style="font-family:Syne,sans-serif;">6:00 pm</span>
               <div>
                 <p class="font-semibold text-gray-800">Doors open</p>
-                <p class="text-sm text-gray-400">Grab a drink, settle in, meet the team</p>
+                <p class="text-sm text-gray-500">Grab a drink, settle in, meet the team</p>
               </div>
             </div>
           </div>
@@ -551,7 +552,7 @@
               <span class="font-display font-bold text-hbnGreen text-sm w-20 flex-shrink-0" style="font-family:Syne,sans-serif;">6:15 pm</span>
               <div>
                 <p class="font-semibold text-gray-800">Indoor Air 101 + Live Quiz</p>
-                <p class="text-sm text-gray-400">A friendly intro with audience participation</p>
+                <p class="text-sm text-gray-500">A friendly intro with audience participation</p>
               </div>
             </div>
           </div>
@@ -562,7 +563,7 @@
               <span class="font-display font-bold text-hbnBlue text-sm w-20 flex-shrink-0" style="font-family:Syne,sans-serif;">6:40 pm</span>
               <div>
                 <p class="font-semibold text-gray-800">A Tour of the Home</p>
-                <p class="text-sm text-gray-400">An illustrated journey through the rooms of a home — uncovering what's in the air and how it impacts our health</p>
+                <p class="text-sm text-gray-500">An illustrated journey through the rooms of a home — uncovering what's in the air and how it impacts our health</p>
               </div>
             </div>
           </div>
@@ -573,7 +574,7 @@
               <span class="font-display font-bold text-hbnPurple text-sm w-20 flex-shrink-0" style="font-family:Syne,sans-serif;">7:10 pm</span>
               <div>
                 <p class="font-semibold text-gray-800">Live demos and hands-on activities</p>
-                <p class="text-sm text-gray-400">Sensors in action, creative clay modelling, and exploring the air around us</p>
+                <p class="text-sm text-gray-500">Sensors in action, creative clay modelling, and exploring the air around us</p>
               </div>
             </div>
           </div>
@@ -584,7 +585,7 @@
               <span class="font-display font-bold text-sm w-20 flex-shrink-0" style="font-family:Syne,sans-serif; color:#e06b2f;">7:45 pm</span>
               <div>
                 <p class="font-semibold text-gray-800">Discussion and practical takeaways</p>
-                <p class="text-sm text-gray-400">Share your experiences and leave with easy steps to make a difference at home</p>
+                <p class="text-sm text-gray-500">Share your experiences and leave with easy steps to make a difference at home</p>
               </div>
             </div>
           </div>
@@ -592,8 +593,8 @@
           <div class="relative">
             <div class="tl-dot" style="background:#ccc"></div>
             <div class="flex flex-col sm:flex-row sm:items-baseline gap-2">
-              <span class="font-display font-bold text-gray-400 text-sm w-20 flex-shrink-0" style="font-family:Syne,sans-serif;">8:00 pm</span>
-              <div><p class="font-semibold text-gray-400">Close</p></div>
+              <span class="font-display font-bold text-gray-500 text-sm w-20 flex-shrink-0" style="font-family:Syne,sans-serif;">8:00 pm</span>
+              <div><p class="font-semibold text-gray-500">Close</p></div>
             </div>
           </div>
 
@@ -676,7 +677,7 @@
         <div class="pull-quote mb-2">
           <p class="text-gray-700">"I'm working on a project about participatory monitoring of air quality, noise, and biodiversity in Leeds."</p>
         </div>
-        <p class="text-sm text-gray-400 mb-8 pl-6 italic">
+        <p class="text-sm text-gray-500 mb-8 pl-6 italic">
           
         </p>
 
@@ -847,7 +848,7 @@
     </style>
 
     <!-- Footnote -->
-    <p class="text-xs text-gray-400 mt-6 text-right italic">
+    <p class="text-xs text-gray-500 mt-6 text-right italic">
       Images from a previous CELIA CIC and HBN Leeds workshop
     </p>
 
@@ -873,15 +874,15 @@
 
         <div class="mt-8 space-y-3 text-sm text-gray-600">
           <div class="flex items-start gap-3 p-4 bg-white rounded-xl border border-gray-100">
-            <span class="text-gray-400 mt-0.5 flex-shrink-0">Train</span>
+            <span class="text-gray-500 mt-0.5 flex-shrink-0">Train</span>
             <span>Leeds City Station — approximately 20 minutes on foot, or a short bus or taxi</span>
           </div>
           <div class="flex items-start gap-3 p-4 bg-white rounded-xl border border-gray-100">
-            <span class="text-gray-400 mt-0.5 flex-shrink-0">Bus</span>
+            <span class="text-gray-500 mt-0.5 flex-shrink-0">Bus</span>
             <span>Multiple services stop at Parkinson Steps, across the road from the venue</span>
           </div>
           <div class="flex items-start gap-3 p-4 bg-white rounded-xl border border-gray-100">
-            <span class="text-gray-400 mt-0.5 flex-shrink-0">Car</span>
+            <span class="text-gray-500 mt-0.5 flex-shrink-0">Car</span>
             <span>Nearest parking: Woodhouse Lane NCP (approximately 5 minutes walk)</span>
           </div>
           <div class="flex items-start gap-3 p-4 bg-[#f4f9f0] rounded-xl border border-hbnGreen/20">

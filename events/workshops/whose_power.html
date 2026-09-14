@@ -6,6 +6,7 @@
     tailwind.config = {
       theme: {
         extend: {
+          textColor: { hbnGreen: '#3d7412', hbnBlue: '#0369a1', hbnPurple: '#7550a0', hbnGray: '#6b6c6f' },
           colors: {
             hbnGreen: '#4e9317',
             hbnPurple: '#8360a9',
@@ -84,7 +85,7 @@
   </header>
 
   <!-- Scroll-to-top button -->
-  <button id="scrollToTopBtn" class="fixed bottom-5 right-5 bg-hbnGreen text-white p-3 rounded-full shadow-md hidden z-50" aria-label="Scroll to top">
+  <button id="scrollToTopBtn" class="fixed bottom-5 right-5 bg-hbnGreenDark text-white p-3 rounded-full shadow-md hidden z-50" aria-label="Scroll to top">
     <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18" />
     </svg>
@@ -318,7 +319,7 @@
                    class="w-full h-full object-cover min-h-[300px]"
                    onerror="this.src='https://placehold.co/600x500/3e95dd/ffffff?text=Research+Workshop'">
               <div class="absolute top-4 right-4 flex flex-col gap-2 items-end">
-                <span class="bg-hbnBlue text-white px-4 py-2 rounded-full text-sm font-semibold shadow-lg">
+                <span class="bg-sky-700 text-white px-4 py-2 rounded-full text-sm font-semibold shadow-lg">
                   Researchers & Academics
                 </span>
                 <span class="bg-white text-gray-800 px-4 py-2 rounded-full text-sm font-semibold shadow-lg">
@@ -593,13 +594,13 @@
         </div>
         <div class="text-center">
           <div class="h-16 flex items-center justify-center mb-2">
-            <div class="text-2xl font-bold text-gray-400">Leeds Museums & Galleries</div>
+            <div class="text-2xl font-bold text-gray-500">Leeds Museums & Galleries</div>
           </div>
           <p class="text-xs text-gray-500">Discovery Centre</p>
         </div>
         <div class="text-center">
           <div class="h-16 flex items-center justify-center mb-2">
-            <div class="text-xl font-bold text-gray-400">The Preservative Party</div>
+            <div class="text-xl font-bold text-gray-500">The Preservative Party</div>
           </div>
           <p class="text-xs text-gray-500">Young Volunteer Curators</p>
         </div>

@@ -6,6 +6,7 @@
     tailwind.config = {
       theme: {
         extend: {
+          textColor: { hbnGreen: '#3d7412', hbnBlue: '#0369a1', hbnPurple: '#7550a0', hbnGray: '#6b6c6f' },
           colors: {
             hbnGreen: '#4e9317',
             hbnGreenDark: '#3d7412',
@@ -136,9 +137,9 @@
     <div class="container mx-auto px-6 max-w-6xl">
       <div class="flex text-sm">
         <a href="../../index.html" class="text-gray-500 hover:text-hbnGreen">Home</a>
-        <span class="mx-2 text-gray-400">/</span>
+        <span class="mx-2 text-gray-500">/</span>
         <a href="../../events.html" class="text-gray-500 hover:text-hbnGreen">Events</a>
-        <span class="mx-2 text-gray-400">/</span>
+        <span class="mx-2 text-gray-500">/</span>
         <span class="text-gray-800 font-medium">Infection Transmission Workshop</span>
       </div>
     </div>
@@ -307,7 +308,7 @@
 
             <div class="flex items-start gap-4 pb-4 border-b border-gray-200">
               <div class="w-28 flex-shrink-0">
-                <span class="text-sm font-bold text-gray-400">11:15 - 11:45</span>
+                <span class="text-sm font-bold text-gray-500">11:15 - 11:45</span>
               </div>
               <div>
                 <p class="font-medium text-gray-800">Short Break</p>
@@ -369,7 +370,7 @@
 
             <div class="flex items-start gap-4">
               <div class="w-28 flex-shrink-0">
-                <span class="text-sm font-bold text-gray-400">15:50 - 16:00</span>
+                <span class="text-sm font-bold text-gray-500">15:50 - 16:00</span>
               </div>
               <div>
                 <p class="font-medium text-gray-800">Closing Remarks</p>
@@ -504,7 +505,7 @@
           We look forward to welcoming researchers from across disciplines for a day of collaboration, discussion, and discovery.
         </p>
         <div class="flex flex-wrap justify-center gap-4">
-          <a href="https://docs.google.com/forms/d/e/1FAIpQLSc-Yl7OmrfbCR7KbX4G0fS9tpWx1aYFUpgRbJm3Ftod4dxntQ/viewform" target="_blank" class="inline-flex items-center px-8 py-4 bg-hbnGreen text-white font-bold rounded-full hover:bg-hbnGreenDark transition-colors shadow-lg">
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSc-Yl7OmrfbCR7KbX4G0fS9tpWx1aYFUpgRbJm3Ftod4dxntQ/viewform" target="_blank" class="inline-flex items-center px-8 py-4 bg-hbnGreenDark text-white font-bold rounded-full hover:bg-green-800 transition-colors shadow-lg">
             Register Now
           </a>
           <a href="https://indoor-transmission-workshop.my.canva.site" target="_blank" class="inline-flex items-center px-8 py-4 bg-white text-hbnGreen border-2 border-hbnGreen font-bold rounded-full hover:bg-hbnGreen hover:text-white transition-colors">
@@ -520,7 +521,7 @@
             Back to Events
         </a>
         <div class="flex gap-2">
-            <span class="text-sm text-gray-400">Share:</span>
+            <span class="text-sm text-gray-500">Share:</span>
             <a href="#" class="text-hbnBlue hover:opacity-80">LinkedIn</a>
             <span class="text-gray-300">|</span>
             <a href="#" class="text-hbnBlue hover:opacity-80">Twitter</a>

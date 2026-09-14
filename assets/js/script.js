@@ -20,6 +20,13 @@ if (typeof tailwind !== 'undefined') {
   Object.keys(brandColors).forEach(function (name) {
     if (!twColors[name]) twColors[name] = brandColors[name];
   });
+  // Text needs 4.5:1 on white. Bright brand green (#4e9317) manages 3.8:1 and blue (#3e95dd) 3.2:1,
+  // so text-hbnGreen / text-hbnBlue render in darker shades; bg-* utilities keep the bright colours.
+  var twText = twConfig.theme.extend.textColor = twConfig.theme.extend.textColor || {};
+  if (!twText.hbnGreen) twText.hbnGreen = '#3d7412';
+  if (!twText.hbnBlue) twText.hbnBlue = '#0369a1';
+  if (!twText.hbnPurple) twText.hbnPurple = '#7550a0';
+  if (!twText.hbnGray) twText.hbnGray = '#6b6c6f';
   var twFonts = twConfig.theme.extend.fontFamily = twConfig.theme.extend.fontFamily || {};
   if (!twFonts.poppins) twFonts.poppins = ['Poppins', 'sans-serif'];
   if (!twFonts.shadows) twFonts.shadows = ['"Shadows Into Light"', 'cursive'];
