@@ -197,14 +197,17 @@
 </head>
 
 <body class="font-poppins antialiased text-gray-700">
-  <div class="bg-hbnGreen text-white text-center py-2 px-4 text-sm font-medium fixed w-full z-[60] top-0"
+  <div class="bg-hbnGreenDark text-white h-9 px-3 text-sm font-medium fixed w-full z-[60] top-0 flex items-center justify-center gap-2"
      id="announcement-bar">
-    Next up: Design for Safety with Jenny McLaughlin of Heathrow, Thursday 17 September, online and free.
-    <a href="events/seminars/jenny/jenny.html" class="underline ml-2 font-semibold hover:text-hbnYellow">
+    <span class="truncate min-w-0">
+      <span class="hidden sm:inline">Next up: Design for Safety with Jenny McLaughlin of Heathrow, Thursday 17 September, online and free.</span>
+      <span class="sm:hidden">Next: Design for Safety, Thu 17 Sept</span>
+    </span>
+    <a href="events/seminars/jenny/jenny.html" class="underline font-semibold whitespace-nowrap flex-shrink-0 hover:text-hbnYellow">
       Register &rarr;
     </a>
     <button onclick="this.parentElement.remove(); document.querySelector('header').style.top='0px';"
-            class="ml-4 opacity-70 hover:opacity-100" aria-label="Dismiss announcement">✕</button>
+            class="flex-shrink-0 inline-flex items-center justify-center w-6 h-6 opacity-80 hover:opacity-100" aria-label="Dismiss announcement">&#x2715;</button>
   </div>
   <!-- Skip to main content link for accessibility -->
   <a href="#main-content" 
@@ -215,7 +218,7 @@
   </a>
 
   <!-- Header / Navbar -->
-  <header class="bg-white shadow-md fixed w-full z-50 top-8" role="banner">
+  <header class="bg-white shadow-md fixed w-full z-50 top-9" role="banner">
     <div class="container mx-auto px-6 flex justify-between items-center h-20">
       <!-- Logo -->
       <div class="flex-shrink-0">
@@ -912,7 +915,7 @@
               <div class="p-6">
                 <time datetime="2026-07-12" class="text-sm text-gray-400 block mb-2">12 July 2026</time>
                 <h3 class="text-lg font-semibold mb-3 group-hover:text-hbnGreen transition-colors leading-snug">Sonic Belonging: Sound, Space, and What Makes a Building Feel Like Home</h3>
-                <p class="text-gray-600 text-sm mb-4">Dr Lijun Liu on how music and acoustic design shape cultural belonging in the built environment, and the project's fusion performance at the Wellbeing Hub.</p>
+                <p class="text-gray-600 text-sm mb-4">Dr Lijun Zhang on how music and acoustic design shape cultural belonging in the built environment, and the project's fusion performance at the Wellbeing Hub.</p>
                 <span class="text-hbnGreen font-medium group-hover:underline inline-flex items-center text-sm">
                   Read the story
                   <svg class="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">

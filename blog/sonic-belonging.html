@@ -66,7 +66,7 @@
       <div class="flex-shrink-0">
         <a href="../index.html" class="flex items-center space-x-4">
           <img src="../assets/images/hbn_landscape.svg" alt="Healthy Buildings Network Leeds Logo" class="h-12">
-          <img src="../assets/images/leeds_logo_black_on_white_bk.jpg" alt="Leeds Logo" class="h-12">
+          <img src="../assets/images/leeds_logo_black_on_white_bk.jpg" alt="Leeds Logo" class="h-12 hidden sm:block">
         </a>
       </div>
       <button class="md:hidden text-gray-600 hover:text-hbnGreen focus:outline-none" id="mobile-menu-button" aria-label="Open Menu">
@@ -668,5 +668,17 @@
   </footer>
 
   <script src="../assets/js/script.js"></script>
+  <script>
+    // Mobile menu toggle (script.js does not handle this)
+    (function () {
+      var btn = document.getElementById('mobile-menu-button');
+      var menu = document.getElementById('mobile-menu');
+      if (!btn || !menu) return;
+      btn.addEventListener('click', function () {
+        var isHidden = menu.classList.toggle('hidden');
+        btn.setAttribute('aria-expanded', String(!isHidden));
+      });
+    })();
+  </script>
 </body>
 </html>

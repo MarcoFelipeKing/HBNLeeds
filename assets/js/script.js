@@ -1,20 +1,29 @@
 // script.js
 
 // Tailwind CSS custom colors
+// Fill in the brand palette and fonts without discarding what the page already
+// configured. (Replacing the config here used to wipe out page-level additions such
+// as hbnGreenDark, font-poppins/font-shadows and page-specific colours.)
 if (typeof tailwind !== 'undefined') {
-  tailwind.config = {
-    theme: {
-      extend: {
-        colors: {
-          hbnGreen: '#4e9317',
-          hbnPurple: '#8360a9',
-          hbnGray: '#808184',
-          hbnYellow: '#ffca29',
-          hbnBlue: '#3e95dd',
-        }
-      }
-    }
+  var twConfig = tailwind.config || {};
+  twConfig.theme = twConfig.theme || {};
+  twConfig.theme.extend = twConfig.theme.extend || {};
+  var twColors = twConfig.theme.extend.colors = twConfig.theme.extend.colors || {};
+  var brandColors = {
+    hbnGreen: '#4e9317',
+    hbnGreenDark: '#3d7412',
+    hbnPurple: '#8360a9',
+    hbnGray: '#808184',
+    hbnYellow: '#ffca29',
+    hbnBlue: '#3e95dd'
   };
+  Object.keys(brandColors).forEach(function (name) {
+    if (!twColors[name]) twColors[name] = brandColors[name];
+  });
+  var twFonts = twConfig.theme.extend.fontFamily = twConfig.theme.extend.fontFamily || {};
+  if (!twFonts.poppins) twFonts.poppins = ['Poppins', 'sans-serif'];
+  if (!twFonts.shadows) twFonts.shadows = ['"Shadows Into Light"', 'cursive'];
+  tailwind.config = twConfig;
 }
 
 // Mobile menu toggle functionality
@@ -265,6 +274,7 @@ if (toggleBtn) {
 document.addEventListener('DOMContentLoaded', function() {
   const slides = document.querySelectorAll('.gallery-slide');
   const dots = document.querySelectorAll('[data-slide]');
+  if (!slides.length) return; // no slider on this page
   let currentSlide = 0;
   const slideCount = slides.length;
   
@@ -282,7 +292,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Show current slide
     slides[index].style.opacity = '1';
-    dots[index].style.opacity = '1';
+    if (dots[index]) dots[index].style.opacity = '1';
     
     currentSlide = index;
   }

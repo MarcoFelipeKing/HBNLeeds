@@ -369,14 +369,14 @@
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
         <!-- Featured Project 1 -->
         <div class="bg-white rounded-lg shadow-md overflow-hidden">
-          <img src="assets/images/featured_project_1.jpg" alt="ThermoAge Project" class="w-full h-48 object-cover">
+          <img src="assets/images/blogs/thermal-image-hand-1200x898.jpg" alt="Thermal image of a hand, from the ThermoAge project" class="w-full h-48 object-cover">
           <div class="p-6">
             <div class="flex justify-between items-center mb-4">
-              <span class="px-3 py-1 bg-hbnPurple text-white text-sm rounded-full">Implementation</span>
-              <span class="text-sm text-gray-500">Active</span>
+              <span class="px-3 py-1 bg-hbnPurple text-white text-sm rounded-full">Pump-priming</span>
+              <span class="text-sm text-gray-500">2025&ndash;26</span>
             </div>
-            <h3 class="font-bold text-xl mb-2">ThermoAge Project</h3>
-            <p class="text-gray-600 mb-4">Investigating thermal comfort needs across different age groups in residential settings, with a focus on energy efficiency and occupant wellbeing.</p>
+            <h3 class="font-bold text-xl mb-2">ThermoAge</h3>
+            <p class="text-gray-600 mb-4">How extreme indoor temperatures affect balance, mobility and the risk of falling in older adults, tested in a climate chamber at 14&deg;C and 30&deg;C.</p>
             <a href="projects/thermoage.html" class="text-hbnGreen hover:underline inline-flex items-center">
               <span>View Project</span>
               <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -388,14 +388,14 @@
         
         <!-- Featured Project 2 -->
         <div class="bg-white rounded-lg shadow-md overflow-hidden">
-          <img src="assets/images/featured_project_2.jpg" alt="Living in Clover" class="w-full h-48 object-cover">
+          <img src="assets/images/projects/clover/clover_roof.jpg" alt="A clover living roof" class="w-full h-48 object-cover">
           <div class="p-6">
             <div class="flex justify-between items-center mb-4">
-              <span class="px-3 py-1 bg-hbnGreen text-white text-sm rounded-full">Research</span>
-              <span class="text-sm text-gray-500">Active</span>
+              <span class="px-3 py-1 bg-hbnGreen text-white text-sm rounded-full">Pump-priming</span>
+              <span class="text-sm text-gray-500">2025</span>
             </div>
             <h3 class="font-bold text-xl mb-2">Living in Clover</h3>
-            <p class="text-gray-600 mb-4">Exploring natural building materials derived from agricultural waste and their impact on indoor air quality and occupant health.</p>
+            <p class="text-gray-600 mb-4">Clover living roofs that support pollinators, enrich soil without fertiliser and fit a circular economy.</p>
             <a href="projects/clover.html" class="text-hbnGreen hover:underline inline-flex items-center">
               <span>View Project</span>
               <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -407,15 +407,15 @@
         
         <!-- Featured Project 3 -->
         <div class="bg-white rounded-lg shadow-md overflow-hidden">
-          <img src="assets/images/featured_project_3.jpg" alt="CloverLeaf" class="w-full h-48 object-cover">
+          <img src="assets/images/projects/indoor_outdoor/house.png" alt="The Leeds Passive House monitored in the Indoor-Outdoor Air project" class="w-full h-48 object-cover">
           <div class="p-6">
             <div class="flex justify-between items-center mb-4">
-              <span class="px-3 py-1 bg-hbnPurple text-white text-sm rounded-full">Implementation</span>
-              <span class="text-sm text-gray-500">Active</span>
+              <span class="px-3 py-1 bg-hbnPurple text-white text-sm rounded-full">Pump-priming</span>
+              <span class="text-sm text-gray-500">2025</span>
             </div>
-            <h3 class="font-bold text-xl mb-2">CloverLeaf</h3>
-            <p class="text-gray-600 mb-4">Retrofitting social housing to improve health outcomes while reducing energy consumption through innovative, low-cost interventions.</p>
-            <a href="projects/clover.html" class="text-hbnGreen hover:underline inline-flex items-center">
+            <h3 class="font-bold text-xl mb-2">Indoor-Outdoor Air</h3>
+            <p class="text-gray-600 mb-4">Air monitored inside and outside a Leeds Passive House, to see how residents and ventilation systems shape what people breathe.</p>
+            <a href="projects/indoor-outdoor-air.html" class="text-hbnGreen hover:underline inline-flex items-center">
               <span>View Project</span>
               <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
@@ -490,5 +490,17 @@
     </div>
   </footer>
 
+  <script>
+    // Mobile menu toggle (script.js does not handle this)
+    (function () {
+      var btn = document.getElementById('mobile-menu-button');
+      var menu = document.getElementById('mobile-menu');
+      if (!btn || !menu) return;
+      btn.addEventListener('click', function () {
+        var isHidden = menu.classList.toggle('hidden');
+        btn.setAttribute('aria-expanded', String(!isHidden));
+      });
+    })();
+  </script>
 </body>
 </html>

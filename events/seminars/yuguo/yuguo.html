@@ -311,5 +311,17 @@
   </footer>
 
   <script src="../../../assets/js/script.js"></script>
+  <script>
+    // Mobile menu toggle (script.js does not handle this)
+    (function () {
+      var btn = document.getElementById('mobile-menu-button');
+      var menu = document.getElementById('mobile-menu');
+      if (!btn || !menu) return;
+      btn.addEventListener('click', function () {
+        var isHidden = menu.classList.toggle('hidden');
+        btn.setAttribute('aria-expanded', String(!isHidden));
+      });
+    })();
+  </script>
 </body>
 </html>

@@ -526,3 +526,9 @@ h2.section-title {
   from { opacity: 0; transform: translateY(20px); }
   to { opacity: 1; transform: translateY(0); }
 }
+
+/* Long email addresses (e.g. healthy_buildings_network@leeds.ac.uk) must wrap
+   instead of forcing their container wider than a phone screen. */
+a[href^="mailto:"] {
+  overflow-wrap: anywhere;
+}
