@@ -78,9 +78,9 @@ Font classes: `font-poppins`, `font-shadows`
 - Round 1 (pump-priming, £3,000 each): Living in Clover, ThermoAge, Human-Centred Housing Design, Indoor/Outdoor Air
 - Round 2 (ECR-led, £1,500 each): Child-Friendly Futures, Home Microbiomes, Sonic Belonging, Infection Transmission
 
-**Current upcoming events (as of June 2026):**
-- Clear the Air workshop — 18 June 2026, Imagine Leeds, 9 Blenheim Terrace (Free)
-- HBN Showcase — 2 July 2026, University of Leeds
+**Current upcoming events (as of September 2026):**
+- Design for Safety: is everyone safe? (Jenny McLaughlin, Heathrow) — 17 September 2026, 12–1pm, online (`events/seminars/jenny/`)
+- Burning for Warmth (Dr Kathy Davies & Dr Rebecca Wright, Northumbria) — 19 November 2026, 12–1pm, hybrid; room and registration link TBC (`events/seminars/kathy/`)
 
 ---
 
@@ -91,7 +91,8 @@ Font classes: `font-poppins`, `font-shadows`
 - `updateCounts()` — updates `#upcoming-count` and `#past-count` in events.html stats section
 - Gallery slider — targets `.gallery-slide` elements and `[data-slide]` dot buttons
 - Scroll-to-top — `#scrollToTopBtn`
-- Mobile menu — `#mobile-menu-button` toggles `#mobile-menu`
+- Tailwind config — script.js **merges** the brand palette (incl. `hbnGreenDark`) and `font-poppins`/`font-shadows` into each page's inline `tailwind.config`. Never make it assign a fresh config: that silently wipes out page-level colours and fonts.
+- Mobile menu — **not handled by script.js.** Every page needs its own inline toggle for `#mobile-menu-button` → `#mobile-menu` (copy it from an existing page). The Leeds logo in the header must carry `hidden sm:block`, or it pushes the menu button off-screen on phones.
 
 ### Blog search (inline in blog.html)
 Searches `.blog-post` elements. The search string combines:
@@ -116,6 +117,19 @@ Filters `.event-card` by `data-category` (seminar/workshop/conference) and `data
 - `sitemap.xml` and `robots.txt` exist at the root.
 
 ---
+
+## Images
+
+- Resize before committing. Photos at most **1600px on the long edge** (about 150–300 KB); avatars and logos **400px**. Phone and camera originals (20 MB, 8000px) make cards sit empty for seconds.
+- One-liner on macOS: `sips -Z 1600 -s formatOptions 80 photo.jpg`
+- Use JPEG for photos and flyers; keep PNG only for logos or images with transparency.
+- `assets/print/showcase-booklet.html` needs print resolution, so images it uses can be up to 2400px.
+
+## Blog conventions
+
+- Categories (`data-category` and badge text must match): **Events** (blue), **Projects** (purple), **Research** (green).
+- Dates are written `12 July 2026` (UK order, month in full).
+- The featured slot on `blog.html` is the newest post; the grid below runs newest first.
 
 ## Patterns to follow
 
