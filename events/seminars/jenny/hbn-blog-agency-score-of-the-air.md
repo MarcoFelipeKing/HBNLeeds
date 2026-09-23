@@ -1,7 +1,7 @@
 ---
 title: "What is the agency score of the air?"
 author: Healthy Buildings Network
-date: 2026-09
+date: 2026-09-23
 series: "Autumn 2026 seminar series: who is the building for?"
 ---
 
