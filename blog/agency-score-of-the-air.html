@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            hbnGreen: '#4e9317',
+            hbnGreenDark: '#3d7412',
+            hbnPurple: '#8360a9',
+            hbnGray: '#808184',
+            hbnYellow: '#ffca29',
+            hbnBlue: '#3e95dd',
+          }
+        }
+      }
+    };
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Seminar write-up: Jenny McLaughlin of Heathrow on inclusive design, the agency pyramid, and what happens when you try to score something nobody can see. Most indoor air scores 1.">
+  <title>What is the agency score of the air? | HBN Leeds</title>
+
+  <link rel="icon" href="../assets/images/hbn_fav.ico" type="image/x-icon"/>
+  <meta property="og:type"        content="article">
+  <meta property="og:title"       content="What is the agency score of the air? | HBN Leeds">
+  <meta property="og:description" content="Jenny McLaughlin can show you a building's inclusion score in five photographs. Now try scoring the air in the same building. Write-up of our September seminar.">
+  <meta property="og:url"         content="https://www.healthybuildingsnetwork.org/blog/agency-score-of-the-air.html">
+  <meta property="og:image"       content="https://www.healthybuildingsnetwork.org/events/seminars/jenny/25260_EH_View17_AerialNight.jpg">
+  <meta property="og:site_name"   content="Healthy Buildings Network Leeds">
+  <meta name="twitter:card"        content="summary_large_image">
+  <meta name="twitter:title"       content="What is the agency score of the air?">
+  <meta name="twitter:description" content="Jenny McLaughlin can show you a building's inclusion score in five photographs. Now try scoring the air in the same building.">
+  <meta name="twitter:image"       content="https://www.healthybuildingsnetwork.org/events/seminars/jenny/25260_EH_View17_AerialNight.jpg">
+  <link rel="canonical" href="https://www.healthybuildingsnetwork.org/blog/agency-score-of-the-air.html">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.css" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "What is the agency score of the air?",
+    "description": "Write-up of the September 2026 Healthy Buildings Network seminar with Jenny McLaughlin, Principal Project Manager on Heathrow's expansion programme, on inclusive design, the agency pyramid and the indoor environment.",
+    "datePublished": "2026-09-23",
+    "url": "https://www.healthybuildingsnetwork.org/blog/agency-score-of-the-air.html",
+    "image": "https://www.healthybuildingsnetwork.org/events/seminars/jenny/25260_EH_View17_AerialNight.jpg",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Healthy Buildings Network Leeds",
+      "url": "https://www.healthybuildingsnetwork.org"
+    },
+    "author": {
+      "@type": "Organization",
+      "name": "Healthy Buildings Network Leeds"
+    },
+    "about": { "@type": "Person", "name": "Jenny McLaughlin", "affiliation": "Heathrow Airport" }
+  }
+  </script>
+</head>
+<body class="font-poppins text-gray-700 bg-white flex flex-col min-h-screen">
+
+  <!-- Header -->
+  <header class="bg-white shadow-md fixed w-full z-50">
+    <div class="container mx-auto px-6 flex justify-between items-center h-20">
+      <div class="flex-shrink-0">
+        <a href="../index.html" class="flex items-center space-x-4">
+          <img src="../assets/images/hbn_landscape.svg" alt="Healthy Buildings Network Leeds Logo" class="h-12 w-auto">
+          <img src="../assets/images/leeds_logo_black_on_white_bk.jpg" alt="University of Leeds" class="h-12 w-auto hidden sm:block">
+        </a>
+      </div>
+      <button class="md:hidden text-gray-600 hover:text-hbnGreen focus:outline-none" id="mobile-menu-button" aria-label="Open Menu">
+        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+      <nav class="hidden md:flex space-x-8" id="main-nav">
+        <a href="../index.html"      class="text-gray-600 hover:text-hbnGreen font-medium transition-colors">Home</a>
+        <a href="../about.html"      class="text-gray-600 hover:text-hbnGreen font-medium transition-colors">About Us</a>
+        <a href="../blog.html"       class="text-hbnGreen font-medium transition-colors">Blog</a>
+        <a href="../events.html"     class="text-gray-600 hover:text-hbnGreen font-medium transition-colors">Events</a>
+        <a href="../projects.html"   class="text-gray-600 hover:text-hbnGreen font-medium transition-colors">Projects</a>
+        <a href="../membership.html" class="text-gray-600 hover:text-hbnGreen font-medium transition-colors">Membership</a>
+        <a href="../contact.html"    class="text-gray-600 hover:text-hbnGreen font-medium transition-colors">Contact</a>
+      </nav>
+    </div>
+    <div class="md:hidden hidden bg-white w-full" id="mobile-menu">
+      <div class="px-6 py-4 space-y-4">
+        <a href="../index.html"      class="block text-gray-600 hover:text-hbnGreen font-medium">Home</a>
+        <a href="../about.html"      class="block text-gray-600 hover:text-hbnGreen font-medium">About Us</a>
+        <a href="../blog.html"       class="block text-hbnGreen font-medium">Blog</a>
+        <a href="../events.html"     class="block text-gray-600 hover:text-hbnGreen font-medium">Events</a>
+        <a href="../projects.html"   class="block text-gray-600 hover:text-hbnGreen font-medium">Projects</a>
+        <a href="../membership.html" class="block text-gray-600 hover:text-hbnGreen font-medium">Membership</a>
+        <a href="../contact.html"    class="block text-gray-600 hover:text-hbnGreen font-medium">Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <button id="scrollToTopBtn" class="fixed bottom-5 right-5 bg-hbnGreenDark text-white p-3 rounded-full shadow-md hidden z-50" aria-label="Scroll to top">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18" />
+    </svg>
+  </button>
+
+  <main class="pt-20 flex-grow">
+
+    <!-- Hero -->
+    <div class="relative text-white overflow-hidden bg-gray-900">
+      <img src="../events/seminars/jenny/25260_EH_View17_AerialNight.jpg"
+           alt="Heathrow Airport seen from the air at night"
+           fetchpriority="high" decoding="async"
+           class="absolute inset-0 w-full h-full object-cover object-center">
+      <div class="absolute inset-0 bg-gradient-to-r from-gray-900/90 via-gray-900/75 to-hbnGreen/40"></div>
+      <div class="relative container mx-auto px-6 max-w-3xl py-20">
+        <div class="flex flex-wrap gap-2 mb-5">
+          <span class="bg-white/20 text-white text-xs font-semibold px-3 py-1 rounded-full">Seminar write-up</span>
+          <span class="bg-white/20 text-white text-xs font-semibold px-3 py-1 rounded-full">Autumn 2026 series: who is the building for?</span>
+        </div>
+        <h1 class="text-3xl md:text-5xl font-bold mb-5 leading-tight [text-wrap:balance]">
+          What is the agency score of the air?
+        </h1>
+        <p class="text-lg text-white/85 leading-relaxed mb-6">
+          Reflections on our September seminar with Jenny McLaughlin, Principal Project Manager on Heathrow's expansion programme and co-author of the RIBA Inclusive Design Overlay.
+        </p>
+        <div class="flex flex-wrap gap-x-5 gap-y-2 text-sm text-white/70">
+          <span>23 September 2026</span>
+          <span>Healthy Buildings Network</span>
+          <span><a href="../events/seminars/jenny/jenny.html" class="underline hover:text-white">Seminar page</a></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Breadcrumb -->
+    <div class="bg-gray-50 py-3 border-b border-gray-200">
+      <div class="container mx-auto px-6 max-w-3xl text-sm flex items-center gap-2 text-gray-500">
+        <a href="../index.html" class="hover:text-hbnGreen">Home</a>
+        <span>/</span>
+        <a href="../blog.html" class="hover:text-hbnGreen">Blog</a>
+        <span>/</span>
+        <span class="text-gray-800 font-medium">The agency score of the air</span>
+      </div>
+    </div>
+
+    <!-- Article -->
+    <article class="py-16 bg-white">
+      <div class="container mx-auto px-6 max-w-3xl">
+
+        <p class="text-xl text-gray-600 leading-relaxed font-light mb-8">
+          Jenny McLaughlin can show you a building's inclusion score in five photographs. Steps and no ramp: score 1, no access at all. A ramp that a member of staff has to be called to operate: score 2, you get in, but not on your own terms. An open door with toilet signage too low in contrast to read: score 3, you manage, but you may still need to ask. A single door that opens at the press of a button: score 4, everyone can use it, until the button breaks. Several doors that open for everyone alike: score 5.
+        </p>
+
+        <!-- The five-point scale -->
+        <figure class="mb-12">
+          <ol class="grid grid-cols-1 sm:grid-cols-5 gap-3">
+            <li class="rounded-xl border border-gray-200 bg-gray-100 p-4">
+              <div class="text-2xl font-bold text-gray-500 mb-1">1</div>
+              <div class="font-semibold text-gray-800 text-sm mb-1">No access or agency</div>
+              <p class="text-xs text-gray-600">Stepped entrance only.</p>
+            </li>
+            <li class="rounded-xl border border-hbnGreen/20 bg-hbnGreen/5 p-4">
+              <div class="text-2xl font-bold text-hbnGreen mb-1">2</div>
+              <div class="font-semibold text-gray-800 text-sm mb-1">Help is required</div>
+              <p class="text-xs text-gray-600">Access needs staff support.</p>
+            </li>
+            <li class="rounded-xl border border-hbnGreen/20 bg-hbnGreen/10 p-4">
+              <div class="text-2xl font-bold text-hbnGreen mb-1">3</div>
+              <div class="font-semibold text-gray-800 text-sm mb-1">Some help may be needed</div>
+              <p class="text-xs text-gray-600">Door open, signage low contrast.</p>
+            </li>
+            <li class="rounded-xl border border-hbnGreen/30 bg-hbnGreen/20 p-4">
+              <div class="text-2xl font-bold text-hbnGreen mb-1">4</div>
+              <div class="font-semibold text-gray-800 text-sm mb-1">Resilient single choice</div>
+              <p class="text-xs text-gray-700">One door, opened by a button.</p>
+            </li>
+            <li class="rounded-xl border border-hbnGreen/40 bg-hbnGreen/30 p-4">
+              <div class="text-2xl font-bold text-hbnGreenDark mb-1">5</div>
+              <div class="font-semibold text-gray-900 text-sm mb-1">Equitable, intuitive choice</div>
+              <p class="text-xs text-gray-700">Multiple doors open for everyone alike.</p>
+            </li>
+          </ol>
+          <figcaption class="text-sm text-gray-500 mt-3">The agency scale as Jenny presented it, scored on a door.</figcaption>
+        </figure>
+
+        <p class="text-gray-700 leading-relaxed mb-10 text-lg">
+          It is a good test, and it works because a door is something you can see. Now try scoring the air in the same building.
+        </p>
+
+        <h2 class="text-2xl font-bold text-gray-800 mb-4">Mind the gap</h2>
+        <p class="text-gray-700 leading-relaxed mb-5">
+          Jenny opened our autumn series with a phrase every rail passenger knows. "Mind the gap" is a safety message, but it is also a small admission: the design has left a risk in place and handed responsibility for it to the individual. Her argument is that we do this far more often than we notice, and that we are rarely asked to justify it.
+        </p>
+        <p class="text-gray-700 leading-relaxed mb-5">
+          Part of the reason is the mythical average. Standards that were built around a nominal person carry that person's assumptions forward, and applying the standard can feel like discharging the duty. Jenny's point is that it does not. The Construction (Design and Management) Regulations 2015 already require designers to eliminate or control foreseeable risks to the health and safety of <em>any person</em>, not the typical one. If one in twelve men has some form of colour vision deficiency, it is foreseeable that someone on site cannot tell a red line from a green one.
+        </p>
+
+        <blockquote class="border-l-4 border-hbnGreen pl-6 my-10">
+          <p class="text-xl text-gray-700 italic leading-relaxed">Design for the edges, she argued, and the centre gets it for free.</p>
+        </blockquote>
+
+        <h2 class="text-2xl font-bold text-gray-800 mb-4">Agency as the thing we measure</h2>
+        <p class="text-gray-700 leading-relaxed mb-5">
+          At Heathrow, Jenny and colleagues have turned this into a working tool. The Wheel of Considerations asks design teams to work through people, environment, activities, risks, legacy and systems thinking, and to record their assumptions as they would in a risk assessment. The output is scored on an agency pyramid adapted from the familiar hierarchy of controls. Agency here means being able to do something on your own cognisance and with dignity. The top tier, a late addition after early testing, asks whether design can go beyond equitable and deliver enjoyment.
+        </p>
+        <p class="text-gray-700 leading-relaxed mb-10">
+          The scores are taken at several points in a project's life, from pre-project impact assessment through design and construction to post-occupancy evaluation, with the aim of raising them as the design matures.
+        </p>
+
+        <h2 class="text-2xl font-bold text-gray-800 mb-4">The part you cannot see</h2>
+        <p class="text-gray-700 leading-relaxed mb-5">
+          Every worked example in the talk was visual and spatial, and that is not a criticism. Doors, steps and signage are where the method is easiest to explain. But it prompted the question we most wanted to ask as a network: how does the wheel handle conditions that people cannot perceive and so cannot exercise any agency over? Ventilation, air quality, noise, thermal conditions, lighting.
+        </p>
+        <div class="bg-gray-50 border-l-4 border-gray-300 rounded-r-xl p-6 mb-6">
+          <p class="text-gray-800 leading-relaxed font-medium">
+            Run the pyramid honestly and most indoor air scores 1. There is no signal that it is failing you, no choice about whether to breathe it, and often no realistic way to leave.
+          </p>
+        </div>
+        <p class="text-gray-700 leading-relaxed mb-5">
+          That is not because nobody designed the ventilation. It is because the scale, like most of our thinking about safety, assumes a barrier you can recognise.
+        </p>
+        <p class="text-gray-700 leading-relaxed mb-10">
+          And the exposure is not equal. Two people in the same room can receive a similar dose with very different consequences. People with asthma or COPD, people who are pregnant or immunosuppressed, older adults, and children, who breathe more air per kilogram of body weight than adults do. Then there are those who cannot simply step outside: people waiting for assistance, staff on long shifts, cleaners and maintenance crews working at night in spaces designed for daytime occupancy. A ventilation strategy designed around a healthy adult is the average problem again, just harder to photograph.
+        </p>
+
+        <h2 class="text-2xl font-bold text-gray-800 mb-4">Why it is stuck</h2>
+        <p class="text-gray-700 leading-relaxed mb-5">
+          Jenny's answer was candid. A terminal runs on one system for the whole building, and even in the areas where passengers requiring assistance wait, it has proved very hard to create local flexibility. Large offices are the same: too hot, too cold, too noisy, or you retreat into a small booth to find quiet.
+        </p>
+        <p class="text-gray-700 leading-relaxed mb-10">
+          When she pressed building management system suppliers for something better, one told her Heathrow was not their biggest client, so why would they innovate for it when the product was fine everywhere else. If one of the largest infrastructure clients in the country cannot move the market alone, this is a demand-side problem as much as a design one.
+        </p>
+
+        <h2 class="text-2xl font-bold text-gray-800 mb-4">What a higher score might look like</h2>
+        <p class="text-gray-700 leading-relaxed mb-6">
+          This is our extension of Jenny's tool, not hers, and it needs testing rather than asserting. But if we took the pyramid seriously for air, the tiers might read something like this:
+        </p>
+        <ol class="space-y-3 mb-6">
+          <li class="flex gap-4 items-start rounded-xl border border-gray-200 bg-gray-100 p-4">
+            <span class="flex-shrink-0 w-8 h-8 rounded-full bg-white text-gray-600 font-bold flex items-center justify-center">1</span>
+            <p class="text-sm text-gray-700"><strong class="text-gray-900">No agency.</strong> Sealed space, no monitoring, no information, no local control.</p>
+          </li>
+          <li class="flex gap-4 items-start rounded-xl border border-hbnGreen/20 bg-hbnGreen/5 p-4">
+            <span class="flex-shrink-0 w-8 h-8 rounded-full bg-white text-hbnGreen font-bold flex items-center justify-center">2</span>
+            <p class="text-sm text-gray-700"><strong class="text-gray-900">Help needed.</strong> Conditions can be changed, but only by asking facilities staff.</p>
+          </li>
+          <li class="flex gap-4 items-start rounded-xl border border-hbnGreen/20 bg-hbnGreen/10 p-4">
+            <span class="flex-shrink-0 w-8 h-8 rounded-full bg-white text-hbnGreen font-bold flex items-center justify-center">3</span>
+            <p class="text-sm text-gray-700"><strong class="text-gray-900">Some help may be needed.</strong> A CO<sub>2</sub> or air quality display tells you something is wrong, but you cannot act on it.</p>
+          </li>
+          <li class="flex gap-4 items-start rounded-xl border border-hbnGreen/30 bg-hbnGreen/20 p-4">
+            <span class="flex-shrink-0 w-8 h-8 rounded-full bg-white text-hbnGreen font-bold flex items-center justify-center">4</span>
+            <p class="text-sm text-gray-700"><strong class="text-gray-900">Resilient single choice.</strong> A local control or openable window that works, with nothing to fall back on if it fails or if outdoor conditions rule it out.</p>
+          </li>
+          <li class="flex gap-4 items-start rounded-xl border border-hbnGreen/40 bg-hbnGreen/30 p-4">
+            <span class="flex-shrink-0 w-8 h-8 rounded-full bg-white text-hbnGreenDark font-bold flex items-center justify-center">5</span>
+            <p class="text-sm text-gray-800"><strong class="text-gray-900">Equitable, intuitive choice.</strong> Local control, visible information and a system that responds, designed for the people most affected rather than the average occupant.</p>
+          </li>
+          <li class="flex gap-4 items-start rounded-xl border border-hbnYellow/50 bg-hbnYellow/20 p-4">
+            <span class="flex-shrink-0 w-8 h-8 rounded-full bg-white text-yellow-700 font-bold flex items-center justify-center">+</span>
+            <p class="text-sm text-gray-800"><strong class="text-gray-900">Beyond.</strong> Spaces people actively choose to be in because the environment is good.</p>
+          </li>
+        </ol>
+        <p class="text-gray-700 leading-relaxed mb-10">
+          Written down like that, it is uncomfortable how few buildings would clear tier 2, and how little of this is currently captured at post-occupancy evaluation.
+        </p>
+
+        <h2 class="text-2xl font-bold text-gray-800 mb-4">What happens next</h2>
+        <p class="text-gray-700 leading-relaxed mb-5">
+          Two threads from the discussion are worth holding onto. The first is that learning too often stays inside one organisation, so every client relearns the same lessons on the same toilet block. The second is that suppliers will not move until enough clients ask for the same thing. Both are problems of coordination rather than knowledge, and that is exactly what a network is for.
+        </p>
+        <p class="text-gray-700 leading-relaxed mb-5">
+          If you work on ventilation, building controls, post-occupancy evaluation or inclusive design and would like to test an agency score for the indoor environment, we would like to hear from you.
+        </p>
+        <p class="text-gray-700 leading-relaxed mb-10">
+          Our thanks to Jenny for a generous talk and an honest Q&amp;A.
+        </p>
+
+        <!-- Speaker -->
+        <section class="bg-hbnGreen/5 border border-hbnGreen/20 rounded-2xl p-6 sm:flex gap-6 items-start mb-10">
+          <img src="../events/seminars/jenny/JennyMcL_headshot.jpg" alt="Jenny McLaughlin"
+               class="w-24 h-24 rounded-full object-cover object-top flex-shrink-0 mb-4 sm:mb-0">
+          <div>
+            <h2 class="text-xl font-bold text-gray-800 mb-1">Jenny McLaughlin</h2>
+            <p class="text-hbnGreen font-medium text-sm mb-3">Principal Project Manager, Expansion, Heathrow Airport</p>
+            <p class="text-gray-700 text-sm leading-relaxed">
+              Jenny has worked in the airport industry for over 20 years, the last 18 at Heathrow across Environment, Airside and Infrastructure. She co-authored the RIBA Inclusive Design Overlay in 2023 and helped launch the Equitable Safety Initiative in 2025. She is a Governor of Harrow Richmond and Uxbridge College and leads the Heathrow Inclusive Learners Partnership.
+              <a href="../events/seminars/jenny/jenny.html" class="text-hbnGreen font-medium hover:underline">Seminar details</a>
+            </p>
+          </div>
+        </section>
+
+        <!-- Next in the series -->
+        <section class="rounded-2xl border border-gray-200 p-6 mb-10">
+          <div class="text-xs font-bold uppercase tracking-widest text-gray-500 mb-3">Next in the series</div>
+          <p class="text-gray-700 leading-relaxed mb-4">
+            In October we turn to ableism and vulnerability theory. In November, Dr Kathy Davies and Dr Rebecca Wright present <em>Burning for warmth: the role of health in the future of Britain's domestic heat market, 1960 to 1980</em>.
+          </p>
+          <div class="flex flex-wrap gap-3">
+            <a href="../events/seminars/kathy/kathy.html" class="inline-block px-6 py-2.5 bg-hbnGreenDark text-white rounded-full text-sm font-semibold hover:bg-green-800 transition-colors">
+              Burning for Warmth, 19 November &rarr;
+            </a>
+            <a href="../events.html" class="inline-block px-6 py-2.5 border border-gray-300 text-gray-600 rounded-full text-sm hover:bg-gray-50 transition-colors">
+              All events
+            </a>
+          </div>
+        </section>
+
+        <!-- Get involved -->
+        <section class="bg-hbnGreenDark text-white rounded-2xl p-8 text-center"
+                 style="background-image: radial-gradient(ellipse at 85% 0%, rgba(255,255,255,0.10) 0%, transparent 55%);">
+          <h2 class="text-2xl font-bold mb-3">Want to help test this?</h2>
+          <p class="text-white/85 mb-6 leading-relaxed">
+            Membership is free. If you work on ventilation, controls, post-occupancy evaluation or inclusive design, we would like to hear from you.
+          </p>
+          <div class="flex flex-wrap gap-3 justify-center">
+            <a href="../membership.html" class="inline-block px-8 py-3 bg-white text-hbnGreenDark font-semibold rounded-full hover:bg-gray-100 transition-colors shadow-md">
+              Join the network
+            </a>
+            <a href="../contact.html" class="inline-block px-8 py-3 border-2 border-white/70 text-white rounded-full hover:bg-white/10 transition-colors">
+              Contact us
+            </a>
+          </div>
+        </section>
+
+      </div>
+    </article>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white py-12 md:py-16">
+    <div class="container mx-auto max-w-6xl px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div class="mb-8">
+        <img loading="lazy" src="../assets/images/hbn_landscape.svg" alt="Healthy Buildings Network Leeds Logo" class="h-12 mb-4 filter brightness-0 invert opacity-90">
+        <p class="text-sm tracking-wide text-gray-300">Healthy Buildings Network Leeds is a cross-disciplinary research and collaboration hub at the University of Leeds, focused on healthier, more sustainable built environments.</p>
+        <ul class="flex mt-4">
+          <li class="mr-4 flex items-center">
+            <a href="https://www.linkedin.com/company/healthy-buildings-network/" target="_blank" rel="noopener noreferrer" class="text-gray-300 hover:text-hbnGreen transition-colors flex items-center">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+              LinkedIn
+            </a>
+          </li>
+          <li class="mr-4 flex items-center">
+            <a href="mailto:healthy_buildings_network@leeds.ac.uk" class="text-gray-300 hover:text-hbnGreen transition-colors flex items-center">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+              Email Us
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div>
+        <h2 class="text-xl font-bold mb-4">Quick Links</h2>
+        <ul class="space-y-2">
+          <li><a href="../index.html" class="text-gray-300 hover:text-hbnGreen transition-colors">Home</a></li>
+          <li><a href="../about.html" class="text-gray-300 hover:text-hbnGreen transition-colors">About</a></li>
+          <li><a href="../blog.html" class="text-gray-300 hover:text-hbnGreen transition-colors">Blog</a></li>
+          <li><a href="../events.html" class="text-gray-300 hover:text-hbnGreen transition-colors">Events</a></li>
+          <li><a href="../projects.html" class="text-gray-300 hover:text-hbnGreen transition-colors">Projects</a></li>
+          <li><a href="../membership.html" class="text-gray-300 hover:text-hbnGreen transition-colors">Membership</a></li>
+          <li><a href="../contact.html" class="text-gray-300 hover:text-hbnGreen transition-colors">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2 class="text-xl font-bold mb-4">Affiliations</h2>
+        <ul class="space-y-2">
+          <li><a href="https://fluids.leeds.ac.uk" target="_blank" rel="noopener noreferrer" class="text-gray-300 hover:text-hbnGreen transition-colors">Leeds Institute for Fluid Dynamics</a></li>
+          <li><a href="https://lssi.leeds.ac.uk" target="_blank" rel="noopener noreferrer" class="text-gray-300 hover:text-hbnGreen transition-colors">Leeds Social Sciences Institute</a></li>
+          <li><a href="https://lahri.leeds.ac.uk" target="_blank" rel="noopener noreferrer" class="text-gray-300 hover:text-hbnGreen transition-colors">Leeds Arts &amp; Humanities Research Institute</a></li>
+          <li><a href="https://environment.leeds.ac.uk/institute-climate-atmospheric-science" target="_blank" rel="noopener noreferrer" class="text-gray-300 hover:text-hbnGreen transition-colors">ICAS</a></li>
+          <li><a href="https://sustainability.leeds.ac.uk/get-involved/leeds-living-lab/" target="_blank" rel="noopener noreferrer" class="text-gray-300 hover:text-hbnGreen transition-colors">Leeds Living Lab</a></li>
+          <li><a href="https://lida.leeds.ac.uk/" target="_blank" rel="noopener noreferrer" class="text-gray-300 hover:text-hbnGreen transition-colors">Leeds Institute for Data Analytics</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container mx-auto max-w-6xl px-6 text-sm text-center pt-8 mt-8 border-t border-gray-700">
+      <p>&copy; 2026 Healthy Buildings Network Leeds. All rights reserved.</p>
+      <p class="mt-2">University of Leeds, Leeds LS2 9JT, United Kingdom</p>
+    </div>
+  </footer>
+
+  <script src="../assets/js/script.js"></script>
+  <script>
+    // Mobile menu toggle (script.js does not handle this)
+    (function () {
+      var btn = document.getElementById('mobile-menu-button');
+      var menu = document.getElementById('mobile-menu');
+      if (!btn || !menu) return;
+      btn.addEventListener('click', function () {
+        var isHidden = menu.classList.toggle('hidden');
+        btn.setAttribute('aria-expanded', String(!isHidden));
+      });
+    })();
+  </script>
+</body>
+</html>

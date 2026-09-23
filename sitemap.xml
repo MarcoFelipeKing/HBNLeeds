@@ -157,6 +157,11 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://www.healthybuildingsnetwork.org/blog/agency-score-of-the-air.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://www.healthybuildingsnetwork.org/blog/sonic-belonging.html</loc>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
