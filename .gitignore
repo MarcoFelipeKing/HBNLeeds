@@ -1,3 +1,14 @@
 .DS_Store
 
 .DS_Store
+
+# Source files kept locally, not published to the site
+blog/HBN_Sonic_Belonging_Blog_Content.docx
+events/conferences/UKIEG-HBN_2025.pdf
+events/workshops/whosepower/ALR_2712_1.jpg
+assets/images/projects/sonic/retouch_2026021922410088_1771545761541edit.jpg
+assets/images/blogs/sonic/lijun_guzheng_people_standing.jpg
+events/seminars/chuck/*.pptx
+events/seminars/world_ventil8_day/*.pptx
+assets/images/events/seminars/world_ventil8_day/*.docx
+assets/images/events/seminars/world_ventil8_day/hero.jpg
