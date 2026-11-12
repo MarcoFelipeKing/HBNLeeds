@@ -31,11 +31,10 @@ other, and the discussion from the floor.
 https://www.healthybuildingsnetwork.org/blog/world-ventilation-day-2026.html
 
 2. Your questions, answered
-We ran out of time for four questions in the chat. Abigail Hathway, Bruño Fraga, Irene
-Mussio and Marcella Ucci have answered three of them in writing, including why CO2 is a
-poor proxy for infection risk and what might work better instead. Doug Booker's answer,
-on whether we lean too hard on mechanical ventilation in airtight buildings, is still to
-come and will be added to the same page.
+We ran out of time for four questions in the chat. All four have now been answered in
+writing by the panellists, including why CO2 is a poor proxy for infection risk and what
+might work better instead, and whether we lean too hard on mechanical ventilation in
+airtight buildings.
 https://www.healthybuildingsnetwork.org/events/seminars/world_ventil8_day/world_ventil8_day.html#questions
 
 3. Five commitments for 2027
@@ -76,5 +75,5 @@ healthy_buildings_network@leeds.ac.uk
   will put it on the event page.
 - **Send as Bcc** if you are mailing the attendee list directly, so nobody's address is
   exposed to the group.
-- Doug's MVHR answer is the one loose end. If it arrives before you send, delete that
-  sentence and the email reads cleaner.
+- All four answers and all five commitments are now published, so the email has no loose
+  ends left in it.
